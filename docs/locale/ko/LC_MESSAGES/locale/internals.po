@@ -1,0 +1,5911 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:42+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../internals/app-overview.rst:3
+msgid "\"The Big Instance\" Refactor"
+msgstr ""
+
+#: ../../internals/app-overview.rst:5
+msgid ""
+"The `app` branch is a work-in-progress to remove the use of a global "
+"configuration in Celery."
+msgstr ""
+
+#: ../../internals/app-overview.rst:8
+msgid ""
+"Celery can now be instantiated and several instances of Celery may exist "
+"in the same process space. Also, large parts can be customized without "
+"resorting to monkey patching."
+msgstr ""
+
+#: ../../internals/app-overview.rst:14 celery.utils.cached_property:6
+#: celery.utils.imports.symbol_by_name:20 of
+msgid "Examples"
+msgstr ""
+
+#: ../../internals/app-overview.rst:16
+msgid "Creating a Celery instance::"
+msgstr ""
+
+#: ../../internals/app-overview.rst:24
+msgid "Creating tasks:"
+msgstr ""
+
+#: ../../internals/app-overview.rst:33
+msgid "Creating custom Task subclasses:"
+msgstr ""
+
+#: ../../internals/app-overview.rst:49
+msgid "Starting a worker:"
+msgstr ""
+
+#: ../../internals/app-overview.rst:55
+msgid "Getting access to the configuration:"
+msgstr ""
+
+#: ../../internals/app-overview.rst:63
+msgid "Controlling workers::"
+msgstr ""
+
+#: ../../internals/app-overview.rst:70
+msgid "Other interesting attributes::"
+msgstr ""
+
+#: ../../internals/app-overview.rst:88
+msgid ""
+"As you can probably see, this really opens up another dimension of "
+"customization abilities."
+msgstr ""
+
+#: ../../internals/app-overview.rst:92
+msgid "Deprecated"
+msgstr ""
+
+#: ../../internals/app-overview.rst:94
+msgid "``celery.task.ping`` ``celery.task.PingTask``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:97
+msgid ""
+"Inferior to the ping remote control command. Will be removed in Celery "
+"2.3."
+msgstr ""
+
+#: ../../internals/app-overview.rst:101
+msgid "Aliases (Pending deprecation)"
+msgstr ""
+
+#: ../../internals/app-overview.rst:104
+msgid "``celery.task.base``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:104
+msgid "``.Task`` -> {``app.Task`` / :class:`celery.app.task.Task`}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:107
+msgid "``celery.task.sets``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:107
+msgid "``.TaskSet`` -> {``app.TaskSet``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:110
+msgid "``celery.decorators`` / ``celery.task``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:110
+msgid "``.task`` -> {``app.task``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:116 ../../internals/deprecation.rst:103
+msgid "``celery.execute``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:113
+msgid "``.apply_async`` -> {``task.apply_async``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:114
+msgid "``.apply`` -> {``task.apply``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:115
+msgid "``.send_task`` -> {``app.send_task``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:116
+msgid "``.delay_task`` -> *no alternative*"
+msgstr ""
+
+#: ../../internals/app-overview.rst:124 ../../internals/deprecation.rst:112
+msgid "``celery.log``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:119
+msgid "``.get_default_logger`` -> {``app.log.get_default_logger``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:120
+msgid "``.setup_logger`` -> {``app.log.setup_logger``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:121
+msgid "``.get_task_logger`` -> {``app.log.get_task_logger``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:122
+msgid "``.setup_task_logger`` -> {``app.log.setup_task_logger``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:123
+msgid "``.setup_logging_subsystem`` -> {``app.log.setup_logging_subsystem``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:124
+msgid ""
+"``.redirect_stdouts_to_logger`` -> "
+"{``app.log.redirect_stdouts_to_logger``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:132 ../../internals/deprecation.rst:116
+msgid "``celery.messaging``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:127
+msgid "``.establish_connection`` -> {``app.broker_connection``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:128
+msgid "``.with_connection`` -> {``app.with_connection``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:129
+msgid "``.get_consumer_set`` -> {``app.amqp.get_task_consumer``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:130
+msgid "``.TaskPublisher`` -> {``app.amqp.TaskPublisher``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:131
+msgid "``.TaskConsumer`` -> {``app.amqp.TaskConsumer``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:132
+msgid "``.ConsumerSet`` -> {``app.amqp.ConsumerSet``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:134
+msgid "``celery.conf.*`` -> {``app.conf``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:136
+msgid ""
+"**NOTE**: All configuration keys are now named the same as in the "
+"configuration. So the key ``task_always_eager`` is accessed as::"
+msgstr ""
+
+#: ../../internals/app-overview.rst:142
+msgid "instead of::"
+msgstr ""
+
+#: ../../internals/app-overview.rst:147
+msgid "``.get_queues`` -> {``app.amqp.get_queues``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:155 ../../internals/deprecation.rst:124
+msgid "``celery.task.control``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:150
+msgid "``.broadcast`` -> {``app.control.broadcast``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:151
+msgid "``.rate_limit`` -> {``app.control.rate_limit``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:152
+msgid "``.ping`` -> {``app.control.ping``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:153
+msgid "``.revoke`` -> {``app.control.revoke``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:154
+msgid "``.discard_all`` -> {``app.control.discard_all``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:155
+msgid "``.inspect`` -> {``app.control.inspect``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:162
+msgid "``celery.utils.info``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:158
+msgid "``.humanize_seconds`` -> ``celery.utils.time.humanize_seconds``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:159
+msgid "``.textindent`` -> ``celery.utils.textindent``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:160
+msgid "``.get_broker_info`` -> {``app.amqp.get_broker_info``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:161
+msgid "``.format_broker_info`` -> {``app.amqp.format_broker_info``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:162
+msgid "``.format_queues`` -> {``app.amqp.format_queues``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:165
+msgid "Default App Usage"
+msgstr ""
+
+#: ../../internals/app-overview.rst:167
+msgid ""
+"To be backward compatible, it must be possible to use all the "
+"classes/functions without passing an explicit app instance."
+msgstr ""
+
+#: ../../internals/app-overview.rst:171
+msgid ""
+"This is achieved by having all app-dependent objects use "
+":data:`~celery.app.default_app` if the app instance is missing."
+msgstr ""
+
+#: ../../internals/app-overview.rst:184
+msgid ""
+"The problem with this approach is that there's a chance that the app "
+"instance is lost along the way, and everything seems to be working "
+"normally. Testing app instance leaks is hard. The environment variable "
+":envvar:`CELERY_TRACE_APP` can be used, when this is enabled "
+":func:`celery.app.app_or_default` will raise an exception whenever it has"
+" to go back to the default app instance."
+msgstr ""
+
+#: ../../internals/app-overview.rst:193
+msgid "App Dependency Tree"
+msgstr ""
+
+#: ../../internals/app-overview.rst:201
+msgid "{``app``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:196
+msgid "``celery.loaders.base.BaseLoader``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:197
+msgid "``celery.backends.base.BaseBackend``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:198
+msgid "{``app.TaskSet``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:199
+msgid "``celery.task.sets.TaskSet`` (``app.TaskSet``)"
+msgstr ""
+
+#: ../../internals/app-overview.rst:201
+msgid "[``app.TaskSetResult``]"
+msgstr ""
+
+#: ../../internals/app-overview.rst:201
+msgid "``celery.result.TaskSetResult`` (``app.TaskSetResult``)"
+msgstr ""
+
+#: ../../internals/app-overview.rst:204
+msgid "{``app.AsyncResult``}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:204
+msgid "``celery.result.BaseAsyncResult`` / ``celery.result.AsyncResult``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:216
+msgid "``celery.bin.worker.WorkerCommand``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:216
+msgid "``celery.apps.worker.Worker``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:216
+msgid "``celery.worker.WorkerController``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:214
+msgid "``celery.worker.consumer.Consumer``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:210
+msgid "``celery.worker.request.Request``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:211
+msgid "``celery.events.EventDispatcher``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:213
+msgid "``celery.worker.control.ControlDispatch``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:213
+msgid "``celery.worker.control.registry.Panel``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:214
+msgid "``celery.pidbox.BroadcastPublisher``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:215
+msgid "``celery.pidbox.BroadcastConsumer``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:216
+msgid "``celery.beat.EmbeddedService``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:226
+msgid "``celery.bin.events.EvCommand``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:220
+msgid "``celery.events.snapshot.evcam``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:220
+msgid "``celery.events.snapshot.Polaroid``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:221 ../../internals/app-overview.rst:223
+#: ../../internals/app-overview.rst:226
+msgid "``celery.events.EventReceiver``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:223
+msgid "``celery.events.cursesmon.evtop``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:224
+msgid "``celery.events.cursesmon.CursesMonitor``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:226
+#: ../../internals/reference/celery.events.dumper.rst:3
+msgid "``celery.events.dumper``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:228
+msgid "``celery.bin.amqp.AMQPAdmin``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:232
+msgid "``celery.bin.beat.BeatCommand``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:232
+msgid "``celery.apps.beat.Beat``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:232
+msgid "``celery.beat.Service``"
+msgstr ""
+
+#: ../../internals/app-overview.rst:233
+msgid "``celery.beat.Scheduler``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:5
+msgid "Celery Deprecation Time-line"
+msgstr ""
+
+#: ../../internals/deprecation.rst:13
+msgid "Removals for version 5.0"
+msgstr ""
+
+#: ../../internals/deprecation.rst:16
+msgid "Old Task API"
+msgstr ""
+
+#: ../../internals/deprecation.rst:21
+msgid "Compat Task Modules"
+msgstr ""
+
+#: ../../internals/deprecation.rst:23
+msgid "Module ``celery.decorators`` will be removed:"
+msgstr ""
+
+#: ../../internals/deprecation.rst:25
+msgid "This means you need to change:"
+msgstr ""
+
+#: ../../internals/deprecation.rst:31
+msgid "Into:"
+msgstr ""
+
+#: ../../internals/deprecation.rst:37
+msgid "Module ``celery.task`` *may* be removed (not decided)"
+msgstr ""
+
+#: ../../internals/deprecation.rst:39
+msgid "This means you should change:"
+msgstr ""
+
+#: ../../internals/deprecation.rst:45 ../../internals/deprecation.rst:57
+msgid "into:"
+msgstr ""
+
+#: ../../internals/deprecation.rst:64
+msgid ""
+"Note that the new :class:`~celery.Task` class no longer uses "
+":func:`classmethod` for these methods:"
+msgstr ""
+
+#: ../../internals/deprecation.rst:67
+msgid "delay"
+msgstr ""
+
+#: ../../internals/deprecation.rst:68
+msgid "apply_async"
+msgstr ""
+
+#: ../../internals/deprecation.rst:69
+msgid "retry"
+msgstr ""
+
+#: ../../internals/deprecation.rst:70
+msgid "apply"
+msgstr ""
+
+#: ../../internals/deprecation.rst:71
+msgid "AsyncResult"
+msgstr ""
+
+#: ../../internals/deprecation.rst:72
+msgid "subtask"
+msgstr ""
+
+#: ../../internals/deprecation.rst:74
+msgid ""
+"This also means that you can't call these methods directly on the class, "
+"but have to instantiate the task first:"
+msgstr ""
+
+#: ../../internals/deprecation.rst:86
+msgid "Task attributes"
+msgstr ""
+
+#: ../../internals/deprecation.rst:88
+msgid "The task attributes:"
+msgstr ""
+
+#: ../../internals/deprecation.rst:90
+msgid "``queue``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:91
+msgid "``exchange``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:92
+msgid "``exchange_type``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:93
+msgid "``routing_key``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:94
+msgid "``delivery_mode``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:95
+msgid "``priority``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:97
+msgid "is deprecated and must be set by :setting:`task_routes` instead."
+msgstr ""
+
+#: ../../internals/deprecation.rst:101
+msgid "Modules to Remove"
+msgstr ""
+
+#: ../../internals/deprecation.rst:105
+msgid ""
+"This module only contains ``send_task``: this must be replaced with "
+":attr:`@send_task` instead."
+msgstr ""
+
+#: ../../internals/deprecation.rst:108
+msgid "``celery.decorators``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:110
+msgid "See :ref:`deprecate-compat-task-modules`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:114
+msgid "Use :attr:`@log` instead."
+msgstr ""
+
+#: ../../internals/deprecation.rst:118
+msgid "Use :attr:`@amqp` instead."
+msgstr ""
+
+#: ../../internals/deprecation.rst:120
+msgid "``celery.registry``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:122
+msgid "Use :mod:`celery.app.registry` instead."
+msgstr ""
+
+#: ../../internals/deprecation.rst:126
+msgid "Use :attr:`@control` instead."
+msgstr ""
+
+#: ../../internals/deprecation.rst:128
+msgid "``celery.task.schedules``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:130
+msgid "Use :mod:`celery.schedules` instead."
+msgstr ""
+
+#: ../../internals/deprecation.rst:132
+msgid "``celery.task.chords``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:134
+msgid "Use :func:`celery.chord` instead."
+msgstr ""
+
+#: ../../internals/deprecation.rst:137 ../../internals/deprecation.rst:192
+msgid "Settings"
+msgstr ""
+
+#: ../../internals/deprecation.rst:140
+msgid "``BROKER`` Settings"
+msgstr ""
+
+#: ../../internals/deprecation.rst:143 ../../internals/deprecation.rst:156
+#: ../../internals/deprecation.rst:195 ../../internals/deprecation.rst:210
+msgid "**Setting name**"
+msgstr ""
+
+#: ../../internals/deprecation.rst:143 ../../internals/deprecation.rst:156
+#: ../../internals/deprecation.rst:195 ../../internals/deprecation.rst:210
+msgid "**Replace with**"
+msgstr ""
+
+#: ../../internals/deprecation.rst:145
+msgid "``BROKER_HOST``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:145 ../../internals/deprecation.rst:146
+#: ../../internals/deprecation.rst:147 ../../internals/deprecation.rst:148
+#: ../../internals/deprecation.rst:149
+msgid ":setting:`broker_url`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:146
+msgid "``BROKER_PORT``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:147
+msgid "``BROKER_USER``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:148
+msgid "``BROKER_PASSWORD``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:149
+msgid "``BROKER_VHOST``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:153
+msgid "``REDIS`` Result Backend Settings"
+msgstr ""
+
+#: ../../internals/deprecation.rst:158
+msgid "``CELERY_REDIS_HOST``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:158 ../../internals/deprecation.rst:159
+#: ../../internals/deprecation.rst:160 ../../internals/deprecation.rst:161
+#: ../../internals/deprecation.rst:162 ../../internals/deprecation.rst:163
+#: ../../internals/deprecation.rst:164 ../../internals/deprecation.rst:165
+msgid ":setting:`result_backend`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:159
+msgid "``CELERY_REDIS_PORT``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:160
+msgid "``CELERY_REDIS_DB``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:161
+msgid "``CELERY_REDIS_PASSWORD``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:162
+msgid "``REDIS_HOST``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:163
+msgid "``REDIS_PORT``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:164
+msgid "``REDIS_DB``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:165
+msgid "``REDIS_PASSWORD``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:170
+msgid "Task_sent signal"
+msgstr ""
+
+#: ../../internals/deprecation.rst:172
+msgid ""
+"The :signal:`task_sent` signal will be removed in version 4.0. Please use"
+" the :signal:`before_task_publish` and :signal:`after_task_publish` "
+"signals instead."
+msgstr ""
+
+#: ../../internals/deprecation.rst:177
+msgid "Result"
+msgstr ""
+
+#: ../../internals/deprecation.rst:179
+msgid ""
+"Apply to: :class:`~celery.result.AsyncResult`, "
+":class:`~celery.result.EagerResult`:"
+msgstr ""
+
+#: ../../internals/deprecation.rst:182
+msgid "``Result.wait()`` -> ``Result.get()``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:184
+msgid "``Result.task_id()`` -> ``Result.id``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:186
+msgid "``Result.status`` -> ``Result.state``."
+msgstr ""
+
+#: ../../internals/deprecation.rst:197
+msgid "``CELERY_AMQP_TASK_RESULT_EXPIRES``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:197
+msgid ":setting:`result_expires`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:205
+msgid "Removals for version 2.0"
+msgstr ""
+
+#: ../../internals/deprecation.rst:207
+msgid "The following settings will be removed:"
+msgstr ""
+
+#: ../../internals/deprecation.rst:212 ../../internals/deprecation.rst:213
+msgid "`CELERY_AMQP_CONSUMER_QUEUES`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:212 ../../internals/deprecation.rst:213
+#: ../../internals/deprecation.rst:216
+msgid "`task_queues`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:214
+msgid "`CELERY_AMQP_EXCHANGE`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:214
+msgid "`task_default_exchange`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:215
+msgid "`CELERY_AMQP_EXCHANGE_TYPE`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:215
+msgid "`task_default_exchange_type`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:216
+msgid "`CELERY_AMQP_CONSUMER_ROUTING_KEY`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:217
+msgid "`CELERY_AMQP_PUBLISHER_ROUTING_KEY`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:217
+msgid "`task_default_routing_key`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:220
+msgid ":envvar:`CELERY_LOADER` definitions without class name."
+msgstr ""
+
+#: ../../internals/deprecation.rst:222
+msgid ""
+"For example,, `celery.loaders.default`, needs to include the class name: "
+"`celery.loaders.default.Loader`."
+msgstr ""
+
+#: ../../internals/deprecation.rst:225
+msgid ":meth:`TaskSet.run`. Use :meth:`celery.task.base.TaskSet.apply_async`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:226
+msgid "instead."
+msgstr ""
+
+#: ../../internals/guide.rst:5
+msgid "Contributors Guide to the Code"
+msgstr ""
+
+#: ../../internals/guide.rst:11
+msgid "Philosophy"
+msgstr ""
+
+#: ../../internals/guide.rst:14
+msgid "The API>RCP Precedence Rule"
+msgstr ""
+
+#: ../../internals/guide.rst:16
+msgid "The API is more important than Readability"
+msgstr ""
+
+#: ../../internals/guide.rst:17
+msgid "Readability is more important than Convention"
+msgstr ""
+
+#: ../../internals/guide.rst:19
+msgid "Convention is more important than Performance"
+msgstr ""
+
+#: ../../internals/guide.rst:19
+msgid "…unless the code is a proven hot-spot."
+msgstr ""
+
+#: ../../internals/guide.rst:21
+msgid ""
+"More important than anything else is the end-user API. Conventions must "
+"step aside, and any suffering is always alleviated if the end result is a"
+" better API."
+msgstr ""
+
+#: ../../internals/guide.rst:26
+msgid "Conventions and Idioms Used"
+msgstr ""
+
+#: ../../internals/guide.rst:29
+msgid "Classes"
+msgstr ""
+
+#: ../../internals/guide.rst:32
+msgid "Naming"
+msgstr ""
+
+#: ../../internals/guide.rst:34
+msgid "Follows :pep:`8`."
+msgstr ""
+
+#: ../../internals/guide.rst:36
+msgid "Class names must be `CamelCase`."
+msgstr ""
+
+#: ../../internals/guide.rst:37
+msgid "but not if they're verbs, verbs shall be `lower_case`:"
+msgstr ""
+
+#: ../../internals/guide.rst:64
+msgid ""
+"Sometimes it makes sense to have a class mask as a function, and there's "
+"precedence for this in the Python standard library (e.g., "
+":class:`~contextlib.contextmanager`). Celery examples include "
+":class:`~celery.signature`, :class:`~celery.chord`, ``inspect``, "
+":class:`~kombu.utils.functional.promise` and more.."
+msgstr ""
+
+#: ../../internals/guide.rst:70
+msgid "Factory functions and methods must be `CamelCase` (excluding verbs):"
+msgstr ""
+
+#: ../../internals/guide.rst:83
+msgid "Default values"
+msgstr ""
+
+#: ../../internals/guide.rst:85
+msgid ""
+"Class attributes serve as default values for the instance, as this means "
+"that they can be set by either instantiation or inheritance."
+msgstr ""
+
+#: ../../internals/guide.rst:88
+msgid "**Example:**"
+msgstr ""
+
+#: ../../internals/guide.rst:102
+msgid "A subclass can change the default value:"
+msgstr ""
+
+#: ../../internals/guide.rst:109
+msgid "and the value can be set at instantiation:"
+msgstr ""
+
+#: ../../internals/guide.rst:116
+msgid "Exceptions"
+msgstr ""
+
+#: ../../internals/guide.rst:118
+msgid ""
+"Custom exceptions raised by an objects methods and properties should be "
+"available as an attribute and documented in the method/property that "
+"throw."
+msgstr ""
+
+#: ../../internals/guide.rst:122
+msgid ""
+"This way a user doesn't have to find out where to import the exception "
+"from, but rather use ``help(obj)`` and access the exception class from "
+"the instance directly."
+msgstr ""
+
+#: ../../internals/guide.rst:126 ../../internals/guide.rst:156
+msgid "**Example**:"
+msgstr ""
+
+#: ../../internals/guide.rst:148
+msgid "Composites"
+msgstr ""
+
+#: ../../internals/guide.rst:150
+msgid ""
+"Similarly to exceptions, composite classes should be override-able by "
+"inheritance and/or instantiation. Common sense can be used when selecting"
+" what classes to include, but often it's better to add one too many: "
+"predicting what users need to override is hard (this has saved us from "
+"many a monkey patch)."
+msgstr ""
+
+#: ../../internals/guide.rst:171
+msgid "Applications vs. \"single mode\""
+msgstr ""
+
+#: ../../internals/guide.rst:173
+msgid ""
+"In the beginning Celery was developed for Django, simply because this "
+"enabled us get the project started quickly, while also having a large "
+"potential user base."
+msgstr ""
+
+#: ../../internals/guide.rst:177
+msgid ""
+"In Django there's a global settings object, so multiple Django projects "
+"can't co-exist in the same process space, this later posed a problem for "
+"using Celery with frameworks that don't have this limitation."
+msgstr ""
+
+#: ../../internals/guide.rst:181
+msgid ""
+"Therefore the app concept was introduced. When using apps you use "
+"'celery' objects instead of importing things from Celery sub-modules, "
+"this (unfortunately) also means that Celery essentially has two API's."
+msgstr ""
+
+#: ../../internals/guide.rst:185
+msgid "Here's an example using Celery in single-mode:"
+msgstr ""
+
+#: ../../internals/guide.rst:201
+msgid "and here's the same using Celery app objects:"
+msgstr ""
+
+#: ../../internals/guide.rst:215
+msgid ""
+"In the example above the actual application instance is imported from a "
+"module in the project, this module could look something like this:"
+msgstr ""
+
+#: ../../internals/guide.rst:226
+msgid "Module Overview"
+msgstr ""
+
+#: ../../internals/guide.rst:228
+msgid "celery.app"
+msgstr ""
+
+#: ../../internals/guide.rst:230
+msgid "This is the core of Celery: the entry-point for all functionality."
+msgstr ""
+
+#: ../../internals/guide.rst:232
+msgid "celery.loaders"
+msgstr ""
+
+#: ../../internals/guide.rst:234
+msgid ""
+"Every app must have a loader. The loader decides how configuration is "
+"read; what happens when the worker starts; when a task starts and ends; "
+"and so on."
+msgstr ""
+
+#: ../../internals/guide.rst:238
+msgid "The loaders included are:"
+msgstr ""
+
+#: ../../internals/guide.rst:240
+msgid "app"
+msgstr ""
+
+#: ../../internals/guide.rst:242
+msgid "Custom Celery app instances uses this loader by default."
+msgstr ""
+
+#: ../../internals/guide.rst:244
+msgid "default"
+msgstr ""
+
+#: ../../internals/guide.rst:246
+msgid "\"single-mode\" uses this loader by default."
+msgstr ""
+
+#: ../../internals/guide.rst:248
+msgid "Extension loaders also exist, for example :pypi:`celery-pylons`."
+msgstr ""
+
+#: ../../internals/guide.rst:250
+msgid "celery.worker"
+msgstr ""
+
+#: ../../internals/guide.rst:252
+msgid "This is the worker implementation."
+msgstr ""
+
+#: ../../internals/guide.rst:254
+msgid "celery.backends"
+msgstr ""
+
+#: ../../internals/guide.rst:256
+msgid "Task result backends live here."
+msgstr ""
+
+#: ../../internals/guide.rst:258
+msgid "celery.apps"
+msgstr ""
+
+#: ../../internals/guide.rst:260
+msgid ""
+"Major user applications: worker and beat. The command-line wrappers for "
+"these are in celery.bin (see below)"
+msgstr ""
+
+#: ../../internals/guide.rst:263
+msgid "celery.bin"
+msgstr ""
+
+#: ../../internals/guide.rst:265
+msgid ""
+"Command-line applications. :file:`setup.py` creates setuptools entry-"
+"points for these."
+msgstr ""
+
+#: ../../internals/guide.rst:268
+msgid "celery.concurrency"
+msgstr ""
+
+#: ../../internals/guide.rst:270
+msgid "Execution pool implementations (prefork, eventlet, gevent, solo)."
+msgstr ""
+
+#: ../../internals/guide.rst:272
+msgid "celery.db"
+msgstr ""
+
+#: ../../internals/guide.rst:274
+msgid ""
+"Database models for the SQLAlchemy database result backend. (should be "
+"moved into :mod:`celery.backends.database`)"
+msgstr ""
+
+#: ../../internals/guide.rst:277
+msgid "celery.events"
+msgstr ""
+
+#: ../../internals/guide.rst:279
+msgid ""
+"Sending and consuming monitoring events, also includes curses monitor, "
+"event dumper and utilities to work with in-memory cluster state."
+msgstr ""
+
+#: ../../internals/guide.rst:282
+msgid "celery.execute.trace"
+msgstr ""
+
+#: ../../internals/guide.rst:284
+msgid "How tasks are executed and traced by the worker, and in eager mode."
+msgstr ""
+
+#: ../../internals/guide.rst:286
+msgid "celery.security"
+msgstr ""
+
+#: ../../internals/guide.rst:288
+msgid ""
+"Security related functionality, currently a serializer using "
+"cryptographic digests."
+msgstr ""
+
+#: ../../internals/guide.rst:291
+msgid "celery.task"
+msgstr ""
+
+#: ../../internals/guide.rst:293
+msgid "single-mode interface to creating tasks, and controlling workers."
+msgstr ""
+
+#: ../../internals/guide.rst:295
+msgid "t.unit (int distribution)"
+msgstr ""
+
+#: ../../internals/guide.rst:297
+msgid "The unit test suite."
+msgstr ""
+
+#: ../../internals/guide.rst:299
+msgid "celery.utils"
+msgstr ""
+
+#: ../../internals/guide.rst:301
+msgid ""
+"Utility functions used by the Celery code base. Much of it is there to be"
+" compatible across Python versions."
+msgstr ""
+
+#: ../../internals/guide.rst:304
+msgid "celery.contrib"
+msgstr ""
+
+#: ../../internals/guide.rst:306
+msgid "Additional public code that doesn't fit into any other name-space."
+msgstr ""
+
+#: ../../internals/guide.rst:309
+msgid "Worker overview"
+msgstr ""
+
+#: ../../internals/guide.rst:311
+msgid "`celery.bin.worker:Worker`"
+msgstr ""
+
+#: ../../internals/guide.rst:313
+msgid "This is the command-line interface to the worker."
+msgstr ""
+
+#: ../../internals/guide.rst:319
+msgid "Responsibilities:"
+msgstr ""
+
+#: ../../internals/guide.rst:316
+msgid "Daemonization when :option:`--detach <celery worker --detach>` set,"
+msgstr ""
+
+#: ../../internals/guide.rst:317
+msgid ""
+"dropping privileges when using :option:`--uid <celery worker --uid>`/ "
+":option:`--gid <celery worker --gid>` arguments"
+msgstr ""
+
+#: ../../internals/guide.rst:319
+msgid "Installs \"concurrency patches\" (eventlet/gevent monkey patches)."
+msgstr ""
+
+#: ../../internals/guide.rst:321
+msgid ""
+"``app.worker_main(argv)`` calls "
+"``instantiate('celery.bin.worker:Worker')(app).execute_from_commandline(argv)``"
+msgstr ""
+
+#: ../../internals/guide.rst:324
+msgid "`app.Worker` -> `celery.apps.worker:Worker`"
+msgstr ""
+
+#: ../../internals/guide.rst:326
+msgid ""
+"Responsibilities: * sets up logging and redirects standard outs * "
+"installs signal handlers (`TERM`/`HUP`/`STOP`/`USR1` (cry)/`USR2` (rdb)) "
+"* prints banner and warnings (e.g., pickle warning) * handles the "
+":option:`celery worker --purge` argument"
+msgstr ""
+
+#: ../../internals/guide.rst:332
+msgid "`app.WorkController` -> `celery.worker.WorkController`"
+msgstr ""
+
+#: ../../internals/guide.rst:334
+msgid "This is the real worker, built up around bootsteps."
+msgstr ""
+
+#: ../../internals/index.rst:5
+msgid "Internals"
+msgstr ""
+
+#: ../../internals/index.rst ../../internals/reference/index.rst
+msgid "Release"
+msgstr ""
+
+#: ../../internals/index.rst:7 ../../internals/reference/index.rst:5
+msgid "|version|"
+msgstr ""
+
+#: ../../internals/index.rst ../../internals/reference/index.rst
+msgid "Date"
+msgstr ""
+
+#: ../../internals/index.rst:8 ../../internals/reference/index.rst:6
+msgid "|today|"
+msgstr ""
+
+#: ../../internals/protocol.rst:5
+msgid "Message Protocol"
+msgstr ""
+
+#: ../../internals/protocol.rst:14
+msgid "Task messages"
+msgstr ""
+
+#: ../../internals/protocol.rst:19
+msgid "Version 2"
+msgstr ""
+
+#: ../../internals/protocol.rst:22
+msgid "Definition"
+msgstr ""
+
+#: ../../internals/protocol.rst:66 celery.platforms.create_pidlock:15
+#: celery.platforms.detached:29 celery.platforms.fd_by_path:12
+#: celery.utils.collections.LimitedSet:36
+#: celery.utils.collections.LimitedSet.as_dict:4
+#: celery.utils.functional.chunks:12 celery.utils.functional.padlist:4
+#: celery.utils.objects.getitem_property:7
+#: celery.utils.serialization.UnpickleableExceptionWrapper:11
+#: celery.utils.term.colored:4 celery.utils.time.weekday:4 of
+msgid "Example"
+msgstr ""
+
+#: ../../internals/protocol.rst:68
+msgid "This example sends a task message using version 2 of the protocol:"
+msgstr ""
+
+#: ../../internals/protocol.rst:98
+msgid "Changes from version 1"
+msgstr ""
+
+#: ../../internals/protocol.rst:100
+msgid "Protocol version detected by the presence of a ``task`` message header."
+msgstr ""
+
+#: ../../internals/protocol.rst:102
+msgid "Support for multiple languages via the ``lang`` header."
+msgstr ""
+
+#: ../../internals/protocol.rst:104
+msgid "Worker may redirect the message to a worker that supports the language."
+msgstr ""
+
+#: ../../internals/protocol.rst:107
+msgid "Meta-data moved to headers."
+msgstr ""
+
+#: ../../internals/protocol.rst:109
+msgid ""
+"This means that workers/intermediates can inspect the message and make "
+"decisions based on the headers without decoding the payload (that may be "
+"language specific, for example serialized by the Python specific pickle "
+"serializer)."
+msgstr ""
+
+#: ../../internals/protocol.rst:114
+msgid "Always UTC"
+msgstr ""
+
+#: ../../internals/protocol.rst:116
+msgid ""
+"There's no ``utc`` flag anymore, so any time information missing timezone"
+" will be expected to be in UTC time."
+msgstr ""
+
+#: ../../internals/protocol.rst:119
+msgid "Body is only for language specific data."
+msgstr ""
+
+#: ../../internals/protocol.rst:121
+msgid "Python stores args/kwargs and embedded signatures in body."
+msgstr ""
+
+#: ../../internals/protocol.rst:123
+msgid ""
+"If a message uses raw encoding then the raw data will be passed as a "
+"single argument to the function."
+msgstr ""
+
+#: ../../internals/protocol.rst:126
+msgid "Java/C, etc. can use a Thrift/protobuf document as the body"
+msgstr ""
+
+#: ../../internals/protocol.rst:128
+msgid "``origin`` is the name of the node sending the task."
+msgstr ""
+
+#: ../../internals/protocol.rst:130
+msgid "Dispatches to actor based on ``task``, ``meth`` headers"
+msgstr ""
+
+#: ../../internals/protocol.rst:132
+msgid ""
+"``meth`` is unused by Python, but may be used in the future to specify "
+"class+method pairs."
+msgstr ""
+
+#: ../../internals/protocol.rst:135
+msgid "Chain gains a dedicated field."
+msgstr ""
+
+#: ../../internals/protocol.rst:137
+msgid ""
+"Reducing the chain into a recursive ``callbacks`` argument causes "
+"problems when the recursion limit is exceeded."
+msgstr ""
+
+#: ../../internals/protocol.rst:140
+msgid ""
+"This is fixed in the new message protocol by specifying a list of "
+"signatures, each task will then pop a task off the list when sending the "
+"next message:"
+msgstr ""
+
+#: ../../internals/protocol.rst:152
+msgid "``correlation_id`` replaces ``task_id`` field."
+msgstr ""
+
+#: ../../internals/protocol.rst:154
+msgid "``root_id`` and ``parent_id`` fields helps keep track of work-flows."
+msgstr ""
+
+#: ../../internals/protocol.rst:156
+msgid ""
+"``shadow`` lets you specify a different name for logs, monitors can be "
+"used for concepts like tasks that calls a function specified as argument:"
+msgstr ""
+
+#: ../../internals/protocol.rst:184
+msgid "Version 1"
+msgstr ""
+
+#: ../../internals/protocol.rst:186
+msgid ""
+"In version 1 of the protocol all fields are stored in the message body: "
+"meaning workers and intermediate consumers must deserialize the payload "
+"to read the fields."
+msgstr ""
+
+#: ../../internals/protocol.rst:191
+msgid "Message body"
+msgstr ""
+
+#: ../../internals/protocol.rst:196
+msgid "``task``"
+msgstr ""
+
+#: ../../internals/protocol.rst
+msgid "`string`"
+msgstr ""
+
+#: ../../internals/protocol.rst:196
+msgid "Name of the task. **required**"
+msgstr ""
+
+#: ../../internals/protocol.rst:201
+msgid "``id``"
+msgstr ""
+
+#: ../../internals/protocol.rst:201
+msgid "Unique id of the task (UUID). **required**"
+msgstr ""
+
+#: ../../internals/protocol.rst:206
+msgid "``args``"
+msgstr ""
+
+#: ../../internals/protocol.rst
+msgid "`list`"
+msgstr ""
+
+#: ../../internals/protocol.rst:206
+msgid "List of arguments. Will be an empty list if not provided."
+msgstr ""
+
+#: ../../internals/protocol.rst:212
+msgid "``kwargs``"
+msgstr ""
+
+#: ../../internals/protocol.rst
+msgid "`dictionary`"
+msgstr ""
+
+#: ../../internals/protocol.rst:211
+msgid ""
+"Dictionary of keyword arguments. Will be an empty dictionary if not "
+"provided."
+msgstr ""
+
+#: ../../internals/protocol.rst:218
+msgid "``retries``"
+msgstr ""
+
+#: ../../internals/protocol.rst
+msgid "`int`"
+msgstr ""
+
+#: ../../internals/protocol.rst:217
+msgid ""
+"Current number of times this task has been retried. Defaults to `0` if "
+"not specified."
+msgstr ""
+
+#: ../../internals/protocol.rst:225
+msgid "``eta``"
+msgstr ""
+
+#: ../../internals/protocol.rst
+msgid "`string` (ISO 8601)"
+msgstr ""
+
+#: ../../internals/protocol.rst:223
+msgid ""
+"Estimated time of arrival. This is the date and time in ISO 8601 format. "
+"If not provided the message isn't scheduled, but will be executed asap."
+msgstr ""
+
+#: ../../internals/protocol.rst:235
+msgid "``expires``"
+msgstr ""
+
+#: ../../internals/protocol.rst:232
+msgid ""
+"Expiration date. This is the date and time in ISO 8601 format. If not "
+"provided the message will never expire. The message will be expired when "
+"the message is received and the expiration date has been exceeded."
+msgstr ""
+
+#: ../../internals/protocol.rst:240
+msgid "``taskset``"
+msgstr ""
+
+#: ../../internals/protocol.rst:240
+msgid "The group this task is part of (if any)."
+msgstr ""
+
+#: ../../internals/protocol.rst:249
+msgid "``chord``"
+msgstr ""
+
+#: ../../internals/protocol.rst
+msgid "`Signature`"
+msgstr ""
+
+#: ../../internals/protocol.rst:247
+msgid ""
+"Signifies that this task is one of the header parts of a chord. The value"
+" of this key is the body of the cord that should be executed when all of "
+"the tasks in the header has returned."
+msgstr ""
+
+#: ../../internals/protocol.rst:257
+msgid "``utc``"
+msgstr ""
+
+#: ../../internals/protocol.rst
+msgid "`bool`"
+msgstr ""
+
+#: ../../internals/protocol.rst:256
+msgid ""
+"If true time uses the UTC timezone, if not the current local timezone "
+"should be used."
+msgstr ""
+
+#: ../../internals/protocol.rst:264
+msgid "``callbacks``"
+msgstr ""
+
+#: ../../internals/protocol.rst
+msgid "`<list>Signature`"
+msgstr ""
+
+#: ../../internals/protocol.rst:264
+msgid "A list of signatures to call if the task exited successfully."
+msgstr ""
+
+#: ../../internals/protocol.rst:271
+msgid "``errbacks``"
+msgstr ""
+
+#: ../../internals/protocol.rst:271
+msgid "A list of signatures to call if an error occurs while executing the task."
+msgstr ""
+
+#: ../../internals/protocol.rst:285
+msgid "``timelimit``"
+msgstr ""
+
+#: ../../internals/protocol.rst
+msgid "`<tuple>(float, float)`"
+msgstr ""
+
+#: ../../internals/protocol.rst:278
+msgid ""
+"Task execution time limit settings. This is a tuple of hard and soft time"
+" limit value (`int`/`float` or :const:`None` for no limit)."
+msgstr ""
+
+#: ../../internals/protocol.rst:281
+msgid ""
+"Example value specifying a soft time limit of 3 seconds, and a hard time "
+"limit of 10 seconds::"
+msgstr ""
+
+#: ../../internals/protocol.rst:288 ../../internals/protocol.rst:370
+msgid "Example message"
+msgstr ""
+
+#: ../../internals/protocol.rst:290
+msgid "This is an example invocation of a `celery.task.ping` task in json format:"
+msgstr ""
+
+#: ../../internals/protocol.rst:303
+msgid "Task Serialization"
+msgstr ""
+
+#: ../../internals/protocol.rst:305
+msgid ""
+"Several types of serialization formats are supported using the "
+"`content_type` message header."
+msgstr ""
+
+#: ../../internals/protocol.rst:308
+msgid "The MIME-types supported by default are shown in the following table."
+msgstr ""
+
+#: ../../internals/protocol.rst:311
+msgid "Scheme"
+msgstr ""
+
+#: ../../internals/protocol.rst:311
+msgid "MIME Type"
+msgstr ""
+
+#: ../../internals/protocol.rst:313
+msgid "json"
+msgstr ""
+
+#: ../../internals/protocol.rst:313
+msgid "application/json"
+msgstr ""
+
+#: ../../internals/protocol.rst:314
+msgid "yaml"
+msgstr ""
+
+#: ../../internals/protocol.rst:314
+msgid "application/x-yaml"
+msgstr ""
+
+#: ../../internals/protocol.rst:315
+msgid "pickle"
+msgstr ""
+
+#: ../../internals/protocol.rst:315
+msgid "application/x-python-serialize"
+msgstr ""
+
+#: ../../internals/protocol.rst:316
+msgid "msgpack"
+msgstr ""
+
+#: ../../internals/protocol.rst:316
+msgid "application/x-msgpack"
+msgstr ""
+
+#: ../../internals/protocol.rst:322
+msgid "Event Messages"
+msgstr ""
+
+#: ../../internals/protocol.rst:324
+msgid ""
+"Event messages are always JSON serialized and can contain arbitrary "
+"message body fields."
+msgstr ""
+
+#: ../../internals/protocol.rst:327
+msgid ""
+"Since version 4.0. the body can consist of either a single mapping (one "
+"event), or a list of mappings (multiple events)."
+msgstr ""
+
+#: ../../internals/protocol.rst:330
+msgid ""
+"There are also standard fields that must always be present in an event "
+"message:"
+msgstr ""
+
+#: ../../internals/protocol.rst:334
+msgid "Standard body fields"
+msgstr ""
+
+#: ../../internals/protocol.rst:336
+msgid "*string* ``type``"
+msgstr ""
+
+#: ../../internals/protocol.rst:338
+msgid ""
+"The type of event. This is a string containing the *category* and "
+"*action* separated by a dash delimiter (e.g., ``task-succeeded``)."
+msgstr ""
+
+#: ../../internals/protocol.rst:341
+msgid "*string* ``hostname``"
+msgstr ""
+
+#: ../../internals/protocol.rst:343
+msgid "The fully qualified hostname of where the event occurred at."
+msgstr ""
+
+#: ../../internals/protocol.rst:345
+msgid "*unsigned long long* ``clock``"
+msgstr ""
+
+#: ../../internals/protocol.rst:347
+msgid "The logical clock value for this event (Lamport time-stamp)."
+msgstr ""
+
+#: ../../internals/protocol.rst:349
+msgid "*float* ``timestamp``"
+msgstr ""
+
+#: ../../internals/protocol.rst:351
+msgid "The UNIX time-stamp corresponding to the time of when the event occurred."
+msgstr ""
+
+#: ../../internals/protocol.rst:353
+msgid "*signed short* ``utcoffset``"
+msgstr ""
+
+#: ../../internals/protocol.rst:355
+msgid ""
+"This field describes the timezone of the originating host, and is "
+"specified as the number of hours ahead of/behind UTC (e.g., -2 or +1)."
+msgstr ""
+
+#: ../../internals/protocol.rst:359
+msgid "*unsigned long long* ``pid``"
+msgstr ""
+
+#: ../../internals/protocol.rst:361
+msgid "The process id of the process the event originated in."
+msgstr ""
+
+#: ../../internals/protocol.rst:364
+msgid "Standard event types"
+msgstr ""
+
+#: ../../internals/protocol.rst:366
+msgid ""
+"For a list of standard event types and their fields see the :ref:`event-"
+"reference`."
+msgstr ""
+
+#: ../../internals/protocol.rst:372
+msgid "This is the message fields for a ``task-succeeded`` event:"
+msgstr ""
+
+#: ../../internals/reference/celery._state.rst:3
+msgid "``celery._state``"
+msgstr ""
+
+#: celery._state:1 of
+msgid "Internal state."
+msgstr ""
+
+#: celery._state:3 of
+msgid ""
+"This is an internal module containing thread state like the "
+"``current_app``, and ``current_task``."
+msgstr ""
+
+#: celery._state:6 of
+msgid "This module shouldn't be used directly."
+msgstr ""
+
+#: celery._state.set_default_app:1 of
+msgid "Set default app."
+msgstr ""
+
+#: celery._state.get_current_task:1 of
+msgid "Currently executing task."
+msgstr ""
+
+#: celery._state.get_current_worker_task:1 of
+msgid "Currently executing task, that was applied by the worker."
+msgstr ""
+
+#: celery._state.get_current_worker_task:3 of
+msgid ""
+"This is used to differentiate between the actual task executed by the "
+"worker and any task that was called within a task (using "
+"``task.__call__`` or ``task.apply``)"
+msgstr ""
+
+#: celery._state.current_app:1 of
+msgid "Proxy to current app."
+msgstr ""
+
+#: celery._state.current_task:1 of
+msgid "Proxy to current task."
+msgstr ""
+
+#: celery._state.connect_on_app_finalize:1 of
+msgid "Connect callback to be called when any app is finalized."
+msgstr ""
+
+#: ../../internals/reference/celery.app.annotations.rst:3
+msgid "``celery.app.annotations``"
+msgstr ""
+
+#: celery.app.annotations:1 of
+msgid "Task Annotations."
+msgstr ""
+
+#: celery.app.annotations:3 of
+msgid ""
+"Annotations is a nice term for monkey-patching task classes in the "
+"configuration."
+msgstr ""
+
+#: celery.app.annotations:6 of
+msgid ""
+"This prepares and performs the annotations in the "
+":setting:`task_annotations` setting."
+msgstr ""
+
+#: celery.app.annotations.MapAnnotation:1 of
+msgid "Annotation map: task_name => attributes."
+msgstr ""
+
+#: celery.app.annotations.prepare:1 of
+msgid "Expand the :setting:`task_annotations` setting."
+msgstr ""
+
+#: celery.app.annotations.resolve_all:1 of
+msgid "Resolve all pending annotations."
+msgstr ""
+
+#: ../../internals/reference/celery.app.routes.rst:3
+msgid "``celery.app.routes``"
+msgstr ""
+
+#: celery.app.routes:1 of
+msgid "Task Routing."
+msgstr ""
+
+#: celery.app.routes:3 of
+msgid ""
+"Contains utilities for working with task routers, "
+"(:setting:`task_routes`)."
+msgstr ""
+
+#: celery.app.routes.MapRoute:1 of
+msgid "Creates a router out of a :class:`dict`."
+msgstr ""
+
+#: celery.app.routes.Router:1 of
+msgid "Route tasks based on the :setting:`task_routes` setting."
+msgstr ""
+
+#: celery.app.routes.prepare:1 of
+msgid "Expand the :setting:`task_routes` setting."
+msgstr ""
+
+#: ../../internals/reference/celery.app.trace.rst:3
+msgid "``celery.app.trace``"
+msgstr ""
+
+#: celery.app.trace:1 celery.app.trace.trace_task:1 of
+msgid "Trace task execution."
+msgstr ""
+
+#: celery.app.trace:3 of
+msgid ""
+"This module defines how the task execution is traced: errors are "
+"recorded, handlers are applied and so on."
+msgstr ""
+
+#: celery.app.trace.TraceInfo:1 of
+msgid "Information about task execution."
+msgstr ""
+
+#: celery.app.trace.TraceInfo.handle_failure:1 of
+msgid "Handle exception."
+msgstr ""
+
+#: celery.app.trace.TraceInfo.handle_retry:1 of
+msgid "Handle retry exception."
+msgstr ""
+
+#: celery.app.trace.build_tracer:1 of
+msgid "Return a function that traces task execution."
+msgstr ""
+
+#: celery.app.trace.build_tracer:3 of
+msgid ""
+"Catches all exceptions and updates result backend with the state and "
+"result."
+msgstr ""
+
+#: celery.app.trace.build_tracer:6 of
+msgid ""
+"If the call was successful, it saves the result to the task result "
+"backend, and sets the task status to `\"SUCCESS\"`."
+msgstr ""
+
+#: celery.app.trace.build_tracer:9 of
+msgid ""
+"If the call raises :exc:`~@Retry`, it extracts the original exception, "
+"uses that as the result and sets the task state to `\"RETRY\"`."
+msgstr ""
+
+#: celery.app.trace.build_tracer:13 of
+msgid ""
+"If the call results in an exception, it saves the exception as the task "
+"result, and sets the task state to `\"FAILURE\"`."
+msgstr ""
+
+#: celery.app.trace.build_tracer:16 of
+msgid "Return a function that takes the following arguments:"
+msgstr ""
+
+#: celery.app.trace.build_tracer of
+msgid "param uuid"
+msgstr ""
+
+#: celery.app.trace.build_tracer:18 of
+msgid "The id of the task."
+msgstr ""
+
+#: celery.app.trace.build_tracer of
+msgid "param args"
+msgstr ""
+
+#: celery.app.trace.build_tracer:19 of
+msgid "List of positional args to pass on to the function."
+msgstr ""
+
+#: celery.app.trace.build_tracer of
+msgid "param kwargs"
+msgstr ""
+
+#: celery.app.trace.build_tracer:20 of
+msgid "Keyword arguments mapping to pass on to the function."
+msgstr ""
+
+#: celery.app.trace.build_tracer of
+msgid "keyword request"
+msgstr ""
+
+#: celery.app.trace.build_tracer:21 of
+msgid "Request dict."
+msgstr ""
+
+#: celery.app.trace.setup_worker_optimizations:1 of
+msgid "Setup worker related optimizations."
+msgstr ""
+
+#: celery.app.trace.reset_worker_optimizations:1 of
+msgid "Reset previously configured optimizations."
+msgstr ""
+
+#: ../../internals/reference/celery.backends.rst:3
+msgid "``celery.backends``"
+msgstr ""
+
+#: celery.backends:1 of
+msgid "Result Backends."
+msgstr ""
+
+#: celery.backends.get_backend_by_url:1 of
+msgid "Deprecated alias to :func:`celery.app.backends.by_url`."
+msgstr ""
+
+#: celery.backends.get_backend_cls:1 of
+msgid "Deprecated alias to :func:`celery.app.backends.by_name`."
+msgstr ""
+
+#: ../../internals/reference/celery.backends.amqp.rst:3
+msgid "``celery.backends.amqp``"
+msgstr ""
+
+#: celery.backends.amqp:1 of
+msgid "The old AMQP result backend, deprecated and replaced by the RPC backend."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.BacklogLimitExceeded:1
+#: celery.backends.amqp.BacklogLimitExceeded:1
+#: celery.backends.rpc.BacklogLimitExceeded:1 of
+msgid "Too much state history to fast-forward."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend:1 of
+msgid "The AMQP result backend."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend:3 of
+msgid "Deprecated: Please use the RPC backend or a persistent backend."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer:1
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer:1 of
+msgid "Message consumer."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer
+#: celery.backends.amqp.AMQPBackend.Consumer.consume
+#: celery.backends.amqp.AMQPBackend.Consumer.qos
+#: celery.backends.amqp.AMQPBackend.Consumer.receive
+#: celery.backends.amqp.AMQPBackend.Consumer.recover
+#: celery.backends.amqp.AMQPBackend.Exchange
+#: celery.backends.amqp.AMQPBackend.Exchange.Message
+#: celery.backends.amqp.AMQPBackend.Exchange.bind_to
+#: celery.backends.amqp.AMQPBackend.Exchange.delete
+#: celery.backends.amqp.AMQPBackend.Exchange.publish
+#: celery.backends.amqp.AMQPBackend.Producer
+#: celery.backends.amqp.AMQPBackend.Producer.publish
+#: celery.backends.azureblockblob.AzureBlockBlobBackend.delete
+#: celery.backends.azureblockblob.AzureBlockBlobBackend.get
+#: celery.backends.azureblockblob.AzureBlockBlobBackend.mget
+#: celery.backends.azureblockblob.AzureBlockBlobBackend.set
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.delete
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.get
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.mget
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.set
+#: celery.backends.filesystem.FilesystemBackend
+#: celery.backends.mongodb.MongoBackend.as_uri
+#: celery.backends.rpc.RPCBackend.Exchange
+#: celery.backends.rpc.RPCBackend.Exchange.Message
+#: celery.backends.rpc.RPCBackend.Exchange.bind_to
+#: celery.backends.rpc.RPCBackend.Exchange.delete
+#: celery.backends.rpc.RPCBackend.Exchange.publish
+#: celery.backends.rpc.RPCBackend.Producer
+#: celery.backends.rpc.RPCBackend.Producer.publish
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.consume
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.qos
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.receive
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.recover
+#: celery.platforms.detached celery.platforms.fd_by_path
+#: celery.platforms.ignore_errno celery.platforms.parse_gid
+#: celery.platforms.parse_uid celery.utils.collections.ConfigurationView
+#: celery.utils.collections.LimitedSet
+#: celery.utils.collections.LimitedSet.purge celery.utils.deprecated.Callable
+#: celery.utils.dispatch.Signal.connect celery.utils.dispatch.Signal.disconnect
+#: celery.utils.dispatch.Signal.send celery.utils.dispatch.Signal.send_robust
+#: celery.utils.dispatch.signal.Signal.connect
+#: celery.utils.dispatch.signal.Signal.disconnect
+#: celery.utils.dispatch.signal.Signal.send
+#: celery.utils.dispatch.signal.Signal.send_robust
+#: celery.utils.functional.LRUCache celery.utils.graph.DependencyGraph.to_dot
+#: celery.utils.log.LoggingProxy celery.utils.nodenames.worker_direct
+#: celery.utils.objects.mro_lookup
+#: celery.utils.serialization.UnpickleableExceptionWrapper
+#: celery.utils.serialization.find_pickleable_exception
+#: celery.utils.time.humanize_seconds celery.utils.time.remaining
+#: celery.utils.worker_direct celery.worker.heartbeat.Heart of
+msgid "Parameters"
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer:3
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer:3 of
+msgid "see :attr:`channel`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer:5
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer:5 of
+msgid "see :attr:`queues`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer:7
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer:7 of
+msgid "see :attr:`no_ack`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer:9
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer:9 of
+msgid "see :attr:`auto_declare`"
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer:11
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer:11 of
+msgid "see :attr:`callbacks`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer:13
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer:13 of
+msgid "See :attr:`on_message`"
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer:15
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer:15 of
+msgid "see :attr:`on_decode_error`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer:17
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer:17 of
+msgid "see :attr:`prefetch_count`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.ContentDisallowed:1
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.ContentDisallowed:1
+#: of
+msgid "Consumer does not allow this content-type."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.add_queue:1
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.add_queue:1 of
+msgid "Add a queue to the list of queues to consume from."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.add_queue:5
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.add_queue:5 of
+msgid ""
+"This will not start consuming from the queue, for that you will have to "
+"call :meth:`consume` after."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.cancel:1
+#: celery.backends.amqp.AMQPBackend.Consumer.close:1
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.cancel:1
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.close:1 of
+msgid "End all active queue consumers."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.cancel:5
+#: celery.backends.amqp.AMQPBackend.Consumer.close:5
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.cancel:5
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.close:5 of
+msgid ""
+"This does not affect already delivered messages, but it does mean the "
+"server will not send any more messages for this consumer."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.cancel_by_queue:1
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.cancel_by_queue:1 of
+msgid "Cancel consumer by queue name."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.consume:1
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.consume:1 of
+msgid "Start consuming messages."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.consume:3
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.consume:3 of
+msgid ""
+"Can be called multiple times, but note that while it will consume from "
+"new queues added since the last call, it will not cancel consuming from "
+"removed queues ( use :meth:`cancel_by_queue`)."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.consume:8
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.consume:8 of
+msgid "See :attr:`no_ack`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.consuming_from:1
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.consuming_from:1 of
+msgid "Return :const:`True` if currently consuming from queue'."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.declare:1
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.declare:1 of
+msgid "Declare queues, exchanges and bindings."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.declare:5
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.declare:5 of
+msgid ""
+"This is done automatically at instantiation when :attr:`auto_declare` is "
+"set."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.flow:1
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.flow:1 of
+msgid "Enable/disable flow from peer."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.flow:3
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.flow:3 of
+msgid ""
+"This is a simple flow-control mechanism that a peer can use to avoid "
+"overflowing its queues or otherwise finding itself receiving more "
+"messages than it can process."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.flow:7
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.flow:7 of
+msgid ""
+"The peer that receives a request to stop sending content will finish "
+"sending the current content (if any), and then wait until flow is "
+"reactivated."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.purge:1
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.purge:1 of
+msgid "Purge messages from all queues."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.purge:3
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.purge:3 of
+msgid "This will *delete all ready messages*, there is no undo operation."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.qos:1
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.qos:1 of
+msgid "Specify quality of service."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.qos:3
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.qos:3 of
+msgid ""
+"The client can request that messages should be sent in advance so that "
+"when the client finishes processing a message, the following message is "
+"already held locally, rather than needing to be sent down the channel. "
+"Prefetching gives a performance improvement."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.qos:9
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.qos:9 of
+msgid "The prefetch window is Ignored if the :attr:`no_ack` option is set."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.qos:11
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.qos:11 of
+msgid ""
+"Specify the prefetch window in octets. The server will send a message in "
+"advance if it is equal to or smaller in size than the available prefetch "
+"size (and also falls within other prefetch limits). May be set to zero, "
+"meaning \"no specific limit\", although other prefetch limits may still "
+"apply."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.qos:18
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.qos:18 of
+msgid "Specify the prefetch window in terms of whole messages."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.qos:21
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.qos:21 of
+msgid "Apply new settings globally on all channels."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.receive:1
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.receive:1 of
+msgid "Method called when a message is received."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.receive:3
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.receive:3 of
+msgid "This dispatches to the registered :attr:`callbacks`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.receive:5
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.receive:5 of
+msgid "The decoded message body."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.receive:7
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.receive:7 of
+msgid "The message instance."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.receive
+#: celery.backends.amqp.AMQPBackend.wait_for
+#: celery.backends.arangodb.ArangoDbBackend
+#: celery.backends.cassandra.CassandraBackend
+#: celery.backends.couchbase.CouchbaseBackend
+#: celery.backends.couchdb.CouchBackend
+#: celery.backends.dynamodb.DynamoDBBackend
+#: celery.backends.elasticsearch.ElasticsearchBackend
+#: celery.backends.mongodb.MongoBackend celery.backends.riak.RiakBackend
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.receive
+#: celery.backends.s3.S3Backend of
+msgid "raises"
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.receive:10
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.receive:10 of
+msgid ""
+":exc:`NotImplementedError` -- If no consumer callbacks have been "
+"registered."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.recover:1
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.recover:1 of
+msgid "Redeliver unacknowledged messages."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.recover:3
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.recover:3 of
+msgid ""
+"Asks the broker to redeliver all unacknowledged messages on the specified"
+" channel."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.recover:6
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.recover:6 of
+msgid ""
+"By default the messages will be redelivered to the original recipient. "
+"With `requeue` set to true, the server will attempt to requeue the "
+"message, potentially then delivering it to an alternative subscriber."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.register_callback:1
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.register_callback:1
+#: of
+msgid "Register a new callback to be called when a message is received."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.register_callback:5
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.register_callback:5
+#: of
+msgid ""
+"The signature of the callback needs to accept two arguments: `(body, "
+"message)`, which is the decoded message body and the "
+":class:`~kombu.Message` instance."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Consumer.revive:1
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.revive:1 of
+msgid "Revive consumer after connection loss."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:1
+#: celery.backends.rpc.RPCBackend.Exchange:1 of
+msgid "An Exchange declaration."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:3
+#: celery.backends.rpc.RPCBackend.Exchange:3 of
+msgid "See :attr:`name`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:5
+#: celery.backends.rpc.RPCBackend.Exchange:5 of
+msgid "See :attr:`type`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:7
+#: celery.backends.rpc.RPCBackend.Exchange:7 of
+msgid "See :attr:`channel`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:9
+#: celery.backends.rpc.RPCBackend.Exchange:9 of
+msgid "See :attr:`durable`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:11
+#: celery.backends.rpc.RPCBackend.Exchange:11 of
+msgid "See :attr:`auto_delete`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:13
+#: celery.backends.amqp.AMQPBackend.Producer.publish:7
+#: celery.backends.rpc.RPCBackend.Exchange:13
+#: celery.backends.rpc.RPCBackend.Producer.publish:7 of
+msgid "See :attr:`delivery_mode`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:15
+#: celery.backends.rpc.RPCBackend.Exchange:15 of
+msgid "See :attr:`arguments`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:17
+#: celery.backends.rpc.RPCBackend.Exchange:17 of
+msgid "See :attr:`no_declare`"
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:22
+#: celery.backends.rpc.RPCBackend.Exchange:22 of
+msgid "Name of the exchange. Default is no name (the default exchange)."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange
+#: celery.backends.cassandra.CassandraBackend.servers
+#: celery.backends.rpc.RPCBackend.Exchange of
+msgid "type"
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:25
+#: celery.backends.amqp.AMQPBackend.Exchange:73
+#: celery.backends.rpc.RPCBackend.Exchange:25
+#: celery.backends.rpc.RPCBackend.Exchange:73 of
+msgid "str"
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:29
+#: celery.backends.rpc.RPCBackend.Exchange:29 of
+msgid ""
+"*This description of AMQP exchange types was shamelessly stolen from the "
+"blog post `AMQP in 10 minutes: Part 4`_ by Rajith Attapattu. Reading this"
+" article is recommended if you're new to amqp.*"
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:34
+#: celery.backends.rpc.RPCBackend.Exchange:34 of
+msgid ""
+"\"AMQP defines four default exchange types (routing algorithms) that "
+"covers most of the common messaging use cases. An AMQP broker can also "
+"define additional exchange types, so see your broker manual for more "
+"information about available exchange types."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:39
+#: celery.backends.rpc.RPCBackend.Exchange:39 of
+msgid "`direct` (*default*)"
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:41
+#: celery.backends.rpc.RPCBackend.Exchange:41 of
+msgid ""
+"Direct match between the routing key in the message, and the routing "
+"criteria used when a queue is bound to this exchange."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:45
+#: celery.backends.rpc.RPCBackend.Exchange:45 of
+msgid "`topic`"
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:47
+#: celery.backends.rpc.RPCBackend.Exchange:47 of
+msgid ""
+"Wildcard match between the routing key and the routing pattern specified "
+"in the exchange/queue binding. The routing key is treated as zero or more"
+" words delimited by `\".\"` and supports special wildcard characters. "
+"`\"*\"` matches a single word and `\"#\"` matches zero or more words."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:53
+#: celery.backends.rpc.RPCBackend.Exchange:53 of
+msgid "`fanout`"
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:55
+#: celery.backends.rpc.RPCBackend.Exchange:55 of
+msgid ""
+"Queues are bound to this exchange with no arguments. Hence any message "
+"sent to this exchange will be forwarded to all queues bound to this "
+"exchange."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:59
+#: celery.backends.rpc.RPCBackend.Exchange:59 of
+msgid "`headers`"
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:61
+#: celery.backends.rpc.RPCBackend.Exchange:61 of
+msgid ""
+"Queues are bound to this exchange with a table of arguments containing "
+"headers and values (optional). A special argument named \"x-match\" "
+"determines the matching algorithm, where `\"all\"` implies an `AND` (all "
+"pairs must match) and `\"any\"` implies `OR` (at least one pair must "
+"match)."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:67
+#: celery.backends.rpc.RPCBackend.Exchange:67 of
+msgid ":attr:`arguments` is used to specify the arguments."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:77
+#: celery.backends.rpc.RPCBackend.Exchange:77 of
+msgid "The channel the exchange is bound to (if bound)."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:79
+#: celery.backends.rpc.RPCBackend.Exchange:79 of
+msgid "ChannelT"
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:83
+#: celery.backends.rpc.RPCBackend.Exchange:83 of
+msgid ""
+"Durable exchanges remain active when a server restarts. Non-durable "
+"exchanges (transient exchanges) are purged when a server restarts.  "
+"Default is :const:`True`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:87
+#: celery.backends.amqp.AMQPBackend.Exchange:94
+#: celery.backends.amqp.AMQPBackend.Exchange:127
+#: celery.backends.rpc.RPCBackend.Exchange:87
+#: celery.backends.rpc.RPCBackend.Exchange:94
+#: celery.backends.rpc.RPCBackend.Exchange:127 of
+msgid "bool"
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:91
+#: celery.backends.rpc.RPCBackend.Exchange:91 of
+msgid ""
+"If set, the exchange is deleted when all queues have finished using it. "
+"Default is :const:`False`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:98
+#: celery.backends.rpc.RPCBackend.Exchange:98 of
+msgid ""
+"The default delivery mode used for messages. The value is an integer, or "
+"alias string."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:101
+#: celery.backends.rpc.RPCBackend.Exchange:101 of
+msgid "1 or `\"transient\"`"
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:103
+#: celery.backends.rpc.RPCBackend.Exchange:103 of
+msgid ""
+"The message is transient. Which means it is stored in memory only, and is"
+" lost if the server dies or restarts."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:109
+#: celery.backends.rpc.RPCBackend.Exchange:109 of
+msgid "2 or \"persistent\" (*default*)"
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:107
+#: celery.backends.rpc.RPCBackend.Exchange:107 of
+msgid ""
+"The message is persistent. Which means the message is stored both in-"
+"memory, and on disk, and therefore preserved if the server dies or "
+"restarts."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:111
+#: celery.backends.rpc.RPCBackend.Exchange:111 of
+msgid "The default value is 2 (persistent)."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:113
+#: celery.backends.rpc.RPCBackend.Exchange:113 of
+msgid "enum"
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:117
+#: celery.backends.rpc.RPCBackend.Exchange:117 of
+msgid "Additional arguments to specify when the exchange is declared."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:120
+#: celery.backends.rpc.RPCBackend.Exchange:120 of
+msgid "Dict"
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange:124
+#: celery.backends.rpc.RPCBackend.Exchange:124 of
+msgid "Never declare this exchange (:meth:`declare` does nothing)."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.Message:1
+#: celery.backends.rpc.RPCBackend.Exchange.Message:1 of
+msgid "Create message instance to be sent with :meth:`publish`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.Message:3
+#: celery.backends.amqp.AMQPBackend.Producer.publish:3
+#: celery.backends.rpc.RPCBackend.Exchange.Message:3
+#: celery.backends.rpc.RPCBackend.Producer.publish:3 of
+msgid "Message body."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.Message:5
+#: celery.backends.rpc.RPCBackend.Exchange.Message:5 of
+msgid "Set custom delivery mode. Defaults to :attr:`delivery_mode`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.Message:8
+#: celery.backends.rpc.RPCBackend.Exchange.Message:8 of
+msgid ""
+"Message priority, 0 to broker configured max priority, where higher is "
+"better."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.Message:11
+#: celery.backends.rpc.RPCBackend.Exchange.Message:11 of
+msgid ""
+"The messages content_type.  If content_type is set, no serialization "
+"occurs as it is assumed this is either a binary object, or you've done "
+"your own serialization. Leave blank if using built-in serialization as "
+"our library properly sets content_type."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.Message:17
+#: celery.backends.rpc.RPCBackend.Exchange.Message:17 of
+msgid ""
+"The character set in which this object is encoded. Use \"binary\" if "
+"sending in raw binary objects. Leave blank if using built-in "
+"serialization as our library properly sets content_encoding."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.Message:22
+#: celery.backends.rpc.RPCBackend.Exchange.Message:22 of
+msgid "Message properties."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.Message:24
+#: celery.backends.rpc.RPCBackend.Exchange.Message:24 of
+msgid "Message headers."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.bind_to:1
+#: celery.backends.rpc.RPCBackend.Exchange.bind_to:1 of
+msgid "Bind the exchange to another exchange."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.bind_to:3
+#: celery.backends.rpc.RPCBackend.Exchange.bind_to:3 of
+msgid ""
+"If set the server will not respond, and the call will not block waiting "
+"for a response. Default is :const:`False`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.can_cache_declaration:1
+#: celery.backends.rpc.RPCBackend.Exchange.can_cache_declaration:1 of
+msgid "bool(x) -> bool"
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.can_cache_declaration:3
+#: celery.backends.rpc.RPCBackend.Exchange.can_cache_declaration:3 of
+msgid ""
+"Returns True when the argument x is true, False otherwise. The builtins "
+"True and False are the only two instances of the class bool. The class "
+"bool is a subclass of the class int, and cannot be subclassed."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.declare:1
+#: celery.backends.amqp.AMQPBackend.Producer.declare:1
+#: celery.backends.rpc.RPCBackend.Exchange.declare:1
+#: celery.backends.rpc.RPCBackend.Producer.declare:1 of
+msgid "Declare the exchange."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.declare:3
+#: celery.backends.rpc.RPCBackend.Exchange.declare:3 of
+msgid ""
+"Creates the exchange on the broker, unless passive is set in which case "
+"it will only assert that the exchange exists."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.declare:7
+#: celery.backends.rpc.RPCBackend.Exchange.declare:7 of
+msgid "Argument:"
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.declare:7
+#: celery.backends.rpc.RPCBackend.Exchange.declare:7 of
+msgid "nowait (bool): If set the server will not respond, and a"
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.declare:8
+#: celery.backends.rpc.RPCBackend.Exchange.declare:8 of
+msgid "response will not be waited for. Default is :const:`False`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.delete:1
+#: celery.backends.rpc.RPCBackend.Exchange.delete:1 of
+msgid "Delete the exchange declaration on server."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.delete:3
+#: celery.backends.rpc.RPCBackend.Exchange.delete:3 of
+msgid "Delete only if the exchange has no bindings. Default is :const:`False`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.delete:6
+#: celery.backends.rpc.RPCBackend.Exchange.delete:6 of
+msgid ""
+"If set the server will not respond, and a response will not be waited "
+"for. Default is :const:`False`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.publish:1
+#: celery.backends.rpc.RPCBackend.Exchange.publish:1 of
+msgid "Publish message."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.publish:3
+#: celery.backends.rpc.RPCBackend.Exchange.publish:3 of
+msgid "Message to publish."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.publish:5
+#: celery.backends.amqp.AMQPBackend.Producer.publish:5
+#: celery.backends.rpc.RPCBackend.Exchange.publish:5
+#: celery.backends.rpc.RPCBackend.Producer.publish:5 of
+msgid "Message routing key."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.publish:7
+#: celery.backends.amqp.AMQPBackend.Exchange.publish:9
+#: celery.backends.amqp.AMQPBackend.Producer.publish:9
+#: celery.backends.amqp.AMQPBackend.Producer.publish:11
+#: celery.backends.rpc.RPCBackend.Exchange.publish:7
+#: celery.backends.rpc.RPCBackend.Exchange.publish:9
+#: celery.backends.rpc.RPCBackend.Producer.publish:9
+#: celery.backends.rpc.RPCBackend.Producer.publish:11 of
+msgid "Currently not supported."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Exchange.unbind_from:1
+#: celery.backends.rpc.RPCBackend.Exchange.unbind_from:1 of
+msgid "Delete previously created exchange binding from the server."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer:1
+#: celery.backends.rpc.RPCBackend.Producer:1 of
+msgid "Message Producer."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer:3
+#: celery.backends.rpc.RPCBackend.Producer:3 of
+msgid "Connection or channel."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer:5
+#: celery.backends.rpc.RPCBackend.Producer:5 of
+msgid "Optional default exchange."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer:7
+#: celery.backends.rpc.RPCBackend.Producer:7 of
+msgid "Optional default routing key."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer:9
+#: celery.backends.rpc.RPCBackend.Producer:9 of
+msgid "Default serializer. Default is `\"json\"`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer:11
+#: celery.backends.rpc.RPCBackend.Producer:11 of
+msgid "Default compression method. Default is no compression."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer:14
+#: celery.backends.rpc.RPCBackend.Producer:14 of
+msgid ""
+"Automatically declare the default exchange at instantiation. Default is "
+":const:`True`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer:17
+#: celery.backends.rpc.RPCBackend.Producer:17 of
+msgid ""
+"Callback to call for undeliverable messages, when the `mandatory` or "
+"`immediate` arguments to :meth:`publish` is used. This callback needs the"
+" following signature: `(exception, exchange, routing_key, message)`. Note"
+" that the producer needs to drain events to use this feature."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer.declare:5
+#: celery.backends.rpc.RPCBackend.Producer.declare:5 of
+msgid ""
+"This happens automatically at instantiation when the :attr:`auto_declare`"
+" flag is enabled."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer.maybe_declare:1
+#: celery.backends.rpc.RPCBackend.Producer.maybe_declare:1 of
+msgid "Declare exchange if not already declared during this session."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer.publish:1
+#: celery.backends.rpc.RPCBackend.Producer.publish:1 of
+msgid "Publish message to the specified exchange."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer.publish:13
+#: celery.backends.rpc.RPCBackend.Producer.publish:13 of
+msgid "Message priority. A number between 0 and 9."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer.publish:15
+#: celery.backends.rpc.RPCBackend.Producer.publish:15 of
+msgid "Content type. Default is auto-detect."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer.publish:17
+#: celery.backends.rpc.RPCBackend.Producer.publish:17 of
+msgid "Content encoding. Default is auto-detect."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer.publish:19
+#: celery.backends.rpc.RPCBackend.Producer.publish:19 of
+msgid "Serializer to use. Default is auto-detect."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer.publish:21
+#: celery.backends.rpc.RPCBackend.Producer.publish:21 of
+msgid "Compression method to use.  Default is none."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer.publish:23
+#: celery.backends.rpc.RPCBackend.Producer.publish:23 of
+msgid "Mapping of arbitrary headers to pass along with the message body."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer.publish:26
+#: celery.backends.rpc.RPCBackend.Producer.publish:26 of
+msgid "Override the exchange. Note that this exchange must have been declared."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer.publish:29
+#: celery.backends.rpc.RPCBackend.Producer.publish:29 of
+msgid ""
+"Optional list of required entities that must have been declared before "
+"publishing the message. The entities will be declared using "
+":func:`~kombu.common.maybe_declare`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer.publish:34
+#: celery.backends.rpc.RPCBackend.Producer.publish:34 of
+msgid "Retry publishing, or declaring entities if the connection is lost."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer.publish:37
+#: celery.backends.rpc.RPCBackend.Producer.publish:37 of
+msgid ""
+"Retry configuration, this is the keywords supported by "
+":meth:`~kombu.Connection.ensure`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer.publish:40
+#: celery.backends.rpc.RPCBackend.Producer.publish:40 of
+msgid "A TTL in seconds can be specified per message. Default is no expiration."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer.publish:43
+#: celery.backends.rpc.RPCBackend.Producer.publish:43 of
+msgid "Additional message properties, see AMQP spec."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.Producer.revive:1
+#: celery.backends.rpc.RPCBackend.Producer.revive:1 of
+msgid "Revive the producer after connection loss."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.as_uri:1
+#: celery.backends.base.DisabledBackend.as_uri:1
+#: celery.backends.cassandra.CassandraBackend.as_uri:1
+#: celery.backends.rpc.RPCBackend.as_uri:1 of
+msgid "Return the backend as an URI, sanitizing the password or not."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.reload_group_result:1
+#: celery.backends.rpc.RPCBackend.reload_group_result:1 of
+msgid "Reload group result, even if it has been previously fetched."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.reload_task_result:1
+#: celery.backends.rpc.RPCBackend.reload_task_result:1 of
+msgid "Reload task result, even if it has been previously fetched."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.restore_group:1
+#: celery.backends.rpc.RPCBackend.restore_group:1 of
+msgid "Get the result for a group."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.save_group:1
+#: celery.backends.rpc.RPCBackend.save_group:1 of
+msgid "Store the result of an executed group."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.store_result:1
+#: celery.backends.rpc.RPCBackend.store_result:1 of
+msgid "Send task return value and state."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.wait_for:1 of
+msgid "Wait for task and return its result."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.wait_for:3 of
+msgid ""
+"If the task raises an exception, this exception will be re-raised by "
+":func:`wait_for`."
+msgstr ""
+
+#: celery.backends.amqp.AMQPBackend.wait_for:6 of
+msgid ""
+":exc:`celery.exceptions.TimeoutError` -- If `timeout` is not "
+":const:`None`, and the operation takes longer than `timeout` seconds."
+msgstr ""
+
+#: ../../internals/reference/celery.backends.arangodb.rst:3
+msgid "``celery.backends.arangodb``"
+msgstr ""
+
+#: celery.backends.arangodb:1 of
+msgid "ArangoDb result store backend."
+msgstr ""
+
+#: celery.backends.arangodb.ArangoDbBackend:1 of
+msgid "ArangoDb backend."
+msgstr ""
+
+#: celery.backends.arangodb.ArangoDbBackend:3 of
+msgid ""
+"Sample url \"arangodb://username:password@host:port/database/collection\""
+" *arangodb_backend_settings* is where the settings are present (in the "
+"app.conf) Settings should contain the host, port, username, password, "
+"database name, collection name else the default will be chosen. Default "
+"database name and collection name is celery."
+msgstr ""
+
+#: celery.backends.arangodb.ArangoDbBackend:11 of
+msgid ""
+"celery.exceptions.ImproperlyConfigured: -- if module :pypi:`pyArango` is "
+"not available."
+msgstr ""
+
+#: celery.backends.arangodb.ArangoDbBackend.connection:1 of
+msgid "Connect to the arangodb server."
+msgstr ""
+
+#: celery.backends.arangodb.ArangoDbBackend.db:1 of
+msgid "Database Object to the given database."
+msgstr ""
+
+#: celery.backends.arangodb.ArangoDbBackend.set:1 of
+msgid "Insert a doc with value into task attribute and _key as key."
+msgstr ""
+
+#: ../../internals/reference/celery.backends.asynchronous.rst:3
+msgid "``celery.backends.asynchronous``"
+msgstr ""
+
+#: celery.backends.asynchronous:1 of
+msgid "Async I/O backend support utilities."
+msgstr ""
+
+#: celery.backends.asynchronous.AsyncBackendMixin:1 of
+msgid "Mixin for backends that enables the async API."
+msgstr ""
+
+#: celery.backends.asynchronous.BaseResultConsumer:1 of
+msgid "Manager responsible for consuming result messages."
+msgstr ""
+
+#: celery.backends.asynchronous.Drainer:1 of
+msgid "Result draining service."
+msgstr ""
+
+#: celery.backends.asynchronous.register_drainer:1 of
+msgid "Decorator used to register a new result drainer type."
+msgstr ""
+
+#: ../../internals/reference/celery.backends.azureblockblob.rst:3
+msgid "``celery.backends.azureblockblob``"
+msgstr ""
+
+#: celery.backends.azureblockblob:1 of
+msgid "The Azure Storage Block Blob backend for Celery."
+msgstr ""
+
+#: celery.backends.azureblockblob.AzureBlockBlobBackend:1 of
+msgid "Azure Storage Block Blob backend for Celery."
+msgstr ""
+
+#: celery.backends.azureblockblob.AzureBlockBlobBackend.delete:1
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.delete:1 of
+msgid "Delete the value at a given key."
+msgstr ""
+
+#: celery.backends.azureblockblob.AzureBlockBlobBackend.delete:3
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.delete:3 of
+msgid "The key of the value to delete."
+msgstr ""
+
+#: celery.backends.azureblockblob.AzureBlockBlobBackend.get:1
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.get:1 of
+msgid "Read the value stored at the given key."
+msgstr ""
+
+#: celery.backends.azureblockblob.AzureBlockBlobBackend.get:3
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.get:3 of
+msgid "The key for which to read the value."
+msgstr ""
+
+#: celery.backends.azureblockblob.AzureBlockBlobBackend.mget:1
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.mget:1 of
+msgid "Read all the values for the provided keys."
+msgstr ""
+
+#: celery.backends.azureblockblob.AzureBlockBlobBackend.mget:3
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.mget:3 of
+msgid "The list of keys to read."
+msgstr ""
+
+#: celery.backends.azureblockblob.AzureBlockBlobBackend.set:1
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.set:1 of
+msgid "Store a value for a given key."
+msgstr ""
+
+#: celery.backends.azureblockblob.AzureBlockBlobBackend.set:3
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.set:3 of
+msgid "The key at which to store the value."
+msgstr ""
+
+#: celery.backends.azureblockblob.AzureBlockBlobBackend.set:4
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.set:4 of
+msgid "The value to store."
+msgstr ""
+
+#: ../../internals/reference/celery.backends.base.rst:3
+msgid "``celery.backends.base``"
+msgstr ""
+
+#: celery.backends.base:1 of
+msgid "Result backend base classes."
+msgstr ""
+
+#: celery.backends.base:3 of
+msgid ":class:`BaseBackend` defines the interface."
+msgstr ""
+
+#: celery.backends.base:7 of
+msgid ":class:`KeyValueStoreBackend` is a common base class"
+msgstr ""
+
+#: celery.backends.base:6 of
+msgid "using K/V semantics like _get and _put."
+msgstr ""
+
+#: celery.backends.base.BaseBackend:1 of
+msgid "Base (synchronous) result backend."
+msgstr ""
+
+#: celery.backends.base.KeyValueStoreBackend:1 of
+msgid "Result backend base class for key/value stores."
+msgstr ""
+
+#: celery.backends.base.DisabledBackend:1 of
+msgid "Dummy result backend."
+msgstr ""
+
+#: celery.backends.base.DisabledBackend.store_result:1 of
+msgid "Update task state and result."
+msgstr ""
+
+#: ../../internals/reference/celery.backends.cache.rst:3
+msgid "``celery.backends.cache``"
+msgstr ""
+
+#: celery.backends.cache:1 of
+msgid "Memcached and in-memory cache result backend."
+msgstr ""
+
+#: celery.backends.cache.CacheBackend:1 of
+msgid "Cache result backend."
+msgstr ""
+
+#: celery.backends.cache.CacheBackend.as_uri:1
+#: celery.backends.mongodb.MongoBackend.as_uri:1 of
+msgid "Return the backend as an URI."
+msgstr ""
+
+#: celery.backends.cache.CacheBackend.as_uri:3 of
+msgid "This properly handles the case of multiple servers."
+msgstr ""
+
+#: ../../internals/reference/celery.backends.cassandra.rst:3
+msgid "``celery.backends.cassandra``"
+msgstr ""
+
+#: celery.backends.cassandra:1 of
+msgid "Apache Cassandra result store backend using the DataStax driver."
+msgstr ""
+
+#: celery.backends.cassandra.CassandraBackend:1 of
+msgid "Cassandra backend utilizing DataStax driver."
+msgstr ""
+
+#: celery.backends.cassandra.CassandraBackend:3 of
+msgid ""
+":exc:`celery.exceptions.ImproperlyConfigured` -- if module :pypi"
+":`cassandra-driver` is not available, or if the "
+":setting:`cassandra_servers` setting is not set."
+msgstr ""
+
+#: celery.backends.cassandra.CassandraBackend.process_cleanup:1 of
+msgid "Cleanup actions to do at the end of a task worker process."
+msgstr ""
+
+#: celery.backends.cassandra.CassandraBackend.servers:1 of
+msgid "``hostname``."
+msgstr ""
+
+#: celery.backends.cassandra.CassandraBackend.servers:3 of
+msgid "List of Cassandra servers with format"
+msgstr ""
+
+#: ../../internals/reference/celery.backends.consul.rst:3
+msgid "celery.backends.consul"
+msgstr ""
+
+#: celery.backends.consul:1 of
+msgid "Consul result store backend."
+msgstr ""
+
+#: celery.backends.consul:5 of
+msgid ":class:`ConsulBackend` implements KeyValueStoreBackend to store results"
+msgstr ""
+
+#: celery.backends.consul:4 of
+msgid "in the key-value store of Consul."
+msgstr ""
+
+#: celery.backends.consul.ConsulBackend:1 of
+msgid "Consul.io K/V store backend for Celery."
+msgstr ""
+
+#: celery.backends.consul.ConsulBackend.set:1 of
+msgid "Set a key in Consul."
+msgstr ""
+
+#: celery.backends.consul.ConsulBackend.set:3 of
+msgid ""
+"Before creating the key it will create a session inside Consul where it "
+"creates a session with a TTL"
+msgstr ""
+
+#: celery.backends.consul.ConsulBackend.set:6 of
+msgid "The key created afterwards will reference to the session's ID."
+msgstr ""
+
+#: celery.backends.consul.ConsulBackend.set:8 of
+msgid ""
+"If the session expires it will remove the key so that results can auto "
+"expire from the K/V store"
+msgstr ""
+
+#: ../../internals/reference/celery.backends.cosmosdbsql.rst:3
+msgid "``celery.backends.cosmosdbsql``"
+msgstr ""
+
+#: celery.backends.cosmosdbsql:1 of
+msgid "The CosmosDB/SQL backend for Celery (experimental)."
+msgstr ""
+
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend:1 of
+msgid "CosmosDB/SQL backend for Celery."
+msgstr ""
+
+#: ../../internals/reference/celery.backends.couchbase.rst:3
+msgid "``celery.backends.couchbase``"
+msgstr ""
+
+#: celery.backends.couchbase:1 of
+msgid "Couchbase result store backend."
+msgstr ""
+
+#: celery.backends.couchbase.CouchbaseBackend:1 of
+msgid "Couchbase backend."
+msgstr ""
+
+#: celery.backends.couchbase.CouchbaseBackend:3 of
+msgid ""
+":exc:`celery.exceptions.ImproperlyConfigured` -- if module "
+":pypi:`couchbase` is not available."
+msgstr ""
+
+#: ../../internals/reference/celery.backends.couchdb.rst:3
+msgid "``celery.backends.couchdb``"
+msgstr ""
+
+#: celery.backends.couchdb:1 of
+msgid "CouchDB result store backend."
+msgstr ""
+
+#: celery.backends.couchdb.CouchBackend:1 of
+msgid "CouchDB backend."
+msgstr ""
+
+#: celery.backends.couchdb.CouchBackend:3 of
+msgid ""
+":exc:`celery.exceptions.ImproperlyConfigured` -- if module "
+":pypi:`pycouchdb` is not available."
+msgstr ""
+
+#: ../../internals/reference/celery.backends.database.rst:3
+msgid "``celery.backends.database``"
+msgstr ""
+
+#: celery.backends.database:1 of
+msgid "SQLAlchemy result store backend."
+msgstr ""
+
+#: celery.backends.database.DatabaseBackend:1 of
+msgid "The database result backend."
+msgstr ""
+
+#: celery.backends.database.DatabaseBackend.cleanup:1
+#: celery.backends.mongodb.MongoBackend.cleanup:1 of
+msgid "Delete expired meta-data."
+msgstr ""
+
+#: ../../internals/reference/celery.backends.database.models.rst:3
+msgid "``celery.backends.database.models``"
+msgstr ""
+
+#: celery.backends.database.models:1 of
+msgid "Database models used by the SQLAlchemy result store backend."
+msgstr ""
+
+#: celery.backends.database.models.Task:1 of
+msgid "Task result/status."
+msgstr ""
+
+#: celery.backends.database.models.TaskExtended:1 of
+msgid "For the extend result."
+msgstr ""
+
+#: celery.backends.database.models.TaskSet:1 of
+msgid "TaskSet result."
+msgstr ""
+
+#: ../../internals/reference/celery.backends.database.session.rst:3
+msgid "``celery.backends.database.session``"
+msgstr ""
+
+#: celery.backends.database.session:1 of
+msgid "SQLAlchemy session."
+msgstr ""
+
+#: celery.backends.database.session.SessionManager:1 of
+msgid "Manage SQLAlchemy sessions."
+msgstr ""
+
+#: ../../internals/reference/celery.backends.dynamodb.rst:3
+msgid "``celery.backends.dynamodb``"
+msgstr ""
+
+#: celery.backends.dynamodb:1 of
+msgid "AWS DynamoDB result store backend."
+msgstr ""
+
+#: celery.backends.dynamodb.DynamoDBBackend:1 of
+msgid "AWS DynamoDB result backend."
+msgstr ""
+
+#: celery.backends.dynamodb.DynamoDBBackend:3 of
+msgid ""
+":exc:`celery.exceptions.ImproperlyConfigured` -- if module :pypi:`boto3` "
+"is not available."
+msgstr ""
+
+#: celery.backends.dynamodb.DynamoDBBackend.aws_region:1 of
+msgid "AWS region (`default`)"
+msgstr ""
+
+#: celery.backends.dynamodb.DynamoDBBackend.endpoint_url:1 of
+msgid "The endpoint URL that is passed to boto3 (local DynamoDB) (`default`)"
+msgstr ""
+
+#: celery.backends.dynamodb.DynamoDBBackend.read_capacity_units:1 of
+msgid "Read Provisioned Throughput (`default`)"
+msgstr ""
+
+#: celery.backends.dynamodb.DynamoDBBackend.table_name:1 of
+msgid "default DynamoDB table name (`default`)"
+msgstr ""
+
+#: celery.backends.dynamodb.DynamoDBBackend.write_capacity_units:1 of
+msgid "Write Provisioned Throughput (`default`)"
+msgstr ""
+
+#: ../../internals/reference/celery.backends.elasticsearch.rst:3
+msgid "``celery.backends.elasticsearch``"
+msgstr ""
+
+#: celery.backends.elasticsearch:1 of
+msgid "Elasticsearch result store backend."
+msgstr ""
+
+#: celery.backends.elasticsearch.ElasticsearchBackend:1 of
+msgid "Elasticsearch Backend."
+msgstr ""
+
+#: celery.backends.elasticsearch.ElasticsearchBackend:3 of
+msgid ""
+":exc:`celery.exceptions.ImproperlyConfigured` -- if module "
+":pypi:`elasticsearch` is not available."
+msgstr ""
+
+#: ../../internals/reference/celery.backends.filesystem.rst:3
+msgid "``celery.backends.filesystem``"
+msgstr ""
+
+#: celery.backends.filesystem:1 of
+msgid "File-system result store backend."
+msgstr ""
+
+#: celery.backends.filesystem.FilesystemBackend:1 of
+msgid "File-system result backend."
+msgstr ""
+
+#: celery.backends.filesystem.FilesystemBackend:3 of
+msgid "URL to the directory we should use"
+msgstr ""
+
+#: celery.backends.filesystem.FilesystemBackend:5 of
+msgid "open function to use when opening files"
+msgstr ""
+
+#: celery.backends.filesystem.FilesystemBackend:7 of
+msgid "unlink function to use when deleting files"
+msgstr ""
+
+#: celery.backends.filesystem.FilesystemBackend:9 of
+msgid "directory separator (to join the directory with the key)"
+msgstr ""
+
+#: celery.backends.filesystem.FilesystemBackend:11 of
+msgid "encoding used on the file-system"
+msgstr ""
+
+#: ../../internals/reference/celery.backends.mongodb.rst:3
+msgid "``celery.backends.mongodb``"
+msgstr ""
+
+#: celery.backends.mongodb:1 of
+msgid "MongoDB result store backend."
+msgstr ""
+
+#: celery.backends.mongodb.MongoBackend:1 of
+msgid "MongoDB result backend."
+msgstr ""
+
+#: celery.backends.mongodb.MongoBackend:3 of
+msgid ""
+":exc:`celery.exceptions.ImproperlyConfigured` -- if module "
+":pypi:`pymongo` is not available."
+msgstr ""
+
+#: celery.backends.mongodb.MongoBackend.as_uri:3 of
+msgid "Password censored if disabled."
+msgstr ""
+
+#: celery.backends.mongodb.MongoBackend.collection:1
+#: celery.backends.mongodb.MongoBackend.group_collection:1 of
+msgid "Get the meta-data task collection."
+msgstr ""
+
+#: celery.backends.mongodb.MongoBackend.database:1 of
+msgid "Get database from MongoDB connection."
+msgstr ""
+
+#: celery.backends.mongodb.MongoBackend.database:3 of
+msgid "performs authentication if necessary."
+msgstr ""
+
+#: ../../internals/reference/celery.backends.redis.rst:3
+msgid "``celery.backends.redis``"
+msgstr ""
+
+#: celery.backends.redis:1 of
+msgid "Redis result store backend."
+msgstr ""
+
+#: celery.backends.redis.RedisBackend:1 of
+msgid "Redis task result store."
+msgstr ""
+
+#: celery.backends.redis.RedisBackend.max_connections:1 of
+msgid "Maximum number of connections in the pool."
+msgstr ""
+
+#: celery.backends.redis.RedisBackend.redis:1 of
+msgid ":pypi:`redis` client module."
+msgstr ""
+
+#: celery.backends.redis.SentinelBackend:1 of
+msgid "Redis sentinel task result store."
+msgstr ""
+
+#: ../../internals/reference/celery.backends.riak.rst:3
+msgid "``celery.backends.riak``"
+msgstr ""
+
+#: celery.backends.riak:1 of
+msgid "Riak result store backend."
+msgstr ""
+
+#: celery.backends.riak.RiakBackend:1 of
+msgid "Riak result backend."
+msgstr ""
+
+#: celery.backends.riak.RiakBackend:3 of
+msgid ""
+":exc:`celery.exceptions.ImproperlyConfigured` -- if module :pypi:`riak` "
+"is not available."
+msgstr ""
+
+#: celery.backends.riak.RiakBackend.bucket_name:1 of
+msgid "default Riak bucket name (`default`)"
+msgstr ""
+
+#: celery.backends.riak.RiakBackend.host:1 of
+msgid "default Riak server hostname (`localhost`)"
+msgstr ""
+
+#: celery.backends.riak.RiakBackend.port:1 of
+msgid "default Riak server port (8087)"
+msgstr ""
+
+#: celery.backends.riak.RiakBackend.protocol:1 of
+msgid "default protocol used to connect to Riak, might be `http` or `pbc`"
+msgstr ""
+
+#: ../../internals/reference/celery.backends.rpc.rst:3
+msgid "``celery.backends.rpc``"
+msgstr ""
+
+#: celery.backends.rpc:1 of
+msgid "The ``RPC`` result backend for AMQP brokers."
+msgstr ""
+
+#: celery.backends.rpc:3 of
+msgid "RPC-style result backend, using reply-to and one queue per client."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend:1 of
+msgid "Base class for the RPC result backend."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.BacklogLimitExceeded:1 of
+msgid "Exception raised when there are too many messages for a task id."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Consumer:1 of
+msgid "Consumer that requires manual declaration of queues."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Queue:1 of
+msgid "Queue that never caches declaration."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.destination_for:1 of
+msgid "Get the destination for result by task id."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.destination_for
+#: celery.platforms.create_pidlock celery.platforms.fd_by_path
+#: celery.platforms.parse_gid celery.platforms.parse_uid
+#: celery.utils.dispatch.Signal.send celery.utils.dispatch.Signal.send_robust
+#: celery.utils.dispatch.signal.Signal.send
+#: celery.utils.dispatch.signal.Signal.send_robust
+#: celery.utils.graph.DependencyGraph.topsort celery.utils.objects.mro_lookup
+#: celery.utils.serialization.find_pickleable_exception
+#: celery.utils.time.remaining of
+msgid "Returns"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.destination_for:3 of
+msgid "tuple of ``(reply_to, correlation_id)``."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.destination_for
+#: celery.platforms.create_pidlock celery.platforms.fd_by_path
+#: celery.platforms.parse_gid celery.platforms.parse_uid
+#: celery.utils.dispatch.Signal.send celery.utils.dispatch.Signal.send_robust
+#: celery.utils.dispatch.signal.Signal.send
+#: celery.utils.dispatch.signal.Signal.send_robust
+#: celery.utils.graph.DependencyGraph.topsort celery.utils.objects.mro_lookup
+#: celery.utils.serialization.find_pickleable_exception
+#: celery.utils.time.remaining of
+msgid "Return type"
+msgstr ""
+
+#: ../../internals/reference/celery.backends.s3.rst:3
+msgid "``celery.backends.s3``"
+msgstr ""
+
+#: celery.backends.s3:1 of
+msgid "s3 result store backend."
+msgstr ""
+
+#: celery.backends.s3.S3Backend:1 of
+msgid "An S3 task result store."
+msgstr ""
+
+#: celery.backends.s3.S3Backend:3 of
+msgid ""
+":exc:`celery.exceptions.ImproperlyConfigured` -- if module :pypi:`boto3` "
+"is not available, if the :setting:`aws_access_key_id` or "
+"setting:`aws_secret_access_key` are not set, or it the :setting:`bucket` "
+"is not set."
+msgstr ""
+
+#: ../../internals/reference/celery.concurrency.rst:3
+msgid "``celery.concurrency``"
+msgstr ""
+
+#: celery.concurrency:1 of
+msgid "Pool implementation abstract factory, and alias definitions."
+msgstr ""
+
+#: celery.concurrency.get_implementation:1 of
+msgid "Return pool implementation by name."
+msgstr ""
+
+#: ../../internals/reference/celery.concurrency.base.rst:3
+msgid "``celery.concurrency.base``"
+msgstr ""
+
+#: celery.concurrency.base:1 of
+msgid "Base Execution Pool."
+msgstr ""
+
+#: celery.concurrency.base.BasePool:1 of
+msgid "Task pool."
+msgstr ""
+
+#: celery.concurrency.base.BasePool.Timer:1 celery.utils.timer2.Timer:1 of
+msgid "Timer thread."
+msgstr ""
+
+#: celery.concurrency.base.BasePool.Timer:3 celery.utils.timer2.Timer:3 of
+msgid "This is only used for transports not supporting AsyncIO."
+msgstr ""
+
+#: celery.concurrency.base.BasePool.Timer.Entry:1 celery.utils.timer2.Entry:1
+#: celery.utils.timer2.Timer.Entry:1 of
+msgid "Schedule Entry."
+msgstr ""
+
+#: celery.concurrency.base.BasePool.Timer.run:1
+#: celery.utils.threads.bgThread.run:1 celery.utils.timer2.Timer.run:1 of
+msgid "Method representing the thread's activity."
+msgstr ""
+
+#: celery.concurrency.base.BasePool.Timer.run:3
+#: celery.utils.threads.bgThread.run:3 celery.utils.timer2.Timer.run:3 of
+msgid ""
+"You may override this method in a subclass. The standard run() method "
+"invokes the callable object passed to the object's constructor as the "
+"target argument, if any, with sequential and keyword arguments taken from"
+" the args and kwargs arguments, respectively."
+msgstr ""
+
+#: celery.concurrency.base.BasePool.apply_async:1 of
+msgid "Equivalent of the :func:`apply` built-in function."
+msgstr ""
+
+#: celery.concurrency.base.BasePool.apply_async:3 of
+msgid ""
+"Callbacks should optimally return as soon as possible since otherwise the"
+" thread which handles the result will get blocked."
+msgstr ""
+
+#: celery.concurrency.base.BasePool.is_green:1 of
+msgid "set to true if pool uses greenlets."
+msgstr ""
+
+#: celery.concurrency.base.BasePool.signal_safe:1 of
+msgid "set to true if the pool can be shutdown from within a signal handler."
+msgstr ""
+
+#: celery.concurrency.base.BasePool.uses_semaphore:1 of
+msgid "only used by multiprocessing pool"
+msgstr ""
+
+#: celery.concurrency.base.apply_target:1 of
+msgid "Apply function within pool context."
+msgstr ""
+
+#: ../../internals/reference/celery.concurrency.eventlet.rst:3
+msgid "``celery.concurrency.eventlet``"
+msgstr ""
+
+#: celery.concurrency.eventlet:1 of
+msgid "Eventlet execution pool."
+msgstr ""
+
+#: celery.concurrency.eventlet.TaskPool:1 of
+msgid "Eventlet Task Pool."
+msgstr ""
+
+#: celery.concurrency.eventlet.TaskPool.Timer:1 of
+msgid "Eventlet Timer."
+msgstr ""
+
+#: celery.concurrency.eventlet.TaskPool.Timer.queue:1
+#: celery.concurrency.gevent.TaskPool.Timer.queue:1 of
+msgid "Snapshot of underlying datastructure."
+msgstr ""
+
+#: ../../internals/reference/celery.concurrency.gevent.rst:3
+msgid "``celery.concurrency.gevent``"
+msgstr ""
+
+#: celery.concurrency.gevent:1 of
+msgid "Gevent execution pool."
+msgstr ""
+
+#: celery.concurrency.gevent.TaskPool:1 of
+msgid "GEvent Pool."
+msgstr ""
+
+#: ../../internals/reference/celery.concurrency.prefork.rst:3
+msgid "``celery.concurrency.prefork``"
+msgstr ""
+
+#: celery.concurrency.prefork:1 of
+msgid "Prefork execution pool."
+msgstr ""
+
+#: celery.concurrency.prefork:3 of
+msgid "Pool implementation using :mod:`multiprocessing`."
+msgstr ""
+
+#: celery.concurrency.prefork.TaskPool:1 of
+msgid "Multiprocessing Pool implementation."
+msgstr ""
+
+#: celery.concurrency.prefork.TaskPool.on_stop:1 of
+msgid "Gracefully stop the pool."
+msgstr ""
+
+#: celery.concurrency.prefork.TaskPool.on_terminate:1 of
+msgid "Force terminate the pool."
+msgstr ""
+
+#: celery.concurrency.prefork.process_initializer:1 of
+msgid "Pool child process initializer."
+msgstr ""
+
+#: celery.concurrency.prefork.process_initializer:3 of
+msgid ""
+"Initialize the child pool process to ensure the correct app instance is "
+"used and things like logging works."
+msgstr ""
+
+#: celery.concurrency.prefork.process_destructor:1 of
+msgid "Pool child process destructor."
+msgstr ""
+
+#: celery.concurrency.prefork.process_destructor:3 of
+msgid "Dispatch the :signal:`worker_process_shutdown` signal."
+msgstr ""
+
+#: ../../internals/reference/celery.concurrency.solo.rst:3
+msgid "``celery.concurrency.solo``"
+msgstr ""
+
+#: celery.concurrency.solo:1 of
+msgid "Single-threaded execution pool."
+msgstr ""
+
+#: celery.concurrency.solo.TaskPool:1 of
+msgid "Solo task pool (blocking, inline, fast)."
+msgstr ""
+
+#: ../../internals/reference/celery.events.cursesmon.rst:3
+msgid "``celery.events.cursesmon``"
+msgstr ""
+
+#: celery.events.cursesmon:1 of
+msgid "Graphical monitor of Celery events using curses."
+msgstr ""
+
+#: celery.events.cursesmon.CursesMonitor:1 of
+msgid "A curses based Celery task monitor."
+msgstr ""
+
+#: celery.events.cursesmon.evtop:1 of
+msgid "Start curses monitor."
+msgstr ""
+
+#: celery.events.dumper:1 of
+msgid "Utility to dump events to screen."
+msgstr ""
+
+#: celery.events.dumper:3 of
+msgid ""
+"This is a simple program that dumps events to the console as they happen."
+"  Think of it like a `tcpdump` for Celery events."
+msgstr ""
+
+#: celery.events.dumper.Dumper:1 of
+msgid "Monitor events."
+msgstr ""
+
+#: celery.events.dumper.evdump:1 of
+msgid "Start event dump."
+msgstr ""
+
+#: ../../internals/reference/celery.events.snapshot.rst:3
+msgid "``celery.events.snapshot``"
+msgstr ""
+
+#: celery.events.snapshot:1 of
+msgid "Periodically store events in a database."
+msgstr ""
+
+#: celery.events.snapshot:3 of
+msgid ""
+"Consuming the events as a stream isn't always suitable so this module "
+"implements a system to take snapshots of the state of a cluster at "
+"regular intervals.  There's a full implementation of this writing the "
+"snapshots to a database in :mod:`djcelery.snapshots` in the `django-"
+"celery` distribution."
+msgstr ""
+
+#: celery.events.snapshot.Polaroid:1 of
+msgid "Record event snapshots."
+msgstr ""
+
+#: celery.events.snapshot.evcam:1 of
+msgid "Start snapshot recorder."
+msgstr ""
+
+#: ../../internals/reference/celery.platforms.rst:3
+msgid "``celery.platforms``"
+msgstr ""
+
+#: celery.platforms:1 of
+msgid "Platforms."
+msgstr ""
+
+#: celery.platforms:3 of
+msgid ""
+"Utilities dealing with platform specifics: signals, daemonization, users,"
+" groups, and so on."
+msgstr ""
+
+#: celery.platforms.pyimplementation:1 of
+msgid "Return string identifying the current Python implementation."
+msgstr ""
+
+#: celery.platforms.LockFailed:1 of
+msgid "Raised if a PID lock can't be acquired."
+msgstr ""
+
+#: celery.platforms.get_fdmax:1 of
+msgid "Return the maximum number of open file descriptors on this system."
+msgstr ""
+
+#: celery.platforms.get_fdmax celery.utils.dispatch.Signal
+#: celery.utils.dispatch.signal.Signal of
+msgid "Keyword Arguments"
+msgstr ""
+
+#: celery.platforms.get_fdmax:4 of
+msgid "Value returned if there's no file descriptor limit."
+msgstr ""
+
+#: celery.platforms.Pidfile:1 of
+msgid "Pidfile."
+msgstr ""
+
+#: celery.platforms.Pidfile:3 of
+msgid "This is the type returned by :func:`create_pidlock`."
+msgstr ""
+
+#: celery.platforms.Pidfile:7 of
+msgid ""
+"Best practice is to not use this directly but rather use the "
+":func:`create_pidlock` function instead: more convenient and also removes"
+" stale pidfiles (when the process holding the lock is no longer running)."
+msgstr ""
+
+#: celery.platforms.Pidfile.acquire:1 of
+msgid "Acquire lock."
+msgstr ""
+
+#: celery.platforms.Pidfile.is_locked:1 of
+msgid "Return true if the pid lock exists."
+msgstr ""
+
+#: celery.platforms.Pidfile.path:1 of
+msgid "Path to the pid lock file."
+msgstr ""
+
+#: celery.platforms.Pidfile.read_pid:1 of
+msgid "Read and return the current pid."
+msgstr ""
+
+#: celery.platforms.Pidfile.release:1 of
+msgid "Release lock."
+msgstr ""
+
+#: celery.platforms.Pidfile.remove:1 of
+msgid "Remove the lock."
+msgstr ""
+
+#: celery.platforms.Pidfile.remove_if_stale:1 of
+msgid "Remove the lock if the process isn't running."
+msgstr ""
+
+#: celery.platforms.Pidfile.remove_if_stale:3 of
+msgid "I.e. process does not respons to signal."
+msgstr ""
+
+#: celery.platforms.create_pidlock:1 of
+msgid "Create and verify pidfile."
+msgstr ""
+
+#: celery.platforms.create_pidlock:3 of
+msgid ""
+"If the pidfile already exists the program exits with an error message, "
+"however if the process it refers to isn't running anymore, the pidfile is"
+" deleted and the program continues."
+msgstr ""
+
+#: celery.platforms.create_pidlock:7 of
+msgid ""
+"This function will automatically install an :mod:`atexit` handler to "
+"release the lock at exit, you can skip this by calling "
+":func:`_create_pidlock` instead."
+msgstr ""
+
+#: celery.platforms.create_pidlock:11 of
+msgid "used to manage the lock."
+msgstr ""
+
+#: celery.platforms.DaemonContext:1 of
+msgid "Context manager daemonizing the process."
+msgstr ""
+
+#: celery.platforms.detached:1 of
+msgid "Detach the current process in the background (daemonize)."
+msgstr ""
+
+#: celery.platforms.detached:3 of
+msgid ""
+"Optional log file. The ability to write to this file will be verified "
+"before the process is detached."
+msgstr ""
+
+#: celery.platforms.detached:7 of
+msgid ""
+"Optional pid file. The pidfile won't be created, as this is the "
+"responsibility of the child.  But the process will exit if the pid lock "
+"exists and the pid written is still running."
+msgstr ""
+
+#: celery.platforms.detached:12 of
+msgid "Optional user id or user name to change effective privileges to."
+msgstr ""
+
+#: celery.platforms.detached:15 of
+msgid "Optional group id or group name to change effective privileges to."
+msgstr ""
+
+#: celery.platforms.detached:18 of
+msgid "Optional umask that'll be effective in the child process."
+msgstr ""
+
+#: celery.platforms.detached:21 of
+msgid "Optional new working directory."
+msgstr ""
+
+#: celery.platforms.detached:23 of
+msgid "Don't actually detach, intended for debugging purposes."
+msgstr ""
+
+#: celery.platforms.detached:25 of
+msgid "Ignored."
+msgstr ""
+
+#: celery.platforms.parse_uid:1 of
+msgid "Parse user id."
+msgstr ""
+
+#: celery.platforms.parse_uid:3 of
+msgid "Actual uid, or the username of a user."
+msgstr ""
+
+#: celery.platforms.parse_uid:6 of
+msgid "The actual uid."
+msgstr ""
+
+#: celery.platforms.parse_gid:1 of
+msgid "Parse group id."
+msgstr ""
+
+#: celery.platforms.parse_gid:3 of
+msgid "Actual gid, or the name of a group."
+msgstr ""
+
+#: celery.platforms.parse_gid:6 of
+msgid "The actual gid of the group."
+msgstr ""
+
+#: celery.platforms.setgroups:1 of
+msgid "Set active groups from a list of group ids."
+msgstr ""
+
+#: celery.platforms.initgroups:1 of
+msgid "Init process group permissions."
+msgstr ""
+
+#: celery.platforms.initgroups:3 of
+msgid ""
+"Compat version of :func:`os.initgroups` that was first added to Python "
+"2.7."
+msgstr ""
+
+#: celery.platforms.setgid:1 of
+msgid "Version of :func:`os.setgid` supporting group names."
+msgstr ""
+
+#: celery.platforms.setuid:1 of
+msgid "Version of :func:`os.setuid` supporting usernames."
+msgstr ""
+
+#: celery.platforms.maybe_drop_privileges:1 of
+msgid "Change process privileges to new user/group."
+msgstr ""
+
+#: celery.platforms.maybe_drop_privileges:3 of
+msgid "If UID and GID is specified, the real user/group is changed."
+msgstr ""
+
+#: celery.platforms.maybe_drop_privileges:5 of
+msgid ""
+"If only UID is specified, the real user is changed, and the group is "
+"changed to the users primary group."
+msgstr ""
+
+#: celery.platforms.maybe_drop_privileges:8 of
+msgid "If only GID is specified, only the group is changed."
+msgstr ""
+
+#: celery.platforms.signal_name:1 of
+msgid "Return name of signal from signal number."
+msgstr ""
+
+#: celery.platforms.set_process_title:1 of
+msgid "Set the :command:`ps` name for the currently running process."
+msgstr ""
+
+#: celery.platforms.set_mp_process_title:3 celery.platforms.set_process_title:3
+#: of
+msgid "Only works if :pypi:`setproctitle` is installed."
+msgstr ""
+
+#: celery.platforms.set_mp_process_title:1 of
+msgid "Set the :command:`ps` name from the current process name."
+msgstr ""
+
+#: celery.platforms.get_errno_name:1 of
+msgid "Get errno for string (e.g., ``ENOENT``)."
+msgstr ""
+
+#: celery.platforms.ignore_errno:1 of
+msgid "Context manager to ignore specific POSIX error codes."
+msgstr ""
+
+#: celery.platforms.ignore_errno:3 of
+msgid ""
+"Takes a list of error codes to ignore: this can be either the name of the"
+" code, or the code integer itself::"
+msgstr ""
+
+#: celery.platforms.ignore_errno:13 of
+msgid ""
+"A tuple of exceptions to ignore (when the errno matches).  Defaults to "
+":exc:`Exception`."
+msgstr ""
+
+#: celery.platforms.fd_by_path:1 of
+msgid "Return a list of file descriptors."
+msgstr ""
+
+#: celery.platforms.fd_by_path:3 of
+msgid ""
+"This method returns list of file descriptors corresponding to file paths "
+"passed in paths variable."
+msgstr ""
+
+#: celery.platforms.fd_by_path:6 of
+msgid "List[str]: List of file paths."
+msgstr ""
+
+#: celery.platforms.fd_by_path:8 of
+msgid "List of file descriptors."
+msgstr ""
+
+#: celery.platforms.isatty:1 of
+msgid "Return true if the process has a controlling terminal."
+msgstr ""
+
+#: ../../internals/reference/celery.security.certificate.rst:3
+msgid "``celery.security.certificate``"
+msgstr ""
+
+#: celery.security.certificate:1 of
+msgid "X.509 certificates."
+msgstr ""
+
+#: celery.security.certificate.Certificate:1 of
+msgid "X.509 certificate."
+msgstr ""
+
+#: celery.security.certificate.Certificate.get_id:1 of
+msgid "Serial number/issuer pair uniquely identifies a certificate."
+msgstr ""
+
+#: celery.security.certificate.Certificate.get_issuer:1 of
+msgid "Return issuer (CA) as a string."
+msgstr ""
+
+#: celery.security.certificate.Certificate.get_pubkey:1 of
+msgid "Get public key from certificate."
+msgstr ""
+
+#: celery.security.certificate.Certificate.get_serial_number:1 of
+msgid "Return the serial number in the certificate."
+msgstr ""
+
+#: celery.security.certificate.Certificate.has_expired:1 of
+msgid "Check if the certificate has expired."
+msgstr ""
+
+#: celery.security.certificate.Certificate.verify:1 of
+msgid "Verify signature for string containing data."
+msgstr ""
+
+#: celery.security.certificate.CertStore:1 of
+msgid "Base class for certificate stores."
+msgstr ""
+
+#: celery.security.certificate.CertStore.itercerts:1 of
+msgid "Return certificate iterator."
+msgstr ""
+
+#: celery.security.certificate.FSCertStore:1 of
+msgid "File system certificate store."
+msgstr ""
+
+#: ../../internals/reference/celery.security.key.rst:3
+msgid "``celery.security.key``"
+msgstr ""
+
+#: celery.security.key:1 of
+msgid "Private keys for the security serializer."
+msgstr ""
+
+#: celery.security.key.PrivateKey:1 of
+msgid "Represents a private key."
+msgstr ""
+
+#: celery.security.key.PrivateKey.sign:1 of
+msgid "Sign string containing data."
+msgstr ""
+
+#: ../../internals/reference/celery.security.serialization.rst:3
+msgid "``celery.security.serialization``"
+msgstr ""
+
+#: celery.security.serialization:1 of
+msgid "Secure serializer."
+msgstr ""
+
+#: celery.security.serialization.SecureSerializer:1 of
+msgid "Signed serializer."
+msgstr ""
+
+#: celery.security.serialization.SecureSerializer.deserialize:1 of
+msgid "Deserialize data structure from string."
+msgstr ""
+
+#: celery.security.serialization.SecureSerializer.serialize:1 of
+msgid "Serialize data structure into string."
+msgstr ""
+
+#: celery.security.serialization.register_auth:1 of
+msgid "Register security serializer."
+msgstr ""
+
+#: ../../internals/reference/celery.security.utils.rst:3
+msgid "``celery.security.utils``"
+msgstr ""
+
+#: celery.security.utils:1 of
+msgid "Utilities used by the message signing serializer."
+msgstr ""
+
+#: celery.security.utils.get_digest_algorithm:1 of
+msgid "Convert string to hash object of cryptography library."
+msgstr ""
+
+#: celery.security.utils.reraise_errors:1 of
+msgid "Context reraising crypto errors as :exc:`SecurityError`."
+msgstr ""
+
+#: ../../internals/reference/celery.utils.rst:3
+msgid "``celery.utils``"
+msgstr ""
+
+#: celery.utils:1 of
+msgid "Utility functions."
+msgstr ""
+
+#: celery.utils:3 of
+msgid ""
+"Don't import from here directly anymore, as these are only here for "
+"backwards compatibility."
+msgstr ""
+
+#: celery.utils.nodenames.worker_direct:1 celery.utils.worker_direct:1 of
+msgid "Return the :class:`kombu.Queue` being a direct route to a worker."
+msgstr ""
+
+#: celery.utils.nodenames.worker_direct:3 celery.utils.worker_direct:3 of
+msgid ""
+"The fully qualified node name of a worker (e.g., ``w1@example.com``).  If"
+" passed a :class:`kombu.Queue` instance it will simply return that "
+"instead."
+msgstr ""
+
+#: celery.utils.gen_task_name:1 celery.utils.imports.gen_task_name:1 of
+msgid "Generate task name from name/module pair."
+msgstr ""
+
+#: celery.utils.nodename:1 celery.utils.nodenames.nodename:1 of
+msgid "Create node name from name/hostname pair."
+msgstr ""
+
+#: celery.utils.nodenames.nodesplit:1 celery.utils.nodesplit:1 of
+msgid "Split node name into tuple of name/hostname."
+msgstr ""
+
+#: celery.utils.cached_property:1 of
+msgid "Cached property descriptor."
+msgstr ""
+
+#: celery.utils.cached_property:3 of
+msgid "Caches the return value of the get method on first call."
+msgstr ""
+
+#: celery.utils.uuid:1 of
+msgid "Generate unique id in UUID4 format."
+msgstr ""
+
+#: celery.utils.uuid:3 of
+msgid "For now this is provided by :func:`uuid.uuid4`."
+msgstr ""
+
+#: ../../internals/reference/celery.utils.abstract.rst:3
+msgid "``celery.utils.abstract``"
+msgstr ""
+
+#: celery.utils.abstract:1 of
+msgid "Abstract classes."
+msgstr ""
+
+#: celery.utils.abstract.CallableTask:1 of
+msgid "Task interface."
+msgstr ""
+
+#: celery.utils.abstract.CallableSignature:1 of
+msgid "Celery Signature interface."
+msgstr ""
+
+#: ../../internals/reference/celery.utils.collections.rst:3
+msgid "``celery.utils.collections``"
+msgstr ""
+
+#: celery.utils.collections:1 of
+msgid "Custom maps, sets, sequences, and other data structures."
+msgstr ""
+
+#: celery.utils.collections.AttributeDictMixin:1 of
+msgid "Mixin for Mapping interface that adds attribute access."
+msgstr ""
+
+#: celery.utils.collections.AttributeDictMixin:3 of
+msgid "I.e., `d.key -> d[key]`)."
+msgstr ""
+
+#: celery.utils.collections.AttributeDict:1 of
+msgid "Dict subclass with attribute access."
+msgstr ""
+
+#: celery.utils.collections.BufferMap:1 of
+msgid "Map of buffers."
+msgstr ""
+
+#: celery.utils.collections.BufferMap.Empty:1
+#: celery.utils.collections.Evictable.Empty:1
+#: celery.utils.collections.Messagebuffer.Empty:1 of
+msgid "Exception raised by Queue.get(block=0)/get_nowait()."
+msgstr ""
+
+#: celery.utils.collections.ChainMap:1 of
+msgid "Key lookup on a sequence of maps."
+msgstr ""
+
+#: celery.utils.collections.ChainMap.fromkeys:1 of
+msgid "Create a ChainMap with a single dict created from the iterable."
+msgstr ""
+
+#: celery.utils.collections.ChainMap.pop:1 of
+msgid "If key is not found, d is returned if given, otherwise KeyError is raised."
+msgstr ""
+
+#: celery.utils.collections.ChainMap.update:1
+#: celery.utils.functional.LRUCache.update:1 of
+msgid ""
+"If E present and has a .keys() method, does:     for k in E: D[k] = E[k] "
+"If E present and lacks .keys() method, does:     for (k, v) in E: D[k] = "
+"v In either case, this is followed by: for k, v in F.items(): D[k] = v"
+msgstr ""
+
+#: celery.utils.collections.ConfigurationView:1 of
+msgid "A view over an applications configuration dictionaries."
+msgstr ""
+
+#: celery.utils.collections.ConfigurationView:3 of
+msgid "Custom (but older) version of :class:`collections.ChainMap`."
+msgstr ""
+
+#: celery.utils.collections.ConfigurationView:5 of
+msgid ""
+"If the key does not exist in ``changes``, the ``defaults`` dictionaries "
+"are consulted."
+msgstr ""
+
+#: celery.utils.collections.ConfigurationView:8 of
+msgid "Map of configuration changes."
+msgstr ""
+
+#: celery.utils.collections.ConfigurationView:10 of
+msgid "List of dictionaries containing the default configuration."
+msgstr ""
+
+#: celery.utils.collections.ConfigurationView.clear:1 of
+msgid "Remove all changes, but keep defaults."
+msgstr ""
+
+#: celery.utils.collections.DictAttribute:1 of
+msgid "Dict interface to attributes."
+msgstr ""
+
+#: celery.utils.collections.DictAttribute:3 of
+msgid "`obj[k] -> obj.k` `obj[k] = val -> obj.k = val`"
+msgstr ""
+
+#: celery.utils.collections.Evictable:1 of
+msgid "Mixin for classes supporting the ``evict`` method."
+msgstr ""
+
+#: celery.utils.collections.Evictable.evict:1 of
+msgid "Force evict until maxsize is enforced."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:1 of
+msgid "Kind-of Set (or priority queue) with limitations."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:3 of
+msgid ""
+"Good for when you need to test for membership (`a in set`), but the set "
+"should not grow unbounded."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:6 of
+msgid ""
+"``maxlen`` is enforced at all times, so if the limit is reached we'll "
+"also remove non-expired items."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:9 of
+msgid ""
+"You can also configure ``minlen``: this is the minimal residual size of "
+"the set."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:12 of
+msgid "All arguments are optional, and no limits are enabled by default."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:14 of
+msgid ""
+"Optional max number of items. Adding more items than ``maxlen`` will "
+"result in immediate removal of items sorted by oldest insertion time."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:18 of
+msgid "TTL for all items. Expired items are purged as keys are inserted."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:21 of
+msgid ""
+"Minimal residual size of this set. .. versionadded:: 4.0  Value must be "
+"less than ``maxlen`` if both are configured.  Older expired items will be"
+" deleted, only after the set exceeds ``minlen`` number of items."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:21 of
+msgid "Minimal residual size of this set. .. versionadded:: 4.0"
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:24 of
+msgid "Value must be less than ``maxlen`` if both are configured."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:26 of
+msgid ""
+"Older expired items will be deleted, only after the set exceeds "
+"``minlen`` number of items."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:29 of
+msgid ""
+"Initial data to initialize set with. Can be an iterable of ``(key, "
+"value)`` pairs, a dict (``{key: insertion_time}``), or another instance "
+"of :class:`LimitedSet`."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet.add:1 of
+msgid "Add a new item, or reset the expiry time of an existing item."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet.as_dict:1 of
+msgid "Whole set as serializable dictionary."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet.clear:1 of
+msgid "Clear all data, start from scratch again."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet.pop:1 of
+msgid "Remove and return the oldest item, or :const:`None` when empty."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet.purge:1 of
+msgid "Check oldest items and remove them if needed."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet.purge:3 of
+msgid ""
+"Time of purging -- by default right now. This can be useful for unit "
+"testing."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet.update:1 of
+msgid "Update this set from other LimitedSet, dict or iterable."
+msgstr ""
+
+#: celery.utils.collections.Messagebuffer:1 of
+msgid "A buffer of pending messages."
+msgstr ""
+
+#: celery.utils.collections.OrderedDict:1 of
+msgid "Dict where insertion order matters."
+msgstr ""
+
+#: celery.utils.collections.force_mapping:1 of
+msgid "Wrap object into supporting the mapping interface if necessary."
+msgstr ""
+
+#: celery.utils.collections.lpmerge:1 of
+msgid "In place left precedent dictionary merge."
+msgstr ""
+
+#: celery.utils.collections.lpmerge:3 of
+msgid "Keeps values from `L`, if the value in `R` is :const:`None`."
+msgstr ""
+
+#: ../../internals/reference/celery.utils.deprecated.rst:3
+msgid "``celery.utils.deprecated``"
+msgstr ""
+
+#: celery.utils.deprecated:1 of
+msgid "Deprecation utilities."
+msgstr ""
+
+#: celery.utils.deprecated.Callable:1 of
+msgid "Decorator for deprecated functions."
+msgstr ""
+
+#: celery.utils.deprecated.Callable:3 of
+msgid "A deprecation warning will be emitted when the function is called."
+msgstr ""
+
+#: celery.utils.deprecated.Callable:5 of
+msgid ""
+"Version that marks first deprecation, if this argument isn't set a "
+"``PendingDeprecationWarning`` will be emitted instead."
+msgstr ""
+
+#: celery.utils.deprecated.Callable:9 of
+msgid "Future version when this feature will be removed."
+msgstr ""
+
+#: celery.utils.deprecated.Callable:11 of
+msgid "Instructions for an alternative solution (if any)."
+msgstr ""
+
+#: celery.utils.deprecated.Callable:13 of
+msgid "Description of what's being deprecated."
+msgstr ""
+
+#: celery.utils.deprecated.Property:1 of
+msgid "Decorator for deprecated properties."
+msgstr ""
+
+#: celery.utils.deprecated.warn:1 of
+msgid "Warn of (pending) deprecation."
+msgstr ""
+
+#: ../../internals/reference/celery.utils.dispatch.rst:3
+msgid "``celery.utils.dispatch``"
+msgstr ""
+
+#: celery.utils.dispatch:1 of
+msgid "Observer pattern."
+msgstr ""
+
+#: celery.utils.dispatch.Signal:1 celery.utils.dispatch.signal.Signal:1 of
+msgid "Create new signal."
+msgstr ""
+
+#: celery.utils.dispatch.Signal:3 celery.utils.dispatch.signal.Signal:3 of
+msgid "A list of the arguments this signal can pass along in a :meth:`send` call."
+msgstr ""
+
+#: celery.utils.dispatch.Signal:6 celery.utils.dispatch.signal.Signal:6 of
+msgid "Enable receiver cache."
+msgstr ""
+
+#: celery.utils.dispatch.Signal:8 celery.utils.dispatch.signal.Signal:8 of
+msgid "Name of signal, used for debugging purposes."
+msgstr ""
+
+#: celery.utils.dispatch.Signal.connect:1
+#: celery.utils.dispatch.signal.Signal.connect:1 of
+msgid "Connect receiver to sender for signal."
+msgstr ""
+
+#: celery.utils.dispatch.Signal.connect:3
+#: celery.utils.dispatch.signal.Signal.connect:3 of
+msgid ""
+"A function or an instance method which is to receive signals.  Receivers "
+"must be hashable objects.  if weak is :const:`True`, then receiver must "
+"be weak-referenceable.  Receivers must be able to accept keyword "
+"arguments.  If receivers have a `dispatch_uid` attribute, the receiver "
+"will not be added if another receiver already exists with that "
+"`dispatch_uid`."
+msgstr ""
+
+#: celery.utils.dispatch.Signal.connect:3
+#: celery.utils.dispatch.signal.Signal.connect:3 of
+msgid ""
+"A function or an instance method which is to receive signals.  Receivers "
+"must be hashable objects."
+msgstr ""
+
+#: celery.utils.dispatch.Signal.connect:6
+#: celery.utils.dispatch.signal.Signal.connect:6 of
+msgid "if weak is :const:`True`, then receiver must be weak-referenceable."
+msgstr ""
+
+#: celery.utils.dispatch.Signal.connect:9
+#: celery.utils.dispatch.signal.Signal.connect:9 of
+msgid "Receivers must be able to accept keyword arguments."
+msgstr ""
+
+#: celery.utils.dispatch.Signal.connect:11
+#: celery.utils.dispatch.signal.Signal.connect:11 of
+msgid ""
+"If receivers have a `dispatch_uid` attribute, the receiver will not be "
+"added if another receiver already exists with that `dispatch_uid`."
+msgstr ""
+
+#: celery.utils.dispatch.Signal.connect:15
+#: celery.utils.dispatch.signal.Signal.connect:15 of
+msgid ""
+"The sender to which the receiver should respond. Must either be a Python "
+"object, or :const:`None` to receive events from any sender."
+msgstr ""
+
+#: celery.utils.dispatch.Signal.connect:19
+#: celery.utils.dispatch.signal.Signal.connect:19 of
+msgid ""
+"Whether to use weak references to the receiver. By default, the module "
+"will attempt to use weak references to the receiver objects.  If this "
+"parameter is false, then strong references will be used."
+msgstr ""
+
+#: celery.utils.dispatch.Signal.connect:24
+#: celery.utils.dispatch.signal.Signal.connect:24 of
+msgid ""
+"An identifier used to uniquely identify a particular instance of a "
+"receiver.  This will usually be a string, though it may be anything "
+"hashable."
+msgstr ""
+
+#: celery.utils.dispatch.Signal.connect:28
+#: celery.utils.dispatch.signal.Signal.connect:28 of
+msgid ""
+"If the signal receiver raises an exception (e.g. ConnectionError), the "
+"receiver will be retried until it runs successfully. A strong ref to the "
+"receiver will be stored and the `weak` option will be ignored."
+msgstr ""
+
+#: celery.utils.dispatch.Signal.disconnect:1
+#: celery.utils.dispatch.signal.Signal.disconnect:1 of
+msgid "Disconnect receiver from sender for signal."
+msgstr ""
+
+#: celery.utils.dispatch.Signal.disconnect:3
+#: celery.utils.dispatch.signal.Signal.disconnect:3 of
+msgid ""
+"If weak references are used, disconnect needn't be called. The receiver "
+"will be removed from dispatch automatically."
+msgstr ""
+
+#: celery.utils.dispatch.Signal.disconnect:6
+#: celery.utils.dispatch.signal.Signal.disconnect:6 of
+msgid ""
+"The registered receiver to disconnect. May be none if `dispatch_uid` is "
+"specified."
+msgstr ""
+
+#: celery.utils.dispatch.Signal.disconnect:9
+#: celery.utils.dispatch.signal.Signal.disconnect:9 of
+msgid "The registered sender to disconnect."
+msgstr ""
+
+#: celery.utils.dispatch.Signal.disconnect:11
+#: celery.utils.dispatch.signal.Signal.disconnect:11 of
+msgid "The weakref state to disconnect."
+msgstr ""
+
+#: celery.utils.dispatch.Signal.disconnect:13
+#: celery.utils.dispatch.signal.Signal.disconnect:13 of
+msgid "The unique identifier of the receiver to disconnect."
+msgstr ""
+
+#: celery.utils.dispatch.Signal.receivers:1
+#: celery.utils.dispatch.signal.Signal.receivers:1 of
+msgid "Holds a dictionary of ``{receiverkey (id): weakref(receiver)}`` mappings."
+msgstr ""
+
+#: celery.utils.dispatch.Signal.send:1
+#: celery.utils.dispatch.Signal.send_robust:1
+#: celery.utils.dispatch.signal.Signal.send:1
+#: celery.utils.dispatch.signal.Signal.send_robust:1 of
+msgid "Send signal from sender to all connected receivers."
+msgstr ""
+
+#: celery.utils.dispatch.Signal.send:3
+#: celery.utils.dispatch.Signal.send_robust:3
+#: celery.utils.dispatch.signal.Signal.send:3
+#: celery.utils.dispatch.signal.Signal.send_robust:3 of
+msgid ""
+"If any receiver raises an error, the error propagates back through send, "
+"terminating the dispatch loop, so it is quite possible to not have all "
+"receivers called if a raises an error."
+msgstr ""
+
+#: celery.utils.dispatch.Signal.send:7
+#: celery.utils.dispatch.Signal.send_robust:7
+#: celery.utils.dispatch.signal.Signal.send:7
+#: celery.utils.dispatch.signal.Signal.send_robust:7 of
+msgid "The sender of the signal. Either a specific object or :const:`None`."
+msgstr ""
+
+#: celery.utils.dispatch.Signal.send:10
+#: celery.utils.dispatch.Signal.send_robust:10
+#: celery.utils.dispatch.signal.Signal.send:10
+#: celery.utils.dispatch.signal.Signal.send_robust:10 of
+msgid "Named arguments which will be passed to receivers."
+msgstr ""
+
+#: celery.utils.dispatch.Signal.send:13
+#: celery.utils.dispatch.Signal.send_robust:13
+#: celery.utils.dispatch.signal.Signal.send:13
+#: celery.utils.dispatch.signal.Signal.send_robust:13 of
+msgid "of tuple pairs: `[(receiver, response), … ]`."
+msgstr ""
+
+#: ../../internals/reference/celery.utils.dispatch.signal.rst:3
+msgid "``celery.utils.dispatch.signal``"
+msgstr ""
+
+#: celery.utils.dispatch.signal:1 of
+msgid "Implementation of the Observer pattern."
+msgstr ""
+
+#: ../../internals/reference/celery.utils.dispatch.weakref_backports.rst:3
+msgid "``celery.utils.dispatch.weakref_backports``"
+msgstr ""
+
+#: celery.utils.dispatch.weakref_backports:1 of
+msgid "Weakref compatibility."
+msgstr ""
+
+#: celery.utils.dispatch.weakref_backports:3 of
+msgid ""
+"weakref_backports is a partial backport of the weakref module for Python "
+"versions below 3.4."
+msgstr ""
+
+#: celery.utils.dispatch.weakref_backports:6 of
+msgid ""
+"Copyright (C) 2013 Python Software Foundation, see LICENSE.python for "
+"details."
+msgstr ""
+
+#: celery.utils.dispatch.weakref_backports:8 of
+msgid ""
+"The following changes were made to the original sources during "
+"backporting:"
+msgstr ""
+
+#: celery.utils.dispatch.weakref_backports:10 of
+msgid "Added ``self`` to ``super`` calls."
+msgstr ""
+
+#: celery.utils.dispatch.weakref_backports:11 of
+msgid "Removed ``from None`` when raising exceptions."
+msgstr ""
+
+#: celery.utils.dispatch.weakref_backports.WeakMethod:1 of
+msgid "Weak reference to bound method."
+msgstr ""
+
+#: celery.utils.dispatch.weakref_backports.WeakMethod:3 of
+msgid ""
+"A custom :class:`weakref.ref` subclass which simulates a weak reference "
+"to a bound method, working around the lifetime problem of bound methods."
+msgstr ""
+
+#: ../../internals/reference/celery.utils.functional.rst:3
+msgid "``celery.utils.functional``"
+msgstr ""
+
+#: celery.utils.functional:1 of
+msgid "Functional-style utilties."
+msgstr ""
+
+#: celery.utils.functional.LRUCache:1 of
+msgid "LRU Cache implementation using a doubly linked list to track access."
+msgstr ""
+
+#: celery.utils.functional.LRUCache:3 of
+msgid ""
+"The maximum number of keys to keep in the cache. When a new key is "
+"inserted and the limit has been exceeded, the *Least Recently Used* key "
+"will be discarded from the cache."
+msgstr ""
+
+#: celery.utils.functional.LRUCache.popitem:1 of
+msgid "as a 2-tuple; but raise KeyError if D is empty."
+msgstr ""
+
+#: celery.utils.functional.is_list:1 of
+msgid "Return true if the object is iterable."
+msgstr ""
+
+#: celery.utils.functional.is_list:3 of
+msgid "Returns false if object is a mapping or string."
+msgstr ""
+
+#: celery.utils.functional.maybe_list:1 of
+msgid "Return list of one element if ``l`` is a scalar."
+msgstr ""
+
+#: celery.utils.functional.memoize:1 of
+msgid "Decorator to cache function return value."
+msgstr ""
+
+#: celery.utils.functional.mlazy:1 of
+msgid "Memoized lazy evaluation."
+msgstr ""
+
+#: celery.utils.functional.mlazy:3 of
+msgid ""
+"The function is only evaluated once, every subsequent access will return "
+"the same value."
+msgstr ""
+
+#: celery.utils.functional.mlazy.evaluated:1 of
+msgid "Set to :const:`True` after the object has been evaluated."
+msgstr ""
+
+#: celery.utils.functional.noop:1 of
+msgid "No operation."
+msgstr ""
+
+#: celery.utils.functional.noop:3 of
+msgid "Takes any arguments/keyword arguments and does nothing."
+msgstr ""
+
+#: celery.utils.functional.first:1 of
+msgid "Return the first element in ``it`` that ``predicate`` accepts."
+msgstr ""
+
+#: celery.utils.functional.first:3 of
+msgid ""
+"If ``predicate`` is None it will return the first item that's not "
+":const:`None`."
+msgstr ""
+
+#: celery.utils.functional.firstmethod:1 of
+msgid "Multiple dispatch."
+msgstr ""
+
+#: celery.utils.functional.firstmethod:3 of
+msgid ""
+"Return a function that with a list of instances, finds the first instance"
+" that gives a value for the given method."
+msgstr ""
+
+#: celery.utils.functional.firstmethod:6 of
+msgid ""
+"The list can also contain lazy instances "
+"(:class:`~kombu.utils.functional.lazy`.)"
+msgstr ""
+
+#: celery.utils.functional.chunks:1 of
+msgid "Split an iterator into chunks with `n` elements each."
+msgstr ""
+
+#: celery.utils.functional.chunks:5 of
+msgid ""
+"``it`` must be an actual iterator, if you pass this a concrete sequence "
+"will get you repeating elements."
+msgstr ""
+
+#: celery.utils.functional.chunks:8 of
+msgid ""
+"So ``chunks(iter(range(1000)), 10)`` is fine, but ``chunks(range(1000), "
+"10)`` is not."
+msgstr ""
+
+#: celery.utils.functional.chunks:13 of
+msgid ""
+"# n == 2 >>> x = chunks(iter([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), 2) >>> "
+"list(x) [[0, 1], [2, 3], [4, 5], [6, 7], [8, 9], [10]]"
+msgstr ""
+
+#: celery.utils.functional.chunks:18 of
+msgid ""
+"# n == 3 >>> x = chunks(iter([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), 3) >>> "
+"list(x) [[0, 1, 2], [3, 4, 5], [6, 7, 8], [9, 10]]"
+msgstr ""
+
+#: celery.utils.functional.padlist:1 of
+msgid "Pad list with default elements."
+msgstr ""
+
+#: celery.utils.functional.mattrgetter:1 of
+msgid "Get attributes, ignoring attribute errors."
+msgstr ""
+
+#: celery.utils.functional.mattrgetter:3 of
+msgid ""
+"Like :func:`operator.itemgetter` but return :const:`None` on missing "
+"attributes instead of raising :exc:`AttributeError`."
+msgstr ""
+
+#: celery.utils.functional.uniq:1 of
+msgid "Return all unique elements in ``it``, preserving order."
+msgstr ""
+
+#: celery.utils.functional.regen:1 of
+msgid "Convert iterator to an object that can be consumed multiple times."
+msgstr ""
+
+#: celery.utils.functional.regen:3 of
+msgid ""
+"``Regen`` takes any iterable, and if the object is an generator it will "
+"cache the evaluated list on first access, so that the generator can be "
+"\"consumed\" multiple times."
+msgstr ""
+
+#: celery.utils.functional.dictfilter:1 of
+msgid "Remove all keys from dict ``d`` whose value is :const:`None`."
+msgstr ""
+
+#: celery.utils.functional.lazy:1 of
+msgid "Holds lazy evaluation."
+msgstr ""
+
+#: celery.utils.functional.lazy:3 of
+msgid ""
+"Evaluated when called or if the :meth:`evaluate` method is called. The "
+"function is re-evaluated on every call."
+msgstr ""
+
+#: celery.utils.functional.lazy:8 of
+msgid "Overloaded operations that will evaluate the promise:"
+msgstr ""
+
+#: celery.utils.functional.lazy:7 of
+msgid ":meth:`__str__`, :meth:`__repr__`, :meth:`__cmp__`."
+msgstr ""
+
+#: celery.utils.functional.maybe_evaluate:1 of
+msgid "Evaluate value only if value is a :class:`lazy` instance."
+msgstr ""
+
+#: celery.utils.functional.head_from_fun:1 of
+msgid "Generate signature function from actual function."
+msgstr ""
+
+#: celery.utils.functional.maybe:1 of
+msgid "Call typ on value if val is defined."
+msgstr ""
+
+#: celery.utils.functional.fun_accepts_kwargs:1 of
+msgid "Return true if function accepts arbitrary keyword arguments."
+msgstr ""
+
+#: ../../internals/reference/celery.utils.graph.rst:3
+msgid "``celery.utils.graph``"
+msgstr ""
+
+#: celery.utils.graph:1 of
+msgid "Dependency graph implementation."
+msgstr ""
+
+#: celery.utils.graph.DOT:1 of
+msgid "Constants related to the dot format."
+msgstr ""
+
+#: celery.utils.graph.CycleError:1 of
+msgid "A cycle was detected in an acyclic graph."
+msgstr ""
+
+#: celery.utils.graph.DependencyGraph:1 of
+msgid "A directed acyclic graph of objects and their dependencies."
+msgstr ""
+
+#: celery.utils.graph.DependencyGraph:3 of
+msgid ""
+"Supports a robust topological sort to detect the order in which they must"
+" be handled."
+msgstr ""
+
+#: celery.utils.graph.DependencyGraph:6 of
+msgid ""
+"Takes an optional iterator of ``(obj, dependencies)`` tuples to build the"
+" graph from."
+msgstr ""
+
+#: celery.utils.graph.DependencyGraph:9 of
+msgid "Does not support cycle detection."
+msgstr ""
+
+#: celery.utils.graph.DependencyGraph.add_arc:1 of
+msgid "Add an object to the graph."
+msgstr ""
+
+#: celery.utils.graph.DependencyGraph.add_edge:1 of
+msgid "Add an edge from object ``A`` to object ``B``."
+msgstr ""
+
+#: celery.utils.graph.DependencyGraph.add_edge:3 of
+msgid "I.e. ``A`` depends on ``B``."
+msgstr ""
+
+#: celery.utils.graph.DependencyGraph.connect:1 of
+msgid "Add nodes from another graph."
+msgstr ""
+
+#: celery.utils.graph.DependencyGraph.edges:1 of
+msgid "Return generator that yields for all edges in the graph."
+msgstr ""
+
+#: celery.utils.graph.DependencyGraph.to_dot:1 of
+msgid "Convert the graph to DOT format."
+msgstr ""
+
+#: celery.utils.graph.DependencyGraph.to_dot:3 of
+msgid "A file, or a file-like object to write the graph to."
+msgstr ""
+
+#: celery.utils.graph.DependencyGraph.to_dot:5 of
+msgid "Custom graph formatter to use."
+msgstr ""
+
+#: celery.utils.graph.DependencyGraph.topsort:1 of
+msgid "Sort the graph topologically."
+msgstr ""
+
+#: celery.utils.graph.DependencyGraph.topsort:3 of
+msgid "of objects in the order in which they must be handled."
+msgstr ""
+
+#: celery.utils.graph.DependencyGraph.update:1 of
+msgid "Update graph with data from a list of ``(obj, deps)`` tuples."
+msgstr ""
+
+#: celery.utils.graph.DependencyGraph.valency_of:1 of
+msgid "Return the valency (degree) of a vertex in the graph."
+msgstr ""
+
+#: celery.utils.graph.GraphFormatter:1 of
+msgid "Format dependency graphs."
+msgstr ""
+
+#: ../../internals/reference/celery.utils.imports.rst:3
+msgid "``celery.utils.imports``"
+msgstr ""
+
+#: celery.utils.imports:1 of
+msgid "Utilities related to importing modules and symbols by name."
+msgstr ""
+
+#: celery.utils.imports.NotAPackage:1 of
+msgid "Raised when importing a package, but it's not a package."
+msgstr ""
+
+#: celery.utils.imports.qualname:1 of
+msgid "Return object name."
+msgstr ""
+
+#: celery.utils.imports.instantiate:1 of
+msgid "Instantiate class by name."
+msgstr ""
+
+#: celery.utils.imports.instantiate:3 of
+msgid ":func:`symbol_by_name`."
+msgstr ""
+
+#: celery.utils.imports.symbol_by_name:1 of
+msgid "Get symbol by qualified name."
+msgstr ""
+
+#: celery.utils.imports.symbol_by_name:3 of
+msgid "The name should be the full dot-separated path to the class::"
+msgstr ""
+
+#: celery.utils.imports.symbol_by_name:7 of
+msgid "Example::"
+msgstr ""
+
+#: celery.utils.imports.symbol_by_name:12 of
+msgid "or using ':' to separate module and symbol::"
+msgstr ""
+
+#: celery.utils.imports.symbol_by_name:16 of
+msgid ""
+"If `aliases` is provided, a dict containing short name/long name "
+"mappings, the name is looked up in the aliases first."
+msgstr ""
+
+#: celery.utils.imports.symbol_by_name:28 of
+msgid ""
+"# Does not try to look up non-string names. >>> from "
+"celery.concurrency.processes import TaskPool >>> symbol_by_name(TaskPool)"
+" is TaskPool True"
+msgstr ""
+
+#: celery.utils.imports.cwd_in_path:1 of
+msgid "Context adding the current working directory to sys.path."
+msgstr ""
+
+#: celery.utils.imports.find_module:1 of
+msgid "Version of :func:`imp.find_module` supporting dots."
+msgstr ""
+
+#: celery.utils.imports.import_from_cwd:1 of
+msgid "Import module, temporarily including modules in the current directory."
+msgstr ""
+
+#: celery.utils.imports.import_from_cwd:3 of
+msgid ""
+"Modules located in the current directory has precedence over modules "
+"located in `sys.path`."
+msgstr ""
+
+#: celery.utils.imports.reload_from_cwd:1 of
+msgid "Reload module (ensuring that CWD is in sys.path)."
+msgstr ""
+
+#: celery.utils.imports.module_file:1 of
+msgid "Return the correct original file name of a module."
+msgstr ""
+
+#: ../../internals/reference/celery.utils.iso8601.rst:3
+msgid "``celery.utils.iso8601``"
+msgstr ""
+
+#: celery.utils.iso8601:1 of
+msgid "Parse ISO8601 dates."
+msgstr ""
+
+#: celery.utils.iso8601:3 of
+msgid ""
+"Originally taken from :pypi:`pyiso8601` "
+"(https://bitbucket.org/micktwomey/pyiso8601)"
+msgstr ""
+
+#: celery.utils.iso8601:6 of
+msgid "Modified to match the behavior of ``dateutil.parser``:"
+msgstr ""
+
+#: celery.utils.iso8601:8 of
+msgid "raise :exc:`ValueError` instead of ``ParseError``"
+msgstr ""
+
+#: celery.utils.iso8601:9 of
+msgid "return naive :class:`~datetime.datetime` by default"
+msgstr ""
+
+#: celery.utils.iso8601:10 of
+msgid "uses :class:`pytz.FixedOffset`"
+msgstr ""
+
+#: celery.utils.iso8601:12 of
+msgid "This is the original License:"
+msgstr ""
+
+#: celery.utils.iso8601:14 of
+msgid "Copyright (c) 2007 Michael Twomey"
+msgstr ""
+
+#: celery.utils.iso8601:16 of
+msgid ""
+"Permission is hereby granted, free of charge, to any person obtaining a "
+"copy of this software and associated documentation files (the "
+"\"Software\"), to deal in the Software without restriction, including "
+"without limitation the rights to use, copy, modify, merge, publish, "
+"distribute, sub-license, and/or sell copies of the Software, and to "
+"permit persons to whom the Software is furnished to do so, subject to the"
+" following conditions:"
+msgstr ""
+
+#: celery.utils.iso8601:24 of
+msgid ""
+"The above copyright notice and this permission notice shall be included "
+"in all copies or substantial portions of the Software."
+msgstr ""
+
+#: celery.utils.iso8601:27 of
+msgid ""
+"THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS"
+" OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF "
+"MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN"
+" NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,"
+" DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR "
+"OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE"
+" USE OR OTHER DEALINGS IN THE SOFTWARE."
+msgstr ""
+
+#: celery.utils.iso8601.parse_iso8601:1 of
+msgid "Parse and convert ISO-8601 string to datetime."
+msgstr ""
+
+#: ../../internals/reference/celery.utils.log.rst:3
+msgid "``celery.utils.log``"
+msgstr ""
+
+#: celery.utils.log:1 of
+msgid "Logging utilities."
+msgstr ""
+
+#: celery.utils.log.ColorFormatter:1 of
+msgid "Logging formatter that adds colors based on severity."
+msgstr ""
+
+#: celery.utils.log.ColorFormatter.COLORS:1 of
+msgid "Loglevel -> Color mapping."
+msgstr ""
+
+#: celery.utils.log.ColorFormatter.format:1 of
+msgid "Format the specified record as text."
+msgstr ""
+
+#: celery.utils.log.ColorFormatter.format:3 of
+msgid ""
+"The record's attribute dictionary is used as the operand to a string "
+"formatting operation which yields the returned string. Before formatting "
+"the dictionary, a couple of preparatory steps are carried out. The "
+"message attribute of the record is computed using LogRecord.getMessage()."
+" If the formatting string uses the time (as determined by a call to "
+"usesTime(), formatTime() is called to format the event time. If there is "
+"exception information, it is formatted using formatException() and "
+"appended to the message."
+msgstr ""
+
+#: celery.utils.log.ColorFormatter.formatException:1 of
+msgid "Format and return the specified exception information as a string."
+msgstr ""
+
+#: celery.utils.log.ColorFormatter.formatException:3 of
+msgid "This default implementation just uses traceback.print_exception()"
+msgstr ""
+
+#: celery.utils.log.LoggingProxy:1 of
+msgid "Forward file object to :class:`logging.Logger` instance."
+msgstr ""
+
+#: celery.utils.log.LoggingProxy:3 of
+msgid "Logger instance to forward to."
+msgstr ""
+
+#: celery.utils.log.LoggingProxy:5 of
+msgid "Log level to use when logging messages."
+msgstr ""
+
+#: celery.utils.log.LoggingProxy.isatty:1 of
+msgid "Here for file support."
+msgstr ""
+
+#: celery.utils.log.LoggingProxy.write:1 of
+msgid "Write message to logging object."
+msgstr ""
+
+#: celery.utils.log.LoggingProxy.writelines:1 of
+msgid "Write list of strings to file."
+msgstr ""
+
+#: celery.utils.log.LoggingProxy.writelines:3 of
+msgid ""
+"The sequence can be any iterable object producing strings. This is "
+"equivalent to calling :meth:`write` for each string."
+msgstr ""
+
+#: celery.utils.log.set_in_sighandler:1 of
+msgid "Set flag signifiying that we're inside a signal handler."
+msgstr ""
+
+#: celery.utils.log.in_sighandler:1 of
+msgid "Context that records that we are in a signal handler."
+msgstr ""
+
+#: celery.utils.log.get_logger:1 of
+msgid "Get logger by name."
+msgstr ""
+
+#: celery.utils.log.get_task_logger:1 of
+msgid "Get logger for task module by name."
+msgstr ""
+
+#: celery.utils.log.mlevel:1 of
+msgid "Convert level name/int to log level."
+msgstr ""
+
+#: celery.utils.log.get_multiprocessing_logger:1 of
+msgid "Return the multiprocessing logger."
+msgstr ""
+
+#: celery.utils.log.reset_multiprocessing_logger:1 of
+msgid "Reset multiprocessing logging setup."
+msgstr ""
+
+#: ../../internals/reference/celery.utils.nodenames.rst:3
+msgid "``celery.utils.nodenames``"
+msgstr ""
+
+#: celery.utils.nodenames:1 of
+msgid "Worker name utilities."
+msgstr ""
+
+#: celery.utils.nodenames.gethostname:1 of
+msgid "Return the current host name."
+msgstr ""
+
+#: celery.utils.nodenames.anon_nodename:1 of
+msgid "Return the nodename for this process (not a worker)."
+msgstr ""
+
+#: celery.utils.nodenames.anon_nodename:3 of
+msgid "This is used for e.g. the origin task message field."
+msgstr ""
+
+#: celery.utils.nodenames.default_nodename:1 of
+msgid "Return the default nodename for this process."
+msgstr ""
+
+#: celery.utils.nodenames.node_format:1 of
+msgid "Format worker node name (name@host.com)."
+msgstr ""
+
+#: celery.utils.nodenames.host_format:1 of
+#, python-format
+msgid "Format host %x abbreviations."
+msgstr ""
+
+#: ../../internals/reference/celery.utils.objects.rst:3
+msgid "``celery.utils.objects``"
+msgstr ""
+
+#: celery.utils.objects:1 of
+msgid "Object related utilities, including introspection, etc."
+msgstr ""
+
+#: celery.utils.objects.Bunch:1 of
+msgid "Object that enables you to modify attributes."
+msgstr ""
+
+#: celery.utils.objects.FallbackContext:1 of
+msgid "Context workaround."
+msgstr ""
+
+#: celery.utils.objects.FallbackContext:3 of
+msgid ""
+"The built-in ``@contextmanager`` utility does not work well when wrapping"
+" other contexts, as the traceback is wrong when the wrapped context "
+"raises."
+msgstr ""
+
+#: celery.utils.objects.FallbackContext:7 of
+msgid ""
+"This solves this problem and can be used instead of ``@contextmanager`` "
+"in this example::"
+msgstr ""
+
+#: celery.utils.objects.FallbackContext:22 of
+msgid "This wrapper can be used instead for the above like this::"
+msgstr ""
+
+#: celery.utils.objects.getitem_property:1 of
+msgid "Attribute -> dict key descriptor."
+msgstr ""
+
+#: celery.utils.objects.getitem_property:3 of
+msgid ""
+"The target object must support ``__getitem__``, and optionally "
+"``__setitem__``."
+msgstr ""
+
+#: celery.utils.objects.mro_lookup:1 of
+msgid "Return the first node by MRO order that defines an attribute."
+msgstr ""
+
+#: celery.utils.objects.mro_lookup:3 of
+msgid "Child class to traverse."
+msgstr ""
+
+#: celery.utils.objects.mro_lookup:5 of
+msgid "Name of attribute to find."
+msgstr ""
+
+#: celery.utils.objects.mro_lookup:7 of
+msgid "A set of types that if reached will stop the search."
+msgstr ""
+
+#: celery.utils.objects.mro_lookup:10 of
+msgid ""
+"Use one of the stop classes if the attributes module origin isn't in this"
+" list. Used to detect monkey patched attributes."
+msgstr ""
+
+#: celery.utils.objects.mro_lookup:15 of
+msgid "The attribute value, or :const:`None` if not found."
+msgstr ""
+
+#: ../../internals/reference/celery.utils.saferepr.rst:3
+msgid "``celery.utils.saferepr``"
+msgstr ""
+
+#: celery.utils.saferepr:1 of
+msgid "Streaming, truncating, non-recursive version of :func:`repr`."
+msgstr ""
+
+#: celery.utils.saferepr:3 of
+msgid "Differences from regular :func:`repr`:"
+msgstr ""
+
+#: celery.utils.saferepr:5 of
+msgid "Sets are represented the Python 3 way: ``{1, 2}`` vs ``set([1, 2])``."
+msgstr ""
+
+#: celery.utils.saferepr:6 of
+msgid "Unicode strings does not have the ``u'`` prefix, even on Python 2."
+msgstr ""
+
+#: celery.utils.saferepr:7 of
+msgid "Empty set formatted as ``set()`` (Python 3), not ``set([])`` (Python 2)."
+msgstr ""
+
+#: celery.utils.saferepr:8 of
+msgid "Longs don't have the ``L`` suffix."
+msgstr ""
+
+#: celery.utils.saferepr:10 of
+msgid "Very slow with no limits, super quick with limits."
+msgstr ""
+
+#: celery.utils.saferepr.saferepr:1 of
+msgid "Safe version of :func:`repr`."
+msgstr ""
+
+#: celery.utils.saferepr.saferepr:5 of
+msgid ""
+"Make sure you set the maxlen argument, or it will be very slow for "
+"recursive objects.  With the maxlen set, it's often faster than built-in "
+"repr."
+msgstr ""
+
+#: celery.utils.saferepr.reprstream:1 of
+msgid "Streaming repr, yielding tokens."
+msgstr ""
+
+#: ../../internals/reference/celery.utils.serialization.rst:3
+msgid "``celery.utils.serialization``"
+msgstr ""
+
+#: celery.utils.serialization:1 of
+msgid "Utilities for safely pickling exceptions."
+msgstr ""
+
+#: celery.utils.serialization.UnpickleableExceptionWrapper:1 of
+msgid "Wraps unpickleable exceptions."
+msgstr ""
+
+#: celery.utils.serialization.UnpickleableExceptionWrapper:3 of
+msgid "See :attr:`exc_module`."
+msgstr ""
+
+#: celery.utils.serialization.UnpickleableExceptionWrapper:5 of
+msgid "See :attr:`exc_cls_name`."
+msgstr ""
+
+#: celery.utils.serialization.UnpickleableExceptionWrapper:7 of
+msgid "See :attr:`exc_args`."
+msgstr ""
+
+#: celery.utils.serialization.UnpickleableExceptionWrapper.exc_args:1 of
+msgid "The arguments for the original exception."
+msgstr ""
+
+#: celery.utils.serialization.UnpickleableExceptionWrapper.exc_cls_name:1 of
+msgid "The name of the original exception class."
+msgstr ""
+
+#: celery.utils.serialization.UnpickleableExceptionWrapper.exc_module:1 of
+msgid "The module of the original exception."
+msgstr ""
+
+#: celery.utils.serialization.subclass_exception:1 of
+msgid "Create new exception class."
+msgstr ""
+
+#: celery.utils.serialization.find_pickleable_exception:1 of
+msgid "Find first pickleable exception base class."
+msgstr ""
+
+#: celery.utils.serialization.find_pickleable_exception:3 of
+msgid ""
+"With an exception instance, iterate over its super classes (by MRO) and "
+"find the first super exception that's pickleable.  It does not go below "
+":exc:`Exception` (i.e., it skips :exc:`Exception`, :class:`BaseException`"
+" and :class:`object`).  If that happens you should use "
+":exc:`UnpickleableException` instead."
+msgstr ""
+
+#: celery.utils.serialization.find_pickleable_exception:9 of
+msgid "An exception instance."
+msgstr ""
+
+#: celery.utils.serialization.find_pickleable_exception:11 of
+msgid "decoder to use."
+msgstr ""
+
+#: celery.utils.serialization.find_pickleable_exception:12 of
+msgid "encoder to use"
+msgstr ""
+
+#: celery.utils.serialization.find_pickleable_exception:14 of
+msgid ""
+"Nearest pickleable parent exception class     (except :exc:`Exception` "
+"and parents), or if the exception is     pickleable it will return "
+":const:`None`."
+msgstr ""
+
+#: celery.utils.serialization.find_pickleable_exception:17 of
+msgid "Nearest pickleable parent exception class"
+msgstr ""
+
+#: celery.utils.serialization.find_pickleable_exception:17 of
+msgid ""
+"(except :exc:`Exception` and parents), or if the exception is pickleable "
+"it will return :const:`None`."
+msgstr ""
+
+#: celery.utils.serialization.create_exception_cls:1 of
+msgid "Dynamically create an exception class."
+msgstr ""
+
+#: celery.utils.serialization.get_pickleable_exception:1 of
+msgid "Make sure exception is pickleable."
+msgstr ""
+
+#: celery.utils.serialization.get_pickleable_etype:1 of
+msgid "Get pickleable exception type."
+msgstr ""
+
+#: celery.utils.serialization.get_pickled_exception:1 of
+msgid "Reverse of :meth:`get_pickleable_exception`."
+msgstr ""
+
+#: celery.utils.serialization.strtobool:1 of
+msgid "Convert common terms for true/false to bool."
+msgstr ""
+
+#: celery.utils.serialization.strtobool:3 of
+msgid "Examples (true/false/yes/no/on/off/1/0)."
+msgstr ""
+
+#: ../../internals/reference/celery.utils.sysinfo.rst:3
+msgid "``celery.utils.sysinfo``"
+msgstr ""
+
+#: celery.utils.sysinfo:1 of
+msgid "System information utilities."
+msgstr ""
+
+#: celery.utils.sysinfo.load_average:1 of
+msgid "Return system load average as a triple."
+msgstr ""
+
+#: celery.utils.sysinfo.df:1 of
+msgid "Disk information."
+msgstr ""
+
+#: ../../internals/reference/celery.utils.term.rst:3
+msgid "``celery.utils.term``"
+msgstr ""
+
+#: celery.utils.term:1 of
+msgid "Terminals and colors."
+msgstr ""
+
+#: celery.utils.term.colored:1 of
+msgid "Terminal colored text."
+msgstr ""
+
+#: ../../internals/reference/celery.utils.text.rst:3
+msgid "``celery.utils.text``"
+msgstr ""
+
+#: celery.utils.text:1 of
+msgid "Text formatting utilities."
+msgstr ""
+
+#: celery.utils.text.abbr:1 of
+msgid "Abbreviate word."
+msgstr ""
+
+#: celery.utils.text.abbrtask:1 of
+msgid "Abbreviate task name."
+msgstr ""
+
+#: celery.utils.text.dedent:1 of
+msgid "Remove identation."
+msgstr ""
+
+#: celery.utils.text.dedent_initial:1 of
+msgid "Remove identation from first line of text."
+msgstr ""
+
+#: celery.utils.text.ensure_newlines:1 celery.utils.text.ensure_sep:1 of
+msgid "Ensure text s ends in separator sep'."
+msgstr ""
+
+#: celery.utils.text.fill_paragraphs:1 of
+msgid "Fill paragraphs with newlines (or custom separator)."
+msgstr ""
+
+#: celery.utils.text.indent:1 of
+msgid "Indent text."
+msgstr ""
+
+#: celery.utils.text.join:1 of
+msgid "Concatenate list of strings."
+msgstr ""
+
+#: celery.utils.text.pluralize:1 of
+msgid "Pluralize term when n is greater than one."
+msgstr ""
+
+#: celery.utils.text.pretty:1 of
+msgid "Format value for printing to console."
+msgstr ""
+
+#: celery.utils.text.str_to_list:1 of
+msgid "Convert string to list."
+msgstr ""
+
+#: celery.utils.text.simple_format:1 of
+msgid "Format string, expanding abbreviations in keys'."
+msgstr ""
+
+#: celery.utils.text.truncate:1 of
+msgid "Truncate text to a maximum number of characters."
+msgstr ""
+
+#: ../../internals/reference/celery.utils.threads.rst:3
+msgid "``celery.utils.threads``"
+msgstr ""
+
+#: celery.utils.threads:1 of
+msgid "Threading primitives and utilities."
+msgstr ""
+
+#: celery.utils.threads.bgThread:1 of
+msgid "Background service thread."
+msgstr ""
+
+#: celery.utils.threads.bgThread.stop:1 of
+msgid "Graceful shutdown."
+msgstr ""
+
+#: celery.utils.threads.Local:1 of
+msgid "Local object."
+msgstr ""
+
+#: celery.utils.threads.LocalManager:1 of
+msgid "Local objects cannot manage themselves."
+msgstr ""
+
+#: celery.utils.threads.LocalManager:3 of
+msgid ""
+"For that you need a local manager. You can pass a local manager multiple "
+"locals or add them later by appending them to ``manager.locals``.  Every "
+"time the manager cleans up, it will clean up all the data left in the "
+"locals for this context."
+msgstr ""
+
+#: celery.utils.threads.LocalManager:9 of
+msgid ""
+"The ``ident_func`` parameter can be added to override the default ident "
+"function for the wrapped locals."
+msgstr ""
+
+#: celery.utils.threads.LocalManager.cleanup:1 of
+msgid "Manually clean up the data in the locals for this context."
+msgstr ""
+
+#: celery.utils.threads.LocalManager.cleanup:3 of
+msgid "Call this at the end of the request or use ``make_middleware()``."
+msgstr ""
+
+#: celery.utils.threads.LocalManager.get_ident:1 of
+msgid "Return context identifier."
+msgstr ""
+
+#: celery.utils.threads.LocalManager.get_ident:3 of
+msgid ""
+"This is the indentifer the local objects use internally for this context."
+"  You cannot override this method to change the behavior but use it to "
+"link other context local objects (such as SQLAlchemy's scoped sessions) "
+"to the Werkzeug locals."
+msgstr ""
+
+#: celery.utils.threads.default_socket_timeout:1 of
+msgid "Context temporarily setting the default socket timeout."
+msgstr ""
+
+#: ../../internals/reference/celery.utils.time.rst:3
+msgid "``celery.utils.time``"
+msgstr ""
+
+#: celery.utils.time:1 of
+msgid "Utilities related to dates, times, intervals, and timezones."
+msgstr ""
+
+#: celery.utils.time.LocalTimezone:1 of
+msgid "Local time implementation."
+msgstr ""
+
+#: celery.utils.time.LocalTimezone:3 of
+msgid "Used only when the :setting:`enable_utc` setting is disabled."
+msgstr ""
+
+#: celery.utils.time.LocalTimezone.dst:1 of
+msgid "datetime -> DST offset in minutes east of UTC."
+msgstr ""
+
+#: celery.utils.time.LocalTimezone.fromutc:1 of
+msgid "datetime in UTC -> datetime in local time."
+msgstr ""
+
+#: celery.utils.time.LocalTimezone.tzname:1 of
+msgid "datetime -> string name of time zone."
+msgstr ""
+
+#: celery.utils.time.LocalTimezone.utcoffset:1 of
+msgid ""
+"datetime -> timedelta showing offset from UTC, negative values indicating"
+" West of UTC"
+msgstr ""
+
+#: celery.utils.time.maybe_timedelta:1 of
+msgid "Convert integer to timedelta, if argument is an integer."
+msgstr ""
+
+#: celery.utils.time.delta_resolution:1 of
+msgid "Round a :class:`~datetime.datetime` to the resolution of timedelta."
+msgstr ""
+
+#: celery.utils.time.delta_resolution:3 of
+msgid ""
+"If the :class:`~datetime.timedelta` is in days, the "
+":class:`~datetime.datetime` will be rounded to the nearest days, if the "
+":class:`~datetime.timedelta` is in hours the :class:`~datetime.datetime` "
+"will be rounded to the nearest hour, and so on until seconds, which will "
+"just return the original :class:`~datetime.datetime`."
+msgstr ""
+
+#: celery.utils.time.remaining:1 of
+msgid "Calculate the remaining time for a start date and a timedelta."
+msgstr ""
+
+#: celery.utils.time.remaining:3 of
+msgid "For example, \"how many seconds left for 30 seconds after start?\""
+msgstr ""
+
+#: celery.utils.time.remaining:5 of
+msgid "Starting date."
+msgstr ""
+
+#: celery.utils.time.remaining:7 of
+msgid "The end delta."
+msgstr ""
+
+#: celery.utils.time.remaining:9 of
+msgid ""
+"If enabled the end time will be calculated using :func:`delta_resolution`"
+" (i.e., rounded to the resolution of `ends_in`)."
+msgstr ""
+
+#: celery.utils.time.remaining:13 of
+msgid ""
+"Function returning the current time and date. Defaults to "
+":func:`datetime.utcnow`."
+msgstr ""
+
+#: celery.utils.time.remaining:17 of
+msgid "Remaining time."
+msgstr ""
+
+#: celery.utils.time.rate:1 of
+msgid "Convert rate string (`\"100/m\"`, `\"2/h\"` or `\"0.5/s\"`) to seconds."
+msgstr ""
+
+#: celery.utils.time.weekday:1 of
+msgid "Return the position of a weekday: 0 - 7, where 0 is Sunday."
+msgstr ""
+
+#: celery.utils.time.humanize_seconds:1 of
+msgid "Show seconds in human form."
+msgstr ""
+
+#: celery.utils.time.humanize_seconds:3 of
+msgid "For example, 60 becomes \"1 minute\", and 7200 becomes \"2 hours\"."
+msgstr ""
+
+#: celery.utils.time.humanize_seconds:5 of
+msgid ""
+"can be used to add a preposition to the output (e.g., 'in' will give 'in "
+"1 second', but add nothing to 'now')."
+msgstr ""
+
+#: celery.utils.time.humanize_seconds:8 of
+msgid "Literal 'now'."
+msgstr ""
+
+#: celery.utils.time.humanize_seconds:10 of
+msgid "Include microseconds."
+msgstr ""
+
+#: celery.utils.time.maybe_iso8601:1 of
+msgid "Either ``datetime | str -> datetime`` or ``None -> None``."
+msgstr ""
+
+#: celery.utils.time.is_naive:1 of
+msgid "Return :const:`True` if :class:`~datetime.datetime` is naive."
+msgstr ""
+
+#: celery.utils.time.make_aware:1 of
+msgid "Set timezone for a :class:`~datetime.datetime` object."
+msgstr ""
+
+#: celery.utils.time.localize:1 of
+msgid "Convert aware :class:`~datetime.datetime` to another timezone."
+msgstr ""
+
+#: celery.utils.time.to_utc:1 of
+msgid "Convert naive :class:`~datetime.datetime` to UTC."
+msgstr ""
+
+#: celery.utils.time.maybe_make_aware:1 of
+msgid "Convert dt to aware datetime, do nothing if dt is already aware."
+msgstr ""
+
+#: celery.utils.time.ffwd:1 of
+msgid "Version of ``dateutil.relativedelta`` that only supports addition."
+msgstr ""
+
+#: celery.utils.time.utcoffset:1 of
+msgid "Return the current offset to UTC in hours."
+msgstr ""
+
+#: celery.utils.time.adjust_timestamp:1 of
+msgid "Adjust timestamp based on provided utcoffset."
+msgstr ""
+
+#: celery.utils.time.get_exponential_backoff_interval:1 of
+msgid "Calculate the exponential backoff wait time."
+msgstr ""
+
+#: ../../internals/reference/celery.utils.timer2.rst:3
+msgid "``celery.utils.timer2``"
+msgstr ""
+
+#: celery.utils.timer2:1 of
+msgid "Scheduler for Python functions."
+msgstr ""
+
+#: celery.utils.timer2:4 of
+msgid ""
+"This is used for the thread-based worker only, not for "
+"amqp/redis/sqs/qpid where :mod:`kombu.asynchronous.timer` is used."
+msgstr ""
+
+#: celery.utils.timer2.to_timestamp:1 of
+msgid "Convert datetime to timestamp."
+msgstr ""
+
+#: celery.utils.timer2.to_timestamp:3 of
+msgid "If d' is already a timestamp, then that will be used."
+msgstr ""
+
+#: ../../internals/reference/celery.worker.autoscale.rst:3
+msgid "``celery.worker.autoscale``"
+msgstr ""
+
+#: celery.worker.autoscale:1 of
+msgid "Pool Autoscaling."
+msgstr ""
+
+#: celery.worker.autoscale:3 of
+msgid ""
+"This module implements the internal thread responsible for growing and "
+"shrinking the pool according to the current autoscale settings."
+msgstr ""
+
+#: celery.worker.autoscale:7 of
+msgid ""
+"The autoscale thread is only enabled if the :option:`celery worker "
+"--autoscale` option is used."
+msgstr ""
+
+#: celery.worker.autoscale.Autoscaler:1 of
+msgid "Background thread to autoscale pool workers."
+msgstr ""
+
+#: celery.worker.autoscale.WorkerComponent:1 of
+msgid "Bootstep that starts the autoscaler thread/timer in the worker."
+msgstr ""
+
+#: celery.worker.autoscale.WorkerComponent.create:1
+#: celery.worker.components.Beat.create:1
+#: celery.worker.components.Consumer.create:1
+#: celery.worker.components.Hub.create:1 celery.worker.components.Pool.create:1
+#: celery.worker.components.StateDB.create:1
+#: celery.worker.components.Timer.create:1 of
+msgid "Create the step."
+msgstr ""
+
+#: celery.worker.autoscale.WorkerComponent.info:1 of
+msgid "Return `Autoscaler` info."
+msgstr ""
+
+#: ../../internals/reference/celery.worker.components.rst:3
+msgid "``celery.worker.components``"
+msgstr ""
+
+#: celery.worker.components:1 of
+msgid "Worker-level Bootsteps."
+msgstr ""
+
+#: celery.worker.components.Timer:1 of
+msgid "Timer bootstep."
+msgstr ""
+
+#: celery.worker.components.Hub:1 of
+msgid "Worker starts the event loop."
+msgstr ""
+
+#: celery.worker.components.Hub.include_if:1 of
+msgid "Return true if bootstep should be included."
+msgstr ""
+
+#: celery.worker.components.Hub.include_if:3 of
+msgid ""
+"You can define this as an optional predicate that decides whether this "
+"step should be created."
+msgstr ""
+
+#: celery.worker.components.Pool:1 of
+msgid "Bootstep managing the worker pool."
+msgstr ""
+
+#: celery.worker.components.Pool:3 of
+msgid ""
+"Describes how to initialize the worker pool, and starts and stops the "
+"pool during worker start-up/shutdown."
+msgstr ""
+
+#: celery.worker.components.Pool:6 of
+msgid "Adds attributes:"
+msgstr ""
+
+#: celery.worker.components.Pool:8 of
+msgid "autoscale"
+msgstr ""
+
+#: celery.worker.components.Pool:9 of
+msgid "pool"
+msgstr ""
+
+#: celery.worker.components.Pool:10 of
+msgid "max_concurrency"
+msgstr ""
+
+#: celery.worker.components.Pool:11 of
+msgid "min_concurrency"
+msgstr ""
+
+#: celery.worker.components.Beat:1 of
+msgid "Step used to embed a beat process."
+msgstr ""
+
+#: celery.worker.components.Beat:3 of
+msgid "Enabled when the ``beat`` argument is set."
+msgstr ""
+
+#: celery.worker.components.StateDB:1 of
+msgid "Bootstep that sets up between-restart state database file."
+msgstr ""
+
+#: celery.worker.components.Consumer:1 of
+msgid "Bootstep starting the Consumer blueprint."
+msgstr ""
+
+#: ../../internals/reference/celery.worker.control.rst:3
+msgid "``celery.worker.control``"
+msgstr ""
+
+#: celery.worker.control:1 of
+msgid "Worker remote control command implementations."
+msgstr ""
+
+#: celery.worker.control.Panel:1 of
+msgid "Global registry of remote control commands."
+msgstr ""
+
+#: celery.worker.control.Panel.register:1 of
+msgid "Register a virtual subclass of an ABC."
+msgstr ""
+
+#: celery.worker.control.Panel.register:3 of
+msgid "Returns the subclass, to allow usage as a class decorator."
+msgstr ""
+
+#: ../../internals/reference/celery.worker.heartbeat.rst:3
+msgid "``celery.worker.heartbeat``"
+msgstr ""
+
+#: celery.worker.heartbeat:1 of
+msgid "Heartbeat service."
+msgstr ""
+
+#: celery.worker.heartbeat:3 of
+msgid ""
+"This is the internal thread responsible for sending heartbeat events at "
+"regular intervals (may not be an actual thread)."
+msgstr ""
+
+#: celery.worker.heartbeat.Heart:1 of
+msgid "Timer sending heartbeats at regular intervals."
+msgstr ""
+
+#: celery.worker.heartbeat.Heart:3 of
+msgid "Timer to use."
+msgstr ""
+
+#: celery.worker.heartbeat.Heart:5 of
+msgid "Event dispatcher to use."
+msgstr ""
+
+#: celery.worker.heartbeat.Heart:8 of
+msgid "Time in seconds between sending heartbeats.  Default is 2 seconds."
+msgstr ""
+
+#: ../../internals/reference/celery.worker.loops.rst:3
+msgid "``celery.worker.loops``"
+msgstr ""
+
+#: celery.worker.loops:1 of
+msgid "The consumers highly-optimized inner loop."
+msgstr ""
+
+#: celery.worker.loops.asynloop:1 of
+msgid "Non-blocking event loop."
+msgstr ""
+
+#: celery.worker.loops.synloop:1 of
+msgid "Fallback blocking event loop for transports that doesn't support AIO."
+msgstr ""
+
+#: ../../internals/reference/celery.worker.pidbox.rst:3
+msgid "``celery.worker.pidbox``"
+msgstr ""
+
+#: celery.worker.pidbox:1 of
+msgid "Worker Pidbox (remote control)."
+msgstr ""
+
+#: celery.worker.pidbox.Pidbox:1 of
+msgid "Worker mailbox."
+msgstr ""
+
+#: celery.worker.pidbox.gPidbox:1 of
+msgid "Worker pidbox (greenlet)."
+msgstr ""
+
+#: ../../internals/reference/index.rst:3
+msgid "Internal Module Reference"
+msgstr ""
+
+#: ../../internals/worker.rst:5
+msgid "Internals: The worker"
+msgstr ""
+
+#: ../../internals/worker.rst:11
+msgid "Introduction"
+msgstr ""
+
+#: ../../internals/worker.rst:13
+msgid ""
+"The worker consists of 4 main components: the consumer, the scheduler, "
+"the mediator and the task pool. All these components runs in parallel "
+"working with two data structures: the ready queue and the ETA schedule."
+msgstr ""
+
+#: ../../internals/worker.rst:18
+msgid "Data structures"
+msgstr ""
+
+#: ../../internals/worker.rst:21
+msgid "timer"
+msgstr ""
+
+#: ../../internals/worker.rst:23
+msgid ""
+"The timer uses :mod:`heapq` to schedule internal functions. It's very "
+"efficient and can handle hundred of thousands of entries."
+msgstr ""
+
+#: ../../internals/worker.rst:28
+msgid "Components"
+msgstr ""
+
+#: ../../internals/worker.rst:31
+msgid "Consumer"
+msgstr ""
+
+#: ../../internals/worker.rst:33
+msgid "Receives messages from the broker using :pypi:`Kombu`."
+msgstr ""
+
+#: ../../internals/worker.rst:35
+msgid ""
+"When a message is received it's converted into a "
+":class:`celery.worker.request.Request` object."
+msgstr ""
+
+#: ../../internals/worker.rst:38
+msgid ""
+"Tasks with an ETA, or rate-limit are entered into the `timer`, messages "
+"that can be immediately processed are sent to the execution pool."
+msgstr ""
+
+#: ../../internals/worker.rst:41
+msgid ""
+"ETA and rate-limit when used together will result in the rate limit being"
+" observed with the task being scheduled after the ETA."
+msgstr ""
+
+#: ../../internals/worker.rst:45
+msgid "Timer"
+msgstr ""
+
+#: ../../internals/worker.rst:47
+msgid ""
+"The timer schedules internal functions, like cleanup and internal "
+"monitoring, but also it schedules ETA tasks and rate limited tasks. If "
+"the scheduled tasks ETA has passed it is moved to the execution pool."
+msgstr ""
+
+#: ../../internals/worker.rst:52
+msgid "TaskPool"
+msgstr ""
+
+#: ../../internals/worker.rst:54
+msgid ""
+"This is a slightly modified :class:`multiprocessing.Pool`. It mostly "
+"works the same way, except it makes sure all of the workers are running "
+"at all times. If a worker is missing, it replaces it with a new one."
+msgstr ""
+

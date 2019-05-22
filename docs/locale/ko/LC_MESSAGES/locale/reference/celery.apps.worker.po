@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../reference/celery.apps.worker.rst:3
+msgid "``celery.apps.worker``"
+msgstr ""
+
+#: celery.apps.worker:1 of
+msgid "Worker command-line program."
+msgstr ""
+
+#: celery.apps.worker:3 of
+msgid "This module is the 'program-version' of :mod:`celery.worker`."
+msgstr ""
+
+#: celery.apps.worker:5 of
+msgid ""
+"It does everything necessary to run that module as an actual application,"
+" like installing signal handlers, platform tweaks, and so on."
+msgstr ""
+
+#: celery.apps.worker.Worker:1 of
+msgid "Worker as a program."
+msgstr ""
+
+#: celery.apps.worker.Worker.install_platform_tweaks:1 of
+msgid "Install platform specific tweaks and workarounds."
+msgstr ""
+
+#: celery.apps.worker.Worker.macOS_proxy_detection_workaround:1 of
+msgid "See https://github.com/celery/celery/issues#issue/161."
+msgstr ""
+

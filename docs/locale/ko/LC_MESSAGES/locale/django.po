@@ -1,0 +1,327 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:42+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../django/first-steps-with-django.rst:5
+msgid "First steps with Django"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:8
+msgid "Using Celery with Django"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:12
+msgid ""
+"Previous versions of Celery required a separate library to work with "
+"Django, but since 3.1 this is no longer the case. Django is supported out"
+" of the box now so this document only contains a basic way to integrate "
+"Celery and Django. You'll use the same API as non-Django users so you're "
+"recommended to read the :ref:`first-steps` tutorial first and come back "
+"to this tutorial. When you have a working example you can continue to the"
+" :ref:`next-steps` guide."
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:22
+msgid ""
+"Celery 4.0 supports Django 1.8 and newer versions. Please use Celery 3.1 "
+"for versions older than Django 1.8."
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:25
+msgid ""
+"To use Celery with your Django project you must first define an instance "
+"of the Celery library (called an \"app\")"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:28
+msgid "If you have a modern Django project layout like::"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:37
+msgid ""
+"then the recommended way is to create a new `proj/proj/celery.py` module "
+"that defines the Celery instance:"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst
+msgid "file"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:40
+msgid "`proj/proj/celery.py`"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:44
+msgid ""
+"Then you need to import this app in your :file:`proj/proj/__init__.py` "
+"module. This ensures that the app is loaded when Django starts so that "
+"the ``@shared_task`` decorator (mentioned later) will use it:"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:48
+msgid ":file:`proj/proj/__init__.py`:"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:52
+msgid ""
+"Note that this example project layout is suitable for larger projects, "
+"for simple projects you may use a single contained module that defines "
+"both the app and tasks, like in the :ref:`tut-celery` tutorial."
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:56
+msgid ""
+"Let's break down what happens in the first module, first we import "
+"absolute imports from the future, so that our ``celery.py`` module won't "
+"clash with the library:"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:64
+msgid ""
+"Then we set the default :envvar:`DJANGO_SETTINGS_MODULE` environment "
+"variable for the :program:`celery` command-line program:"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:71
+msgid ""
+"You don't need this line, but it saves you from always passing in the "
+"settings module to the ``celery`` program. It must always come before "
+"creating the app instances, as is what we do next:"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:79
+msgid ""
+"This is our instance of the library, you can have many instances but "
+"there's probably no reason for that when using Django."
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:82
+msgid ""
+"We also add the Django settings module as a configuration source for "
+"Celery. This means that you don't have to use multiple configuration "
+"files, and instead configure Celery directly from the Django settings; "
+"but you can also separate them if wanted."
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:91
+msgid ""
+"The uppercase name-space means that all Celery configuration options must"
+" be specified in uppercase instead of lowercase, and start with "
+"``CELERY_``, so for example the :setting:`task_always_eager` setting "
+"becomes ``CELERY_TASK_ALWAYS_EAGER``, and the :setting:`broker_url` "
+"setting becomes ``CELERY_BROKER_URL``."
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:97
+msgid ""
+"You can pass the settings object directly instead, but using a string is "
+"better since then the worker doesn't have to serialize the object. The "
+"``CELERY_`` namespace is also optional, but recommended (to prevent "
+"overlap with other Django settings)."
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:102
+msgid ""
+"Next, a common practice for reusable apps is to define all tasks in a "
+"separate ``tasks.py`` module, and Celery does have a way to auto-discover"
+" these modules:"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:110
+msgid ""
+"With the line above Celery will automatically discover tasks from all of "
+"your installed apps, following the ``tasks.py`` convention::"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:121
+msgid ""
+"This way you don't have to manually add the individual modules to the "
+":setting:`CELERY_IMPORTS <imports>` setting."
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:124
+msgid ""
+"Finally, the ``debug_task`` example is a task that dumps its own request "
+"information. This is using the new ``bind=True`` task option introduced "
+"in Celery 3.1 to easily refer to the current task instance."
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:129
+msgid "Using the ``@shared_task`` decorator"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:131
+msgid ""
+"The tasks you write will probably live in reusable apps, and reusable "
+"apps cannot depend on the project itself, so you also cannot import your "
+"app instance directly."
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:135
+msgid ""
+"The ``@shared_task`` decorator lets you create tasks without having any "
+"concrete app instance:"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:138
+msgid ":file:`demoapp/tasks.py`:"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:145
+msgid ""
+"You can find the full source code for the Django example project at: "
+"https://github.com/celery/celery/tree/master/examples/django/"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:148
+msgid "Relative Imports"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:150
+msgid ""
+"You have to be consistent in how you import the task module. For example,"
+" if you have ``project.app`` in ``INSTALLED_APPS``, then you must also "
+"import the tasks ``from project.app`` or else the names of the tasks will"
+" end up being different."
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:155
+msgid "See :ref:`task-naming-relative-imports`"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:158
+msgid "Extensions"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:163
+msgid "``django-celery-results`` - Using the Django ORM/Cache as a result backend"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:165
+msgid ""
+"The :pypi:`django-celery-results` extension provides result backends "
+"using either the Django ORM, or the Django Cache framework."
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:168
+msgid "To use this with your project you need to follow these steps:"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:170
+msgid "Install the :pypi:`django-celery-results` library:"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:176
+msgid ""
+"Add ``django_celery_results`` to ``INSTALLED_APPS`` in your Django "
+"project's :file:`settings.py`::"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:184
+msgid "Note that there is no dash in the module name, only underscores."
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:186
+msgid "Create the Celery database tables by performing a database migrations:"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:192
+msgid "Configure Celery to use the :pypi:`django-celery-results` backend."
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:194
+msgid ""
+"Assuming you are using Django's :file:`settings.py` to also configure "
+"Celery, add the following settings:"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:201
+msgid "For the cache backend you can use:"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:208
+msgid ""
+"``django-celery-beat`` - Database-backed Periodic Tasks with Admin "
+"interface."
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:210
+msgid "See :ref:`beat-custom-schedulers` for more information."
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:213
+msgid "Starting the worker process"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:215
+msgid ""
+"In a production environment you'll want to run the worker in the "
+"background as a daemon - see :ref:`daemonizing` - but for testing and "
+"development it is useful to be able to start a worker instance by using "
+"the :program:`celery worker` manage command, much as you'd use Django's "
+":command:`manage.py runserver`:"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:225
+msgid ""
+"For a complete listing of the command-line options available, use the "
+"help command:"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:233
+msgid "Known Issues"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:234
+msgid ""
+"CONN_MAX_AGE other than zero is known to cause issues according to `bug "
+"#4878 <https://github.com/celery/celery/issues/4878>`_. Until this is "
+"fixed, please set CONN_MAX_AGE to zero."
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:238
+msgid "Where to go from here"
+msgstr ""
+
+#: ../../django/first-steps-with-django.rst:240
+msgid ""
+"If you want to learn more you should continue to the :ref:`Next Steps "
+"<next-steps>` tutorial, and after that you can study the :ref:`User Guide"
+" <guide>`."
+msgstr ""
+
+#: ../../django/index.rst:5
+msgid "Django"
+msgstr ""
+
+#: ../../django/index.rst
+msgid "Release"
+msgstr ""
+
+#: ../../django/index.rst:7
+msgid "|version|"
+msgstr ""
+
+#: ../../django/index.rst
+msgid "Date"
+msgstr ""
+
+#: ../../django/index.rst:8
+msgid "|today|"
+msgstr ""
+

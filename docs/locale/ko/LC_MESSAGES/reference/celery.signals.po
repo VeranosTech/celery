@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../reference/celery.signals.rst:3
+msgid "``celery.signals``"
+msgstr ""
+
+#: celery.signals:1 of
+msgid "Celery Signals."
+msgstr ""
+
+#: celery.signals:3 of
+msgid ""
+"This module defines the signals (Observer pattern) sent by both workers "
+"and clients."
+msgstr ""
+
+#: celery.signals:6 of
+msgid ""
+"Functions can be connected to these signals, and connected functions are "
+"called whenever a signal is called."
+msgstr ""
+
+#: celery.signals:11 of
+msgid ":ref:`signals` for more information."
+msgstr ""
+

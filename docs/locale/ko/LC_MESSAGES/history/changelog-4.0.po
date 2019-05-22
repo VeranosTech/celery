@@ -1,0 +1,441 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../history/changelog-4.0.rst:5
+msgid "Change history"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:7
+msgid ""
+"This document contains change notes for bugfix releases in the 4.0.x "
+"series (latentcall), please see :ref:`whatsnew-4.0` for an overview of "
+"what's new in Celery 4.0."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:14
+msgid "4.0.2"
+msgstr ""
+
+#: ../history/changelog-4.0.rst
+msgid "release-date"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:15
+msgid "2016-12-15 03:40 PM PST"
+msgstr ""
+
+#: ../history/changelog-4.0.rst
+msgid "release-by"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:16 ../history/changelog-4.0.rst:62
+#: ../history/changelog-4.0.rst:206
+msgid "Ask Solem"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:18
+msgid "**Requirements**"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:20
+msgid "Now depends on :ref:`Kombu 4.0.2 <kombu:version-4.0.2>`."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:22
+msgid ""
+"**Tasks**: Fixed problem with JSON serialization of `group` (``keys must "
+"be string`` error, Issue #3688)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:25
+msgid ""
+"**Worker**: Fixed JSON serialization issue when using ``inspect active`` "
+"and friends (Issue #3667)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:28
+msgid "**App**: Fixed saferef errors when using signals (Issue #3670)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:30
+msgid ""
+"**Prefork**: Fixed bug with pack requiring bytes argument on Python 2.7.5"
+" and earlier (Issue #3674)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:33
+msgid ""
+"**Tasks**: Saferepr did not handle unicode in bytestrings on Python 2 "
+"(Issue #3676)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:36
+msgid "**Testing**: Added new ``celery_worker_paremeters`` fixture."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:38
+msgid "Contributed by **Michael Howitz**."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:40
+msgid ""
+"**Tasks**: Added new ``app`` argument to ``GroupResult.restore`` (Issue "
+"#3669)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:43
+msgid ""
+"This makes the restore method behave the same way as the ``GroupResult`` "
+"constructor."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:46
+msgid "Contributed by **Andreas Pelme**."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:48
+msgid ""
+"**Tasks**: Fixed type checking crash when task takes ``*args`` on Python "
+"3 (Issue #3678)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:51
+msgid "Documentation and examples improvements by:"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:53
+msgid "**BLAGA Razvan-Paul**"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:54
+msgid "**Michael Howitz**"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:55
+msgid ":github_user:`paradox41`"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:60
+msgid "4.0.1"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:61
+msgid "2016-12-08 05:22 PM PST"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:64
+msgid "[Security: `CELERYSA-0003`_] Insecure default configuration"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:66
+msgid ""
+"The default :setting:`accept_content` setting was set to allow "
+"deserialization of pickled messages in Celery 4.0.0."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:69
+msgid ""
+"The insecure default has been fixed in 4.0.1, and you can also configure "
+"the 4.0.0 version to explicitly only allow json serialized messages:"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:80
+msgid "**Tasks**: Added new method to register class-based tasks (Issue #3615)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:82
+msgid "To register a class based task you should now call ``app.register_task``:"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:97
+msgid ""
+"**Tasks**: Argument checking now supports keyword-only arguments on "
+"Python3 (Issue #3658)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:100
+msgid "Contributed by :github_user:`sww`."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:102
+msgid ""
+"**Tasks**: The ``task-sent`` event was not being sent even if configured "
+"to do so (Issue #3646)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:105
+msgid ""
+"**Worker**: Fixed AMQP heartbeat support for eventlet/gevent pools (Issue"
+" #3649)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:108
+msgid ""
+"**App**: ``app.conf.humanize()`` would not work if configuration not "
+"finalized (Issue #3652)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:111
+msgid ""
+"**Utils**: ``saferepr`` attempted to show iterables as lists and mappings"
+" as dicts."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:114
+msgid ""
+"**Utils**: ``saferepr`` did not handle unicode-errors when attempting to "
+"format ``bytes`` on Python 3 (Issue #3610)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:117
+msgid ""
+"**Utils**: ``saferepr`` should now properly represent byte strings with "
+"non-ascii characters (Issue #3600)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:120
+msgid ""
+"**Results**: Fixed bug in elasticsearch where _index method missed the "
+"body argument (Issue #3606)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:123
+msgid "Fix contributed by **何翔宇** (Sean Ho)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:125
+msgid ""
+"**Canvas**: Fixed :exc:`ValueError` in chord with single task header "
+"(Issue #3608)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:128
+msgid "Fix contributed by **Viktor Holmqvist**."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:130
+msgid ""
+"**Task**: Ensure class-based task has name prior to registration (Issue "
+"#3616)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:133
+msgid "Fix contributed by **Rick Wargo**."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:135
+msgid "**Beat**: Fixed problem with strings in shelve (Issue #3644)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:137
+msgid "Fix contributed by **Alli**."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:139
+msgid ""
+"**Worker**: Fixed :exc:`KeyError` in ``inspect stats`` when ``-O`` "
+"argument set to something other than ``fast`` or ``fair`` (Issue #3621)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:142
+msgid ""
+"**Task**: Retried tasks were no longer sent to the original queue (Issue "
+"#3622)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:145
+msgid ""
+"**Worker**: Python 3: Fixed None/int type comparison in "
+":file:`apps/worker.py` (Issue #3631)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:148
+msgid ""
+"**Results**: Redis has a new :setting:`redis_socket_connect_timeout` "
+"setting."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:151
+msgid ""
+"**Results**: Redis result backend passed the ``socket_connect_timeout`` "
+"argument to UNIX socket based connections by mistake, causing a crash."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:154
+msgid ""
+"**Worker**: Fixed missing logo in worker splash screen when running on "
+"Python 3.x (Issue #3627)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:157
+msgid "Fix contributed by **Brian Luan**."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:159
+msgid "**Deps**: Fixed ``celery[redis]`` bundle installation (Issue #3643)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:161
+msgid "Fix contributed by **Rémi Marenco**."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:163
+msgid ""
+"**Deps**: Bundle ``celery[sqs]`` now also requires :pypi:`pycurl` (Issue "
+"#3619)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:166
+msgid "**Worker**: Hard time limits were no longer being respected (Issue #3618)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:168
+msgid ""
+"**Worker**: Soft time limit log showed ``Trues`` instead of the number of"
+" seconds."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:171
+msgid "**App**: ``registry_cls`` argument no longer had any effect (Issue #3613)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:173
+msgid ""
+"**Worker**: Event producer now uses ``connection_for_Write`` (Issue "
+"#3525)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:175
+msgid ""
+"**Results**: Redis/memcache backends now uses :setting:`result_expires` "
+"to expire chord counter (Issue #3573)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:178
+msgid "Contributed by **Tayfun Sen**."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:180
+msgid ""
+"**Django**: Fixed command for upgrading settings with Django (Issue "
+"#3563)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:182
+msgid "Fix contributed by **François Voron**."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:184
+msgid ""
+"**Testing**: Added a ``celery_parameters`` test fixture to be able to use"
+" customized ``Celery`` init parameters. (#3626)"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:187
+msgid "Contributed by **Steffen Allner**."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:189
+msgid "Documentation improvements contributed by"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:191
+msgid ":github_user:`csfeathers`"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:192
+msgid "**Moussa Taifi**"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:193
+msgid "**Yuhannaa**"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:194
+msgid "**Laurent Peuch**"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:195
+msgid "**Christian**"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:196
+msgid "**Bruno Alla**"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:197
+msgid "**Steven Johns**"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:198
+msgid ":github_user:`tnir`"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:199
+msgid "**GDR!**"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:204
+msgid "4.0.0"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:205
+msgid "2016-11-04 02:00 P.M PDT"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:208
+msgid "See :ref:`whatsnew-4.0` (in :file:`docs/whatsnew-4.0.rst`)."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:213
+msgid "4.0.0rc7"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:214
+msgid "2016-11-02 01:30 P.M PDT"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:217
+msgid "Important notes"
+msgstr ""
+
+#: ../history/changelog-4.0.rst:219
+msgid ""
+"Database result backend related setting names changed from "
+"``sqlalchemy_*`` -> ``database_*``."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:222
+msgid ""
+"The ``sqlalchemy_`` named settings won't work at all in this version so "
+"you need to rename them.  This is a last minute change, and as they were "
+"not supported in 3.1 we will not be providing aliases."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:227
+msgid "``chain(A, B, C)`` now works the same way as ``A | B | C``."
+msgstr ""
+
+#: ../history/changelog-4.0.rst:229
+msgid ""
+"This means calling ``chain()`` might not actually return a chain, it can "
+"return a group or any other type depending on how the workflow can be "
+"optimized."
+msgstr ""
+

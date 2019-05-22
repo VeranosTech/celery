@@ -1,0 +1,188 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../reference/celery.bin.base.rst:3
+msgid "``celery.bin.base``"
+msgstr ""
+
+#: celery.bin.base:1 of
+msgid "Base command-line interface."
+msgstr ""
+
+#: celery.bin.base.Command.Error:1 celery.bin.base.Error:1 of
+msgid "Exception raised by commands."
+msgstr ""
+
+#: celery.bin.base.Command.UsageError:1 celery.bin.base.UsageError:1 of
+msgid "Exception raised for malformed arguments."
+msgstr ""
+
+#: celery.bin.base.Extensions:1 of
+msgid "Loads extensions from setuptools entrypoints."
+msgstr ""
+
+#: celery.bin.base.Command:1 of
+msgid "Base class for command-line applications."
+msgstr ""
+
+#: celery.bin.base.Command celery.bin.base.Command.ask
+#: celery.bin.base.Command.execute_from_commandline
+#: celery.bin.base.Command.handle_argv of
+msgid "Parameters"
+msgstr ""
+
+#: celery.bin.base.Command:3 of
+msgid "The app to use."
+msgstr ""
+
+#: celery.bin.base.Command:5 of
+msgid "Fucntion returning the current app when no app provided."
+msgstr ""
+
+#: celery.bin.base.Command.args:1 of
+msgid "Arg list used in help."
+msgstr ""
+
+#: celery.bin.base.Command.args_name:1 of
+msgid "Name of argparse option used for parsing positional args."
+msgstr ""
+
+#: celery.bin.base.Command.ask:1 of
+msgid "Prompt user to choose from a tuple of string values."
+msgstr ""
+
+#: celery.bin.base.Command.ask:3 of
+msgid ""
+"If a default is not specified the question will be repeated until the "
+"user gives a valid choice."
+msgstr ""
+
+#: celery.bin.base.Command.ask:6 of
+msgid "Matching is case insensitive."
+msgstr ""
+
+#: celery.bin.base.Command.ask:8 of
+msgid "the question to ask (don't include questionark)"
+msgstr ""
+
+#: celery.bin.base.Command.ask:10 of
+msgid "tuple of possible choices, must be lowercase."
+msgstr ""
+
+#: celery.bin.base.Command.ask:12 of
+msgid "Default value if any."
+msgstr ""
+
+#: celery.bin.base.Command.description:1 of
+msgid "Text to print in --help before option list."
+msgstr ""
+
+#: celery.bin.base.Command.enable_config_from_cmdline:1 of
+msgid "Enable if the application should support config from the cmdline."
+msgstr ""
+
+#: celery.bin.base.Command.epilog:1 of
+msgid "Text to print at end of --help"
+msgstr ""
+
+#: celery.bin.base.Command.execute_from_commandline:1 of
+msgid "Execute application from command-line."
+msgstr ""
+
+#: celery.bin.base.Command.execute_from_commandline:3 of
+msgid "The list of command-line arguments. Defaults to ``sys.argv``."
+msgstr ""
+
+#: celery.bin.base.Command.handle_argv:1 of
+msgid "Parse arguments from argv and dispatch to :meth:`run`."
+msgstr ""
+
+#: celery.bin.base.Command.handle_argv:5 of
+msgid ""
+"Exits with an error message if :attr:`supports_args` is disabled and "
+"``argv`` contains positional arguments."
+msgstr ""
+
+#: celery.bin.base.Command.handle_argv:8 of
+msgid "The program name (``argv[0]``)."
+msgstr ""
+
+#: celery.bin.base.Command.handle_argv:10 of
+msgid "Rest of command-line arguments."
+msgstr ""
+
+#: celery.bin.base.Command.leaf:1 of
+msgid "Set to true if this command doesn't have sub-commands"
+msgstr ""
+
+#: celery.bin.base.Command.namespace:1 of
+msgid "Default configuration name-space."
+msgstr ""
+
+#: celery.bin.base.Command.option_list:1 of
+msgid "List of options (without preload options)."
+msgstr ""
+
+#: celery.bin.base.Command.parse_options:1 of
+msgid "Parse the available options."
+msgstr ""
+
+#: celery.bin.base.Command.supports_args:1 of
+msgid ""
+"If false the parser will raise an exception if positional args are "
+"provided."
+msgstr ""
+
+#: celery.bin.base.Command.version:1 of
+msgid "Application version."
+msgstr ""
+
+#: celery.bin.base.Command.with_pool_option:1 of
+msgid "Return tuple of ``(short_opts, long_opts)``."
+msgstr ""
+
+#: celery.bin.base.Command.with_pool_option:3 of
+msgid ""
+"Returns only if the command supports a pool argument, and used to monkey "
+"patch eventlet/gevent environments as early as possible."
+msgstr ""
+
+#: celery.bin.base.Command.with_pool_option:8 of
+msgid "Example"
+msgstr ""
+
+#: celery.bin.base.Option:17 of
+msgid "Instance attributes:"
+msgstr ""
+
+#: celery.bin.base.Option:2 of
+msgid "_short_opts : [string] _long_opts : [string]"
+msgstr ""
+
+#: celery.bin.base.Option:5 of
+msgid ""
+"action : string type : string dest : string default : any nargs : int "
+"const : any choices : [string] callback : function callback_args : (any*)"
+" callback_kwargs : { string : any } help : string metavar : string"
+msgstr ""
+
+#: celery.bin.base.daemon_options:1 of
+msgid "Add daemon options to argparse parser."
+msgstr ""
+

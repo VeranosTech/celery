@@ -1,0 +1,846 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:42+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../whatsnew-4.3.rst:5
+msgid "What's new in Celery 4.3 (rhubarb)"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst
+msgid "Author"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:6
+msgid "Omer Katz (``omer.drow at gmail.com``)"
+msgstr ""
+
+msgid "Change history"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:10
+msgid ""
+"What's new documents describe the changes in major versions, we also have"
+" a :ref:`changelog` that lists the changes in bugfix releases (0.0.x), "
+"while older series are archived under the :ref:`history` section."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:15
+msgid ""
+"Celery is a simple, flexible, and reliable distributed system to process "
+"vast amounts of messages, while providing operations with the tools "
+"required to maintain such a system."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:19
+msgid ""
+"It's a task queue with focus on real-time processing, while also "
+"supporting task scheduling."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:22
+msgid ""
+"Celery has a large and diverse community of users and contributors, you "
+"should come join us :ref:`on IRC <irc-channel>` or :ref:`our mailing-list"
+" <mailing-list>`."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:26
+msgid ""
+"To read more about Celery you should go read the :ref:`introduction "
+"<intro>`."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:28
+msgid ""
+"While this version is backward compatible with previous versions it's "
+"important that you read the following section."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:31
+msgid ""
+"This version is officially supported on CPython 2.7, 3.4, 3.5, 3.6 & 3.7 "
+"and is also supported on PyPy2 & PyPy3."
+msgstr ""
+
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:38
+msgid "Make sure you read the important notes before upgrading to this version."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:45
+msgid "Preface"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:47
+msgid ""
+"The 4.3.0 release continues to improve our efforts to provide you with "
+"the best task execution platform for Python."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:50
+msgid ""
+"This release has been codenamed `Rhubarb "
+"<https://www.youtube.com/watch?v=_AWIqXzvX-U>`_ which is one of my "
+"favorite tracks from Selected Ambient Works II."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:53
+msgid ""
+"This release focuses on new features like new result backends and a "
+"revamped security serializer along with bug fixes mainly for Celery Beat,"
+" Canvas, a number of critical fixes for hanging workers and fixes for "
+"several severe memory leaks."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:58
+msgid "Celery 4.3 is the first release to support Python 3.7."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:60
+msgid ""
+"We hope that 4.3 will be the last release to support Python 2.7 as we now"
+" begin to work on Celery 5, the next generation of our task execution "
+"platform."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:63
+msgid ""
+"However, if Celery 5 will be delayed for any reason we may release "
+"another 4.x minor version which will still support Python 2.7."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:66
+msgid ""
+"If another 4.x version will be released it will most likely drop support "
+"for Python 3.4 as it will reach it's EOL in March 2019."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:69
+msgid "We have also focused on reducing contribution friction."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:71
+msgid ""
+"Thanks to **Josue Balandrano Coronel**, one of our core contributors, we "
+"now have an updated :ref:`contributing` document. If you intend to "
+"contribute, please review it at your earliest convenience."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:75
+msgid ""
+"I have also added new issue templates, which we will continue to improve,"
+" so that the issues you open will have more relevant information which "
+"will allow us to help you to resolve them more easily."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:79
+msgid "*— Omer Katz*"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:82
+msgid "Wall of Contributors"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:85
+msgid ""
+"Alexander Ioannidis <a.ioannidis.pan@gmail.com> Amir Hossein Saeid Mehr "
+"<amir.saiedmehr@gmail.com> Andrea Rabbaglietti "
+"<rabbagliettiandrea@gmail.com> Andrey Skabelin "
+"<andrey.skabelin@gmail.com> Anthony Ruhier <anthony.ruhier@gmail.com> "
+"Antonin Delpeuch <antonin@delpeuch.eu> Artem Vasilyev "
+"<artem.v.vasilyev@gmail.com> Asif Saif Uddin (Auvi) <auvipy@gmail.com> "
+"aviadatsnyk <aviad@snyk.io> Axel Haustant "
+"<noirbizarre@users.noreply.github.com> Benjamin Pereto "
+"<github@sandchaschte.ch> Bojan Jovanovic "
+"<bojan.jovanovic.gtech@gmail.com> Brett Jackson <brett@brettjackson.org> "
+"Brett Randall <javabrett@gmail.com> Brian Schrader "
+"<brian@brianschrader.com> Bruno Alla "
+"<browniebroke@users.noreply.github.com> Buddy "
+"<34044521+CoffeeExpress@users.noreply.github.com> Charles Chan "
+"<charleswhchan@users.noreply.github.com> Christopher Dignam "
+"<chris@dignam.xyz> Ciaran Courtney "
+"<6096029+ciarancourtney@users.noreply.github.com> Clemens Wolff "
+"<clemens@justamouse.com> Colin Watson <cjwatson@ubuntu.com> Daniel Hahler"
+" <github@thequod.de> Dash Winterson <dashdanw@gmail.com> Derek Harland "
+"<donkopotamus@users.noreply.github.com> Dilip Vamsi Moturi "
+"<16288600+dilipvamsi@users.noreply.github.com> Dmytro Litvinov "
+"<litvinov.dmytro.it@gmail.com> Douglas Rohde <douglas.rohde2@gmail.com> "
+"Ed Morley <501702+edmorley@users.noreply.github.com> Fabian Becker "
+"<halfdan@xnorfz.de> Federico Bond <federicobond@gmail.com> Fengyuan Chen "
+"<cfy1990@gmail.com> Florian CHARDIN <othalla.lf@gmail.com> George "
+"Psarakis <giwrgos.psarakis@gmail.com> Guilherme Caminha "
+"<gpkc@cin.ufpe.br> ideascf <ideascf@163.com> Itay <itay.bittan@gmail.com>"
+" Jamie Alessio <jamie@stoic.net> Jason Held <jasonsheld@gmail.com> Jeremy"
+" Cohen <jcohen02@users.noreply.github.com> John Arnold "
+"<johnar@microsoft.com> Jon Banafato <jonathan.banafato@gmail.com> Jon "
+"Dufresne <jon.dufresne@gmail.com> Joshua Engelman "
+"<j.aaron.engelman@gmail.com> Joshua Schmid <jschmid@suse.com> Josue "
+"Balandrano Coronel <xirdneh@gmail.com> K Davis "
+"<anybodys@users.noreply.github.com> kidoz <ckidoz@gmail.com> Kiyohiro "
+"Yamaguchi <kiyoya@gmail.com> Korijn van Golen <korijn@gmail.com> Lars "
+"Kruse <devel@sumpfralle.de> Lars Rinn <lm.rinn@outlook.com> Lewis M. "
+"Kabui <lewis.maina@andela.com> madprogrammer <serg@anufrienko.net> Manuel"
+" Vázquez Acosta <mvaled@users.noreply.github.com> Marcus McHale "
+"<marcus.mchale@nuigalway.ie> Mariatta <Mariatta@users.noreply.github.com>"
+" Mario Kostelac <mario@intercom.io> Matt Wiens <mwiens91@gmail.com> "
+"Maximilien Cuony <the-glu@users.noreply.github.com> Maximilien de Bayser "
+"<maxdebayser@gmail.com> Meysam <MeysamAzad81@yahoo.com> Milind Shakya "
+"<milin@users.noreply.github.com> na387 <na387@users.noreply.github.com> "
+"Nicholas Pilon <npilon@gmail.com> Nick Parsons <nparsons08@gmail.com> Nik"
+" Molnar <nik.molnar@consbio.org> Noah Hall <noah.t.hall@gmail.com> Noam "
+"<noamkush@users.noreply.github.com> Omer Katz <omer.drow@gmail.com> Paweł"
+" Adamczak <pawel.ad@gmail.com> peng weikang <pengwk2@gmail.com> "
+"Prathamesh Salunkhe <spratham55@gmail.com> Przemysław Suliga "
+"<1270737+suligap@users.noreply.github.com> Raf Geens <rafgeens@gmail.com>"
+" (◕ᴥ◕) <ratson@users.noreply.github.com> Robert Kopaczewski "
+"<rk@23doors.com> Samuel Huang <samhuang91@gmail.com> Sebastian "
+"Wojciechowski <42519683+sebwoj@users.noreply.github.com> Seunghun Lee "
+"<waydi1@gmail.com> Shanavas M <shanavas.m2@gmail.com> Simon Charette "
+"<charettes@users.noreply.github.com> Simon Schmidt "
+"<schmidt.simon@gmail.com> srafehi <shadyrafehi@gmail.com> Steven Sklar "
+"<sklarsa@gmail.com> Tom Booth <thomasbo@microsoft.com> Tom Clancy "
+"<ClancyTJD@users.noreply.github.com> Toni Ruža <gmr.gaf@gmail.com> "
+"tothegump <tothegump@gmail.com> Victor Mireyev <victor@opennodecloud.com>"
+" Vikas Prasad <vikasprasad.prasad@gmail.com> walterqian "
+"<walter@color.com> Willem <himself@willemthiart.com> Xiaodong "
+"<xd_deng@hotmail.com> yywing <386542536@qq.com>"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:183
+msgid ""
+"This wall was automatically generated from git history, so sadly it "
+"doesn't not include the people who help with more important things like "
+"answering mailing-list questions."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:189
+msgid "Upgrading from Celery 4.2"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:191
+msgid ""
+"Please read the important notes below as there are several breaking "
+"changes."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:196
+msgid "Important Notes"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:199
+msgid "Supported Python Versions"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:201
+msgid "The supported Python Versions are:"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:203
+msgid "CPython 2.7"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:204
+msgid "CPython 3.4"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:205
+msgid "CPython 3.5"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:206
+msgid "CPython 3.6"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:207
+msgid "CPython 3.7"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:208
+msgid "PyPy2.7 6.0 (``pypy2``)"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:209
+msgid "PyPy3.5 6.0 (``pypy3``)"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:212
+msgid "Kombu"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:214
+msgid "Starting from this release, the minimum required version is Kombu 4.4."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:217
+msgid "New Compression Algorithms"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:219
+msgid "Kombu 4.3 includes a few new optional compression methods:"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:221
+msgid ""
+"LZMA (available from stdlib if using Python 3 or from a backported "
+"package)"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:222
+msgid ""
+"Brotli (available if you install either the brotli or the brotlipy "
+"package)"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:223
+msgid "ZStandard (available if you install the zstandard package)"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:225
+msgid ""
+"Unfortunately our current protocol generates huge payloads for complex "
+"canvases."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:227
+msgid ""
+"Until we migrate to our 3rd revision of the Celery protocol in Celery 5 "
+"which will resolve this issue, please use one of the new compression "
+"methods as a workaround."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:231
+msgid "See :ref:`calling-compression` for details."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:234
+msgid "Billiard"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:236
+msgid "Starting from this release, the minimum required version is Billiard 3.6."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:239
+msgid "Eventlet Workers Pool"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:241
+msgid "We now require `eventlet>=0.24.1`."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:243
+msgid "If you are using the eventlet workers pool please install Celery using:"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:250
+msgid "MessagePack Serializer"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:252
+msgid ""
+"We've been using the deprecated `msgpack-python` package for a while. "
+"This is now fixed as we depend on the `msgpack` instead."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:255
+msgid ""
+"If you are currently using the MessagePack serializer please uninstall "
+"the previous package and reinstall the new one using:"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:264
+msgid "MongoDB Result Backend"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:266
+msgid ""
+"We now support the `DNS seedlist connection format "
+"<https://docs.mongodb.com/manual/reference/connection-string/#dns-"
+"seedlist-connection-format>`_ for the MongoDB result backend."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:268
+msgid "This requires the `dnspython` package."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:270
+msgid "If you are using the MongoDB result backend please install Celery using:"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:277
+msgid "Redis Message Broker"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:279 ../../whatsnew-4.3.rst:285
+msgid ""
+"Due to multiple bugs in earlier versions of py-redis that were causing "
+"issues for Celery, we were forced to bump the minimum required version to"
+" 3.2.0."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:283
+msgid "Redis Result Backend"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:289
+msgid "Riak Result Backend"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:291
+msgid "The official Riak client does not support Python 3.7 as of yet."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:293
+msgid ""
+"In case you are using the Riak result backend, either attempt to install "
+"the client from master or avoid upgrading to Python 3.7 until this matter"
+" is resolved."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:296
+msgid ""
+"In case you are using the Riak result backend with Python 3.7, we now "
+"emit a warning."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:299
+msgid ""
+"Please track `basho/riak-python-client#534 <https://github.com/basho"
+"/riak-python-client/issues/534>`_ for updates."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:303
+msgid "Dropped Support for RabbitMQ 2.x"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:305
+msgid "Starting from this release, we officially no longer support RabbitMQ 2.x."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:307
+msgid ""
+"The last release of 2.x was in 2012 and we had to make adjustments to "
+"correctly support high availability on RabbitMQ 3.x."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:310
+msgid ""
+"If for some reason, you are still using RabbitMQ 2.x we encourage you to "
+"upgrade as soon as possible since security patches are no longer applied "
+"on RabbitMQ 2.x."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:314
+msgid "Django Support"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:316
+msgid "Starting from this release, the minimum required Django version is 1.11."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:319
+msgid "Revamped auth Serializer"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:321
+msgid ""
+"The auth serializer received a complete overhaul. It was previously "
+"horribly broken."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:324
+msgid ""
+"We now depend on `cryptography` instead of `pyOpenSSL` for this "
+"serializer."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:326
+msgid "See :ref:`message-signing` for details."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:331
+msgid "News"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:334
+msgid "Brokers"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:337
+msgid "Redis Broker Support for SSL URIs"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:339
+msgid "The Redis broker now has support for SSL connections."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:341
+msgid ""
+"You can use :setting:`broker_use_ssl` as you normally did and use a "
+"`rediss://` URI."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:344 ../../whatsnew-4.3.rst:375
+msgid "You can also pass the SSL configuration parameters to the URI:"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:346 ../../whatsnew-4.3.rst:377
+msgid "`rediss://localhost:3456?ssl_keyfile=keyfile.key&ssl_certfile=certificate.crt&ssl_ca_certs=ca.pem&ssl_cert_reqs=CERT_REQUIRED`"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:349
+msgid "Configurable Events Exchange Name"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:351
+msgid "Previously, the events exchange name was hardcoded."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:353
+msgid ""
+"You can use :setting:`event_exchange` to determine it. The default value "
+"remains the same."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:357
+msgid "Configurable Pidbox Exchange Name"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:359
+msgid "Previously, the Pidbox exchange name was hardcoded."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:361
+msgid ""
+"You can use :setting:`control_exchange` to determine it. The default "
+"value remains the same."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:365
+msgid "Result Backends"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:368
+msgid "Redis Result Backend Support for SSL URIs"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:370
+msgid "The Redis result backend now has support for SSL connections."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:372
+msgid ""
+"You can use :setting:`redis_backend_use_ssl` to configure it and use a "
+"`rediss://` URI."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:381
+msgid "Store Extended Task Metadata in Result"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:383
+msgid ""
+"When :setting:`result_extended` is `True` the backend will store the "
+"following metadata:"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:386
+msgid "Task Name"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:387
+msgid "Arguments"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:388
+msgid "Keyword arguments"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:389
+msgid "The worker the task was executed on"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:390
+msgid "Number of retries"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:391
+msgid "The queue's name or routing key"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:393
+msgid ""
+"In addition, :meth:`celery.app.task.update_state` now accepts keyword "
+"arguments which allows you to store custom data with the result."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:397
+msgid "Encode Results Using A Different Serializer"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:399
+msgid ""
+"The :setting:`result_accept_content` setting allows to configure "
+"different accepted content for the result backend."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:402
+msgid ""
+"A special serializer (`auth`) is used for signed messaging, however the "
+"result_serializer remains in json, because we don't want encrypted "
+"content in our result backend."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:406
+msgid ""
+"To accept unsigned content from the result backend, we introduced this "
+"new configuration option to specify the accepted content from the "
+"backend."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:411
+msgid "New Result Backends"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:413
+msgid "This release introduces four new result backends:"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:415
+msgid "S3 result backend"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:416
+msgid "ArangoDB result backend"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:417
+msgid "Azure Block Blob Storage result backend"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:418
+msgid "CosmosDB result backend"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:421
+msgid "S3 Result Backend"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:423
+msgid ""
+"Amazon Simple Storage Service (Amazon S3) is an object storage service by"
+" AWS."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:425
+msgid "The results are stored using the following path template:"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:427
+msgid "<:setting:`s3_bucket`>/<:setting:`s3_base_path`>/<key>"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:429
+msgid "See :ref:`conf-s3-result-backend` for more information."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:432
+msgid "ArangoDB Result Backend"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:434
+msgid ""
+"ArangoDB is a native multi-model database with search capabilities. The "
+"backend stores the result in the following document format:"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:438 ../../whatsnew-4.3.rst:464
+msgid "{"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:439
+msgid "_key: {key},"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:440
+msgid "task: {task}"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:441 ../../whatsnew-4.3.rst:467
+msgid "}"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:443
+msgid "See :ref:`conf-arangodb-result-backend` for more information."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:446
+msgid "Azure Block Blob Storage Result Backend"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:448
+msgid "Azure Block Blob Storage is an object storage service by Microsoft."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:450
+msgid "The backend stores the result in the following path template:"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:452
+msgid "<:setting:`azureblockblob_container_name`>/<key>"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:454
+msgid "See :ref:`conf-azureblockblob-result-backend` for more information."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:457
+msgid "CosmosDB Result Backend"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:459
+msgid ""
+"Azure Cosmos DB is Microsoft's globally distributed, multi-model database"
+" service."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:462
+msgid "The backend stores the result in the following document format:"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:465
+msgid "id: {key},"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:466
+msgid "value: {task}"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:469
+msgid "See :ref:`conf-cosmosdbsql-result-backend` for more information."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:472
+msgid "Tasks"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:475
+msgid "Cythonized Tasks"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:477
+msgid ""
+"Cythonized tasks are now supported. You can generate C code from Cython "
+"that specifies a task using the `@task` decorator and everything should "
+"work exactly the same."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:482
+msgid "Acknowledging Tasks on Failures or Timeouts"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:484
+msgid ""
+"When :setting:`task_acks_late` is set to `True` tasks are acknowledged on"
+" failures or timeouts. This makes it hard to use dead letter queues and "
+"exchanges."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:488
+msgid ""
+"Celery 4.3 introduces the new :setting:`task_acks_on_failure_or_timeout` "
+"which allows you to avoid acknowledging tasks if they failed or timed out"
+" even if :setting:`task_acks_late` is set to `True`."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:492
+msgid ":setting:`task_acks_on_failure_or_timeout` is set to `True` by default."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:495
+msgid "Schedules Now Support Microseconds"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:497
+msgid ""
+"When scheduling tasks using :program:`celery beat` microseconds are no "
+"longer ignored."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:501
+msgid "Default Task Priority"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:503
+msgid ""
+"You can now set the default priority of a task using the "
+":setting:`task_default_priority` setting. The setting's value will be "
+"used if no priority is provided for a specific task."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:509
+msgid "Tasks Optionally Inherit Parent's Priority"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:511
+msgid ""
+"Setting the :setting:`task_inherit_parent_priority` configuration option "
+"to `True` will make Celery tasks inherit the priority of the previous "
+"task linked to it."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:515
+msgid "Examples:"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:541
+msgid "Canvas"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:544
+msgid "Chords can be Executed in Eager Mode"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:546
+msgid ""
+"When :setting:`task_always_eager` is set to `True`, chords are executed "
+"eagerly as well."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:550
+msgid "Configurable Chord Join Timeout"
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:552
+msgid ""
+"Previously, :meth:`celery.result.GroupResult.join` had a fixed timeout of"
+" 3 seconds."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:555
+msgid ""
+"The :setting:`result_chord_join_timeout` setting now allows you to change"
+" it."
+msgstr ""
+
+#: ../../whatsnew-4.3.rst:557
+msgid "The default remains 3 seconds."
+msgstr ""
+

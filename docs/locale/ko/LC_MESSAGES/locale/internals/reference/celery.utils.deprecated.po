@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../internals/reference/celery.utils.deprecated.rst:3
+msgid "``celery.utils.deprecated``"
+msgstr ""
+
+#: celery.utils.deprecated:1 of
+msgid "Deprecation utilities."
+msgstr ""
+
+#: celery.utils.deprecated.Callable:1 of
+msgid "Decorator for deprecated functions."
+msgstr ""
+
+#: celery.utils.deprecated.Callable:3 of
+msgid "A deprecation warning will be emitted when the function is called."
+msgstr ""
+
+#: celery.utils.deprecated.Callable of
+msgid "Parameters"
+msgstr ""
+
+#: celery.utils.deprecated.Callable:5 of
+msgid ""
+"Version that marks first deprecation, if this argument isn't set a "
+"``PendingDeprecationWarning`` will be emitted instead."
+msgstr ""
+
+#: celery.utils.deprecated.Callable:9 of
+msgid "Future version when this feature will be removed."
+msgstr ""
+
+#: celery.utils.deprecated.Callable:11 of
+msgid "Instructions for an alternative solution (if any)."
+msgstr ""
+
+#: celery.utils.deprecated.Callable:13 of
+msgid "Description of what's being deprecated."
+msgstr ""
+
+#: celery.utils.deprecated.Property:1 of
+msgid "Decorator for deprecated properties."
+msgstr ""
+
+#: celery.utils.deprecated.warn:1 of
+msgid "Warn of (pending) deprecation."
+msgstr ""
+

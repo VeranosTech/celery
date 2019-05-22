@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../reference/celery.contrib.abortable.rst:3
+msgid "``celery.contrib.abortable``"
+msgstr ""
+
+#: celery.contrib.abortable:1 of
+msgid "Abortable Tasks."
+msgstr ""
+
+#: celery.contrib.abortable:4 of
+msgid "Abortable tasks overview"
+msgstr ""
+
+#: celery.contrib.abortable:6 of
+msgid ""
+"For long-running :class:`Task`'s, it can be desirable to support aborting"
+" during execution.  Of course, these tasks should be built to support "
+"abortion specifically."
+msgstr ""
+
+#: celery.contrib.abortable:10 of
+msgid ""
+"The :class:`AbortableTask` serves as a base class for all :class:`Task` "
+"objects that should support abortion by producers."
+msgstr ""
+
+#: celery.contrib.abortable:13 of
+msgid ""
+"Producers may invoke the :meth:`abort` method on "
+":class:`AbortableAsyncResult` instances, to request abortion."
+msgstr ""
+
+#: celery.contrib.abortable:16 of
+msgid ""
+"Consumers (workers) should periodically check (and honor!) the "
+":meth:`is_aborted` method at controlled points in their task's "
+":meth:`run` method.  The more often, the better."
+msgstr ""
+
+#: celery.contrib.abortable:20 of
+msgid ""
+"The necessary intermediate communication is dealt with by the "
+":class:`AbortableTask` implementation."
+msgstr ""
+
+#: celery.contrib.abortable:24 of
+msgid "Usage example"
+msgstr ""
+
+#: celery.contrib.abortable:26 of
+msgid "In the consumer:"
+msgstr ""
+
+#: celery.contrib.abortable:55 of
+msgid "In the producer:"
+msgstr ""
+
+#: celery.contrib.abortable:73 of
+msgid ""
+"After the `result.abort()` call, the task execution isn't aborted "
+"immediately.  In fact, it's not guaranteed to abort at all. Keep checking"
+" `result.state` status, or call `result.get(timeout=)` to have it block "
+"until the task is finished."
+msgstr ""
+
+#: celery.contrib.abortable:80 of
+msgid ""
+"In order to abort tasks, there needs to be communication between the "
+"producer and the consumer.  This is currently implemented through the "
+"database backend.  Therefore, this class will only work with the database"
+" backends."
+msgstr ""
+
+#: celery.contrib.abortable.AbortableAsyncResult:1 of
+msgid "Represents an abortable result."
+msgstr ""
+
+#: celery.contrib.abortable.AbortableAsyncResult:3 of
+msgid ""
+"Specifically, this gives the `AsyncResult` a :meth:`abort()` method, that"
+" sets the state of the underlying Task to `'ABORTED'`."
+msgstr ""
+
+#: celery.contrib.abortable.AbortableAsyncResult.abort:1 of
+msgid "Set the state of the task to :const:`ABORTED`."
+msgstr ""
+
+#: celery.contrib.abortable.AbortableAsyncResult.abort:3 of
+msgid ""
+"Abortable tasks monitor their state at regular intervals and terminate "
+"execution if so."
+msgstr ""
+
+#: celery.contrib.abortable.AbortableAsyncResult.abort:8 of
+msgid ""
+"Be aware that invoking this method does not guarantee when the task will "
+"be aborted (or even if the task will be aborted at all)."
+msgstr ""
+
+#: celery.contrib.abortable.AbortableAsyncResult.is_aborted:1 of
+msgid "Return :const:`True` if the task is (being) aborted."
+msgstr ""
+
+#: celery.contrib.abortable.AbortableTask:1 of
+msgid "Task that can be aborted."
+msgstr ""
+
+#: celery.contrib.abortable.AbortableTask:3 of
+msgid ""
+"This serves as a base class for all :class:`Task`'s that support aborting"
+" during execution."
+msgstr ""
+
+#: celery.contrib.abortable.AbortableTask:6 of
+msgid ""
+"All subclasses of :class:`AbortableTask` must call the :meth:`is_aborted`"
+" method periodically and act accordingly when the call evaluates to "
+":const:`True`."
+msgstr ""
+
+#: celery.contrib.abortable.AbortableTask.AsyncResult:1 of
+msgid "Return the accompanying AbortableAsyncResult instance."
+msgstr ""
+
+#: celery.contrib.abortable.AbortableTask.is_aborted:1 of
+msgid "Return true if task is aborted."
+msgstr ""
+
+#: celery.contrib.abortable.AbortableTask.is_aborted:3 of
+msgid ""
+"Checks against the backend whether this :class:`AbortableAsyncResult` is "
+":const:`ABORTED`."
+msgstr ""
+
+#: celery.contrib.abortable.AbortableTask.is_aborted:6 of
+msgid ""
+"Always return :const:`False` in case the `task_id` parameter refers to a "
+"regular (non-abortable) :class:`Task`."
+msgstr ""
+
+#: celery.contrib.abortable.AbortableTask.is_aborted:9 of
+msgid ""
+"Be aware that invoking this method will cause a hit in the backend (for "
+"example a database query), so find a good balance between calling it "
+"regularly (for responsiveness), but not too often (for performance)."
+msgstr ""
+

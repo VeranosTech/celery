@@ -1,0 +1,604 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../userguide/extending.rst:5
+msgid "Extensions and Bootsteps"
+msgstr ""
+
+#: ../userguide/extending.rst:14
+msgid "Custom Message Consumers"
+msgstr ""
+
+#: ../userguide/extending.rst:16
+msgid ""
+"You may want to embed custom Kombu consumers to manually process your "
+"messages."
+msgstr ""
+
+#: ../userguide/extending.rst:18
+msgid ""
+"For that purpose a special :class:`~celery.bootstep.ConsumerStep` "
+"bootstep class exists, where you only need to define the "
+"``get_consumers`` method, that must return a list of "
+":class:`kombu.Consumer` objects to start whenever the connection is "
+"established:"
+msgstr ""
+
+#: ../userguide/extending.rst:64
+msgid ""
+"Kombu Consumers can take use of two different message callback "
+"dispatching mechanisms. The first one is the ``callbacks`` argument that "
+"accepts a list of callbacks with a ``(body, message)`` signature, the "
+"second one is the ``on_message`` argument that takes a single callback "
+"with a ``(message,)`` signature. The latter won't automatically decode "
+"and deserialize the payload."
+msgstr ""
+
+#: ../userguide/extending.rst:89
+msgid "Blueprints"
+msgstr ""
+
+#: ../userguide/extending.rst:91
+msgid ""
+"Bootsteps is a technique to add functionality to the workers. A bootstep "
+"is a custom class that defines hooks to do custom actions at different "
+"stages in the worker. Every bootstep belongs to a blueprint, and the "
+"worker currently defines two blueprints: **Worker**, and **Consumer**"
+msgstr ""
+
+#: ../userguide/extending.rst:102
+msgid "**Figure A:** Bootsteps in the Worker and Consumer blueprints. Starting"
+msgstr ""
+
+#: ../userguide/extending.rst:99
+msgid ""
+"from the bottom up the first step in the worker blueprint is the Timer, "
+"and the last step is to start the Consumer blueprint, that then "
+"establishes the broker connection and starts consuming messages."
+msgstr ""
+
+#: ../userguide/extending.rst:111
+msgid "Worker"
+msgstr ""
+
+#: ../userguide/extending.rst:113
+msgid ""
+"The Worker is the first blueprint to start, and with it starts major "
+"components like the event loop, processing pool, and the timer used for "
+"ETA tasks and other timed events."
+msgstr ""
+
+#: ../userguide/extending.rst:117
+msgid ""
+"When the worker is fully started it continues with the Consumer "
+"blueprint, that sets up how tasks are executed, connects to the broker "
+"and starts the message consumers."
+msgstr ""
+
+#: ../userguide/extending.rst:121
+msgid ""
+"The :class:`~celery.worker.WorkController` is the core worker "
+"implementation, and contains several methods and attributes that you can "
+"use in your bootstep."
+msgstr ""
+
+#: ../userguide/extending.rst:127 ../userguide/extending.rst:322
+msgid "Attributes"
+msgstr ""
+
+#: ../userguide/extending.rst:133 ../userguide/extending.rst:328
+msgid "The current app instance."
+msgstr ""
+
+#: ../userguide/extending.rst:139 ../userguide/extending.rst:340
+msgid "The workers node name (e.g., `worker1@example.com`)"
+msgstr ""
+
+#: ../userguide/extending.rst:145 ../userguide/extending.rst:346
+msgid "This is the worker :class:`~celery.bootsteps.Blueprint`."
+msgstr ""
+
+#: ../userguide/extending.rst:151 ../userguide/extending.rst:352
+msgid ""
+"Event loop object (:class:`~kombu.asynchronous.Hub`). You can use this to"
+" register callbacks in the event loop."
+msgstr ""
+
+#: ../userguide/extending.rst:154 ../userguide/extending.rst:355
+msgid ""
+"This is only supported by async I/O enabled transports (amqp, redis), in "
+"which case the `worker.use_eventloop` attribute should be set."
+msgstr ""
+
+#: ../userguide/extending.rst:157 ../userguide/extending.rst:358
+msgid "Your worker bootstep must require the Hub bootstep to use this:"
+msgstr ""
+
+#: ../userguide/extending.rst:168 ../userguide/extending.rst:457
+msgid ""
+"The current process/eventlet/gevent/thread pool. See "
+":class:`celery.concurrency.base.BasePool`."
+msgstr ""
+
+#: ../userguide/extending.rst:171
+msgid "Your worker bootstep must require the Pool bootstep to use this:"
+msgstr ""
+
+#: ../userguide/extending.rst:182
+msgid ":class:`~kombu.asynchronous.timer.Timer` used to schedule functions."
+msgstr ""
+
+#: ../userguide/extending.rst:184
+msgid "Your worker bootstep must require the Timer bootstep to use this:"
+msgstr ""
+
+#: ../userguide/extending.rst:195
+msgid ""
+":class:`Database <celery.worker.state.Persistent>`` to persist state "
+"between worker restarts."
+msgstr ""
+
+#: ../userguide/extending.rst:198
+msgid "This is only defined if the ``statedb`` argument is enabled."
+msgstr ""
+
+#: ../userguide/extending.rst:200
+msgid "Your worker bootstep must require the ``Statedb`` bootstep to use this:"
+msgstr ""
+
+#: ../userguide/extending.rst:211
+msgid ""
+":class:`~celery.worker.autoscaler.Autoscaler` used to automatically grow "
+"and shrink the number of processes in the pool."
+msgstr ""
+
+#: ../userguide/extending.rst:214
+msgid "This is only defined if the ``autoscale`` argument is enabled."
+msgstr ""
+
+#: ../userguide/extending.rst:216
+msgid "Your worker bootstep must require the `Autoscaler` bootstep to use this:"
+msgstr ""
+
+#: ../userguide/extending.rst:227
+msgid ""
+":class:`~celery.worker.autoreloder.Autoreloader` used to automatically "
+"reload use code when the file-system changes."
+msgstr ""
+
+#: ../userguide/extending.rst:230
+msgid ""
+"This is only defined if the ``autoreload`` argument is enabled. Your "
+"worker bootstep must require the `Autoreloader` bootstep to use this;"
+msgstr ""
+
+#: ../userguide/extending.rst:239
+msgid "Example worker bootstep"
+msgstr ""
+
+#: ../userguide/extending.rst:241
+msgid "An example Worker bootstep could be:"
+msgstr ""
+
+#: ../userguide/extending.rst:269
+msgid ""
+"Every method is passed the current ``WorkController`` instance as the "
+"first argument."
+msgstr ""
+
+#: ../userguide/extending.rst:272
+msgid "Another example could use the timer to wake up at regular intervals:"
+msgstr ""
+
+#: ../userguide/extending.rst:307
+msgid "Consumer"
+msgstr ""
+
+#: ../userguide/extending.rst:309
+msgid ""
+"The Consumer blueprint establishes a connection to the broker, and is "
+"restarted every time this connection is lost. Consumer bootsteps include "
+"the worker heartbeat, the remote control command consumer, and "
+"importantly, the task consumer."
+msgstr ""
+
+#: ../userguide/extending.rst:314
+msgid ""
+"When you create consumer bootsteps you must take into account that it "
+"must be possible to restart your blueprint. An additional 'shutdown' "
+"method is defined for consumer bootsteps, this method is called when the "
+"worker is shutdown."
+msgstr ""
+
+#: ../userguide/extending.rst:334
+msgid "The parent :class:`~@WorkController` object that created this consumer."
+msgstr ""
+
+#: ../userguide/extending.rst:369
+msgid "The current broker connection (:class:`kombu.Connection`)."
+msgstr ""
+
+#: ../userguide/extending.rst:371
+msgid "A consumer bootstep must require the 'Connection' bootstep to use this:"
+msgstr ""
+
+#: ../userguide/extending.rst:383
+msgid "A :class:`@events.Dispatcher` object that can be used to send events."
+msgstr ""
+
+#: ../userguide/extending.rst:385
+msgid "A consumer bootstep must require the `Events` bootstep to use this."
+msgstr ""
+
+#: ../userguide/extending.rst:396
+msgid ""
+"Worker to worker broadcast communication "
+"(:class:`~celery.worker.consumer.gossip.Gossip`)."
+msgstr ""
+
+#: ../userguide/extending.rst:399
+msgid "A consumer bootstep must require the `Gossip` bootstep to use this."
+msgstr ""
+
+#: ../userguide/extending.rst:432
+msgid "**Callbacks**"
+msgstr ""
+
+#: ../userguide/extending.rst:434
+msgid "``<set> gossip.on.node_join``"
+msgstr ""
+
+#: ../userguide/extending.rst:436
+msgid ""
+"Called whenever a new node joins the cluster, providing a "
+":class:`~celery.events.state.Worker` instance."
+msgstr ""
+
+#: ../userguide/extending.rst:439
+msgid "``<set> gossip.on.node_leave``"
+msgstr ""
+
+#: ../userguide/extending.rst:441
+msgid ""
+"Called whenever a new node leaves the cluster (shuts down), providing a "
+":class:`~celery.events.state.Worker` instance."
+msgstr ""
+
+#: ../userguide/extending.rst:444
+msgid "``<set> gossip.on.node_lost``"
+msgstr ""
+
+#: ../userguide/extending.rst:446
+msgid ""
+"Called whenever heartbeat was missed for a worker instance in the cluster"
+" (heartbeat not received or processed in time), providing a "
+":class:`~celery.events.state.Worker` instance."
+msgstr ""
+
+#: ../userguide/extending.rst:450
+msgid ""
+"This doesn't necessarily mean the worker is actually offline, so use a "
+"time out mechanism if the default heartbeat timeout isn't sufficient."
+msgstr ""
+
+#: ../userguide/extending.rst:464
+msgid ":class:`Timer <celery.utils.timer2.Schedule` used to schedule functions."
+msgstr ""
+
+#: ../userguide/extending.rst:470
+msgid ""
+"Responsible for sending worker event heartbeats "
+"(:class:`~celery.worker.heartbeat.Heart`)."
+msgstr ""
+
+#: ../userguide/extending.rst:473
+msgid "Your consumer bootstep must require the `Heart` bootstep to use this:"
+msgstr ""
+
+#: ../userguide/extending.rst:484
+msgid "The :class:`kombu.Consumer` object used to consume task messages."
+msgstr ""
+
+#: ../userguide/extending.rst:486 ../userguide/extending.rst:510
+msgid "Your consumer bootstep must require the `Tasks` bootstep to use this:"
+msgstr ""
+
+#: ../userguide/extending.rst:497
+msgid ""
+"Every registered task type has an entry in this mapping, where the value "
+"is used to execute an incoming message of this task type (the task "
+"execution strategy). This mapping is generated by the Tasks bootstep when"
+" the consumer starts:"
+msgstr ""
+
+#: ../userguide/extending.rst:521
+msgid ""
+"A :class:`~collections.defaultdict` used to look-up the rate limit for a "
+"task by type. Entries in this dict may be None (for no limit) or a "
+":class:`~kombu.utils.limits.TokenBucket` instance implementing "
+"``consume(tokens)`` and ``expected_time(tokens)``."
+msgstr ""
+
+#: ../userguide/extending.rst:527
+msgid ""
+"TokenBucket implements the `token bucket algorithm`_, but any algorithm "
+"may be used as long as it conforms to the same interface and defines the "
+"two methods above."
+msgstr ""
+
+#: ../userguide/extending.rst:537
+msgid ""
+"The :class:`~kombu.common.QoS` object can be used to change the task "
+"channels current prefetch_count value:"
+msgstr ""
+
+#: ../userguide/extending.rst:550
+msgid "Methods"
+msgstr ""
+
+#: ../userguide/extending.rst:554
+msgid "Updates the ``task_buckets`` mapping for all registered task types."
+msgstr ""
+
+#: ../userguide/extending.rst:558
+msgid ""
+"Creates rate limit bucket for a task using its ``task.rate_limit`` "
+"attribute."
+msgstr ""
+
+#: ../userguide/extending.rst:564
+msgid "Adds new queue to consume from. This will persist on connection restart."
+msgstr ""
+
+#: ../userguide/extending.rst:568
+msgid ""
+"Stop consuming from queue by name. This will persist on connection "
+"restart."
+msgstr ""
+
+#: ../userguide/extending.rst:573
+msgid ""
+"Schedule ETA task to execute based on the ``request.eta`` attribute. "
+"(:class:`~celery.worker.request.Request`)"
+msgstr ""
+
+#: ../userguide/extending.rst:581
+msgid "Installing Bootsteps"
+msgstr ""
+
+#: ../userguide/extending.rst:583
+msgid ""
+"``app.steps['worker']`` and ``app.steps['consumer']`` can be modified to "
+"add new bootsteps:"
+msgstr ""
+
+#: ../userguide/extending.rst:597
+msgid ""
+"The order of steps isn't important here as the order is decided by the "
+"resulting dependency graph (``Step.requires``)."
+msgstr ""
+
+#: ../userguide/extending.rst:600
+msgid ""
+"To illustrate how you can install bootsteps and how they work, this is an"
+" example step that prints some useless debugging information. It can be "
+"added both as a worker and consumer bootstep:"
+msgstr ""
+
+#: ../userguide/extending.rst:637
+msgid ""
+"Starting the worker with this step installed will give us the following "
+"logs:"
+msgstr ""
+
+#: ../userguide/extending.rst:652
+msgid ""
+"The ``print`` statements will be redirected to the logging subsystem "
+"after the worker has been initialized, so the \"is starting\" lines are "
+"time-stamped. You may notice that this does no longer happen at shutdown,"
+" this is because the ``stop`` and ``shutdown`` methods are called inside "
+"a *signal handler*, and it's not safe to use logging inside such a "
+"handler. Logging with the Python logging module isn't :term:`reentrant`: "
+"meaning you cannot interrupt the function then call it again later. It's "
+"important that the ``stop`` and ``shutdown`` methods you write is also "
+":term:`reentrant`."
+msgstr ""
+
+#: ../userguide/extending.rst:662
+msgid ""
+"Starting the worker with :option:`--loglevel=debug <celery worker "
+"--loglevel>` will show us more information about the boot process:"
+msgstr ""
+
+#: ../userguide/extending.rst:716
+msgid "Command-line programs"
+msgstr ""
+
+#: ../userguide/extending.rst:721
+msgid "Adding new command-line options"
+msgstr ""
+
+#: ../userguide/extending.rst:726
+msgid "Command-specific options"
+msgstr ""
+
+#: ../userguide/extending.rst:728
+msgid ""
+"You can add additional command-line options to the ``worker``, ``beat``, "
+"and ``events`` commands by modifying the :attr:`~@user_options` attribute"
+" of the application instance."
+msgstr ""
+
+#: ../userguide/extending.rst:732
+msgid ""
+"Celery commands uses the :mod:`argparse` module to parse command-line "
+"arguments, and so to add custom arguments you need to specify a callback "
+"that takes a :class:`argparse.ArgumentParser` instance - and adds "
+"arguments. Please see the :mod:`argparse` documentation to read about the"
+" fields supported."
+msgstr ""
+
+#: ../userguide/extending.rst:737
+msgid "Example adding a custom option to the :program:`celery worker` command:"
+msgstr ""
+
+#: ../userguide/extending.rst:753
+msgid ""
+"All bootsteps will now receive this argument as a keyword argument to "
+"``Bootstep.__init__``:"
+msgstr ""
+
+#: ../userguide/extending.rst:771
+msgid "Preload options"
+msgstr ""
+
+#: ../userguide/extending.rst:773
+msgid ""
+"The :program:`celery` umbrella command supports the concept of 'preload "
+"options'.  These are special options passed to all sub-commands and "
+"parsed outside of the main parsing step."
+msgstr ""
+
+#: ../userguide/extending.rst:777
+msgid ""
+"The list of default preload options can be found in the API reference: "
+":mod:`celery.bin.base`."
+msgstr ""
+
+#: ../userguide/extending.rst:780
+msgid ""
+"You can add new preload options too, for example to specify a "
+"configuration template:"
+msgstr ""
+
+#: ../userguide/extending.rst:805
+msgid "Adding new :program:`celery` sub-commands"
+msgstr ""
+
+#: ../userguide/extending.rst:807
+msgid ""
+"New commands can be added to the :program:`celery` umbrella command by "
+"using `setuptools entry-points`_."
+msgstr ""
+
+#: ../userguide/extending.rst:814
+msgid ""
+"Entry-points is special meta-data that can be added to your packages "
+"``setup.py`` program, and then after installation, read from the system "
+"using the :mod:`pkg_resources` module."
+msgstr ""
+
+#: ../userguide/extending.rst:817
+msgid ""
+"Celery recognizes ``celery.commands`` entry-points to install additional "
+"sub-commands, where the value of the entry-point must point to a valid "
+"subclass of :class:`celery.bin.base.Command`. There's limited "
+"documentation, unfortunately, but you can find inspiration from the "
+"various commands in the :mod:`celery.bin` package."
+msgstr ""
+
+#: ../userguide/extending.rst:823
+msgid ""
+"This is how the :pypi:`Flower` monitoring extension adds the "
+":program:`celery flower` command, by adding an entry-point in "
+":file:`setup.py`:"
+msgstr ""
+
+#: ../userguide/extending.rst:837
+msgid ""
+"The command definition is in two parts separated by the equal sign, where"
+" the first part is the name of the sub-command (flower), then the second "
+"part is the fully qualified symbol path to the class that implements the "
+"command:"
+msgstr ""
+
+#: ../userguide/extending.rst:845
+msgid ""
+"The module path and the name of the attribute should be separated by "
+"colon as above."
+msgstr ""
+
+#: ../userguide/extending.rst:849
+msgid ""
+"In the module :file:`flower/command.py`, the command class is defined "
+"something like this:"
+msgstr ""
+
+#: ../userguide/extending.rst:873
+msgid "Worker API"
+msgstr ""
+
+#: ../userguide/extending.rst:877
+msgid ":class:`~kombu.asynchronous.Hub` - The workers async event loop"
+msgstr ""
+
+#: ../userguide/extending.rst
+msgid "supported transports"
+msgstr ""
+
+#: ../userguide/extending.rst:878
+msgid "amqp, redis"
+msgstr ""
+
+#: ../userguide/extending.rst:882
+msgid ""
+"The worker uses asynchronous I/O when the amqp or redis broker transports"
+" are used. The eventual goal is for all transports to use the event-loop,"
+" but that will take some time so other transports still use a threading-"
+"based solution."
+msgstr ""
+
+#: ../userguide/extending.rst:891
+msgid "Add callback to be called when ``fd`` is readable."
+msgstr ""
+
+#: ../userguide/extending.rst:893
+msgid ""
+"The callback will stay registered until explicitly removed using "
+":meth:`hub.remove(fd) <hub.remove>`, or the file descriptor is "
+"automatically discarded because it's no longer valid."
+msgstr ""
+
+#: ../userguide/extending.rst:897
+msgid ""
+"Note that only one callback can be registered for any given file "
+"descriptor at a time, so calling ``add`` a second time will remove any "
+"callback that was previously registered for that file descriptor."
+msgstr ""
+
+#: ../userguide/extending.rst:901
+msgid ""
+"A file descriptor is any file-like object that supports the ``fileno`` "
+"method, or it can be the file descriptor number (int)."
+msgstr ""
+
+#: ../userguide/extending.rst:906
+msgid ""
+"Add callback to be called when ``fd`` is writable. See also notes for "
+":meth:`hub.add_reader` above."
+msgstr ""
+
+#: ../userguide/extending.rst:911
+msgid "Remove all callbacks for file descriptor ``fd`` from the loop."
+msgstr ""
+
+#: ../userguide/extending.rst:914
+msgid "Timer - Scheduling events"
+msgstr ""
+

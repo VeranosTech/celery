@@ -1,0 +1,833 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../getting-started/next-steps.rst:5
+msgid "Next Steps"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:7
+msgid ""
+"The :ref:`first-steps` guide is intentionally minimal. In this guide I'll"
+" demonstrate what Celery offers in more detail, including how to add "
+"Celery support for your application and library."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:11
+msgid ""
+"This document doesn't document all of Celery's features and best "
+"practices, so it's recommended that you also read the :ref:`User Guide "
+"<guide>`"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:20
+msgid "Using Celery in your Application"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:25
+msgid "Our Project"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:27
+msgid "Project layout::"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:34
+msgid ":file:`proj/celery.py`"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:39
+msgid ""
+"In this module you created our :class:`@Celery` instance (sometimes "
+"referred to as the *app*). To use Celery within your project you simply "
+"import this instance."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:43
+msgid "The ``broker`` argument specifies the URL of the broker to use."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:45
+msgid "See :ref:`celerytut-broker` for more information."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:47
+msgid "The ``backend`` argument specifies the result backend to use,"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:49
+msgid ""
+"It's used to keep track of task state and results. While results are "
+"disabled by default I use the RPC result backend here because I "
+"demonstrate how retrieving results work later, you may want to use a "
+"different backend for your application. They all have different strengths"
+" and weaknesses. If you don't need results it's better to disable them. "
+"Results can also be disabled for individual tasks by setting the "
+"``@task(ignore_result=True)`` option."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:57
+msgid "See :ref:`celerytut-keeping-results` for more information."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:59
+msgid ""
+"The ``include`` argument is a list of modules to import when the worker "
+"starts. You need to add our tasks module here so that the worker is able "
+"to find our tasks."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:64
+msgid ":file:`proj/tasks.py`"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:71
+msgid "Starting the worker"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:73
+msgid ""
+"The :program:`celery` program can be used to start the worker (you need "
+"to run the worker in the directory above proj):"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:79
+msgid "When the worker starts you should see a banner and some messages::"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:95
+msgid ""
+"-- The *broker* is the URL you specified in the broker argument in our "
+"``celery`` module, you can also specify a different broker on the "
+"command-line by using the :option:`-b <celery -b>` option."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:99
+msgid ""
+"-- *Concurrency* is the number of prefork worker process used to process "
+"your tasks concurrently, when all of these are busy doing work new tasks "
+"will have to wait for one of the tasks to finish before it can be "
+"processed."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:104
+msgid ""
+"The default concurrency number is the number of CPU's on that machine "
+"(including cores), you can specify a custom number using the "
+":option:`celery worker -c` option. There's no recommended value, as the "
+"optimal number depends on a number of factors, but if your tasks are "
+"mostly I/O-bound then you can try to increase it, experimentation has "
+"shown that adding more than twice the number of CPU's is rarely "
+"effective, and likely to degrade performance instead."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:113
+msgid ""
+"Including the default prefork pool, Celery also supports using Eventlet, "
+"Gevent, and running in a single thread (see :ref:`concurrency`)."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:116
+msgid ""
+"-- *Events* is an option that when enabled causes Celery to send "
+"monitoring messages (events) for actions occurring in the worker. These "
+"can be used by monitor programs like ``celery events``, and Flower - the "
+"real-time Celery monitor, that you can read about in the :ref:`Monitoring"
+" and Management guide <guide-monitoring>`."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:122
+msgid ""
+"-- *Queues* is the list of queues that the worker will consume tasks "
+"from. The worker can be told to consume from several queues at once, and "
+"this is used to route messages to specific workers as a means for Quality"
+" of Service, separation of concerns, and prioritization, all described in"
+" the :ref:`Routing Guide <guide-routing>`."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:129
+msgid ""
+"You can get a complete list of command-line arguments by passing in the "
+":option:`--help <celery --help>` flag:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:136
+msgid ""
+"These options are described in more detailed in the :ref:`Workers Guide "
+"<guide-workers>`."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:139
+msgid "Stopping the worker"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:141
+msgid ""
+"To stop the worker simply hit :kbd:`Control-c`. A list of signals "
+"supported by the worker is detailed in the :ref:`Workers Guide <guide-"
+"workers>`."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:145
+msgid "In the background"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:147
+msgid ""
+"In production you'll want to run the worker in the background, this is "
+"described in detail in the :ref:`daemonization tutorial <daemonizing>`."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:150
+msgid ""
+"The daemonization scripts uses the :program:`celery multi` command to "
+"start one or more workers in the background:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:160
+msgid "You can restart it too:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:175
+msgid "or stop it:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:181
+msgid ""
+"The ``stop`` command is asynchronous so it won't wait for the worker to "
+"shutdown. You'll probably want to use the ``stopwait`` command instead,  "
+"this ensures all currently executing tasks are completed before exiting:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:192
+msgid ""
+":program:`celery multi` doesn't store information about workers so you "
+"need to use the same command-line arguments when restarting. Only the "
+"same pidfile and logfile arguments must be used when stopping."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:197
+msgid ""
+"By default it'll create pid and log files in the current directory, to "
+"protect against multiple workers launching on top of each other you're "
+"encouraged to put these in a dedicated directory:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:208
+msgid ""
+"With the multi command you can start multiple workers, and there's a "
+"powerful command-line syntax to specify arguments for different workers "
+"too, for example:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:217
+msgid ""
+"For more examples see the :mod:`~celery.bin.multi` module in the API "
+"reference."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:223
+msgid "About the :option:`--app <celery --app>` argument"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:225
+msgid ""
+"The :option:`--app <celery --app>` argument specifies the Celery app "
+"instance to use, it must be in the form of ``module.path:attribute``"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:228
+msgid ""
+"But it also supports a shortcut form If only a package name is specified,"
+" where it'll try to search for the app instance, in the following order:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:231
+msgid "With :option:`--app=proj <celery --app>`:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:233
+msgid "an attribute named ``proj.app``, or"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:234
+msgid "an attribute named ``proj.celery``, or"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:235
+msgid ""
+"any attribute in the module ``proj`` where the value is a Celery "
+"application, or"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:238
+msgid "If none of these are found it'll try a submodule named ``proj.celery``:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:240
+msgid "an attribute named ``proj.celery.app``, or"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:241
+msgid "an attribute named ``proj.celery.celery``, or"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:242
+msgid ""
+"Any attribute in the module ``proj.celery`` where the value is a Celery "
+"application."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:245
+msgid ""
+"This scheme mimics the practices used in the documentation -- that is, "
+"``proj:app`` for a single contained module, and ``proj.celery:app`` for "
+"larger projects."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:253
+msgid "Calling Tasks"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:255
+msgid "You can call a task using the :meth:`delay` method:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:261
+msgid ""
+"This method is actually a star-argument shortcut to another method called"
+" :meth:`apply_async`:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:268
+msgid ""
+"The latter enables you to specify execution options like the time to run "
+"(countdown), the queue it should be sent to, and so on:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:275
+msgid ""
+"In the above example the task will be sent to a queue named ``lopri`` and"
+" the task will execute, at the earliest, 10 seconds after the message was"
+" sent."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:278
+msgid ""
+"Applying the task directly will execute the task in the current process, "
+"so that no message is sent:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:286
+msgid ""
+"These three methods - :meth:`delay`, :meth:`apply_async`, and applying "
+"(``__call__``), represents the Celery calling API, that's also used for "
+"signatures."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:290
+msgid ""
+"A more detailed overview of the Calling API can be found in the "
+":ref:`Calling User Guide <guide-calling>`."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:293
+msgid ""
+"Every task invocation will be given a unique identifier (an UUID), this "
+"is the task id."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:296
+msgid ""
+"The ``delay`` and ``apply_async`` methods return an "
+":class:`~@AsyncResult` instance, that can be used to keep track of the "
+"tasks execution state. But for this you need to enable a :ref:`result "
+"backend <task-result-backends>` so that the state can be stored "
+"somewhere."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:301
+msgid ""
+"Results are disabled by default because of the fact that there's no "
+"result backend that suits every application, so to choose one you need to"
+" consider the drawbacks of each individual backend. For many tasks "
+"keeping the return value isn't even very useful, so it's a sensible "
+"default to have. Also note that result backends aren't used for "
+"monitoring tasks and workers, for that Celery uses dedicated event "
+"messages (see :ref:`guide-monitoring`)."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:308
+msgid ""
+"If you have a result backend configured you can retrieve the return value"
+" of a task:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:317
+msgid "You can find the task's id by looking at the :attr:`id` attribute:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:324
+msgid ""
+"You can also inspect the exception and traceback if the task raised an "
+"exception, in fact ``result.get()`` will propagate any errors by default:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:342
+msgid ""
+"If you don't wish for the errors to propagate then you can disable that "
+"by passing the ``propagate`` argument:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:350
+msgid ""
+"In this case it'll return the exception instance raised instead, and so "
+"to check whether the task succeeded or failed you'll have to use the "
+"corresponding methods on the result instance:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:362
+msgid ""
+"So how does it know if the task has failed or not?  It can find out by "
+"looking at the tasks *state*:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:370
+msgid ""
+"A task can only be in a single state, but it can progress through several"
+" states. The stages of a typical task can be::"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:375
+msgid ""
+"The started state is a special state that's only recorded if the "
+":setting:`task_track_started` setting is enabled, or if the "
+"``@task(track_started=True)`` option is set for the task."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:379
+msgid ""
+"The pending state is actually not a recorded state, but rather the "
+"default state for any task id that's unknown: this you can see from this "
+"example:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:391
+msgid ""
+"If the task is retried the stages can become even more complex. To "
+"demonstrate, for a task that's retried two times the stages would be:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:398
+msgid ""
+"To read more about task states you should see the :ref:`task-states` "
+"section in the tasks user guide."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:401
+msgid ""
+"Calling tasks is described in detail in the :ref:`Calling Guide <guide-"
+"calling>`."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:407
+msgid "*Canvas*: Designing Work-flows"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:409
+msgid ""
+"You just learned how to call a task using the tasks ``delay`` method, and"
+" this is often all you need, but sometimes you may want to pass the "
+"signature of a task invocation to another process or as an argument to "
+"another function, for this Celery uses something called *signatures*."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:414
+msgid ""
+"A signature wraps the arguments and execution options of a single task "
+"invocation in a way such that it can be passed to functions or even "
+"serialized and sent across the wire."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:418
+msgid ""
+"You can create a signature for the ``add`` task using the arguments ``(2,"
+" 2)``, and a countdown of 10 seconds like this:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:426
+msgid "There's also a shortcut using star arguments:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:434
+msgid "And there's that calling API again…"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:436
+msgid ""
+"Signature instances also supports the calling API: meaning they have the "
+"``delay`` and ``apply_async`` methods."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:439
+msgid ""
+"But there's a difference in that the signature may already have an "
+"argument signature specified. The ``add`` task takes two arguments, so a "
+"signature specifying two arguments would make a complete signature:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:450
+msgid ""
+"But, you can also make incomplete signatures to create what we call "
+"*partials*:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:458
+msgid ""
+"``s2`` is now a partial signature that needs another argument to be "
+"complete, and this can be resolved when calling the signature:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:468
+msgid ""
+"Here you added the argument 8 that was prepended to the existing argument"
+" 2 forming a complete signature of ``add(8, 2)``."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:471
+msgid ""
+"Keyword arguments can also be added later, these are then merged with any"
+" existing keyword arguments, but with new arguments taking precedence:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:479
+msgid "As stated signatures supports the calling API: meaning that;"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:481
+msgid "``sig.apply_async(args=(), kwargs={}, **options)``"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:483
+msgid ""
+"Calls the signature with optional partial arguments and partial keyword "
+"arguments. Also supports partial execution options."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:486
+msgid "``sig.delay(*args, **kwargs)``"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:488
+msgid ""
+"Star argument version of ``apply_async``. Any arguments will be prepended"
+" to the arguments in the signature, and keyword arguments is merged with "
+"any existing keys."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:492
+msgid ""
+"So this all seems very useful, but what can you actually do with these? "
+"To get to that I must introduce the canvas primitives…"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:496
+msgid "The Primitives"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:503
+msgid ":ref:`group <canvas-group>`"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:504
+msgid ":ref:`chain <canvas-chain>`"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:505
+msgid ":ref:`chord <canvas-chord>`"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:506
+msgid ":ref:`map <canvas-map>`"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:507
+msgid ":ref:`starmap <canvas-map>`"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:508
+msgid ":ref:`chunks <canvas-chunks>`"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:510
+msgid ""
+"These primitives are signature objects themselves, so they can be "
+"combined in any number of ways to compose complex work-flows."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:515
+msgid ""
+"These examples retrieve results, so to try them out you need to configure"
+" a result backend. The example project above already does that (see the "
+"backend argument to :class:`~celery.Celery`)."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:519
+msgid "Let's look at some examples:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:522
+msgid "Groups"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:524
+msgid ""
+"A :class:`~celery.group` calls a list of tasks in parallel, and it "
+"returns a special result instance that lets you inspect the results as a "
+"group, and retrieve the return values in order."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:536
+msgid "Partial group"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:545
+msgid "Chains"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:547
+msgid ""
+"Tasks can be linked together so that after one task returns the other is "
+"called:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:560
+msgid "or a partial chain:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:570
+msgid "Chains can also be written like this:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:578
+msgid "Chords"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:580
+msgid "A chord is a group with a callback:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:591
+msgid ""
+"A group chained to another task will be automatically converted to a "
+"chord:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:600
+msgid ""
+"Since these primitives are all of the signature type they can be combined"
+" almost however you want, for example:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:607
+msgid ""
+"Be sure to read more about work-flows in the :ref:`Canvas <guide-canvas>`"
+" user guide."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:611
+msgid "Routing"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:613
+msgid ""
+"Celery supports all of the routing facilities provided by AMQP, but it "
+"also supports simple routing where messages are sent to named queues."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:616
+msgid ""
+"The :setting:`task_routes` setting enables you to route tasks by name and"
+" keep everything centralized in one location:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:627
+msgid ""
+"You can also specify the queue at runtime with the ``queue`` argument to "
+"``apply_async``:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:635
+msgid ""
+"You can then make a worker consume from this queue by specifying the "
+":option:`celery worker -Q` option:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:642
+msgid ""
+"You may specify multiple queues by using a comma separated list, for "
+"example you can make the worker consume from both the default queue, and "
+"the ``hipri`` queue, where the default queue is named ``celery`` for "
+"historical reasons:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:651
+msgid ""
+"The order of the queues doesn't matter as the worker will give equal "
+"weight to the queues."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:654
+msgid ""
+"To learn more about routing, including taking use of the full power of "
+"AMQP routing, see the :ref:`Routing Guide <guide-routing>`."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:658
+msgid "Remote Control"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:660
+msgid ""
+"If you're using RabbitMQ (AMQP), Redis, or Qpid as the broker then you "
+"can control and inspect the worker at runtime."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:663
+msgid "For example you can see what tasks the worker is currently working on:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:669
+msgid ""
+"This is implemented by using broadcast messaging, so all remote control "
+"commands are received by every worker in the cluster."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:672
+msgid ""
+"You can also specify one or more workers to act on the request using the "
+":option:`--destination <celery inspect --destination>` option. This is a "
+"comma separated list of worker host names:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:680
+msgid ""
+"If a destination isn't provided then every worker will act and reply to "
+"the request."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:683
+msgid ""
+"The :program:`celery inspect` command contains commands that doesn't "
+"change anything in the worker, it only replies information and statistics"
+" about what's going on inside the worker. For a list of inspect commands "
+"you can execute:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:692
+msgid ""
+"Then there's the :program:`celery control` command, that contains "
+"commands that actually changes things in the worker at runtime:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:699
+msgid ""
+"For example you can force workers to enable event messages (used for "
+"monitoring tasks and workers):"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:706
+msgid ""
+"When events are enabled you can then start the event dumper to see what "
+"the workers are doing:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:713
+msgid "or you can start the curses interface:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:719
+msgid "when you're finished monitoring you can disable events again:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:725
+msgid ""
+"The :program:`celery status` command also uses remote control commands "
+"and shows a list of online workers in the cluster:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:732
+msgid ""
+"You can read more about the :program:`celery` command and monitoring in "
+"the :ref:`Monitoring Guide <guide-monitoring>`."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:736
+msgid "Timezone"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:738
+msgid "All times and dates, internally and in messages uses the UTC timezone."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:740
+msgid ""
+"When the worker receives a message, for example with a countdown set it "
+"converts that UTC time to local time. If you wish to use a different "
+"timezone than the system timezone then you must configure that using the "
+":setting:`timezone` setting:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:750
+msgid "Optimization"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:752
+msgid ""
+"The default configuration isn't optimized for throughput by default, it "
+"tries to walk the middle way between many short tasks and fewer long "
+"tasks, a compromise between throughput and fair scheduling."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:756
+msgid ""
+"If you have strict fair scheduling requirements, or want to optimize for "
+"throughput then you should read the :ref:`Optimizing Guide <guide-"
+"optimizing>`."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:760
+msgid ""
+"If you're using RabbitMQ then you can install the :pypi:`librabbitmq` "
+"module: this is an AMQP client implemented in C:"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:768
+msgid "What to do now?"
+msgstr ""
+
+#: ../getting-started/next-steps.rst:770
+msgid ""
+"Now that you have read this document you should continue to the "
+":ref:`User Guide <guide>`."
+msgstr ""
+
+#: ../getting-started/next-steps.rst:773
+msgid "There's also an :ref:`API reference <apiref>` if you're so inclined."
+msgstr ""
+

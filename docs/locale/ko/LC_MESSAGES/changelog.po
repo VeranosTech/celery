@@ -1,0 +1,1024 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../Changelog:5
+msgid "Change history"
+msgstr ""
+
+#: ../../Changelog:7
+msgid ""
+"This document contains change notes for bugfix releases in the 4.x "
+"series, please see :ref:`whatsnew-4.3` for an overview of what's new in "
+"Celery 4.3."
+msgstr ""
+
+#: ../../Changelog:12
+msgid "4.3.0"
+msgstr ""
+
+#: ../../Changelog
+msgid "release-date"
+msgstr ""
+
+#: ../../Changelog:13
+msgid "2019-03-31 7:00 P.M UTC+3:00"
+msgstr ""
+
+#: ../../Changelog
+msgid "release-by"
+msgstr ""
+
+#: ../../Changelog:14 ../../Changelog:106 ../../Changelog:135
+msgid "Omer Katz"
+msgstr ""
+
+#: ../../Changelog:16
+msgid ""
+"Added support for broadcasting using a regular expression pattern or a "
+"glob pattern to multiple Pidboxes."
+msgstr ""
+
+#: ../../Changelog:19
+msgid "This allows you to inspect or ping multiple workers at once."
+msgstr ""
+
+#: ../../Changelog:21
+msgid "Contributed by **Dmitry Malinovsky** & **Jason Held**"
+msgstr ""
+
+#: ../../Changelog:23
+msgid "Added support for PEP 420 namespace packages."
+msgstr ""
+
+#: ../../Changelog:25
+msgid "This allows you to load tasks from namespace packages."
+msgstr ""
+
+#: ../../Changelog:27
+msgid "Contributed by **Colin Watson**"
+msgstr ""
+
+#: ../../Changelog:29
+msgid ""
+"Added :setting:`acks_on_failure_or_timeout` as a setting instead of a "
+"task only option."
+msgstr ""
+
+#: ../../Changelog:32
+msgid "This was missing from the original PR but now added for completeness."
+msgstr ""
+
+#: ../../Changelog:34 ../../Changelog:38 ../../Changelog:46 ../../Changelog:126
+#: ../../Changelog:130 ../../Changelog:366 ../../Changelog:413
+msgid "Contributed by **Omer Katz**"
+msgstr ""
+
+#: ../../Changelog:36
+msgid "Added the :signal:`task_received` signal."
+msgstr ""
+
+#: ../../Changelog:40
+msgid "Fixed a crash of our CLI that occurred for everyone using Python < 3.6."
+msgstr ""
+
+#: ../../Changelog:42
+msgid ""
+"The crash was introduced in `acd6025 "
+"<https://github.com/celery/celery/commit/acd6025b7dc4db112a31020686fc8b15e1722c67>`_"
+" by using the :class:`ModuleNotFoundError` exception which was introduced"
+" in Python 3.6."
+msgstr ""
+
+#: ../../Changelog:48
+msgid ""
+"Fixed a crash that occurred when using the Redis result backend while the"
+" :setting:`result_expires` is set to None."
+msgstr ""
+
+#: ../../Changelog:51
+msgid "Contributed by **Toni Ruža** & **Omer Katz**"
+msgstr ""
+
+#: ../../Changelog:53
+msgid ""
+"Added support the `DNS seedlist connection format "
+"<https://docs.mongodb.com/manual/reference/connection-string/#dns-"
+"seedlist-connection-format>`_ for the MongoDB result backend."
+msgstr ""
+
+#: ../../Changelog:56
+msgid ""
+"This requires the `dnspython` package which will be installed by default "
+"when installing the dependencies for the MongoDB result backend."
+msgstr ""
+
+#: ../../Changelog:59 ../../Changelog:63 ../../Changelog:348
+msgid "Contributed by **George Psarakis**"
+msgstr ""
+
+#: ../../Changelog:61
+msgid "Bump the minimum eventlet version to 0.24.1."
+msgstr ""
+
+#: ../../Changelog:65
+msgid "Replace the `msgpack-python` package with `msgpack`."
+msgstr ""
+
+#: ../../Changelog:67
+msgid ""
+"We're no longer using the deprecated package. See our :ref:`important "
+"notes <v430-important>` for this release for further details on how to "
+"upgrade."
+msgstr ""
+
+#: ../../Changelog:71
+msgid "Contributed by **Daniel Hahler**"
+msgstr ""
+
+#: ../../Changelog:73
+msgid ""
+"Allow scheduling error handlers which are not registered tasks in the "
+"current worker."
+msgstr ""
+
+#: ../../Changelog:76
+msgid "These kind of error handlers are now possible:"
+msgstr ""
+
+#: ../../Changelog:86
+msgid ""
+"Additional fixes and enhancements to the SSL support of the Redis broker "
+"and result backend."
+msgstr ""
+
+#: ../../Changelog:89
+msgid "Contributed by **Jeremy Cohen**"
+msgstr ""
+
+#: ../../Changelog:91 ../../Changelog:506
+msgid "Code Cleanups, Test Coverage & CI Improvements by:"
+msgstr ""
+
+#: ../../Changelog:93 ../../Changelog:98 ../../Changelog:510
+#: ../../Changelog:552
+msgid "**Omer Katz**"
+msgstr ""
+
+#: ../../Changelog:94 ../../Changelog:515
+msgid "**Florian Chardin**"
+msgstr ""
+
+#: ../../Changelog:96 ../../Changelog:522
+msgid "Documentation Fixes by:"
+msgstr ""
+
+#: ../../Changelog:99
+msgid "**Samuel Huang**"
+msgstr ""
+
+#: ../../Changelog:100
+msgid "**Amir Hossein Saeid Mehr**"
+msgstr ""
+
+#: ../../Changelog:101
+msgid "**Dmytro Litvinov**"
+msgstr ""
+
+#: ../../Changelog:104
+msgid "4.3.0 RC2"
+msgstr ""
+
+#: ../../Changelog:105
+msgid "2019-03-03 9:30 P.M UTC+2:00"
+msgstr ""
+
+#: ../../Changelog:108
+msgid ""
+"**Filesystem Backend**: Added meaningful error messages for filesystem "
+"backend."
+msgstr ""
+
+#: ../../Changelog:110
+msgid "Contributed by **Lars Rinn**"
+msgstr ""
+
+#: ../../Changelog:112
+msgid "**New Result Backend**: Added the ArangoDB backend."
+msgstr ""
+
+#: ../../Changelog:114
+msgid "Contributed by **Dilip Vamsi Moturi**"
+msgstr ""
+
+#: ../../Changelog:116
+msgid ""
+"**Django**: Prepend current working directory instead of appending so "
+"that the project directory will have precedence over system modules as "
+"expected."
+msgstr ""
+
+#: ../../Changelog:119
+msgid "Contributed by **Antonin Delpeuch**"
+msgstr ""
+
+#: ../../Changelog:121
+msgid "Bump minimum py-redis version to 3.2.0."
+msgstr ""
+
+#: ../../Changelog:123
+msgid ""
+"Due to multiple bugs in earlier versions of py-redis that were causing "
+"issues for Celery, we were forced to bump the minimum required version to"
+" 3.2.0."
+msgstr ""
+
+#: ../../Changelog:128
+msgid "**Dependencies**: Bump minimum required version of Kombu to 4.4"
+msgstr ""
+
+#: ../../Changelog:133
+msgid "4.3.0 RC1"
+msgstr ""
+
+#: ../../Changelog:134
+msgid "2019-02-20 5:00 PM IST"
+msgstr ""
+
+#: ../../Changelog:137
+msgid ""
+"**Canvas**: :meth:`celery.chain.apply` does not ignore keyword arguments "
+"anymore when applying the chain."
+msgstr ""
+
+#: ../../Changelog:140
+msgid "Contributed by **Korijn van Golen**"
+msgstr ""
+
+#: ../../Changelog:142
+msgid ""
+"**Result Set**: Don't attempt to cache results in a "
+":class:`celery.result.ResultSet`."
+msgstr ""
+
+#: ../../Changelog:144
+msgid ""
+"During a join, the results cache was populated using "
+":meth:`celery.result.ResultSet.get`, if one of the results contains an "
+"exception, joining unexpectedly failed."
+msgstr ""
+
+#: ../../Changelog:147
+msgid "The results cache is now removed."
+msgstr ""
+
+#: ../../Changelog:149
+msgid "Contributed by **Derek Harland**"
+msgstr ""
+
+#: ../../Changelog:151
+msgid ""
+"**Application**: :meth:`celery.Celery.autodiscover_tasks` now attempts to"
+" import the package itself when the `related_name` keyword argument is "
+"`None`."
+msgstr ""
+
+#: ../../Changelog:154
+msgid "Contributed by **Alex Ioannidis**"
+msgstr ""
+
+#: ../../Changelog:156
+msgid ""
+"**Windows Support**: On Windows 10, stale PID files prevented celery beat"
+" to run. We now remove them when a :class:`SystemExit` is raised."
+msgstr ""
+
+#: ../../Changelog:159
+msgid "Contributed by **:github_user:`na387`**"
+msgstr ""
+
+#: ../../Changelog:161
+msgid ""
+"**Task**: Added the new :setting:`task_acks_on_failure_or_timeout` "
+"setting."
+msgstr ""
+
+#: ../../Changelog:163
+msgid ""
+"Acknowledging SQS messages on failure or timing out makes it impossible "
+"to use dead letter queues."
+msgstr ""
+
+#: ../../Changelog:166
+msgid ""
+"We introduce the new option acks_on_failure_or_timeout, to ensure we can "
+"totally fallback on native SQS message lifecycle, using redeliveries for "
+"retries (in case of slow processing or failure) and transitions to dead "
+"letter queue after defined number of times."
+msgstr ""
+
+#: ../../Changelog:171
+msgid "Contributed by **Mario Kostelac**"
+msgstr ""
+
+#: ../../Changelog:173
+msgid "**RabbitMQ Broker**: Adjust HA headers to work on RabbitMQ 3.x."
+msgstr ""
+
+#: ../../Changelog:175
+msgid "This change also means we're ending official support for RabbitMQ 2.x."
+msgstr ""
+
+#: ../../Changelog:177 ../../Changelog:238 ../../Changelog:242
+#: ../../Changelog:427
+msgid "Contributed by **Asif Saif Uddin**"
+msgstr ""
+
+#: ../../Changelog:179
+msgid "**Command Line**: Improve :program:`celery update` error handling."
+msgstr ""
+
+#: ../../Changelog:181
+msgid "Contributed by **Federico Bond**"
+msgstr ""
+
+#: ../../Changelog:183
+msgid ""
+"**Canvas**: Support chords with :setting:`task_always_eager` set to "
+"`True`."
+msgstr ""
+
+#: ../../Changelog:185
+msgid "Contributed by **Axel Haustant**"
+msgstr ""
+
+#: ../../Changelog:187
+msgid "**Result Backend**: Optionally store task properties in result backend."
+msgstr ""
+
+#: ../../Changelog:189
+msgid ""
+"Setting the :setting:`result_extended` configuration option to `True` "
+"enables storing additional task properties in the result backend."
+msgstr ""
+
+#: ../../Changelog:192
+msgid "Contributed by **John Arnold**"
+msgstr ""
+
+#: ../../Changelog:194
+msgid ""
+"**Couchbase Result Backend**: Allow the Couchbase result backend to "
+"automatically detect the serialization format."
+msgstr ""
+
+#: ../../Changelog:197
+msgid "Contributed by **Douglas Rohde**"
+msgstr ""
+
+#: ../../Changelog:199
+msgid "**New Result Backend**: Added the Azure Block Blob Storage result backend."
+msgstr ""
+
+#: ../../Changelog:201
+msgid ""
+"The backend is implemented on top of the azure-storage library which uses"
+" Azure Blob Storage for a scalable low-cost PaaS backend."
+msgstr ""
+
+#: ../../Changelog:204
+msgid ""
+"The backend was load tested via a simple nginx/gunicorn/sanic app hosted "
+"on a DS4 virtual machine (4 vCores, 16 GB RAM) and was able to handle "
+"600+ concurrent users at ~170 RPS."
+msgstr ""
+
+#: ../../Changelog:208
+msgid ""
+"The commit also contains a live end-to-end test to facilitate "
+"verification of the backend functionality. The test is activated by "
+"setting the `AZUREBLOCKBLOB_URL` environment variable to "
+"`azureblockblob://{ConnectionString}` where the value for "
+"`ConnectionString` can be found in the `Access Keys` pane of a Storage "
+"Account resources in the Azure Portal."
+msgstr ""
+
+#: ../../Changelog:215 ../../Changelog:297
+msgid "Contributed by **Clemens Wolff**"
+msgstr ""
+
+#: ../../Changelog:217
+msgid ""
+"**Task**: :meth:`celery.app.task.update_state` now accepts keyword "
+"arguments."
+msgstr ""
+
+#: ../../Changelog:219
+msgid ""
+"This allows passing extra fields to the result backend. These fields are "
+"unused by default but custom result backends can use them to determine "
+"how to store results."
+msgstr ""
+
+#: ../../Changelog:223
+msgid "Contributed by **Christopher Dignam**"
+msgstr ""
+
+#: ../../Changelog:225
+msgid "Gracefully handle consumer :class:`kombu.exceptions.DecodeError`."
+msgstr ""
+
+#: ../../Changelog:227
+msgid ""
+"When using the v2 protocol the worker no longer crashes when the consumer"
+" encounters an error while decoding a message."
+msgstr ""
+
+#: ../../Changelog:230
+msgid "Contributed by **Steven Sklar**"
+msgstr ""
+
+#: ../../Changelog:232
+msgid "**Deployment**: Fix init.d service stop."
+msgstr ""
+
+#: ../../Changelog:234
+msgid "Contributed by **Marcus McHale**"
+msgstr ""
+
+#: ../../Changelog:236
+msgid "**Django**: Drop support for Django < 1.11."
+msgstr ""
+
+#: ../../Changelog:240
+msgid "**Django**: Remove old djcelery loader."
+msgstr ""
+
+#: ../../Changelog:244
+msgid ""
+"**Result Backend**: :class:`celery.worker.request.Request` now passes "
+":class:`celery.app.task.Context` to the backend's store_result functions."
+msgstr ""
+
+#: ../../Changelog:247
+msgid ""
+"Since the class currently passes `self` to these functions, revoking a "
+"task resulted in corrupted task result data when django-celery-results "
+"was used."
+msgstr ""
+
+#: ../../Changelog:251
+msgid "Contributed by **Kiyohiro Yamaguchi**"
+msgstr ""
+
+#: ../../Changelog:253
+msgid "**Worker**: Retry if the heartbeat connection dies."
+msgstr ""
+
+#: ../../Changelog:255
+msgid ""
+"Previously, we keep trying to write to the broken connection. This "
+"results in a memory leak because the event dispatcher will keep appending"
+" the message to the outbound buffer."
+msgstr ""
+
+#: ../../Changelog:259
+msgid "Contributed by **Raf Geens**"
+msgstr ""
+
+#: ../../Changelog:261
+msgid "**Celery Beat**: Handle microseconds when scheduling."
+msgstr ""
+
+#: ../../Changelog:263
+msgid "Contributed by **K Davis**"
+msgstr ""
+
+#: ../../Changelog:265
+msgid "**Asynpool**: Fixed deadlock when closing socket."
+msgstr ""
+
+#: ../../Changelog:267
+msgid ""
+"Upon attempting to close a socket, "
+":class:`celery.concurrency.asynpool.AsynPool` only removed the queue "
+"writer from the hub but did not remove the reader. This led to a deadlock"
+" on the file descriptor and eventually the worker stopped accepting new "
+"tasks."
+msgstr ""
+
+#: ../../Changelog:272
+msgid ""
+"We now close both the reader and the writer file descriptors in a single "
+"loop iteration which prevents the deadlock."
+msgstr ""
+
+#: ../../Changelog:275
+msgid "Contributed by **Joshua Engelman**"
+msgstr ""
+
+#: ../../Changelog:277
+msgid "**Celery Beat**: Correctly consider timezone when calculating timestamp."
+msgstr ""
+
+#: ../../Changelog:279
+msgid "Contributed by **:github_user:`yywing`**"
+msgstr ""
+
+#: ../../Changelog:281
+msgid ""
+"**Celery Beat**: :meth:`celery.beat.Scheduler.schedules_equal` can now "
+"handle either arguments being a `None` value."
+msgstr ""
+
+#: ../../Changelog:284
+msgid "Contributed by **:github_user:` ratson`**"
+msgstr ""
+
+#: ../../Changelog:286
+msgid ""
+"**Documentation/Sphinx**: Fixed Sphinx support for shared_task decorated "
+"functions."
+msgstr ""
+
+#: ../../Changelog:288
+msgid "Contributed by **Jon Banafato**"
+msgstr ""
+
+#: ../../Changelog:290
+msgid "**New Result Backend**: Added the CosmosDB result backend."
+msgstr ""
+
+#: ../../Changelog:292
+msgid ""
+"This change adds a new results backend. The backend is implemented on top"
+" of the pydocumentdb library which uses Azure CosmosDB for a scalable, "
+"globally replicated, high-performance, low-latency and high-throughput "
+"PaaS backend."
+msgstr ""
+
+#: ../../Changelog:299
+msgid ""
+"**Application**: Added configuration options to allow separate multiple "
+"apps to run on a single RabbitMQ vhost."
+msgstr ""
+
+#: ../../Changelog:302
+msgid ""
+"The newly added :setting:`event_exchange` and :setting:`control_exchange`"
+" configuration options allow users to use separate Pidbox exchange and a "
+"separate events exchange."
+msgstr ""
+
+#: ../../Changelog:306
+msgid ""
+"This allow different Celery applications to run separately on the same "
+"vhost."
+msgstr ""
+
+#: ../../Changelog:308
+msgid "Contributed by **Artem Vasilyev**"
+msgstr ""
+
+#: ../../Changelog:310
+msgid ""
+"**Result Backend**: Forget parent result metadata when forgetting a "
+"result."
+msgstr ""
+
+#: ../../Changelog:313
+msgid "Contributed by **:github_user:`tothegump`**"
+msgstr ""
+
+#: ../../Changelog:315
+msgid ""
+"**Task** Store task arguments inside "
+":class:`celery.exceptions.MaxRetriesExceededError`."
+msgstr ""
+
+#: ../../Changelog:317
+msgid "Contributed by **Anthony Ruhier**"
+msgstr ""
+
+#: ../../Changelog:319
+msgid "**Result Backend**: Added the :setting:`result_accept_content` setting."
+msgstr ""
+
+#: ../../Changelog:321
+msgid ""
+"This feature allows to configure different accepted content for the "
+"result backend."
+msgstr ""
+
+#: ../../Changelog:324
+msgid ""
+"A special serializer (`auth`) is used for signed messaging, however the "
+"result_serializer remains in json, because we don't want encrypted "
+"content in our result backend."
+msgstr ""
+
+#: ../../Changelog:328
+msgid ""
+"To accept unsigned content from the result backend, we introduced this "
+"new configuration option to specify the accepted content from the "
+"backend."
+msgstr ""
+
+#: ../../Changelog:332 ../../Changelog:361
+msgid "Contributed by **Benjamin Pereto**"
+msgstr ""
+
+#: ../../Changelog:334
+msgid "**Canvas**: Fixed error callback processing for class based tasks."
+msgstr ""
+
+#: ../../Changelog:336
+msgid "Contributed by **Victor Mireyev**"
+msgstr ""
+
+#: ../../Changelog:338
+msgid "**New Result Backend**: Added the S3 result backend."
+msgstr ""
+
+#: ../../Changelog:340
+msgid "Contributed by **Florian Chardin**"
+msgstr ""
+
+#: ../../Changelog:342
+msgid "**Task**: Added support for Cythonized Celery tasks."
+msgstr ""
+
+#: ../../Changelog:344
+msgid "Contributed by **Andrey Skabelin**"
+msgstr ""
+
+#: ../../Changelog:346
+msgid ""
+"**Riak Result Backend**: Warn Riak backend users for possible Python 3.7 "
+"incompatibilities."
+msgstr ""
+
+#: ../../Changelog:350
+msgid "**Python Runtime**: Added Python 3.7 support."
+msgstr ""
+
+#: ../../Changelog:352
+msgid "Contributed by **Omer Katz** & **Asif Saif Uddin**"
+msgstr ""
+
+#: ../../Changelog:354
+msgid "**Auth Serializer**: Revamped the auth serializer."
+msgstr ""
+
+#: ../../Changelog:356
+msgid ""
+"The auth serializer received a complete overhaul. It was previously "
+"horribly broken."
+msgstr ""
+
+#: ../../Changelog:359
+msgid "We now depend on cryptography instead of pyOpenSSL for this serializer."
+msgstr ""
+
+#: ../../Changelog:363
+msgid ""
+"**Command Line**: :program:`celery report` now reports kernel version "
+"along with other platform details."
+msgstr ""
+
+#: ../../Changelog:368
+msgid "**Canvas**: Fixed chords with chains which include sub chords in a group."
+msgstr ""
+
+#: ../../Changelog:370
+msgid "Celery now correctly executes the last task in these types of canvases:"
+msgstr ""
+
+#: ../../Changelog:396
+msgid "Contributed by **Maximilien Cuony**"
+msgstr ""
+
+#: ../../Changelog:398
+msgid ""
+"**Canvas**: Complex canvases with error callbacks no longer raises an "
+":class:`AttributeError`."
+msgstr ""
+
+#: ../../Changelog:400
+msgid ""
+"Very complex canvases such as `this "
+"<https://github.com/merchise/xopgi.base/blob/6634819ad5c701c04bc9baa5c527449070843b71/xopgi/xopgi_cdr/cdr_agent.py#L181>`_"
+" no longer raise an :class:`AttributeError` which prevents constructing "
+"them."
+msgstr ""
+
+#: ../../Changelog:403
+msgid "We do not know why this bug occurs yet."
+msgstr ""
+
+#: ../../Changelog:405
+msgid "Contributed by **Manuel Vázquez Acosta**"
+msgstr ""
+
+#: ../../Changelog:407
+msgid ""
+"**Command Line**: Added proper error messages in cases where app cannot "
+"be loaded."
+msgstr ""
+
+#: ../../Changelog:409
+msgid "Previously, celery crashed with an exception."
+msgstr ""
+
+#: ../../Changelog:411
+msgid "We now print a proper error message."
+msgstr ""
+
+#: ../../Changelog:415
+msgid "**Task**: Added the :setting:`task_default_priority` setting."
+msgstr ""
+
+#: ../../Changelog:417
+msgid ""
+"You can now set the default priority of a task using the "
+":setting:`task_default_priority` setting. The setting's value will be "
+"used if no priority is provided for a specific task."
+msgstr ""
+
+#: ../../Changelog:422 ../../Changelog:495
+msgid "Contributed by **:github_user:`madprogrammer`**"
+msgstr ""
+
+#: ../../Changelog:424
+msgid ""
+"**Dependencies**: Bump minimum required version of Kombu to 4.3 and "
+"Billiard to 3.6."
+msgstr ""
+
+#: ../../Changelog:429
+msgid "**Result Backend**: Fix memory leak."
+msgstr ""
+
+#: ../../Changelog:431
+msgid ""
+"We reintroduced weak references to bound methods for AsyncResult callback"
+" promises, after adding full weakref support for Python 2 in `vine "
+"<https://github.com/celery/vine/tree/v1.2.0>`_. More details can be found"
+" in `celery/celery#4839 <https://github.com/celery/celery/pull/4839>`_."
+msgstr ""
+
+#: ../../Changelog:435
+msgid "Contributed by **George Psarakis** and **:github_user:`monsterxx03`**."
+msgstr ""
+
+#: ../../Changelog:437
+msgid "**Task Execution**: Fixed roundtrip serialization for eager tasks."
+msgstr ""
+
+#: ../../Changelog:439
+msgid ""
+"When doing the roundtrip serialization for eager tasks, the task "
+"serializer will always be JSON unless the `serializer` argument is "
+"present in the call to :meth:`celery.app.task.Task.apply_async`. If the "
+"serializer argument is present but is `'pickle'`, an exception will be "
+"raised as pickle-serialized objects cannot be deserialized without "
+"specifying to `serialization.loads` what content types should be "
+"accepted. The Producer's `serializer` seems to be set to `None`, causing "
+"the default to JSON serialization."
+msgstr ""
+
+#: ../../Changelog:449
+msgid ""
+"We now continue to use (in order) the `serializer` argument to "
+":meth:`celery.app.task.Task.apply_async`, if present, or the `Producer`'s"
+" serializer if not `None`. If the `Producer`'s serializer is `None`, it "
+"will use the Celery app's `task_serializer` configuration entry as the "
+"serializer."
+msgstr ""
+
+#: ../../Changelog:454
+msgid "Contributed by **Brett Jackson**"
+msgstr ""
+
+#: ../../Changelog:456
+msgid ""
+"**Redis Result Backend**: The "
+":class:`celery.backends.redis.ResultConsumer` class no longer assumes "
+":meth:`celery.backends.redis.ResultConsumer.start` to be called before "
+":meth:`celery.backends.redis.ResultConsumer.drain_events`."
+msgstr ""
+
+#: ../../Changelog:460
+msgid "This fixes a race condition when using the Gevent workers pool."
+msgstr ""
+
+#: ../../Changelog:462
+msgid "Contributed by **Noam Kush**"
+msgstr ""
+
+#: ../../Changelog:464
+msgid "**Task**: Added the :setting:`task_inherit_parent_priority` setting."
+msgstr ""
+
+#: ../../Changelog:466
+msgid ""
+"Setting the :setting:`task_inherit_parent_priority` configuration option "
+"to `True` will make Celery tasks inherit the priority of the previous "
+"task linked to it."
+msgstr ""
+
+#: ../../Changelog:470
+msgid "Examples:"
+msgstr ""
+
+#: ../../Changelog:497
+msgid "**Canvas**: Added the :setting:`result_chord_join_timeout` setting."
+msgstr ""
+
+#: ../../Changelog:499
+msgid ""
+"Previously, :meth:`celery.result.GroupResult.join` had a fixed timeout of"
+" 3 seconds."
+msgstr ""
+
+#: ../../Changelog:502
+msgid ""
+"The :setting:`result_chord_join_timeout` setting now allows you to change"
+" it."
+msgstr ""
+
+#: ../../Changelog:504
+msgid "Contributed by **:github_user:`srafehi`**"
+msgstr ""
+
+#: ../../Changelog:508
+msgid "**Jon Dufresne**"
+msgstr ""
+
+#: ../../Changelog:509 ../../Changelog:530
+msgid "**Asif Saif Uddin**"
+msgstr ""
+
+#: ../../Changelog:511
+msgid "**Brett Jackson**"
+msgstr ""
+
+#: ../../Changelog:512
+msgid "**Bruno Alla**"
+msgstr ""
+
+#: ../../Changelog:513
+msgid "**:github_user:`tothegump`**"
+msgstr ""
+
+#: ../../Changelog:514
+msgid "**Bojan Jovanovic**"
+msgstr ""
+
+#: ../../Changelog:516
+msgid "**:github_user:`walterqian`**"
+msgstr ""
+
+#: ../../Changelog:517
+msgid "**Fabian Becker**"
+msgstr ""
+
+#: ../../Changelog:518
+msgid "**Lars Rinn**"
+msgstr ""
+
+#: ../../Changelog:519
+msgid "**:github_user:`madprogrammer`**"
+msgstr ""
+
+#: ../../Changelog:520
+msgid "**Ciaran Courtney**"
+msgstr ""
+
+#: ../../Changelog:524
+msgid "**Lewis M. Kabui**"
+msgstr ""
+
+#: ../../Changelog:525
+msgid "**Dash Winterson**"
+msgstr ""
+
+#: ../../Changelog:526
+msgid "**Shanavas M**"
+msgstr ""
+
+#: ../../Changelog:527
+msgid "**Brett Randall**"
+msgstr ""
+
+#: ../../Changelog:528
+msgid "**Przemysław Suliga**"
+msgstr ""
+
+#: ../../Changelog:529
+msgid "**Joshua Schmid**"
+msgstr ""
+
+#: ../../Changelog:531
+msgid "**Xiaodong**"
+msgstr ""
+
+#: ../../Changelog:532
+msgid "**Vikas Prasad**"
+msgstr ""
+
+#: ../../Changelog:533
+msgid "**Jamie Alessio**"
+msgstr ""
+
+#: ../../Changelog:534
+msgid "**Lars Kruse**"
+msgstr ""
+
+#: ../../Changelog:535
+msgid "**Guilherme Caminha**"
+msgstr ""
+
+#: ../../Changelog:536
+msgid "**Andrea Rabbaglietti**"
+msgstr ""
+
+#: ../../Changelog:537
+msgid "**Itay Bittan**"
+msgstr ""
+
+#: ../../Changelog:538
+msgid "**Noah Hall**"
+msgstr ""
+
+#: ../../Changelog:539
+msgid "**Peng Weikang**"
+msgstr ""
+
+#: ../../Changelog:540
+msgid "**Mariatta Wijaya**"
+msgstr ""
+
+#: ../../Changelog:541
+msgid "**Ed Morley**"
+msgstr ""
+
+#: ../../Changelog:542
+msgid "**Paweł Adamczak**"
+msgstr ""
+
+#: ../../Changelog:543
+msgid "**:github_user:`CoffeeExpress`**"
+msgstr ""
+
+#: ../../Changelog:544
+msgid "**:github_user:`aviadatsnyk`**"
+msgstr ""
+
+#: ../../Changelog:545
+msgid "**Brian Schrader**"
+msgstr ""
+
+#: ../../Changelog:546
+msgid "**Josue Balandrano Coronel**"
+msgstr ""
+
+#: ../../Changelog:547
+msgid "**Tom Clancy**"
+msgstr ""
+
+#: ../../Changelog:548
+msgid "**Sebastian Wojciechowski**"
+msgstr ""
+
+#: ../../Changelog:549
+msgid "**Meysam Azad**"
+msgstr ""
+
+#: ../../Changelog:550
+msgid "**Willem Thiart**"
+msgstr ""
+
+#: ../../Changelog:551
+msgid "**Charles Chan**"
+msgstr ""
+
+#: ../../Changelog:553
+msgid "**Milind Shakya**"
+msgstr ""
+

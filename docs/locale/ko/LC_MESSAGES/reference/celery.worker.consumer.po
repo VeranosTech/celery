@@ -1,0 +1,168 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../reference/celery.worker.consumer.rst:3
+msgid "``celery.worker.consumer``"
+msgstr ""
+
+#: celery.worker.consumer:1 of
+msgid "Worker consumer."
+msgstr ""
+
+#: celery.worker.consumer.Consumer:1
+#: celery.worker.consumer.Consumer.Blueprint:1 of
+msgid "Consumer blueprint."
+msgstr ""
+
+#: celery.worker.consumer.Consumer.apply_eta_task:1 of
+msgid "Method called by the timer to apply a task with an ETA/countdown."
+msgstr ""
+
+#: celery.worker.consumer.Consumer.connect:1 of
+msgid "Establish the broker connection used for consuming tasks."
+msgstr ""
+
+#: celery.worker.consumer.Consumer.connect:3 of
+msgid ""
+"Retries establishing the connection if the "
+":setting:`broker_connection_retry` setting is enabled"
+msgstr ""
+
+#: celery.worker.consumer.Consumer.init_callback:1 of
+msgid ""
+"Optional callback called the first time the worker is ready to receive "
+"tasks."
+msgstr ""
+
+#: celery.worker.consumer.Consumer.on_decode_error:1 of
+msgid "Callback called if an error occurs while decoding a message."
+msgstr ""
+
+#: celery.worker.consumer.Consumer.on_decode_error:3 of
+msgid ""
+"Simply logs the error and acknowledges the message so it doesn't enter a "
+"loop."
+msgstr ""
+
+#: celery.worker.consumer.Consumer.on_decode_error of
+msgid "Parameters"
+msgstr ""
+
+#: celery.worker.consumer.Consumer.on_decode_error:6 of
+msgid "The message received."
+msgstr ""
+
+#: celery.worker.consumer.Consumer.on_decode_error:8 of
+msgid "The exception being handled."
+msgstr ""
+
+#: celery.worker.consumer.Consumer.pool:1 of
+msgid "The current worker pool instance."
+msgstr ""
+
+#: celery.worker.consumer.Consumer.timer:1 of
+msgid "A timer used for high-priority internal tasks, such as sending heartbeats."
+msgstr ""
+
+#: celery.worker.consumer.Agent:1 of
+msgid "Agent starts :pypi:`cell` actors."
+msgstr ""
+
+#: celery.worker.consumer.Agent.create:1 of
+msgid "Create the step."
+msgstr ""
+
+#: celery.worker.consumer.Connection:1 of
+msgid "Service managing the consumer broker connection."
+msgstr ""
+
+#: celery.worker.consumer.Control:1 of
+msgid "Remote control command service."
+msgstr ""
+
+#: celery.worker.consumer.Control.include_if:1 of
+msgid "Return true if bootstep should be included."
+msgstr ""
+
+#: celery.worker.consumer.Control.include_if:3 of
+msgid ""
+"You can define this as an optional predicate that decides whether this "
+"step should be created."
+msgstr ""
+
+#: celery.worker.consumer.Events:1 of
+msgid "Service used for sending monitoring events."
+msgstr ""
+
+#: celery.worker.consumer.Gossip:1 of
+msgid "Bootstep consuming events from other workers."
+msgstr ""
+
+#: celery.worker.consumer.Gossip:3 of
+msgid "This keeps the logical clock value up to date."
+msgstr ""
+
+#: celery.worker.consumer.Heart:1 of
+msgid "Bootstep sending event heartbeats."
+msgstr ""
+
+#: celery.worker.consumer.Heart:3 of
+msgid "This service sends a ``worker-heartbeat`` message every n seconds."
+msgstr ""
+
+#: celery.worker.consumer.Heart:5 of
+msgid "Not to be confused with AMQP protocol level heartbeats."
+msgstr ""
+
+#: celery.worker.consumer.Mingle:1 of
+msgid "Bootstep syncing state with neighbor workers."
+msgstr ""
+
+#: celery.worker.consumer.Mingle:3 of
+msgid "At startup, or upon consumer restart, this will:"
+msgstr ""
+
+#: celery.worker.consumer.Mingle:5 of
+msgid "Sync logical clocks."
+msgstr ""
+
+#: celery.worker.consumer.Mingle:6 of
+msgid "Sync revoked tasks."
+msgstr ""
+
+#: celery.worker.consumer.Tasks:1 of
+msgid "Bootstep starting the task message consumer."
+msgstr ""
+
+#: celery.worker.consumer.Tasks.info:1 of
+msgid "Return task consumer info."
+msgstr ""
+
+#: celery.worker.consumer.Tasks.shutdown:1 of
+msgid "Shutdown task consumer."
+msgstr ""
+
+#: celery.worker.consumer.Tasks.start:1 of
+msgid "Start task consumer."
+msgstr ""
+
+#: celery.worker.consumer.Tasks.stop:1 of
+msgid "Stop task consumer."
+msgstr ""
+

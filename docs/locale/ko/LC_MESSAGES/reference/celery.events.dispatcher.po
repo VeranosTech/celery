@@ -1,0 +1,147 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../reference/celery.events.dispatcher.rst:3
+msgid "``celery.events.state``"
+msgstr ""
+
+#: celery.events.dispatcher:1 of
+msgid "Event dispatcher sends events."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher:1 of
+msgid "Dispatches event messages."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher
+#: celery.events.dispatcher.EventDispatcher.publish
+#: celery.events.dispatcher.EventDispatcher.send of
+msgid "Parameters"
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher:3 of
+msgid "Connection to the broker."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher:5 of
+msgid ""
+"Hostname to identify ourselves as, by default uses the hostname returned "
+"by :func:`~celery.utils.anon_nodename`."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher:9 of
+msgid ""
+"List of groups to send events for. :meth:`send` will ignore send requests"
+" to groups not in this list. If this is :const:`None`, all events will be"
+" sent. Example groups include ``\"task\"`` and ``\"worker\"``."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher:14 of
+msgid ""
+"Set to :const:`False` to not actually publish any events, making "
+":meth:`send` a no-op."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher:17 of
+msgid ""
+"Can be used instead of `connection` to specify an exact channel to use "
+"when sending events."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher:20 of
+msgid ""
+"If enabled events will be buffered while the connection is down. "
+":meth:`flush` must be called as soon as the connection is re-established."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher:25 of
+msgid "You need to :meth:`close` this after use."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher.close:1 of
+msgid "Close the event dispatcher."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher.extend_buffer:1 of
+msgid "Copy the outbound buffer of another instance."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher.flush:1 of
+msgid "Flush the outbound buffer."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher.publish:1 of
+msgid "Publish event using custom :class:`~kombu.Producer`."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher.publish:3 of
+msgid ""
+"Event type name, with group separated by dash (`-`). fields: Dictionary "
+"of event fields, must be json serializable."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher.publish:6 of
+msgid "Producer instance to use: only the ``publish`` method will be called."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher.publish:9
+#: celery.events.dispatcher.EventDispatcher.send:5 of
+msgid "Retry in the event of connection failure."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher.publish:11
+#: celery.events.dispatcher.EventDispatcher.send:7 of
+msgid "Map of custom retry policy options. See :meth:`~kombu.Connection.ensure`."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher.publish:14
+#: celery.events.dispatcher.EventDispatcher.send:10 of
+msgid ""
+"Don't set logical clock value (also don't forward the internal logical "
+"clock)."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher.publish:17 of
+msgid "Event type used to create event. Defaults to :func:`Event`."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher.publish:20 of
+msgid "Function returning the current utc offset in hours."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher.send:1 of
+msgid "Send event."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher.send:3 of
+msgid "Event type name, with group separated by dash (`-`)."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher.send:13 of
+msgid "Event type used to create event, defaults to :func:`Event`."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher.send:16 of
+msgid "unction returning the current utc offset in hours."
+msgstr ""
+
+#: celery.events.dispatcher.EventDispatcher.send:19 of
+msgid "Event fields -- must be json serializable."
+msgstr ""
+

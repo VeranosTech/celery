@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../internals/reference/celery.backends.filesystem.rst:3
+msgid "``celery.backends.filesystem``"
+msgstr ""
+
+#: celery.backends.filesystem:1 of
+msgid "File-system result store backend."
+msgstr ""
+
+#: celery.backends.filesystem.FilesystemBackend:1 of
+msgid "File-system result backend."
+msgstr ""
+
+#: celery.backends.filesystem.FilesystemBackend of
+msgid "Parameters"
+msgstr ""
+
+#: celery.backends.filesystem.FilesystemBackend:3 of
+msgid "URL to the directory we should use"
+msgstr ""
+
+#: celery.backends.filesystem.FilesystemBackend:5 of
+msgid "open function to use when opening files"
+msgstr ""
+
+#: celery.backends.filesystem.FilesystemBackend:7 of
+msgid "unlink function to use when deleting files"
+msgstr ""
+
+#: celery.backends.filesystem.FilesystemBackend:9 of
+msgid "directory separator (to join the directory with the key)"
+msgstr ""
+
+#: celery.backends.filesystem.FilesystemBackend:11 of
+msgid "encoding used on the file-system"
+msgstr ""
+

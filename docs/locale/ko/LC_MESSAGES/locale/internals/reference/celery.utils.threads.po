@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../internals/reference/celery.utils.threads.rst:3
+msgid "``celery.utils.threads``"
+msgstr ""
+
+#: celery.utils.threads:1 of
+msgid "Threading primitives and utilities."
+msgstr ""
+
+#: celery.utils.threads.bgThread:1 of
+msgid "Background service thread."
+msgstr ""
+
+#: celery.utils.threads.bgThread.run:1 of
+msgid "Method representing the thread's activity."
+msgstr ""
+
+#: celery.utils.threads.bgThread.run:3 of
+msgid ""
+"You may override this method in a subclass. The standard run() method "
+"invokes the callable object passed to the object's constructor as the "
+"target argument, if any, with sequential and keyword arguments taken from"
+" the args and kwargs arguments, respectively."
+msgstr ""
+
+#: celery.utils.threads.bgThread.stop:1 of
+msgid "Graceful shutdown."
+msgstr ""
+
+#: celery.utils.threads.Local:1 of
+msgid "Local object."
+msgstr ""
+
+#: celery.utils.threads.LocalManager:1 of
+msgid "Local objects cannot manage themselves."
+msgstr ""
+
+#: celery.utils.threads.LocalManager:3 of
+msgid ""
+"For that you need a local manager. You can pass a local manager multiple "
+"locals or add them later by appending them to ``manager.locals``.  Every "
+"time the manager cleans up, it will clean up all the data left in the "
+"locals for this context."
+msgstr ""
+
+#: celery.utils.threads.LocalManager:9 of
+msgid ""
+"The ``ident_func`` parameter can be added to override the default ident "
+"function for the wrapped locals."
+msgstr ""
+
+#: celery.utils.threads.LocalManager.cleanup:1 of
+msgid "Manually clean up the data in the locals for this context."
+msgstr ""
+
+#: celery.utils.threads.LocalManager.cleanup:3 of
+msgid "Call this at the end of the request or use ``make_middleware()``."
+msgstr ""
+
+#: celery.utils.threads.LocalManager.get_ident:1 of
+msgid "Return context identifier."
+msgstr ""
+
+#: celery.utils.threads.LocalManager.get_ident:3 of
+msgid ""
+"This is the indentifer the local objects use internally for this context."
+"  You cannot override this method to change the behavior but use it to "
+"link other context local objects (such as SQLAlchemy's scoped sessions) "
+"to the Werkzeug locals."
+msgstr ""
+
+#: celery.utils.threads.default_socket_timeout:1 of
+msgid "Context temporarily setting the default socket timeout."
+msgstr ""
+

@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:42+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../community.rst:5
+msgid "Community Resources"
+msgstr ""
+
+#: ../../community.rst:7
+msgid ""
+"This is a list of external blog posts, tutorials, and slides related to "
+"Celery. If you have a link that's missing from this list, please contact "
+"the mailing-list or submit a patch."
+msgstr ""
+
+#: ../../community.rst:17
+msgid "Resources"
+msgstr ""
+
+#: ../../community.rst:22
+msgid "Who's using Celery"
+msgstr ""
+
+#: ../../community.rst:24
+msgid "https://github.com/celery/celery/wiki#companieswebsites-using-celery"
+msgstr ""
+
+#: ../../community.rst:29
+msgid "Wiki"
+msgstr ""
+
+#: ../../community.rst:31
+msgid "https://github.com/celery/celery/wiki"
+msgstr ""
+
+#: ../../community.rst:36
+msgid "Celery questions on Stack Overflow"
+msgstr ""
+
+#: ../../community.rst:38
+msgid "https://stackoverflow.com/search?q=celery&tab=newest"
+msgstr ""
+
+#: ../../community.rst:43
+msgid "Mailing-list Archive: celery-users"
+msgstr ""
+
+#: ../../community.rst:45
+msgid "http://blog.gmane.org/gmane.comp.python.amqp.celery.user"
+msgstr ""
+
+#: ../../community.rst:52
+msgid "News"
+msgstr ""
+
+#: ../../community.rst:54
+msgid ""
+"This section has moved to the Celery homepage: "
+"http://celeryproject.org/community/"
+msgstr ""
+

@@ -1,0 +1,475 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../internals/protocol.rst:5
+msgid "Message Protocol"
+msgstr ""
+
+#: ../../internals/protocol.rst:14
+msgid "Task messages"
+msgstr ""
+
+#: ../../internals/protocol.rst:19
+msgid "Version 2"
+msgstr ""
+
+#: ../../internals/protocol.rst:22
+msgid "Definition"
+msgstr ""
+
+#: ../../internals/protocol.rst:66
+msgid "Example"
+msgstr ""
+
+#: ../../internals/protocol.rst:68
+msgid "This example sends a task message using version 2 of the protocol:"
+msgstr ""
+
+#: ../../internals/protocol.rst:98
+msgid "Changes from version 1"
+msgstr ""
+
+#: ../../internals/protocol.rst:100
+msgid "Protocol version detected by the presence of a ``task`` message header."
+msgstr ""
+
+#: ../../internals/protocol.rst:102
+msgid "Support for multiple languages via the ``lang`` header."
+msgstr ""
+
+#: ../../internals/protocol.rst:104
+msgid "Worker may redirect the message to a worker that supports the language."
+msgstr ""
+
+#: ../../internals/protocol.rst:107
+msgid "Meta-data moved to headers."
+msgstr ""
+
+#: ../../internals/protocol.rst:109
+msgid ""
+"This means that workers/intermediates can inspect the message and make "
+"decisions based on the headers without decoding the payload (that may be "
+"language specific, for example serialized by the Python specific pickle "
+"serializer)."
+msgstr ""
+
+#: ../../internals/protocol.rst:114
+msgid "Always UTC"
+msgstr ""
+
+#: ../../internals/protocol.rst:116
+msgid ""
+"There's no ``utc`` flag anymore, so any time information missing timezone"
+" will be expected to be in UTC time."
+msgstr ""
+
+#: ../../internals/protocol.rst:119
+msgid "Body is only for language specific data."
+msgstr ""
+
+#: ../../internals/protocol.rst:121
+msgid "Python stores args/kwargs and embedded signatures in body."
+msgstr ""
+
+#: ../../internals/protocol.rst:123
+msgid ""
+"If a message uses raw encoding then the raw data will be passed as a "
+"single argument to the function."
+msgstr ""
+
+#: ../../internals/protocol.rst:126
+msgid "Java/C, etc. can use a Thrift/protobuf document as the body"
+msgstr ""
+
+#: ../../internals/protocol.rst:128
+msgid "``origin`` is the name of the node sending the task."
+msgstr ""
+
+#: ../../internals/protocol.rst:130
+msgid "Dispatches to actor based on ``task``, ``meth`` headers"
+msgstr ""
+
+#: ../../internals/protocol.rst:132
+msgid ""
+"``meth`` is unused by Python, but may be used in the future to specify "
+"class+method pairs."
+msgstr ""
+
+#: ../../internals/protocol.rst:135
+msgid "Chain gains a dedicated field."
+msgstr ""
+
+#: ../../internals/protocol.rst:137
+msgid ""
+"Reducing the chain into a recursive ``callbacks`` argument causes "
+"problems when the recursion limit is exceeded."
+msgstr ""
+
+#: ../../internals/protocol.rst:140
+msgid ""
+"This is fixed in the new message protocol by specifying a list of "
+"signatures, each task will then pop a task off the list when sending the "
+"next message:"
+msgstr ""
+
+#: ../../internals/protocol.rst:152
+msgid "``correlation_id`` replaces ``task_id`` field."
+msgstr ""
+
+#: ../../internals/protocol.rst:154
+msgid "``root_id`` and ``parent_id`` fields helps keep track of work-flows."
+msgstr ""
+
+#: ../../internals/protocol.rst:156
+msgid ""
+"``shadow`` lets you specify a different name for logs, monitors can be "
+"used for concepts like tasks that calls a function specified as argument:"
+msgstr ""
+
+#: ../../internals/protocol.rst:184
+msgid "Version 1"
+msgstr ""
+
+#: ../../internals/protocol.rst:186
+msgid ""
+"In version 1 of the protocol all fields are stored in the message body: "
+"meaning workers and intermediate consumers must deserialize the payload "
+"to read the fields."
+msgstr ""
+
+#: ../../internals/protocol.rst:191
+msgid "Message body"
+msgstr ""
+
+#: ../../internals/protocol.rst:196
+msgid "``task``"
+msgstr ""
+
+#: ../../internals/protocol.rst
+msgid "`string`"
+msgstr ""
+
+#: ../../internals/protocol.rst:196
+msgid "Name of the task. **required**"
+msgstr ""
+
+#: ../../internals/protocol.rst:201
+msgid "``id``"
+msgstr ""
+
+#: ../../internals/protocol.rst:201
+msgid "Unique id of the task (UUID). **required**"
+msgstr ""
+
+#: ../../internals/protocol.rst:206
+msgid "``args``"
+msgstr ""
+
+#: ../../internals/protocol.rst
+msgid "`list`"
+msgstr ""
+
+#: ../../internals/protocol.rst:206
+msgid "List of arguments. Will be an empty list if not provided."
+msgstr ""
+
+#: ../../internals/protocol.rst:212
+msgid "``kwargs``"
+msgstr ""
+
+#: ../../internals/protocol.rst
+msgid "`dictionary`"
+msgstr ""
+
+#: ../../internals/protocol.rst:211
+msgid ""
+"Dictionary of keyword arguments. Will be an empty dictionary if not "
+"provided."
+msgstr ""
+
+#: ../../internals/protocol.rst:218
+msgid "``retries``"
+msgstr ""
+
+#: ../../internals/protocol.rst
+msgid "`int`"
+msgstr ""
+
+#: ../../internals/protocol.rst:217
+msgid ""
+"Current number of times this task has been retried. Defaults to `0` if "
+"not specified."
+msgstr ""
+
+#: ../../internals/protocol.rst:225
+msgid "``eta``"
+msgstr ""
+
+#: ../../internals/protocol.rst
+msgid "`string` (ISO 8601)"
+msgstr ""
+
+#: ../../internals/protocol.rst:223
+msgid ""
+"Estimated time of arrival. This is the date and time in ISO 8601 format. "
+"If not provided the message isn't scheduled, but will be executed asap."
+msgstr ""
+
+#: ../../internals/protocol.rst:235
+msgid "``expires``"
+msgstr ""
+
+#: ../../internals/protocol.rst:232
+msgid ""
+"Expiration date. This is the date and time in ISO 8601 format. If not "
+"provided the message will never expire. The message will be expired when "
+"the message is received and the expiration date has been exceeded."
+msgstr ""
+
+#: ../../internals/protocol.rst:240
+msgid "``taskset``"
+msgstr ""
+
+#: ../../internals/protocol.rst:240
+msgid "The group this task is part of (if any)."
+msgstr ""
+
+#: ../../internals/protocol.rst:249
+msgid "``chord``"
+msgstr ""
+
+#: ../../internals/protocol.rst
+msgid "`Signature`"
+msgstr ""
+
+#: ../../internals/protocol.rst:247
+msgid ""
+"Signifies that this task is one of the header parts of a chord. The value"
+" of this key is the body of the cord that should be executed when all of "
+"the tasks in the header has returned."
+msgstr ""
+
+#: ../../internals/protocol.rst:257
+msgid "``utc``"
+msgstr ""
+
+#: ../../internals/protocol.rst
+msgid "`bool`"
+msgstr ""
+
+#: ../../internals/protocol.rst:256
+msgid ""
+"If true time uses the UTC timezone, if not the current local timezone "
+"should be used."
+msgstr ""
+
+#: ../../internals/protocol.rst:264
+msgid "``callbacks``"
+msgstr ""
+
+#: ../../internals/protocol.rst
+msgid "`<list>Signature`"
+msgstr ""
+
+#: ../../internals/protocol.rst:264
+msgid "A list of signatures to call if the task exited successfully."
+msgstr ""
+
+#: ../../internals/protocol.rst:271
+msgid "``errbacks``"
+msgstr ""
+
+#: ../../internals/protocol.rst:271
+msgid "A list of signatures to call if an error occurs while executing the task."
+msgstr ""
+
+#: ../../internals/protocol.rst:285
+msgid "``timelimit``"
+msgstr ""
+
+#: ../../internals/protocol.rst
+msgid "`<tuple>(float, float)`"
+msgstr ""
+
+#: ../../internals/protocol.rst:278
+msgid ""
+"Task execution time limit settings. This is a tuple of hard and soft time"
+" limit value (`int`/`float` or :const:`None` for no limit)."
+msgstr ""
+
+#: ../../internals/protocol.rst:281
+msgid ""
+"Example value specifying a soft time limit of 3 seconds, and a hard time "
+"limit of 10 seconds::"
+msgstr ""
+
+#: ../../internals/protocol.rst:288 ../../internals/protocol.rst:370
+msgid "Example message"
+msgstr ""
+
+#: ../../internals/protocol.rst:290
+msgid "This is an example invocation of a `celery.task.ping` task in json format:"
+msgstr ""
+
+#: ../../internals/protocol.rst:303
+msgid "Task Serialization"
+msgstr ""
+
+#: ../../internals/protocol.rst:305
+msgid ""
+"Several types of serialization formats are supported using the "
+"`content_type` message header."
+msgstr ""
+
+#: ../../internals/protocol.rst:308
+msgid "The MIME-types supported by default are shown in the following table."
+msgstr ""
+
+#: ../../internals/protocol.rst:311
+msgid "Scheme"
+msgstr ""
+
+#: ../../internals/protocol.rst:311
+msgid "MIME Type"
+msgstr ""
+
+#: ../../internals/protocol.rst:313
+msgid "json"
+msgstr ""
+
+#: ../../internals/protocol.rst:313
+msgid "application/json"
+msgstr ""
+
+#: ../../internals/protocol.rst:314
+msgid "yaml"
+msgstr ""
+
+#: ../../internals/protocol.rst:314
+msgid "application/x-yaml"
+msgstr ""
+
+#: ../../internals/protocol.rst:315
+msgid "pickle"
+msgstr ""
+
+#: ../../internals/protocol.rst:315
+msgid "application/x-python-serialize"
+msgstr ""
+
+#: ../../internals/protocol.rst:316
+msgid "msgpack"
+msgstr ""
+
+#: ../../internals/protocol.rst:316
+msgid "application/x-msgpack"
+msgstr ""
+
+#: ../../internals/protocol.rst:322
+msgid "Event Messages"
+msgstr ""
+
+#: ../../internals/protocol.rst:324
+msgid ""
+"Event messages are always JSON serialized and can contain arbitrary "
+"message body fields."
+msgstr ""
+
+#: ../../internals/protocol.rst:327
+msgid ""
+"Since version 4.0. the body can consist of either a single mapping (one "
+"event), or a list of mappings (multiple events)."
+msgstr ""
+
+#: ../../internals/protocol.rst:330
+msgid ""
+"There are also standard fields that must always be present in an event "
+"message:"
+msgstr ""
+
+#: ../../internals/protocol.rst:334
+msgid "Standard body fields"
+msgstr ""
+
+#: ../../internals/protocol.rst:336
+msgid "*string* ``type``"
+msgstr ""
+
+#: ../../internals/protocol.rst:338
+msgid ""
+"The type of event. This is a string containing the *category* and "
+"*action* separated by a dash delimiter (e.g., ``task-succeeded``)."
+msgstr ""
+
+#: ../../internals/protocol.rst:341
+msgid "*string* ``hostname``"
+msgstr ""
+
+#: ../../internals/protocol.rst:343
+msgid "The fully qualified hostname of where the event occurred at."
+msgstr ""
+
+#: ../../internals/protocol.rst:345
+msgid "*unsigned long long* ``clock``"
+msgstr ""
+
+#: ../../internals/protocol.rst:347
+msgid "The logical clock value for this event (Lamport time-stamp)."
+msgstr ""
+
+#: ../../internals/protocol.rst:349
+msgid "*float* ``timestamp``"
+msgstr ""
+
+#: ../../internals/protocol.rst:351
+msgid "The UNIX time-stamp corresponding to the time of when the event occurred."
+msgstr ""
+
+#: ../../internals/protocol.rst:353
+msgid "*signed short* ``utcoffset``"
+msgstr ""
+
+#: ../../internals/protocol.rst:355
+msgid ""
+"This field describes the timezone of the originating host, and is "
+"specified as the number of hours ahead of/behind UTC (e.g., -2 or +1)."
+msgstr ""
+
+#: ../../internals/protocol.rst:359
+msgid "*unsigned long long* ``pid``"
+msgstr ""
+
+#: ../../internals/protocol.rst:361
+msgid "The process id of the process the event originated in."
+msgstr ""
+
+#: ../../internals/protocol.rst:364
+msgid "Standard event types"
+msgstr ""
+
+#: ../../internals/protocol.rst:366
+msgid ""
+"For a list of standard event types and their fields see the :ref:`event-"
+"reference`."
+msgstr ""
+
+#: ../../internals/protocol.rst:372
+msgid "This is the message fields for a ``task-succeeded`` event:"
+msgstr ""
+

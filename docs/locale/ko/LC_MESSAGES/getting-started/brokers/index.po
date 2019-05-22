@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../getting-started/brokers/index.rst:5
+msgid "Brokers"
+msgstr ""
+
+#: ../getting-started/brokers/index.rst
+msgid "Release"
+msgstr ""
+
+#: ../getting-started/brokers/index.rst:7
+msgid "|version|"
+msgstr ""
+
+#: ../getting-started/brokers/index.rst
+msgid "Date"
+msgstr ""
+
+#: ../getting-started/brokers/index.rst:8
+msgid "|today|"
+msgstr ""
+
+#: ../getting-started/brokers/index.rst:10
+msgid "Celery supports several message transport alternatives."
+msgstr ""
+
+#: ../getting-started/brokers/index.rst:15
+msgid "Broker Instructions"
+msgstr ""
+
+#: ../getting-started/brokers/index.rst:27
+msgid "Broker Overview"
+msgstr ""
+
+#: ../getting-started/brokers/index.rst:29
+msgid ""
+"This is comparison table of the different transports supports, more "
+"information can be found in the documentation for each individual "
+"transport (see :ref:`broker_toc`)."
+msgstr ""
+
+#: ../getting-started/brokers/index.rst:34
+msgid "**Name**"
+msgstr ""
+
+#: ../getting-started/brokers/index.rst:34
+msgid "**Status**"
+msgstr ""
+
+#: ../getting-started/brokers/index.rst:34
+msgid "**Monitoring**"
+msgstr ""
+
+#: ../getting-started/brokers/index.rst:34
+msgid "**Remote Control**"
+msgstr ""
+
+#: ../getting-started/brokers/index.rst:36
+msgid "*RabbitMQ*"
+msgstr ""
+
+#: ../getting-started/brokers/index.rst:36
+#: ../getting-started/brokers/index.rst:38
+#: ../getting-started/brokers/index.rst:40
+msgid "Stable"
+msgstr ""
+
+#: ../getting-started/brokers/index.rst:36
+#: ../getting-started/brokers/index.rst:38
+msgid "Yes"
+msgstr ""
+
+#: ../getting-started/brokers/index.rst:38
+msgid "*Redis*"
+msgstr ""
+
+#: ../getting-started/brokers/index.rst:40
+msgid "*Amazon SQS*"
+msgstr ""
+
+#: ../getting-started/brokers/index.rst:40
+#: ../getting-started/brokers/index.rst:42
+msgid "No"
+msgstr ""
+
+#: ../getting-started/brokers/index.rst:42
+msgid "*Zookeeper*"
+msgstr ""
+
+#: ../getting-started/brokers/index.rst:42
+msgid "Experimental"
+msgstr ""
+
+#: ../getting-started/brokers/index.rst:45
+msgid ""
+"Experimental brokers may be functional but they don't have dedicated "
+"maintainers."
+msgstr ""
+
+#: ../getting-started/brokers/index.rst:48
+msgid ""
+"Missing monitor support means that the transport doesn't implement "
+"events, and as such Flower, `celery events`, `celerymon` and other event-"
+"based monitoring tools won't work."
+msgstr ""
+
+#: ../getting-started/brokers/index.rst:52
+msgid ""
+"Remote control means the ability to inspect and manage workers at runtime"
+" using the `celery inspect` and `celery control` commands (and other "
+"tools using the remote control API)."
+msgstr ""
+

@@ -1,0 +1,1409 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../history/whatsnew-3.0.rst:5
+msgid "What's new in Celery 3.0 (Chiastic Slide)"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:7
+msgid ""
+"Celery is a simple, flexible, and reliable distributed system to process "
+"vast amounts of messages, while providing operations with the tools "
+"required to maintain such a system."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:11
+msgid ""
+"It's a task queue with focus on real-time processing, while also "
+"supporting task scheduling."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:14
+msgid ""
+"Celery has a large and diverse community of users and contributors, you "
+"should come join us :ref:`on IRC <irc-channel>` or :ref:`our mailing-list"
+" <mailing-list>`."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:18
+msgid ""
+"To read more about Celery you should go read the :ref:`introduction "
+"<intro>`."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:20
+msgid ""
+"While this version is backward compatible with previous versions it's "
+"important that you read the following section."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:23
+msgid ""
+"If you use Celery in combination with Django you must also read the "
+"`django-celery changelog`_ and upgrade to :pypi:`django-celery 3.0 "
+"<django-celery>`."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:27
+msgid ""
+"This version is officially supported on CPython 2.5, 2.6, 2.7, 3.2 and "
+"3.3, as well as PyPy and Jython."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:31
+msgid "Highlights"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:35
+msgid "A new and improved API, that's both simpler and more powerful."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:37
+msgid ""
+"Everyone must read the new :ref:`first-steps` tutorial, and the new :ref"
+":`next-steps` tutorial. Oh, and why not reread the user guide while "
+"you're at it :)"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:41
+msgid ""
+"There are no current plans to deprecate the old API, so you don't have to"
+" be in a hurry to port your applications."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:44
+msgid "The worker is now thread-less, giving great performance improvements."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:46
+msgid "The new \"Canvas\" makes it easy to define complex work-flows."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:48
+msgid ""
+"Ever wanted to chain tasks together? This is possible, but not just that,"
+" now you can even chain together groups and chords, or even combine "
+"multiple chains."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:52
+msgid "Read more in the :ref:`Canvas <guide-canvas>` user guide."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:54
+msgid ""
+"All of Celery's command-line programs are now available from a single "
+":program:`celery` umbrella command."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:57
+msgid "This is the last version to support Python 2.5."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:59
+msgid "Starting with Celery 3.1, Python 2.6 or later is required."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:61
+msgid "Support for the new :pypi:`librabbitmq` C client."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:63
+msgid ""
+"Celery will automatically use the :pypi:`librabbitmq` module if "
+"installed, which is a very fast and memory-optimized replacement for the "
+":pypi:`amqp` module."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:67
+msgid "Redis support is more reliable with improved ack emulation."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:69
+msgid "Celery now always uses UTC"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:71
+msgid "Over 600 commits, 30k additions/36k deletions."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:73
+msgid "In comparison 1.0➝ 2.0 had 18k additions/8k deletions."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:87
+msgid "Important Notes"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:90
+msgid "Broadcast exchanges renamed"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:92
+msgid ""
+"The workers remote control command exchanges has been renamed (a new "
+":term:`pidbox` name), this is because the ``auto_delete`` flag on the "
+"exchanges has been removed, and that makes it incompatible with earlier "
+"versions."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:97
+msgid ""
+"You can manually delete the old exchanges if you want, using the "
+":program:`celery amqp` command (previously called ``camqadm``):"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:106
+msgid "Event-loop"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:108
+msgid ""
+"The worker is now running *without threads* when used with RabbitMQ "
+"(AMQP), or Redis as a broker, resulting in:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:111
+msgid "Much better overall performance."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:112
+msgid "Fixes several edge case race conditions."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:113
+msgid "Sub-millisecond timer precision."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:114
+msgid "Faster shutdown times."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:116
+msgid ""
+"The transports supported are:  ``py-amqp`` ``librabbitmq``, ``redis``, "
+"and ``amqplib``. Hopefully this can be extended to include additional "
+"broker transports in the future."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:121
+msgid ""
+"For increased reliability the :setting:`CELERY_FORCE_EXECV` setting is "
+"enabled by default if the event-loop isn't used."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:125
+msgid "New ``celery`` umbrella command"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:127
+msgid ""
+"All Celery's command-line programs are now available from a single "
+":program:`celery` umbrella command."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:130
+msgid "You can see a list of sub-commands and options by running:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:136
+msgid "Commands include:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:138
+msgid "``celery worker``  (previously ``celeryd``)."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:140
+msgid "``celery beat``    (previously ``celerybeat``)."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:142
+msgid "``celery amqp``    (previously ``camqadm``)."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:144
+msgid ""
+"The old programs are still available (``celeryd``, ``celerybeat``, etc), "
+"but you're discouraged from using them."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:148
+msgid "Now depends on :pypi:`billiard`"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:150
+msgid ""
+"Billiard is a fork of the multiprocessing containing the no-execv patch "
+"by ``sbt`` (http://bugs.python.org/issue8713), and also contains the pool"
+" improvements previously located in Celery."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:154
+msgid ""
+"This fork was necessary as changes to the C extension code was required "
+"for the no-execv patch to work."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:157
+msgid "Issue #625"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:158
+msgid "Issue #627"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:159
+msgid "Issue #640"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:160
+msgid "`django-celery #122 <https://github.com/celery/django-celery/issues/122`"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:161
+msgid "`django-celery #124 <https://github.com/celery/django-celery/issues/122`"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:164
+msgid ":mod:`celery.app.task` no longer a package"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:166
+msgid "The :mod:`celery.app.task` module is now a module instead of a package."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:168
+msgid ""
+"The :file:`setup.py` install script will try to remove the old package, "
+"but if that doesn't work for some reason you have to remove it manually. "
+"This command helps:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:176
+msgid ""
+"If you experience an error like ``ImportError: cannot import name "
+"_unpickle_task``, you just have to remove the old package and everything "
+"is fine."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:180
+msgid "Last version to support Python 2.5"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:182
+msgid ""
+"The 3.0 series will be last version to support Python 2.5, and starting "
+"from 3.1 Python 2.6 and later will be required."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:185
+msgid ""
+"With several other distributions taking the step to discontinue Python "
+"2.5 support, we feel that it is time too."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:188
+msgid ""
+"Python 2.6 should be widely available at this point, and we urge you to "
+"upgrade, but if that's not possible you still have the option to continue"
+" using the Celery 3.0, and important bug fixes introduced in Celery 3.1 "
+"will be back-ported to Celery 3.0 upon request."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:194
+msgid "UTC timezone is now used"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:196
+msgid ""
+"This means that ETA/countdown in messages aren't compatible with Celery "
+"versions prior to 2.5."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:199
+msgid ""
+"You can disable UTC and revert back to old local time by setting the "
+":setting:`CELERY_ENABLE_UTC` setting."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:203
+msgid "Redis: Ack emulation improvements"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:205
+msgid "Reducing the possibility of data loss."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:207
+msgid ""
+"Acks are now implemented by storing a copy of the message when the "
+"message is consumed. The copy isn't removed until the consumer "
+"acknowledges or rejects it."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:211
+msgid ""
+"This means that unacknowledged messages will be redelivered either when "
+"the connection is closed, or when the visibility timeout is exceeded."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:214
+msgid "Visibility timeout"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:216
+msgid ""
+"This is a timeout for acks, so that if the consumer doesn't ack the "
+"message within this time limit, the message is redelivered to another "
+"consumer."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:220
+msgid ""
+"The timeout is set to one hour by default, but can be changed by "
+"configuring a transport option::"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:228
+msgid ""
+"Messages that haven't been acked will be redelivered if the visibility "
+"timeout is exceeded, for Celery users this means that ETA/countdown tasks"
+" that are scheduled to execute with a time that exceeds the visibility "
+"timeout will be executed twice (or more). If you plan on using long "
+"ETA/countdowns you should tweak the visibility timeout accordingly."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:235
+msgid ""
+"Setting a long timeout means that it'll take a long time for messages to "
+"be redelivered in the event of a power failure, but if so happens you "
+"could temporarily set the visibility timeout lower to flush out messages "
+"when you start up the systems again."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:243
+msgid "News"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:246
+msgid "Chaining Tasks"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:248
+msgid "Tasks can now have callbacks and errbacks, and dependencies are recorded"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:250
+msgid "The task message format have been updated with two new extension keys"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:252
+msgid "Both keys can be empty/undefined or a list of subtasks."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:254
+msgid "``callbacks``"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:256
+msgid ""
+"Applied if the task exits successfully, with the result of the task as an"
+" argument."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:259
+msgid "``errbacks``"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:261
+msgid ""
+"Applied if an error occurred while executing the task, with the uuid of "
+"the task as an argument. Since it may not be possible to serialize the "
+"exception instance, it passes the uuid of the task instead. The uuid can "
+"then be used to retrieve the exception and traceback of the task from the"
+" result backend."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:267
+msgid ""
+"``link`` and ``link_error`` keyword arguments has been added to "
+"``apply_async``."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:270
+msgid ""
+"These add callbacks and errbacks to the task, and you can read more about"
+" them at :ref:`calling-links`."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:273
+msgid ""
+"We now track what subtasks a task sends, and some result backends "
+"supports retrieving this information."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:276
+msgid "task.request.children"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:278
+msgid ""
+"Contains the result instances of the subtasks the currently executing "
+"task has applied."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:281
+msgid "AsyncResult.children"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:283
+msgid ""
+"Returns the tasks dependencies, as a list of "
+"``AsyncResult``/``ResultSet`` instances."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:286
+msgid "AsyncResult.iterdeps"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:288
+msgid ""
+"Recursively iterates over the tasks dependencies, yielding `(parent, "
+"node)` tuples."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:291
+msgid "Raises IncompleteStream if any of the dependencies hasn't returned yet."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:294
+msgid "AsyncResult.graph"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:296
+msgid ""
+"A :class:`~celery.utils.graph.DependencyGraph` of the tasks dependencies."
+" With this you can also convert to dot format:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:304
+msgid "then produce an image of the graph:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:310
+msgid "A new special subtask called ``chain`` is also included:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:326
+msgid "Adds :meth:`AsyncResult.get_leaf`"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:328
+msgid ""
+"Waits and returns the result of the leaf subtask. That's the last node "
+"found when traversing the graph, but this means that the graph can be "
+"1-dimensional only (in effect a list)."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:333
+msgid "Adds ``subtask.link(subtask)`` + ``subtask.link_error(subtask)``"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:335
+msgid "Shortcut to ``s.options.setdefault('link', []).append(subtask)``"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:337
+msgid "Adds ``subtask.flatten_links()``"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:339
+msgid "Returns a flattened list of all dependencies (recursively)"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:342
+msgid "Redis: Priority support"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:344
+msgid ""
+"The message's ``priority`` field is now respected by the Redis transport "
+"by having multiple lists for each named queue. The queues are then "
+"consumed by in order of priority."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:348
+msgid ""
+"The priority field is a number in the range of 0 - 9, where 0 is the "
+"default and highest priority."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:351
+msgid ""
+"The priority range is collapsed into four steps by default, since it is "
+"unlikely that nine steps will yield more benefit than using four steps. "
+"The number of steps can be configured by setting the ``priority_steps`` "
+"transport option, which must be a list of numbers in **sorted order**:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:362
+msgid ""
+"Priorities implemented in this way isn't as reliable as priorities on the"
+" server side, which is why the feature is nicknamed \"quasi-priorities\";"
+" **Using routing is still the suggested way of ensuring quality of "
+"service**, as client implemented priorities fall short in a number of "
+"ways, for example if the worker is busy with long running tasks, has "
+"prefetched many messages, or the queues are congested."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:371
+msgid ""
+"Still, it is possible that using priorities in combination with routing "
+"can be more beneficial than using routing or priorities alone. "
+"Experimentation and monitoring should be used to prove this."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:376
+msgid "Contributed by Germán M. Bravo."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:379
+msgid "Redis: Now cycles queues so that consuming is fair"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:381
+msgid ""
+"This ensures that a very busy queue won't block messages from other "
+"queues, and ensures that all queues have an equal chance of being "
+"consumed from."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:385
+msgid ""
+"This used to be the case before, but the behavior was accidentally "
+"changed while switching to using blocking pop."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:390
+msgid "`group`/`chord`/`chain` are now subtasks"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:392
+msgid ""
+"group is no longer an alias to ``TaskSet``, but new all together, since "
+"it was very difficult to migrate the ``TaskSet`` class to become a "
+"subtask."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:396
+msgid "A new shortcut has been added to tasks:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:402
+msgid "as a shortcut to:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:408
+msgid "Tasks can be chained by using the ``|`` operator:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:414
+msgid "Subtasks can be \"evaluated\" using the ``~`` operator:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:423
+msgid "is the same as:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:429
+msgid "A new subtask_type key has been added to the subtask dictionary."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:431
+msgid ""
+"This can be the string ``\"chord\"``, ``\"group\"``, ``\"chain\"``, "
+"``\"chunks\"``, ``\"xmap\"``, or ``\"xstarmap\"``."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:434
+msgid ""
+"maybe_subtask now uses subtask_type to reconstruct the object, to be used"
+" when using non-pickle serializers."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:437
+msgid ""
+"The logic for these operations have been moved to dedicated tasks "
+"celery.chord, celery.chain and celery.group."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:440
+msgid "subtask no longer inherits from AttributeDict."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:442
+msgid ""
+"It's now a pure dict subclass with properties for attribute access to the"
+" relevant keys."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:445
+msgid "The repr's now outputs how the sequence would like imperatively:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:465
+msgid "New remote control commands"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:467
+msgid ""
+"These commands were previously experimental, but they've proven stable "
+"and is now documented as part of the official API."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:470
+msgid ":control:`add_consumer`/:control:`cancel_consumer`"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:472
+msgid ""
+"Tells workers to consume from a new queue, or cancel consuming from a "
+"queue. This command has also been changed so that the worker remembers "
+"the queues added, so that the change will persist even if the connection "
+"is re-connected."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:477
+msgid ""
+"These commands are available programmatically as "
+":meth:`@control.add_consumer` / :meth:`@control.cancel_consumer`:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:487 ../../history/whatsnew-3.0.rst:511
+#: ../../history/whatsnew-3.0.rst:529
+msgid "or using the :program:`celery control` command:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:496
+msgid ""
+"Remember that a control command without *destination* will be sent to "
+"**all workers**."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:499
+msgid ":control:`autoscale`"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:501
+msgid ""
+"Tells workers with ``--autoscale`` enabled to change autoscale max/min "
+"concurrency settings."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:504
+msgid "This command is available programmatically as :meth:`@control.autoscale`:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:517
+msgid ":control:`pool_grow`/:control:`pool_shrink`"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:519
+msgid "Tells workers to add or remove pool processes."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:521
+msgid ""
+"These commands are available programmatically as "
+":meth:`@control.pool_grow` / :meth:`@control.pool_shrink`:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:536
+msgid ""
+":program:`celery control` now supports :control:`rate_limit` and "
+":control:`time_limit` commands."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:539
+msgid "See ``celery control --help`` for details."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:542
+msgid "Crontab now supports Day of Month, and Month of Year arguments"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:544
+msgid "See the updated list of examples at :ref:`beat-crontab`."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:547
+msgid "Immutable subtasks"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:549
+msgid ""
+"``subtask``'s can now be immutable, which means that the arguments won't "
+"be modified when calling callbacks:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:556
+msgid ""
+"means it'll not receive the argument of the parent task, and ``.si()`` is"
+" a shortcut to:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:564
+msgid "Logging Improvements"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:566
+msgid "Logging support now conforms better with best practices."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:568
+msgid ""
+"Classes used by the worker no longer uses app.get_default_logger, but "
+"uses `celery.utils.log.get_logger` which simply gets the logger not "
+"setting the level, and adds a NullHandler."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:572
+msgid ""
+"Loggers are no longer passed around, instead every module using logging "
+"defines a module global logger that's used throughout."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:575
+msgid "All loggers inherit from a common logger called \"celery\"."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:577
+msgid ""
+"Before ``task.get_logger`` would setup a new logger for every task, and "
+"even set the log level. This is no longer the case."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:580
+msgid ""
+"Instead all task loggers now inherit from a common \"celery.task\" logger"
+" that's set up when programs call `setup_logging_subsystem`."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:583
+msgid ""
+"Instead of using LoggerAdapter to augment the formatter with the task_id "
+"and task_name field, the task base logger now use a special formatter "
+"adding these values at run-time from the currently executing task."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:588
+msgid ""
+"In fact, ``task.get_logger`` is no longer recommended, it is better to "
+"add a module-level logger to your tasks module."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:591
+msgid "For example, like this:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:604
+msgid ""
+"The resulting logger will then inherit from the ``\"celery.task\"`` "
+"logger so that the current task name and id is included in logging "
+"output."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:607
+msgid ""
+"Redirected output from stdout/stderr is now logged to a "
+"\"celery.redirected\" logger."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:610
+msgid "In addition a few warnings.warn have been replaced with logger.warn."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:612
+msgid "Now avoids the 'no handlers for logger multiprocessing' warning"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:615
+msgid "Task registry no longer global"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:617
+msgid "Every Celery instance now has its own task registry."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:619
+msgid "You can make apps share registries by specifying it:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:626
+msgid ""
+"Note that tasks are shared between registries by default, so that tasks "
+"will be added to every subsequently created task registry. As an "
+"alternative tasks can be private to specific task registries by setting "
+"the ``shared`` argument to the ``@task`` decorator:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:639
+msgid "Abstract tasks are now lazily bound"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:641
+msgid ""
+"The :class:`~celery.task.Task` class is no longer bound to an app by "
+"default, it will first be bound (and configured) when a concrete subclass"
+" is created."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:645
+msgid ""
+"This means that you can safely import and make task base classes, without"
+" also initializing the app environment:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:672
+msgid "Lazy task decorators"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:674
+msgid "The ``@task`` decorator is now lazy when used with custom apps."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:676
+msgid ""
+"That is, if ``accept_magic_kwargs`` is enabled (her by called \"compat "
+"mode\"), the task decorator executes inline like before, however for "
+"custom apps the @task decorator now returns a special PromiseProxy object"
+" that's only evaluated on access."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:681
+msgid ""
+"All promises will be evaluated when :meth:`@finalize` is called, or "
+"implicitly when the task registry is first used."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:686
+msgid "Smart `--app` option"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:688
+msgid "The :option:`--app <celery --app>` option now 'auto-detects'"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:690
+msgid ""
+"If the provided path is a module it tries to get an attribute named "
+"'celery'."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:693
+msgid ""
+"If the provided path is a package it tries to import a sub module named "
+"celery', and get the celery attribute from that module."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:697
+msgid ""
+"For example, if you have a project named ``proj`` where the celery app is"
+" located in ``from proj.celery import app``, then the following will be "
+"equivalent:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:708
+msgid "In Other News"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:710
+msgid ""
+"New :setting:`CELERYD_WORKER_LOST_WAIT` to control the timeout in seconds"
+" before :exc:`billiard.WorkerLostError` is raised when a worker can't be "
+"signaled (Issue #595)."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:714
+msgid "Contributed by Brendon Crawford."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:716
+msgid "Redis event monitor queues are now automatically deleted (Issue #436)."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:718
+msgid ""
+"App instance factory methods have been converted to be cached descriptors"
+" that creates a new subclass on access."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:721
+msgid ""
+"For example, this means that ``app.Worker`` is an actual class and will "
+"work as expected when:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:729
+msgid "New signal: :signal:`task_success`."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:731
+msgid ""
+"Multiprocessing logs are now only emitted if the :envvar:`MP_LOG` "
+"environment variable is set."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:734
+msgid "The Celery instance can now be created with a broker URL"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:740
+msgid "Result backends can now be set using a URL"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:742
+msgid "Currently only supported by redis. Example use:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:748
+msgid "Heartbeat frequency now every 5s, and frequency sent with event"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:750
+msgid ""
+"The heartbeat frequency is now available in the worker event messages, so"
+" that clients can decide when to consider workers offline based on this "
+"value."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:754
+msgid "Module celery.actors has been removed, and will be part of cl instead."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:756
+msgid ""
+"Introduces new ``celery`` command, which is an entry-point for all other "
+"commands."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:759
+msgid "The main for this command can be run by calling ``celery.start()``."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:761
+msgid "Annotations now supports decorators if the key starts with '@'."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:763
+msgid "For example:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:778
+msgid ""
+"Also tasks are now always bound by class so that annotated methods end up"
+" being bound."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:781
+msgid "Bug-report now available as a command and broadcast command"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:783
+msgid "Get it from a Python REPL:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:790
+msgid "Using the ``celery`` command line program:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:796
+msgid "Get it from remote workers:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:802
+msgid "Module ``celery.log`` moved to :mod:`celery.app.log`."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:804
+msgid "Module ``celery.task.control`` moved to :mod:`celery.app.control`."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:806 ../../history/whatsnew-3.0.rst:905
+msgid "New signal: :signal:`task_revoked`"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:808
+msgid "Sent in the main process when the task is revoked or terminated."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:810
+msgid "``AsyncResult.task_id`` renamed to ``AsyncResult.id``"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:812
+msgid "``TasksetResult.taskset_id`` renamed to ``.id``"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:814
+msgid "``xmap(task, sequence)`` and ``xstarmap(task, sequence)``"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:816
+msgid ""
+"Returns a list of the results applying the task function to every item in"
+" the sequence."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:819
+msgid "Example:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:828
+msgid "``chunks(task, sequence, chunksize)``"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:830
+msgid "``group.skew(start=, stop=, step=)``"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:832
+msgid ""
+"Skew will skew the countdown for the individual tasks in a group -- for "
+"example with this group:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:839
+msgid "Skewing the tasks from 0 seconds to 10 seconds:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:845
+msgid ""
+"Will have the first task execute in 0 seconds, the second in 1 second, "
+"the third in 2 seconds and so on."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:848
+msgid "99% test Coverage"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:850
+msgid ""
+":setting:`CELERY_QUEUES` can now be a list/tuple of :class:`~kombu.Queue`"
+" instances."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:853
+msgid ""
+"Internally :attr:`@amqp.queues` is now a mapping of name/Queue instances,"
+" instead of converting on the fly."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:856
+msgid "Can now specify connection for :class:`@control.inspect`."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:865
+msgid ":setting:`CELERY_FORCE_EXECV` is now enabled by default."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:867
+msgid ""
+"If the old behavior is wanted the setting can be set to False, or the new"
+" `--no-execv` option to :program:`celery worker`."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:870
+msgid "Deprecated module ``celery.conf`` has been removed."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:872
+msgid ""
+"The :setting:`CELERY_TIMEZONE` now always require the :pypi:`pytz` "
+"library to be installed (except if the timezone is set to `UTC`)."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:875
+msgid "The Tokyo Tyrant backend has been removed and is no longer supported."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:877
+msgid "Now uses :func:`~kombu.common.maybe_declare` to cache queue declarations."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:879
+msgid ""
+"There's no longer a global default for the "
+":setting:`CELERYBEAT_MAX_LOOP_INTERVAL` setting, it is instead set by "
+"individual schedulers."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:883
+msgid "Worker: now truncates very long message bodies in error reports."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:885
+msgid "No longer deep-copies exceptions when trying to serialize errors."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:887
+msgid ""
+":envvar:`CELERY_BENCH` environment variable, will now also list memory "
+"usage statistics at worker shutdown."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:890
+msgid ""
+"Worker: now only ever use a single timer for all timing needs, and "
+"instead set different priorities."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:893
+msgid "An exceptions arguments are now safely pickled"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:895
+msgid "Contributed by Matt Long."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:897
+msgid "Worker/Beat no longer logs the start-up banner."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:899
+msgid ""
+"Previously it would be logged with severity warning, now it's only "
+"written to stdout."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:902
+msgid ""
+"The ``contrib/`` directory in the distribution has been renamed to "
+"``extra/``."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:907
+msgid ""
+":mod:`celery.contrib.migrate`: Many improvements, including; filtering, "
+"queue migration, and support for acking messages on the broker migrating "
+"from."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:911
+msgid "Contributed by John Watson."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:913
+msgid "Worker: Prefetch count increments are now optimized and grouped together."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:915
+msgid ""
+"Worker: No longer calls ``consume`` on the remote control command queue "
+"twice."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:918
+msgid "Probably didn't cause any problems, but was unnecessary."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:921
+msgid "Internals"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:923
+msgid "``app.broker_connection`` is now ``app.connection``"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:925
+msgid "Both names still work."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:927
+msgid "Compatibility modules are now generated dynamically upon use."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:929
+msgid ""
+"These modules are ``celery.messaging``, ``celery.log``, "
+"``celery.decorators`` and ``celery.registry``."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:932
+msgid ":mod:`celery.utils` refactored into multiple modules:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:934
+msgid ""
+":mod:`celery.utils.text` :mod:`celery.utils.imports` "
+":mod:`celery.utils.functional`"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:938
+msgid ""
+"Now using :mod:`kombu.utils.encoding` instead of "
+":mod:`celery.utils.encoding`."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:941
+msgid "Renamed module ``celery.routes`` -> :mod:`celery.app.routes`."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:943
+msgid "Renamed package ``celery.db`` -> :mod:`celery.backends.database`."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:945
+msgid "Renamed module ``celery.abstract`` -> :mod:`celery.worker.bootsteps`."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:947
+msgid "Command line docs are now parsed from the module docstrings."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:949
+msgid "Test suite directory has been reorganized."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:951
+msgid ""
+":program:`setup.py` now reads docs from the :file:`requirements/` "
+"directory."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:953
+msgid "Celery commands no longer wraps output (Issue #700)."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:955
+msgid "Contributed by Thomas Johansson."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:960
+msgid "Experimental"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:963
+msgid ":mod:`celery.contrib.methods`:  Task decorator for methods"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:965
+msgid ""
+"This is an experimental module containing a task decorator, and a task "
+"decorator filter, that can be used to create tasks out of methods::"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:982
+msgid "See :mod:`celery.contrib.methods` for more information."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:987
+msgid "Unscheduled Removals"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:989
+msgid ""
+"Usually we don't make backward incompatible removals, but these removals "
+"should have no major effect."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:992
+msgid "The following settings have been renamed:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:994
+msgid "``CELERYD_ETA_SCHEDULER`` -> ``CELERYD_TIMER``"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:995
+msgid "``CELERYD_ETA_SCHEDULER_PRECISION`` -> ``CELERYD_TIMER_PRECISION``"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:1000
+msgid "Deprecation Time-line Changes"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:1002
+msgid "See the :ref:`deprecation-timeline`."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:1004
+msgid "The ``celery.backends.pyredis`` compat module has been removed."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:1006
+msgid "Use :mod:`celery.backends.redis` instead!"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:1008
+msgid "The following undocumented API's has been moved:"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:1010
+msgid "``control.inspect.add_consumer`` -> :meth:`@control.add_consumer`."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:1011
+msgid "``control.inspect.cancel_consumer`` -> :meth:`@control.cancel_consumer`."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:1012
+msgid "``control.inspect.enable_events`` -> :meth:`@control.enable_events`."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:1013
+msgid "``control.inspect.disable_events`` -> :meth:`@control.disable_events`."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:1015
+msgid ""
+"This way ``inspect()`` is only used for commands that don't modify "
+"anything, while idempotent control commands that make changes are on the "
+"control objects."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:1020
+msgid "Fixes"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:1022
+msgid ""
+"Retry SQLAlchemy backend operations on DatabaseError/OperationalError "
+"(Issue #634)"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:1025
+msgid "Tasks that called ``retry`` wasn't acknowledged if acks late was enabled"
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:1027
+msgid "Fix contributed by David Markey."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:1029
+msgid ""
+"The message priority argument wasn't properly propagated to Kombu (Issue "
+"#708)."
+msgstr ""
+
+#: ../../history/whatsnew-3.0.rst:1032
+msgid "Fix contributed by Eran Rundstein"
+msgstr ""
+

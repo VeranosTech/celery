@@ -1,0 +1,319 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../userguide/optimizing.rst:5
+msgid "Optimizing"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:8
+msgid "Introduction"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:9
+msgid ""
+"The default configuration makes a lot of compromises. It's not optimal "
+"for any single case, but works well enough for most situations."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:12
+msgid "There are optimizations that can be applied based on specific use cases."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:14
+msgid ""
+"Optimizations can apply to different properties of the running "
+"environment, be it the time tasks take to execute, the amount of memory "
+"used, or responsiveness at times of high load."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:19
+msgid "Ensuring Operations"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:21
+msgid ""
+"In the book `Programming Pearls`_, Jon Bentley presents the concept of "
+"back-of-the-envelope calculations by asking the question;"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:24
+msgid "❝ How much water flows out of the Mississippi River in a day? ❞"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:26
+msgid ""
+"The point of this exercise [*]_ is to show that there's a limit to how "
+"much data a system can process in a timely manner. Back of the envelope "
+"calculations can be used as a means to plan for this ahead of time."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:31
+msgid ""
+"In Celery; If a task takes 10 minutes to complete, and there are 10 new "
+"tasks coming in every minute, the queue will never be empty. This is why "
+"it's very important that you monitor queue lengths!"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:36
+msgid ""
+"A way to do this is by :ref:`using Munin <monitoring-munin>`. You should "
+"set up alerts, that'll notify you as soon as any queue has reached an "
+"unacceptable size. This way you can take appropriate action like adding "
+"new worker nodes, or revoking unnecessary tasks."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:49
+msgid "General Settings"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:54
+msgid "librabbitmq"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:56
+msgid ""
+"If you're using RabbitMQ (AMQP) as the broker then you can install the "
+":pypi:`librabbitmq` module to use an optimized client written in C:"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:63
+msgid ""
+"The 'amqp' transport will automatically use the librabbitmq module if "
+"it's installed, or you can also specify the transport you want directly "
+"by using the ``pyamqp://`` or ``librabbitmq://`` prefixes."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:70
+msgid "Broker Connection Pools"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:72
+msgid "The broker connection pool is enabled by default since version 2.5."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:74
+msgid ""
+"You can tweak the :setting:`broker_pool_limit` setting to minimize "
+"contention, and the value should be based on the number of active threads"
+"/green-threads using broker connections."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:81
+msgid "Using Transient Queues"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:83
+msgid ""
+"Queues created by Celery are persistent by default. This means that the "
+"broker will write messages to disk to ensure that the tasks will be "
+"executed even if the broker is restarted."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:87
+msgid ""
+"But in some cases it's fine that the message is lost, so not all tasks "
+"require durability. You can create a *transient* queue for these tasks to"
+" improve performance:"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:102
+msgid "or by using :setting:`task_routes`:"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:111
+msgid ""
+"The ``delivery_mode`` changes how the messages to this queue are "
+"delivered. A value of one means that the message won't be written to "
+"disk, and a value of two (default) means that the message can be written "
+"to disk."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:115
+msgid ""
+"To direct a task to your new transient queue you can specify the queue "
+"argument (or use the :setting:`task_routes` setting):"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:122
+msgid "For more information see the :ref:`routing guide <guide-routing>`."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:127
+msgid "Worker Settings"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:132
+msgid "Prefetch Limits"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:134
+msgid ""
+"*Prefetch* is a term inherited from AMQP that's often misunderstood by "
+"users."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:137
+msgid ""
+"The prefetch limit is a **limit** for the number of tasks (messages) a "
+"worker can reserve for itself. If it is zero, the worker will keep "
+"consuming messages, not respecting that there may be other available "
+"worker nodes that may be able to process them sooner [*]_, or that the "
+"messages may not even fit in memory."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:143
+msgid ""
+"The workers' default prefetch count is the "
+":setting:`worker_prefetch_multiplier` setting multiplied by the number of"
+" concurrency slots [*]_ (processes/threads/green-threads)."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:147
+msgid ""
+"If you have many tasks with a long duration you want the multiplier value"
+" to be *one*: meaning it'll only reserve one task per worker process at a"
+" time."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:151
+msgid ""
+"However -- If you have many short-running tasks, and throughput/round "
+"trip latency is important to you, this number should be large. The worker"
+" is able to process more tasks per second if the messages have already "
+"been prefetched, and is available in memory. You may have to experiment "
+"to find the best value that works for you. Values like 50 or 150 might "
+"make sense in these circumstances. Say 64, or 128."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:158
+msgid ""
+"If you have a combination of long- and short-running tasks, the best "
+"option is to use two worker nodes that are configured separately, and "
+"route the tasks according to the run-time (see :ref:`guide-routing`)."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:163
+msgid "Reserve one task at a time"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:165
+msgid ""
+"The task message is only deleted from the queue after the task is "
+":term:`acknowledged`, so if the worker crashes before acknowledging the "
+"task, it can be redelivered to another worker (or the same after "
+"recovery)."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:169
+msgid ""
+"When using the default of early acknowledgment, having a prefetch "
+"multiplier setting of *one*, means the worker will reserve at most one "
+"extra task for every worker process: or in other words, if the worker is "
+"started with :option:`-c 10 <celery worker -c>`, the worker may reserve "
+"at most 20 tasks (10 acknowledged tasks executing, and 10 unacknowledged "
+"reserved tasks) at any time."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:176
+msgid ""
+"Often users ask if disabling \"prefetching of tasks\" is possible, but "
+"what they really mean by that, is to have a worker only reserve as many "
+"tasks as there are worker processes (10 unacknowledged tasks for "
+":option:`-c 10 <celery worker -c>`)"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:181
+msgid ""
+"That's possible, but not without also enabling :term:`late "
+"acknowledgment`. Using this option over the default behavior means a task"
+" that's already started executing will be retried in the event of a power"
+" failure or the worker instance being killed abruptly, so this also means"
+" the task must be :term:`idempotent`"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:189
+msgid "Notes at :ref:`faq-acks_late-vs-retry`."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:191
+msgid "You can enable this behavior by using the following configuration options:"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:201
+msgid "Prefork pool prefetch settings"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:203
+msgid ""
+"The prefork pool will asynchronously send as many tasks to the processes "
+"as it can and this means that the processes are, in effect, prefetching "
+"tasks."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:207
+msgid ""
+"This benefits performance but it also means that tasks may be stuck "
+"waiting for long running tasks to complete::"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:222
+msgid ""
+"The worker will send tasks to the process as long as the pipe buffer is "
+"writable. The pipe buffer size varies based on the operating system: some"
+" may have a buffer as small as 64KB but on recent Linux versions the "
+"buffer size is 1MB (can only be changed system wide)."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:227
+msgid ""
+"You can disable this prefetching behavior by enabling the :option:`-O "
+"fair <celery worker -O>` worker option:"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:234
+msgid ""
+"With this option enabled the worker will only write to processes that are"
+" available for work, disabling the prefetch behavior::"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:250
+msgid "Footnotes"
+msgstr ""
+
+#: ../../userguide/optimizing.rst:251
+msgid ""
+"The chapter is available to read for free here: `The back of the "
+"envelope`_. The book is a classic text. Highly recommended."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:255
+msgid ""
+"RabbitMQ and other brokers deliver messages round-robin, so this doesn't "
+"apply to an active system. If there's no prefetch limit and you restart "
+"the cluster, there will be timing delays between nodes starting. If there"
+" are 3 offline nodes and one active node, all messages will be delivered "
+"to the active node."
+msgstr ""
+
+#: ../../userguide/optimizing.rst:261
+msgid ""
+"This is the concurrency setting; :setting:`worker_concurrency` or the "
+":option:`celery worker -c` option."
+msgstr ""
+

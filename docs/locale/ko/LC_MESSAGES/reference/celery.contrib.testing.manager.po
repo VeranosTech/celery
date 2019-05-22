@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../reference/celery.contrib.testing.manager.rst:3
+msgid "``celery.contrib.testing.manager``"
+msgstr ""
+
+#: ../reference/celery.contrib.testing.manager.rst:9
+msgid "API Reference"
+msgstr ""
+
+#: celery.contrib.testing.manager:1 of
+msgid "Integration testing utilities."
+msgstr ""
+
+#: celery.contrib.testing.manager.Manager:1 of
+msgid "Test helpers for task integration tests."
+msgstr ""
+
+#: celery.contrib.testing.manager.ManagerMixin:1 of
+msgid "Mixin that adds :class:`Manager` capabilities."
+msgstr ""
+
+#: celery.contrib.testing.manager.ManagerMixin.ensure_not_for_a_while:1 of
+msgid "Make sure something does not happen (at least for a while)."
+msgstr ""
+
+#: celery.contrib.testing.manager.ManagerMixin.wait_for:1 of
+msgid "Wait for event to happen."
+msgstr ""
+
+#: celery.contrib.testing.manager.ManagerMixin.wait_for:3 of
+msgid ""
+"The `catch` argument specifies the exception that means the event has not"
+" happened yet."
+msgstr ""
+
+#: celery.contrib.testing.manager.Sentinel:1 of
+msgid "Signifies the end of something."
+msgstr ""
+
+#: celery.contrib.testing.manager.humanize_seconds:1 of
+msgid "Show seconds in human form."
+msgstr ""
+
+#: celery.contrib.testing.manager.humanize_seconds:3 of
+msgid "For example, 60 becomes \"1 minute\", and 7200 becomes \"2 hours\"."
+msgstr ""
+
+#: celery.contrib.testing.manager.humanize_seconds of
+msgid "Parameters"
+msgstr ""
+
+#: celery.contrib.testing.manager.humanize_seconds:5 of
+msgid ""
+"can be used to add a preposition to the output (e.g., 'in' will give 'in "
+"1 second', but add nothing to 'now')."
+msgstr ""
+
+#: celery.contrib.testing.manager.humanize_seconds:8 of
+msgid "Literal 'now'."
+msgstr ""
+
+#: celery.contrib.testing.manager.humanize_seconds:10 of
+msgid "Include microseconds."
+msgstr ""
+

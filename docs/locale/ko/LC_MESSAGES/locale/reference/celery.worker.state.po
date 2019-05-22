@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../reference/celery.worker.state.rst:3
+msgid "``celery.worker.state``"
+msgstr ""
+
+#: celery.worker.state:1 of
+msgid "Internal worker state (global)."
+msgstr ""
+
+#: celery.worker.state:3 of
+msgid ""
+"This includes the currently active and reserved tasks, statistics, and "
+"revoked tasks."
+msgstr ""
+
+#: celery.worker.state.SOFTWARE_INFO:1 of
+msgid "Worker software/platform information."
+msgstr ""
+
+#: celery.worker.state.reserved_requests:1 of
+msgid "set of all reserved :class:`~celery.worker.request.Request`'s."
+msgstr ""
+
+#: celery.worker.state.active_requests:1 of
+msgid "set of currently active :class:`~celery.worker.request.Request`'s."
+msgstr ""
+
+#: celery.worker.state.total_count:1 of
+msgid "count of tasks accepted by the worker, sorted by type."
+msgstr ""
+
+#: celery.worker.state.revoked:1 of
+msgid "the list of currently revoked tasks.  Persistent if ``statedb`` set."
+msgstr ""
+
+#: celery.worker.state.task_reserved:1 of
+msgid "Update global state when a task has been reserved."
+msgstr ""
+
+#: celery.worker.state.maybe_shutdown:1 of
+msgid "Shutdown if flags have been set."
+msgstr ""
+
+#: celery.worker.state.task_accepted:1 of
+msgid "Update global state when a task has been accepted."
+msgstr ""
+
+#: celery.worker.state.task_ready:1 of
+msgid "Update global state when a task is ready."
+msgstr ""
+
+#: celery.worker.state.Persistent:1 of
+msgid "Stores worker state between restarts."
+msgstr ""
+
+#: celery.worker.state.Persistent:3 of
+msgid ""
+"This is the persistent data stored by the worker when :option:`celery "
+"worker --statedb` is enabled."
+msgstr ""
+
+#: celery.worker.state.Persistent:6 of
+msgid "Currently only stores revoked task id's."
+msgstr ""
+
+#: celery.worker.state.Persistent.compress:1 of
+msgid "Returns a bytes object containing compressed data."
+msgstr ""
+
+#: celery.worker.state.Persistent.compress:3
+#: celery.worker.state.Persistent.decompress:3 of
+msgid "data"
+msgstr ""
+
+#: celery.worker.state.Persistent.compress:4 of
+msgid "Binary data to be compressed."
+msgstr ""
+
+#: celery.worker.state.Persistent.compress:5 of
+msgid "level"
+msgstr ""
+
+#: celery.worker.state.Persistent.compress:6 of
+msgid "Compression level, in 0-9 or -1."
+msgstr ""
+
+#: celery.worker.state.Persistent.decompress:1 of
+msgid "Returns a bytes object containing the uncompressed data."
+msgstr ""
+
+#: celery.worker.state.Persistent.decompress:4 of
+msgid "Compressed data."
+msgstr ""
+
+#: celery.worker.state.Persistent.decompress:5 of
+msgid "wbits"
+msgstr ""
+
+#: celery.worker.state.Persistent.decompress:6 of
+msgid "The window buffer size and container format."
+msgstr ""
+
+#: celery.worker.state.Persistent.decompress:7 of
+msgid "bufsize"
+msgstr ""
+
+#: celery.worker.state.Persistent.decompress:8 of
+msgid "The initial output buffer size."
+msgstr ""
+

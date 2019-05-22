@@ -1,0 +1,229 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../getting-started/brokers/redis.rst:5
+msgid "Using Redis"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:10
+msgid "Installation"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:12
+msgid ""
+"For the Redis support you have to install additional dependencies. You "
+"can install both Celery and these dependencies in one go using the "
+"``celery[redis]`` :ref:`bundle <bundles>`:"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:23
+msgid "Configuration"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:25
+msgid "Configuration is easy, just configure the location of your Redis database:"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:32
+msgid "Where the URL is in the format of:"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:38
+msgid ""
+"all fields after the scheme are optional, and will default to "
+"``localhost`` on port 6379, using database 0."
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:41
+msgid ""
+"If a Unix socket connection should be used, the URL needs to be in the "
+"format:"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:47
+msgid ""
+"Specifying a different database number when using a Unix socket is "
+"possible by adding the ``virtual_host`` parameter to the URL:"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:54
+msgid "It is also easy to connect directly to a list of Redis Sentinel:"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:64
+msgid "Visibility Timeout"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:66
+msgid ""
+"The visibility timeout defines the number of seconds to wait for the "
+"worker to acknowledge the task before the message is redelivered to "
+"another worker. Be sure to see :ref:`redis-caveats` below."
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:70
+msgid "This option is set via the :setting:`broker_transport_options` setting:"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:76
+msgid "The default visibility timeout for Redis is 1 hour."
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:81
+msgid "Results"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:83
+msgid ""
+"If you also want to store the state and return values of tasks in Redis, "
+"you should configure these settings::"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:88
+msgid ""
+"For a complete list of options supported by the Redis result backend, see"
+" :ref:`conf-redis-result-backend`."
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:91
+msgid ""
+"If you are using Sentinel, you should specify the master_name using the "
+":setting:`result_backend_transport_options` setting:"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:101
+msgid "Caveats"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:106
+msgid "Fanout prefix"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:108
+msgid "Broadcast messages will be seen by all virtual hosts by default."
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:110
+msgid ""
+"You have to set a transport option to prefix the messages so that they "
+"will only be received by the active virtual host:"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:117
+msgid ""
+"Note that you won't be able to communicate with workers running older "
+"versions or workers that doesn't have this setting enabled."
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:120
+msgid ""
+"This setting will be the default in the future, so better to migrate "
+"sooner rather than later."
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:126
+msgid "Fanout patterns"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:128
+msgid "Workers will receive all task related events by default."
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:130
+msgid ""
+"To avoid this you must set the ``fanout_patterns`` fanout option so that "
+"the workers may only subscribe to worker related events:"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:137
+msgid ""
+"Note that this change is backward incompatible so all workers in the "
+"cluster must have this option enabled, or else they won't be able to "
+"communicate."
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:141
+msgid "This option will be enabled by default in the future."
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:144
+msgid "Visibility timeout"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:146
+msgid ""
+"If a task isn't acknowledged within the :ref:`redis-visibility_timeout` "
+"the task will be redelivered to another worker and executed."
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:149
+msgid ""
+"This causes problems with ETA/countdown/retry tasks where the time to "
+"execute exceeds the visibility timeout; in fact if that happens it will "
+"be executed again, and again in a loop."
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:153
+msgid ""
+"So you have to increase the visibility timeout to match the time of the "
+"longest ETA you're planning to use."
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:156
+msgid ""
+"Note that Celery will redeliver messages at worker shutdown, so having a "
+"long visibility timeout will only delay the redelivery of 'lost' tasks in"
+" the event of a power failure or forcefully terminated workers."
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:161
+msgid ""
+"Periodic tasks won't be affected by the visibility timeout, as this is a "
+"concept separate from ETA/countdown."
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:164
+msgid ""
+"You can increase this timeout by configuring a transport option with the "
+"same name:"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:171
+msgid "The value must be an int describing the number of seconds."
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:174
+msgid "Key eviction"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:176
+msgid "Redis may evict keys from the database in some situations"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:178
+msgid "If you experience an error like:"
+msgstr ""
+
+#: ../getting-started/brokers/redis.rst:185
+msgid ""
+"then you may want to configure the :command:`redis-server` to not evict "
+"keys by setting the ``timeout`` parameter to 0 in the redis configuration"
+" file."
+msgstr ""
+

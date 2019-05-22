@@ -1,0 +1,81 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../internals/reference/celery.concurrency.base.rst:3
+msgid "``celery.concurrency.base``"
+msgstr ""
+
+#: celery.concurrency.base:1 of
+msgid "Base Execution Pool."
+msgstr ""
+
+#: celery.concurrency.base.BasePool:1 of
+msgid "Task pool."
+msgstr ""
+
+#: celery.concurrency.base.BasePool.Timer:1 of
+msgid "Timer thread."
+msgstr ""
+
+#: celery.concurrency.base.BasePool.Timer:3 of
+msgid "This is only used for transports not supporting AsyncIO."
+msgstr ""
+
+#: celery.concurrency.base.BasePool.Timer.Entry:1 of
+msgid "Schedule Entry."
+msgstr ""
+
+#: celery.concurrency.base.BasePool.Timer.run:1 of
+msgid "Method representing the thread's activity."
+msgstr ""
+
+#: celery.concurrency.base.BasePool.Timer.run:3 of
+msgid ""
+"You may override this method in a subclass. The standard run() method "
+"invokes the callable object passed to the object's constructor as the "
+"target argument, if any, with sequential and keyword arguments taken from"
+" the args and kwargs arguments, respectively."
+msgstr ""
+
+#: celery.concurrency.base.BasePool.apply_async:1 of
+msgid "Equivalent of the :func:`apply` built-in function."
+msgstr ""
+
+#: celery.concurrency.base.BasePool.apply_async:3 of
+msgid ""
+"Callbacks should optimally return as soon as possible since otherwise the"
+" thread which handles the result will get blocked."
+msgstr ""
+
+#: celery.concurrency.base.BasePool.is_green:1 of
+msgid "set to true if pool uses greenlets."
+msgstr ""
+
+#: celery.concurrency.base.BasePool.signal_safe:1 of
+msgid "set to true if the pool can be shutdown from within a signal handler."
+msgstr ""
+
+#: celery.concurrency.base.BasePool.uses_semaphore:1 of
+msgid "only used by multiprocessing pool"
+msgstr ""
+
+#: celery.concurrency.base.apply_target:1 of
+msgid "Apply function within pool context."
+msgstr ""
+

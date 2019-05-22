@@ -1,0 +1,743 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../internals/reference/celery.backends.rpc.rst:3
+msgid "``celery.backends.rpc``"
+msgstr ""
+
+#: celery.backends.rpc:1 of
+msgid "The ``RPC`` result backend for AMQP brokers."
+msgstr ""
+
+#: celery.backends.rpc:3 of
+msgid "RPC-style result backend, using reply-to and one queue per client."
+msgstr ""
+
+#: celery.backends.rpc.BacklogLimitExceeded:1 of
+msgid "Too much state history to fast-forward."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend:1 of
+msgid "Base class for the RPC result backend."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.BacklogLimitExceeded:1 of
+msgid "Exception raised when there are too many messages for a task id."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Consumer:1 of
+msgid "Consumer that requires manual declaration of queues."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:1 of
+msgid "An Exchange declaration."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange
+#: celery.backends.rpc.RPCBackend.Exchange.Message
+#: celery.backends.rpc.RPCBackend.Exchange.bind_to
+#: celery.backends.rpc.RPCBackend.Exchange.delete
+#: celery.backends.rpc.RPCBackend.Exchange.publish
+#: celery.backends.rpc.RPCBackend.Producer
+#: celery.backends.rpc.RPCBackend.Producer.publish
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.consume
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.qos
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.receive
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.recover of
+msgid "Parameters"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:3 of
+msgid "See :attr:`name`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:5 of
+msgid "See :attr:`type`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:7 of
+msgid "See :attr:`channel`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:9 of
+msgid "See :attr:`durable`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:11 of
+msgid "See :attr:`auto_delete`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:13
+#: celery.backends.rpc.RPCBackend.Producer.publish:7 of
+msgid "See :attr:`delivery_mode`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:15 of
+msgid "See :attr:`arguments`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:17 of
+msgid "See :attr:`no_declare`"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:22 of
+msgid "Name of the exchange. Default is no name (the default exchange)."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange of
+msgid "type"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:25
+#: celery.backends.rpc.RPCBackend.Exchange:73 of
+msgid "str"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:29 of
+msgid ""
+"*This description of AMQP exchange types was shamelessly stolen from the "
+"blog post `AMQP in 10 minutes: Part 4`_ by Rajith Attapattu. Reading this"
+" article is recommended if you're new to amqp.*"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:34 of
+msgid ""
+"\"AMQP defines four default exchange types (routing algorithms) that "
+"covers most of the common messaging use cases. An AMQP broker can also "
+"define additional exchange types, so see your broker manual for more "
+"information about available exchange types."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:39 of
+msgid "`direct` (*default*)"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:41 of
+msgid ""
+"Direct match between the routing key in the message, and the routing "
+"criteria used when a queue is bound to this exchange."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:45 of
+msgid "`topic`"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:47 of
+msgid ""
+"Wildcard match between the routing key and the routing pattern specified "
+"in the exchange/queue binding. The routing key is treated as zero or more"
+" words delimited by `\".\"` and supports special wildcard characters. "
+"`\"*\"` matches a single word and `\"#\"` matches zero or more words."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:53 of
+msgid "`fanout`"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:55 of
+msgid ""
+"Queues are bound to this exchange with no arguments. Hence any message "
+"sent to this exchange will be forwarded to all queues bound to this "
+"exchange."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:59 of
+msgid "`headers`"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:61 of
+msgid ""
+"Queues are bound to this exchange with a table of arguments containing "
+"headers and values (optional). A special argument named \"x-match\" "
+"determines the matching algorithm, where `\"all\"` implies an `AND` (all "
+"pairs must match) and `\"any\"` implies `OR` (at least one pair must "
+"match)."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:67 of
+msgid ":attr:`arguments` is used to specify the arguments."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:77 of
+msgid "The channel the exchange is bound to (if bound)."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:79 of
+msgid "ChannelT"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:83 of
+msgid ""
+"Durable exchanges remain active when a server restarts. Non-durable "
+"exchanges (transient exchanges) are purged when a server restarts.  "
+"Default is :const:`True`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:87
+#: celery.backends.rpc.RPCBackend.Exchange:94
+#: celery.backends.rpc.RPCBackend.Exchange:127 of
+msgid "bool"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:91 of
+msgid ""
+"If set, the exchange is deleted when all queues have finished using it. "
+"Default is :const:`False`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:98 of
+msgid ""
+"The default delivery mode used for messages. The value is an integer, or "
+"alias string."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:101 of
+msgid "1 or `\"transient\"`"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:103 of
+msgid ""
+"The message is transient. Which means it is stored in memory only, and is"
+" lost if the server dies or restarts."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:109 of
+msgid "2 or \"persistent\" (*default*)"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:107 of
+msgid ""
+"The message is persistent. Which means the message is stored both in-"
+"memory, and on disk, and therefore preserved if the server dies or "
+"restarts."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:111 of
+msgid "The default value is 2 (persistent)."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:113 of
+msgid "enum"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:117 of
+msgid "Additional arguments to specify when the exchange is declared."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:120 of
+msgid "Dict"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange:124 of
+msgid "Never declare this exchange (:meth:`declare` does nothing)."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.Message:1 of
+msgid "Create message instance to be sent with :meth:`publish`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.Message:3
+#: celery.backends.rpc.RPCBackend.Producer.publish:3 of
+msgid "Message body."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.Message:5 of
+msgid "Set custom delivery mode. Defaults to :attr:`delivery_mode`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.Message:8 of
+msgid ""
+"Message priority, 0 to broker configured max priority, where higher is "
+"better."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.Message:11 of
+msgid ""
+"The messages content_type.  If content_type is set, no serialization "
+"occurs as it is assumed this is either a binary object, or you've done "
+"your own serialization. Leave blank if using built-in serialization as "
+"our library properly sets content_type."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.Message:17 of
+msgid ""
+"The character set in which this object is encoded. Use \"binary\" if "
+"sending in raw binary objects. Leave blank if using built-in "
+"serialization as our library properly sets content_encoding."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.Message:22 of
+msgid "Message properties."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.Message:24 of
+msgid "Message headers."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.bind_to:1 of
+msgid "Bind the exchange to another exchange."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.bind_to:3 of
+msgid ""
+"If set the server will not respond, and the call will not block waiting "
+"for a response. Default is :const:`False`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.can_cache_declaration:1 of
+msgid "bool(x) -> bool"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.can_cache_declaration:3 of
+msgid ""
+"Returns True when the argument x is true, False otherwise. The builtins "
+"True and False are the only two instances of the class bool. The class "
+"bool is a subclass of the class int, and cannot be subclassed."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.declare:1
+#: celery.backends.rpc.RPCBackend.Producer.declare:1 of
+msgid "Declare the exchange."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.declare:3 of
+msgid ""
+"Creates the exchange on the broker, unless passive is set in which case "
+"it will only assert that the exchange exists."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.declare:7 of
+msgid "Argument:"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.declare:7 of
+msgid "nowait (bool): If set the server will not respond, and a"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.declare:8 of
+msgid "response will not be waited for. Default is :const:`False`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.delete:1 of
+msgid "Delete the exchange declaration on server."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.delete:3 of
+msgid "Delete only if the exchange has no bindings. Default is :const:`False`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.delete:6 of
+msgid ""
+"If set the server will not respond, and a response will not be waited "
+"for. Default is :const:`False`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.publish:1 of
+msgid "Publish message."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.publish:3 of
+msgid "Message to publish."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.publish:5
+#: celery.backends.rpc.RPCBackend.Producer.publish:5 of
+msgid "Message routing key."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.publish:7
+#: celery.backends.rpc.RPCBackend.Exchange.publish:9
+#: celery.backends.rpc.RPCBackend.Producer.publish:9
+#: celery.backends.rpc.RPCBackend.Producer.publish:11 of
+msgid "Currently not supported."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Exchange.unbind_from:1 of
+msgid "Delete previously created exchange binding from the server."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer:1 of
+msgid "Message Producer."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer:3 of
+msgid "Connection or channel."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer:5 of
+msgid "Optional default exchange."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer:7 of
+msgid "Optional default routing key."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer:9 of
+msgid "Default serializer. Default is `\"json\"`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer:11 of
+msgid "Default compression method. Default is no compression."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer:14 of
+msgid ""
+"Automatically declare the default exchange at instantiation. Default is "
+":const:`True`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer:17 of
+msgid ""
+"Callback to call for undeliverable messages, when the `mandatory` or "
+"`immediate` arguments to :meth:`publish` is used. This callback needs the"
+" following signature: `(exception, exchange, routing_key, message)`. Note"
+" that the producer needs to drain events to use this feature."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer.declare:5 of
+msgid ""
+"This happens automatically at instantiation when the :attr:`auto_declare`"
+" flag is enabled."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer.maybe_declare:1 of
+msgid "Declare exchange if not already declared during this session."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer.publish:1 of
+msgid "Publish message to the specified exchange."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer.publish:13 of
+msgid "Message priority. A number between 0 and 9."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer.publish:15 of
+msgid "Content type. Default is auto-detect."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer.publish:17 of
+msgid "Content encoding. Default is auto-detect."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer.publish:19 of
+msgid "Serializer to use. Default is auto-detect."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer.publish:21 of
+msgid "Compression method to use.  Default is none."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer.publish:23 of
+msgid "Mapping of arbitrary headers to pass along with the message body."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer.publish:26 of
+msgid "Override the exchange. Note that this exchange must have been declared."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer.publish:29 of
+msgid ""
+"Optional list of required entities that must have been declared before "
+"publishing the message. The entities will be declared using "
+":func:`~kombu.common.maybe_declare`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer.publish:34 of
+msgid "Retry publishing, or declaring entities if the connection is lost."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer.publish:37 of
+msgid ""
+"Retry configuration, this is the keywords supported by "
+":meth:`~kombu.Connection.ensure`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer.publish:40 of
+msgid "A TTL in seconds can be specified per message. Default is no expiration."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer.publish:43 of
+msgid "Additional message properties, see AMQP spec."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Producer.revive:1 of
+msgid "Revive the producer after connection loss."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.Queue:1 of
+msgid "Queue that never caches declaration."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer:1 of
+msgid "Message consumer."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer:3 of
+msgid "see :attr:`channel`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer:5 of
+msgid "see :attr:`queues`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer:7 of
+msgid "see :attr:`no_ack`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer:9 of
+msgid "see :attr:`auto_declare`"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer:11 of
+msgid "see :attr:`callbacks`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer:13 of
+msgid "See :attr:`on_message`"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer:15 of
+msgid "see :attr:`on_decode_error`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer:17 of
+msgid "see :attr:`prefetch_count`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.ContentDisallowed:1
+#: of
+msgid "Consumer does not allow this content-type."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.add_queue:1 of
+msgid "Add a queue to the list of queues to consume from."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.add_queue:5 of
+msgid ""
+"This will not start consuming from the queue, for that you will have to "
+"call :meth:`consume` after."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.cancel:1
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.close:1 of
+msgid "End all active queue consumers."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.cancel:5
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.close:5 of
+msgid ""
+"This does not affect already delivered messages, but it does mean the "
+"server will not send any more messages for this consumer."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.cancel_by_queue:1 of
+msgid "Cancel consumer by queue name."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.consume:1 of
+msgid "Start consuming messages."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.consume:3 of
+msgid ""
+"Can be called multiple times, but note that while it will consume from "
+"new queues added since the last call, it will not cancel consuming from "
+"removed queues ( use :meth:`cancel_by_queue`)."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.consume:8 of
+msgid "See :attr:`no_ack`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.consuming_from:1 of
+msgid "Return :const:`True` if currently consuming from queue'."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.declare:1 of
+msgid "Declare queues, exchanges and bindings."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.declare:5 of
+msgid ""
+"This is done automatically at instantiation when :attr:`auto_declare` is "
+"set."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.flow:1 of
+msgid "Enable/disable flow from peer."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.flow:3 of
+msgid ""
+"This is a simple flow-control mechanism that a peer can use to avoid "
+"overflowing its queues or otherwise finding itself receiving more "
+"messages than it can process."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.flow:7 of
+msgid ""
+"The peer that receives a request to stop sending content will finish "
+"sending the current content (if any), and then wait until flow is "
+"reactivated."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.purge:1 of
+msgid "Purge messages from all queues."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.purge:3 of
+msgid "This will *delete all ready messages*, there is no undo operation."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.qos:1 of
+msgid "Specify quality of service."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.qos:3 of
+msgid ""
+"The client can request that messages should be sent in advance so that "
+"when the client finishes processing a message, the following message is "
+"already held locally, rather than needing to be sent down the channel. "
+"Prefetching gives a performance improvement."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.qos:9 of
+msgid "The prefetch window is Ignored if the :attr:`no_ack` option is set."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.qos:11 of
+msgid ""
+"Specify the prefetch window in octets. The server will send a message in "
+"advance if it is equal to or smaller in size than the available prefetch "
+"size (and also falls within other prefetch limits). May be set to zero, "
+"meaning \"no specific limit\", although other prefetch limits may still "
+"apply."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.qos:18 of
+msgid "Specify the prefetch window in terms of whole messages."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.qos:21 of
+msgid "Apply new settings globally on all channels."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.receive:1 of
+msgid "Method called when a message is received."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.receive:3 of
+msgid "This dispatches to the registered :attr:`callbacks`."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.receive:5 of
+msgid "The decoded message body."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.receive:7 of
+msgid "The message instance."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.receive of
+msgid "raises"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.receive:10 of
+msgid ""
+":exc:`NotImplementedError` -- If no consumer callbacks have been "
+"registered."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.recover:1 of
+msgid "Redeliver unacknowledged messages."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.recover:3 of
+msgid ""
+"Asks the broker to redeliver all unacknowledged messages on the specified"
+" channel."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.recover:6 of
+msgid ""
+"By default the messages will be redelivered to the original recipient. "
+"With `requeue` set to true, the server will attempt to requeue the "
+"message, potentially then delivering it to an alternative subscriber."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.register_callback:1
+#: of
+msgid "Register a new callback to be called when a message is received."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.register_callback:5
+#: of
+msgid ""
+"The signature of the callback needs to accept two arguments: `(body, "
+"message)`, which is the decoded message body and the "
+":class:`~kombu.Message` instance."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.ResultConsumer.Consumer.revive:1 of
+msgid "Revive consumer after connection loss."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.as_uri:1 of
+msgid "Return the backend as an URI, sanitizing the password or not."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.destination_for:1 of
+msgid "Get the destination for result by task id."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.destination_for of
+msgid "Returns"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.destination_for:3 of
+msgid "tuple of ``(reply_to, correlation_id)``."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.destination_for of
+msgid "Return type"
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.reload_group_result:1 of
+msgid "Reload group result, even if it has been previously fetched."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.reload_task_result:1 of
+msgid "Reload task result, even if it has been previously fetched."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.restore_group:1 of
+msgid "Get the result for a group."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.save_group:1 of
+msgid "Store the result of an executed group."
+msgstr ""
+
+#: celery.backends.rpc.RPCBackend.store_result:1 of
+msgid "Send task return value and state."
+msgstr ""
+

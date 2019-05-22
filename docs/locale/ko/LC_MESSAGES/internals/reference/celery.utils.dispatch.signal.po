@@ -1,0 +1,185 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../internals/reference/celery.utils.dispatch.signal.rst:3
+msgid "``celery.utils.dispatch.signal``"
+msgstr ""
+
+#: celery.utils.dispatch.signal:1 of
+msgid "Implementation of the Observer pattern."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal:1 of
+msgid "Create new signal."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal of
+msgid "Keyword Arguments"
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal:3 of
+msgid "A list of the arguments this signal can pass along in a :meth:`send` call."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal:6 of
+msgid "Enable receiver cache."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal:8 of
+msgid "Name of signal, used for debugging purposes."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.connect:1 of
+msgid "Connect receiver to sender for signal."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.connect
+#: celery.utils.dispatch.signal.Signal.disconnect
+#: celery.utils.dispatch.signal.Signal.send
+#: celery.utils.dispatch.signal.Signal.send_robust of
+msgid "Parameters"
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.connect:3 of
+msgid ""
+"A function or an instance method which is to receive signals.  Receivers "
+"must be hashable objects.  if weak is :const:`True`, then receiver must "
+"be weak-referenceable.  Receivers must be able to accept keyword "
+"arguments.  If receivers have a `dispatch_uid` attribute, the receiver "
+"will not be added if another receiver already exists with that "
+"`dispatch_uid`."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.connect:3 of
+msgid ""
+"A function or an instance method which is to receive signals.  Receivers "
+"must be hashable objects."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.connect:6 of
+msgid "if weak is :const:`True`, then receiver must be weak-referenceable."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.connect:9 of
+msgid "Receivers must be able to accept keyword arguments."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.connect:11 of
+msgid ""
+"If receivers have a `dispatch_uid` attribute, the receiver will not be "
+"added if another receiver already exists with that `dispatch_uid`."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.connect:15 of
+msgid ""
+"The sender to which the receiver should respond. Must either be a Python "
+"object, or :const:`None` to receive events from any sender."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.connect:19 of
+msgid ""
+"Whether to use weak references to the receiver. By default, the module "
+"will attempt to use weak references to the receiver objects.  If this "
+"parameter is false, then strong references will be used."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.connect:24 of
+msgid ""
+"An identifier used to uniquely identify a particular instance of a "
+"receiver.  This will usually be a string, though it may be anything "
+"hashable."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.connect:28 of
+msgid ""
+"If the signal receiver raises an exception (e.g. ConnectionError), the "
+"receiver will be retried until it runs successfully. A strong ref to the "
+"receiver will be stored and the `weak` option will be ignored."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.disconnect:1 of
+msgid "Disconnect receiver from sender for signal."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.disconnect:3 of
+msgid ""
+"If weak references are used, disconnect needn't be called. The receiver "
+"will be removed from dispatch automatically."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.disconnect:6 of
+msgid ""
+"The registered receiver to disconnect. May be none if `dispatch_uid` is "
+"specified."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.disconnect:9 of
+msgid "The registered sender to disconnect."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.disconnect:11 of
+msgid "The weakref state to disconnect."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.disconnect:13 of
+msgid "The unique identifier of the receiver to disconnect."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.receivers:1 of
+msgid "Holds a dictionary of ``{receiverkey (id): weakref(receiver)}`` mappings."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.send:1
+#: celery.utils.dispatch.signal.Signal.send_robust:1 of
+msgid "Send signal from sender to all connected receivers."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.send:3
+#: celery.utils.dispatch.signal.Signal.send_robust:3 of
+msgid ""
+"If any receiver raises an error, the error propagates back through send, "
+"terminating the dispatch loop, so it is quite possible to not have all "
+"receivers called if a raises an error."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.send:7
+#: celery.utils.dispatch.signal.Signal.send_robust:7 of
+msgid "The sender of the signal. Either a specific object or :const:`None`."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.send:10
+#: celery.utils.dispatch.signal.Signal.send_robust:10 of
+msgid "Named arguments which will be passed to receivers."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.send
+#: celery.utils.dispatch.signal.Signal.send_robust of
+msgid "Returns"
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.send:13
+#: celery.utils.dispatch.signal.Signal.send_robust:13 of
+msgid "of tuple pairs: `[(receiver, response), … ]`."
+msgstr ""
+
+#: celery.utils.dispatch.signal.Signal.send
+#: celery.utils.dispatch.signal.Signal.send_robust of
+msgid "Return type"
+msgstr ""
+

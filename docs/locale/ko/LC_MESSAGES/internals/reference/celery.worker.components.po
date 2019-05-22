@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../internals/reference/celery.worker.components.rst:3
+msgid "``celery.worker.components``"
+msgstr ""
+
+#: celery.worker.components:1 of
+msgid "Worker-level Bootsteps."
+msgstr ""
+
+#: celery.worker.components.Timer:1 of
+msgid "Timer bootstep."
+msgstr ""
+
+#: celery.worker.components.Beat.create:1
+#: celery.worker.components.Consumer.create:1
+#: celery.worker.components.Hub.create:1 celery.worker.components.Pool.create:1
+#: celery.worker.components.StateDB.create:1
+#: celery.worker.components.Timer.create:1 of
+msgid "Create the step."
+msgstr ""
+
+#: celery.worker.components.Hub:1 of
+msgid "Worker starts the event loop."
+msgstr ""
+
+#: celery.worker.components.Hub.include_if:1 of
+msgid "Return true if bootstep should be included."
+msgstr ""
+
+#: celery.worker.components.Hub.include_if:3 of
+msgid ""
+"You can define this as an optional predicate that decides whether this "
+"step should be created."
+msgstr ""
+
+#: celery.worker.components.Pool:1 of
+msgid "Bootstep managing the worker pool."
+msgstr ""
+
+#: celery.worker.components.Pool:3 of
+msgid ""
+"Describes how to initialize the worker pool, and starts and stops the "
+"pool during worker start-up/shutdown."
+msgstr ""
+
+#: celery.worker.components.Pool:6 of
+msgid "Adds attributes:"
+msgstr ""
+
+#: celery.worker.components.Pool:8 of
+msgid "autoscale"
+msgstr ""
+
+#: celery.worker.components.Pool:9 of
+msgid "pool"
+msgstr ""
+
+#: celery.worker.components.Pool:10 of
+msgid "max_concurrency"
+msgstr ""
+
+#: celery.worker.components.Pool:11 of
+msgid "min_concurrency"
+msgstr ""
+
+#: celery.worker.components.Beat:1 of
+msgid "Step used to embed a beat process."
+msgstr ""
+
+#: celery.worker.components.Beat:3 of
+msgid "Enabled when the ``beat`` argument is set."
+msgstr ""
+
+#: celery.worker.components.StateDB:1 of
+msgid "Bootstep that sets up between-restart state database file."
+msgstr ""
+
+#: celery.worker.components.Consumer:1 of
+msgid "Bootstep starting the Consumer blueprint."
+msgstr ""
+

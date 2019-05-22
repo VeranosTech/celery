@@ -1,0 +1,204 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../reference/celery.contrib.migrate.rst:3
+msgid "``celery.contrib.migrate``"
+msgstr ""
+
+#: celery.contrib.migrate:1 of
+msgid "Message migration tools (Broker <-> Broker)."
+msgstr ""
+
+#: celery.contrib.migrate.StopFiltering:1 of
+msgid "Semi-predicate used to signal filter stop."
+msgstr ""
+
+#: celery.contrib.migrate.State:1 of
+msgid "Migration progress state."
+msgstr ""
+
+#: celery.contrib.migrate.republish:1 of
+msgid "Republish message."
+msgstr ""
+
+#: celery.contrib.migrate.migrate_task:1 of
+msgid "Migrate single task message."
+msgstr ""
+
+#: celery.contrib.migrate.migrate_tasks:1 of
+msgid "Migrate tasks from one broker to another."
+msgstr ""
+
+#: celery.contrib.migrate.move:1 celery.contrib.migrate.move_direct:1 of
+msgid "Find tasks by filtering them and move the tasks to a new queue."
+msgstr ""
+
+#: celery.contrib.migrate.move celery.contrib.migrate.move_direct
+#: celery.contrib.migrate.move_direct_by_id
+#: celery.contrib.migrate.move_task_by_id of
+msgid "Parameters"
+msgstr ""
+
+#: celery.contrib.migrate.move:3 celery.contrib.migrate.move_direct:3 of
+msgid ""
+"Filter function used to decide the messages to move.  Must accept the "
+"standard signature of ``(body, message)`` used by Kombu consumer "
+"callbacks.  If the predicate wants the message to be moved it must return"
+" either:      1) a tuple of ``(exchange, routing_key)``, or      2) a "
+":class:`~kombu.entity.Queue` instance, or      3) any other true value "
+"means the specified         ``exchange`` and ``routing_key`` arguments "
+"will be used."
+msgstr ""
+
+#: celery.contrib.migrate.move:3 celery.contrib.migrate.move_direct:3 of
+msgid ""
+"Filter function used to decide the messages to move.  Must accept the "
+"standard signature of ``(body, message)`` used by Kombu consumer "
+"callbacks.  If the predicate wants the message to be moved it must return"
+" either:"
+msgstr ""
+
+#: celery.contrib.migrate.move:8 celery.contrib.migrate.move_direct:8 of
+msgid "a tuple of ``(exchange, routing_key)``, or"
+msgstr ""
+
+#: celery.contrib.migrate.move:10 celery.contrib.migrate.move_direct:10 of
+msgid "a :class:`~kombu.entity.Queue` instance, or"
+msgstr ""
+
+#: celery.contrib.migrate.move:12 celery.contrib.migrate.move_direct:12 of
+msgid "any other true value means the specified"
+msgstr ""
+
+#: celery.contrib.migrate.move:13 celery.contrib.migrate.move_direct:13 of
+msgid "``exchange`` and ``routing_key`` arguments will be used."
+msgstr ""
+
+#: celery.contrib.migrate.move:15 celery.contrib.migrate.move_direct:15 of
+msgid "Custom connection to use."
+msgstr ""
+
+#: celery.contrib.migrate.move:17 celery.contrib.migrate.move_direct:17 of
+msgid ""
+"List[Union[str, kombu.Queue]]: Optional list of source queues to use "
+"instead of the default (queues in :setting:`task_queues`).  This list can"
+" also contain :class:`~kombu.entity.Queue` instances."
+msgstr ""
+
+#: celery.contrib.migrate.move:21 celery.contrib.migrate.move_direct:21 of
+msgid "Default destination exchange."
+msgstr ""
+
+#: celery.contrib.migrate.move:23 celery.contrib.migrate.move_direct:23 of
+msgid "Default destination routing key."
+msgstr ""
+
+#: celery.contrib.migrate.move:25 celery.contrib.migrate.move_direct:25 of
+msgid "Limit number of messages to filter."
+msgstr ""
+
+#: celery.contrib.migrate.move:27 celery.contrib.migrate.move_direct:27 of
+msgid ""
+"Callback called after message moved, with signature ``(state, body, "
+"message)``."
+msgstr ""
+
+#: celery.contrib.migrate.move:30 celery.contrib.migrate.move_direct:30
+#: celery.contrib.migrate.move_direct_by_id:6
+#: celery.contrib.migrate.move_task_by_id:6 of
+msgid ""
+"Optional function to transform the return value (destination) of the "
+"filter function."
+msgstr ""
+
+#: celery.contrib.migrate.move:34 celery.contrib.migrate.move_direct:34 of
+msgid "Also supports the same keyword arguments as :func:`start_filter`."
+msgstr ""
+
+#: celery.contrib.migrate.move:36 celery.contrib.migrate.move_direct:36 of
+msgid ""
+"To demonstrate, the :func:`move_task_by_id` operation can be implemented "
+"like this:"
+msgstr ""
+
+#: celery.contrib.migrate.move:48 celery.contrib.migrate.move_direct:48 of
+msgid "or with a transform:"
+msgstr ""
+
+#: celery.contrib.migrate.move:61 celery.contrib.migrate.move_direct:61 of
+msgid ""
+"The predicate may also return a tuple of ``(exchange, routing_key)`` to "
+"specify the destination to where the task should be moved, or a "
+":class:`~kombu.entitiy.Queue` instance. Any other true value means that "
+"the task will be moved to the default exchange/routing_key."
+msgstr ""
+
+#: celery.contrib.migrate.task_id_eq:1 of
+msgid "Return true if task id equals task_id'."
+msgstr ""
+
+#: celery.contrib.migrate.task_id_in:1 of
+msgid "Return true if task id is member of set ids'."
+msgstr ""
+
+#: celery.contrib.migrate.start_filter:1 of
+msgid "Filter tasks."
+msgstr ""
+
+#: celery.contrib.migrate.move_direct_by_id:1
+#: celery.contrib.migrate.move_task_by_id:1 of
+msgid "Find a task by id and move it to another queue."
+msgstr ""
+
+#: celery.contrib.migrate.move_direct_by_id:3
+#: celery.contrib.migrate.move_task_by_id:3 of
+msgid "Id of task to find and move."
+msgstr ""
+
+#: celery.contrib.migrate.move_direct_by_id:5
+#: celery.contrib.migrate.move_task_by_id:5 of
+msgid "(str, kombu.Queue): Destination queue."
+msgstr ""
+
+#: celery.contrib.migrate.move_direct_by_id:9
+#: celery.contrib.migrate.move_task_by_id:9 of
+msgid "Also supports the same keyword arguments as :func:`move`."
+msgstr ""
+
+#: celery.contrib.migrate.move_by_idmap:1 of
+msgid "Move tasks by matching from a ``task_id: queue`` mapping."
+msgstr ""
+
+#: celery.contrib.migrate.move_by_idmap:3 of
+msgid "Where ``queue`` is a queue to move the task to."
+msgstr ""
+
+#: celery.contrib.migrate.move_by_idmap:6
+#: celery.contrib.migrate.move_by_taskmap:6 of
+msgid "Example"
+msgstr ""
+
+#: celery.contrib.migrate.move_by_taskmap:1 of
+msgid "Move tasks by matching from a ``task_name: queue`` mapping."
+msgstr ""
+
+#: celery.contrib.migrate.move_by_taskmap:3 of
+msgid "``queue`` is the queue to move the task to."
+msgstr ""
+

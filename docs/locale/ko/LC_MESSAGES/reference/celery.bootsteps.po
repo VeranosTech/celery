@@ -1,0 +1,139 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../reference/celery.bootsteps.rst:3
+msgid "``celery.bootsteps``"
+msgstr ""
+
+#: celery.bootsteps:1 of
+msgid "A directed acyclic graph of reusable components."
+msgstr ""
+
+#: celery.bootsteps.Blueprint:1 of
+msgid "Blueprint containing bootsteps that can be applied to objects."
+msgstr ""
+
+#: celery.bootsteps.Blueprint of
+msgid "Parameters"
+msgstr ""
+
+#: celery.bootsteps.Blueprint:3 of
+msgid "List of steps."
+msgstr ""
+
+#: celery.bootsteps.Blueprint:4 of
+msgid "Set explicit name for this blueprint."
+msgstr ""
+
+#: celery.bootsteps.Blueprint:6 of
+msgid "Optional callback applied after blueprint start."
+msgstr ""
+
+#: celery.bootsteps.Blueprint:8 of
+msgid "Optional callback applied before blueprint close."
+msgstr ""
+
+#: celery.bootsteps.Blueprint:10 of
+msgid "Optional callback applied after blueprint stopped."
+msgstr ""
+
+#: celery.bootsteps.Blueprint.apply:1 of
+msgid "Apply the steps in this blueprint to an object."
+msgstr ""
+
+#: celery.bootsteps.Blueprint.apply:3 of
+msgid ""
+"This will apply the ``__init__`` and ``include`` methods of each step, "
+"with the object as argument::"
+msgstr ""
+
+#: celery.bootsteps.Blueprint.apply:10 of
+msgid ""
+"For :class:`StartStopStep` the services created will also be added to the"
+" objects ``steps`` attribute."
+msgstr ""
+
+#: celery.bootsteps.Step:1 of
+msgid "A Bootstep."
+msgstr ""
+
+#: celery.bootsteps.Step:3 of
+msgid ""
+"The :meth:`__init__` method is called when the step is bound to a parent "
+"object, and can as such be used to initialize attributes in the parent "
+"object at parent instantiation-time."
+msgstr ""
+
+#: celery.bootsteps.Step.conditional:1 of
+msgid "Set this to true if the step is enabled based on some condition."
+msgstr ""
+
+#: celery.bootsteps.Step.create:1 of
+msgid "Create the step."
+msgstr ""
+
+#: celery.bootsteps.Step.enabled:1 of
+msgid "This provides the default for :meth:`include_if`."
+msgstr ""
+
+#: celery.bootsteps.Step.include_if:1 of
+msgid "Return true if bootstep should be included."
+msgstr ""
+
+#: celery.bootsteps.Step.include_if:3 of
+msgid ""
+"You can define this as an optional predicate that decides whether this "
+"step should be created."
+msgstr ""
+
+#: celery.bootsteps.Step.label:1 of
+msgid "Optional short name used for graph outputs and in logs."
+msgstr ""
+
+#: celery.bootsteps.Step.last:1 of
+msgid ""
+"This flag is reserved for the workers Consumer, since it is required to "
+"always be started last. There can only be one object marked last in every"
+" blueprint."
+msgstr ""
+
+#: celery.bootsteps.Step.name:1 of
+msgid "Optional step name, will use ``qualname`` if not specified."
+msgstr ""
+
+#: celery.bootsteps.Step.requires:1 of
+msgid ""
+"List of other steps that that must be started before this step. Note that"
+" all dependencies must be in the same blueprint."
+msgstr ""
+
+#: celery.bootsteps.StartStopStep:1 of
+msgid "Bootstep that must be started and stopped in order."
+msgstr ""
+
+#: celery.bootsteps.StartStopStep.obj:1 of
+msgid ""
+"Optional obj created by the :meth:`create` method. This is used by "
+":class:`StartStopStep` to keep the original service object."
+msgstr ""
+
+#: celery.bootsteps.ConsumerStep:1 of
+msgid "Bootstep that starts a message consumer."
+msgstr ""
+

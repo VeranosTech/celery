@@ -1,0 +1,3000 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:42+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../getting-started/brokers/index.rst:5
+msgid "Brokers"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst ../../getting-started/index.rst
+msgid "Release"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:7 ../../getting-started/index.rst:5
+msgid "|version|"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst ../../getting-started/index.rst
+msgid "Date"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:8 ../../getting-started/index.rst:6
+msgid "|today|"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:10
+msgid "Celery supports several message transport alternatives."
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:15
+msgid "Broker Instructions"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:27
+msgid "Broker Overview"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:29
+msgid ""
+"This is comparison table of the different transports supports, more "
+"information can be found in the documentation for each individual "
+"transport (see :ref:`broker_toc`)."
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:34
+msgid "**Name**"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:34
+msgid "**Status**"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:34
+#: ../../getting-started/introduction.rst:161
+msgid "**Monitoring**"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:34
+msgid "**Remote Control**"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:36
+msgid "*RabbitMQ*"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:36
+#: ../../getting-started/brokers/index.rst:38
+#: ../../getting-started/brokers/index.rst:40
+msgid "Stable"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:36
+#: ../../getting-started/brokers/index.rst:38
+msgid "Yes"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:38
+msgid "*Redis*"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:40
+msgid "*Amazon SQS*"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:40
+#: ../../getting-started/brokers/index.rst:42
+msgid "No"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:42
+msgid "*Zookeeper*"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:42
+msgid "Experimental"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:45
+msgid ""
+"Experimental brokers may be functional but they don't have dedicated "
+"maintainers."
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:48
+msgid ""
+"Missing monitor support means that the transport doesn't implement "
+"events, and as such Flower, `celery events`, `celerymon` and other event-"
+"based monitoring tools won't work."
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:52
+msgid ""
+"Remote control means the ability to inspect and manage workers at runtime"
+" using the `celery inspect` and `celery control` commands (and other "
+"tools using the remote control API)."
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:5
+msgid "Using RabbitMQ"
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:11
+msgid "Installation & Configuration"
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:13
+msgid ""
+"RabbitMQ is the default broker so it doesn't require any additional "
+"dependencies or initial configuration, other than the URL location of the"
+" broker instance you want to use:"
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:21
+msgid ""
+"For a description of broker URLs and a full list of the various broker "
+"configuration options available to Celery, see :ref:`conf-broker-"
+"settings`, and see below for setting up the username, password and vhost."
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:29
+msgid "Installing the RabbitMQ Server"
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:31
+msgid ""
+"See `Installing RabbitMQ`_ over at RabbitMQ's website. For macOS see "
+"`Installing RabbitMQ on macOS`_."
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:38
+msgid ""
+"If you're getting `nodedown` errors after installing and using "
+":command:`rabbitmqctl` then this blog post can help you identify the "
+"source of the problem:"
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:42
+msgid "http://www.somic.org/2009/02/19/on-rabbitmqctl-and-badrpcnodedown/"
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:47
+msgid "Setting up RabbitMQ"
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:49
+msgid ""
+"To use Celery we need to create a RabbitMQ user, a virtual host and allow"
+" that user access to that virtual host:"
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:68
+msgid ""
+"Substitute in appropriate values for ``myuser``, ``mypassword`` and "
+"``myvhost`` above."
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:70
+msgid ""
+"See the RabbitMQ `Admin Guide`_ for more information about `access "
+"control`_."
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:79
+msgid "Installing RabbitMQ on macOS"
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:81
+msgid ""
+"The easiest way to install RabbitMQ on macOS is using `Homebrew`_ the new"
+" and shiny package management system for macOS."
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:84
+msgid ""
+"First, install Homebrew using the one-line command provided by the "
+"`Homebrew documentation`_:"
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:91
+msgid "Finally, we can install RabbitMQ using :command:`brew`:"
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:102
+msgid ""
+"After you've installed RabbitMQ with :command:`brew` you need to add the "
+"following to your path to be able to start and stop the broker: add it to"
+" the start-up file for your shell (e.g., :file:`.bash_profile` or "
+":file:`.profile`)."
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:111
+msgid "Configuring the system host name"
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:113
+msgid ""
+"If you're using a DHCP server that's giving you a random host name, you "
+"need to permanently configure the host name. This is because RabbitMQ "
+"uses the host name to communicate with nodes."
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:117
+msgid "Use the :command:`scutil` command to permanently set your host name:"
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:123
+msgid ""
+"Then add that host name to :file:`/etc/hosts` so it's possible to resolve"
+" it back into an IP address::"
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:128
+msgid ""
+"If you start the :command:`rabbitmq-server`, your rabbit node should now "
+"be `rabbit@myhost`, as verified by :command:`rabbitmqctl`:"
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:145
+msgid ""
+"This is especially important if your DHCP server gives you a host name "
+"starting with an IP address, (e.g., `23.10.112.31.comcast.net`).  In this"
+" case RabbitMQ will try to use `rabbit@23`: an illegal host name."
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:152
+msgid "Starting/Stopping the RabbitMQ server"
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:154
+msgid "To start the server:"
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:160
+msgid ""
+"you can also run it in the background by adding the ``-detached`` option "
+"(note: only one dash):"
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:167
+msgid ""
+"Never use :command:`kill` (:manpage:`kill(1)`) to stop the RabbitMQ "
+"server, but rather use the :command:`rabbitmqctl` command:"
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:174
+msgid ""
+"When the server is running, you can continue reading `Setting up "
+"RabbitMQ`_."
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:5
+msgid "Using Redis"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:10
+#: ../../getting-started/brokers/sqs.rst:10 ../../includes/installation.txt:4
+msgid "Installation"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:12
+msgid ""
+"For the Redis support you have to install additional dependencies. You "
+"can install both Celery and these dependencies in one go using the "
+"``celery[redis]`` :ref:`bundle <bundles>`:"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:23
+#: ../../getting-started/brokers/sqs.rst:23
+#: ../../getting-started/first-steps-with-celery.rst:300
+msgid "Configuration"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:25
+msgid "Configuration is easy, just configure the location of your Redis database:"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:32
+msgid "Where the URL is in the format of:"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:38
+msgid ""
+"all fields after the scheme are optional, and will default to "
+"``localhost`` on port 6379, using database 0."
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:41
+msgid ""
+"If a Unix socket connection should be used, the URL needs to be in the "
+"format:"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:47
+msgid ""
+"Specifying a different database number when using a Unix socket is "
+"possible by adding the ``virtual_host`` parameter to the URL:"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:54
+msgid "It is also easy to connect directly to a list of Redis Sentinel:"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:64
+#: ../../getting-started/brokers/sqs.rst:75
+msgid "Visibility Timeout"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:66
+msgid ""
+"The visibility timeout defines the number of seconds to wait for the "
+"worker to acknowledge the task before the message is redelivered to "
+"another worker. Be sure to see :ref:`redis-caveats` below."
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:70
+msgid "This option is set via the :setting:`broker_transport_options` setting:"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:76
+msgid "The default visibility timeout for Redis is 1 hour."
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:81
+#: ../../getting-started/brokers/sqs.rst:173
+msgid "Results"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:83
+msgid ""
+"If you also want to store the state and return values of tasks in Redis, "
+"you should configure these settings::"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:88
+msgid ""
+"For a complete list of options supported by the Redis result backend, see"
+" :ref:`conf-redis-result-backend`."
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:91
+msgid ""
+"If you are using Sentinel, you should specify the master_name using the "
+":setting:`result_backend_transport_options` setting:"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:101
+#: ../../getting-started/brokers/sqs.rst:139
+msgid "Caveats"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:106
+msgid "Fanout prefix"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:108
+msgid "Broadcast messages will be seen by all virtual hosts by default."
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:110
+msgid ""
+"You have to set a transport option to prefix the messages so that they "
+"will only be received by the active virtual host:"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:117
+msgid ""
+"Note that you won't be able to communicate with workers running older "
+"versions or workers that doesn't have this setting enabled."
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:120
+msgid ""
+"This setting will be the default in the future, so better to migrate "
+"sooner rather than later."
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:126
+msgid "Fanout patterns"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:128
+msgid "Workers will receive all task related events by default."
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:130
+msgid ""
+"To avoid this you must set the ``fanout_patterns`` fanout option so that "
+"the workers may only subscribe to worker related events:"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:137
+msgid ""
+"Note that this change is backward incompatible so all workers in the "
+"cluster must have this option enabled, or else they won't be able to "
+"communicate."
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:141
+msgid "This option will be enabled by default in the future."
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:144
+msgid "Visibility timeout"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:146
+msgid ""
+"If a task isn't acknowledged within the :ref:`redis-visibility_timeout` "
+"the task will be redelivered to another worker and executed."
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:149
+#: ../../getting-started/brokers/sqs.rst:144
+msgid ""
+"This causes problems with ETA/countdown/retry tasks where the time to "
+"execute exceeds the visibility timeout; in fact if that happens it will "
+"be executed again, and again in a loop."
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:153
+#: ../../getting-started/brokers/sqs.rst:148
+msgid ""
+"So you have to increase the visibility timeout to match the time of the "
+"longest ETA you're planning to use."
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:156
+#: ../../getting-started/brokers/sqs.rst:151
+msgid ""
+"Note that Celery will redeliver messages at worker shutdown, so having a "
+"long visibility timeout will only delay the redelivery of 'lost' tasks in"
+" the event of a power failure or forcefully terminated workers."
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:161
+msgid ""
+"Periodic tasks won't be affected by the visibility timeout, as this is a "
+"concept separate from ETA/countdown."
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:164
+msgid ""
+"You can increase this timeout by configuring a transport option with the "
+"same name:"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:171
+msgid "The value must be an int describing the number of seconds."
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:174
+msgid "Key eviction"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:176
+msgid "Redis may evict keys from the database in some situations"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:178
+msgid "If you experience an error like:"
+msgstr ""
+
+#: ../../getting-started/brokers/redis.rst:185
+msgid ""
+"then you may want to configure the :command:`redis-server` to not evict "
+"keys by setting the ``timeout`` parameter to 0 in the redis configuration"
+" file."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:5
+msgid "Using Amazon SQS"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:12
+msgid ""
+"For the Amazon SQS support you have to install additional dependencies. "
+"You can install both Celery and these dependencies in one go using the "
+"``celery[sqs]`` :ref:`bundle <bundles>`:"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:25
+msgid "You have to specify SQS in the broker URL::"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:29
+msgid "where the URL format is:"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:35
+msgid ""
+"Please note that you must remember to include the ``@`` sign at the end "
+"and encode the password so it can always be parsed correctly. For "
+"example:"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:49
+msgid ""
+"The login credentials can also be set using the environment variables "
+":envvar:`AWS_ACCESS_KEY_ID` and :envvar:`AWS_SECRET_ACCESS_KEY`, in that "
+"case the broker URL may only be ``sqs://``."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:53
+msgid ""
+"If you are using IAM roles on instances, you can set the BROKER_URL to: "
+"``sqs://`` and kombu will attempt to retrieve access tokens from the "
+"instance metadata."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:58
+msgid "Options"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:61
+msgid "Region"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:63
+msgid ""
+"The default region is ``us-east-1`` but you can select another region by "
+"configuring the :setting:`broker_transport_options` setting::"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:70
+msgid "An overview of Amazon Web Services regions can be found here:"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:72
+msgid "http://aws.amazon.com/about-aws/globalinfrastructure/"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:77
+msgid ""
+"The visibility timeout defines the number of seconds to wait for the "
+"worker to acknowledge the task before the message is redelivered to "
+"another worker. Also see caveats below."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:81
+msgid "This option is set via the :setting:`broker_transport_options` setting::"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:85
+msgid "The default visibility timeout is 30 minutes."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:88
+msgid "Polling Interval"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:90
+msgid ""
+"The polling interval decides the number of seconds to sleep between "
+"unsuccessful polls. This value can be either an int or a float. By "
+"default the value is *one second*: this means the worker will sleep for "
+"one second when there's no more messages to read."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:95
+msgid ""
+"You must note that **more frequent polling is also more expensive, so "
+"increasing the polling interval can save you money**."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:98
+msgid ""
+"The polling interval can be set via the "
+":setting:`broker_transport_options` setting::"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:103
+msgid ""
+"Very frequent polling intervals can cause *busy loops*, resulting in the "
+"worker using a lot of CPU time. If you need sub-millisecond precision you"
+" should consider using another transport, like `RabbitMQ <broker-amqp>`, "
+"or `Redis <broker-redis>`."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:109
+msgid "Long Polling"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:111
+msgid ""
+"`SQS Long Polling`_ is enabled by default and the ``WaitTimeSeconds`` "
+"parameter of `ReceiveMessage`_ operation is set to 10 seconds."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:114
+msgid ""
+"The value of ``WaitTimeSeconds`` parameter can be set via the "
+":setting:`broker_transport_options` setting::"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:119
+msgid ""
+"Valid values are 0 to 20. Note that newly created queues themselves (also"
+" if created by Celery) will have the default value of 0 set for the "
+"\"Receive Message Wait Time\" queue property."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:127
+msgid "Queue Prefix"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:129
+msgid ""
+"By default Celery won't assign any prefix to the queue names, If you have"
+" other services using SQS you can configure it do so using the "
+":setting:`broker_transport_options` setting::"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:141
+msgid ""
+"If a task isn't acknowledged within the ``visibility_timeout``, the task "
+"will be redelivered to another worker and executed."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:156
+msgid ""
+"Periodic tasks won't be affected by the visibility timeout, as it is a "
+"concept separate from ETA/countdown."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:159
+msgid ""
+"The maximum visibility timeout supported by AWS as of this writing is 12 "
+"hours (43200 seconds)::"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:164
+msgid "SQS doesn't yet support worker remote control commands."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:166
+msgid ""
+"SQS doesn't yet support events, and so cannot be used with "
+":program:`celery events`, :program:`celerymon`, or the Django Admin "
+"monitor."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:175
+msgid ""
+"Multiple products in the Amazon Web Services family could be a good "
+"candidate to store or publish results with, but there's no such result "
+"backend included at this point."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:181
+msgid "Don't use the ``amqp`` result backend with SQS."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:183
+msgid ""
+"It will create one queue for every task, and the queues will not be "
+"collected. This could cost you money that would be better spent "
+"contributing an AWS result store backend back to Celery :)"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:6
+msgid "First Steps with Celery"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:8
+msgid ""
+"Celery is a task queue with batteries included. It's easy to use so that "
+"you can get started without learning the full complexities of the problem"
+" it solves. It's designed around best practices so that your product can "
+"scale and integrate with other languages, and it comes with the tools and"
+" support you need to run such a system in production."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:15
+msgid "In this tutorial you'll learn the absolute basics of using Celery."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:17
+msgid "Learn about;"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:19
+msgid "Choosing and installing a message transport (broker)."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:20
+msgid "Installing Celery and creating your first task."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:21
+msgid "Starting the worker and calling tasks."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:22
+msgid ""
+"Keeping track of tasks as they transition through different states, and "
+"inspecting return values."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:25
+msgid ""
+"Celery may seem daunting at first - but don't worry - this tutorial will "
+"get you started in no time. It's deliberately kept simple, so as to not "
+"confuse you with advanced features. After you have finished this "
+"tutorial, it's a good idea to browse the rest of the documentation. For "
+"example the :ref:`next-steps` tutorial will showcase Celery's "
+"capabilities."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:39
+msgid "Choosing a Broker"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:41
+msgid ""
+"Celery requires a solution to send and receive messages; usually this "
+"comes in the form of a separate service called a *message broker*."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:44
+msgid "There are several choices available, including:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:47
+msgid "RabbitMQ"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:49
+msgid ""
+"`RabbitMQ`_ is feature-complete, stable, durable and easy to install. "
+"It's an excellent choice for a production environment. Detailed "
+"information about using RabbitMQ with Celery:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:53
+msgid ":ref:`broker-rabbitmq`"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:57
+msgid ""
+"If you're using Ubuntu or Debian install RabbitMQ by executing this "
+"command:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:64
+msgid "Or, if you want to run it on Docker execute this:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:70
+msgid ""
+"When the command completes, the broker will already be running in the "
+"background, ready to move messages for you: ``Starting rabbitmq-server: "
+"SUCCESS``."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:73
+msgid ""
+"Don't worry if you're not running Ubuntu or Debian, you can go to this "
+"website to find similarly simple installation instructions for other "
+"platforms, including Microsoft Windows:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:77
+msgid "http://www.rabbitmq.com/download.html"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:80
+msgid "Redis"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:82
+msgid ""
+"`Redis`_ is also feature-complete, but is more susceptible to data loss "
+"in the event of abrupt termination or power failures. Detailed "
+"information about using Redis:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:85
+msgid ":ref:`broker-redis`"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:89
+msgid "If you want to run it on Docker execute this:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:96
+msgid "Other brokers"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:98
+msgid ""
+"In addition to the above, there are other experimental transport "
+"implementations to choose from, including :ref:`Amazon SQS <broker-sqs>`."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:101
+msgid "See :ref:`broker-overview` for a full list."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:106
+msgid "Installing Celery"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:108
+msgid ""
+"Celery is on the Python Package Index (PyPI), so it can be installed with"
+" standard Python tools like ``pip`` or ``easy_install``:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:116
+msgid "Application"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:118
+msgid ""
+"The first thing you need is a Celery instance.  We call this the *Celery "
+"application* or just *app* for short. As this instance is used as the "
+"entry-point for everything you want to do in Celery, like creating tasks "
+"and managing workers, it must be possible for other modules to import it."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:123
+msgid ""
+"In this tutorial we keep everything contained in a single module, but for"
+" larger projects you want to create a :ref:`dedicated module <project-"
+"layout>`."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:127
+msgid "Let's create the file :file:`tasks.py`:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:139
+msgid ""
+"The first argument to :class:`~celery.app.Celery` is the name of the "
+"current module. This is only needed so that names can be automatically "
+"generated when the tasks are defined in the `__main__` module."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:143
+msgid ""
+"The second argument is the broker keyword argument, specifying the URL of"
+" the message broker you want to use. Here using RabbitMQ (also the "
+"default option)."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:146
+msgid ""
+"See :ref:`celerytut-broker` above for more choices -- for RabbitMQ you "
+"can use ``amqp://localhost``, or for Redis you can use "
+"``redis://localhost``."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:150
+msgid ""
+"You defined a single task, called ``add``, returning the sum of two "
+"numbers."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:155
+msgid "Running the Celery worker server"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:157
+msgid ""
+"You can now run the worker by executing our program with the ``worker`` "
+"argument:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:166
+msgid ""
+"See the :ref:`celerytut-troubleshooting` section if the worker doesn't "
+"start."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:169
+msgid ""
+"In production you'll want to run the worker in the background as a "
+"daemon. To do this you need to use the tools provided by your platform, "
+"or something like `supervisord`_ (see :ref:`daemonizing` for more "
+"information)."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:174
+msgid "For a complete listing of the command-line options available, do:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:180
+msgid ""
+"There are also several other commands available, and help is also "
+"available:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:191
+msgid "Calling the task"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:193
+msgid "To call our task you can use the :meth:`~@Task.delay` method."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:195
+msgid ""
+"This is a handy shortcut to the :meth:`~@Task.apply_async` method that "
+"gives greater control of the task execution (see :ref:`guide-calling`)::"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:202
+msgid ""
+"The task has now been processed by the worker you started earlier. You "
+"can verify this by looking at the worker's console output."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:205
+msgid ""
+"Calling a task returns an :class:`~@AsyncResult` instance. This can be "
+"used to check the state of the task, wait for the task to finish, or get "
+"its return value (or if the task failed, to get the exception and "
+"traceback)."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:209
+msgid ""
+"Results are not enabled by default. In order to do remote procedure calls"
+" or keep track of task results in a database, you will need to configure "
+"Celery to use a result backend.  This is described in the next section."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:216
+msgid "Keeping Results"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:218
+msgid ""
+"If you want to keep track of the tasks' states, Celery needs to store or "
+"send the states somewhere. There are several built-in result backends to "
+"choose from: `SQLAlchemy`_/`Django`_ ORM, `Memcached`_, `Redis`_, "
+":ref:`RPC <conf-rpc-result-backend>` (`RabbitMQ`_/AMQP), and -- or you "
+"can define your own."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:229
+msgid ""
+"For this example we use the `rpc` result backend, that sends states back "
+"as transient messages. The backend is specified via the ``backend`` "
+"argument to :class:`@Celery`, (or via the :setting:`result_backend` "
+"setting if you choose to use a configuration module):"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:238
+msgid ""
+"Or if you want to use Redis as the result backend, but still use RabbitMQ"
+" as the message broker (a popular combination):"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:245
+msgid "To read more about result backends please see :ref:`task-result-backends`."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:247
+msgid ""
+"Now with the result backend configured, let's call the task again. This "
+"time you'll hold on to the :class:`~@AsyncResult` instance returned when "
+"you call a task:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:255
+msgid ""
+"The :meth:`~@AsyncResult.ready` method returns whether the task has "
+"finished processing or not:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:263
+msgid ""
+"You can wait for the result to complete, but this is rarely used since it"
+" turns the asynchronous call into a synchronous one:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:271
+msgid ""
+"In case the task raised an exception, :meth:`~@AsyncResult.get` will re-"
+"raise the exception, but you can override this by specifying the "
+"``propagate`` argument:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:280
+msgid ""
+"If the task raised an exception, you can also gain access to the original"
+" traceback:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:289
+msgid ""
+"Backends use resources to store and transmit results. To ensure that "
+"resources are released, you must eventually call "
+":meth:`~@AsyncResult.get` or :meth:`~@AsyncResult.forget` on EVERY "
+":class:`~@AsyncResult` instance returned after calling a task."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:295
+msgid "See :mod:`celery.result` for the complete result object reference."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:302
+msgid ""
+"Celery, like a consumer appliance, doesn't need much configuration to "
+"operate. It has an input and an output. The input must be connected to a "
+"broker, and the output can be optionally connected to a result backend. "
+"However, if you look closely at the back, there's a lid revealing loads "
+"of sliders, dials, and buttons: this is the configuration."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:307
+msgid ""
+"The default configuration should be good enough for most use cases, but "
+"there are many options that can be configured to make Celery work exactly"
+" as needed. Reading about the options available is a good idea to "
+"familiarize yourself with what can be configured. You can read about the "
+"options in the :ref:`configuration` reference."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:313
+msgid ""
+"The configuration can be set on the app directly or by using a dedicated "
+"configuration module. As an example you can configure the default "
+"serializer used for serializing task payloads by changing the "
+":setting:`task_serializer` setting:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:322
+msgid "If you're configuring many settings at once you can use ``update``:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:334
+msgid ""
+"For larger projects, a dedicated configuration module is recommended. "
+"Hard coding periodic task intervals and task routing options is "
+"discouraged. It is much better to keep these in a centralized location. "
+"This is especially true for libraries, as it enables users to control how"
+" their tasks behave. A centralized configuration will also allow your "
+"SysAdmin to make simple changes in the event of system trouble."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:341
+msgid ""
+"You can tell your Celery instance to use a configuration module by "
+"calling the :meth:`@config_from_object` method:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:348
+msgid ""
+"This module is often called \"``celeryconfig``\", but you can use any "
+"module name."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:351
+msgid ""
+"In the above case, a module named ``celeryconfig.py`` must be available "
+"to load from the current directory or on the Python path. It could look "
+"something like this:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:354
+#: ../../getting-started/first-steps-with-celery.rst:379
+#: ../../getting-started/first-steps-with-celery.rst:391
+msgid ":file:`celeryconfig.py`:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:367
+msgid ""
+"To verify that your configuration file works properly and doesn't contain"
+" any syntax errors, you can try to import it:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:374
+msgid ""
+"For a complete reference of configuration options, see "
+":ref:`configuration`."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:376
+msgid ""
+"To demonstrate the power of configuration files, this is how you'd route "
+"a misbehaving task to a dedicated queue:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:387
+msgid ""
+"Or instead of routing it you could rate limit the task instead, so that "
+"only 10 tasks of this type can be processed in a minute (10/m):"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:399
+msgid ""
+"If you're using RabbitMQ or Redis as the broker then you can also direct "
+"the workers to set a new rate limit for the task at runtime:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:409
+msgid ""
+"See :ref:`guide-routing` to read more about task routing, and the "
+":setting:`task_annotations` setting for more about annotations, or :ref"
+":`guide-monitoring` for more about remote control commands and how to "
+"monitor what your workers are doing."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:415
+msgid "Where to go from here"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:417
+msgid ""
+"If you want to learn more you should continue to the :ref:`Next Steps "
+"<next-steps>` tutorial, and after that you can read the :ref:`User Guide "
+"<guide>`."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:424
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:426
+msgid "There's also a troubleshooting section in the :ref:`faq`."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:429
+msgid "Worker doesn't start: Permission Error"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:431
+msgid "If you're using Debian, Ubuntu or other Debian-based distributions:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:433
+msgid ""
+"Debian recently renamed the :file:`/dev/shm` special file to "
+":file:`/run/shm`."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:436
+msgid "A simple workaround is to create a symbolic link:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:442
+msgid "Others:"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:444
+msgid ""
+"If you provide any of the :option:`--pidfile <celery worker --pidfile>`, "
+":option:`--logfile <celery worker --logfile>` or :option:`--statedb "
+"<celery worker --statedb>` arguments, then you must make sure that they "
+"point to a file or directory that's writable and readable by the user "
+"starting the worker."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:451
+msgid "Result backend doesn't work or tasks are always in ``PENDING`` state"
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:453
+msgid ""
+"All tasks are :state:`PENDING` by default, so the state would've been "
+"better named \"unknown\". Celery doesn't update the state when a task is "
+"sent, and any task with no history is assumed to be pending (you know the"
+" task id, after all)."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:458
+msgid "Make sure that the task doesn't have ``ignore_result`` enabled."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:460
+msgid "Enabling this option will force the worker to skip updating states."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:463
+msgid "Make sure the :setting:`task_ignore_result` setting isn't enabled."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:465
+msgid "Make sure that you don't have any old workers still running."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:467
+msgid ""
+"It's easy to start multiple workers by accident, so make sure that the "
+"previous worker is properly shut down before you start a new one."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:470
+msgid ""
+"An old worker that isn't configured with the expected result backend may "
+"be running and is hijacking the tasks."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:473
+msgid ""
+"The :option:`--pidfile <celery worker --pidfile>` argument can be set to "
+"an absolute path to make sure this doesn't happen."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:476
+msgid "Make sure the client is configured with the right backend."
+msgstr ""
+
+#: ../../getting-started/first-steps-with-celery.rst:478
+msgid ""
+"If, for some reason, the client is configured to use a different backend "
+"than the worker, you won't be able to receive the result. Make sure the "
+"backend is configured correctly:"
+msgstr ""
+
+#: ../../getting-started/index.rst:3
+msgid "Getting Started"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:5
+msgid "Introduction to Celery"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:12
+msgid "What's a Task Queue?"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:14
+msgid ""
+"Task queues are used as a mechanism to distribute work across threads or "
+"machines."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:17
+msgid ""
+"A task queue's input is a unit of work called a task. Dedicated worker "
+"processes constantly monitor task queues for new work to perform."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:20
+msgid ""
+"Celery communicates via messages, usually using a broker to mediate "
+"between clients and workers. To initiate a task the client adds a message"
+" to the queue, the broker then delivers that message to a worker."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:24
+msgid ""
+"A Celery system can consist of multiple workers and brokers, giving way "
+"to high availability and horizontal scaling."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:27
+msgid ""
+"Celery is written in Python, but the protocol can be implemented in any "
+"language. In addition to Python there's node-celery_ and node-celery-ts_ "
+"for Node.js, and a `PHP client`_."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:31
+msgid ""
+"Language interoperability can also be achieved exposing an HTTP endpoint "
+"and having a task that requests it (webhooks)."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:39
+msgid "What do I need?"
+msgstr ""
+
+msgid "Version Requirements"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:44
+msgid "Python ❨2.7, 3.4, 3.5❩"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:45
+msgid "PyPy ❨5.4, 5.5❩"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:47
+msgid ""
+"This is the last version to support Python 2.7, and from the next version"
+" (Celery 5.x) Python 3.5 or newer is required."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:50
+msgid ""
+"If you're running an older version of Python, you need to be running an "
+"older version of Celery:"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:53
+msgid "Python 2.6: Celery series 3.1 or earlier."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:54
+msgid "Python 2.5: Celery series 3.0 or earlier."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:55
+msgid "Python 2.4 was Celery series 2.2 or earlier."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:57
+msgid ""
+"Celery is a project with minimal funding, so we don't support Microsoft "
+"Windows. Please don't open any issues related to that platform."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:61
+msgid ""
+"*Celery* requires a message transport to send and receive messages. The "
+"RabbitMQ and Redis broker transports are feature complete, but there's "
+"also support for a myriad of other experimental solutions, including "
+"using SQLite for local development."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:66
+msgid ""
+"*Celery* can run on a single machine, on multiple machines, or even "
+"across data centers."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:70
+msgid "Get Started"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:72
+msgid ""
+"If this is the first time you're trying to use Celery, or if you haven't "
+"kept up with development in the 3.1 version and are coming from previous "
+"versions, then you should read our getting started tutorials:"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:76
+msgid ":ref:`first-steps`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:77
+msgid ":ref:`next-steps`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:80
+msgid "Celery is…"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:86
+msgid "**Simple**"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:88
+msgid ""
+"Celery is easy to use and maintain, and it *doesn't need configuration "
+"files*."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:90
+msgid ""
+"It has an active, friendly community you can talk to for support, "
+"including a `mailing-list`_ and an :ref:`IRC channel <irc-channel>`."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:93
+msgid "Here's one of the simplest applications you can make:"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:105
+msgid "**Highly Available**"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:107
+msgid ""
+"Workers and clients will automatically retry in the event of connection "
+"loss or failure, and some brokers support HA in way of *Primary/Primary* "
+"or *Primary/Replica* replication."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:111
+msgid "**Fast**"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:113
+msgid ""
+"A single Celery process can process millions of tasks a minute, with sub-"
+"millisecond round-trip latency (using RabbitMQ, librabbitmq, and "
+"optimized settings)."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:117
+msgid "**Flexible**"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:119
+msgid ""
+"Almost every part of *Celery* can be extended or used on its own, Custom "
+"pool implementations, serializers, compression schemes, logging, "
+"schedulers, consumers, producers, broker transports, and much more."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:129
+msgid "**Brokers**"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:131
+msgid ":ref:`RabbitMQ <broker-rabbitmq>`, :ref:`Redis <broker-redis>`,"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:132
+msgid ":ref:`Amazon SQS <broker-sqs>`, and more…"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:134
+msgid "**Concurrency**"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:136
+msgid "prefork (multiprocessing),"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:137
+msgid "Eventlet_, gevent_"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:138
+msgid "`solo` (single threaded)"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:140
+msgid "**Result Stores**"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:142
+msgid "AMQP, Redis"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:143
+msgid "Memcached,"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:144
+msgid "SQLAlchemy, Django ORM"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:145
+msgid "Apache Cassandra, Elasticsearch"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:147
+msgid "**Serialization**"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:149
+msgid "*pickle*, *json*, *yaml*, *msgpack*."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:150
+msgid "*zlib*, *bzip2* compression."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:151
+msgid "Cryptographic message signing."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:154
+msgid "Features"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:163
+msgid ""
+"A stream of monitoring events is emitted by workers and is used by built-"
+"in and external tools to tell you what your cluster is doing -- in real-"
+"time."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:167
+msgid ":ref:`Read more… <guide-monitoring>`."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:169
+msgid "**Work-flows**"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:171
+msgid ""
+"Simple and complex work-flows can be composed using a set of powerful "
+"primitives we call the \"canvas\", including grouping, chaining, "
+"chunking, and more."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:175
+msgid ":ref:`Read more… <guide-canvas>`."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:177
+msgid "**Time & Rate Limits**"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:179
+msgid ""
+"You can control how many tasks can be executed per second/minute/hour, or"
+" how long a task can be allowed to run, and this can be set as a default,"
+" for a specific worker or individually for each task type."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:183
+msgid ":ref:`Read more… <worker-time-limits>`."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:185
+msgid "**Scheduling**"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:187
+msgid ""
+"You can specify the time to run a task in seconds or a "
+":class:`~datetime.datetime`, or you can use periodic tasks for recurring "
+"events based on a simple interval, or Crontab expressions supporting "
+"minute, hour, day of week, day of month, and month of year."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:194
+msgid ":ref:`Read more… <guide-beat>`."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:196
+msgid "**Resource Leak Protection**"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:198
+msgid ""
+"The :option:`--max-tasks-per-child <celery worker --max-tasks-per-child>`"
+" option is used for user tasks leaking resources, like memory or file "
+"descriptors, that are simply out of your control."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:202
+msgid ":ref:`Read more… <worker-max-tasks-per-child>`."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:204
+msgid "**User Components**"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:206
+msgid ""
+"Each worker component can be customized, and additional components can be"
+" defined by the user. The worker is built up using \"bootsteps\" — a "
+"dependency graph enabling fine grained control of the worker's internals."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:215
+msgid "Framework Integration"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:217
+msgid ""
+"Celery is easy to integrate with web frameworks, some of them even have "
+"integration packages:"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:221
+msgid "`Pyramid`_"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:221
+msgid ":pypi:`pyramid_celery`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:223
+msgid "`Pylons`_"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:223
+msgid ":pypi:`celery-pylons`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:225
+msgid "`Flask`_"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:225
+msgid "not needed"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:227
+msgid "`web2py`_"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:227
+msgid ":pypi:`web2py-celery`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:229
+msgid "`Tornado`_"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:229
+msgid ":pypi:`tornado-celery`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:231
+msgid "`Tryton`_"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:231
+msgid ":pypi:`celery_tryton`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:234
+msgid "For `Django`_ see :ref:`django-first-steps`."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:236
+msgid ""
+"The integration packages aren't strictly necessary, but they can make "
+"development easier, and sometimes they add important hooks like closing "
+"database connections at :manpage:`fork(2)`."
+msgstr ""
+
+#: ../../getting-started/introduction.rst:251
+msgid "Quick Jump"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:258
+msgid ":ref:`get the return value of a task <task-states>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:259
+msgid ":ref:`use logging from my task <task-logging>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:260
+msgid ":ref:`learn about best practices <task-best-practices>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:261
+msgid ":ref:`create a custom task base class <task-custom-classes>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:262
+msgid ":ref:`add a callback to a group of tasks <canvas-chord>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:263
+msgid ":ref:`split a task into several chunks <canvas-chunks>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:264
+msgid ":ref:`optimize the worker <guide-optimizing>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:265
+msgid ":ref:`see a list of built-in task states <task-builtin-states>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:266
+msgid ":ref:`create custom task states <custom-states>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:267
+msgid ":ref:`set a custom task name <task-names>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:268
+msgid ":ref:`track when a task starts <task-track-started>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:269
+msgid ":ref:`retry a task when it fails <task-retry>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:270
+msgid ":ref:`get the id of the current task <task-request-info>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:271
+msgid ":ref:`know what queue a task was delivered to <task-request-info>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:272
+msgid ":ref:`see a list of running workers <monitoring-control>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:273
+msgid ":ref:`purge all messages <monitoring-control>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:274
+msgid ":ref:`inspect what the workers are doing <monitoring-control>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:275
+msgid ":ref:`see what tasks a worker has registered <monitoring-control>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:276
+msgid ":ref:`migrate tasks to a new broker <monitoring-control>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:277
+msgid ":ref:`see a list of event message types <event-reference>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:278
+msgid ":ref:`contribute to Celery <contributing>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:279
+msgid ":ref:`learn about available configuration settings <configuration>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:280
+msgid ":ref:`get a list of people and companies using Celery <res-using-celery>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:281
+msgid ""
+":ref:`write my own remote control command <worker-custom-control-"
+"commands>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:282
+msgid ":ref:`change worker queues at runtime <worker-queues>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:289
+msgid ":ref:`Brokers <brokers>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:290
+msgid ":ref:`Applications <guide-app>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:291
+msgid ":ref:`Tasks <guide-tasks>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:292
+msgid ":ref:`Calling <guide-calling>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:293
+msgid ":ref:`Workers <guide-workers>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:294
+msgid ":ref:`Daemonizing <daemonizing>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:295
+msgid ":ref:`Monitoring <guide-monitoring>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:296
+msgid ":ref:`Optimizing <guide-optimizing>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:297
+msgid ":ref:`Security <guide-security>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:298
+msgid ":ref:`Routing <guide-routing>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:299
+msgid ":ref:`Configuration <configuration>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:300
+msgid ":ref:`Django <django>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:301
+msgid ":ref:`Contributing <contributing>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:302
+msgid ":ref:`Signals <signals>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:303
+msgid ":ref:`FAQ <faq>`"
+msgstr ""
+
+#: ../../getting-started/introduction.rst:304
+msgid ":ref:`API Reference <apiref>`"
+msgstr ""
+
+#: ../../includes/installation.txt:6
+msgid ""
+"You can install Celery either via the Python Package Index (PyPI) or from"
+" source."
+msgstr ""
+
+#: ../../includes/installation.txt:9
+msgid "To install using :command:`pip`:"
+msgstr ""
+
+#: ../../includes/installation.txt:19
+msgid "Bundles"
+msgstr ""
+
+#: ../../includes/installation.txt:21
+msgid ""
+"Celery also defines a group of bundles that can be used to install Celery"
+" and the dependencies for a given feature."
+msgstr ""
+
+#: ../../includes/installation.txt:24
+msgid ""
+"You can specify these in your requirements or on the :command:`pip` "
+"command-line by using brackets. Multiple bundles can be specified by "
+"separating them by commas."
+msgstr ""
+
+#: ../../includes/installation.txt:35
+msgid "The following bundles are available:"
+msgstr ""
+
+#: ../../includes/installation.txt:38
+msgid "Serializers"
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[auth]``"
+msgstr ""
+
+#: ../../includes/installation.txt:41
+msgid "for using the ``auth`` security serializer."
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[msgpack]``"
+msgstr ""
+
+#: ../../includes/installation.txt:44
+msgid "for using the msgpack serializer."
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[yaml]``"
+msgstr ""
+
+#: ../../includes/installation.txt:47
+msgid "for using the yaml serializer."
+msgstr ""
+
+#: ../../includes/installation.txt:50
+msgid "Concurrency"
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[eventlet]``"
+msgstr ""
+
+#: ../../includes/installation.txt:53
+msgid "for using the :pypi:`eventlet` pool."
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[gevent]``"
+msgstr ""
+
+#: ../../includes/installation.txt:56
+msgid "for using the :pypi:`gevent` pool."
+msgstr ""
+
+#: ../../includes/installation.txt:59
+msgid "Transports and Backends"
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[librabbitmq]``"
+msgstr ""
+
+#: ../../includes/installation.txt:62
+msgid "for using the librabbitmq C library."
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[redis]``"
+msgstr ""
+
+#: ../../includes/installation.txt:65
+msgid "for using Redis as a message transport or as a result backend."
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[sqs]``"
+msgstr ""
+
+#: ../../includes/installation.txt:68
+msgid "for using Amazon SQS as a message transport (*experimental*)."
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[tblib]``"
+msgstr ""
+
+#: ../../includes/installation.txt:71
+msgid "for using the :setting:`task_remote_tracebacks` feature."
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[memcache]``"
+msgstr ""
+
+#: ../../includes/installation.txt:74
+msgid "for using Memcached as a result backend (using :pypi:`pylibmc`)"
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[pymemcache]``"
+msgstr ""
+
+#: ../../includes/installation.txt:77
+msgid "for using Memcached as a result backend (pure-Python implementation)."
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[cassandra]``"
+msgstr ""
+
+#: ../../includes/installation.txt:80
+msgid "for using Apache Cassandra as a result backend with DataStax driver."
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[couchbase]``"
+msgstr ""
+
+#: ../../includes/installation.txt:83
+msgid "for using Couchbase as a result backend."
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[arangodb]``"
+msgstr ""
+
+#: ../../includes/installation.txt:86
+msgid "for using ArangoDB as a result backend."
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[elasticsearch]``"
+msgstr ""
+
+#: ../../includes/installation.txt:89
+msgid "for using Elasticsearch as a result backend."
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[riak]``"
+msgstr ""
+
+#: ../../includes/installation.txt:92
+msgid "for using Riak as a result backend."
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[dynamodb]``"
+msgstr ""
+
+#: ../../includes/installation.txt:95
+msgid "for using AWS DynamoDB as a result backend."
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[zookeeper]``"
+msgstr ""
+
+#: ../../includes/installation.txt:98
+msgid "for using Zookeeper as a message transport."
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[sqlalchemy]``"
+msgstr ""
+
+#: ../../includes/installation.txt:101
+msgid "for using SQLAlchemy as a result backend (*supported*)."
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[pyro]``"
+msgstr ""
+
+#: ../../includes/installation.txt:104
+msgid "for using the Pyro4 message transport (*experimental*)."
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[slmq]``"
+msgstr ""
+
+#: ../../includes/installation.txt:107
+msgid "for using the SoftLayer Message Queue transport (*experimental*)."
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[consul]``"
+msgstr ""
+
+#: ../../includes/installation.txt:110
+msgid ""
+"for using the Consul.io Key/Value store as a message transport or result "
+"backend (*experimental*)."
+msgstr ""
+
+#: ../../includes/installation.txt
+msgid "``celery[django]``"
+msgstr ""
+
+#: ../../includes/installation.txt:113
+msgid "specifies the lowest version possible for Django support."
+msgstr ""
+
+#: ../../includes/installation.txt:115
+msgid ""
+"You should probably not use this in your requirements, it's here for "
+"informational purposes only."
+msgstr ""
+
+#: ../../includes/installation.txt:122
+msgid "Downloading and installing from source"
+msgstr ""
+
+#: ../../includes/installation.txt:124
+msgid "Download the latest version of Celery from PyPI:"
+msgstr ""
+
+#: ../../includes/installation.txt:126
+msgid "https://pypi.org/project/celery/"
+msgstr ""
+
+#: ../../includes/installation.txt:128
+msgid "You can install it by doing the following,:"
+msgstr ""
+
+#: ../../includes/installation.txt:138
+msgid ""
+"The last command must be executed as a privileged user if you aren't "
+"currently using a virtualenv."
+msgstr ""
+
+#: ../../includes/installation.txt:144
+msgid "Using the development version"
+msgstr ""
+
+#: ../../includes/installation.txt:147
+msgid "With pip"
+msgstr ""
+
+#: ../../includes/installation.txt:149
+msgid ""
+"The Celery development version also requires the development versions of "
+":pypi:`kombu`, :pypi:`amqp`, :pypi:`billiard`, and :pypi:`vine`."
+msgstr ""
+
+#: ../../includes/installation.txt:152
+msgid ""
+"You can install the latest snapshot of these using the following pip "
+"commands:"
+msgstr ""
+
+#: ../../includes/installation.txt:165
+msgid "With git"
+msgstr ""
+
+#: ../../includes/installation.txt:167
+msgid "Please see the :ref:`Contributing <contributing>` section."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:5
+msgid "Next Steps"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:7
+msgid ""
+"The :ref:`first-steps` guide is intentionally minimal. In this guide I'll"
+" demonstrate what Celery offers in more detail, including how to add "
+"Celery support for your application and library."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:11
+msgid ""
+"This document doesn't document all of Celery's features and best "
+"practices, so it's recommended that you also read the :ref:`User Guide "
+"<guide>`"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:20
+msgid "Using Celery in your Application"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:25
+msgid "Our Project"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:27
+msgid "Project layout::"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:34
+msgid ":file:`proj/celery.py`"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:39
+msgid ""
+"In this module you created our :class:`@Celery` instance (sometimes "
+"referred to as the *app*). To use Celery within your project you simply "
+"import this instance."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:43
+msgid "The ``broker`` argument specifies the URL of the broker to use."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:45
+msgid "See :ref:`celerytut-broker` for more information."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:47
+msgid "The ``backend`` argument specifies the result backend to use,"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:49
+msgid ""
+"It's used to keep track of task state and results. While results are "
+"disabled by default I use the RPC result backend here because I "
+"demonstrate how retrieving results work later, you may want to use a "
+"different backend for your application. They all have different strengths"
+" and weaknesses. If you don't need results it's better to disable them. "
+"Results can also be disabled for individual tasks by setting the "
+"``@task(ignore_result=True)`` option."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:57
+msgid "See :ref:`celerytut-keeping-results` for more information."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:59
+msgid ""
+"The ``include`` argument is a list of modules to import when the worker "
+"starts. You need to add our tasks module here so that the worker is able "
+"to find our tasks."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:64
+msgid ":file:`proj/tasks.py`"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:71
+msgid "Starting the worker"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:73
+msgid ""
+"The :program:`celery` program can be used to start the worker (you need "
+"to run the worker in the directory above proj):"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:79
+msgid "When the worker starts you should see a banner and some messages::"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:95
+msgid ""
+"-- The *broker* is the URL you specified in the broker argument in our "
+"``celery`` module, you can also specify a different broker on the "
+"command-line by using the :option:`-b <celery -b>` option."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:99
+msgid ""
+"-- *Concurrency* is the number of prefork worker process used to process "
+"your tasks concurrently, when all of these are busy doing work new tasks "
+"will have to wait for one of the tasks to finish before it can be "
+"processed."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:104
+msgid ""
+"The default concurrency number is the number of CPU's on that machine "
+"(including cores), you can specify a custom number using the "
+":option:`celery worker -c` option. There's no recommended value, as the "
+"optimal number depends on a number of factors, but if your tasks are "
+"mostly I/O-bound then you can try to increase it, experimentation has "
+"shown that adding more than twice the number of CPU's is rarely "
+"effective, and likely to degrade performance instead."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:113
+msgid ""
+"Including the default prefork pool, Celery also supports using Eventlet, "
+"Gevent, and running in a single thread (see :ref:`concurrency`)."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:116
+msgid ""
+"-- *Events* is an option that when enabled causes Celery to send "
+"monitoring messages (events) for actions occurring in the worker. These "
+"can be used by monitor programs like ``celery events``, and Flower - the "
+"real-time Celery monitor, that you can read about in the :ref:`Monitoring"
+" and Management guide <guide-monitoring>`."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:122
+msgid ""
+"-- *Queues* is the list of queues that the worker will consume tasks "
+"from. The worker can be told to consume from several queues at once, and "
+"this is used to route messages to specific workers as a means for Quality"
+" of Service, separation of concerns, and prioritization, all described in"
+" the :ref:`Routing Guide <guide-routing>`."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:129
+msgid ""
+"You can get a complete list of command-line arguments by passing in the "
+":option:`--help <celery --help>` flag:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:136
+msgid ""
+"These options are described in more detailed in the :ref:`Workers Guide "
+"<guide-workers>`."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:139
+msgid "Stopping the worker"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:141
+msgid ""
+"To stop the worker simply hit :kbd:`Control-c`. A list of signals "
+"supported by the worker is detailed in the :ref:`Workers Guide <guide-"
+"workers>`."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:145
+msgid "In the background"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:147
+msgid ""
+"In production you'll want to run the worker in the background, this is "
+"described in detail in the :ref:`daemonization tutorial <daemonizing>`."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:150
+msgid ""
+"The daemonization scripts uses the :program:`celery multi` command to "
+"start one or more workers in the background:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:160
+msgid "You can restart it too:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:175
+msgid "or stop it:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:181
+msgid ""
+"The ``stop`` command is asynchronous so it won't wait for the worker to "
+"shutdown. You'll probably want to use the ``stopwait`` command instead,  "
+"this ensures all currently executing tasks are completed before exiting:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:192
+msgid ""
+":program:`celery multi` doesn't store information about workers so you "
+"need to use the same command-line arguments when restarting. Only the "
+"same pidfile and logfile arguments must be used when stopping."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:197
+msgid ""
+"By default it'll create pid and log files in the current directory, to "
+"protect against multiple workers launching on top of each other you're "
+"encouraged to put these in a dedicated directory:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:208
+msgid ""
+"With the multi command you can start multiple workers, and there's a "
+"powerful command-line syntax to specify arguments for different workers "
+"too, for example:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:217
+msgid ""
+"For more examples see the :mod:`~celery.bin.multi` module in the API "
+"reference."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:223
+msgid "About the :option:`--app <celery --app>` argument"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:225
+msgid ""
+"The :option:`--app <celery --app>` argument specifies the Celery app "
+"instance to use, it must be in the form of ``module.path:attribute``"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:228
+msgid ""
+"But it also supports a shortcut form If only a package name is specified,"
+" where it'll try to search for the app instance, in the following order:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:231
+msgid "With :option:`--app=proj <celery --app>`:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:233
+msgid "an attribute named ``proj.app``, or"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:234
+msgid "an attribute named ``proj.celery``, or"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:235
+msgid ""
+"any attribute in the module ``proj`` where the value is a Celery "
+"application, or"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:238
+msgid "If none of these are found it'll try a submodule named ``proj.celery``:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:240
+msgid "an attribute named ``proj.celery.app``, or"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:241
+msgid "an attribute named ``proj.celery.celery``, or"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:242
+msgid ""
+"Any attribute in the module ``proj.celery`` where the value is a Celery "
+"application."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:245
+msgid ""
+"This scheme mimics the practices used in the documentation -- that is, "
+"``proj:app`` for a single contained module, and ``proj.celery:app`` for "
+"larger projects."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:253
+msgid "Calling Tasks"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:255
+msgid "You can call a task using the :meth:`delay` method:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:261
+msgid ""
+"This method is actually a star-argument shortcut to another method called"
+" :meth:`apply_async`:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:268
+msgid ""
+"The latter enables you to specify execution options like the time to run "
+"(countdown), the queue it should be sent to, and so on:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:275
+msgid ""
+"In the above example the task will be sent to a queue named ``lopri`` and"
+" the task will execute, at the earliest, 10 seconds after the message was"
+" sent."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:278
+msgid ""
+"Applying the task directly will execute the task in the current process, "
+"so that no message is sent:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:286
+msgid ""
+"These three methods - :meth:`delay`, :meth:`apply_async`, and applying "
+"(``__call__``), represents the Celery calling API, that's also used for "
+"signatures."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:290
+msgid ""
+"A more detailed overview of the Calling API can be found in the "
+":ref:`Calling User Guide <guide-calling>`."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:293
+msgid ""
+"Every task invocation will be given a unique identifier (an UUID), this "
+"is the task id."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:296
+msgid ""
+"The ``delay`` and ``apply_async`` methods return an "
+":class:`~@AsyncResult` instance, that can be used to keep track of the "
+"tasks execution state. But for this you need to enable a :ref:`result "
+"backend <task-result-backends>` so that the state can be stored "
+"somewhere."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:301
+msgid ""
+"Results are disabled by default because of the fact that there's no "
+"result backend that suits every application, so to choose one you need to"
+" consider the drawbacks of each individual backend. For many tasks "
+"keeping the return value isn't even very useful, so it's a sensible "
+"default to have. Also note that result backends aren't used for "
+"monitoring tasks and workers, for that Celery uses dedicated event "
+"messages (see :ref:`guide-monitoring`)."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:308
+msgid ""
+"If you have a result backend configured you can retrieve the return value"
+" of a task:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:317
+msgid "You can find the task's id by looking at the :attr:`id` attribute:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:324
+msgid ""
+"You can also inspect the exception and traceback if the task raised an "
+"exception, in fact ``result.get()`` will propagate any errors by default:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:342
+msgid ""
+"If you don't wish for the errors to propagate then you can disable that "
+"by passing the ``propagate`` argument:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:350
+msgid ""
+"In this case it'll return the exception instance raised instead, and so "
+"to check whether the task succeeded or failed you'll have to use the "
+"corresponding methods on the result instance:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:362
+msgid ""
+"So how does it know if the task has failed or not?  It can find out by "
+"looking at the tasks *state*:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:370
+msgid ""
+"A task can only be in a single state, but it can progress through several"
+" states. The stages of a typical task can be::"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:375
+msgid ""
+"The started state is a special state that's only recorded if the "
+":setting:`task_track_started` setting is enabled, or if the "
+"``@task(track_started=True)`` option is set for the task."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:379
+msgid ""
+"The pending state is actually not a recorded state, but rather the "
+"default state for any task id that's unknown: this you can see from this "
+"example:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:391
+msgid ""
+"If the task is retried the stages can become even more complex. To "
+"demonstrate, for a task that's retried two times the stages would be:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:398
+msgid ""
+"To read more about task states you should see the :ref:`task-states` "
+"section in the tasks user guide."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:401
+msgid ""
+"Calling tasks is described in detail in the :ref:`Calling Guide <guide-"
+"calling>`."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:407
+msgid "*Canvas*: Designing Work-flows"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:409
+msgid ""
+"You just learned how to call a task using the tasks ``delay`` method, and"
+" this is often all you need, but sometimes you may want to pass the "
+"signature of a task invocation to another process or as an argument to "
+"another function, for this Celery uses something called *signatures*."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:414
+msgid ""
+"A signature wraps the arguments and execution options of a single task "
+"invocation in a way such that it can be passed to functions or even "
+"serialized and sent across the wire."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:418
+msgid ""
+"You can create a signature for the ``add`` task using the arguments ``(2,"
+" 2)``, and a countdown of 10 seconds like this:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:426
+msgid "There's also a shortcut using star arguments:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:434
+msgid "And there's that calling API again…"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:436
+msgid ""
+"Signature instances also supports the calling API: meaning they have the "
+"``delay`` and ``apply_async`` methods."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:439
+msgid ""
+"But there's a difference in that the signature may already have an "
+"argument signature specified. The ``add`` task takes two arguments, so a "
+"signature specifying two arguments would make a complete signature:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:450
+msgid ""
+"But, you can also make incomplete signatures to create what we call "
+"*partials*:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:458
+msgid ""
+"``s2`` is now a partial signature that needs another argument to be "
+"complete, and this can be resolved when calling the signature:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:468
+msgid ""
+"Here you added the argument 8 that was prepended to the existing argument"
+" 2 forming a complete signature of ``add(8, 2)``."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:471
+msgid ""
+"Keyword arguments can also be added later, these are then merged with any"
+" existing keyword arguments, but with new arguments taking precedence:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:479
+msgid "As stated signatures supports the calling API: meaning that;"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:481
+msgid "``sig.apply_async(args=(), kwargs={}, **options)``"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:483
+msgid ""
+"Calls the signature with optional partial arguments and partial keyword "
+"arguments. Also supports partial execution options."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:486
+msgid "``sig.delay(*args, **kwargs)``"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:488
+msgid ""
+"Star argument version of ``apply_async``. Any arguments will be prepended"
+" to the arguments in the signature, and keyword arguments is merged with "
+"any existing keys."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:492
+msgid ""
+"So this all seems very useful, but what can you actually do with these? "
+"To get to that I must introduce the canvas primitives…"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:496
+msgid "The Primitives"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:503
+msgid ":ref:`group <canvas-group>`"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:504
+msgid ":ref:`chain <canvas-chain>`"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:505
+msgid ":ref:`chord <canvas-chord>`"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:506
+msgid ":ref:`map <canvas-map>`"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:507
+msgid ":ref:`starmap <canvas-map>`"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:508
+msgid ":ref:`chunks <canvas-chunks>`"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:510
+msgid ""
+"These primitives are signature objects themselves, so they can be "
+"combined in any number of ways to compose complex work-flows."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:515
+msgid ""
+"These examples retrieve results, so to try them out you need to configure"
+" a result backend. The example project above already does that (see the "
+"backend argument to :class:`~celery.Celery`)."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:519
+msgid "Let's look at some examples:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:522
+msgid "Groups"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:524
+msgid ""
+"A :class:`~celery.group` calls a list of tasks in parallel, and it "
+"returns a special result instance that lets you inspect the results as a "
+"group, and retrieve the return values in order."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:536
+msgid "Partial group"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:545
+msgid "Chains"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:547
+msgid ""
+"Tasks can be linked together so that after one task returns the other is "
+"called:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:560
+msgid "or a partial chain:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:570
+msgid "Chains can also be written like this:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:578
+msgid "Chords"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:580
+msgid "A chord is a group with a callback:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:591
+msgid ""
+"A group chained to another task will be automatically converted to a "
+"chord:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:600
+msgid ""
+"Since these primitives are all of the signature type they can be combined"
+" almost however you want, for example:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:607
+msgid ""
+"Be sure to read more about work-flows in the :ref:`Canvas <guide-canvas>`"
+" user guide."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:611
+msgid "Routing"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:613
+msgid ""
+"Celery supports all of the routing facilities provided by AMQP, but it "
+"also supports simple routing where messages are sent to named queues."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:616
+msgid ""
+"The :setting:`task_routes` setting enables you to route tasks by name and"
+" keep everything centralized in one location:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:627
+msgid ""
+"You can also specify the queue at runtime with the ``queue`` argument to "
+"``apply_async``:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:635
+msgid ""
+"You can then make a worker consume from this queue by specifying the "
+":option:`celery worker -Q` option:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:642
+msgid ""
+"You may specify multiple queues by using a comma separated list, for "
+"example you can make the worker consume from both the default queue, and "
+"the ``hipri`` queue, where the default queue is named ``celery`` for "
+"historical reasons:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:651
+msgid ""
+"The order of the queues doesn't matter as the worker will give equal "
+"weight to the queues."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:654
+msgid ""
+"To learn more about routing, including taking use of the full power of "
+"AMQP routing, see the :ref:`Routing Guide <guide-routing>`."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:658
+msgid "Remote Control"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:660
+msgid ""
+"If you're using RabbitMQ (AMQP), Redis, or Qpid as the broker then you "
+"can control and inspect the worker at runtime."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:663
+msgid "For example you can see what tasks the worker is currently working on:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:669
+msgid ""
+"This is implemented by using broadcast messaging, so all remote control "
+"commands are received by every worker in the cluster."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:672
+msgid ""
+"You can also specify one or more workers to act on the request using the "
+":option:`--destination <celery inspect --destination>` option. This is a "
+"comma separated list of worker host names:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:680
+msgid ""
+"If a destination isn't provided then every worker will act and reply to "
+"the request."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:683
+msgid ""
+"The :program:`celery inspect` command contains commands that doesn't "
+"change anything in the worker, it only replies information and statistics"
+" about what's going on inside the worker. For a list of inspect commands "
+"you can execute:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:692
+msgid ""
+"Then there's the :program:`celery control` command, that contains "
+"commands that actually changes things in the worker at runtime:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:699
+msgid ""
+"For example you can force workers to enable event messages (used for "
+"monitoring tasks and workers):"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:706
+msgid ""
+"When events are enabled you can then start the event dumper to see what "
+"the workers are doing:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:713
+msgid "or you can start the curses interface:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:719
+msgid "when you're finished monitoring you can disable events again:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:725
+msgid ""
+"The :program:`celery status` command also uses remote control commands "
+"and shows a list of online workers in the cluster:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:732
+msgid ""
+"You can read more about the :program:`celery` command and monitoring in "
+"the :ref:`Monitoring Guide <guide-monitoring>`."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:736
+msgid "Timezone"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:738
+msgid "All times and dates, internally and in messages uses the UTC timezone."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:740
+msgid ""
+"When the worker receives a message, for example with a countdown set it "
+"converts that UTC time to local time. If you wish to use a different "
+"timezone than the system timezone then you must configure that using the "
+":setting:`timezone` setting:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:750
+msgid "Optimization"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:752
+msgid ""
+"The default configuration isn't optimized for throughput by default, it "
+"tries to walk the middle way between many short tasks and fewer long "
+"tasks, a compromise between throughput and fair scheduling."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:756
+msgid ""
+"If you have strict fair scheduling requirements, or want to optimize for "
+"throughput then you should read the :ref:`Optimizing Guide <guide-"
+"optimizing>`."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:760
+msgid ""
+"If you're using RabbitMQ then you can install the :pypi:`librabbitmq` "
+"module: this is an AMQP client implemented in C:"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:768
+msgid "What to do now?"
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:770
+msgid ""
+"Now that you have read this document you should continue to the "
+":ref:`User Guide <guide>`."
+msgstr ""
+
+#: ../../getting-started/next-steps.rst:773
+msgid "There's also an :ref:`API reference <apiref>` if you're so inclined."
+msgstr ""
+
+#: ../../getting-started/resources.rst:5
+msgid "Resources"
+msgstr ""
+
+#: ../../includes/resources.txt:4
+msgid "Getting Help"
+msgstr ""
+
+#: ../../includes/resources.txt:9
+msgid "Mailing list"
+msgstr ""
+
+#: ../../includes/resources.txt:11
+msgid ""
+"For discussions about the usage, development, and future of Celery, "
+"please join the `celery-users`_ mailing list."
+msgstr ""
+
+#: ../../includes/resources.txt:19
+msgid "IRC"
+msgstr ""
+
+#: ../../includes/resources.txt:21
+msgid ""
+"Come chat with us on IRC. The **#celery** channel is located at the "
+"`Freenode`_ network."
+msgstr ""
+
+#: ../../includes/resources.txt:29
+msgid "Bug tracker"
+msgstr ""
+
+#: ../../includes/resources.txt:31
+msgid ""
+"If you have any suggestions, bug reports, or annoyances please report "
+"them to our issue tracker at https://github.com/celery/celery/issues/"
+msgstr ""
+
+#: ../../includes/resources.txt:37
+msgid "Wiki"
+msgstr ""
+
+#: ../../includes/resources.txt:39
+msgid "https://wiki.github.com/celery/celery/"
+msgstr ""
+
+#: ../../includes/resources.txt:44
+msgid "Contributing"
+msgstr ""
+
+#: ../../includes/resources.txt:46
+msgid ""
+"Development of `celery` happens at GitHub: "
+"https://github.com/celery/celery"
+msgstr ""
+
+#: ../../includes/resources.txt:48
+msgid ""
+"You're highly encouraged to participate in the development of `celery`. "
+"If you don't like GitHub (for some reason) you're welcome to send regular"
+" patches."
+msgstr ""
+
+#: ../../includes/resources.txt:52
+msgid ""
+"Be sure to also read the `Contributing to Celery`_ section in the "
+"documentation."
+msgstr ""
+
+#: ../../includes/resources.txt:61
+msgid "License"
+msgstr ""
+
+#: ../../includes/resources.txt:63
+msgid ""
+"This software is licensed under the `New BSD License`. See the "
+":file:`LICENSE` file in the top distribution directory for the full "
+"license text."
+msgstr ""
+

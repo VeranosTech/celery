@@ -1,0 +1,4153 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../userguide/configuration.rst:5
+msgid "Configuration and defaults"
+msgstr ""
+
+#: ../../userguide/configuration.rst:7
+msgid "This document describes the configuration options available."
+msgstr ""
+
+#: ../../userguide/configuration.rst:9
+msgid ""
+"If you're using the default loader, you must create the "
+":file:`celeryconfig.py` module and make sure it's available on the Python"
+" path."
+msgstr ""
+
+#: ../../userguide/configuration.rst:19
+msgid "Example configuration file"
+msgstr ""
+
+#: ../../userguide/configuration.rst:21
+msgid ""
+"This is an example configuration file to get you started. It should "
+"contain all you need to run a basic Celery set-up."
+msgstr ""
+
+#: ../../userguide/configuration.rst:41
+msgid "New lowercase settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:43
+msgid "Version 4.0 introduced new lower case settings and setting organization."
+msgstr ""
+
+#: ../../userguide/configuration.rst:45
+msgid ""
+"The major difference between previous versions, apart from the lower case"
+" names, are the renaming of some prefixes, like ``celerybeat_`` to "
+"``beat_``, ``celeryd_`` to ``worker_``, and most of the top level "
+"``celery_`` settings have been moved into a new  ``task_`` prefix."
+msgstr ""
+
+#: ../../userguide/configuration.rst:52
+msgid ""
+"Celery will still be able to read old configuration files, so there's no "
+"rush in moving to the new settings format. Furthermore, we provide the "
+"``celery upgrade`` command that should handle plenty of cases (including "
+":ref:`Django <latentcall-django-admonition>`)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:59
+msgid "**Setting name**"
+msgstr ""
+
+#: ../../userguide/configuration.rst:59
+msgid "**Replace with**"
+msgstr ""
+
+#: ../../userguide/configuration.rst:61
+msgid "``CELERY_ACCEPT_CONTENT``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:61
+msgid ":setting:`accept_content`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:62
+msgid "``CELERY_ENABLE_UTC``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:62
+msgid ":setting:`enable_utc`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:63
+msgid "``CELERY_IMPORTS``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:63
+msgid ":setting:`imports`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:64
+msgid "``CELERY_INCLUDE``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:64
+msgid ":setting:`include`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:65
+msgid "``CELERY_TIMEZONE``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:65
+msgid ":setting:`timezone`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:66
+msgid "``CELERYBEAT_MAX_LOOP_INTERVAL``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:66
+msgid ":setting:`beat_max_loop_interval`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:67
+msgid "``CELERYBEAT_SCHEDULE``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:67
+msgid ":setting:`beat_schedule`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:68
+msgid "``CELERYBEAT_SCHEDULER``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:68
+msgid ":setting:`beat_scheduler`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:69
+msgid "``CELERYBEAT_SCHEDULE_FILENAME``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:69
+msgid ":setting:`beat_schedule_filename`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:70
+msgid "``CELERYBEAT_SYNC_EVERY``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:70
+msgid ":setting:`beat_sync_every`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:71
+msgid "``BROKER_URL``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:71
+msgid ":setting:`broker_url`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:72
+msgid "``BROKER_TRANSPORT``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:72
+msgid ":setting:`broker_transport`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:73
+msgid "``BROKER_TRANSPORT_OPTIONS``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:73
+msgid ":setting:`broker_transport_options`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:74
+msgid "``BROKER_CONNECTION_TIMEOUT``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:74
+msgid ":setting:`broker_connection_timeout`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:75
+msgid "``BROKER_CONNECTION_RETRY``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:75
+msgid ":setting:`broker_connection_retry`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:76
+msgid "``BROKER_CONNECTION_MAX_RETRIES``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:76
+msgid ":setting:`broker_connection_max_retries`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:77
+msgid "``BROKER_FAILOVER_STRATEGY``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:77
+msgid ":setting:`broker_failover_strategy`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:78
+msgid "``BROKER_HEARTBEAT``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:78
+msgid ":setting:`broker_heartbeat`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:79
+msgid "``BROKER_LOGIN_METHOD``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:79
+msgid ":setting:`broker_login_method`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:80
+msgid "``BROKER_POOL_LIMIT``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:80
+msgid ":setting:`broker_pool_limit`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:81
+msgid "``BROKER_USE_SSL``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:81
+msgid ":setting:`broker_use_ssl`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:82
+msgid "``CELERY_CACHE_BACKEND``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:82
+msgid ":setting:`cache_backend`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:83
+msgid "``CELERY_CACHE_BACKEND_OPTIONS``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:83
+msgid ":setting:`cache_backend_options`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:84
+msgid "``CASSANDRA_COLUMN_FAMILY``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:84
+msgid ":setting:`cassandra_table`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:85
+msgid "``CASSANDRA_ENTRY_TTL``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:85
+msgid ":setting:`cassandra_entry_ttl`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:86
+msgid "``CASSANDRA_KEYSPACE``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:86
+msgid ":setting:`cassandra_keyspace`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:87
+msgid "``CASSANDRA_PORT``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:87
+msgid ":setting:`cassandra_port`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:88
+msgid "``CASSANDRA_READ_CONSISTENCY``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:88
+msgid ":setting:`cassandra_read_consistency`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:89
+msgid "``CASSANDRA_SERVERS``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:89
+msgid ":setting:`cassandra_servers`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:90
+msgid "``CASSANDRA_WRITE_CONSISTENCY``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:90
+msgid ":setting:`cassandra_write_consistency`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:91
+msgid "``CASSANDRA_OPTIONS``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:91
+msgid ":setting:`cassandra_options`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:92
+msgid "``S3_ACCESS_KEY_ID``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:92
+msgid ":setting:`s3_access_key_id`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:93
+msgid "``S3_SECRET_ACCESS_KEY``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:93
+msgid ":setting:`s3_secret_access_key`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:94
+msgid "``S3_BUCKET``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:94
+msgid ":setting:`s3_bucket`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:95
+msgid "``S3_BASE_PATH``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:95
+msgid ":setting:`s3_base_path`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:96
+msgid "``S3_ENDPOINT_URL``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:96
+msgid ":setting:`s3_endpoint_url`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:97
+msgid "``S3_REGION``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:97
+msgid ":setting:`s3_region`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:98
+msgid "``CELERY_COUCHBASE_BACKEND_SETTINGS``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:98
+msgid ":setting:`couchbase_backend_settings`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:99
+msgid "``CELERY_ARANGODB_BACKEND_SETTINGS``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:99
+msgid ":setting:`arangodb_backend_settings`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:100
+msgid "``CELERY_MONGODB_BACKEND_SETTINGS``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:100
+msgid ":setting:`mongodb_backend_settings`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:101
+msgid "``CELERY_EVENT_QUEUE_EXPIRES``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:101
+msgid ":setting:`event_queue_expires`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:102
+msgid "``CELERY_EVENT_QUEUE_TTL``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:102
+msgid ":setting:`event_queue_ttl`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:103
+msgid "``CELERY_EVENT_QUEUE_PREFIX``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:103
+msgid ":setting:`event_queue_prefix`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:104
+msgid "``CELERY_EVENT_SERIALIZER``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:104
+msgid ":setting:`event_serializer`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:105
+msgid "``CELERY_REDIS_DB``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:105
+msgid ":setting:`redis_db`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:106
+msgid "``CELERY_REDIS_HOST``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:106
+msgid ":setting:`redis_host`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:107
+msgid "``CELERY_REDIS_MAX_CONNECTIONS``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:107
+msgid ":setting:`redis_max_connections`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:108
+msgid "``CELERY_REDIS_PASSWORD``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:108
+msgid ":setting:`redis_password`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:109
+msgid "``CELERY_REDIS_PORT``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:109
+msgid ":setting:`redis_port`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:110
+msgid "``CELERY_REDIS_BACKEND_USE_SSL``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:110
+msgid ":setting:`redis_backend_use_ssl`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:111
+msgid "``CELERY_RESULT_BACKEND``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:111
+msgid ":setting:`result_backend`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:112
+msgid "``CELERY_MAX_CACHED_RESULTS``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:112
+msgid ":setting:`result_cache_max`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:113
+msgid "``CELERY_MESSAGE_COMPRESSION``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:113
+msgid ":setting:`result_compression`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:114
+msgid "``CELERY_RESULT_EXCHANGE``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:114
+msgid ":setting:`result_exchange`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:115
+msgid "``CELERY_RESULT_EXCHANGE_TYPE``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:115
+msgid ":setting:`result_exchange_type`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:116
+msgid "``CELERY_RESULT_EXPIRES``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:116
+msgid ":setting:`result_expires`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:117
+msgid "``CELERY_RESULT_PERSISTENT``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:117
+msgid ":setting:`result_persistent`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:118
+msgid "``CELERY_RESULT_SERIALIZER``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:118
+msgid ":setting:`result_serializer`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:119
+msgid "``CELERY_RESULT_DBURI``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:119
+msgid "Use :setting:`result_backend` instead."
+msgstr ""
+
+#: ../../userguide/configuration.rst:120
+msgid "``CELERY_RESULT_ENGINE_OPTIONS``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:120
+msgid ":setting:`database_engine_options`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:121
+msgid "``[...]_DB_SHORT_LIVED_SESSIONS``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:121
+msgid ":setting:`database_short_lived_sessions`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:122
+msgid "``CELERY_RESULT_DB_TABLE_NAMES``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:122
+msgid ":setting:`database_db_names`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:123
+msgid "``CELERY_SECURITY_CERTIFICATE``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:123
+msgid ":setting:`security_certificate`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:124
+msgid "``CELERY_SECURITY_CERT_STORE``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:124
+msgid ":setting:`security_cert_store`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:125
+msgid "``CELERY_SECURITY_KEY``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:125
+msgid ":setting:`security_key`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:126
+msgid "``CELERY_TASK_ACKS_LATE``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:126
+msgid ":setting:`task_acks_late`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:127
+msgid "``CELERY_TASK_ACKS_ON_FAILURE_OR_TIMEOUT``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:127
+msgid ":setting:`task_acks_on_failure_or_timeout`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:128
+msgid "``CELERY_TASK_ALWAYS_EAGER``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:128
+msgid ":setting:`task_always_eager`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:129
+msgid "``CELERY_TASK_ANNOTATIONS``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:129
+msgid ":setting:`task_annotations`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:130
+msgid "``CELERY_TASK_COMPRESSION``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:130
+msgid ":setting:`task_compression`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:131
+msgid "``CELERY_TASK_CREATE_MISSING_QUEUES``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:131
+msgid ":setting:`task_create_missing_queues`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:132
+msgid "``CELERY_TASK_DEFAULT_DELIVERY_MODE``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:132
+msgid ":setting:`task_default_delivery_mode`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:133
+msgid "``CELERY_TASK_DEFAULT_EXCHANGE``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:133
+msgid ":setting:`task_default_exchange`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:134
+msgid "``CELERY_TASK_DEFAULT_EXCHANGE_TYPE``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:134
+msgid ":setting:`task_default_exchange_type`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:135
+msgid "``CELERY_TASK_DEFAULT_QUEUE``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:135
+msgid ":setting:`task_default_queue`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:136
+msgid "``CELERY_TASK_DEFAULT_RATE_LIMIT``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:136
+msgid ":setting:`task_default_rate_limit`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:137
+msgid "``CELERY_TASK_DEFAULT_ROUTING_KEY``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:137
+msgid ":setting:`task_default_routing_key`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:138
+msgid "``CELERY_TASK_EAGER_PROPAGATES``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:138
+msgid ":setting:`task_eager_propagates`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:139
+msgid "``CELERY_TASK_IGNORE_RESULT``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:139
+msgid ":setting:`task_ignore_result`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:140
+msgid "``CELERY_TASK_PUBLISH_RETRY``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:140
+msgid ":setting:`task_publish_retry`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:141
+msgid "``CELERY_TASK_PUBLISH_RETRY_POLICY``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:141
+msgid ":setting:`task_publish_retry_policy`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:142
+msgid "``CELERY_QUEUES``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:142
+msgid ":setting:`task_queues`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:143
+msgid "``CELERY_ROUTES``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:143
+msgid ":setting:`task_routes`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:144
+msgid "``CELERY_TASK_SEND_SENT_EVENT``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:144
+msgid ":setting:`task_send_sent_event`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:145
+msgid "``CELERY_TASK_SERIALIZER``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:145
+msgid ":setting:`task_serializer`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:146
+msgid "``CELERYD_TASK_SOFT_TIME_LIMIT``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:146
+msgid ":setting:`task_soft_time_limit`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:147
+msgid "``CELERYD_TASK_TIME_LIMIT``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:147
+msgid ":setting:`task_time_limit`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:148
+msgid "``CELERY_TRACK_STARTED``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:148
+msgid ":setting:`task_track_started`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:149
+msgid "``CELERYD_AGENT``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:149
+msgid ":setting:`worker_agent`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:150
+msgid "``CELERYD_AUTOSCALER``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:150
+msgid ":setting:`worker_autoscaler`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:151
+msgid "``CELERYD_CONCURRENCY``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:151
+msgid ":setting:`worker_concurrency`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:152
+msgid "``CELERYD_CONSUMER``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:152
+msgid ":setting:`worker_consumer`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:153
+msgid "``CELERY_WORKER_DIRECT``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:153
+msgid ":setting:`worker_direct`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:154
+msgid "``CELERY_DISABLE_RATE_LIMITS``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:154
+msgid ":setting:`worker_disable_rate_limits`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:155
+msgid "``CELERY_ENABLE_REMOTE_CONTROL``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:155
+msgid ":setting:`worker_enable_remote_control`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:156
+msgid "``CELERYD_HIJACK_ROOT_LOGGER``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:156
+msgid ":setting:`worker_hijack_root_logger`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:157
+msgid "``CELERYD_LOG_COLOR``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:157
+msgid ":setting:`worker_log_color`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:158
+msgid "``CELERYD_LOG_FORMAT``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:158
+msgid ":setting:`worker_log_format`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:159
+msgid "``CELERYD_WORKER_LOST_WAIT``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:159
+msgid ":setting:`worker_lost_wait`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:160
+msgid "``CELERYD_MAX_TASKS_PER_CHILD``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:160
+msgid ":setting:`worker_max_tasks_per_child`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:161
+msgid "``CELERYD_POOL``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:161
+msgid ":setting:`worker_pool`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:162
+msgid "``CELERYD_POOL_PUTLOCKS``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:162
+msgid ":setting:`worker_pool_putlocks`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:163
+msgid "``CELERYD_POOL_RESTARTS``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:163
+msgid ":setting:`worker_pool_restarts`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:164
+msgid "``CELERYD_PREFETCH_MULTIPLIER``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:164
+msgid ":setting:`worker_prefetch_multiplier`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:165
+msgid "``CELERYD_REDIRECT_STDOUTS``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:165
+msgid ":setting:`worker_redirect_stdouts`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:166
+msgid "``CELERYD_REDIRECT_STDOUTS_LEVEL``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:166
+msgid ":setting:`worker_redirect_stdouts_level`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:167
+msgid "``CELERY_SEND_EVENTS``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:167
+msgid ":setting:`worker_send_task_events`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:168
+msgid "``CELERYD_STATE_DB``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:168
+msgid ":setting:`worker_state_db`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:169
+msgid "``CELERYD_TASK_LOG_FORMAT``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:169
+msgid ":setting:`worker_task_log_format`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:170
+msgid "``CELERYD_TIMER``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:170
+msgid ":setting:`worker_timer`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:171
+msgid "``CELERYD_TIMER_PRECISION``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:171
+msgid ":setting:`worker_timer_precision`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:175
+msgid "Configuration Directives"
+msgstr ""
+
+#: ../../userguide/configuration.rst:180
+msgid "General settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:185
+msgid "``accept_content``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:187
+msgid "Default: ``{'json'}``  (set, list, or tuple)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:189
+msgid "A white-list of content-types/serializers to allow."
+msgstr ""
+
+#: ../../userguide/configuration.rst:191 ../../userguide/configuration.rst:218
+msgid ""
+"If a message is received that's not in this list then the message will be"
+" discarded with an error."
+msgstr ""
+
+#: ../../userguide/configuration.rst:194
+msgid ""
+"By default only json is enabled but any content type can be added, "
+"including pickle and yaml; when this is the case make sure untrusted "
+"parties don't have access to your broker. See :ref:`guide-security` for "
+"more."
+msgstr ""
+
+#: ../../userguide/configuration.rst:199 ../../userguide/configuration.rst:228
+#: ../../userguide/configuration.rst:2208
+#: ../../userguide/configuration.rst:2227
+msgid "Example::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:210
+msgid "``result_accept_content``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:212
+msgid "Default: ``None`` (can be set, list or tuple)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:216
+msgid "A white-list of content-types/serializers to allow for the result backend."
+msgstr ""
+
+#: ../../userguide/configuration.rst:221
+msgid ""
+"By default it is the same serializer as ``accept_content``. However, a "
+"different serializer for accepted content of the result backend can be "
+"specified. Usually this is needed if signed messaging is used and the "
+"result is stored unsigned in the result backend. See :ref:`guide-"
+"security` for more."
+msgstr ""
+
+#: ../../userguide/configuration.rst:237
+msgid "Time and date settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:242
+msgid "``enable_utc``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:246
+msgid "Default: Enabled by default since version 3.0."
+msgstr ""
+
+#: ../../userguide/configuration.rst:248
+msgid ""
+"If enabled dates and times in messages will be converted to use the UTC "
+"timezone."
+msgstr ""
+
+#: ../../userguide/configuration.rst:251
+msgid ""
+"Note that workers running Celery versions below 2.5 will assume a local "
+"timezone for all messages, so only enable if all workers have been "
+"upgraded."
+msgstr ""
+
+#: ../../userguide/configuration.rst:258
+msgid "``timezone``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:262
+msgid "Default: ``\"UTC\"``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:264
+msgid ""
+"Configure Celery to use a custom time zone. The timezone value can be any"
+" time zone supported by the :pypi:`pytz` library."
+msgstr ""
+
+#: ../../userguide/configuration.rst:268
+msgid ""
+"If not set the UTC timezone is used. For backwards compatibility there's "
+"also a :setting:`enable_utc` setting, and when this is set to false the "
+"system local timezone is used instead."
+msgstr ""
+
+#: ../../userguide/configuration.rst:275
+msgid "Task settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:280
+msgid "``task_annotations``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:284 ../../userguide/configuration.rst:1174
+#: ../../userguide/configuration.rst:1882
+#: ../../userguide/configuration.rst:1992
+#: ../../userguide/configuration.rst:2019
+#: ../../userguide/configuration.rst:2029
+#: ../../userguide/configuration.rst:2551
+#: ../../userguide/configuration.rst:2829
+#: ../../userguide/configuration.rst:2841
+#: ../../userguide/configuration.rst:2853
+msgid "Default: :const:`None`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:286
+msgid ""
+"This setting can be used to rewrite any task attribute from the "
+"configuration. The setting can be a dict, or a list of annotation objects"
+" that filter for tasks and return a map of attributes to change."
+msgstr ""
+
+#: ../../userguide/configuration.rst:291
+msgid "This will change the ``rate_limit`` attribute for the ``tasks.add`` task:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:298
+msgid "or change the same for all tasks:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:304
+msgid "You can change methods too, for example the ``on_failure`` handler:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:313
+msgid ""
+"If you need more flexibility then you can use objects instead of a dict "
+"to choose the tasks to annotate:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:329
+msgid "``task_compression``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:331 ../../userguide/configuration.rst:1062
+msgid "Default: :const:`None`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:333
+msgid ""
+"Default compression used for task messages. Can be ``gzip``, ``bzip2`` "
+"(if available), or any custom compression schemes registered in the Kombu"
+" compression registry."
+msgstr ""
+
+#: ../../userguide/configuration.rst:337
+msgid "The default is to send uncompressed messages."
+msgstr ""
+
+#: ../../userguide/configuration.rst:342
+msgid "``task_protocol``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:346
+msgid "Default: 2 (since 4.0)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:348
+msgid ""
+"Set the default task message protocol version used to send tasks. "
+"Supports protocols: 1 and 2."
+msgstr ""
+
+#: ../../userguide/configuration.rst:351
+msgid "Protocol 2 is supported by 3.1.24 and 4.x+."
+msgstr ""
+
+#: ../../userguide/configuration.rst:356
+msgid "``task_serializer``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:358
+msgid "Default: ``\"json\"`` (since 4.0, earlier: pickle)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:360
+msgid ""
+"A string identifying the default serialization method to use. Can be "
+"`json` (default), `pickle`, `yaml`, `msgpack`, or any custom "
+"serialization methods that have been registered with "
+":mod:`kombu.serialization.registry`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:366 ../../userguide/configuration.rst:2676
+msgid ":ref:`calling-serializers`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:371
+msgid "``task_publish_retry``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:375 ../../userguide/configuration.rst:2084
+#: ../../userguide/configuration.rst:2375
+msgid "Default: Enabled."
+msgstr ""
+
+#: ../../userguide/configuration.rst:377
+msgid ""
+"Decides if publishing task messages will be retried in the case of "
+"connection loss or other connection errors. See also "
+":setting:`task_publish_retry_policy`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:384
+msgid "``task_publish_retry_policy``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:388
+msgid "Default: See :ref:`calling-retry`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:390
+msgid ""
+"Defines the default policy when retrying publishing a task message in the"
+" case of connection loss or other connection errors."
+msgstr ""
+
+#: ../../userguide/configuration.rst:396
+msgid "Task execution settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:401
+msgid "``task_always_eager``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:403 ../../userguide/configuration.rst:419
+#: ../../userguide/configuration.rst:432 ../../userguide/configuration.rst:452
+#: ../../userguide/configuration.rst:463 ../../userguide/configuration.rst:473
+#: ../../userguide/configuration.rst:521 ../../userguide/configuration.rst:549
+#: ../../userguide/configuration.rst:1038
+#: ../../userguide/configuration.rst:2059
+#: ../../userguide/configuration.rst:2281
+msgid "Default: Disabled."
+msgstr ""
+
+#: ../../userguide/configuration.rst:405
+msgid ""
+"If this is :const:`True`, all tasks will be executed locally by blocking "
+"until the task returns. ``apply_async()`` and ``Task.delay()`` will "
+"return an :class:`~celery.result.EagerResult` instance, that emulates the"
+" API and behavior of :class:`~celery.result.AsyncResult`, except the "
+"result is already evaluated."
+msgstr ""
+
+#: ../../userguide/configuration.rst:411
+msgid ""
+"That is, tasks will be executed locally instead of being sent to the "
+"queue."
+msgstr ""
+
+#: ../../userguide/configuration.rst:417
+msgid "``task_eager_propagates``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:421
+msgid ""
+"If this is :const:`True`, eagerly executed tasks (applied by "
+"`task.apply()`, or when the :setting:`task_always_eager` setting is "
+"enabled), will propagate exceptions."
+msgstr ""
+
+#: ../../userguide/configuration.rst:425
+msgid "It's the same as always running ``apply()`` with ``throw=True``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:430
+msgid "``task_remote_tracebacks``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:434
+msgid ""
+"If enabled task results will include the workers stack when re-raising "
+"task errors."
+msgstr ""
+
+#: ../../userguide/configuration.rst:437
+msgid ""
+"This requires the :pypi:`tblib` library, that can be installed using "
+":command:`pip`:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:444 ../../userguide/configuration.rst:976
+#: ../../userguide/configuration.rst:1092
+#: ../../userguide/configuration.rst:1238
+#: ../../userguide/configuration.rst:1431
+#: ../../userguide/configuration.rst:1505
+#: ../../userguide/configuration.rst:1781
+msgid ""
+"See :ref:`bundles` for information on combining multiple extension "
+"requirements."
+msgstr ""
+
+#: ../../userguide/configuration.rst:450
+msgid "``task_ignore_result``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:454
+msgid ""
+"Whether to store the task return values or not (tombstones). If you still"
+" want to store errors, just not successful return values, you can set "
+":setting:`task_store_errors_even_if_ignored`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:461
+msgid "``task_store_errors_even_if_ignored``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:465
+msgid ""
+"If set, the worker stores all task errors in the result store even if "
+":attr:`Task.ignore_result <celery.task.base.Task.ignore_result>` is on."
+msgstr ""
+
+#: ../../userguide/configuration.rst:471
+msgid "``task_track_started``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:475
+msgid ""
+"If :const:`True` the task will report its status as 'started' when the "
+"task is executed by a worker. The default value is :const:`False` as the "
+"normal behavior is to not report that level of granularity. Tasks are "
+"either pending, finished, or waiting to be retried. Having a 'started' "
+"state can be useful for when there are long running tasks and there's a "
+"need to report what task is currently running."
+msgstr ""
+
+#: ../../userguide/configuration.rst:485
+msgid "``task_time_limit``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:487
+msgid "Default: No time limit."
+msgstr ""
+
+#: ../../userguide/configuration.rst:489
+msgid ""
+"Task hard time limit in seconds. The worker processing the task will be "
+"killed and replaced with a new one when this is exceeded."
+msgstr ""
+
+#: ../../userguide/configuration.rst:495
+msgid "``task_soft_time_limit``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:497
+msgid "Default: No soft time limit."
+msgstr ""
+
+#: ../../userguide/configuration.rst:499
+msgid "Task soft time limit in seconds."
+msgstr ""
+
+#: ../../userguide/configuration.rst:501
+msgid ""
+"The :exc:`~@SoftTimeLimitExceeded` exception will be raised when this is "
+"exceeded. For example, the task can catch this to clean up before the "
+"hard time limit comes:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:519
+msgid "``task_acks_late``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:523
+msgid ""
+"Late ack means the task messages will be acknowledged **after** the task "
+"has been executed, not *just before* (the default behavior)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:528
+msgid "FAQ: :ref:`faq-acks_late-vs-retry`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:533
+msgid "``task_acks_on_failure_or_timeout``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:535
+msgid "Default: Enabled"
+msgstr ""
+
+#: ../../userguide/configuration.rst:537
+msgid ""
+"When enabled messages for all tasks will be acknowledged even if they "
+"fail or time out."
+msgstr ""
+
+#: ../../userguide/configuration.rst:540
+msgid ""
+"Configuring this setting only applies to tasks that are acknowledged "
+"**after** they have been executed and only if :setting:`task_acks_late` "
+"is enabled."
+msgstr ""
+
+#: ../../userguide/configuration.rst:547
+msgid "``task_reject_on_worker_lost``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:551
+msgid ""
+"Even if :setting:`task_acks_late` is enabled, the worker will acknowledge"
+" tasks when the worker process executing them abruptly exits or is "
+"signaled (e.g., :sig:`KILL`/:sig:`INT`, etc)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:555
+msgid ""
+"Setting this to true allows the message to be re-queued instead, so that "
+"the task will execute again by the same worker, or another worker."
+msgstr ""
+
+#: ../../userguide/configuration.rst:561
+msgid ""
+"Enabling this can cause message loops; make sure you know what you're "
+"doing."
+msgstr ""
+
+#: ../../userguide/configuration.rst:567
+msgid "``task_default_rate_limit``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:569
+msgid "Default: No rate limit."
+msgstr ""
+
+#: ../../userguide/configuration.rst:571
+msgid "The global default rate limit for tasks."
+msgstr ""
+
+#: ../../userguide/configuration.rst:573
+msgid "This value is used for tasks that doesn't have a custom rate limit"
+msgstr ""
+
+#: ../../userguide/configuration.rst:577
+msgid ""
+"The setting:`worker_disable_rate_limits` setting can disable all rate "
+"limits."
+msgstr ""
+
+#: ../../userguide/configuration.rst:583
+msgid "Task result backend settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:588
+msgid "``result_backend``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:590
+msgid "Default: No result backend enabled by default."
+msgstr ""
+
+#: ../../userguide/configuration.rst:592
+msgid ""
+"The backend used to store task results (tombstones). Can be one of the "
+"following:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:597
+msgid "``rpc``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:596
+msgid "Send results back as AMQP messages See :ref:`conf-rpc-result-backend`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:601 ../../userguide/configuration.rst:1686
+msgid "``database``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:600
+msgid ""
+"Use a relational database supported by `SQLAlchemy`_. See :ref:`conf-"
+"database-result-backend`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:605 ../../userguide/configuration.rst:2318
+msgid "``redis``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:604
+msgid "Use `Redis`_ to store the results. See :ref:`conf-redis-result-backend`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:609
+msgid "``cache``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:608
+msgid ""
+"Use `Memcached`_ to store the results. See :ref:`conf-cache-result-"
+"backend`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:613
+msgid "``cassandra``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:612
+msgid ""
+"Use `Cassandra`_ to store the results. See :ref:`conf-cassandra-result-"
+"backend`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:617
+msgid "``elasticsearch``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:616
+msgid ""
+"Use `Elasticsearch`_ to store the results. See :ref:`conf-elasticsearch-"
+"result-backend`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:621
+msgid "``ironcache``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:620
+msgid ""
+"Use `IronCache`_ to store the results. See :ref:`conf-ironcache-result-"
+"backend`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:625
+msgid "``couchbase``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:624
+msgid ""
+"Use `Couchbase`_ to store the results. See :ref:`conf-couchbase-result-"
+"backend`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:629
+msgid "``arangodb``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:628
+msgid ""
+"Use `ArangoDB`_ to store the results. See :ref:`conf-arangodb-result-"
+"backend`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:633
+msgid "``couchdb``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:632
+msgid ""
+"Use `CouchDB`_ to store the results. See :ref:`conf-couchdb-result-"
+"backend`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:637
+msgid "``cosmosdbsql (experimental)``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:636
+msgid ""
+"Use the `CosmosDB`_ PaaS to store the results. See :ref:`conf-"
+"cosmosdbsql-result-backend`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:641
+msgid "``filesystem``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:640
+msgid ""
+"Use a shared directory to store the results. See :ref:`conf-filesystem-"
+"result-backend`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:645
+msgid "``consul``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:644
+msgid ""
+"Use the `Consul`_ K/V store to store the results See :ref:`conf-consul-"
+"result-backend`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:649
+msgid "``azureblockblob``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:648
+msgid ""
+"Use the `AzureBlockBlob`_ PaaS store to store the results See :ref:`conf-"
+"azureblockblob-result-backend`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:653
+msgid "``s3``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:652
+msgid "Use the `S3`_ to store the results See :ref:`conf-s3-result-backend`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:678
+msgid "``result_backend_transport_options``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:680 ../../userguide/configuration.rst:827
+#: ../../userguide/configuration.rst:854 ../../userguide/configuration.rst:938
+#: ../../userguide/configuration.rst:1184
+#: ../../userguide/configuration.rst:1200
+#: ../../userguide/configuration.rst:1469
+#: ../../userguide/configuration.rst:1619
+#: ../../userguide/configuration.rst:1674
+#: ../../userguide/configuration.rst:2411
+#: ../../userguide/configuration.rst:2945
+msgid "Default: ``{}`` (empty mapping)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:682 ../../userguide/configuration.rst:2413
+msgid "A dict of additional options passed to the underlying transport."
+msgstr ""
+
+#: ../../userguide/configuration.rst:684 ../../userguide/configuration.rst:2415
+msgid "See your transport user manual for supported options (if any)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:686 ../../userguide/configuration.rst:2417
+msgid ""
+"Example setting the visibility timeout (supported by Redis and SQS "
+"transports):"
+msgstr ""
+
+#: ../../userguide/configuration.rst:698
+msgid "``result_serializer``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:700
+msgid "Default: ``json`` since 4.0 (earlier: pickle)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:702
+msgid "Result serialization format."
+msgstr ""
+
+#: ../../userguide/configuration.rst:704
+msgid ""
+"See :ref:`calling-serializers` for information about supported "
+"serialization formats."
+msgstr ""
+
+#: ../../userguide/configuration.rst:710
+msgid "``result_compression``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:712
+msgid "Default: No compression."
+msgstr ""
+
+#: ../../userguide/configuration.rst:714
+msgid ""
+"Optional compression method used for task results. Supports the same "
+"options as the :setting:`task_serializer` setting."
+msgstr ""
+
+#: ../../userguide/configuration.rst:720
+msgid "``result_extended``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:722
+msgid "Default: ``False``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:724
+msgid ""
+"Enables extended task result attributes (name, args, kwargs, worker, "
+"retries, queue, delivery_info) to be written to backend."
+msgstr ""
+
+#: ../../userguide/configuration.rst:730
+msgid "``result_expires``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:732
+msgid "Default: Expire after 1 day."
+msgstr ""
+
+#: ../../userguide/configuration.rst:734
+msgid ""
+"Time (in seconds, or a :class:`~datetime.timedelta` object) for when "
+"after stored task tombstones will be deleted."
+msgstr ""
+
+#: ../../userguide/configuration.rst:737
+msgid ""
+"A built-in periodic task will delete the results after this time "
+"(``celery.backend_cleanup``), assuming that ``celery beat`` is enabled. "
+"The task runs daily at 4am."
+msgstr ""
+
+#: ../../userguide/configuration.rst:741
+msgid ""
+"A value of :const:`None` or 0 means results will never expire (depending "
+"on backend specifications)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:746
+msgid ""
+"For the moment this only works with the AMQP, database, cache, Couchbase,"
+" and Redis backends."
+msgstr ""
+
+#: ../../userguide/configuration.rst:749
+msgid ""
+"When using the database backend, ``celery beat`` must be running for the "
+"results to be expired."
+msgstr ""
+
+#: ../../userguide/configuration.rst:755
+msgid "``result_cache_max``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:757 ../../userguide/configuration.rst:840
+#: ../../userguide/configuration.rst:2600
+#: ../../userguide/configuration.rst:2613
+#: ../../userguide/configuration.rst:2900
+msgid "Default: Disabled by default."
+msgstr ""
+
+#: ../../userguide/configuration.rst:759
+msgid "Enables client caching of results."
+msgstr ""
+
+#: ../../userguide/configuration.rst:761
+msgid ""
+"This can be useful for the old deprecated 'amqp' backend where the result"
+" is unavailable as soon as one result instance consumes it."
+msgstr ""
+
+#: ../../userguide/configuration.rst:765
+msgid ""
+"This is the total number of results to cache before older results are "
+"evicted. A value of 0 or None means no limit, and a value of :const:`-1` "
+"will disable the cache."
+msgstr ""
+
+#: ../../userguide/configuration.rst:769
+msgid "Disabled by default."
+msgstr ""
+
+#: ../../userguide/configuration.rst:774
+msgid "``result_chord_join_timeout``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:776
+msgid "Default: 3.0."
+msgstr ""
+
+#: ../../userguide/configuration.rst:778
+msgid ""
+"The timeout in seconds (int/float) when joining a group's results within "
+"a chord."
+msgstr ""
+
+#: ../../userguide/configuration.rst:783
+msgid "Database backend settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:786
+msgid "Database URL Examples"
+msgstr ""
+
+#: ../../userguide/configuration.rst:788
+msgid ""
+"To use the database backend you have to configure the "
+":setting:`result_backend` setting with a connection URL and the ``db+`` "
+"prefix:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:796
+msgid "Examples::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:812
+msgid ""
+"Please see `Supported Databases`_ for a table of supported databases, and"
+" `Connection String`_ for more information about connection strings (this"
+" is the part of the URI that comes after the ``db+`` prefix)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:825
+msgid "``database_engine_options``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:829
+msgid ""
+"To specify additional SQLAlchemy database engine options you can use the "
+":setting:`sqlalchmey_engine_options` setting::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:838
+msgid "``database_short_lived_sessions``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:842
+msgid ""
+"Short lived sessions are disabled by default. If enabled they can "
+"drastically reduce performance, especially on systems processing lots of "
+"tasks. This option is useful on low-traffic workers that experience "
+"errors as a result of cached database connections going stale through "
+"inactivity. For example, intermittent errors like `(OperationalError) "
+"(2006, 'MySQL server has gone away')` can be fixed by enabling short "
+"lived sessions. This option only affects the database backend."
+msgstr ""
+
+#: ../../userguide/configuration.rst:852
+msgid "``database_table_names``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:856
+msgid ""
+"When SQLAlchemy is configured as the result backend, Celery automatically"
+" creates two tables to store result meta-data for tasks. This setting "
+"allows you to customize the table names:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:871
+msgid "RPC backend settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:876
+msgid "``result_persistent``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:878
+msgid "Default: Disabled by default (transient messages)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:880
+msgid ""
+"If set to :const:`True`, result messages will be persistent. This means "
+"the messages won't be lost after a broker restart."
+msgstr ""
+
+#: ../../userguide/configuration.rst:884 ../../userguide/configuration.rst:1212
+#: ../../userguide/configuration.rst:1310
+#: ../../userguide/configuration.rst:1333
+#: ../../userguide/configuration.rst:1383
+#: ../../userguide/configuration.rst:1713
+msgid "Example configuration"
+msgstr ""
+
+#: ../../userguide/configuration.rst:891
+msgid ""
+"**Please note**: using this backend could trigger the raise of "
+"``celery.backends.rpc.BacklogLimitExceeded`` if the task tombstone is too"
+" *old*."
+msgstr ""
+
+#: ../../userguide/configuration.rst:893
+msgid "E.g."
+msgstr ""
+
+#: ../../userguide/configuration.rst:905
+msgid "Cache backend settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:909
+msgid ""
+"The cache backend supports the :pypi:`pylibmc` and :pypi:`python-"
+"memcached` libraries. The latter is used only if :pypi:`pylibmc` isn't "
+"installed."
+msgstr ""
+
+#: ../../userguide/configuration.rst:912
+msgid "Using a single Memcached server:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:918
+msgid "Using multiple Memcached servers:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:926
+msgid "The \"memory\" backend stores the cache in memory only:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:936
+msgid "``cache_backend_options``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:940
+msgid ""
+"You can set :pypi:`pylibmc` options using the "
+":setting:`cache_backend_options` setting:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:953
+msgid "``cache_backend``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:955
+msgid ""
+"This setting is no longer used as it's now possible to specify the cache "
+"backend directly in the :setting:`result_backend` setting."
+msgstr ""
+
+#: ../../userguide/configuration.rst:961
+msgid "Redis backend settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:964
+msgid "Configuring the backend URL"
+msgstr ""
+
+#: ../../userguide/configuration.rst:968
+msgid "The Redis backend requires the :pypi:`redis` library."
+msgstr ""
+
+#: ../../userguide/configuration.rst:970 ../../userguide/configuration.rst:1499
+#: ../../userguide/configuration.rst:1573
+#: ../../userguide/configuration.rst:1598
+#: ../../userguide/configuration.rst:1653
+msgid "To install this package use :command:`pip`:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:979
+msgid ""
+"This backend requires the :setting:`result_backend` setting to be set to "
+"a Redis or `Redis over TLS`_ URL::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:987 ../../userguide/configuration.rst:1439
+msgid "For example::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:991 ../../userguide/configuration.rst:1443
+msgid "is the same as::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:995
+msgid "Use the ``rediss://`` protocol to connect to redis over TLS::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:999
+msgid ""
+"If a Unix socket connection should be used, the URL needs to be in the "
+"format:::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1003
+#: ../../userguide/configuration.rst:1447
+msgid "The fields of the URL are defined as follows:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1005
+#: ../../userguide/configuration.rst:1640
+#: ../../userguide/configuration.rst:1700
+#: ../../userguide/configuration.rst:1795
+msgid "``password``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1007
+msgid "Password used to connect to the database."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1009
+#: ../../userguide/configuration.rst:1449
+#: ../../userguide/configuration.rst:1473
+#: ../../userguide/configuration.rst:1623
+#: ../../userguide/configuration.rst:1678
+#: ../../userguide/configuration.rst:1799
+msgid "``host``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1011
+msgid "Host name or IP address of the Redis server (e.g., `localhost`)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1013
+#: ../../userguide/configuration.rst:1453
+#: ../../userguide/configuration.rst:1477
+#: ../../userguide/configuration.rst:1547
+#: ../../userguide/configuration.rst:1627
+#: ../../userguide/configuration.rst:1682
+#: ../../userguide/configuration.rst:1803
+msgid "``port``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1015
+msgid "Port to the Redis server. Default is 6379."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1017
+msgid "``db``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1019
+msgid ""
+"Database number to use. Default is 0. The db can include an optional "
+"leading slash."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1022
+msgid ""
+"When using a TLS connection (protocol is ``rediss://``), you may pass in "
+"all values in :setting:`broker_use_ssl` as query parameters. Paths to "
+"certificates must be URL encoded, and ``ssl_cert_reqs`` is required. "
+"Example:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1036
+msgid "``redis_backend_use_ssl``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1040
+msgid ""
+"The Redis backend supports SSL. This value must be set in the form of a "
+"dictionary. The valid key-value pairs are the same as the ones mentioned "
+"in the ``redis`` sub-section under :setting:`broker_use_ssl`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1048
+msgid "``redis_max_connections``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1050
+msgid "Default: No limit."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1052
+msgid ""
+"Maximum number of connections available in the Redis connection pool used"
+" for sending and retrieving results."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1058
+msgid "``redis_socket_connect_timeout``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1064
+msgid ""
+"Socket timeout for connections to Redis from the result backend in "
+"seconds (int/float)"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1070
+msgid "``redis_socket_timeout``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1072
+msgid "Default: 120.0 seconds."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1074
+msgid ""
+"Socket timeout for reading/writing operations to the Redis server in "
+"seconds (int/float), used by the redis result backend."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1080
+msgid "Cassandra backend settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1084
+msgid "This Cassandra backend driver requires :pypi:`cassandra-driver`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1086
+msgid "To install, use :command:`pip`:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1095
+#: ../../userguide/configuration.rst:1241
+msgid "This backend requires the following configuration directives to be set."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1100
+msgid "``cassandra_servers``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1102
+#: ../../userguide/configuration.rst:2434
+#: ../../userguide/configuration.rst:2448
+msgid "Default: ``[]`` (empty list)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1104
+msgid "List of ``host`` Cassandra servers. For example::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1111
+msgid "``cassandra_port``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1113
+msgid "Default: 9042."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1115
+msgid "Port to contact the Cassandra servers on."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1120
+msgid "``cassandra_keyspace``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1122
+#: ../../userguide/configuration.rst:1133
+#: ../../userguide/configuration.rst:1144
+#: ../../userguide/configuration.rst:1154
+#: ../../userguide/configuration.rst:1164
+#: ../../userguide/configuration.rst:1248
+#: ../../userguide/configuration.rst:1259
+#: ../../userguide/configuration.rst:1270
+#: ../../userguide/configuration.rst:1281
+#: ../../userguide/configuration.rst:1292
+#: ../../userguide/configuration.rst:1303
+msgid "Default: None."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1124
+msgid "The key-space in which to store the results. For example::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1131
+msgid "``cassandra_table``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1135
+msgid "The table (column family) in which to store the results. For example::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1142
+msgid "``cassandra_read_consistency``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1146
+msgid ""
+"The read consistency used. Values can be ``ONE``, ``TWO``, ``THREE``, "
+"``QUORUM``, ``ALL``, ``LOCAL_QUORUM``, ``EACH_QUORUM``, ``LOCAL_ONE``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1152
+msgid "``cassandra_write_consistency``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1156
+msgid ""
+"The write consistency used. Values can be ``ONE``, ``TWO``, ``THREE``, "
+"``QUORUM``, ``ALL``, ``LOCAL_QUORUM``, ``EACH_QUORUM``, ``LOCAL_ONE``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1162
+msgid "``cassandra_entry_ttl``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1166
+msgid ""
+"Time-to-live for status entries. They will expire and be removed after "
+"that many seconds after adding. A value of :const:`None` (default) means "
+"they will never expire."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1172
+msgid "``cassandra_auth_provider``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1176
+msgid ""
+"AuthProvider class within ``cassandra.auth`` module to use. Values can be"
+" ``PlainTextAuthProvider`` or ``SaslAuthProvider``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1182
+msgid "``cassandra_auth_kwargs``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1186
+msgid "Named arguments to pass into the authentication provider. For example:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1198
+msgid "``cassandra_options``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1202
+msgid "Named arguments to pass into the ``cassandra.cluster`` class."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1226
+msgid "S3 backend settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1230
+msgid "This s3 backend driver requires :pypi:`s3`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1232
+msgid "To install, use :command:`s3`:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1246
+msgid "``s3_access_key_id``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1250
+msgid "The s3 access key id. For example::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1257
+msgid "``s3_secret_access_key``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1261
+msgid "The s3 secret access key. For example::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1268
+msgid "``s3_bucket``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1272
+msgid "The s3 bucket name. For example::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1279
+msgid "``s3_base_path``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1283
+msgid "A base path in the s3 bucket to use to store result keys. For example::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1290
+msgid "``s3_endpoint_url``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1294
+msgid ""
+"A custom s3 endpoint url. Use it to connect to a custom self-hosted s3 "
+"compatible backend (Ceph, Scality...). For example::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1301
+msgid "``s3_region``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1305
+msgid "The s3 aws region. For example::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1323
+msgid "Azure Block Blob backend settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1325
+msgid ""
+"To use `AzureBlockBlob`_ as the result backend you simply need to "
+"configure the :setting:`result_backend` setting with the correct URL."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1328
+msgid ""
+"The required URL format is ``azureblockblob://`` followed by the storage "
+"connection string. You can find the storage connection string in the "
+"``Access Keys`` pane of your storage account resource in the Azure "
+"Portal."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1342
+msgid "``azureblockblob_container_name``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1344
+msgid "Default: celery."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1346
+msgid "The name for the storage container in which to store the results."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1351
+msgid "``azureblockblob_retry_initial_backoff_sec``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1353
+#: ../../userguide/configuration.rst:1363
+msgid "Default: 2."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1355
+msgid ""
+"The initial backoff interval, in seconds, for the first retry. Subsequent"
+" retries are attempted with an exponential strategy."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1361
+msgid "``azureblockblob_retry_increment_base``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1368
+msgid "``azureblockblob_retry_max_attempts``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1370
+#: ../../userguide/configuration.rst:1403
+msgid "Default: 3."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1372
+msgid "The maximum number of retry attempts."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1377
+msgid "Elasticsearch backend settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1379
+msgid ""
+"To use `Elasticsearch`_ as the result backend you simply need to "
+"configure the :setting:`result_backend` setting with the correct URL."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1392
+msgid "``elasticsearch_retry_on_timeout``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1394
+msgid "Default: :const:`False`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1396
+msgid "Should timeout trigger a retry on different node?"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1401
+msgid "``elasticsearch_max_retries``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1405
+msgid "Maximum number of retries before an exception is propagated."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1410
+msgid "``elasticsearch_timeout``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1412
+#: ../../userguide/configuration.rst:2503
+msgid "Default: 10.0 seconds."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1414
+msgid "Global timeout,used by the elasticsearch result backend."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1419
+msgid "Riak backend settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1423
+msgid "The Riak backend requires the :pypi:`riak` library."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1425
+msgid "To install the this package use :command:`pip`:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1434
+msgid ""
+"This backend requires the :setting:`result_backend` setting to be set to "
+"a Riak URL::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1451
+msgid "Host name or IP address of the Riak server (e.g., `'localhost'`)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1455
+msgid "Port to the Riak server using the protobuf protocol. Default is 8087."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1457
+#: ../../userguide/configuration.rst:1481
+#: ../../userguide/configuration.rst:1631
+msgid "``bucket``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1459
+msgid ""
+"Bucket name to use. Default is `celery`. The bucket needs to be a string "
+"with ASCII characters only."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1462
+msgid ""
+"Alternatively, this backend can be configured with the following "
+"configuration directives."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1467
+msgid "``riak_backend_settings``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1471
+#: ../../userguide/configuration.rst:1621
+#: ../../userguide/configuration.rst:1676
+msgid "This is a dict supporting the following keys:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1475
+msgid "The host name of the Riak server. Defaults to ``\"localhost\"``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1479
+msgid "The port the Riak server is listening to. Defaults to 8087."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1483
+msgid "The bucket name to connect to. Defaults to \"celery\"."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1485
+msgid "``protocol``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1487
+msgid ""
+"The protocol to use to connect to the Riak server. This isn't "
+"configurable via :setting:`result_backend`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1493
+msgid "AWS DynamoDB backend settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1497
+msgid "The Dynamodb backend requires the :pypi:`boto3` library."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1508
+msgid ""
+"This backend requires the :setting:`result_backend` setting to be set to "
+"a DynamoDB URL::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1513
+msgid "For example, specifying the AWS region and the table name::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1517
+msgid ""
+"or retrieving AWS configuration parameters from the environment, using "
+"the default table name (``celery``) and specifying read and write "
+"provisioned throughput::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1522
+msgid ""
+"or using the `downloadable version "
+"<https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html>`_"
+" of DynamoDB `locally "
+"<https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.Endpoint.html>`_::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1528
+msgid ""
+"or using downloadable version or other service with conforming API "
+"deployed on any host::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1533
+msgid ""
+"The fields of the DynamoDB URL in ``result_backend`` are defined as "
+"follows:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1535
+msgid "``aws_access_key_id & aws_secret_access_key``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1537
+msgid ""
+"The credentials for accessing AWS API resources. These can also be "
+"resolved by the :pypi:`boto3` library from various sources, as described "
+"`here <http://boto3.readthedocs.io/en/latest/guide/configuration.html"
+"#configuring-credentials>`_."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1541
+msgid "``region``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1543
+msgid ""
+"The AWS region, e.g. ``us-east-1`` or ``localhost`` for the `Downloadable"
+" Version "
+"<https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html>`_."
+" See the :pypi:`boto3` library `documentation "
+"<http://boto3.readthedocs.io/en/latest/guide/configuration.html"
+"#environment-variable-configuration>`_ for definition options."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1549
+msgid ""
+"The listening port of the local DynamoDB instance, if you are using the "
+"downloadable version. If you have not specified the ``region`` parameter "
+"as ``localhost``, setting this parameter has **no effect**."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1553
+msgid "``table``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1555
+msgid ""
+"Table name to use. Default is ``celery``. See the `DynamoDB Naming Rules "
+"<http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html"
+"#limits-naming-rules>`_ for information on the allowed characters and "
+"length."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1559
+msgid "``read & write``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1561
+msgid ""
+"The Read & Write Capacity Units for the created DynamoDB table. Default "
+"is ``1`` for both read and write. More details can be found in the "
+"`Provisioned Throughput documentation "
+"<http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ProvisionedThroughput.html>`_."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1567
+msgid "IronCache backend settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1571
+msgid "The IronCache backend requires the :pypi:`iron_celery` library:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1579
+msgid ""
+"IronCache is configured via the URL provided in "
+":setting:`result_backend`, for example::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1583
+msgid "Or to change the cache name::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1587
+msgid "For more information, see: https://github.com/iron-io/iron_celery"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1592
+msgid "Couchbase backend settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1596
+msgid "The Couchbase backend requires the :pypi:`couchbase` library."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1604
+#: ../../userguide/configuration.rst:1659
+msgid ""
+"See :ref:`bundles` for instructions how to combine multiple extension "
+"requirements."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1607
+msgid ""
+"This backend can be configured via the :setting:`result_backend` set to a"
+" Couchbase URL:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1617
+msgid "``couchbase_backend_settings``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1625
+msgid "Host name of the Couchbase server. Defaults to ``localhost``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1629
+msgid "The port the Couchbase server is listening to. Defaults to ``8091``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1633
+msgid ""
+"The default bucket the Couchbase server is writing to. Defaults to "
+"``default``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1636
+#: ../../userguide/configuration.rst:1696
+#: ../../userguide/configuration.rst:1791
+msgid "``username``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1638
+msgid "User name to authenticate to the Couchbase server as (optional)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1642
+msgid "Password to authenticate to the Couchbase server (optional)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1647
+msgid "ArangoDB backend settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1651
+msgid "The ArangoDB backend requires the :pypi:`pyArango` library."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1662
+msgid ""
+"This backend can be configured via the :setting:`result_backend` set to a"
+" ArangoDB URL:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1672
+msgid "``arangodb_backend_settings``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1680
+msgid "Host name of the ArangoDB server. Defaults to ``localhost``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1684
+msgid "The port the ArangoDB server is listening to. Defaults to ``8529``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1688
+msgid ""
+"The default database in the ArangoDB server is writing to. Defaults to "
+"``celery``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1691
+msgid "``collection``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1693
+msgid ""
+"The default collection in the ArangoDB servers database is writing to. "
+"Defaults to ``celery``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1698
+msgid "User name to authenticate to the ArangoDB server as (optional)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1702
+msgid "Password to authenticate to the ArangoDB server (optional)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1707
+msgid "CosmosDB backend settings (experimental)"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1709
+msgid ""
+"To use `CosmosDB`_ as the result backend, you simply need to configure "
+"the :setting:`result_backend` setting with the correct URL."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1722
+msgid "``cosmosdbsql_database_name``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1724
+msgid "Default: celerydb."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1726
+msgid "The name for the database in which to store the results."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1731
+msgid "``cosmosdbsql_collection_name``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1733
+msgid "Default: celerycol."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1735
+msgid "The name of the collection in which to store the results."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1740
+msgid "``cosmosdbsql_consistency_level``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1742
+msgid "Default: Session."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1744
+msgid ""
+"Represents the consistency levels supported for Azure Cosmos DB client "
+"operations."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1746
+msgid ""
+"Consistency levels by order of strength are: Strong, BoundedStaleness, "
+"Session, ConsistentPrefix and Eventual."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1751
+msgid "``cosmosdbsql_max_retry_attempts``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1753
+msgid "Default: 9."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1755
+msgid "Maximum number of retries to be performed for a request."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1760
+msgid "``cosmosdbsql_max_retry_wait_time``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1762
+msgid "Default: 30."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1764
+msgid ""
+"Maximum wait time in seconds to wait for a request while the retries are "
+"happening."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1769
+msgid "CouchDB backend settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1773
+msgid "The CouchDB backend requires the :pypi:`pycouchdb` library:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1775
+msgid "To install this Couchbase package use :command:`pip`:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1784
+msgid ""
+"This backend can be configured via the :setting:`result_backend` set to a"
+" CouchDB URL::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1789
+msgid "The URL is formed out of the following parts:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1793
+msgid "User name to authenticate to the CouchDB server as (optional)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1797
+msgid "Password to authenticate to the CouchDB server (optional)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1801
+msgid "Host name of the CouchDB server. Defaults to ``localhost``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1805
+msgid "The port the CouchDB server is listening to. Defaults to ``8091``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1807
+msgid "``container``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1809
+msgid ""
+"The default container the CouchDB server is writing to. Defaults to "
+"``default``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1815
+msgid "File-system backend settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1817
+msgid "This backend can be configured using a file URL, for example::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1821
+msgid ""
+"The configured directory needs to be shared and writable by all servers "
+"using the backend."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1824
+msgid ""
+"If you're trying Celery on a single system you can simply use the backend"
+" without any further configuration. For larger clusters you could use "
+"NFS, `GlusterFS`_, CIFS, `HDFS`_ (using FUSE), or any other file-system."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1834
+msgid "Consul K/V store backend settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1836
+msgid "The Consul backend can be configured using a URL, for example:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1838
+msgid "CELERY_RESULT_BACKEND = 'consul://localhost:8500/'"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1840
+msgid ""
+"The backend will storage results in the K/V store of Consul as individual"
+" keys."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1843
+msgid "The backend supports auto expire of results using TTLs in Consul."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1848
+msgid "Message Routing"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1855
+msgid "``task_queues``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1857
+msgid "Default: :const:`None` (queue taken from default queue settings)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1859
+msgid ""
+"Most users will not want to specify this setting and should rather use "
+"the :ref:`automatic routing facilities <routing-automatic>`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1862
+msgid ""
+"If you really want to configure advanced routing, this setting should be "
+"a list of :class:`kombu.Queue` objects the worker will consume from."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1865
+msgid ""
+"Note that workers can be overridden this setting via the :option:`-Q "
+"<celery worker -Q>` option, or individual queues from this list (by name)"
+" can be excluded using the :option:`-X <celery worker -X>` option."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1870
+msgid "Also see :ref:`routing-basics` for more information."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1872
+msgid ""
+"The default is a queue/exchange/binding key of ``celery``, with exchange "
+"type ``direct``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1875
+msgid "See also :setting:`task_routes`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1880
+msgid "``task_routes``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1884
+msgid ""
+"A list of routers, or a single router used to route tasks to queues. When"
+" deciding the final destination of a task the routers are consulted in "
+"order."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1888
+msgid "A router can be specified as either:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1890
+msgid ""
+"A function with the signature ``(name, args, kwargs, options, task=None, "
+"**kwargs)``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1892
+msgid "A string providing the path to a router function."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1893
+msgid "A dict containing router specification:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1894
+#: ../../userguide/configuration.rst:1896
+msgid "Will be converted to a :class:`celery.routes.MapRoute` instance."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1896
+msgid "A list of ``(pattern, route)`` tuples:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1898
+msgid "Examples:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1916
+msgid "Where ``myapp.tasks.route_task`` could be:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1924
+msgid ""
+"``route_task`` may return a string or a dict. A string then means it's a "
+"queue name in :setting:`task_queues`, a dict means it's a custom route."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1927
+msgid ""
+"When sending tasks, the routers are consulted in order. The first router "
+"that doesn't return ``None`` is the route to use. The message options is "
+"then merged with the found route settings, where the task's settings have"
+" priority."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1932
+msgid "Example if :func:`~celery.execute.apply_async` has these arguments:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1939
+msgid "and a router returns:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1945
+msgid "the final message options will be:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1951
+msgid ""
+"(and any default message options defined in the "
+":class:`~celery.task.base.Task` class)"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1954
+msgid ""
+"Values defined in :setting:`task_routes` have precedence over values "
+"defined in :setting:`task_queues` when merging the two."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1957
+msgid "With the follow settings:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1976
+msgid "The final routing options for ``tasks.add`` will become:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1984
+msgid "See :ref:`routers` for more examples."
+msgstr ""
+
+#: ../../userguide/configuration.rst:1989
+msgid "``task_queue_ha_policy``"
+msgstr ""
+
+#: ../../userguide/configuration.rst
+msgid "brokers"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1990
+#: ../../userguide/configuration.rst:2017
+#: ../../userguide/configuration.rst:2037
+msgid "RabbitMQ"
+msgstr ""
+
+#: ../../userguide/configuration.rst:1994
+msgid ""
+"This will set the default HA policy for a queue, and the value can either"
+" be a string (usually ``all``):"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2001
+msgid ""
+"Using 'all' will replicate the queue to all current nodes, Or you can "
+"give it a list of nodes to replicate to:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2008
+msgid ""
+"Using a list will implicitly set ``x-ha-policy`` to 'nodes' and ``x-ha-"
+"policy-params`` to the given list of nodes."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2011
+msgid "See http://www.rabbitmq.com/ha.html for more information."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2016
+msgid "``task_queue_max_priority``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2021
+#: ../../userguide/configuration.rst:2031
+#: ../../userguide/configuration.rst:2051
+msgid "See :ref:`routing-options-rabbitmq-priorities`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2026
+msgid "``task_default_priority``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2027
+msgid "RabbitMQ, Redis"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2036
+msgid "``task_inherit_parent_priority``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2039
+msgid "Default: :const:`False`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2041
+msgid "If enabled, child tasks will inherit priority of the parent task."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2048
+msgid ""
+"Priority inheritance also works when calling child tasks from a parent "
+"task with `delay` or `apply_async`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2057
+msgid "``worker_direct``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2061
+msgid ""
+"This option enables so that every worker has a dedicated queue, so that "
+"tasks can be routed to specific workers."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2064
+msgid ""
+"The queue name for each worker is automatically generated based on the "
+"worker hostname and a ``.dq`` suffix, using the ``C.dq`` exchange."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2067
+msgid ""
+"For example the queue name for the worker with node name "
+"``w1@example.com`` becomes::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2072
+msgid ""
+"Then you can route the task to the task by specifying the hostname as the"
+" routing key and the ``C.dq`` exchange::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2082
+msgid "``task_create_missing_queues``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2086
+msgid ""
+"If enabled (default), any queues specified that aren't defined in "
+":setting:`task_queues` will be automatically created. See :ref:`routing-"
+"automatic`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2093
+msgid "``task_default_queue``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2095
+#: ../../userguide/configuration.rst:2722
+msgid "Default: ``\"celery\"``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2097
+msgid ""
+"The name of the default queue used by `.apply_async` if the message has "
+"no route or no custom queue has been specified."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2100
+msgid ""
+"This queue must be listed in :setting:`task_queues`. If "
+":setting:`task_queues` isn't specified then it's automatically created "
+"containing one queue entry, where this name is used as the name of that "
+"queue."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2107
+msgid ":ref:`routing-changing-default-queue`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2112
+msgid "``task_default_exchange``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2114
+#: ../../userguide/configuration.rst:2134
+msgid "Default: Uses the value set for :setting:`task_default_queue`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2116
+msgid ""
+"Name of the default exchange to use when no custom exchange is specified "
+"for a key in the :setting:`task_queues` setting."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2122
+msgid "``task_default_exchange_type``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2124
+msgid "Default: ``\"direct\"``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2126
+msgid ""
+"Default exchange type used when no custom exchange type is specified for "
+"a key in the :setting:`task_queues` setting."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2132
+msgid "``task_default_routing_key``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2136
+msgid ""
+"The default routing key used when no custom routing key is specified for "
+"a key in the :setting:`task_queues` setting."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2142
+msgid "``task_default_delivery_mode``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2144
+msgid "Default: ``\"persistent\"``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2146
+msgid ""
+"Can be `transient` (messages not written to disk) or `persistent` "
+"(written to disk)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2152
+msgid "Broker Settings"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2157
+msgid "``broker_url``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2159
+msgid "Default: ``\"amqp://\"``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2161
+msgid "Default broker URL. This must be a URL in the form of::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2165
+msgid ""
+"Only the scheme part (``transport://``) is required, the rest is "
+"optional, and defaults to the specific transports default values."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2168
+msgid ""
+"The transport part is the broker implementation to use, and the default "
+"is ``amqp``, (uses ``librabbitmq`` if installed or falls back to "
+"``pyamqp``). There are also other choices available, including; "
+"``redis://``, ``sqs://``, and ``qpid://``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2173
+msgid ""
+"The scheme can also be a fully qualified path to your own transport "
+"implementation::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2178
+msgid ""
+"More than one broker URL, of the same transport, can also be specified. "
+"The broker URLs can be passed in as a single string that's semicolon "
+"delimited::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2183
+msgid "Or as a list::"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2190
+msgid "The brokers will then be used in the :setting:`broker_failover_strategy`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2192
+msgid ""
+"See :ref:`kombu:connection-urls` in the Kombu documentation for more "
+"information."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2200
+msgid "``broker_read_url`` / ``broker_write_url``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2202
+msgid "Default: Taken from :setting:`broker_url`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2204
+msgid ""
+"These settings can be configured, instead of :setting:`broker_url` to "
+"specify different connection parameters for broker connections used for "
+"consuming and producing."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2213
+msgid ""
+"Both options can also be specified as a list for failover alternates, see"
+" :setting:`broker_url` for more information."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2219
+msgid "``broker_failover_strategy``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2221
+msgid "Default: ``\"round-robin\"``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2223
+msgid ""
+"Default failover strategy for the broker Connection object. If supplied, "
+"may map to a key in 'kombu.connection.failover_strategies', or be a "
+"reference to any method that yields a single item from a supplied list."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2242
+msgid "``broker_heartbeat``"
+msgstr ""
+
+#: ../../userguide/configuration.rst
+msgid "transports supported"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2243
+#: ../../userguide/configuration.rst:2265
+#: ../../userguide/configuration.rst:2288
+msgid "``pyamqp``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2245
+msgid "Default: ``120.0`` (negotiated by server)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2247
+msgid ""
+"Note: This value is only used by the worker, clients do not use a "
+"heartbeat at the moment."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2250
+msgid ""
+"It's not always possible to detect connection loss in a timely manner "
+"using TCP/IP alone, so AMQP defines something called heartbeats that's is"
+" used both by the client and the broker to detect if a connection was "
+"closed."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2255
+msgid ""
+"If the heartbeat value is 10 seconds, then the heartbeat will be "
+"monitored at the interval specified by the "
+":setting:`broker_heartbeat_checkrate` setting (by default this is set to "
+"double the rate of the heartbeat value, so for the 10 seconds, the "
+"heartbeat is checked every 5 seconds)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2264
+msgid "``broker_heartbeat_checkrate``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2267
+msgid "Default: 2.0."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2269
+msgid ""
+"At intervals the worker will monitor that the broker hasn't missed too "
+"many heartbeats. The rate at which this is checked is calculated by "
+"dividing the :setting:`broker_heartbeat` value with this value, so if the"
+" heartbeat is 10.0 and the rate is the default 2.0, the check will be "
+"performed every 5 seconds (twice the heartbeat sending rate)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2278
+msgid "``broker_use_ssl``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2279
+msgid "``pyamqp``, ``redis``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2283
+msgid "Toggles SSL usage on broker connection and SSL settings."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2285
+msgid "The valid values for this option vary by transport."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2290
+msgid ""
+"If ``True`` the connection will use SSL with default SSL settings. If set"
+" to a dict, will configure SSL connection according to the specified "
+"policy. The format used is Python's :func:`ssl.wrap_socket` options."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2294
+msgid "Note that SSL socket is generally served on a separate port by the broker."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2296
+msgid ""
+"Example providing a client cert and validating the server cert against a "
+"custom certificate authority:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2312
+msgid ""
+"Be careful using ``broker_use_ssl=True``. It's possible that your default"
+" configuration won't validate the server cert at all. Please read Python "
+"`ssl module security considerations "
+"<https://docs.python.org/3/library/ssl.html#ssl-security>`_."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2321
+msgid "The setting must be a dict with the following keys:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2325
+msgid ""
+"``ssl_cert_reqs`` (required): one of the ``SSLContext.verify_mode`` "
+"values:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2324
+msgid "``ssl.CERT_NONE``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2325
+msgid "``ssl.CERT_OPTIONAL``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2326
+msgid "``ssl.CERT_REQUIRED``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2327
+msgid "``ssl_ca_certs`` (optional): path to the CA certificate"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2328
+msgid "``ssl_certfile`` (optional): path to the client certificate"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2329
+msgid "``ssl_keyfile`` (optional): path to the client key"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2335
+msgid "``broker_pool_limit``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2339
+msgid "Default: 10."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2341
+msgid "The maximum number of connections that can be open in the connection pool."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2343
+msgid ""
+"The pool is enabled by default since version 2.5, with a default limit of"
+" ten connections. This number can be tweaked depending on the number of "
+"threads/green-threads (eventlet/gevent) using a connection. For example "
+"running eventlet with 1000 greenlets that use a connection to the broker,"
+" contention can arise and you should consider increasing the limit."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2349
+msgid ""
+"If set to :const:`None` or 0 the connection pool will be disabled and "
+"connections will be established and closed for every use."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2355
+msgid "``broker_connection_timeout``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2357
+#: ../../userguide/configuration.rst:2586
+msgid "Default: 4.0."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2359
+msgid ""
+"The default timeout in seconds before we give up establishing a "
+"connection to the AMQP server. This setting is disabled when using "
+"gevent."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2365
+msgid ""
+"The broker connection timeout only applies to a worker attempting to "
+"connect to the broker. It does not apply to producer sending a task, see "
+":setting:`broker_transport_options` for how to provide a timeout for that"
+" situation."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2373
+msgid "``broker_connection_retry``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2377
+msgid ""
+"Automatically try to re-establish the connection to the AMQP broker if "
+"lost."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2379
+msgid ""
+"The time between retries is increased for each retry, and is not "
+"exhausted before :setting:`broker_connection_max_retries` is exceeded."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2386
+msgid "``broker_connection_max_retries``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2388
+msgid "Default: 100."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2390
+msgid ""
+"Maximum number of retries before we give up re-establishing a connection "
+"to the AMQP broker."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2393
+msgid "If this is set to :const:`0` or :const:`None`, we'll retry forever."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2398
+msgid "``broker_login_method``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2400
+msgid "Default: ``\"AMQPLAIN\"``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2402
+msgid "Set custom amqp login method."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2407
+msgid "``broker_transport_options``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2427
+msgid "Worker"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2432
+msgid "``imports``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2436
+msgid "A sequence of modules to import when the worker starts."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2438
+msgid ""
+"This is used to specify the task modules to import, but also to import "
+"signal handlers and additional remote control commands, etc."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2441
+msgid "The modules will be imported in the original order."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2446
+msgid "``include``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2450
+msgid ""
+"Exact same semantics as :setting:`imports`, but can be used as a means to"
+" have different import categories."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2453
+msgid ""
+"The modules in this setting are imported after the modules in "
+":setting:`imports`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2461
+msgid "``worker_concurrency``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2463
+msgid "Default: Number of CPU cores."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2465
+msgid ""
+"The number of concurrent worker processes/threads/green threads executing"
+" tasks."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2468
+msgid ""
+"If you're doing mostly I/O you can have more processes, but if mostly "
+"CPU-bound, try to keep it close to the number of CPUs on your machine. If"
+" not set, the number of CPUs/cores on the host will be used."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2476
+msgid "``worker_prefetch_multiplier``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2478
+msgid "Default: 4."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2480
+msgid ""
+"How many messages to prefetch at a time multiplied by the number of "
+"concurrent processes. The default is 4 (four messages for each process). "
+"The default setting is usually a good choice, however -- if you have very"
+" long running tasks waiting in the queue and you have to start the "
+"workers, note that the first worker to start will receive four times the "
+"number of messages initially. Thus the tasks may not be fairly "
+"distributed to the workers."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2488
+msgid ""
+"To disable prefetching, set :setting:`worker_prefetch_multiplier` to 1. "
+"Changing that setting to 0 will allow the worker to keep consuming as "
+"many messages as it wants."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2492
+msgid "For more on prefetching, read :ref:`optimizing-prefetch-limit`"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2496
+msgid "Tasks with ETA/countdown aren't affected by prefetch limits."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2501
+msgid "``worker_lost_wait``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2505
+msgid ""
+"In some cases a worker may be killed without proper cleanup, and the "
+"worker may have published a result before terminating. This value "
+"specifies how long we wait for any missing results before raising a "
+":exc:`@WorkerLostError` exception."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2513
+msgid "``worker_max_tasks_per_child``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2515
+msgid ""
+"Maximum number of tasks a pool worker process can execute before it's "
+"replaced with a new one. Default is no limit."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2521
+msgid "``worker_max_memory_per_child``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2523
+msgid "Default: No limit. Type: int (kilobytes)"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2526
+msgid ""
+"Maximum amount of resident memory, in kilobytes, that may be consumed by "
+"a worker before it will be replaced by a new worker. If a single task "
+"causes a worker to exceed this limit, the task will be completed, and the"
+" worker will be replaced afterwards."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2531
+msgid "Example:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2540
+msgid "``worker_disable_rate_limits``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2542
+msgid "Default: Disabled (rate limits enabled)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2544
+msgid "Disable all rate limits, even if tasks has explicit rate limits set."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2549
+msgid "``worker_state_db``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2553
+msgid ""
+"Name of the file used to stores persistent worker state (like revoked "
+"tasks). Can be a relative or absolute path, but be aware that the suffix "
+"`.db` may be appended to the file name (depending on Python version)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2557
+msgid "Can also be set via the :option:`celery worker --statedb` argument."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2562
+msgid "``worker_timer_precision``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2564
+msgid "Default: 1.0 seconds."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2566
+msgid ""
+"Set the maximum time in seconds that the ETA scheduler can sleep between "
+"rechecking the schedule."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2569
+msgid ""
+"Setting this value to 1 second means the schedulers precision will be 1 "
+"second. If you need near millisecond precision you can set this to 0.1."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2575
+msgid "``worker_enable_remote_control``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2577
+#: ../../userguide/configuration.rst:2801
+msgid "Default: Enabled by default."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2579
+msgid "Specify if remote control of the workers is enabled."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2584
+msgid "``worker_proc_alive_timeout``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2588
+msgid ""
+"The timeout in seconds (int/float) when waiting for a new worker process "
+"to start up."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2593
+msgid "Events"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2598
+msgid "``worker_send_task_events``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2602
+msgid ""
+"Send task-related events so that tasks can be monitored using tools like "
+"`flower`. Sets the default value for the workers :option:`-E <celery "
+"worker -E>` argument."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2609
+msgid "``task_send_sent_event``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2615
+msgid ""
+"If enabled, a :event:`task-sent` event will be sent for every task so "
+"tasks can be tracked before they're consumed by a worker."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2621
+msgid "``event_queue_ttl``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2622
+#: ../../userguide/configuration.rst:2636
+msgid "``amqp``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2624
+msgid "Default: 5.0 seconds."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2626
+msgid ""
+"Message expiry time in seconds (int/float) for when messages sent to a "
+"monitor clients event queue is deleted (``x-message-ttl``)"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2629
+msgid ""
+"For example, if this value is set to 10 then a message delivered to this "
+"queue will be deleted after 10 seconds."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2635
+msgid "``event_queue_expires``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2638
+msgid "Default: 60.0 seconds."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2640
+msgid ""
+"Expiry time in seconds (int/float) for when after a monitor clients event"
+" queue will be deleted (``x-expires``)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2646
+msgid "``event_queue_prefix``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2648
+#: ../../userguide/configuration.rst:2657
+msgid "Default: ``\"celeryev\"``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2650
+msgid "The prefix to use for event receiver queue names."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2655
+msgid "``event_exchange``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2659
+msgid "Name of the event exchange."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2663
+#: ../../userguide/configuration.rst:2728
+msgid "This option is in experimental stage, please use it with caution."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2668
+msgid "``event_serializer``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2670
+msgid "Default: ``\"json\"``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2672
+msgid "Message serialization format used when sending event messages."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2682
+msgid "Remote Control Commands"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2686
+msgid ""
+"To disable remote control commands see the "
+":setting:`worker_enable_remote_control` setting."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2692
+msgid "``control_queue_ttl``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2694
+msgid "Default: 300.0"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2696
+msgid ""
+"Time in seconds, before a message in a remote control command queue will "
+"expire."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2699
+msgid ""
+"If using the default of 300 seconds, this means that if a remote control "
+"command is sent and no worker picks it up within 300 seconds, the command"
+" is discarded."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2703
+#: ../../userguide/configuration.rst:2715
+msgid "This setting also applies to remote control reply queues."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2708
+msgid "``control_queue_expires``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2710
+msgid "Default: 10.0"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2712
+msgid ""
+"Time in seconds, before an unused remote control command queue is deleted"
+" from the broker."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2720
+msgid "``control_exchange``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2724
+msgid "Name of the control command exchange."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2733
+msgid "Logging"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2738
+msgid "``worker_hijack_root_logger``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2742
+msgid "Default: Enabled by default (hijack root logger)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2744
+msgid ""
+"By default any previously configured handlers on the root logger will be "
+"removed. If you want to customize your own logging handlers, then you can"
+" disable this behavior by setting `worker_hijack_root_logger = False`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2751
+msgid ""
+"Logging can also be customized by connecting to the "
+":signal:`celery.signals.setup_logging` signal."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2757
+msgid "``worker_log_color``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2759
+msgid "Default: Enabled if app is logging to a terminal."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2761
+msgid "Enables/disables colors in logging output by the Celery apps."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2766
+msgid "``worker_log_format``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2768
+#: ../../userguide/configuration.rst:2784
+msgid "Default:"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2774
+msgid "The format to use for log messages."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2776
+#: ../../userguide/configuration.rst:2793
+msgid ""
+"See the Python :mod:`logging` module for more information about log "
+"formats."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2782
+msgid "``worker_task_log_format``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2791
+msgid "The format to use for log messages logged in tasks."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2799
+msgid "``worker_redirect_stdouts``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2803
+msgid "If enabled `stdout` and `stderr` will be redirected to the current logger."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2806
+msgid "Used by :program:`celery worker` and :program:`celery beat`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2811
+msgid "``worker_redirect_stdouts_level``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2813
+msgid "Default: :const:`WARNING`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2815
+msgid ""
+"The log level output to `stdout` and `stderr` is logged as. Can be one of"
+" :const:`DEBUG`, :const:`INFO`, :const:`WARNING`, :const:`ERROR`, or "
+":const:`CRITICAL`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2822
+msgid "Security"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2827
+msgid "``security_key``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2833
+msgid ""
+"The relative or absolute path to a file containing the private key used "
+"to sign messages when :ref:`message-signing` is used."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2839
+msgid "``security_certificate``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2845
+msgid ""
+"The relative or absolute path to an X.509 certificate file used to sign "
+"messages when :ref:`message-signing` is used."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2851
+msgid "``security_cert_store``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2857
+msgid ""
+"The directory containing X.509 certificates used for :ref:`message-"
+"signing`. Can be a glob with wild-cards, (for example "
+":file:`/etc/certs/*.pem`)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2864
+msgid "``security_digest``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2866
+msgid "Default: :const:`sha256`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2870
+msgid ""
+"A cryptography digest used to sign messages when :ref:`message-signing` "
+"is used. https://cryptography.io/en/latest/hazmat/primitives"
+"/cryptographic-hashes/#module-cryptography.hazmat.primitives.hashes"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2877
+msgid "Custom Component Classes (advanced)"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2882
+msgid "``worker_pool``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2884
+msgid "Default: ``\"prefork\"`` (``celery.concurrency.prefork:TaskPool``)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2886
+msgid "Name of the pool class used by the worker."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2888
+msgid "Eventlet/Gevent"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2890
+msgid ""
+"Never use this option to select the eventlet or gevent pool. You must use"
+" the :option:`-P <celery worker -P>` option to :program:`celery worker` "
+"instead, to ensure the monkey patches aren't applied too late, causing "
+"things to break in strange ways."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2898
+msgid "``worker_pool_restarts``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2902
+msgid ""
+"If enabled the worker pool can be restarted using the "
+":control:`pool_restart` remote control command."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2908
+msgid "``worker_autoscaler``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2912
+msgid "Default: ``\"celery.worker.autoscale:Autoscaler\"``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2914
+msgid "Name of the autoscaler class to use."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2919
+msgid "``worker_consumer``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2921
+msgid "Default: ``\"celery.worker.consumer:Consumer\"``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2923
+msgid "Name of the consumer class used by the worker."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2928
+msgid "``worker_timer``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2930
+msgid "Default: ``\"kombu.asynchronous.hub.timer:Timer\"``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2932
+msgid ""
+"Name of the ETA scheduler class used by the worker. Default is or set by "
+"the pool implementation."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2938
+msgid "Beat Settings (:program:`celery beat`)"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2943
+msgid "``beat_schedule``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2947
+msgid ""
+"The periodic task schedule used by :mod:`~celery.bin.beat`. See :ref"
+":`beat-entries`."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2953
+msgid "``beat_scheduler``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2955
+msgid "Default: ``\"celery.beat:PersistentScheduler\"``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2957
+msgid ""
+"The default scheduler class. May be set to "
+"``\"django_celery_beat.schedulers:DatabaseScheduler\"`` for instance, if "
+"used alongside `django-celery-beat` extension."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2961
+msgid "Can also be set via the :option:`celery beat -S` argument."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2966
+msgid "``beat_schedule_filename``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2968
+msgid "Default: ``\"celerybeat-schedule\"``."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2970
+msgid ""
+"Name of the file used by `PersistentScheduler` to store the last run "
+"times of periodic tasks. Can be a relative or absolute path, but be aware"
+" that the suffix `.db` may be appended to the file name (depending on "
+"Python version)."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2974
+msgid "Can also be set via the :option:`celery beat --schedule` argument."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2979
+msgid "``beat_sync_every``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2981
+#: ../../userguide/configuration.rst:2994
+msgid "Default: 0."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2983
+msgid ""
+"The number of periodic tasks that can be called before another database "
+"sync is issued. A value of 0 (default) means sync based on timing - "
+"default of 3 minutes as determined by scheduler.sync_every. If set to 1, "
+"beat will call sync after every task message sent."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2992
+msgid "``beat_max_loop_interval``"
+msgstr ""
+
+#: ../../userguide/configuration.rst:2996
+msgid ""
+"The maximum number of seconds :mod:`~celery.bin.beat` can sleep between "
+"checking the schedule."
+msgstr ""
+
+#: ../../userguide/configuration.rst:2999
+msgid ""
+"The default for this value is scheduler specific. For the default Celery "
+"beat scheduler the value is 300 (5 minutes), but for the :pypi:`django-"
+"celery-beat` database scheduler it's 5 seconds because the schedule may "
+"be changed externally, and so it must take changes to the schedule into "
+"account."
+msgstr ""
+
+#: ../../userguide/configuration.rst:3005
+msgid ""
+"Also when running Celery beat embedded (:option:`-B <celery worker -B>`) "
+"on Jython as a thread the max interval is overridden and set to 1 so that"
+" it's possible to shut down in a timely manner."
+msgstr ""
+

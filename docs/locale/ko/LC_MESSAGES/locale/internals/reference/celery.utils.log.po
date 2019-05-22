@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../internals/reference/celery.utils.log.rst:3
+msgid "``celery.utils.log``"
+msgstr ""
+
+#: celery.utils.log:1 of
+msgid "Logging utilities."
+msgstr ""
+
+#: celery.utils.log.ColorFormatter:1 of
+msgid "Logging formatter that adds colors based on severity."
+msgstr ""
+
+#: celery.utils.log.ColorFormatter.COLORS:1 of
+msgid "Loglevel -> Color mapping."
+msgstr ""
+
+#: celery.utils.log.ColorFormatter.format:1 of
+msgid "Format the specified record as text."
+msgstr ""
+
+#: celery.utils.log.ColorFormatter.format:3 of
+msgid ""
+"The record's attribute dictionary is used as the operand to a string "
+"formatting operation which yields the returned string. Before formatting "
+"the dictionary, a couple of preparatory steps are carried out. The "
+"message attribute of the record is computed using LogRecord.getMessage()."
+" If the formatting string uses the time (as determined by a call to "
+"usesTime(), formatTime() is called to format the event time. If there is "
+"exception information, it is formatted using formatException() and "
+"appended to the message."
+msgstr ""
+
+#: celery.utils.log.ColorFormatter.formatException:1 of
+msgid "Format and return the specified exception information as a string."
+msgstr ""
+
+#: celery.utils.log.ColorFormatter.formatException:3 of
+msgid "This default implementation just uses traceback.print_exception()"
+msgstr ""
+
+#: celery.utils.log.LoggingProxy:1 of
+msgid "Forward file object to :class:`logging.Logger` instance."
+msgstr ""
+
+#: celery.utils.log.LoggingProxy of
+msgid "Parameters"
+msgstr ""
+
+#: celery.utils.log.LoggingProxy:3 of
+msgid "Logger instance to forward to."
+msgstr ""
+
+#: celery.utils.log.LoggingProxy:5 of
+msgid "Log level to use when logging messages."
+msgstr ""
+
+#: celery.utils.log.LoggingProxy.isatty:1 of
+msgid "Here for file support."
+msgstr ""
+
+#: celery.utils.log.LoggingProxy.write:1 of
+msgid "Write message to logging object."
+msgstr ""
+
+#: celery.utils.log.LoggingProxy.writelines:1 of
+msgid "Write list of strings to file."
+msgstr ""
+
+#: celery.utils.log.LoggingProxy.writelines:3 of
+msgid ""
+"The sequence can be any iterable object producing strings. This is "
+"equivalent to calling :meth:`write` for each string."
+msgstr ""
+
+#: celery.utils.log.set_in_sighandler:1 of
+msgid "Set flag signifiying that we're inside a signal handler."
+msgstr ""
+
+#: celery.utils.log.in_sighandler:1 of
+msgid "Context that records that we are in a signal handler."
+msgstr ""
+
+#: celery.utils.log.get_logger:1 of
+msgid "Get logger by name."
+msgstr ""
+
+#: celery.utils.log.get_task_logger:1 of
+msgid "Get logger for task module by name."
+msgstr ""
+
+#: celery.utils.log.mlevel:1 of
+msgid "Convert level name/int to log level."
+msgstr ""
+
+#: celery.utils.log.get_multiprocessing_logger:1 of
+msgid "Return the multiprocessing logger."
+msgstr ""
+
+#: celery.utils.log.reset_multiprocessing_logger:1 of
+msgid "Reset multiprocessing logging setup."
+msgstr ""
+

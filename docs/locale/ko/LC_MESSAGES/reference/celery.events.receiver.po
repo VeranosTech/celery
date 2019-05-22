@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../reference/celery.events.receiver.rst:3
+msgid "``celery.events.receiver``"
+msgstr ""
+
+#: celery.events.receiver:1 of
+msgid "Event receiver implementation."
+msgstr ""
+
+#: celery.events.receiver.EventReceiver:1 of
+msgid "Capture events."
+msgstr ""
+
+#: celery.events.receiver.EventReceiver of
+msgid "Parameters"
+msgstr ""
+
+#: celery.events.receiver.EventReceiver:3 of
+msgid "Connection to the broker."
+msgstr ""
+
+#: celery.events.receiver.EventReceiver:5 of
+msgid ""
+"Event handlers. This is  a map of event type names and their handlers. "
+"The special handler `\"*\"` captures all events that don't have a "
+"handler."
+msgstr ""
+
+#: celery.events.receiver.EventReceiver.capture:1 of
+msgid "Open up a consumer capturing events."
+msgstr ""
+
+#: celery.events.receiver.EventReceiver.capture:3 of
+msgid ""
+"This has to run in the main process, and it will never stop unless "
+":attr:`EventDispatcher.should_stop` is set to True, or forced via "
+":exc:`KeyboardInterrupt` or :exc:`SystemExit`."
+msgstr ""
+
+#: celery.events.receiver.EventReceiver.process:1 of
+msgid "Process event by dispatching to configured handler."
+msgstr ""
+

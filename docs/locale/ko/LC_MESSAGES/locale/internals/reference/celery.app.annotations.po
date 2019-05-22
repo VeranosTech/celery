@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../internals/reference/celery.app.annotations.rst:3
+msgid "``celery.app.annotations``"
+msgstr ""
+
+#: celery.app.annotations:1 of
+msgid "Task Annotations."
+msgstr ""
+
+#: celery.app.annotations:3 of
+msgid ""
+"Annotations is a nice term for monkey-patching task classes in the "
+"configuration."
+msgstr ""
+
+#: celery.app.annotations:6 of
+msgid ""
+"This prepares and performs the annotations in the "
+":setting:`task_annotations` setting."
+msgstr ""
+
+#: celery.app.annotations.MapAnnotation:1 of
+msgid "Annotation map: task_name => attributes."
+msgstr ""
+
+#: celery.app.annotations.prepare:1 of
+msgid "Expand the :setting:`task_annotations` setting."
+msgstr ""
+
+#: celery.app.annotations.resolve_all:1 of
+msgid "Resolve all pending annotations."
+msgstr ""
+

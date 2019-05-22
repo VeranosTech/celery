@@ -1,0 +1,216 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../internals/reference/celery.utils.functional.rst:3
+msgid "``celery.utils.functional``"
+msgstr ""
+
+#: celery.utils.functional:1 of
+msgid "Functional-style utilties."
+msgstr ""
+
+#: celery.utils.functional.LRUCache:1 of
+msgid "LRU Cache implementation using a doubly linked list to track access."
+msgstr ""
+
+#: celery.utils.functional.LRUCache of
+msgid "Parameters"
+msgstr ""
+
+#: celery.utils.functional.LRUCache:3 of
+msgid ""
+"The maximum number of keys to keep in the cache. When a new key is "
+"inserted and the limit has been exceeded, the *Least Recently Used* key "
+"will be discarded from the cache."
+msgstr ""
+
+#: celery.utils.functional.LRUCache.popitem:1 of
+msgid "as a 2-tuple; but raise KeyError if D is empty."
+msgstr ""
+
+#: celery.utils.functional.LRUCache.update:1 of
+msgid ""
+"If E present and has a .keys() method, does:     for k in E: D[k] = E[k] "
+"If E present and lacks .keys() method, does:     for (k, v) in E: D[k] = "
+"v In either case, this is followed by: for k, v in F.items(): D[k] = v"
+msgstr ""
+
+#: celery.utils.functional.is_list:1 of
+msgid "Return true if the object is iterable."
+msgstr ""
+
+#: celery.utils.functional.is_list:3 of
+msgid "Returns false if object is a mapping or string."
+msgstr ""
+
+#: celery.utils.functional.maybe_list:1 of
+msgid "Return list of one element if ``l`` is a scalar."
+msgstr ""
+
+#: celery.utils.functional.memoize:1 of
+msgid "Decorator to cache function return value."
+msgstr ""
+
+#: celery.utils.functional.mlazy:1 of
+msgid "Memoized lazy evaluation."
+msgstr ""
+
+#: celery.utils.functional.mlazy:3 of
+msgid ""
+"The function is only evaluated once, every subsequent access will return "
+"the same value."
+msgstr ""
+
+#: celery.utils.functional.mlazy.evaluated:1 of
+msgid "Set to :const:`True` after the object has been evaluated."
+msgstr ""
+
+#: celery.utils.functional.noop:1 of
+msgid "No operation."
+msgstr ""
+
+#: celery.utils.functional.noop:3 of
+msgid "Takes any arguments/keyword arguments and does nothing."
+msgstr ""
+
+#: celery.utils.functional.first:1 of
+msgid "Return the first element in ``it`` that ``predicate`` accepts."
+msgstr ""
+
+#: celery.utils.functional.first:3 of
+msgid ""
+"If ``predicate`` is None it will return the first item that's not "
+":const:`None`."
+msgstr ""
+
+#: celery.utils.functional.firstmethod:1 of
+msgid "Multiple dispatch."
+msgstr ""
+
+#: celery.utils.functional.firstmethod:3 of
+msgid ""
+"Return a function that with a list of instances, finds the first instance"
+" that gives a value for the given method."
+msgstr ""
+
+#: celery.utils.functional.firstmethod:6 of
+msgid ""
+"The list can also contain lazy instances "
+"(:class:`~kombu.utils.functional.lazy`.)"
+msgstr ""
+
+#: celery.utils.functional.chunks:1 of
+msgid "Split an iterator into chunks with `n` elements each."
+msgstr ""
+
+#: celery.utils.functional.chunks:5 of
+msgid ""
+"``it`` must be an actual iterator, if you pass this a concrete sequence "
+"will get you repeating elements."
+msgstr ""
+
+#: celery.utils.functional.chunks:8 of
+msgid ""
+"So ``chunks(iter(range(1000)), 10)`` is fine, but ``chunks(range(1000), "
+"10)`` is not."
+msgstr ""
+
+#: celery.utils.functional.chunks:12 celery.utils.functional.padlist:4 of
+msgid "Example"
+msgstr ""
+
+#: celery.utils.functional.chunks:13 of
+msgid ""
+"# n == 2 >>> x = chunks(iter([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), 2) >>> "
+"list(x) [[0, 1], [2, 3], [4, 5], [6, 7], [8, 9], [10]]"
+msgstr ""
+
+#: celery.utils.functional.chunks:18 of
+msgid ""
+"# n == 3 >>> x = chunks(iter([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), 3) >>> "
+"list(x) [[0, 1, 2], [3, 4, 5], [6, 7, 8], [9, 10]]"
+msgstr ""
+
+#: celery.utils.functional.padlist:1 of
+msgid "Pad list with default elements."
+msgstr ""
+
+#: celery.utils.functional.mattrgetter:1 of
+msgid "Get attributes, ignoring attribute errors."
+msgstr ""
+
+#: celery.utils.functional.mattrgetter:3 of
+msgid ""
+"Like :func:`operator.itemgetter` but return :const:`None` on missing "
+"attributes instead of raising :exc:`AttributeError`."
+msgstr ""
+
+#: celery.utils.functional.uniq:1 of
+msgid "Return all unique elements in ``it``, preserving order."
+msgstr ""
+
+#: celery.utils.functional.regen:1 of
+msgid "Convert iterator to an object that can be consumed multiple times."
+msgstr ""
+
+#: celery.utils.functional.regen:3 of
+msgid ""
+"``Regen`` takes any iterable, and if the object is an generator it will "
+"cache the evaluated list on first access, so that the generator can be "
+"\"consumed\" multiple times."
+msgstr ""
+
+#: celery.utils.functional.dictfilter:1 of
+msgid "Remove all keys from dict ``d`` whose value is :const:`None`."
+msgstr ""
+
+#: celery.utils.functional.lazy:1 of
+msgid "Holds lazy evaluation."
+msgstr ""
+
+#: celery.utils.functional.lazy:3 of
+msgid ""
+"Evaluated when called or if the :meth:`evaluate` method is called. The "
+"function is re-evaluated on every call."
+msgstr ""
+
+#: celery.utils.functional.lazy:8 of
+msgid "Overloaded operations that will evaluate the promise:"
+msgstr ""
+
+#: celery.utils.functional.lazy:7 of
+msgid ":meth:`__str__`, :meth:`__repr__`, :meth:`__cmp__`."
+msgstr ""
+
+#: celery.utils.functional.maybe_evaluate:1 of
+msgid "Evaluate value only if value is a :class:`lazy` instance."
+msgstr ""
+
+#: celery.utils.functional.head_from_fun:1 of
+msgid "Generate signature function from actual function."
+msgstr ""
+
+#: celery.utils.functional.maybe:1 of
+msgid "Call typ on value if val is defined."
+msgstr ""
+
+#: celery.utils.functional.fun_accepts_kwargs:1 of
+msgid "Return true if function accepts arbitrary keyword arguments."
+msgstr ""
+

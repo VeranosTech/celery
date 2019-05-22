@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../internals/reference/celery.backends.base.rst:3
+msgid "``celery.backends.base``"
+msgstr ""
+
+#: celery.backends.base:1 of
+msgid "Result backend base classes."
+msgstr ""
+
+#: celery.backends.base:3 of
+msgid ":class:`BaseBackend` defines the interface."
+msgstr ""
+
+#: celery.backends.base:7 of
+msgid ":class:`KeyValueStoreBackend` is a common base class"
+msgstr ""
+
+#: celery.backends.base:6 of
+msgid "using K/V semantics like _get and _put."
+msgstr ""
+
+#: celery.backends.base.BaseBackend:1 of
+msgid "Base (synchronous) result backend."
+msgstr ""
+
+#: celery.backends.base.KeyValueStoreBackend:1 of
+msgid "Result backend base class for key/value stores."
+msgstr ""
+
+#: celery.backends.base.DisabledBackend:1 of
+msgid "Dummy result backend."
+msgstr ""
+
+#: celery.backends.base.DisabledBackend.as_uri:1 of
+msgid "Return the backend as an URI, sanitizing the password or not."
+msgstr ""
+
+#: celery.backends.base.DisabledBackend.store_result:1 of
+msgid "Update task state and result."
+msgstr ""
+

@@ -1,0 +1,856 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../reference/celery.app.task.rst:3
+msgid "``celery.app.task``"
+msgstr ""
+
+#: celery.app.task:1 of
+msgid "Task implementation: request context and the task base class."
+msgstr ""
+
+#: celery.app.task.Task:1 of
+msgid "Task base class."
+msgstr ""
+
+#: celery.app.task.Task:5 of
+msgid ""
+"When called tasks apply the :meth:`run` method.  This method must be "
+"defined by all tasks (that is unless the :meth:`__call__` method is "
+"overridden)."
+msgstr ""
+
+#: celery.app.task.Task.AsyncResult:1 of
+msgid "Get AsyncResult instance for this kind of task."
+msgstr ""
+
+#: celery.app.task.Task.AsyncResult celery.app.task.Task.add_to_chord
+#: celery.app.task.Task.after_return celery.app.task.Task.apply
+#: celery.app.task.Task.apply_async celery.app.task.Task.delay
+#: celery.app.task.Task.on_failure celery.app.task.Task.on_retry
+#: celery.app.task.Task.on_success celery.app.task.Task.replace
+#: celery.app.task.Task.retry celery.app.task.Task.send_event
+#: celery.app.task.Task.shadow_name celery.app.task.Task.update_state of
+msgid "Parameters"
+msgstr ""
+
+#: celery.app.task.Task.AsyncResult:3 of
+msgid "Task id to get result for."
+msgstr ""
+
+#: celery.app.task.Task.MaxRetriesExceededError:1 of
+msgid "The tasks max restart limit has been exceeded."
+msgstr ""
+
+#: celery.app.task.Task.OperationalError:1 of
+msgid "Recoverable message transport connection error."
+msgstr ""
+
+#: celery.app.task.Task.Request:1 of
+msgid "Request class used, or the qualified name of one."
+msgstr ""
+
+#: celery.app.task.Task.Strategy:1 of
+msgid "Execution strategy used, or the qualified name of one."
+msgstr ""
+
+#: celery.app.task.Task.abstract:1 of
+msgid "Deprecated attribute ``abstract`` here for compatibility."
+msgstr ""
+
+#: celery.app.task.Task.acks_late:1 of
+msgid ""
+"When enabled messages for this task will be acknowledged **after** the "
+"task has been executed, and not *just before* (the default behavior)."
+msgstr ""
+
+#: celery.app.task.Task.acks_late:5 of
+msgid ""
+"Please note that this means the task may be executed twice if the worker "
+"crashes mid execution."
+msgstr ""
+
+#: celery.app.task.Task.acks_late:8 of
+msgid ""
+"The application default can be overridden with the "
+":setting:`task_acks_late` setting."
+msgstr ""
+
+#: celery.app.task.Task.acks_on_failure_or_timeout:1 of
+msgid ""
+"When enabled messages for this task will be acknowledged even if it fails"
+" or times out."
+msgstr ""
+
+#: celery.app.task.Task.acks_on_failure_or_timeout:4 of
+msgid ""
+"Configuring this setting only applies to tasks that are acknowledged "
+"**after** they have been executed and only if :setting:`task_acks_late` "
+"is enabled."
+msgstr ""
+
+#: celery.app.task.Task.acks_on_failure_or_timeout:8 of
+msgid ""
+"The application default can be overridden with the "
+":setting:`task_acks_on_failure_or_timeout` setting."
+msgstr ""
+
+#: celery.app.task.Task.add_to_chord:1 of
+msgid "Add signature to the chord the current task is a member of."
+msgstr ""
+
+#: celery.app.task.Task.add_to_chord:5 of
+msgid "Currently only supported by the Redis result backend."
+msgstr ""
+
+#: celery.app.task.Task.add_to_chord:7 of
+msgid "Signature to extend chord with."
+msgstr ""
+
+#: celery.app.task.Task.add_to_chord:9 of
+msgid ""
+"If enabled the new task won't actually be called, and ``sig.delay()`` "
+"must be called manually."
+msgstr ""
+
+#: celery.app.task.Task.after_return:1 of
+msgid "Handler called after the task returns."
+msgstr ""
+
+#: celery.app.task.Task.after_return:3 of
+msgid "Current task state."
+msgstr ""
+
+#: celery.app.task.Task.after_return:5 of
+msgid "Task return value/exception."
+msgstr ""
+
+#: celery.app.task.Task.after_return:7 of
+msgid "Unique id of the task."
+msgstr ""
+
+#: celery.app.task.Task.after_return:9 of
+msgid "Original arguments for the task."
+msgstr ""
+
+#: celery.app.task.Task.after_return:11 of
+msgid "Original keyword arguments for the task."
+msgstr ""
+
+#: celery.app.task.Task.after_return:13 celery.app.task.Task.on_failure:13
+#: celery.app.task.Task.on_retry:13 of
+msgid "Exception information."
+msgstr ""
+
+#: celery.app.task.Task.after_return celery.app.task.Task.apply
+#: celery.app.task.Task.apply_async celery.app.task.Task.delay
+#: celery.app.task.Task.on_failure celery.app.task.Task.on_retry
+#: celery.app.task.Task.on_success celery.app.task.Task.signature
+#: celery.app.task.Task.subtask of
+msgid "Returns"
+msgstr ""
+
+#: celery.app.task.Task.after_return:16 celery.app.task.Task.on_failure:16
+#: celery.app.task.Task.on_retry:16 celery.app.task.Task.on_success:14 of
+msgid "The return value of this handler is ignored."
+msgstr ""
+
+#: celery.app.task.Task.after_return celery.app.task.Task.apply
+#: celery.app.task.Task.apply_async celery.app.task.Task.delay
+#: celery.app.task.Task.on_failure celery.app.task.Task.on_retry
+#: celery.app.task.Task.on_success celery.app.task.Task.signature
+#: celery.app.task.Task.subtask of
+msgid "Return type"
+msgstr ""
+
+#: celery.app.task.Task.apply:1 of
+msgid "Execute this task locally, by blocking until the task returns."
+msgstr ""
+
+#: celery.app.task.Task.apply:3 of
+msgid "positional arguments passed on to the task."
+msgstr ""
+
+#: celery.app.task.Task.apply:5 of
+msgid "keyword arguments passed on to the task."
+msgstr ""
+
+#: celery.app.task.Task.apply:7 of
+msgid ""
+"Re-raise task exceptions. Defaults to the "
+":setting:`task_eager_propagates` setting."
+msgstr ""
+
+#: celery.app.task.Task.apply:11 of
+msgid "pre-evaluated result."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:1 of
+msgid "Apply tasks asynchronously by sending a message."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:3 of
+msgid "The positional arguments to pass on to the task."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:5 of
+msgid "The keyword arguments to pass on to the task."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:7 of
+msgid ""
+"Number of seconds into the future that the task should execute.  Defaults"
+" to immediate execution."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:10 of
+msgid ""
+"Absolute time and date of when the task should be executed.  May not be "
+"specified if `countdown` is also supplied."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:14 of
+msgid ""
+"Datetime or seconds in the future for the task should expire. The task "
+"won't be executed after the expiration time."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:18 of
+msgid ""
+"Override task name used in logs/monitoring. Default is retrieved from "
+":meth:`shadow_name`."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:21 of
+msgid ""
+"Re-use existing broker connection instead of acquiring one from the "
+"connection pool."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:24 of
+msgid ""
+"If enabled sending of the task message will be retried in the event of "
+"connection loss or failure. Default is taken from the "
+":setting:`task_publish_retry` setting.  Note that you need to handle the "
+"producer/connection manually for this to work."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:30 of
+msgid ""
+"Override the retry policy used. See the "
+":setting:`task_publish_retry_policy` setting."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:33 of
+msgid ""
+"The queue to route the task to. This must be a key present in "
+":setting:`task_queues`, or :setting:`task_create_missing_queues` must be "
+"enabled.  See :ref:`guide-routing` for more information."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:39 of
+msgid ""
+"Named custom exchange to send the task to.  Usually not used in "
+"combination with the ``queue`` argument."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:43 of
+msgid ""
+"Custom routing key used to route the task to a worker server.  If in "
+"combination with a ``queue`` argument only used to specify custom routing"
+" keys to topic exchanges."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:47 of
+msgid ""
+"The task priority, a number between 0 and 9. Defaults to the "
+":attr:`priority` attribute."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:50 of
+msgid ""
+"Serialization method to use. Can be `pickle`, `json`, `yaml`, `msgpack` "
+"or any custom serialization method that's been registered with "
+":mod:`kombu.serialization.registry`. Defaults to the :attr:`serializer` "
+"attribute."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:56 of
+msgid ""
+"Optional compression method to use.  Can be one of ``zlib``, ``bzip2``, "
+"or any custom compression methods registered with "
+":func:`kombu.compression.register`. Defaults to the "
+":setting:`task_compression` setting."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:62 of
+msgid ""
+"A single, or a list of tasks signatures to apply if the task returns "
+"successfully."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:65 of
+msgid ""
+"A single, or a list of task signatures to apply if an error occurs while "
+"executing the task."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:68 of
+msgid "custom producer to use when publishing the task."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:71 of
+msgid ""
+"If set to True (default) and the task is applied while executing another "
+"task, then the result will be appended to the parent tasks "
+"``request.children`` attribute.  Trailing can also be disabled by default"
+" using the :attr:`trail` attribute"
+msgstr ""
+
+#: celery.app.task.Task.apply_async:77 of
+msgid "Deprecated alias to ``producer``."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:79 of
+msgid "Message headers to be included in the message."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:82 of
+msgid "Promise of future evaluation."
+msgstr ""
+
+#: celery.app.task.Task.apply_async celery.app.task.Task.replace
+#: celery.app.task.Task.retry of
+msgid "raises"
+msgstr ""
+
+#: celery.app.task.Task.apply_async:85 of
+msgid ""
+":exc:`TypeError` -- If not enough arguments are passed, or too many "
+"arguments are passed.  Note that signature checks may be disabled by "
+"specifying ``@task(typing=False)``."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:88 of
+msgid ""
+":exc:`kombu.exceptions.OperationalError` -- If a connection to the "
+"transport cannot be made, or if the connection is lost."
+msgstr ""
+
+#: celery.app.task.Task.apply_async:93 of
+msgid ""
+"Also supports all keyword arguments supported by "
+":meth:`kombu.Producer.publish`."
+msgstr ""
+
+#: celery.app.task.Task.autoregister:1 of
+msgid "If disabled this task won't be registered automatically."
+msgstr ""
+
+#: celery.app.task.Task.backend:1 of
+msgid "The result store backend used for this task."
+msgstr ""
+
+#: celery.app.task.Task.chunks:1 of
+msgid "Create a :class:`~celery.canvas.chunks` task for this task."
+msgstr ""
+
+#: celery.app.task.Task.default_retry_delay:1 of
+msgid ""
+"Default time in seconds before a retry of the task should be executed.  3"
+" minutes by default."
+msgstr ""
+
+#: celery.app.task.Task.delay:1 of
+msgid "Star argument version of :meth:`apply_async`."
+msgstr ""
+
+#: celery.app.task.Task.delay:3 of
+msgid "Does not support the extra options enabled by :meth:`apply_async`."
+msgstr ""
+
+#: celery.app.task.Task.delay:5 of
+msgid "Positional arguments passed on to the task."
+msgstr ""
+
+#: celery.app.task.Task.delay:7 of
+msgid "Keyword arguments passed on to the task."
+msgstr ""
+
+#: celery.app.task.Task.delay:10 of
+msgid "Future promise."
+msgstr ""
+
+#: celery.app.task.Task.expires:1 of
+msgid "Default task expiry time."
+msgstr ""
+
+#: celery.app.task.Task.ignore_result:1 of
+msgid ""
+"If enabled the worker won't store task state and return values for this "
+"task.  Defaults to the :setting:`task_ignore_result` setting."
+msgstr ""
+
+#: celery.app.task.Task.map:1 of
+msgid "Create a :class:`~celery.canvas.xmap` task from ``it``."
+msgstr ""
+
+#: celery.app.task.Task.max_retries:1 of
+msgid ""
+"Maximum number of retries before giving up.  If set to :const:`None`, it "
+"will **never** stop retrying."
+msgstr ""
+
+#: celery.app.task.Task.name:1 of
+msgid "Name of the task."
+msgstr ""
+
+#: celery.app.task.Task.on_bound:1 of
+msgid "Called when the task is bound to an app."
+msgstr ""
+
+#: celery.app.task.Task.on_bound:5 of
+msgid ""
+"This class method can be defined to do additional actions when the task "
+"class is bound to an app."
+msgstr ""
+
+#: celery.app.task.Task.on_failure:1 of
+msgid "Error handler."
+msgstr ""
+
+#: celery.app.task.Task.on_failure:3 of
+msgid "This is run by the worker when the task fails."
+msgstr ""
+
+#: celery.app.task.Task.on_failure:5 of
+msgid "The exception raised by the task."
+msgstr ""
+
+#: celery.app.task.Task.on_failure:7 of
+msgid "Unique id of the failed task."
+msgstr ""
+
+#: celery.app.task.Task.on_failure:9 of
+msgid "Original arguments for the task that failed."
+msgstr ""
+
+#: celery.app.task.Task.on_failure:11 of
+msgid "Original keyword arguments for the task that failed."
+msgstr ""
+
+#: celery.app.task.Task.on_retry:1 of
+msgid "Retry handler."
+msgstr ""
+
+#: celery.app.task.Task.on_retry:3 of
+msgid "This is run by the worker when the task is to be retried."
+msgstr ""
+
+#: celery.app.task.Task.on_retry:5 of
+msgid "The exception sent to :meth:`retry`."
+msgstr ""
+
+#: celery.app.task.Task.on_retry:7 of
+msgid "Unique id of the retried task."
+msgstr ""
+
+#: celery.app.task.Task.on_retry:9 of
+msgid "Original arguments for the retried task."
+msgstr ""
+
+#: celery.app.task.Task.on_retry:11 of
+msgid "Original keyword arguments for the retried task."
+msgstr ""
+
+#: celery.app.task.Task.on_success:1 of
+msgid "Success handler."
+msgstr ""
+
+#: celery.app.task.Task.on_success:3 of
+msgid "Run by the worker if the task executes successfully."
+msgstr ""
+
+#: celery.app.task.Task.on_success:5 of
+msgid "The return value of the task."
+msgstr ""
+
+#: celery.app.task.Task.on_success:7 of
+msgid "Unique id of the executed task."
+msgstr ""
+
+#: celery.app.task.Task.on_success:9 of
+msgid "Original arguments for the executed task."
+msgstr ""
+
+#: celery.app.task.Task.on_success:11 of
+msgid "Original keyword arguments for the executed task."
+msgstr ""
+
+#: celery.app.task.Task.priority:1 of
+msgid "Default task priority."
+msgstr ""
+
+#: celery.app.task.Task.rate_limit:1 of
+msgid ""
+":const:`None` (no rate limit), `'100/s'` (hundred tasks a second), "
+"`'100/m'` (hundred tasks a minute),`'100/h'` (hundred tasks an hour)"
+msgstr ""
+
+#: celery.app.task.Task.rate_limit of
+msgid "type"
+msgstr ""
+
+#: celery.app.task.Task.rate_limit:5 of
+msgid "Rate limit for this task type.  Examples"
+msgstr ""
+
+#: celery.app.task.Task.reject_on_worker_lost:1 of
+msgid ""
+"Even if :attr:`acks_late` is enabled, the worker will acknowledge tasks "
+"when the worker process executing them abruptly exits or is signaled "
+"(e.g., :sig:`KILL`/:sig:`INT`, etc)."
+msgstr ""
+
+#: celery.app.task.Task.reject_on_worker_lost:5 of
+msgid ""
+"Setting this to true allows the message to be re-queued instead, so that "
+"the task will execute again by the same worker, or another worker."
+msgstr ""
+
+#: celery.app.task.Task.reject_on_worker_lost:9 of
+msgid ""
+"Warning: Enabling this can cause message loops; make sure you know what "
+"you're doing."
+msgstr ""
+
+#: celery.app.task.Task.replace:1 of
+msgid "Replace this task, with a new task inheriting the task id."
+msgstr ""
+
+#: celery.app.task.Task.replace:5 of
+msgid "signature to replace with."
+msgstr ""
+
+#: celery.app.task.Task.replace:8 of
+msgid ":exc:`~@Ignore` -- This is always raised, so the best practice"
+msgstr ""
+
+#: celery.app.task.Task.replace:9 of
+msgid "is to always use ``raise self.replace(...)`` to convey"
+msgstr ""
+
+#: celery.app.task.Task.replace:10 of
+msgid "to the reader that the task won't continue after being replaced."
+msgstr ""
+
+#: celery.app.task.Task.request:1 of
+msgid "Get current request object."
+msgstr ""
+
+#: celery.app.task.Task.request_stack:1 of
+msgid "Task request stack, the current request will be the topmost."
+msgstr ""
+
+#: celery.app.task.Task.resultrepr_maxsize:1 of
+msgid "Max length of result representation used in logs and events."
+msgstr ""
+
+#: celery.app.task.Task.retry:1 of
+msgid "Retry the task, adding it to the back of the queue."
+msgstr ""
+
+#: celery.app.task.Task.retry:4 celery.app.task.Task.shadow_name:4 of
+msgid "Example"
+msgstr ""
+
+#: celery.app.task.Task.retry:19 of
+msgid ""
+"Although the task will never return above as `retry` raises an exception "
+"to notify the worker, we use `raise` in front of the retry to convey that"
+" the rest of the block won't be executed."
+msgstr ""
+
+#: celery.app.task.Task.retry:23 of
+msgid "Positional arguments to retry with."
+msgstr ""
+
+#: celery.app.task.Task.retry:25 of
+msgid "Keyword arguments to retry with."
+msgstr ""
+
+#: celery.app.task.Task.retry:27 of
+msgid ""
+"Custom exception to report when the max retry limit has been exceeded "
+"(default: :exc:`~@MaxRetriesExceededError`).  If this argument is set and"
+" retry is called while an exception was raised (``sys.exc_info()`` is "
+"set) it will attempt to re-raise the current exception.  If no exception "
+"was raised it will raise the ``exc`` argument provided."
+msgstr ""
+
+#: celery.app.task.Task.retry:27 of
+msgid ""
+"Custom exception to report when the max retry limit has been exceeded "
+"(default: :exc:`~@MaxRetriesExceededError`)."
+msgstr ""
+
+#: celery.app.task.Task.retry:31 of
+msgid ""
+"If this argument is set and retry is called while an exception was raised"
+" (``sys.exc_info()`` is set) it will attempt to re-raise the current "
+"exception."
+msgstr ""
+
+#: celery.app.task.Task.retry:35 of
+msgid "If no exception was raised it will raise the ``exc`` argument provided."
+msgstr ""
+
+#: celery.app.task.Task.retry:38 of
+msgid "Time in seconds to delay the retry for."
+msgstr ""
+
+#: celery.app.task.Task.retry:40 of
+msgid "Explicit time and date to run the retry at."
+msgstr ""
+
+#: celery.app.task.Task.retry:43 of
+msgid ""
+"If set, overrides the default retry limit for this execution.  Changes to"
+" this parameter don't propagate to subsequent task retry attempts.  A "
+"value of :const:`None`, means \"use the default\", so if you want "
+"infinite retries you'd have to set the :attr:`max_retries` attribute of "
+"the task to :const:`None` first."
+msgstr ""
+
+#: celery.app.task.Task.retry:50 of
+msgid "If set, overrides the default time limit."
+msgstr ""
+
+#: celery.app.task.Task.retry:52 of
+msgid "If set, overrides the default soft time limit."
+msgstr ""
+
+#: celery.app.task.Task.retry:55 of
+msgid ""
+"If this is :const:`False`, don't raise the :exc:`~@Retry` exception, that"
+" tells the worker to mark the task as being retried.  Note that this "
+"means the task will be marked as failed if the task raises an exception, "
+"or successful if it returns after the retry call."
+msgstr ""
+
+#: celery.app.task.Task.retry:61 of
+msgid "Extra options to pass on to :meth:`apply_async`."
+msgstr ""
+
+#: celery.app.task.Task.retry:64 of
+msgid ""
+":exc:`celery.exceptions.Retry` -- To tell the worker that the task has "
+"been re-sent for retry. This always happens, unless the `throw` keyword "
+"argument has been explicitly set to :const:`False`, and is considered "
+"normal operation."
+msgstr ""
+
+#: celery.app.task.Task.run:1 of
+msgid "The body of the task executed by workers."
+msgstr ""
+
+#: celery.app.task.Task.s:1 celery.app.task.Task.signature:1
+#: celery.app.task.Task.subtask:1 of
+msgid "Create signature."
+msgstr ""
+
+#: celery.app.task.Task.s:3 of
+msgid "Shortcut for ``.s(*a, **k) -> .signature(a, k)``."
+msgstr ""
+
+#: celery.app.task.Task.send_event:1 of
+msgid "Send monitoring event message."
+msgstr ""
+
+#: celery.app.task.Task.send_event:3 of
+msgid ""
+"This can be used to add custom event types in :pypi:`Flower` and other "
+"monitors."
+msgstr ""
+
+#: celery.app.task.Task.send_event:6 of
+msgid "Type of event, e.g. ``\"task-failed\"``."
+msgstr ""
+
+#: celery.app.task.Task.send_event of
+msgid "Keyword Arguments"
+msgstr ""
+
+#: celery.app.task.Task.send_event:9 of
+msgid ""
+"Retry sending the message if the connection is lost.  Default is taken "
+"from the :setting:`task_publish_retry` setting."
+msgstr ""
+
+#: celery.app.task.Task.send_event:13 of
+msgid ""
+"Retry settings.  Default is taken from the "
+":setting:`task_publish_retry_policy` setting."
+msgstr ""
+
+#: celery.app.task.Task.send_event:16 of
+msgid "Map containing information about the event. Must be JSON serializable."
+msgstr ""
+
+#: celery.app.task.Task.send_events:1 of
+msgid ""
+"If enabled the worker will send monitoring events related to this task "
+"(but only if the worker is configured to send task related events). Note "
+"that this has no effect on the task-failure event case where a task is "
+"not registered (as it will have no task class to check this flag)."
+msgstr ""
+
+#: celery.app.task.Task.serializer:1 of
+msgid ""
+"The name of a serializer that are registered with "
+":mod:`kombu.serialization.registry`.  Default is `'pickle'`."
+msgstr ""
+
+#: celery.app.task.Task.shadow_name:1 of
+msgid "Override for custom task name in worker logs/monitoring."
+msgstr ""
+
+#: celery.app.task.Task.shadow_name:16 of
+msgid "Task positional arguments."
+msgstr ""
+
+#: celery.app.task.Task.shadow_name:18 of
+msgid "Task keyword arguments."
+msgstr ""
+
+#: celery.app.task.Task.shadow_name:20 of
+msgid "Task execution options."
+msgstr ""
+
+#: celery.app.task.Task.si:1 of
+msgid "Create immutable signature."
+msgstr ""
+
+#: celery.app.task.Task.si:3 of
+msgid "Shortcut for ``.si(*a, **k) -> .signature(a, k, immutable=True)``."
+msgstr ""
+
+#: celery.app.task.Task.signature:3 celery.app.task.Task.subtask:3 of
+msgid ""
+"object for     this task, wrapping arguments and execution options     "
+"for a single task invocation."
+msgstr ""
+
+#: celery.app.task.Task.signature:6 celery.app.task.Task.subtask:6 of
+msgid "object for"
+msgstr ""
+
+#: celery.app.task.Task.signature:6 celery.app.task.Task.subtask:6 of
+msgid ""
+"this task, wrapping arguments and execution options for a single task "
+"invocation."
+msgstr ""
+
+#: celery.app.task.Task.signature:8 celery.app.task.Task.subtask:8 of
+msgid ":class:`~celery.signature`"
+msgstr ""
+
+#: celery.app.task.Task.soft_time_limit:1 of
+msgid "Soft time limit. Defaults to the :setting:`task_soft_time_limit` setting."
+msgstr ""
+
+#: celery.app.task.Task.starmap:1 of
+msgid "Create a :class:`~celery.canvas.xstarmap` task from ``it``."
+msgstr ""
+
+#: celery.app.task.Task.store_errors_even_if_ignored:1 of
+msgid ""
+"When enabled errors will be stored even if the task is otherwise "
+"configured to ignore results."
+msgstr ""
+
+#: celery.app.task.Task.throws:1 of
+msgid "Tuple of expected exceptions."
+msgstr ""
+
+#: celery.app.task.Task.throws:3 of
+msgid ""
+"These are errors that are expected in normal operation and that shouldn't"
+" be regarded as a real error by the worker. Currently this means that the"
+" state will be updated to an error state, but the worker won't log the "
+"event as an error."
+msgstr ""
+
+#: celery.app.task.Task.time_limit:1 of
+msgid "Hard time limit. Defaults to the :setting:`task_time_limit` setting."
+msgstr ""
+
+#: celery.app.task.Task.track_started:1 of
+msgid ""
+"If enabled the task will report its status as 'started' when the task is "
+"executed by a worker.  Disabled by default as the normal behavior is to "
+"not report that level of granularity.  Tasks are either pending, "
+"finished, or waiting to be retried."
+msgstr ""
+
+#: celery.app.task.Task.track_started:6 of
+msgid ""
+"Having a 'started' status can be useful for when there are long running "
+"tasks and there's a need to report what task is currently running."
+msgstr ""
+
+#: celery.app.task.Task.track_started:10 of
+msgid ""
+"The application default can be overridden using the "
+":setting:`task_track_started` setting."
+msgstr ""
+
+#: celery.app.task.Task.trail:1 of
+msgid ""
+"If enabled the request will keep track of subtasks started by this task, "
+"and this information will be sent with the result (``result.children``)."
+msgstr ""
+
+#: celery.app.task.Task.typing:1 of
+msgid ""
+"Enable argument checking. You can set this to false if you don't want the"
+" signature to be checked when calling the task. Defaults to "
+":attr:`app.strict_typing <@Celery.strict_typing>`."
+msgstr ""
+
+#: celery.app.task.Task.update_state:1 of
+msgid "Update task state."
+msgstr ""
+
+#: celery.app.task.Task.update_state:3 of
+msgid "Id of the task to update. Defaults to the id of the current task."
+msgstr ""
+
+#: celery.app.task.Task.update_state:6 of
+msgid "New state."
+msgstr ""
+
+#: celery.app.task.Task.update_state:8 of
+msgid "State meta-data."
+msgstr ""
+
+#: celery.app.task.Context:1 of
+msgid "Task request variables (Task.request)."
+msgstr ""
+

@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../internals/reference/celery.utils.dispatch.weakref_backports.rst:3
+msgid "``celery.utils.dispatch.weakref_backports``"
+msgstr ""
+
+#: celery.utils.dispatch.weakref_backports:1 of
+msgid "Weakref compatibility."
+msgstr ""
+
+#: celery.utils.dispatch.weakref_backports:3 of
+msgid ""
+"weakref_backports is a partial backport of the weakref module for Python "
+"versions below 3.4."
+msgstr ""
+
+#: celery.utils.dispatch.weakref_backports:6 of
+msgid ""
+"Copyright (C) 2013 Python Software Foundation, see LICENSE.python for "
+"details."
+msgstr ""
+
+#: celery.utils.dispatch.weakref_backports:8 of
+msgid ""
+"The following changes were made to the original sources during "
+"backporting:"
+msgstr ""
+
+#: celery.utils.dispatch.weakref_backports:10 of
+msgid "Added ``self`` to ``super`` calls."
+msgstr ""
+
+#: celery.utils.dispatch.weakref_backports:11 of
+msgid "Removed ``from None`` when raising exceptions."
+msgstr ""
+
+#: celery.utils.dispatch.weakref_backports.WeakMethod:1 of
+msgid "Weak reference to bound method."
+msgstr ""
+
+#: celery.utils.dispatch.weakref_backports.WeakMethod:3 of
+msgid ""
+"A custom :class:`weakref.ref` subclass which simulates a weak reference "
+"to a bound method, working around the lifetime problem of bound methods."
+msgstr ""
+

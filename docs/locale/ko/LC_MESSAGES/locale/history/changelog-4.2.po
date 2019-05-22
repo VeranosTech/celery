@@ -1,0 +1,1025 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../history/changelog-4.2.rst:5
+msgid "Change history"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:7
+msgid ""
+"This document contains change notes for bugfix releases in the 4.x "
+"series, please see :ref:`whatsnew-4.2` for an overview of what's new in "
+"Celery 4.2."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:12
+msgid "4.2.1"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst
+msgid "release-date"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:13
+msgid "2018-07-18 11:00 AM IST"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst
+msgid "release-by"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:14 ../../history/changelog-4.2.rst:51
+msgid "Omer Katz"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:16
+msgid ""
+"**Result Backend**: Fix deserialization of exceptions that are present in"
+" the producer codebase but not in the consumer codebase."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:18
+msgid "Contributed by **John Arnold**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:20
+msgid ""
+"**Message Protocol Compatibility**: Fix error caused by an invalid (None)"
+" timelimit value in the message headers when migrating messages from 3.x "
+"to 4.x."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:22
+msgid "Contributed by **Robert Kopaczewski**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:24
+msgid ""
+"**Result Backend**: Fix serialization of exception arguments when "
+"exception arguments are not JSON serializable by default."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:26
+msgid "Contributed by **Tom Booth**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:28
+msgid "**Worker**: Fixed multiple issues with rate limited tasks"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:30
+msgid ""
+"Maintain scheduling order. Fix possible scheduling of a "
+":class:`celery.worker.request.Request` with the wrong "
+":class:`kombu.utils.limits.TokenBucket` which could cause tasks' rate "
+"limit to behave incorrectly. Fix possible duplicated execution of tasks "
+"that were rate limited or if ETA/Countdown was provided for them."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:34
+msgid "Contributed by :github_user:`ideascf`"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:36
+msgid ""
+"**Worker**: Defensively handle invalid timelimit header values in "
+"requests."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:38 ../../history/changelog-4.2.rst:365
+msgid "Contributed by **Omer Katz**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:40
+msgid "Documentation fixes:"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:43
+msgid "**Matt Wiens**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:44
+msgid "**Seunghun Lee**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:45
+msgid "**Lewis M. Kabui**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:46
+msgid "**Prathamesh Salunkhe**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:49
+msgid "4.2.0"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:50
+msgid "2018-06-10 21:30 PM IST"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:53
+msgid "**Task**: Add ``ignore_result`` as task execution option (#4709, #3834)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:55 ../../history/changelog-4.2.rst:59
+msgid "Contributed by **Andrii Kostenko** and **George Psarakis**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:57
+msgid ""
+"**Redis Result Backend**: Do not create PubSub subscriptions when results"
+" are ignored (#4709, #3834)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:61
+msgid ""
+"**Redis Result Backend**: Result consumer always unsubscribes when task "
+"state is ready (#4666)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:63 ../../history/changelog-4.2.rst:147
+#: ../../history/changelog-4.2.rst:315
+msgid "Contributed by **George Psarakis**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:65
+msgid ""
+"**Development/Testing**: Add docker-compose and base Dockerfile for "
+"development (#4482)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:67 ../../history/changelog-4.2.rst:127
+msgid "Contributed by **Chris Mitchell**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:69
+msgid ""
+"**Documentation/Sphinx**: Teach autodoc to document tasks if undoc-"
+"members is not set (#4588)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:71 ../../history/changelog-4.2.rst:75
+#: ../../history/changelog-4.2.rst:79
+msgid "Contributed by **Leo Singer**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:73
+msgid ""
+"**Documentation/Sphinx**: Put back undoc-members option in sphinx test "
+"(#4586)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:77
+msgid ""
+"**Documentation/Sphinx**: Sphinx autodoc picks up tasks automatically "
+"only if `undoc-members` is set (#4584)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:81
+msgid ""
+"**Task**: Fix shadow_name issue when using previous version Task class "
+"(#4572)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:83 ../../history/changelog-4.2.rst:287
+msgid "Contributed by :github_user:`pachewise`."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:85
+msgid ""
+"**Task**: Add support for bound tasks as `link_error` parameter (Fixes "
+"#3723) (#4545)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:87
+msgid "Contributed by :github_user:`brabiega`."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:89
+msgid ""
+"**Deployment**: Add a command line option for setting the Result Backend "
+"URL (#4549)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:91
+msgid "Contributed by :github_user:`y0ngdi`."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:93
+msgid "**CI**: Enable pip cache in appveyor build (#4546)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:95
+msgid "Contributed by **Thijs Triemstra**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:97
+msgid "**Concurrency/Asynpool**: Fix errno property name shadowing."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:99 ../../history/changelog-4.2.rst:171
+#: ../../history/changelog-4.2.rst:175 ../../history/changelog-4.2.rst:207
+#: ../../history/changelog-4.2.rst:247
+msgid "Contributed by **Omer Katz**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:101
+msgid "**DynamoDB Backend**: Configurable endpoint URL (#4532)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:103
+msgid "Contributed by **Bohdan Rybak**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:105
+msgid ""
+"**Timezones**: Correctly detect UTC timezone and timezone from settings "
+"(Fixes #4517) (#4519)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:107
+msgid "Contributed by :github_user:`last-partizan`."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:109
+msgid "**Control**: Cleanup the mailbox's producer pool after forking (#4472)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:111
+msgid "Contributed by **Nick Eaket**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:113
+msgid "**Documentation**: Start Celery and Celery Beat on Azure WebJob (#4484)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:115
+msgid "Contributed by **PauloPeres**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:117
+msgid ""
+"**Celery Beat**: Schedule due tasks on startup, after Beat restart has "
+"occurred (#4493)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:119
+msgid "Contributed by **Igor Kasianov**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:121
+msgid "**Worker**: Use absolute time when task is accepted by worker pool (#3684)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:123
+msgid "Contributed by **Régis Behmo**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:125
+msgid "**Canvas**: Propagate arguments to chains inside groups (#4481)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:129
+msgid ""
+"**Canvas**: Fix `Task.replace` behavior in nested chords (fixes #4368) "
+"(#4369)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:131
+msgid "Contributed by **Denis Shirokov** & **Alex Hill**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:133
+msgid "**Installation**: Pass python_requires argument to setuptools (#4479)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:135
+msgid "Contributed by **Jon Dufresne**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:137
+msgid ""
+"**Message Protocol Compatibility**: Handle \"hybrid\" messages that have "
+"moved between Celery versions (#4358) (Issue #4356)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:139
+msgid "Contributed by **Russell Keith-Magee**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:141
+msgid ""
+"**Canvas**: request on_timeout now ignores soft time limit exception "
+"(fixes #4412) (#4473)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:143
+msgid "Contributed by **Alex Garel**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:145
+msgid ""
+"**Redis Result Backend**: Integration test to verify PubSub "
+"unsubscriptions (#4468)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:149
+msgid ""
+"**Message Protocol Properties**: Allow the shadow keyword argument and "
+"the shadow_name method to set shadow properly (#4381)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:151 ../../history/changelog-4.2.rst:211
+msgid "Contributed by :github_user:`hclihn`."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:153
+msgid ""
+"**Canvas**: Run chord_unlock on same queue as chord body (#4448) (Issue "
+"#4337)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:155 ../../history/changelog-4.2.rst:159
+#: ../../history/changelog-4.2.rst:167 ../../history/changelog-4.2.rst:187
+msgid "Contributed by **Alex Hill**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:157
+msgid "**Canvas**: Support chords with empty header group (#4443)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:161
+msgid "**Timezones**: make astimezone call in localize more safe (#4324)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:163
+msgid "Contributed by **Matt Davis**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:165
+msgid ""
+"**Canvas**: Fix length-1 and nested chords (#4437) (Issues #4393, #4055, "
+"#3885, #3597, #3574, #3323, #4301)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:169
+msgid ""
+"**CI**: Run `Openstack Bandit <https://pypi.org/project/bandit/1.0.1/>`_ "
+"in Travis CI in order to detect security issues."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:173
+msgid ""
+"**CI**: Run `isort <https://github.com/timothycrosley/isort>`_ in Travis "
+"CI in order to lint Python **import** statements."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:177
+msgid ""
+"**Canvas**: Resolve TypeError on `.get` from nested groups (#4432) (Issue"
+" #4274)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:179
+msgid "Contributed by **Misha Wolfson**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:181
+msgid ""
+"**CouchDB Backend**: Correct CouchDB key string type for Python 2/3 "
+"compatibility (#4166)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:183
+msgid "Contributed by :github_user:`fmind` && **Omer Katz**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:185
+msgid ""
+"**Group Result**: Fix current_app fallback in GroupResult.restore() "
+"(#4431)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:189
+msgid ""
+"**Consul Backend**: Correct key string type for Python 2/3 compatibility "
+"(#4416)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:191
+msgid "Contributed by **Wido den Hollander**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:193
+msgid "**Group Result**: Correctly restore an empty GroupResult (#2202) (#4427)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:195
+msgid "Contributed by **Alex Hill** & **Omer Katz**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:197
+msgid "**Result**: Disable synchronous waiting for sub-tasks on eager mode(#4322)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:199
+msgid "Contributed by **Denis Podlesniy**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:201
+msgid ""
+"**Celery Beat**: Detect timezone or Daylight Saving Time changes (#1604) "
+"(#4403)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:203
+msgid "Contributed by **Vincent Barbaresi**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:205
+msgid "**Canvas**: Fix append to an empty chain. Fixes #4047. (#4402)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:209
+msgid ""
+"**Task**: Allow shadow to override task name in trace and logging "
+"messages. (#4379)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:213
+msgid ""
+"**Documentation/Sphinx**: Fix getfullargspec Python 2.x compatibility in "
+"contrib/sphinx.py (#4399)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:215
+msgid "Contributed by **Javier Martin Montull**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:217
+msgid ""
+"**Documentation**: Updated installation instructions for SQS broker "
+"(#4382)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:219
+msgid "Contributed by **Sergio Fernandez**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:221
+msgid ""
+"**Celery Beat**: Better equality comparison for ScheduleEntry instances "
+"(#4312)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:223
+msgid "Contributed by :github_user:`mariia-zelenova`."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:225
+msgid "**Task**: Adding 'shadow' property to as_task_v2 (#4350)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:227
+msgid "Contributed by **Marcelo Da Cruz Pinto**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:229
+msgid "Try to import directly, do not use deprecated imp method (#4216)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:231
+msgid "Contributed by **Tobias Kunze**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:233
+msgid ""
+"**Task**: Enable `kwargsrepr` and `argsrepr` override for modifying task "
+"argument representation (#4260)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:235
+msgid "Contributed by **James M. Allen**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:237
+msgid "**Result Backend**: Add Redis Sentinel backend (#4144)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:239
+msgid "Contributed by **Geoffrey Bauduin**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:241
+msgid ""
+"Use unique time values for Collections/LimitedSet (#3879 and #3891) "
+"(#3892)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:243
+msgid "Contributed by :github_user:`lead2gold`."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:245
+msgid "**CI**: Report coverage for all result backends."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:249
+msgid "**Django**: Use Django DB max age connection setting (fixes #4116) (#4292)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:251
+msgid "Contributed by **Marco Schweighauser**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:253
+msgid "**Canvas**: Properly take into account chain tasks link_error (#4240)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:255 ../../history/changelog-4.2.rst:259
+#: ../../history/changelog-4.2.rst:263
+msgid "Contributed by :github_user:`agladkov`."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:257
+msgid ""
+"**Canvas**: Allow to create group with single task (fixes issue #4255) "
+"(#4280)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:261
+msgid ""
+"**Canvas**: Copy dictionary parameter in chord.from_dict before modifying"
+" (fixes issue #4223) (#4278)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:265
+msgid "**Results Backend**: Add Cassandra options (#4224)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:267
+msgid "Contributed by **Scott Cooper**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:269
+msgid "**Worker**: Apply rate limiting for tasks with ETA (#4251)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:271
+msgid "Contributed by :github_user:`arpanshah29`."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:273
+msgid "**Celery Beat**: support scheduler entries without a schedule (#4235)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:275
+msgid "Contributed by **Markus Kaiserswerth**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:277
+msgid ""
+"**SQS Broker**: Updated SQS requirements file with correct boto3 version "
+"(#4231)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:279
+msgid "Contributed by **Alejandro Varas**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:281
+msgid "Remove unused code from _create_app contextmanager (#4204)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:283
+msgid "Contributed by **Ryan P Kilby**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:285
+msgid ""
+"**Group Result**: Modify GroupResult.as_tuple() to include parent (fixes "
+"#4106) (#4205)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:289
+msgid "**Beat**: Set default scheduler class in beat command. (#4189)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:291
+msgid "Contributed by :github_user:`Kxrr`."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:293
+msgid "**Worker**: Retry signal receiver after raised exception (#4192)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:295
+msgid "Contributed by **David Davis**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:297
+msgid "**Task**: Allow custom Request class for tasks (#3977)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:299
+msgid "Contributed by **Manuel Vázquez Acosta**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:301
+msgid "**Django**: Django fixup should close all cache backends (#4187)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:303
+msgid "Contributed by **Raphaël Riel**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:305
+msgid "**Deployment**: Adds stopasgroup to the supervisor scripts (#4200)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:307
+msgid "Contributed by :github_user:`martialp`."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:309
+msgid "Using Exception.args to serialize/deserialize exceptions (#4085)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:311
+msgid "Contributed by **Alexander Ovechkin**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:313
+msgid ""
+"**Timezones**: Correct calculation of application current time with "
+"timezone (#4173)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:317
+msgid "**Remote Debugger**: Set the SO_REUSEADDR option on the socket (#3969)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:319
+msgid "Contributed by **Theodore Dubois**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:321
+msgid ""
+"**Django**: Celery ignores exceptions raised during `django.setup()` "
+"(#4146)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:323
+msgid "Contributed by **Kevin Gu**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:325
+msgid ""
+"Use heartbeat setting from application configuration for Broker "
+"connection (#4148)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:327
+msgid "Contributed by :github_user:`mperice`."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:329
+msgid ""
+"**Celery Beat**: Fixed exception caused by next_transit receiving an "
+"unexpected argument. (#4103)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:331
+msgid "Contributed by **DDevine**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:333
+msgid "**Task** Introduce exponential backoff with Task auto-retry (#4101)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:335
+msgid "Contributed by **David Baumgold**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:337
+msgid ""
+"**AsyncResult**: Remove weak-references to bound methods in AsyncResult "
+"promises. (#4131)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:339
+msgid "Contributed by **Vinod Chandru**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:341
+msgid ""
+"**Development/Testing**: Allow eager application of canvas structures "
+"(#4576)"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:343
+msgid "Contributed by **Nicholas Pilon**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:345
+msgid "**Command Line**: Flush stderr before exiting with error code 1."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:347
+msgid "Contributed by **Antonin Delpeuch**."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:349
+msgid "**Task**: Escapes single quotes in kwargsrepr strings."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:351
+msgid "Contributed by **Kareem Zidane**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:353
+msgid ""
+"**AsyncResult**: Restore ability to join over ResultSet after fixing "
+"celery/#3818."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:355
+msgid "Contributed by **Derek Harland**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:357
+msgid "**Redis Results Backend**: Unsubscribe on message success."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:359
+msgid ""
+"Previously Celery would leak channels, filling the memory of the Redis "
+"instance."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:361
+msgid "Contributed by **George Psarakis**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:363
+msgid "**Task**: Only convert eta to isoformat when it is not already a string."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:367
+msgid ""
+"**Redis Results Backend**: The result_backend setting now supports "
+"rediss:// URIs"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:369
+msgid "Contributed by **James Remeika**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:371
+msgid "**Canvas** Keyword arguments are passed to tasks in chain as expected."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:373 ../../history/changelog-4.2.rst:381
+msgid "Contributed by :github_user:`tothegump`"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:375
+msgid "**Django** Fix a regression casuing Celery to crash when using Django."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:377
+msgid "Contributed by **Jonas Haag**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:379
+msgid "**Canvas** Chain with one task now runs as expected."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:383
+msgid "**Kombu** Celery 4.2 now requires Kombu 4.2 or better."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:385
+msgid "Contributed by **Omer Katz & Asif Saifuddin Auvi**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:387
+msgid ""
+"`GreenletExit` is not in `__all__` in greenlet.py which can not be "
+"imported by Python 3.6."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:389
+msgid "The import was adjusted to work on Python 3.6 as well."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:391
+msgid "Contributed by **Hsiaoming Yang**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:393
+msgid ""
+"Fixed a regression that occured during the development of Celery 4.2 "
+"which caused `celery report` to crash when Django is installed."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:395 ../../history/changelog-4.2.rst:401
+#: ../../history/changelog-4.2.rst:411
+msgid "Contributed by **Josue Balandrano Coronel**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:397
+msgid ""
+"Matched the behavior of `GroupResult.as_tuple()` to that of "
+"`AsyncResult.as_tuple()`."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:399
+msgid "The group's parent is now serialized correctly."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:403
+msgid "Use Redis coercion mechanism for converting URI query parameters."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:405
+msgid "Contributed by **Justin Patrin**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:407
+msgid "Fixed the representation of `GroupResult`."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:409
+msgid "The dependency graph is now presented correctly."
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:413
+msgid "Documentation, CI, Installation and Tests fixes:"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:416
+msgid "**Sammie S. Taunton**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:417
+msgid "**Dan Wilson**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:418
+msgid ":github_user:`pachewise`"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:419
+msgid "**Sergi Almacellas Abellana**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:420
+msgid "**Omer Katz**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:421
+msgid "**Alex Zaitsev**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:422
+msgid "**Leo Singer**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:423
+msgid "**Rachel Johnson**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:424
+msgid "**Jon Dufresne**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:425
+msgid "**Samuel Dion-Girardeau**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:426
+msgid "**Ryan Guest**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:427
+msgid "**Huang Huang**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:428
+msgid "**Geoffrey Bauduin**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:429
+msgid "**Andrew Wong**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:430
+msgid "**Mads Jensen**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:431
+msgid "**Jackie Leng**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:432
+msgid "**Harry Moreno**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:433
+msgid ":github_user:`michael-k`"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:434
+msgid "**Nicolas Mota**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:435
+msgid "**Armenak Baburyan**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:436
+msgid "**Patrick Zhang**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:437
+msgid ":github_user:`anentropic`"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:438
+msgid ":github_user:`jairojair`"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:439
+msgid "**Ben Welsh**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:440
+msgid "**Michael Peake**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:441
+msgid "**Fengyuan Chen**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:442
+msgid ":github_user:`arpanshah29`"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:443
+msgid "**Xavier Hardy**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:444
+msgid "**Shitikanth**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:445
+msgid "**Igor Kasianov**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:446
+msgid "**John Arnold**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:447
+msgid ":github_user:`dmollerm`"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:448
+msgid "**Robert Knight**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:449
+msgid "**Asif Saifuddin Auvi**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:450
+msgid "**Eduardo Ramírez**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:451
+msgid "**Kamil Breguła**"
+msgstr ""
+
+#: ../../history/changelog-4.2.rst:452
+msgid "**Juan Gutierrez**"
+msgstr ""
+

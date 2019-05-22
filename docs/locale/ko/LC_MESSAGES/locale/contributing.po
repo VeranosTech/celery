@@ -1,0 +1,2109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:42+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../../CONTRIBUTING.rst:5
+msgid "Contributing"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:7
+msgid "Welcome!"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:9
+msgid ""
+"This document is fairly extensive and you aren't really expected to study"
+" this in detail for small contributions;"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:12
+msgid ""
+"The most important rule is that contributing must be easy and that the "
+"community is friendly and not nitpicking on details, such as coding "
+"style."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:16
+msgid ""
+"If you're reporting a bug you should read the Reporting bugs section "
+"below to ensure that your bug report contains enough information to "
+"successfully diagnose the issue, and if you're contributing code you "
+"should try to mimic the conventions you see surrounding the code you're "
+"working on, but in the end all patches will be cleaned up by the person "
+"merging the changes so don't worry too much."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:29
+msgid "Community Code of Conduct"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:31
+msgid ""
+"The goal is to maintain a diverse community that's pleasant for everyone."
+" That's why we would greatly appreciate it if everyone contributing to "
+"and interacting with the community also followed this Code of Conduct."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:35
+msgid ""
+"The Code of Conduct covers our behavior as members of the community, in "
+"any forum, mailing list, wiki, website, Internet relay chat (IRC), public"
+" meeting or private correspondence."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:39
+msgid ""
+"The Code of Conduct is heavily based on the `Ubuntu Code of Conduct`_, "
+"and the `Pylons Code of Conduct`_."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:46
+msgid "Be considerate"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:48
+msgid ""
+"Your work will be used by other people, and you in turn will depend on "
+"the work of others. Any decision you take will affect users and "
+"colleagues, and we expect you to take those consequences into account "
+"when making decisions. Even if it's not obvious at the time, our "
+"contributions to Celery will impact the work of others. For example, "
+"changes to code, infrastructure, policy, documentation and translations "
+"during a release may negatively impact others work."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:57
+msgid "Be respectful"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:59
+msgid ""
+"The Celery community and its members treat one another with respect. "
+"Everyone can make a valuable contribution to Celery. We may not always "
+"agree, but disagreement is no excuse for poor behavior and poor manners. "
+"We might all experience some frustration now and then, but we cannot "
+"allow that frustration to turn into a personal attack. It's important to "
+"remember that a community where people feel uncomfortable or threatened "
+"isn't a productive one. We expect members of the Celery community to be "
+"respectful when dealing with other contributors as well as with people "
+"outside the Celery project and with users of Celery."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:70
+msgid "Be collaborative"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:72
+msgid ""
+"Collaboration is central to Celery and to the larger free software "
+"community. We should always be open to collaboration. Your work should be"
+" done transparently and patches from Celery should be given back to the "
+"community when they're made, not just when the distribution releases. If "
+"you wish to work on new code for existing upstream projects, at least "
+"keep those projects informed of your ideas and progress. It many not be "
+"possible to get consensus from upstream, or even from your colleagues "
+"about the correct implementation for an idea, so don't feel obliged to "
+"have that agreement before you begin, but at least keep the outside world"
+" informed of your work, and publish your work in a way that allows "
+"outsiders to test, discuss, and contribute to your efforts."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:85
+msgid "When you disagree, consult others"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:87
+msgid ""
+"Disagreements, both political and technical, happen all the time and the "
+"Celery community is no exception. It's important that we resolve "
+"disagreements and differing views constructively and with the help of the"
+" community and community process. If you really want to go a different "
+"way, then we encourage you to make a derivative distribution or alternate"
+" set of packages that still build on the work we've done to utilize as "
+"common of a core as possible."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:96
+msgid "When you're unsure, ask for help"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:98
+msgid ""
+"Nobody knows everything, and nobody is expected to be perfect. Asking "
+"questions avoids many problems down the road, and so questions are "
+"encouraged. Those who are asked questions should be responsive and "
+"helpful. However, when asking a question, care must be taken to do so in "
+"an appropriate forum."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:105
+msgid "Step down considerately"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:107
+msgid ""
+"Developers on every project come and go and Celery is no different. When "
+"you leave or disengage from the project, in whole or in part, we ask that"
+" you do so in a way that minimizes disruption to the project. This means "
+"you should tell people you're leaving and take the proper steps to ensure"
+" that others can pick up where you leave off."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:117
+msgid "Reporting Bugs"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:122
+msgid "Security"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:124
+msgid ""
+"You must never report security related issues, vulnerabilities or bugs "
+"including sensitive information to the bug tracker, or elsewhere in "
+"public. Instead sensitive bugs must be sent by email to "
+"``security@celeryproject.org``."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:128
+msgid "If you'd like to submit the information encrypted our PGP key is::"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:162
+msgid "Other bugs"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:164
+msgid ""
+"Bugs can always be described to the :ref:`mailing-list`, but the best way"
+" to report an issue and to ensure a timely response is to use the issue "
+"tracker."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:168
+msgid "**Create a GitHub account**."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:170
+msgid ""
+"You need to `create a GitHub account`_ to be able to create new issues "
+"and participate in the discussion."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:175
+msgid "**Determine if your bug is really a bug**."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:177
+msgid ""
+"You shouldn't file a bug if you're requesting support. For that you can "
+"use the :ref:`mailing-list`, or :ref:`irc-channel`. If you still need "
+"support you can open a github issue, please prepend the title with "
+"``[QUESTION]``."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:181
+msgid "**Make sure your bug hasn't already been reported**."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:183
+msgid ""
+"Search through the appropriate Issue tracker. If a bug like yours was "
+"found, check if you have new information that could be reported to help "
+"the developers fix the bug."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:187
+msgid "**Check if you're using the latest version**."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:189
+msgid ""
+"A bug could be fixed by some other improvements and fixes - it might not "
+"have an existing report in the bug tracker. Make sure you're using the "
+"latest releases of celery, billiard, kombu, amqp, and vine."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:193
+msgid "**Collect information about the bug**."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:195
+msgid ""
+"To have the best chance of having a bug fixed, we need to be able to "
+"easily reproduce the conditions that caused it. Most of the time this "
+"information will be from a Python traceback message, though some bugs "
+"might be in design, spelling or other errors on the website/docs/code."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:200
+msgid "If the error is from a Python traceback, include it in the bug report."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:202
+msgid ""
+"We also need to know what platform you're running (Windows, macOS, Linux,"
+" etc.), the version of your Python interpreter, and the version of "
+"Celery, and related packages that you were running when the bug occurred."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:206
+msgid ""
+"If you're reporting a race condition or a deadlock, tracebacks can be "
+"hard to get or might not be that useful. Try to inspect the process to "
+"get more diagnostic data. Some ideas:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:210
+msgid ""
+"Enable Celery's :ref:`breakpoint signal <breakpoint_signal>` and use it "
+"to inspect the process's state. This will allow you to open a :mod:`pdb` "
+"session."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:213
+msgid ""
+"Collect tracing data using `strace`_(Linux), :command:`dtruss` (macOS), "
+"and :command:`ktrace` (BSD), `ltrace`_, and `lsof`_."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:217
+msgid "Include the output from the :command:`celery report` command:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:223
+msgid ""
+"This will also include your configuration settings and it try to remove "
+"values for keys known to be sensitive, but make sure you also verify the "
+"information before submitting so that it doesn't contain confidential "
+"information like API tokens and authentication credentials."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:229
+msgid ""
+"You issue might be tagged as `Needs Test Case`. A test case represents "
+"all the details needed to reproduce what your issue is reporting. A test "
+"case can be some minimal code that reproduces the issue or detailed "
+"instructions and configuration values that reproduces said issue."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:235
+msgid "**Submit the bug**."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:237
+msgid ""
+"By default `GitHub`_ will email you to let you know when new comments "
+"have been made on your bug. In the event you've turned this feature off, "
+"you should check back on occasion to ensure you don't miss any questions "
+"a developer trying to fix the bug might ask."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:250
+msgid "Issue Trackers"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:252
+msgid ""
+"Bugs for a package in the Celery ecosystem should be reported to the "
+"relevant issue tracker."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:255
+msgid ":pypi:`celery`: https://github.com/celery/celery/issues/"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:256
+msgid ":pypi:`kombu`: https://github.com/celery/kombu/issues"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:257
+msgid ":pypi:`amqp`: https://github.com/celery/py-amqp/issues"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:258
+msgid ":pypi:`vine`: https://github.com/celery/vine/issues"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:259
+msgid ":pypi:`librabbitmq`: https://github.com/celery/librabbitmq/issues"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:260
+msgid ""
+":pypi:`django-celery-beat`: https://github.com/celery/django-celery-"
+"beat/issues"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:261
+msgid ""
+":pypi:`django-celery-results`: https://github.com/celery/django-celery-"
+"results/issues"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:263
+msgid ""
+"If you're unsure of the origin of the bug you can ask the :ref:`mailing-"
+"list`, or just use the Celery issue tracker."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:267
+msgid "Contributors guide to the code base"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:269
+msgid ""
+"There's a separate section for internal details, including details about "
+"the code base and a style guide."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:272
+msgid "Read :ref:`internals-guide` for more!"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:277
+msgid "Versions"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:279
+msgid ""
+"Version numbers consists of a major version, minor version and a release "
+"number. Since version 2.1.0 we use the versioning semantics described by "
+"SemVer: http://semver.org."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:283
+msgid ""
+"Stable releases are published at PyPI while development releases are only"
+" available in the GitHub git repository as tags. All version tags starts "
+"with “v”, so version 0.8.0 is the tag v0.8.0."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:290
+msgid "Branches"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:292
+msgid "Current active version branches:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:294
+msgid ""
+"dev (which git calls \"master\") "
+"(https://github.com/celery/celery/tree/master)"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:295
+msgid "4.2 (https://github.com/celery/celery/tree/4.2)"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:296
+msgid "4.1 (https://github.com/celery/celery/tree/4.1)"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:297
+msgid "3.1 (https://github.com/celery/celery/tree/3.1)"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:299
+msgid "You can see the state of any branch by looking at the Changelog:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:301
+msgid "https://github.com/celery/celery/blob/master/Changelog"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:303
+msgid ""
+"If the branch is in active development the topmost version info should "
+"contain meta-data like:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:314
+msgid "The ``status`` field can be one of:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:316
+msgid "``PLANNING``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:318
+msgid "The branch is currently experimental and in the planning stage."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:320
+msgid "``DEVELOPMENT``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:322
+msgid ""
+"The branch is in active development, but the test suite should be passing"
+" and the product should be working and possible for users to test."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:325
+msgid "``FROZEN``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:327
+msgid ""
+"The branch is frozen, and no more features will be accepted. When a "
+"branch is frozen the focus is on testing the version as much as possible "
+"before it is released."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:332
+msgid "dev branch"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:334
+msgid ""
+"The dev branch (called \"master\" by git), is where development of the "
+"next version happens."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:338
+msgid "Maintenance branches"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:340
+msgid ""
+"Maintenance branches are named after the version -- for example, the "
+"maintenance branch for the 2.2.x series is named ``2.2``."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:343
+msgid "Previously these were named ``releaseXX-maint``."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:345
+msgid "The versions we currently maintain is:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:347
+msgid "4.2"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:349
+msgid "This is the current series."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:351
+msgid "4.1"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:353
+msgid "Drop support for python 2.6. Add support for python 3.4, 3.5 and 3.6."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:355
+msgid "3.1"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:357
+msgid "Official support for python 2.6, 2.7 and 3.3, and also supported on PyPy."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:360
+msgid "Archived branches"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:362
+msgid ""
+"Archived branches are kept for preserving history only, and theoretically"
+" someone could provide patches for these if they depend on a series "
+"that's no longer officially supported."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:366
+msgid "An archived version is named ``X.Y-archived``."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:368
+msgid ""
+"To maintain a cleaner history and drop compatibility to continue "
+"improving the project we **do not have any archived version** right now."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:372
+msgid "Feature branches"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:374
+msgid ""
+"Major new features are worked on in dedicated branches. There's no strict"
+" naming requirement for these branches."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:377
+msgid ""
+"Feature branches are removed once they've been merged into a release "
+"branch."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:380
+msgid "Tags"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:382
+msgid ""
+"Tags are used exclusively for tagging releases. A release tag is named "
+"with the format ``vX.Y.Z`` -- for example ``v2.3.1``."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:385
+msgid ""
+"Experimental releases contain an additional identifier ``vX.Y.Z-id`` -- "
+"for example ``v3.0.0-rc1``."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:388
+msgid "Experimental tags may be removed after the official release."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:393
+msgid "Working on Features & Patches"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:397
+msgid ""
+"Contributing to Celery should be as simple as possible, so none of these "
+"steps should be considered mandatory."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:400
+msgid ""
+"You can even send in patches by email if that's your preferred work "
+"method. We won't like you any less, any contribution you make is always "
+"appreciated!"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:404
+msgid ""
+"However following these steps may make maintainers life easier, and may "
+"mean that your changes will be accepted sooner."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:408
+msgid "Forking and setting up the repository"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:410
+msgid ""
+"First you need to fork the Celery repository, a good introduction to this"
+" is in the GitHub Guide: `Fork a Repo`_."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:413
+msgid ""
+"After you have cloned the repository you should checkout your copy to a "
+"directory on your machine:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:420
+msgid ""
+"When the repository is cloned enter the directory to set up easy access "
+"to upstream changes:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:429
+msgid ""
+"If you need to pull in new changes from upstream you should always use "
+"the ``--rebase`` option to ``git pull``:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:436
+msgid ""
+"With this option you don't clutter the history with merging commit notes."
+" See `Rebasing merge commits in git`_. If you want to learn more about "
+"rebasing see the `Rebase`_ section in the GitHub guides."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:441
+msgid ""
+"If you need to work on a different branch than the one git calls "
+"``master``, you can fetch and checkout a remote branch like this::"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:446
+msgid ""
+"**Note:** Any feature or fix branch should be created from "
+"``upstream/master``."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:456
+msgid "Developing and Testing with Docker"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:458
+msgid ""
+"Because of the many components of Celery, such as a broker and backend, "
+"`Docker`_ and `docker-compose`_ can be utilized to greatly simplify the "
+"development and testing cycle. The Docker configuration here requires a "
+"Docker version of at least 17.13.0 and `docker-compose` 1.13.0+."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:463
+msgid ""
+"The Docker components can be found within the :file:`docker/` folder and "
+"the Docker image can be built via:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:470
+msgid "and run via:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:476
+msgid ""
+"where <command> is a command to execute in a Docker container. The `--rm`"
+" flag indicates that the container should be removed after it is exited "
+"and is useful to prevent accumulation of unwanted containers."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:480
+msgid "Some useful commands to run:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:482
+msgid "``bash``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:484
+msgid "To enter the Docker container like a normal shell"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:486
+msgid "``make test``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:488
+msgid ""
+"To run the test suite. **Note:** This will run tests using python 3.6 by "
+"default."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:491
+msgid "``tox``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:493
+msgid ""
+"To run tox and test against a variety of configurations. **Note:** This "
+"command will run tests for every environment defined in :file:`tox.ini`. "
+"It takes a while."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:497
+msgid "``pyenv exec python{2.7,3.4,3.5,3.6} -m pytest t/unit``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:499
+msgid "To run unit tests using pytest."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:501
+msgid ""
+"**Note:** ``{2.7,3.4,3.5,3.6}`` means you can use any of those options. "
+"e.g. ``pyenv exec python3.6 -m pytest t/unit``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:504
+msgid "``pyenv exec python{2.7,3.4,3.5,3.6} -m pytest t/integration``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:506
+msgid "To run integration tests using pytest"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:508
+msgid ""
+"**Note:** `{2.7,3.4,3.5,3.6}` means you can use any of those options. "
+"e.g. ``pyenv exec python3.6 -m pytest t/unit``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:511
+msgid ""
+"By default, docker-compose will mount the Celery and test folders in the "
+"Docker container, allowing code changes and testing to be immediately "
+"visible inside the Docker container. Environment variables, such as the "
+"broker and backend to use are also defined in the :file:`docker/docker-"
+"compose.yml` file."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:516
+msgid ""
+"By running ``docker-compose build celery`` an image will be created with "
+"the name ``celery/celery:dev``. This docker image has every dependency "
+"needed for development installed. ``pyenv`` is used to install multiple "
+"python versions, the docker images offers python 2.7, 3.4, 3.5 and 3.6. "
+"The default python version is set to 2.7."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:522
+msgid ""
+"The :file:`docker-compose.yml` file defines the necessary environment "
+"variables to run integration tests. The ``celery`` service also mounts "
+"the codebase and sets the ``PYTHONPATH`` environment variable to "
+"``/home/developer``. By setting ``PYTHONPATH`` the service allows to use "
+"the mounted codebase as global module for development. If you prefer you "
+"can also run ``python -m pip install -e .`` to install the codebase in "
+"development mode."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:529
+msgid ""
+"If you would like to run a Django or stand alone project to manually test"
+" or debug a feature you can use the image built by `docker-compose` and "
+"mount your custom code. Here's an example:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:533
+msgid "Assuming a folder structure such as:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:565
+msgid ""
+"In the previous example we are using the image that we can build from "
+"this repository and mounting the celery code base as well as our custom "
+"project."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:575
+msgid "Running the unit test suite"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:577
+msgid ""
+"If you like to develop using virtual environments or just outside docker "
+"you must make sure all necessary dependencies are installed. There are "
+"multiple requirements files to make it easier to install all "
+"dependencies. You do not have to use every requirements file but you must"
+" use `default.txt`."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:586
+msgid ""
+"To run the Celery test suite you need to install "
+":file:`requirements/test.txt`."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:594
+msgid ""
+"After installing the dependencies required, you can now execute the test "
+"suite by calling :pypi:`py.test <pytest>`:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:602
+msgid "Some useful options to :command:`py.test` are:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:604
+msgid "``-x``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:606
+msgid "Stop running the tests at the first test that fails."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:608
+msgid "``-s``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:610
+msgid "Don't capture output"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:612
+msgid "``-v``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:614
+msgid "Run with verbose output."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:616
+msgid ""
+"If you want to run the tests for a single test file only you can do so "
+"like this:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:626
+msgid "Calculating test coverage"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:628
+msgid ""
+"To calculate test coverage you must first install the :pypi:`pytest-cov` "
+"module."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:630
+msgid "Installing the :pypi:`pytest-cov` module:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:637
+msgid "Code coverage in HTML format"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:639
+msgid "Run :command:`py.test` with the ``--cov-report=html`` argument enabled:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:645
+msgid ""
+"The coverage output will then be located in the :file:`htmlcov/` "
+"directory:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:652
+msgid "Code coverage in XML (Cobertura-style)"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:654
+msgid "Run :command:`py.test` with the ``--cov-report=xml`` argument enabled:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:660
+msgid ""
+"The coverage XML output will then be located in the :file:`coverage.xml` "
+"file."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:665
+msgid "Running the tests on all supported Python versions"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:667
+msgid ""
+"There's a :pypi:`tox` configuration file in the top directory of the "
+"distribution."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:670
+msgid "To run the tests for all supported Python versions simply execute:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:676
+msgid ""
+"Use the ``tox -e`` option if you only want to test specific Python "
+"versions:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:683
+msgid "Building the documentation"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:685
+msgid ""
+"To build the documentation you need to install the dependencies listed in"
+" :file:`requirements/docs.txt` and :file:`requirements/default.txt`:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:693
+msgid ""
+"Additionally, to build with no warnings, you will need to install the "
+"following packages:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:700
+msgid ""
+"After these dependencies are installed you should be able to build the "
+"docs by running:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:709
+msgid ""
+"Make sure there are no errors or warnings in the build output. After "
+"building succeeds the documentation is available at :file:`_build/html`."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:715
+msgid "Verifying your contribution"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:717
+msgid ""
+"To use these tools you need to install a few dependencies. These "
+"dependencies can be found in :file:`requirements/pkgutils.txt`."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:720
+msgid "Installing the dependencies:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:727
+msgid "pyflakes & PEP-8"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:729
+msgid ""
+"To ensure that your changes conform to :pep:`8` and to run pyflakes "
+"execute:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:736
+msgid ""
+"To not return a negative exit code when this command fails use the "
+"``flakes`` target instead:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:744
+msgid "API reference"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:746
+msgid ""
+"To make sure that all modules have a corresponding section in the API "
+"reference please execute:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:753
+msgid ""
+"If files are missing you can add them by copying an existing reference "
+"file."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:755
+msgid ""
+"If the module is internal it should be part of the internal reference "
+"located in :file:`docs/internals/reference/`. If the module is public it "
+"should be located in :file:`docs/reference/`."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:759
+msgid ""
+"For example if reference is missing for the module "
+"``celery.worker.awesome`` and this module is considered part of the "
+"public API, use the following steps:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:763
+msgid "Use an existing file as a template:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:770
+msgid "Edit the file using your favorite editor:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:780
+msgid "Edit the index using your favorite editor:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:789
+msgid "Commit your changes:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:800
+msgid "Isort"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:802
+msgid ""
+"`Isort`_ is a python utility to help sort imports alphabetically and "
+"separated into sections. The Celery project uses isort to better maintain"
+" imports on every module. Please run isort if there are any new modules "
+"or the imports on an existent module had to be modified."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:818
+msgid "Creating pull requests"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:820
+msgid ""
+"When your feature/bugfix is complete you may want to submit a pull "
+"requests so that it can be reviewed by the maintainers."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:823
+msgid ""
+"Before submitting a pull requests please make sure you go through this "
+"checklist to make it easier for the maintainers to accept your proposed "
+"changes:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:828
+msgid ""
+"[ ] Make sure any change or new feature has a unit and/or integration "
+"test."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:827
+msgid ""
+"If a test is not written a label will be assigned to your PR with the "
+"name ``Needs Test Coverage``."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:832
+msgid "[ ] Make sure unit test coverage does not decrease."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:831
+msgid ""
+"``py.test -xv --cov=celery --cov-report=xml --cov-report term``. You can "
+"check the current test coverage here: https://codecov.io/gh/celery/celery"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:841
+msgid "[ ] Run ``flake8`` against the code. The following commands are valid"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:835 ../../../CONTRIBUTING.rst:844
+#: ../../../CONTRIBUTING.rst:853 ../../../CONTRIBUTING.rst:861
+#: ../../../CONTRIBUTING.rst:870 ../../../CONTRIBUTING.rst:879
+#: ../../../CONTRIBUTING.rst:888
+msgid "and equivalent.:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:850
+msgid "[ ] Run ``flakeplus`` against the code. The following commands are valid"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:858
+msgid "[ ] Run ``pydocstyle`` against the code. The following commands are valid"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:867
+msgid ""
+"[ ]  Build api docs to make sure everything is OK. The following commands"
+" are valid"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:876
+msgid "[ ] Build configcheck. The following commands are valid"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:885
+msgid ""
+"[ ] Run ``bandit`` to make sure there's no security issues. The following"
+" commands are valid"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:892
+msgid ""
+"[ ] Run unit and integration tests for every python version. The "
+"following commands are valid"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:894
+msgid "[ ] Confirm ``isort`` on any new or modified imports:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:900
+msgid ""
+"Creating pull requests is easy, and also let you track the progress of "
+"your contribution. Read the `Pull Requests`_ section in the GitHub Guide "
+"to learn how this is done."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:904
+msgid ""
+"You can also attach pull requests to existing issues by following the "
+"steps outlined here: https://bit.ly/koJoso"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:907
+msgid ""
+"You can also use `hub`_ to create pull requests. Example: "
+"https://theiconic.tech/git-hub-fbe2e13ef4d1"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:914
+msgid "Status Labels"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:916
+msgid ""
+"There are `different labels _` used to easily manage github issues and "
+"PRs. Most of these labels make it easy to categorize each issue with "
+"important details. For instance, you might see a ``Component:canvas`` "
+"label on an issue or PR. The ``Component:canvas`` label means the issue "
+"or PR corresponds to the canvas functionality. These labels are set by "
+"the maintainers and for the most part external contributors should not "
+"worry about them. A subset of these labels are prepended with "
+"**Status:**. Usually the **Status:** labels show important actions which "
+"the issue or PR needs. Here is a summary of such statuses:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:925
+msgid "**Status: Cannot Reproduce**"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:927
+msgid ""
+"One or more Celery core team member has not been able to reproduce the "
+"issue."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:929
+msgid "**Status: Confirmed**"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:931
+msgid "The issue or PR has been confirmed by one or more Celery core team member."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:933
+msgid "**Status: Duplicate**"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:935
+msgid "A duplicate issue or PR."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:937
+msgid "**Status: Feedback Needed**"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:939
+msgid ""
+"One or more Celery core team member has asked for feedback on the issue "
+"or PR."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:941
+msgid "**Status: Has Testcase**"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:943
+msgid ""
+"It has been confirmed the issue or PR includes a test case. This is "
+"particularly important to correctly write tests for any new feature or "
+"bug fix."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:947
+msgid "**Status: In Progress**"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:949
+msgid "The PR is still in progress."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:951
+msgid "**Status: Invalid**"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:953
+msgid "The issue reported or the PR is not valid for the project."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:955
+msgid "**Status: Needs Documentation**"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:957
+msgid "The PR does not contain documentation for the feature or bug fix proposed."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:959
+msgid "**Status: Needs Rebase**"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:961
+msgid ""
+"The PR has not been rebased with ``master``. It is very important to "
+"rebase PRs before they can be merged to ``master`` to solve any merge "
+"conflicts."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:964
+msgid "**Status: Needs Test Coverage**"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:966
+msgid ""
+"Celery uses `codecov _` to verify code coverage. Please, make sure PRs do"
+" not decrease code coverage. This label will identify PRs which need code"
+" coverage."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:969
+msgid "**Status: Needs Test Case**"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:971
+msgid ""
+"The issue or PR needs a test case. A test case can be a minimal code "
+"snippet that reproduces an issue or a detailed set of instructions and "
+"configuration values that reproduces the issue reported. If possible a "
+"test case can be submitted in the form of a PR to Celery's integration "
+"suite. The test case will be marked as failed until the bug is fixed. "
+"When a test case cannot be run by Celery's integration suite then it's "
+"better to describe in the issue itself."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:978
+msgid "**Status: Needs Verification**"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:980
+msgid ""
+"This label is used to notify other users we need to verify the test case "
+"offered by the reporter and/or we need to include the test in our "
+"integration suite."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:983
+msgid "**Status: Not a Bug**"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:985
+msgid "It has been decided the issue reported is not a bug."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:987
+msgid "**Status: Won't Fix**"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:989
+msgid ""
+"It has been decided the issue will not be fixed. Sadly the Celery project"
+" does not have unlimited resources and sometimes this decision has to be "
+"made. Although, any external contributors are invited to help out even if"
+" an issue or PR is labeled as ``Status: Won't Fix``."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:994
+msgid "**Status: Works For Me**"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:996
+msgid ""
+"One or more Celery core team members have confirmed the issue reported "
+"works for them."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1005
+msgid "Coding Style"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1007
+msgid ""
+"You should probably be able to pick up the coding style from surrounding "
+"code, but it is a good idea to be aware of the following conventions."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1011
+msgid "All Python code must follow the :pep:`8` guidelines."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1013
+msgid ""
+":pypi:`pep8` is a utility you can use to verify that your code is "
+"following the conventions."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1016
+msgid ""
+"Docstrings must follow the :pep:`257` conventions, and use the following "
+"style."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1019
+msgid "Do this:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1030
+msgid "or:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1038
+msgid "but not this:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1047
+msgid "Lines shouldn't exceed 78 columns."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1049
+msgid ""
+"You can enforce this in :command:`vim` by setting the ``textwidth`` "
+"option:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1055
+msgid ""
+"If adhering to this limit makes the code less readable, you have one more"
+" character to go on. This means 78 is a soft limit, and 79 is the hard "
+"limit :)"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1059
+msgid "Import order"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1061 ../../../CONTRIBUTING.rst:1068
+msgid "Python standard library (`import xxx`)"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1062 ../../../CONTRIBUTING.rst:1069
+msgid "Python standard library (`from xxx import`)"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1063 ../../../CONTRIBUTING.rst:1070
+msgid "Third-party packages."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1064 ../../../CONTRIBUTING.rst:1072
+msgid "Other modules from the current package."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1066
+msgid "or in case of code using Django:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1071
+msgid "Django packages."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1074
+msgid "Within these sections the imports should be sorted by module name."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1076
+msgid "Example:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1090
+msgid "Wild-card imports must not be used (`from xxx import *`)."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1092
+msgid ""
+"For distributions where Python 2.5 is the oldest support version "
+"additional rules apply:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1095
+msgid "Absolute imports must be enabled at the top of every module::"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1099
+msgid ""
+"If the module uses the :keyword:`with` statement and must be compatible "
+"with Python 2.5 (celery isn't) then it must also enable that::"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1104
+msgid ""
+"Every future import must be on its own line, as older Python 2.5 releases"
+" didn't support importing multiple features on the same future import "
+"line::"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1115
+msgid ""
+"(Note that this rule doesn't apply if the package doesn't include support"
+" for Python 2.5)"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1119
+msgid ""
+"Note that we use \"new-style\" relative imports when the distribution "
+"doesn't support Python versions below 2.5"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1122
+msgid "This requires Python 2.5 or later:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1132
+msgid "Contributing features requiring additional libraries"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1134
+msgid ""
+"Some features like a new result backend may require additional libraries "
+"that the user must install."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1137
+msgid ""
+"We use setuptools `extra_requires` for this, and all new optional "
+"features that require third-party libraries must be added."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1140
+msgid "Add a new requirements file in `requirements/extras`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1142
+msgid ""
+"For the Cassandra backend this is "
+":file:`requirements/extras/cassandra.txt`, and the file looks like this:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1149
+msgid ""
+"These are pip requirement files so you can have version specifiers and "
+"multiple packages are separated by newline. A more complex example could "
+"be:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1159
+msgid "Modify ``setup.py``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1161
+msgid ""
+"After the requirements file is added you need to add it as an option to "
+":file:`setup.py` in the ``extras_require`` section::"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1169
+msgid "Document the new feature in :file:`docs/includes/installation.txt`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1171
+msgid ""
+"You must add your feature to the list in the :ref:`bundles` section of "
+":file:`docs/includes/installation.txt`."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1174
+msgid ""
+"After you've made changes to this file you need to render the distro "
+":file:`README` file:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1183
+msgid ""
+"That's all that needs to be done, but remember that if your feature adds "
+"additional configuration options then these needs to be documented in "
+":file:`docs/configuration.rst`. Also all settings need to be added to the"
+" :file:`celery/app/defaults.py` module."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1188
+msgid ""
+"Result backends require a separate section in the "
+":file:`docs/configuration.rst` file."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1194
+msgid "Contacts"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1196
+msgid ""
+"This is a list of people that can be contacted for questions regarding "
+"the official git repositories, PyPI packages Read the Docs pages."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1200
+msgid ""
+"If the issue isn't an emergency then it's better to :ref:`report an issue"
+" <reporting-bugs>`."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1205
+msgid "Committers"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1208
+msgid "Ask Solem"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst
+msgid "github"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1210
+msgid "https://github.com/ask"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst
+msgid "twitter"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1211
+msgid "https://twitter.com/#!/asksol"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1214
+msgid "Asif Saif Uddin"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1216
+msgid "https://github.com/auvipy"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1217
+msgid "https://twitter.com/#!/auvipy"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1220
+msgid "Dmitry Malinovsky"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1222
+msgid "https://github.com/malinoff"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1223
+msgid "https://twitter.com/__malinoff__"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1226
+msgid "Ionel Cristian Mărieș"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1228
+msgid "https://github.com/ionelmc"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1229
+msgid "https://twitter.com/ionelmc"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1232
+msgid "Mher Movsisyan"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1234
+msgid "https://github.com/mher"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1235
+msgid "https://twitter.com/#!/movsm"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1238
+msgid "Omer Katz"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1239
+msgid "https://github.com/thedrow"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1240
+msgid "https://twitter.com/the_drow"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1243
+msgid "Steeve Morin"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1245
+msgid "https://github.com/steeve"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1246
+msgid "https://twitter.com/#!/steeve"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1249
+msgid "Josue Balandrano Coronel"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1251
+msgid "https://github.com/xirdneh"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1252
+msgid "https://twitter.com/eusoj_xirdneh"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1255
+msgid "Website"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1257
+msgid "The Celery Project website is run and maintained by"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1260
+msgid "Mauro Rocco"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1262
+msgid "https://github.com/fireantology"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1263
+msgid "https://twitter.com/#!/fireantology"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1265
+msgid "with design by:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1268
+msgid "Jan Henrik Helmers"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst
+msgid "web"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1270
+msgid "http://www.helmersworks.com"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1271
+msgid "https://twitter.com/#!/helmers"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1277
+msgid "Packages"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1280
+msgid "``celery``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst
+msgid "git"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1282
+msgid "https://github.com/celery/celery"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst
+msgid "CI"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1283
+msgid "https://travis-ci.org/#!/celery/celery"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst
+msgid "Windows-CI"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1284
+msgid "https://ci.appveyor.com/project/ask/celery"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst
+msgid "PyPI"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1285
+msgid ":pypi:`celery`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst
+msgid "docs"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1286
+msgid "http://docs.celeryproject.org"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1289
+msgid "``kombu``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1291
+msgid "Messaging library."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1293
+msgid "https://github.com/celery/kombu"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1294
+msgid "https://travis-ci.org/#!/celery/kombu"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1295
+msgid "https://ci.appveyor.com/project/ask/kombu"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1296
+msgid ":pypi:`kombu`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1297
+msgid "https://kombu.readthedocs.io"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1300
+msgid "``amqp``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1302
+msgid "Python AMQP 0.9.1 client."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1304
+msgid "https://github.com/celery/py-amqp"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1305
+msgid "https://travis-ci.org/#!/celery/py-amqp"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1306
+msgid "https://ci.appveyor.com/project/ask/py-amqp"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1307
+msgid ":pypi:`amqp`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1308
+msgid "https://amqp.readthedocs.io"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1311
+msgid "``vine``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1313
+msgid "Promise/deferred implementation."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1315
+msgid "https://github.com/celery/vine/"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1316
+msgid "https://travis-ci.org/#!/celery/vine/"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1317
+msgid "https://ci.appveyor.com/project/ask/vine"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1318
+msgid ":pypi:`vine`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1319
+msgid "https://vine.readthedocs.io"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1322
+msgid "``billiard``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1324
+msgid ""
+"Fork of multiprocessing containing improvements that'll eventually be "
+"merged into the Python stdlib."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1327
+msgid "https://github.com/celery/billiard"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1328
+msgid "https://travis-ci.org/#!/celery/billiard/"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1329
+msgid "https://ci.appveyor.com/project/ask/billiard"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1330
+msgid ":pypi:`billiard`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1333
+msgid "``django-celery-beat``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1335
+msgid "Database-backed Periodic Tasks with admin interface using the Django ORM."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1337
+msgid "https://github.com/celery/django-celery-beat"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1338
+msgid "https://travis-ci.org/#!/celery/django-celery-beat"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1339
+msgid "https://ci.appveyor.com/project/ask/django-celery-beat"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1340
+msgid ":pypi:`django-celery-beat`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1343
+msgid "``django-celery-results``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1345
+msgid "Store task results in the Django ORM, or using the Django Cache Framework."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1347
+msgid "https://github.com/celery/django-celery-results"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1348
+msgid "https://travis-ci.org/#!/celery/django-celery-results"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1349
+msgid "https://ci.appveyor.com/project/ask/django-celery-results"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1350
+msgid ":pypi:`django-celery-results`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1353
+msgid "``librabbitmq``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1355
+msgid "Very fast Python AMQP client written in C."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1357
+msgid "https://github.com/celery/librabbitmq"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1358
+msgid ":pypi:`librabbitmq`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1361
+msgid "``cell``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1363
+msgid "Actor library."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1365
+msgid "https://github.com/celery/cell"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1366
+msgid ":pypi:`cell`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1369
+msgid "``cyme``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1371
+msgid "Distributed Celery Instance manager."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1373
+msgid "https://github.com/celery/cyme"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1374
+msgid ":pypi:`cyme`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1375
+msgid "https://cyme.readthedocs.io/"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1379
+msgid "Deprecated"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1381
+msgid "``django-celery``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1383
+msgid "https://github.com/celery/django-celery"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1384
+msgid ":pypi:`django-celery`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1385
+msgid "http://docs.celeryproject.org/en/latest/django"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1387
+msgid "``Flask-Celery``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1389
+msgid "https://github.com/ask/Flask-Celery"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1390
+msgid ":pypi:`Flask-Celery`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1392
+msgid "``celerymon``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1394
+msgid "https://github.com/celery/celerymon"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1395
+msgid ":pypi:`celerymon`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1397
+msgid "``carrot``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1399
+msgid "https://github.com/ask/carrot"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1400
+msgid ":pypi:`carrot`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1402
+msgid "``ghettoq``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1404
+msgid "https://github.com/ask/ghettoq"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1405
+msgid ":pypi:`ghettoq`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1407
+msgid "``kombu-sqlalchemy``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1409
+msgid "https://github.com/ask/kombu-sqlalchemy"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1410
+msgid ":pypi:`kombu-sqlalchemy`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1412
+msgid "``django-kombu``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1414
+msgid "https://github.com/ask/django-kombu"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1415
+msgid ":pypi:`django-kombu`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1417
+msgid "``pylibrabbitmq``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1419
+msgid "Old name for :pypi:`librabbitmq`."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1421
+msgid ":const:`None`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1422
+msgid ":pypi:`pylibrabbitmq`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1428
+msgid "Release Procedure"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1431
+msgid "Updating the version number"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1433
+msgid "The version number must be updated three places:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1435
+msgid ":file:`celery/__init__.py`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1436
+msgid ":file:`docs/include/introduction.txt`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1437
+msgid ":file:`README.rst`"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1439
+msgid ""
+"The changes to the previous files can be handled with the [`bumpversion` "
+"command line tool] (https://pypi.org/project/bumpversion/). The "
+"corresponding configuration lives in :file:`.bumpversion.cfg`. To do the "
+"necessary changes run:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1447
+msgid ""
+"After you have changed these files you must render the :file:`README` "
+"files. There's a script to convert sphinx syntax to generic reStructured "
+"Text syntax, and the make target `readme` does this for you:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1456
+msgid "Now commit the changes:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1462
+msgid "and make a new version tag:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1470
+msgid "Releasing"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1472
+msgid "Commands to make a new public stable release:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1481
+msgid "If this is a new release series then you also need to do the following:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1485
+msgid "Go to the Read The Docs management interface at:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1485
+msgid "https://readthedocs.org/projects/celery/?fromdocs=celery"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1487
+msgid "Enter \"Edit project\""
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1489
+msgid ""
+"Change default branch to the branch of this series, for example, use the "
+"``2.4`` branch for the 2.4 series."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:1492
+msgid "Also add the previous version under the \"versions\" tab."
+msgstr ""
+

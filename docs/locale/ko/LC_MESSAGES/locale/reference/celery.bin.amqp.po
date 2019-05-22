@@ -1,0 +1,213 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../reference/celery.bin.amqp.rst:3
+msgid "``celery.bin.amqp``"
+msgstr ""
+
+#: celery.bin.amqp:1 of
+msgid "The :program:`celery amqp` command."
+msgstr ""
+
+#: celery.bin.amqp.AMQPAdmin:1 of
+msgid "The celery :program:`celery amqp` utility."
+msgstr ""
+
+#: celery.bin.amqp.AMQShell:1 of
+msgid "AMQP API Shell."
+msgstr ""
+
+#: celery.bin.amqp.AMQShell celery.bin.amqp.Spec of
+msgid "Parameters"
+msgstr ""
+
+#: celery.bin.amqp.AMQShell:3 of
+msgid ""
+"Function used to connect to the server. Must return "
+":class:`kombu.Connection` object."
+msgstr ""
+
+#: celery.bin.amqp.AMQShell:6 of
+msgid ""
+"If enabled, the commands won't have annoying output not relevant when "
+"running in non-shell mode."
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.amqp:1 of
+msgid "Map of AMQP API commands and their :class:`Spec`."
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.builtins:1 of
+msgid "Map of built-in command names -> method names"
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.completenames:1 of
+msgid "Return all commands starting with `text`, for tab-completion."
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.default:1 of
+msgid "Called on an input line when the command prefix is not recognized."
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.default:3 of
+msgid "If this method is not overridden, it prints an error message and returns."
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.dispatch:1 of
+msgid "Dispatch and execute the command."
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.dispatch:3 of
+msgid "Look-up order is: :attr:`builtins` -> :attr:`amqp`."
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.do_exit:1 of
+msgid "The `'exit'` command."
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.do_help:1 of
+msgid "List available commands with \"help\" or detailed help with \"help cmd\"."
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.get_amqp_api_command:1 of
+msgid "Get AMQP command wrapper."
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.get_amqp_api_command:3 of
+msgid ""
+"With a command name and a list of arguments, convert the arguments to "
+"Python values and find the corresponding method on the AMQP channel "
+"object."
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.get_amqp_api_command
+#: celery.bin.amqp.AMQShell.parseline of
+msgid "Returns"
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.get_amqp_api_command:7 of
+msgid "of `(method, processed_args)` pairs."
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.get_amqp_api_command
+#: celery.bin.amqp.AMQShell.parseline of
+msgid "Return type"
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.note:1 of
+msgid "Say something to the user.  Disabled if :attr:`silent`."
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.onecmd:1 of
+msgid "Parse line and execute command."
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.parseline:1 of
+msgid "Parse input line."
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.parseline:3 of
+msgid "of three items:     `(command_name, arglist, original_line)`"
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.parseline:5 of
+msgid "of three items:"
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.parseline:6 of
+msgid "`(command_name, arglist, original_line)`"
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.prompt:1 of
+msgid "str(object='') -> str str(bytes_or_buffer[, encoding[, errors]]) -> str"
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.prompt:4 of
+msgid ""
+"Create a new string object from the given object. If encoding or errors "
+"is specified, then the object must expose a data buffer that will be "
+"decoded using the given encoding and error handler. Otherwise, returns "
+"the result of object.__str__() (if defined) or repr(object). encoding "
+"defaults to sys.getdefaultencoding(). errors defaults to 'strict'."
+msgstr ""
+
+#: celery.bin.amqp.AMQShell.respond:1 of
+msgid "What to do with the return value of a command."
+msgstr ""
+
+#: celery.bin.amqp.Spec:1 of
+msgid "AMQP Command specification."
+msgstr ""
+
+#: celery.bin.amqp.Spec:3 of
+msgid ""
+"Used to convert arguments to Python values and display various help and "
+"tool-tips."
+msgstr ""
+
+#: celery.bin.amqp.Spec:6 of
+msgid "see :attr:`args`."
+msgstr ""
+
+#: celery.bin.amqp.Spec:8 of
+msgid "see :attr:`returns`."
+msgstr ""
+
+#: celery.bin.amqp.Spec.args:1 of
+msgid ""
+"List of arguments this command takes. Should contain ``(argument_name, "
+"argument_type)`` tuples."
+msgstr ""
+
+#: celery.bin.amqp.Spec.coerce:1 of
+msgid "Coerce value for argument at index."
+msgstr ""
+
+#: celery.bin.amqp.Spec.format_response:1 of
+msgid "Format the return value of this command in a human-friendly way."
+msgstr ""
+
+#: celery.bin.amqp.Spec.returns:1 of
+msgid ""
+"Helpful human string representation of what this command returns. May be "
+":const:`None`, to signify the return type is unknown."
+msgstr ""
+
+#: celery.bin.amqp.Spec.str_args_to_python:1 of
+msgid "Process list of string arguments to values according to spec."
+msgstr ""
+
+#: celery.bin.amqp.Spec.str_args_to_python:4 of
+msgid "Example"
+msgstr ""
+
+#: celery.bin.amqp.amqp:1 of
+msgid "AMQP Administration Shell."
+msgstr ""
+
+#: celery.bin.amqp.amqp:3 of
+msgid ""
+"Also works for non-AMQP transports (but not ones that store declarations "
+"in memory)."
+msgstr ""
+
+#: celery.bin.amqp.amqp:7 of
+msgid "Examples"
+msgstr ""
+

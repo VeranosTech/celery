@@ -1,0 +1,47 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../reference/celery.worker.consumer.tasks.rst:3
+msgid "``celery.worker.consumer.tasks``"
+msgstr ""
+
+#: celery.worker.consumer.tasks:1 of
+msgid "Worker Task Consumer Bootstep."
+msgstr ""
+
+#: celery.worker.consumer.tasks.Tasks:1 of
+msgid "Bootstep starting the task message consumer."
+msgstr ""
+
+#: celery.worker.consumer.tasks.Tasks.info:1 of
+msgid "Return task consumer info."
+msgstr ""
+
+#: celery.worker.consumer.tasks.Tasks.shutdown:1 of
+msgid "Shutdown task consumer."
+msgstr ""
+
+#: celery.worker.consumer.tasks.Tasks.start:1 of
+msgid "Start task consumer."
+msgstr ""
+
+#: celery.worker.consumer.tasks.Tasks.stop:1 of
+msgid "Stop task consumer."
+msgstr ""
+

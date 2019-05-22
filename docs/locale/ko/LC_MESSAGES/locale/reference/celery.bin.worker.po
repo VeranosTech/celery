@@ -1,0 +1,246 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../reference/celery.bin.worker.rst:3
+msgid "``celery.bin.worker``"
+msgstr ""
+
+#: celery.bin.worker:1 of
+msgid "Program used to start a Celery worker instance."
+msgstr ""
+
+#: celery.bin.worker:3 of
+msgid "The :program:`celery worker` command (previously known as ``celeryd``)"
+msgstr ""
+
+#: celery.bin.worker:9 of
+msgid "See :ref:`preload-options`."
+msgstr ""
+
+#: celery.bin.worker:13 of
+msgid ""
+"Number of child processes processing the queue.  The default is the "
+"number of CPUs available on your system."
+msgstr ""
+
+#: celery.bin.worker:18 of
+msgid "Pool implementation:"
+msgstr ""
+
+#: celery.bin.worker:20 of
+msgid "prefork (default), eventlet, gevent or solo."
+msgstr ""
+
+#: celery.bin.worker:24 of
+#, python-format
+msgid ""
+"Set custom hostname (e.g., 'w1@%%h').  Expands: %%h (hostname), %%n "
+"(name) and %%d, (domain)."
+msgstr ""
+
+#: celery.bin.worker:29 of
+msgid ""
+"Also run the `celery beat` periodic task scheduler.  Please note that "
+"there must only be one instance of this service."
+msgstr ""
+
+#: celery.bin.worker:34 of
+msgid ""
+"``-B`` is meant to be used for development purposes. For production "
+"environment, you need to start :program:`celery beat` separately."
+msgstr ""
+
+#: celery.bin.worker:39 of
+msgid ""
+"List of queues to enable for this worker, separated by comma. By default "
+"all configured queues are enabled. Example: `-Q video,image`"
+msgstr ""
+
+#: celery.bin.worker:45 of
+msgid ""
+"List of queues to disable for this worker, separated by comma. By default"
+" all configured queues are enabled. Example: `-X video,image`."
+msgstr ""
+
+#: celery.bin.worker:51 of
+msgid ""
+"Comma separated list of additional modules to import. Example: -I "
+"foo.tasks,bar.tasks"
+msgstr ""
+
+#: celery.bin.worker:56 of
+msgid ""
+"Path to the schedule database if running with the `-B` option. Defaults "
+"to `celerybeat-schedule`.  The extension \".db\" may be appended to the "
+"filename."
+msgstr ""
+
+#: celery.bin.worker:62 of
+msgid "Apply optimization profile.  Supported: default, fair"
+msgstr ""
+
+#: celery.bin.worker:66 of
+msgid "Set custom prefetch multiplier value for this worker instance."
+msgstr ""
+
+#: celery.bin.worker:70 of
+msgid ""
+"Scheduler class to use.  Default is "
+":class:`celery.beat.PersistentScheduler`"
+msgstr ""
+
+#: celery.bin.worker:75 of
+msgid ""
+"Path to the state database.  The extension '.db' may be appended to the "
+"filename.  Default: {default}"
+msgstr ""
+
+#: celery.bin.worker:80 of
+msgid ""
+"Send task-related events that can be captured by monitors like "
+":program:`celery events`, `celerymon`, and others."
+msgstr ""
+
+#: celery.bin.worker:85 of
+msgid "Don't subscribe to other workers events."
+msgstr ""
+
+#: celery.bin.worker:89 of
+msgid "Don't synchronize with other workers at start-up."
+msgstr ""
+
+#: celery.bin.worker:93 of
+msgid "Don't send event heartbeats."
+msgstr ""
+
+#: celery.bin.worker:97 of
+msgid "Interval in seconds at which to send worker heartbeat"
+msgstr ""
+
+#: celery.bin.worker:101 of
+msgid ""
+"Purges all waiting tasks before the daemon is started. **WARNING**: This "
+"is unrecoverable, and the tasks will be deleted from the messaging "
+"server."
+msgstr ""
+
+#: celery.bin.worker:107 of
+msgid "Enables a hard time limit (in seconds int/float) for tasks."
+msgstr ""
+
+#: celery.bin.worker:111 of
+msgid "Enables a soft time limit (in seconds int/float) for tasks."
+msgstr ""
+
+#: celery.bin.worker:115 of
+msgid ""
+"Maximum number of tasks a pool worker can execute before it's terminated "
+"and replaced by a new worker."
+msgstr ""
+
+#: celery.bin.worker:120 of
+msgid ""
+"Maximum amount of resident memory, in KiB, that may be consumed by a "
+"child process before it will be replaced by a new one.  If a single task "
+"causes a child process to exceed this limit, the task will be completed "
+"and the child process will be replaced afterwards. Default: no limit."
+msgstr ""
+
+#: celery.bin.worker:128 of
+msgid ""
+"Enable autoscaling by providing max_concurrency, min_concurrency. "
+"Example::"
+msgstr ""
+
+#: celery.bin.worker:133 of
+msgid "(always keep 3 processes, but grow to 10 if necessary)"
+msgstr ""
+
+#: celery.bin.worker:137 of
+msgid "Start worker as a background process."
+msgstr ""
+
+#: celery.bin.worker:141 of
+msgid "Path to log file.  If no logfile is specified, `stderr` is used."
+msgstr ""
+
+#: celery.bin.worker:145 of
+msgid ""
+"Logging level, choose between `DEBUG`, `INFO`, `WARNING`, `ERROR`, "
+"`CRITICAL`, or `FATAL`."
+msgstr ""
+
+#: celery.bin.worker:150 of
+msgid "Optional file used to store the process pid."
+msgstr ""
+
+#: celery.bin.worker:152 of
+msgid ""
+"The program won't start if this file already exists and the pid is still "
+"alive."
+msgstr ""
+
+#: celery.bin.worker:157 of
+msgid "User id, or user name of the user to run as after detaching."
+msgstr ""
+
+#: celery.bin.worker:161 of
+msgid "Group id, or group name of the main group to change to after detaching."
+msgstr ""
+
+#: celery.bin.worker:166 of
+msgid ""
+"Effective :manpage:`umask(1)` (in octal) of the process after detaching. "
+"Inherits the :manpage:`umask(1)` of the parent process by default."
+msgstr ""
+
+#: celery.bin.worker:171 of
+msgid "Optional directory to change to after detaching."
+msgstr ""
+
+#: celery.bin.worker:175 of
+msgid "Executable to use for the detached process."
+msgstr ""
+
+#: celery.bin.worker.worker:1 of
+msgid "Start worker instance."
+msgstr ""
+
+#: celery.bin.worker.worker:4 of
+msgid "Examples"
+msgstr ""
+
+#: celery.bin.worker.worker.with_pool_option:1 of
+msgid "Return tuple of ``(short_opts, long_opts)``."
+msgstr ""
+
+#: celery.bin.worker.worker.with_pool_option:3 of
+msgid ""
+"Returns only if the command supports a pool argument, and used to monkey "
+"patch eventlet/gevent environments as early as possible."
+msgstr ""
+
+#: celery.bin.worker.worker.with_pool_option:8 of
+msgid "Example"
+msgstr ""
+
+#: celery.bin.worker.main:1 of
+msgid "Start worker."
+msgstr ""
+

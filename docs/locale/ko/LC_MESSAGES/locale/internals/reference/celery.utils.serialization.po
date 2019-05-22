@@ -1,0 +1,142 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../internals/reference/celery.utils.serialization.rst:3
+msgid "``celery.utils.serialization``"
+msgstr ""
+
+#: celery.utils.serialization:1 of
+msgid "Utilities for safely pickling exceptions."
+msgstr ""
+
+#: celery.utils.serialization.UnpickleableExceptionWrapper:1 of
+msgid "Wraps unpickleable exceptions."
+msgstr ""
+
+#: celery.utils.serialization.UnpickleableExceptionWrapper
+#: celery.utils.serialization.find_pickleable_exception of
+msgid "Parameters"
+msgstr ""
+
+#: celery.utils.serialization.UnpickleableExceptionWrapper:3 of
+msgid "See :attr:`exc_module`."
+msgstr ""
+
+#: celery.utils.serialization.UnpickleableExceptionWrapper:5 of
+msgid "See :attr:`exc_cls_name`."
+msgstr ""
+
+#: celery.utils.serialization.UnpickleableExceptionWrapper:7 of
+msgid "See :attr:`exc_args`."
+msgstr ""
+
+#: celery.utils.serialization.UnpickleableExceptionWrapper:11 of
+msgid "Example"
+msgstr ""
+
+#: celery.utils.serialization.UnpickleableExceptionWrapper.exc_args:1 of
+msgid "The arguments for the original exception."
+msgstr ""
+
+#: celery.utils.serialization.UnpickleableExceptionWrapper.exc_cls_name:1 of
+msgid "The name of the original exception class."
+msgstr ""
+
+#: celery.utils.serialization.UnpickleableExceptionWrapper.exc_module:1 of
+msgid "The module of the original exception."
+msgstr ""
+
+#: celery.utils.serialization.subclass_exception:1 of
+msgid "Create new exception class."
+msgstr ""
+
+#: celery.utils.serialization.find_pickleable_exception:1 of
+msgid "Find first pickleable exception base class."
+msgstr ""
+
+#: celery.utils.serialization.find_pickleable_exception:3 of
+msgid ""
+"With an exception instance, iterate over its super classes (by MRO) and "
+"find the first super exception that's pickleable.  It does not go below "
+":exc:`Exception` (i.e., it skips :exc:`Exception`, :class:`BaseException`"
+" and :class:`object`).  If that happens you should use "
+":exc:`UnpickleableException` instead."
+msgstr ""
+
+#: celery.utils.serialization.find_pickleable_exception:9 of
+msgid "An exception instance."
+msgstr ""
+
+#: celery.utils.serialization.find_pickleable_exception:11 of
+msgid "decoder to use."
+msgstr ""
+
+#: celery.utils.serialization.find_pickleable_exception:12 of
+msgid "encoder to use"
+msgstr ""
+
+#: celery.utils.serialization.find_pickleable_exception of
+msgid "Returns"
+msgstr ""
+
+#: celery.utils.serialization.find_pickleable_exception:14 of
+msgid ""
+"Nearest pickleable parent exception class     (except :exc:`Exception` "
+"and parents), or if the exception is     pickleable it will return "
+":const:`None`."
+msgstr ""
+
+#: celery.utils.serialization.find_pickleable_exception:17 of
+msgid "Nearest pickleable parent exception class"
+msgstr ""
+
+#: celery.utils.serialization.find_pickleable_exception:17 of
+msgid ""
+"(except :exc:`Exception` and parents), or if the exception is pickleable "
+"it will return :const:`None`."
+msgstr ""
+
+#: celery.utils.serialization.find_pickleable_exception of
+msgid "Return type"
+msgstr ""
+
+#: celery.utils.serialization.create_exception_cls:1 of
+msgid "Dynamically create an exception class."
+msgstr ""
+
+#: celery.utils.serialization.get_pickleable_exception:1 of
+msgid "Make sure exception is pickleable."
+msgstr ""
+
+#: celery.utils.serialization.get_pickleable_etype:1 of
+msgid "Get pickleable exception type."
+msgstr ""
+
+#: celery.utils.serialization.get_pickled_exception:1 of
+msgid "Reverse of :meth:`get_pickleable_exception`."
+msgstr ""
+
+#: celery.utils.serialization.strtobool:1 of
+msgid "Convert common terms for true/false to bool."
+msgstr ""
+
+#: celery.utils.serialization.strtobool:3 of
+msgid "Examples (true/false/yes/no/on/off/1/0)."
+msgstr ""
+

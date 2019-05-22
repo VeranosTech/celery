@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../reference/celery.contrib.testing.app.rst:3
+msgid "``celery.contrib.testing.app``"
+msgstr ""
+
+#: ../../reference/celery.contrib.testing.app.rst:9
+msgid "API Reference"
+msgstr ""
+
+#: celery.contrib.testing.app:1 of
+msgid "Create Celery app instances used for testing."
+msgstr ""
+
+#: celery.contrib.testing.app.DEFAULT_TEST_CONFIG:1 of
+msgid "Contains the default configuration values for the test app."
+msgstr ""
+
+#: celery.contrib.testing.app.TestApp:1 of
+msgid "App used for testing."
+msgstr ""
+
+#: celery.contrib.testing.app.Trap:1 of
+msgid "Trap that pretends to be an app but raises an exception instead."
+msgstr ""
+
+#: celery.contrib.testing.app.Trap:3 of
+msgid ""
+"This to protect from code that does not properly pass app instances, then"
+" falls back to the current_app."
+msgstr ""
+
+#: celery.contrib.testing.app.UnitLogging:1 of
+msgid "Sets up logging for the test application."
+msgstr ""
+
+#: celery.contrib.testing.app.set_trap:1 of
+msgid "Contextmanager that installs the trap app."
+msgstr ""
+
+#: celery.contrib.testing.app.set_trap:3 of
+msgid ""
+"The trap means that anything trying to use the current or default app "
+"will raise an exception."
+msgstr ""
+
+#: celery.contrib.testing.app.setup_default_app:1 of
+msgid "Setup default app for testing."
+msgstr ""
+
+#: celery.contrib.testing.app.setup_default_app:3 of
+msgid "Ensures state is clean after the test returns."
+msgstr ""
+

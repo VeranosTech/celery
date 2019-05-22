@@ -1,0 +1,537 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../userguide/application.rst:5
+msgid "Application"
+msgstr ""
+
+#: ../../userguide/application.rst:11
+msgid ""
+"The Celery library must be instantiated before use, this instance is "
+"called an application (or *app* for short)."
+msgstr ""
+
+#: ../../userguide/application.rst:14
+msgid ""
+"The application is thread-safe so that multiple Celery applications with "
+"different configurations, components, and tasks can co-exist in the same "
+"process space."
+msgstr ""
+
+#: ../../userguide/application.rst:18
+msgid "Let's create one now:"
+msgstr ""
+
+#: ../../userguide/application.rst:27
+msgid ""
+"The last line shows the textual representation of the application: "
+"including the name of the app class (``Celery``), the name of the current"
+" main module (``__main__``), and the memory address of the object "
+"(``0x100469fd0``)."
+msgstr ""
+
+#: ../../userguide/application.rst:33
+msgid "Main Name"
+msgstr ""
+
+#: ../../userguide/application.rst:35
+msgid ""
+"Only one of these is important, and that's the main module name. Let's "
+"look at why that is."
+msgstr ""
+
+#: ../../userguide/application.rst:38
+msgid ""
+"When you send a task message in Celery, that message won't contain any "
+"source code, but only the name of the task you want to execute. This "
+"works similarly to how host names work on the internet: every worker "
+"maintains a mapping of task names to their actual functions, called the "
+"*task registry*."
+msgstr ""
+
+#: ../../userguide/application.rst:44
+msgid ""
+"Whenever you define a task, that task will also be added to the local "
+"registry:"
+msgstr ""
+
+#: ../../userguide/application.rst:61
+msgid ""
+"and there you see that ``__main__`` again; whenever Celery isn't able to "
+"detect what module the function belongs to, it uses the main module name "
+"to generate the beginning of the task name."
+msgstr ""
+
+#: ../../userguide/application.rst:65
+msgid "This is only a problem in a limited set of use cases:"
+msgstr ""
+
+#: ../../userguide/application.rst:67
+msgid "If the module that the task is defined in is run as a program."
+msgstr ""
+
+#: ../../userguide/application.rst:68
+msgid "If the application is created in the Python shell (REPL)."
+msgstr ""
+
+#: ../../userguide/application.rst:70
+msgid ""
+"For example here, where the tasks module is also used to start a worker "
+"with :meth:`@worker_main`:"
+msgstr ""
+
+#: ../../userguide/application.rst:73
+msgid ":file:`tasks.py`:"
+msgstr ""
+
+#: ../../userguide/application.rst:86
+msgid ""
+"When this module is executed the tasks will be named starting with "
+"\"``__main__``\", but when the module is imported by another process, say"
+" to call a task, the tasks will be named starting with \"``tasks``\" (the"
+" real name of the module):"
+msgstr ""
+
+#: ../../userguide/application.rst:96
+msgid "You can specify another name for the main module:"
+msgstr ""
+
+#: ../../userguide/application.rst:111
+msgid ":ref:`task-names`"
+msgstr ""
+
+#: ../../userguide/application.rst:114
+msgid "Configuration"
+msgstr ""
+
+#: ../../userguide/application.rst:116
+msgid ""
+"There are several options you can set that'll change how Celery works. "
+"These options can be set directly on the app instance, or you can use a "
+"dedicated configuration module."
+msgstr ""
+
+#: ../../userguide/application.rst:120
+msgid "The configuration is available as :attr:`@conf`:"
+msgstr ""
+
+#: ../../userguide/application.rst:127
+msgid "where you can also set configuration values directly:"
+msgstr ""
+
+#: ../../userguide/application.rst:133
+msgid "or update several keys at once by using the ``update`` method:"
+msgstr ""
+
+#: ../../userguide/application.rst:142
+msgid ""
+"The configuration object consists of multiple dictionaries that are "
+"consulted in order:"
+msgstr ""
+
+#: ../../userguide/application.rst:145
+msgid "Changes made at run-time."
+msgstr ""
+
+#: ../../userguide/application.rst:146
+msgid "The configuration module (if any)"
+msgstr ""
+
+#: ../../userguide/application.rst:147
+msgid "The default configuration (:mod:`celery.app.defaults`)."
+msgstr ""
+
+#: ../../userguide/application.rst:149
+msgid ""
+"You can even add new default sources by using the :meth:`@add_defaults` "
+"method."
+msgstr ""
+
+#: ../../userguide/application.rst:154
+msgid ""
+"Go to the :ref:`Configuration reference <configuration>` for a complete "
+"listing of all the available settings, and their default values."
+msgstr ""
+
+#: ../../userguide/application.rst:158
+msgid "``config_from_object``"
+msgstr ""
+
+#: ../../userguide/application.rst:160
+msgid ""
+"The :meth:`@config_from_object` method loads configuration from a "
+"configuration object."
+msgstr ""
+
+#: ../../userguide/application.rst:163
+msgid ""
+"This can be a configuration module, or any object with configuration "
+"attributes."
+msgstr ""
+
+#: ../../userguide/application.rst:165
+msgid ""
+"Note that any configuration that was previously set will be reset when "
+":meth:`~@config_from_object` is called. If you want to set additional "
+"configuration you should do so after."
+msgstr ""
+
+#: ../../userguide/application.rst:170
+msgid "Example 1: Using the name of a module"
+msgstr ""
+
+#: ../../userguide/application.rst:172
+msgid ""
+"The :meth:`@config_from_object` method can take the fully qualified name "
+"of a Python module, or even the name of a Python attribute, for example: "
+"``\"celeryconfig\"``, ``\"myproj.config.celery\"``, or "
+"``\"myproj.config:CeleryConfig\"``:"
+msgstr ""
+
+#: ../../userguide/application.rst:184
+msgid "The ``celeryconfig`` module may then look like this:"
+msgstr ""
+
+#: ../../userguide/application.rst:186
+msgid ":file:`celeryconfig.py`:"
+msgstr ""
+
+#: ../../userguide/application.rst:193
+msgid ""
+"and the app will be able to use it as long as ``import celeryconfig`` is "
+"possible."
+msgstr ""
+
+#: ../../userguide/application.rst:197
+msgid "Example 2: Passing an actual module object"
+msgstr ""
+
+#: ../../userguide/application.rst:199
+msgid ""
+"You can also pass an already imported module object, but this isn't "
+"always recommended."
+msgstr ""
+
+#: ../../userguide/application.rst:204
+msgid ""
+"Using the name of a module is recommended as this means the module does "
+"not need to be serialized when the prefork pool is used. If you're "
+"experiencing configuration problems or pickle errors then please try "
+"using the name of a module instead."
+msgstr ""
+
+#: ../../userguide/application.rst:220
+msgid "Example 3:  Using a configuration class/object"
+msgstr ""
+
+#: ../../userguide/application.rst:237
+msgid "``config_from_envvar``"
+msgstr ""
+
+#: ../../userguide/application.rst:239
+msgid ""
+"The :meth:`@config_from_envvar` takes the configuration module name from "
+"an environment variable"
+msgstr ""
+
+#: ../../userguide/application.rst:242
+msgid ""
+"For example -- to load configuration from a module specified in the "
+"environment variable named :envvar:`CELERY_CONFIG_MODULE`:"
+msgstr ""
+
+#: ../../userguide/application.rst:256
+msgid "You can then specify the configuration module to use via the environment:"
+msgstr ""
+
+#: ../../userguide/application.rst:265
+msgid "Censored configuration"
+msgstr ""
+
+#: ../../userguide/application.rst:267
+msgid ""
+"If you ever want to print out the configuration, as debugging information"
+" or similar, you may also want to filter out sensitive information like "
+"passwords and API keys."
+msgstr ""
+
+#: ../../userguide/application.rst:271
+msgid ""
+"Celery comes with several utilities useful for presenting the "
+"configuration, one is :meth:`~celery.app.utils.Settings.humanize`:"
+msgstr ""
+
+#: ../../userguide/application.rst:278
+msgid ""
+"This method returns the configuration as a tabulated string. This will "
+"only contain changes to the configuration by default, but you can include"
+" the built-in default keys and values by enabling the ``with_defaults`` "
+"argument."
+msgstr ""
+
+#: ../../userguide/application.rst:282
+msgid ""
+"If you instead want to work with the configuration as a dictionary, you "
+"can use the :meth:`~celery.app.utils.Settings.table` method:"
+msgstr ""
+
+#: ../../userguide/application.rst:289
+msgid ""
+"Please note that Celery won't be able to remove all sensitive "
+"information, as it merely uses a regular expression to search for "
+"commonly named keys. If you add custom settings containing sensitive "
+"information you should name the keys using a name that Celery identifies "
+"as secret."
+msgstr ""
+
+#: ../../userguide/application.rst:294
+msgid ""
+"A configuration setting will be censored if the name contains any of "
+"these sub-strings:"
+msgstr ""
+
+#: ../../userguide/application.rst:297
+msgid ""
+"``API``, ``TOKEN``, ``KEY``, ``SECRET``, ``PASS``, ``SIGNATURE``, "
+"``DATABASE``"
+msgstr ""
+
+#: ../../userguide/application.rst:300
+msgid "Laziness"
+msgstr ""
+
+#: ../../userguide/application.rst:302
+msgid ""
+"The application instance is lazy, meaning it won't be evaluated until "
+"it's actually needed."
+msgstr ""
+
+#: ../../userguide/application.rst:305
+msgid "Creating a :class:`@Celery` instance will only do the following:"
+msgstr ""
+
+#: ../../userguide/application.rst:307
+msgid "Create a logical clock instance, used for events."
+msgstr ""
+
+#: ../../userguide/application.rst:308
+msgid "Create the task registry."
+msgstr ""
+
+#: ../../userguide/application.rst:309
+msgid ""
+"Set itself as the current app (but not if the ``set_as_current`` argument"
+" was disabled)"
+msgstr ""
+
+#: ../../userguide/application.rst:311
+msgid "Call the :meth:`@on_init` callback (does nothing by default)."
+msgstr ""
+
+#: ../../userguide/application.rst:313
+msgid ""
+"The :meth:`@task` decorators don't create the tasks at the point when the"
+" task is defined, instead it'll defer the creation of the task to happen "
+"either when the task is used, or after the application has been "
+"*finalized*,"
+msgstr ""
+
+#: ../../userguide/application.rst:318
+msgid ""
+"This example shows how the task isn't created until you use the task, or "
+"access an attribute (in this case :meth:`repr`):"
+msgstr ""
+
+#: ../../userguide/application.rst:339
+msgid ""
+"*Finalization* of the app happens either explicitly by calling "
+":meth:`@finalize` -- or implicitly by accessing the :attr:`@tasks` "
+"attribute."
+msgstr ""
+
+#: ../../userguide/application.rst:343
+msgid "Finalizing the object will:"
+msgstr ""
+
+#: ../../userguide/application.rst:345
+msgid "Copy tasks that must be shared between apps"
+msgstr ""
+
+#: ../../userguide/application.rst:347
+msgid ""
+"Tasks are shared by default, but if the ``shared`` argument to the task "
+"decorator is disabled, then the task will be private to the app it's "
+"bound to."
+msgstr ""
+
+#: ../../userguide/application.rst:351
+msgid "Evaluate all pending task decorators."
+msgstr ""
+
+#: ../../userguide/application.rst:353
+msgid "Make sure all tasks are bound to the current app."
+msgstr ""
+
+#: ../../userguide/application.rst:355
+msgid ""
+"Tasks are bound to an app so that they can read default values from the "
+"configuration."
+msgstr ""
+
+msgid "The \"default app\""
+msgstr ""
+
+#: ../../userguide/application.rst:362
+msgid ""
+"Celery didn't always have applications, it used to be that there was only"
+" a module-based API, and for backwards compatibility the old API is still"
+" there until the release of Celery 5.0."
+msgstr ""
+
+#: ../../userguide/application.rst:366
+msgid ""
+"Celery always creates a special app - the \"default app\", and this is "
+"used if no custom application has been instantiated."
+msgstr ""
+
+#: ../../userguide/application.rst:369
+msgid ""
+"The :mod:`celery.task` module is there to accommodate the old API, and "
+"shouldn't be used if you use a custom app. You should always use the "
+"methods on the app instance, not the module based API."
+msgstr ""
+
+#: ../../userguide/application.rst:373
+msgid ""
+"For example, the old Task base class enables many compatibility features "
+"where some may be incompatible with newer features, such as task methods:"
+msgstr ""
+
+#: ../../userguide/application.rst:383
+msgid ""
+"The new base class is recommended even if you use the old module-based "
+"API."
+msgstr ""
+
+#: ../../userguide/application.rst:388
+msgid "Breaking the chain"
+msgstr ""
+
+#: ../../userguide/application.rst:390
+msgid ""
+"While it's possible to depend on the current app being set, the best "
+"practice is to always pass the app instance around to anything that needs"
+" it."
+msgstr ""
+
+#: ../../userguide/application.rst:394
+msgid ""
+"I call this the \"app chain\", since it creates a chain of instances "
+"depending on the app being passed."
+msgstr ""
+
+#: ../../userguide/application.rst:397
+msgid "The following example is considered bad practice:"
+msgstr ""
+
+#: ../../userguide/application.rst:408
+msgid "Instead it should take the ``app`` as an argument:"
+msgstr ""
+
+#: ../../userguide/application.rst:417
+msgid ""
+"Internally Celery uses the :func:`celery.app.app_or_default` function so "
+"that everything also works in the module-based compatibility API"
+msgstr ""
+
+#: ../../userguide/application.rst:428
+msgid ""
+"In development you can set the :envvar:`CELERY_TRACE_APP` environment "
+"variable to raise an exception if the app chain breaks:"
+msgstr ""
+
+#: ../../userguide/application.rst:439
+msgid "Celery has changed a lot from 2009 since it was initially created."
+msgstr ""
+
+#: ../../userguide/application.rst:442
+msgid ""
+"For example, in the beginning it was possible to use any callable as a "
+"task:"
+msgstr ""
+
+#: ../../userguide/application.rst:454
+msgid ""
+"or you could also create a ``Task`` class to set certain options, or "
+"override other behavior"
+msgstr ""
+
+#: ../../userguide/application.rst:471
+msgid ""
+"Later, it was decided that passing arbitrary call-able's was an anti-"
+"pattern, since it makes it very hard to use serializers other than "
+"pickle, and the feature was removed in 2.0, replaced by task decorators:"
+msgstr ""
+
+#: ../../userguide/application.rst:485
+msgid "Abstract Tasks"
+msgstr ""
+
+#: ../../userguide/application.rst:487
+msgid ""
+"All tasks created using the :meth:`~@task` decorator will inherit from "
+"the application's base :attr:`~@Task` class."
+msgstr ""
+
+#: ../../userguide/application.rst:490
+msgid "You can specify a different base class using the ``base`` argument:"
+msgstr ""
+
+#: ../../userguide/application.rst:498
+msgid ""
+"To create a custom task class you should inherit from the neutral base "
+"class: :class:`celery.Task`."
+msgstr ""
+
+#: ../../userguide/application.rst:514
+msgid ""
+"If you override the tasks ``__call__`` method, then it's very important "
+"that you also call super so that the base call method can set up the "
+"default request used when a task is called directly."
+msgstr ""
+
+#: ../../userguide/application.rst:518
+msgid ""
+"The neutral base class is special because it's not bound to any specific "
+"app yet. Once a task is bound to an app it'll read configuration to set "
+"default values, and so on."
+msgstr ""
+
+#: ../../userguide/application.rst:522
+msgid ""
+"To realize a base class you need to create a task using the :meth:`@task`"
+" decorator:"
+msgstr ""
+
+#: ../../userguide/application.rst:531
+msgid ""
+"It's even possible to change the default base class for an application by"
+" changing its :meth:`@Task` attribute:"
+msgstr ""
+

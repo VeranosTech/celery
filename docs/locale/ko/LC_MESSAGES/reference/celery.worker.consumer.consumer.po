@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../reference/celery.worker.consumer.consumer.rst:3
+msgid "``celery.worker.consumer.consumer``"
+msgstr ""
+
+#: celery.worker.consumer.consumer:1 of
+msgid "Worker Consumer Blueprint."
+msgstr ""
+
+#: celery.worker.consumer.consumer:3 of
+msgid ""
+"This module contains the components responsible for consuming messages "
+"from the broker, processing the messages and keeping the broker "
+"connections up and running."
+msgstr ""
+
+#: celery.worker.consumer.consumer.Consumer:1
+#: celery.worker.consumer.consumer.Consumer.Blueprint:1 of
+msgid "Consumer blueprint."
+msgstr ""
+
+#: celery.worker.consumer.consumer.Consumer.apply_eta_task:1 of
+msgid "Method called by the timer to apply a task with an ETA/countdown."
+msgstr ""
+
+#: celery.worker.consumer.consumer.Consumer.connect:1 of
+msgid "Establish the broker connection used for consuming tasks."
+msgstr ""
+
+#: celery.worker.consumer.consumer.Consumer.connect:3 of
+msgid ""
+"Retries establishing the connection if the "
+":setting:`broker_connection_retry` setting is enabled"
+msgstr ""
+
+#: celery.worker.consumer.consumer.Consumer.init_callback:1 of
+msgid ""
+"Optional callback called the first time the worker is ready to receive "
+"tasks."
+msgstr ""
+
+#: celery.worker.consumer.consumer.Consumer.on_decode_error:1 of
+msgid "Callback called if an error occurs while decoding a message."
+msgstr ""
+
+#: celery.worker.consumer.consumer.Consumer.on_decode_error:3 of
+msgid ""
+"Simply logs the error and acknowledges the message so it doesn't enter a "
+"loop."
+msgstr ""
+
+#: celery.worker.consumer.consumer.Consumer.on_decode_error of
+msgid "Parameters"
+msgstr ""
+
+#: celery.worker.consumer.consumer.Consumer.on_decode_error:6 of
+msgid "The message received."
+msgstr ""
+
+#: celery.worker.consumer.consumer.Consumer.on_decode_error:8 of
+msgid "The exception being handled."
+msgstr ""
+
+#: celery.worker.consumer.consumer.Consumer.pool:1 of
+msgid "The current worker pool instance."
+msgstr ""
+
+#: celery.worker.consumer.consumer.Consumer.timer:1 of
+msgid "A timer used for high-priority internal tasks, such as sending heartbeats."
+msgstr ""
+
+#: celery.worker.consumer.consumer.Evloop:1 of
+msgid "Event loop service."
+msgstr ""
+
+#: celery.worker.consumer.consumer.Evloop:3 of
+msgid "This is always started last."
+msgstr ""
+
+#: celery.worker.consumer.consumer.dump_body:1 of
+msgid "Format message body for debugging purposes."
+msgstr ""
+

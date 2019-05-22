@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../internals/reference/celery.utils.imports.rst:3
+msgid "``celery.utils.imports``"
+msgstr ""
+
+#: celery.utils.imports:1 of
+msgid "Utilities related to importing modules and symbols by name."
+msgstr ""
+
+#: celery.utils.imports.NotAPackage:1 of
+msgid "Raised when importing a package, but it's not a package."
+msgstr ""
+
+#: celery.utils.imports.qualname:1 of
+msgid "Return object name."
+msgstr ""
+
+#: celery.utils.imports.instantiate:1 of
+msgid "Instantiate class by name."
+msgstr ""
+
+#: celery.utils.imports.instantiate:3 of
+msgid ":func:`symbol_by_name`."
+msgstr ""
+
+#: celery.utils.imports.symbol_by_name:1 of
+msgid "Get symbol by qualified name."
+msgstr ""
+
+#: celery.utils.imports.symbol_by_name:3 of
+msgid "The name should be the full dot-separated path to the class::"
+msgstr ""
+
+#: celery.utils.imports.symbol_by_name:7 of
+msgid "Example::"
+msgstr ""
+
+#: celery.utils.imports.symbol_by_name:12 of
+msgid "or using ':' to separate module and symbol::"
+msgstr ""
+
+#: celery.utils.imports.symbol_by_name:16 of
+msgid ""
+"If `aliases` is provided, a dict containing short name/long name "
+"mappings, the name is looked up in the aliases first."
+msgstr ""
+
+#: celery.utils.imports.symbol_by_name:20 of
+msgid "Examples"
+msgstr ""
+
+#: celery.utils.imports.symbol_by_name:28 of
+msgid ""
+"# Does not try to look up non-string names. >>> from "
+"celery.concurrency.processes import TaskPool >>> symbol_by_name(TaskPool)"
+" is TaskPool True"
+msgstr ""
+
+#: celery.utils.imports.cwd_in_path:1 of
+msgid "Context adding the current working directory to sys.path."
+msgstr ""
+
+#: celery.utils.imports.find_module:1 of
+msgid "Version of :func:`imp.find_module` supporting dots."
+msgstr ""
+
+#: celery.utils.imports.import_from_cwd:1 of
+msgid "Import module, temporarily including modules in the current directory."
+msgstr ""
+
+#: celery.utils.imports.import_from_cwd:3 of
+msgid ""
+"Modules located in the current directory has precedence over modules "
+"located in `sys.path`."
+msgstr ""
+
+#: celery.utils.imports.reload_from_cwd:1 of
+msgid "Reload module (ensuring that CWD is in sys.path)."
+msgstr ""
+
+#: celery.utils.imports.module_file:1 of
+msgid "Return the correct original file name of a module."
+msgstr ""
+
+#: celery.utils.imports.gen_task_name:1 of
+msgid "Generate task name from name/module pair."
+msgstr ""
+

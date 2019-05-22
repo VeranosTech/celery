@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../reference/celery.app.log.rst:3
+msgid "``celery.app.log``"
+msgstr ""
+
+#: celery.app.log:1 of
+msgid "Logging configuration."
+msgstr ""
+
+#: celery.app.log:3 of
+msgid "The Celery instances logging section: ``Celery.log``."
+msgstr ""
+
+#: celery.app.log:5 of
+msgid ""
+"Sets up logging for the worker and other programs, redirects standard "
+"outs, colors log output, patches logging related compatibility fixes, and"
+" so on."
+msgstr ""
+
+#: celery.app.log.TaskFormatter:1 of
+msgid "Formatter for tasks, adding the task name and id."
+msgstr ""
+
+#: celery.app.log.TaskFormatter.format:1 of
+msgid "Format the specified record as text."
+msgstr ""
+
+#: celery.app.log.TaskFormatter.format:3 of
+msgid ""
+"The record's attribute dictionary is used as the operand to a string "
+"formatting operation which yields the returned string. Before formatting "
+"the dictionary, a couple of preparatory steps are carried out. The "
+"message attribute of the record is computed using LogRecord.getMessage()."
+" If the formatting string uses the time (as determined by a call to "
+"usesTime(), formatTime() is called to format the event time. If there is "
+"exception information, it is formatted using formatException() and "
+"appended to the message."
+msgstr ""
+
+#: celery.app.log.Logging:1 of
+msgid "Application logging setup (app.log)."
+msgstr ""
+
+#: celery.app.log.Logging.redirect_stdouts_to_logger:1 of
+msgid "Redirect :class:`sys.stdout` and :class:`sys.stderr` to logger."
+msgstr ""
+
+#: celery.app.log.Logging.redirect_stdouts_to_logger of
+msgid "Parameters"
+msgstr ""
+
+#: celery.app.log.Logging.redirect_stdouts_to_logger:3 of
+msgid "Logger instance to redirect to."
+msgstr ""
+
+#: celery.app.log.Logging.redirect_stdouts_to_logger:5 of
+msgid "The loglevel redirected message will be logged as."
+msgstr ""
+
+#: celery.app.log.Logging.setup_logger:1 of
+msgid "Deprecated: No longer used."
+msgstr ""
+
+#: celery.app.log.Logging.setup_task_loggers:1 of
+msgid "Setup the task logger."
+msgstr ""
+
+#: celery.app.log.Logging.setup_task_loggers:3 of
+msgid "If `logfile` is not specified, then `sys.stderr` is used."
+msgstr ""
+
+#: celery.app.log.Logging.setup_task_loggers:5 of
+msgid "Will return the base task logger object."
+msgstr ""
+

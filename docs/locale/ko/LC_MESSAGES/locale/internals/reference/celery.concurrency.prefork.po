@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../internals/reference/celery.concurrency.prefork.rst:3
+msgid "``celery.concurrency.prefork``"
+msgstr ""
+
+#: celery.concurrency.prefork:1 of
+msgid "Prefork execution pool."
+msgstr ""
+
+#: celery.concurrency.prefork:3 of
+msgid "Pool implementation using :mod:`multiprocessing`."
+msgstr ""
+
+#: celery.concurrency.prefork.TaskPool:1 of
+msgid "Multiprocessing Pool implementation."
+msgstr ""
+
+#: celery.concurrency.prefork.TaskPool.on_stop:1 of
+msgid "Gracefully stop the pool."
+msgstr ""
+
+#: celery.concurrency.prefork.TaskPool.on_terminate:1 of
+msgid "Force terminate the pool."
+msgstr ""
+
+#: celery.concurrency.prefork.process_initializer:1 of
+msgid "Pool child process initializer."
+msgstr ""
+
+#: celery.concurrency.prefork.process_initializer:3 of
+msgid ""
+"Initialize the child pool process to ensure the correct app instance is "
+"used and things like logging works."
+msgstr ""
+
+#: celery.concurrency.prefork.process_destructor:1 of
+msgid "Pool child process destructor."
+msgstr ""
+
+#: celery.concurrency.prefork.process_destructor:3 of
+msgid "Dispatch the :signal:`worker_process_shutdown` signal."
+msgstr ""
+

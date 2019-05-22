@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../internals/reference/celery.worker.heartbeat.rst:3
+msgid "``celery.worker.heartbeat``"
+msgstr ""
+
+#: celery.worker.heartbeat:1 of
+msgid "Heartbeat service."
+msgstr ""
+
+#: celery.worker.heartbeat:3 of
+msgid ""
+"This is the internal thread responsible for sending heartbeat events at "
+"regular intervals (may not be an actual thread)."
+msgstr ""
+
+#: celery.worker.heartbeat.Heart:1 of
+msgid "Timer sending heartbeats at regular intervals."
+msgstr ""
+
+#: celery.worker.heartbeat.Heart of
+msgid "Parameters"
+msgstr ""
+
+#: celery.worker.heartbeat.Heart:3 of
+msgid "Timer to use."
+msgstr ""
+
+#: celery.worker.heartbeat.Heart:5 of
+msgid "Event dispatcher to use."
+msgstr ""
+
+#: celery.worker.heartbeat.Heart:8 of
+msgid "Time in seconds between sending heartbeats.  Default is 2 seconds."
+msgstr ""
+

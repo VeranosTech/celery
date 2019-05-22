@@ -1,0 +1,336 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../reference/celery.app.control.rst:3
+msgid "``celery.app.control``"
+msgstr ""
+
+#: celery.app.control:1 of
+msgid "Worker Remote Control Client."
+msgstr ""
+
+#: celery.app.control:3 of
+msgid ""
+"Client for worker remote control commands. Server implementation is in "
+":mod:`celery.worker.control`."
+msgstr ""
+
+#: celery.app.control.Inspect:1 of
+msgid "API for app.control.inspect."
+msgstr ""
+
+#: celery.app.control.Control:1 of
+msgid "Worker remote control client."
+msgstr ""
+
+#: celery.app.control.Control.Mailbox:1 of
+msgid "Process Mailbox."
+msgstr ""
+
+#: celery.app.control.Control.add_consumer:1 of
+msgid "Tell all (or specific) workers to start consuming from a new queue."
+msgstr ""
+
+#: celery.app.control.Control.add_consumer:3 of
+msgid ""
+"Only the queue name is required as if only the queue is specified then "
+"the exchange/routing key will be set to the same name ( like automatic "
+"queues do)."
+msgstr ""
+
+#: celery.app.control.Control.add_consumer:9 of
+msgid ""
+"This command does not respect the default queue/exchange options in the "
+"configuration."
+msgstr ""
+
+#: celery.app.control.Control.add_consumer celery.app.control.Control.broadcast
+#: celery.app.control.Control.discard_all celery.app.control.Control.purge
+#: celery.app.control.Control.rate_limit celery.app.control.Control.revoke
+#: celery.app.control.Control.time_limit of
+msgid "Parameters"
+msgstr ""
+
+#: celery.app.control.Control.add_consumer:12 of
+msgid "Name of queue to start consuming from."
+msgstr ""
+
+#: celery.app.control.Control.add_consumer:14 of
+msgid "Optional name of exchange."
+msgstr ""
+
+#: celery.app.control.Control.add_consumer:16 of
+msgid ""
+"Type of exchange (defaults to 'direct') command to, when empty broadcast "
+"to all workers."
+msgstr ""
+
+#: celery.app.control.Control.add_consumer:19 of
+msgid "Optional routing key."
+msgstr ""
+
+#: celery.app.control.Control.add_consumer:21 of
+msgid "Additional options as supported by :meth:`kombu.entitiy.Queue.from_dict`."
+msgstr ""
+
+#: celery.app.control.Control.add_consumer:25 celery.app.control.Control.ping:6
+#: celery.app.control.Control.rate_limit:11
+#: celery.app.control.Control.revoke:15 of
+msgid ":meth:`broadcast` for supported keyword arguments."
+msgstr ""
+
+#: celery.app.control.Control.autoscale:1 of
+msgid "Change worker(s) autoscale setting."
+msgstr ""
+
+#: celery.app.control.Control.autoscale:3
+#: celery.app.control.Control.cancel_consumer:3
+#: celery.app.control.Control.disable_events:3
+#: celery.app.control.Control.enable_events:3
+#: celery.app.control.Control.pool_grow:3
+#: celery.app.control.Control.pool_shrink:3 of
+msgid "Supports the same arguments as :meth:`broadcast`."
+msgstr ""
+
+#: celery.app.control.Control.broadcast:1 of
+msgid "Broadcast a control command to the celery workers."
+msgstr ""
+
+#: celery.app.control.Control.broadcast:3 of
+msgid "Name of command to send."
+msgstr ""
+
+#: celery.app.control.Control.broadcast:5 of
+msgid "Keyword arguments for the command."
+msgstr ""
+
+#: celery.app.control.Control.broadcast:7 of
+msgid ""
+"If set, a list of the hosts to send the command to, when empty broadcast "
+"to all workers."
+msgstr ""
+
+#: celery.app.control.Control.broadcast:10 of
+msgid ""
+"Custom broker connection to use, if not set, a connection will be "
+"acquired from the pool."
+msgstr ""
+
+#: celery.app.control.Control.broadcast:13 of
+msgid "Wait for and return the reply."
+msgstr ""
+
+#: celery.app.control.Control.broadcast:15 of
+msgid "Timeout in seconds to wait for the reply."
+msgstr ""
+
+#: celery.app.control.Control.broadcast:17 of
+msgid "Limit number of replies."
+msgstr ""
+
+#: celery.app.control.Control.broadcast:19 of
+msgid "Callback called immediately for each reply received."
+msgstr ""
+
+#: celery.app.control.Control.broadcast:22 of
+msgid "Custom pattern string to match"
+msgstr ""
+
+#: celery.app.control.Control.broadcast:24 of
+msgid "Custom matcher to run the pattern to match"
+msgstr ""
+
+#: celery.app.control.Control.cancel_consumer:1 of
+msgid "Tell all (or specific) workers to stop consuming from ``queue``."
+msgstr ""
+
+#: celery.app.control.Control.disable_events:1 of
+msgid "Tell all (or specific) workers to disable events."
+msgstr ""
+
+#: celery.app.control.Control.discard_all:1 celery.app.control.Control.purge:1
+#: of
+msgid "Discard all waiting tasks."
+msgstr ""
+
+#: celery.app.control.Control.discard_all:3 celery.app.control.Control.purge:3
+#: of
+msgid ""
+"This will ignore all tasks waiting for execution, and they will be "
+"deleted from the messaging server."
+msgstr ""
+
+#: celery.app.control.Control.discard_all:6 celery.app.control.Control.purge:6
+#: of
+msgid ""
+"Optional specific connection instance to use.  If not provided a "
+"connection will be acquired from the connection pool."
+msgstr ""
+
+#: celery.app.control.Control.discard_all celery.app.control.Control.ping
+#: celery.app.control.Control.purge of
+msgid "Returns"
+msgstr ""
+
+#: celery.app.control.Control.discard_all:11
+#: celery.app.control.Control.purge:11 of
+msgid "the number of tasks discarded."
+msgstr ""
+
+#: celery.app.control.Control.discard_all celery.app.control.Control.ping
+#: celery.app.control.Control.purge of
+msgid "Return type"
+msgstr ""
+
+#: celery.app.control.Control.enable_events:1 of
+msgid "Tell all (or specific) workers to enable events."
+msgstr ""
+
+#: celery.app.control.Control.heartbeat:1 of
+msgid "Tell worker(s) to send a heartbeat immediately."
+msgstr ""
+
+#: celery.app.control.Control.heartbeat:3
+#: celery.app.control.Control.pool_restart:13
+#: celery.app.control.Control.shutdown:3 of
+msgid "Supports the same arguments as :meth:`broadcast`"
+msgstr ""
+
+#: celery.app.control.Control.ping:1 of
+msgid "Ping all (or specific) workers."
+msgstr ""
+
+#: celery.app.control.Control.ping:3 of
+msgid "List of ``{'hostname': reply}`` dictionaries."
+msgstr ""
+
+#: celery.app.control.Control.pool_grow:1 of
+msgid "Tell all (or specific) workers to grow the pool by ``n``."
+msgstr ""
+
+#: celery.app.control.Control.pool_restart:1 of
+msgid "Restart the execution pools of all or specific workers."
+msgstr ""
+
+#: celery.app.control.Control.pool_restart of
+msgid "Keyword Arguments"
+msgstr ""
+
+#: celery.app.control.Control.pool_restart:3 of
+msgid "List of modules to reload."
+msgstr ""
+
+#: celery.app.control.Control.pool_restart:5 of
+msgid "Flag to enable module reloading.  Default is False."
+msgstr ""
+
+#: celery.app.control.Control.pool_restart:7 of
+msgid "Function to reload a module."
+msgstr ""
+
+#: celery.app.control.Control.pool_restart:9 of
+msgid "List of worker names to send this command to."
+msgstr ""
+
+#: celery.app.control.Control.pool_shrink:1 of
+msgid "Tell all (or specific) workers to shrink the pool by ``n``."
+msgstr ""
+
+#: celery.app.control.Control.rate_limit:1 of
+msgid "Tell workers to set a new rate limit for task by type."
+msgstr ""
+
+#: celery.app.control.Control.rate_limit:3 of
+msgid "Name of task to change rate limit for."
+msgstr ""
+
+#: celery.app.control.Control.rate_limit:5 of
+msgid ""
+"The rate limit as tasks per second, or a rate limit string (`'100/m'`, "
+"etc. see :attr:`celery.task.base.Task.rate_limit` for more information)."
+msgstr ""
+
+#: celery.app.control.Control.revoke:1 of
+msgid "Tell all (or specific) workers to revoke a task by id."
+msgstr ""
+
+#: celery.app.control.Control.revoke:3 of
+msgid ""
+"If a task is revoked, the workers will ignore the task and not execute it"
+" after all."
+msgstr ""
+
+#: celery.app.control.Control.revoke:6 of
+msgid "Id of the task to revoke."
+msgstr ""
+
+#: celery.app.control.Control.revoke:8 of
+msgid "Also terminate the process currently working on the task (if any)."
+msgstr ""
+
+#: celery.app.control.Control.revoke:11 of
+msgid "Name of signal to send to process if terminate. Default is TERM."
+msgstr ""
+
+#: celery.app.control.Control.shutdown:1 of
+msgid "Shutdown worker(s)."
+msgstr ""
+
+#: celery.app.control.Control.terminate:1 of
+msgid "Tell all (or specific) workers to terminate a task by id."
+msgstr ""
+
+#: celery.app.control.Control.terminate:5 of
+msgid ""
+"This is just a shortcut to :meth:`revoke` with the terminate argument "
+"enabled."
+msgstr ""
+
+#: celery.app.control.Control.time_limit:1 of
+msgid "Tell workers to set time limits for a task by type."
+msgstr ""
+
+#: celery.app.control.Control.time_limit:3 of
+msgid "Name of task to change time limits for."
+msgstr ""
+
+#: celery.app.control.Control.time_limit:5 of
+msgid "New soft time limit (in seconds)."
+msgstr ""
+
+#: celery.app.control.Control.time_limit:7 of
+msgid "New hard time limit (in seconds)."
+msgstr ""
+
+#: celery.app.control.Control.time_limit:9 of
+msgid "arguments passed on to :meth:`broadcast`."
+msgstr ""
+
+#: celery.app.control.flatten_reply:1 of
+msgid "Flatten node replies."
+msgstr ""
+
+#: celery.app.control.flatten_reply:3 of
+msgid "Convert from a list of replies in this format::"
+msgstr ""
+
+#: celery.app.control.flatten_reply:8 of
+msgid "into this format::"
+msgstr ""
+

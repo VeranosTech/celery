@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:42+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../copyright.rst:2
+msgid "Copyright"
+msgstr ""
+
+#: ../../copyright.rst:4
+msgid "*Celery User Manual*"
+msgstr ""
+
+#: ../../copyright.rst:6
+msgid "by Ask Solem"
+msgstr ""
+
+#: ../../copyright.rst:10
+msgid "Copyright |copy| 2009-2016, Ask Solem."
+msgstr ""
+
+#: ../../copyright.rst:12
+msgid ""
+"All rights reserved. This material may be copied or distributed only "
+"subject to the terms and conditions set forth in the `Creative Commons "
+"Attribution-ShareAlike 4.0 International` "
+"<https://creativecommons.org/licenses/by-sa/4.0/legalcode>`_ license."
+msgstr ""
+
+#: ../../copyright.rst:17
+msgid ""
+"You may share and adapt the material, even for commercial purposes, but "
+"you must give the original author credit. If you alter, transform, or "
+"build upon this work, you may distribute the resulting work only under "
+"the same license or a license compatible to this one."
+msgstr ""
+
+#: ../../copyright.rst:25
+msgid ""
+"While the *Celery* documentation is offered under the Creative Commons "
+"*Attribution-ShareAlike 4.0 International* license the Celery *software* "
+"is offered under the `BSD License (3 Clause) "
+"<http://www.opensource.org/licenses/BSD-3-Clause>`_"
+msgstr ""
+

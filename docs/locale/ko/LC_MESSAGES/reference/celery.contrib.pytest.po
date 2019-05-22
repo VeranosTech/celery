@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../reference/celery.contrib.pytest.rst:3
+msgid "``celery.contrib.pytest``"
+msgstr ""
+
+#: ../reference/celery.contrib.pytest.rst:9
+msgid "API Reference"
+msgstr ""
+
+#: celery.contrib.pytest:1 of
+msgid "Fixtures and testing utilities for :pypi:`py.test <pytest>`."
+msgstr ""
+
+#: celery.contrib.pytest.celery_app:1 of
+msgid "Fixture creating a Celery application instance."
+msgstr ""
+
+#: celery.contrib.pytest.celery_config:1 of
+msgid "Redefine this fixture to configure the test Celery app."
+msgstr ""
+
+#: celery.contrib.pytest.celery_config:3 of
+msgid ""
+"The config returned by your fixture will then be used to configure the "
+":func:`celery_app` fixture."
+msgstr ""
+
+#: celery.contrib.pytest.celery_enable_logging:1 of
+msgid "You can override this fixture to enable logging."
+msgstr ""
+
+#: celery.contrib.pytest.celery_includes:1 of
+msgid "You can override this include modules when a worker start."
+msgstr ""
+
+#: celery.contrib.pytest.celery_includes:3 of
+msgid ""
+"You can have this return a list of module names to import, these can be "
+"task modules, modules registering signals, and so on."
+msgstr ""
+
+#: celery.contrib.pytest.celery_parameters:1 of
+msgid "Redefine this fixture to change the init parameters of test Celery app."
+msgstr ""
+
+#: celery.contrib.pytest.celery_parameters:3 of
+msgid ""
+"The dict returned by your fixture will then be used as parameters when "
+"instantiating :class:`~celery.Celery`."
+msgstr ""
+
+#: celery.contrib.pytest.celery_session_app:1 of
+msgid "Session Fixture: Return app for session fixtures."
+msgstr ""
+
+#: celery.contrib.pytest.celery_session_worker:1 of
+msgid "Session Fixture: Start worker that lives throughout test suite."
+msgstr ""
+
+#: celery.contrib.pytest.celery_worker:1 of
+msgid "Fixture: Start worker in a thread, stop it when the test returns."
+msgstr ""
+
+#: celery.contrib.pytest.celery_worker_parameters:1 of
+msgid "Redefine this fixture to change the init parameters of Celery workers."
+msgstr ""
+
+#: celery.contrib.pytest.celery_worker_parameters:3 of
+msgid ""
+"This can be used e. g. to define queues the worker will consume tasks "
+"from."
+msgstr ""
+
+#: celery.contrib.pytest.celery_worker_parameters:5 of
+msgid ""
+"The dict returned by your fixture will then be used as parameters when "
+"instantiating :class:`~celery.worker.WorkController`."
+msgstr ""
+
+#: celery.contrib.pytest.celery_worker_pool:1 of
+msgid "You can override this fixture to set the worker pool."
+msgstr ""
+
+#: celery.contrib.pytest.celery_worker_pool:3 of
+msgid ""
+"The \"solo\" pool is used by default, but you can set this to return e.g."
+" \"prefork\"."
+msgstr ""
+
+#: celery.contrib.pytest.depends_on_current_app:1 of
+msgid "Fixture that sets app as current."
+msgstr ""
+
+#: celery.contrib.pytest.use_celery_app_trap:1 of
+msgid "You can override this fixture to enable the app trap."
+msgstr ""
+
+#: celery.contrib.pytest.use_celery_app_trap:3 of
+msgid ""
+"The app trap raises an exception whenever something attempts to use the "
+"current or default apps."
+msgstr ""
+

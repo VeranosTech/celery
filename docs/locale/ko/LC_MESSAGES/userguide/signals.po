@@ -1,0 +1,942 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../userguide/signals.rst:5 ../userguide/signals.rst:69
+msgid "Signals"
+msgstr ""
+
+#: ../userguide/signals.rst:10
+msgid ""
+"Signals allow decoupled applications to receive notifications when "
+"certain actions occur elsewhere in the application."
+msgstr ""
+
+#: ../userguide/signals.rst:13
+msgid ""
+"Celery ships with many signals that your application can hook into to "
+"augment behavior of certain actions."
+msgstr ""
+
+#: ../userguide/signals.rst:19
+msgid "Basics"
+msgstr ""
+
+#: ../userguide/signals.rst:21
+msgid ""
+"Several kinds of events trigger signals, you can connect to these signals"
+" to perform actions as they trigger."
+msgstr ""
+
+#: ../userguide/signals.rst:24
+msgid "Example connecting to the :signal:`after_task_publish` signal:"
+msgstr ""
+
+#: ../userguide/signals.rst:40
+msgid ""
+"Some signals also have a sender you can filter by. For example the "
+":signal:`after_task_publish` signal uses the task name as a sender, so by"
+" providing the ``sender`` argument to "
+":class:`~celery.utils.dispatch.signal.Signal.connect` you can connect "
+"your handler to be called every time a task with name "
+"`\"proj.tasks.add\"` is published:"
+msgstr ""
+
+#: ../userguide/signals.rst:58
+msgid ""
+"Signals use the same implementation as :mod:`django.core.dispatch`. As a "
+"result other keyword parameters (e.g., signal) are passed to all signal "
+"handlers by default."
+msgstr ""
+
+#: ../userguide/signals.rst:62
+msgid ""
+"The best practice for signal handlers is to accept arbitrary keyword "
+"arguments (i.e., ``**kwargs``). That way new Celery versions can add "
+"additional arguments without breaking user code."
+msgstr ""
+
+#: ../userguide/signals.rst:72
+msgid "Task Signals"
+msgstr ""
+
+#: ../userguide/signals.rst:77
+msgid "``before_task_publish``"
+msgstr ""
+
+#: ../userguide/signals.rst:80
+msgid ""
+"Dispatched before a task is published. Note that this is executed in the "
+"process sending the task."
+msgstr ""
+
+#: ../userguide/signals.rst:83 ../userguide/signals.rst:131
+msgid "Sender is the name of the task being sent."
+msgstr ""
+
+#: ../userguide/signals.rst:85 ../userguide/signals.rst:133
+#: ../userguide/signals.rst:164 ../userguide/signals.rst:191
+#: ../userguide/signals.rst:226 ../userguide/signals.rst:266
+#: ../userguide/signals.rst:301 ../userguide/signals.rst:320
+#: ../userguide/signals.rst:352 ../userguide/signals.rst:380
+#: ../userguide/signals.rst:430 ../userguide/signals.rst:477
+#: ../userguide/signals.rst:528 ../userguide/signals.rst:565
+#: ../userguide/signals.rst:644 ../userguide/signals.rst:674
+#: ../userguide/signals.rst:700 ../userguide/signals.rst:730
+#: ../userguide/signals.rst:788
+msgid "Provides arguments:"
+msgstr ""
+
+#: ../userguide/signals.rst:87 ../userguide/signals.rst:141
+msgid "``body``"
+msgstr ""
+
+#: ../userguide/signals.rst:89
+msgid "Task message body."
+msgstr ""
+
+#: ../userguide/signals.rst:91
+msgid ""
+"This is a mapping containing the task message fields, see :ref:`message-"
+"protocol-task-v2` and :ref:`message-protocol-task-v1` for a reference of "
+"possible fields that can be defined."
+msgstr ""
+
+#: ../userguide/signals.rst:96 ../userguide/signals.rst:147
+msgid "``exchange``"
+msgstr ""
+
+#: ../userguide/signals.rst:98
+msgid "Name of the exchange to send to or a :class:`~kombu.Exchange` object."
+msgstr ""
+
+#: ../userguide/signals.rst:100 ../userguide/signals.rst:151
+msgid "``routing_key``"
+msgstr ""
+
+#: ../userguide/signals.rst:102
+msgid "Routing key to use when sending the message."
+msgstr ""
+
+#: ../userguide/signals.rst:104 ../userguide/signals.rst:135
+msgid "``headers``"
+msgstr ""
+
+#: ../userguide/signals.rst:106
+msgid "Application headers mapping (can be modified)."
+msgstr ""
+
+#: ../userguide/signals.rst:108
+msgid "``properties``"
+msgstr ""
+
+#: ../userguide/signals.rst:110
+msgid "Message properties (can be modified)"
+msgstr ""
+
+#: ../userguide/signals.rst:112
+msgid "``declare``"
+msgstr ""
+
+#: ../userguide/signals.rst:114
+msgid ""
+"List of entities (:class:`~kombu.Exchange`, :class:`~kombu.Queue`, or "
+":class:`~kombu.binding` to declare before publishing the message. Can be "
+"modified."
+msgstr ""
+
+#: ../userguide/signals.rst:118
+msgid "``retry_policy``"
+msgstr ""
+
+#: ../userguide/signals.rst:120
+msgid ""
+"Mapping of retry options. Can be any argument to "
+":meth:`kombu.Connection.ensure` and can be modified."
+msgstr ""
+
+#: ../userguide/signals.rst:126
+msgid "``after_task_publish``"
+msgstr ""
+
+#: ../userguide/signals.rst:128
+msgid ""
+"Dispatched when a task has been sent to the broker. Note that this is "
+"executed in the process that sent the task."
+msgstr ""
+
+#: ../userguide/signals.rst:137
+msgid ""
+"The task message headers, see :ref:`message-protocol-task-v2` and :ref"
+":`message-protocol-task-v1` for a reference of possible fields that can "
+"be defined."
+msgstr ""
+
+#: ../userguide/signals.rst:143
+msgid ""
+"The task message body, see :ref:`message-protocol-task-v2` and :ref"
+":`message-protocol-task-v1` for a reference of possible fields that can "
+"be defined."
+msgstr ""
+
+#: ../userguide/signals.rst:149
+msgid "Name of the exchange or :class:`~kombu.Exchange` object used."
+msgstr ""
+
+#: ../userguide/signals.rst:153
+msgid "Routing key used."
+msgstr ""
+
+#: ../userguide/signals.rst:158
+msgid "``task_prerun``"
+msgstr ""
+
+#: ../userguide/signals.rst:160
+msgid "Dispatched before a task is executed."
+msgstr ""
+
+#: ../userguide/signals.rst:162
+msgid "Sender is the task object being executed."
+msgstr ""
+
+#: ../userguide/signals.rst:166 ../userguide/signals.rst:193
+#: ../userguide/signals.rst:268
+msgid "``task_id``"
+msgstr ""
+
+#: ../userguide/signals.rst:168 ../userguide/signals.rst:195
+msgid "Id of the task to be executed."
+msgstr ""
+
+#: ../userguide/signals.rst:170 ../userguide/signals.rst:197
+msgid "``task``"
+msgstr ""
+
+#: ../userguide/signals.rst:172 ../userguide/signals.rst:199
+msgid "The task being executed."
+msgstr ""
+
+#: ../userguide/signals.rst:174 ../userguide/signals.rst:201
+#: ../userguide/signals.rst:276 ../userguide/signals.rst:650
+msgid "``args``"
+msgstr ""
+
+#: ../userguide/signals.rst:176 ../userguide/signals.rst:203
+msgid "The tasks positional arguments."
+msgstr ""
+
+#: ../userguide/signals.rst:178 ../userguide/signals.rst:205
+#: ../userguide/signals.rst:280 ../userguide/signals.rst:654
+msgid "``kwargs``"
+msgstr ""
+
+#: ../userguide/signals.rst:180 ../userguide/signals.rst:207
+msgid "The tasks keyword arguments."
+msgstr ""
+
+#: ../userguide/signals.rst:185
+msgid "``task_postrun``"
+msgstr ""
+
+#: ../userguide/signals.rst:187
+msgid "Dispatched after a task has been executed."
+msgstr ""
+
+#: ../userguide/signals.rst:189 ../userguide/signals.rst:250
+#: ../userguide/signals.rst:264
+msgid "Sender is the task object executed."
+msgstr ""
+
+#: ../userguide/signals.rst:209
+msgid "``retval``"
+msgstr ""
+
+#: ../userguide/signals.rst:211
+msgid "The return value of the task."
+msgstr ""
+
+#: ../userguide/signals.rst:213
+msgid "``state``"
+msgstr ""
+
+#: ../userguide/signals.rst:215
+msgid "Name of the resulting state."
+msgstr ""
+
+#: ../userguide/signals.rst:220
+msgid "``task_retry``"
+msgstr ""
+
+#: ../userguide/signals.rst:222
+msgid "Dispatched when a task will be retried."
+msgstr ""
+
+#: ../userguide/signals.rst:224
+msgid "Sender is the task object."
+msgstr ""
+
+#: ../userguide/signals.rst:228 ../userguide/signals.rst:303
+#: ../userguide/signals.rst:322
+msgid "``request``"
+msgstr ""
+
+#: ../userguide/signals.rst:230
+msgid "The current task request."
+msgstr ""
+
+#: ../userguide/signals.rst:232
+msgid "``reason``"
+msgstr ""
+
+#: ../userguide/signals.rst:234
+msgid ""
+"Reason for retry (usually an exception instance, but can always be "
+"coerced to :class:`str`)."
+msgstr ""
+
+#: ../userguide/signals.rst:237 ../userguide/signals.rst:288
+msgid "``einfo``"
+msgstr ""
+
+#: ../userguide/signals.rst:239
+msgid ""
+"Detailed exception information, including traceback (a "
+":class:`billiard.einfo.ExceptionInfo` object)."
+msgstr ""
+
+#: ../userguide/signals.rst:246
+msgid "``task_success``"
+msgstr ""
+
+#: ../userguide/signals.rst:248
+msgid "Dispatched when a task succeeds."
+msgstr ""
+
+#: ../userguide/signals.rst:252
+msgid "Provides arguments"
+msgstr ""
+
+#: ../userguide/signals.rst:255
+msgid "``result``"
+msgstr ""
+
+#: ../userguide/signals.rst:255
+msgid "Return value of the task."
+msgstr ""
+
+#: ../userguide/signals.rst:260
+msgid "``task_failure``"
+msgstr ""
+
+#: ../userguide/signals.rst:262
+msgid "Dispatched when a task fails."
+msgstr ""
+
+#: ../userguide/signals.rst:270
+msgid "Id of the task."
+msgstr ""
+
+#: ../userguide/signals.rst:272
+msgid "``exception``"
+msgstr ""
+
+#: ../userguide/signals.rst:274
+msgid "Exception instance raised."
+msgstr ""
+
+#: ../userguide/signals.rst:278
+msgid "Positional arguments the task was called with."
+msgstr ""
+
+#: ../userguide/signals.rst:282
+msgid "Keyword arguments the task was called with."
+msgstr ""
+
+#: ../userguide/signals.rst:284
+msgid "``traceback``"
+msgstr ""
+
+#: ../userguide/signals.rst:286
+msgid "Stack trace object."
+msgstr ""
+
+#: ../userguide/signals.rst:290
+msgid "The :class:`billiard.einfo.ExceptionInfo` instance."
+msgstr ""
+
+#: ../userguide/signals.rst:295
+msgid "``task_received``"
+msgstr ""
+
+#: ../userguide/signals.rst:297
+msgid ""
+"Dispatched when a task is received from the broker and is ready for "
+"execution."
+msgstr ""
+
+#: ../userguide/signals.rst:299
+msgid "Sender is the consumer object."
+msgstr ""
+
+#: ../userguide/signals.rst:305 ../userguide/signals.rst:324
+msgid ""
+"This is a :class:`~celery.worker.request.Request` instance, and not "
+"``task.request``. When using the prefork pool this signal is dispatched "
+"in the parent process, so ``task.request`` isn't available and shouldn't "
+"be used. Use this object instead, as they share many of the same fields."
+msgstr ""
+
+#: ../userguide/signals.rst:314
+msgid "``task_revoked``"
+msgstr ""
+
+#: ../userguide/signals.rst:316
+msgid "Dispatched when a task is revoked/terminated by the worker."
+msgstr ""
+
+#: ../userguide/signals.rst:318
+msgid "Sender is the task object revoked/terminated."
+msgstr ""
+
+#: ../userguide/signals.rst:330
+msgid "``terminated``"
+msgstr ""
+
+#: ../userguide/signals.rst:332
+msgid "Set to :const:`True` if the task was terminated."
+msgstr ""
+
+#: ../userguide/signals.rst:334
+msgid "``signum``"
+msgstr ""
+
+#: ../userguide/signals.rst:336
+msgid ""
+"Signal number used to terminate the task. If this is :const:`None` and "
+"terminated is :const:`True` then :sig:`TERM` should be assumed."
+msgstr ""
+
+#: ../userguide/signals.rst:339
+msgid "``expired``"
+msgstr ""
+
+#: ../userguide/signals.rst:341
+msgid "Set to :const:`True` if the task expired."
+msgstr ""
+
+#: ../userguide/signals.rst:346
+msgid "``task_unknown``"
+msgstr ""
+
+#: ../userguide/signals.rst:348
+msgid ""
+"Dispatched when a worker receives a message for a task that's not "
+"registered."
+msgstr ""
+
+#: ../userguide/signals.rst:350 ../userguide/signals.rst:378
+msgid "Sender is the worker :class:`~celery.worker.consumer.Consumer`."
+msgstr ""
+
+#: ../userguide/signals.rst:354
+msgid "``name``"
+msgstr ""
+
+#: ../userguide/signals.rst:356
+msgid "Name of task not found in registry."
+msgstr ""
+
+#: ../userguide/signals.rst:358
+msgid "``id``"
+msgstr ""
+
+#: ../userguide/signals.rst:360
+msgid "The task id found in the message."
+msgstr ""
+
+#: ../userguide/signals.rst:362 ../userguide/signals.rst:382
+msgid "``message``"
+msgstr ""
+
+#: ../userguide/signals.rst:364 ../userguide/signals.rst:384
+msgid "Raw message object."
+msgstr ""
+
+#: ../userguide/signals.rst:366 ../userguide/signals.rst:386
+msgid "``exc``"
+msgstr ""
+
+#: ../userguide/signals.rst:368
+msgid "The error that occurred."
+msgstr ""
+
+#: ../userguide/signals.rst:373
+msgid "``task_rejected``"
+msgstr ""
+
+#: ../userguide/signals.rst:375
+msgid ""
+"Dispatched when a worker receives an unknown type of message to one of "
+"its task queues."
+msgstr ""
+
+#: ../userguide/signals.rst:388
+msgid "The error that occurred (if any)."
+msgstr ""
+
+#: ../userguide/signals.rst:391
+msgid "App Signals"
+msgstr ""
+
+#: ../userguide/signals.rst:396
+msgid "``import_modules``"
+msgstr ""
+
+#: ../userguide/signals.rst:398
+msgid ""
+"This signal is sent when a program (worker, beat, shell) etc, asks for "
+"modules in the :setting:`include` and :setting:`imports` settings to be "
+"imported."
+msgstr ""
+
+#: ../userguide/signals.rst:402
+msgid "Sender is the app instance."
+msgstr ""
+
+#: ../userguide/signals.rst:405
+msgid "Worker Signals"
+msgstr ""
+
+#: ../userguide/signals.rst:410
+msgid "``celeryd_after_setup``"
+msgstr ""
+
+#: ../userguide/signals.rst:412
+msgid ""
+"This signal is sent after the worker instance is set up, but before it "
+"calls run. This means that any queues from the :option:`celery worker -Q`"
+" option is enabled, logging has been set up and so on."
+msgstr ""
+
+#: ../userguide/signals.rst:416
+msgid ""
+"It can be used to add custom queues that should always be consumed from, "
+"disregarding the :option:`celery worker -Q` option. Here's an example "
+"that sets up a direct queue for each worker, these queues can then be "
+"used to route a task to any specific worker:"
+msgstr ""
+
+#: ../userguide/signals.rst:432 ../userguide/signals.rst:479
+msgid "``sender``"
+msgstr ""
+
+#: ../userguide/signals.rst:434
+msgid "Node name of the worker."
+msgstr ""
+
+#: ../userguide/signals.rst:436 ../userguide/signals.rst:483
+msgid "``instance``"
+msgstr ""
+
+#: ../userguide/signals.rst:438 ../userguide/signals.rst:485
+msgid ""
+"This is the :class:`celery.apps.worker.Worker` instance to be "
+"initialized. Note that only the :attr:`app` and :attr:`hostname` "
+"(nodename) attributes have been set so far, and the rest of ``__init__`` "
+"hasn't been executed."
+msgstr ""
+
+#: ../userguide/signals.rst:442 ../userguide/signals.rst:489
+msgid "``conf``"
+msgstr ""
+
+#: ../userguide/signals.rst:444 ../userguide/signals.rst:491
+msgid "The configuration of the current app."
+msgstr ""
+
+#: ../userguide/signals.rst:449
+msgid "``celeryd_init``"
+msgstr ""
+
+#: ../userguide/signals.rst:451
+msgid ""
+"This is the first signal sent when :program:`celery worker` starts up. "
+"The ``sender`` is the host name of the worker, so this signal can be used"
+" to setup worker specific configuration:"
+msgstr ""
+
+#: ../userguide/signals.rst:463
+msgid ""
+"or to set up configuration for multiple workers you can omit specifying a"
+" sender when you connect:"
+msgstr ""
+
+#: ../userguide/signals.rst:481
+msgid "Nodename of the worker."
+msgstr ""
+
+#: ../userguide/signals.rst:493 ../userguide/signals.rst:794
+msgid "``options``"
+msgstr ""
+
+#: ../userguide/signals.rst:495
+msgid ""
+"Options passed to the worker from command-line arguments (including "
+"defaults)."
+msgstr ""
+
+#: ../userguide/signals.rst:501
+msgid "``worker_init``"
+msgstr ""
+
+#: ../userguide/signals.rst:503
+msgid "Dispatched before the worker is started."
+msgstr ""
+
+#: ../userguide/signals.rst:508
+msgid "``worker_ready``"
+msgstr ""
+
+#: ../userguide/signals.rst:510
+msgid "Dispatched when the worker is ready to accept work."
+msgstr ""
+
+#: ../userguide/signals.rst:515
+msgid "``heartbeat_sent``"
+msgstr ""
+
+#: ../userguide/signals.rst:517
+msgid "Dispatched when Celery sends a worker heartbeat."
+msgstr ""
+
+#: ../userguide/signals.rst:519
+msgid "Sender is the :class:`celery.worker.heartbeat.Heart` instance."
+msgstr ""
+
+#: ../userguide/signals.rst:524
+msgid "``worker_shutting_down``"
+msgstr ""
+
+#: ../userguide/signals.rst:526
+msgid "Dispatched when the worker begins the shutdown process."
+msgstr ""
+
+#: ../userguide/signals.rst:530
+msgid "``sig``"
+msgstr ""
+
+#: ../userguide/signals.rst:532
+msgid "The POSIX signal that was received."
+msgstr ""
+
+#: ../userguide/signals.rst:534
+msgid "``how``"
+msgstr ""
+
+#: ../userguide/signals.rst:536
+msgid "The shutdown method, warm or cold."
+msgstr ""
+
+#: ../userguide/signals.rst:538 ../userguide/signals.rst:571
+msgid "``exitcode``"
+msgstr ""
+
+#: ../userguide/signals.rst:540
+msgid "The exitcode that will be used when the main process exits."
+msgstr ""
+
+#: ../userguide/signals.rst:545
+msgid "``worker_process_init``"
+msgstr ""
+
+#: ../userguide/signals.rst:547
+msgid "Dispatched in all pool child processes when they start."
+msgstr ""
+
+#: ../userguide/signals.rst:549
+msgid ""
+"Note that handlers attached to this signal mustn't be blocking for more "
+"than 4 seconds, or the process will be killed assuming it failed to "
+"start."
+msgstr ""
+
+#: ../userguide/signals.rst:556
+msgid "``worker_process_shutdown``"
+msgstr ""
+
+#: ../userguide/signals.rst:558
+msgid "Dispatched in all pool child processes just before they exit."
+msgstr ""
+
+#: ../userguide/signals.rst:560
+msgid ""
+"Note: There's no guarantee that this signal will be dispatched, similarly"
+" to :keyword:`finally` blocks it's impossible to guarantee that handlers "
+"will be called at shutdown, and if called it may be interrupted during."
+msgstr ""
+
+#: ../userguide/signals.rst:567
+msgid "``pid``"
+msgstr ""
+
+#: ../userguide/signals.rst:569
+msgid "The pid of the child process that's about to shutdown."
+msgstr ""
+
+#: ../userguide/signals.rst:573
+msgid "The exitcode that'll be used when the child process exits."
+msgstr ""
+
+#: ../userguide/signals.rst:578
+msgid "``worker_shutdown``"
+msgstr ""
+
+#: ../userguide/signals.rst:580
+msgid "Dispatched when the worker is about to shut down."
+msgstr ""
+
+#: ../userguide/signals.rst:583
+msgid "Beat Signals"
+msgstr ""
+
+#: ../userguide/signals.rst:588
+msgid "``beat_init``"
+msgstr ""
+
+#: ../userguide/signals.rst:590
+msgid ""
+"Dispatched when :program:`celery beat` starts (either standalone or "
+"embedded)."
+msgstr ""
+
+#: ../userguide/signals.rst:592 ../userguide/signals.rst:602
+msgid "Sender is the :class:`celery.beat.Service` instance."
+msgstr ""
+
+#: ../userguide/signals.rst:597
+msgid "``beat_embedded_init``"
+msgstr ""
+
+#: ../userguide/signals.rst:599
+msgid ""
+"Dispatched in addition to the :signal:`beat_init` signal when "
+":program:`celery beat` is started as an embedded process."
+msgstr ""
+
+#: ../userguide/signals.rst:605
+msgid "Eventlet Signals"
+msgstr ""
+
+#: ../userguide/signals.rst:610
+msgid "``eventlet_pool_started``"
+msgstr ""
+
+#: ../userguide/signals.rst:612
+msgid "Sent when the eventlet pool has been started."
+msgstr ""
+
+#: ../userguide/signals.rst:614 ../userguide/signals.rst:624
+#: ../userguide/signals.rst:633 ../userguide/signals.rst:642
+msgid "Sender is the :class:`celery.concurrency.eventlet.TaskPool` instance."
+msgstr ""
+
+#: ../userguide/signals.rst:619
+msgid "``eventlet_pool_preshutdown``"
+msgstr ""
+
+#: ../userguide/signals.rst:621
+msgid ""
+"Sent when the worker shutdown, just before the eventlet pool is requested"
+" to wait for remaining workers."
+msgstr ""
+
+#: ../userguide/signals.rst:629
+msgid "``eventlet_pool_postshutdown``"
+msgstr ""
+
+#: ../userguide/signals.rst:631
+msgid "Sent when the pool has been joined and the worker is ready to shutdown."
+msgstr ""
+
+#: ../userguide/signals.rst:638
+msgid "``eventlet_pool_apply``"
+msgstr ""
+
+#: ../userguide/signals.rst:640
+msgid "Sent whenever a task is applied to the pool."
+msgstr ""
+
+#: ../userguide/signals.rst:646
+msgid "``target``"
+msgstr ""
+
+#: ../userguide/signals.rst:648
+msgid "The target function."
+msgstr ""
+
+#: ../userguide/signals.rst:652
+msgid "Positional arguments."
+msgstr ""
+
+#: ../userguide/signals.rst:656
+msgid "Keyword arguments."
+msgstr ""
+
+#: ../userguide/signals.rst:659
+msgid "Logging Signals"
+msgstr ""
+
+#: ../userguide/signals.rst:664
+msgid "``setup_logging``"
+msgstr ""
+
+#: ../userguide/signals.rst:666
+msgid ""
+"Celery won't configure the loggers if this signal is connected, so you "
+"can use this to completely override the logging configuration with your "
+"own."
+msgstr ""
+
+#: ../userguide/signals.rst:670
+msgid ""
+"If you'd like to augment the logging configuration setup by Celery then "
+"you can use the :signal:`after_setup_logger` and "
+":signal:`after_setup_task_logger` signals."
+msgstr ""
+
+#: ../userguide/signals.rst:676 ../userguide/signals.rst:706
+#: ../userguide/signals.rst:736
+msgid "``loglevel``"
+msgstr ""
+
+#: ../userguide/signals.rst:678 ../userguide/signals.rst:708
+#: ../userguide/signals.rst:738
+msgid "The level of the logging object."
+msgstr ""
+
+#: ../userguide/signals.rst:680 ../userguide/signals.rst:710
+#: ../userguide/signals.rst:740
+msgid "``logfile``"
+msgstr ""
+
+#: ../userguide/signals.rst:682 ../userguide/signals.rst:712
+#: ../userguide/signals.rst:742
+msgid "The name of the logfile."
+msgstr ""
+
+#: ../userguide/signals.rst:684 ../userguide/signals.rst:714
+#: ../userguide/signals.rst:744
+msgid "``format``"
+msgstr ""
+
+#: ../userguide/signals.rst:686 ../userguide/signals.rst:716
+#: ../userguide/signals.rst:746
+msgid "The log format string."
+msgstr ""
+
+#: ../userguide/signals.rst:688 ../userguide/signals.rst:718
+#: ../userguide/signals.rst:748
+msgid "``colorize``"
+msgstr ""
+
+#: ../userguide/signals.rst:690 ../userguide/signals.rst:720
+#: ../userguide/signals.rst:750
+msgid "Specify if log messages are colored or not."
+msgstr ""
+
+#: ../userguide/signals.rst:695
+msgid "``after_setup_logger``"
+msgstr ""
+
+#: ../userguide/signals.rst:697
+msgid ""
+"Sent after the setup of every global logger (not task loggers). Used to "
+"augment logging configuration."
+msgstr ""
+
+#: ../userguide/signals.rst:702 ../userguide/signals.rst:732
+msgid "``logger``"
+msgstr ""
+
+#: ../userguide/signals.rst:704 ../userguide/signals.rst:734
+msgid "The logger object."
+msgstr ""
+
+#: ../userguide/signals.rst:725
+msgid "``after_setup_task_logger``"
+msgstr ""
+
+#: ../userguide/signals.rst:727
+msgid ""
+"Sent after the setup of every single task logger. Used to augment logging"
+" configuration."
+msgstr ""
+
+#: ../userguide/signals.rst:753
+msgid "Command signals"
+msgstr ""
+
+#: ../userguide/signals.rst:758
+msgid "``user_preload_options``"
+msgstr ""
+
+#: ../userguide/signals.rst:760
+msgid ""
+"This signal is sent after any of the Celery command line programs are "
+"finished parsing the user preload options."
+msgstr ""
+
+#: ../userguide/signals.rst:763
+msgid ""
+"It can be used to add additional command-line arguments to the "
+":program:`celery` umbrella command:"
+msgstr ""
+
+#: ../userguide/signals.rst:784
+msgid ""
+"Sender is the :class:`~celery.bin.base.Command` instance, and the value "
+"depends on the program that was called (e.g., for the umbrella command "
+"it'll be a :class:`~celery.bin.celery.CeleryCommand`) object)."
+msgstr ""
+
+#: ../userguide/signals.rst:790
+msgid "``app``"
+msgstr ""
+
+#: ../userguide/signals.rst:792
+msgid "The app instance."
+msgstr ""
+
+#: ../userguide/signals.rst:796
+msgid "Mapping of the parsed user preload options (with default values)."
+msgstr ""
+
+#: ../userguide/signals.rst:799
+msgid "Deprecated Signals"
+msgstr ""
+
+#: ../userguide/signals.rst:804
+msgid "``task_sent``"
+msgstr ""
+
+#: ../userguide/signals.rst:806
+msgid ""
+"This signal is deprecated, please use :signal:`after_task_publish` "
+"instead."
+msgstr ""
+

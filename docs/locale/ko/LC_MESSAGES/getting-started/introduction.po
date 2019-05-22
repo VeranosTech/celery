@@ -1,0 +1,883 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../getting-started/introduction.rst:5
+msgid "Introduction to Celery"
+msgstr ""
+
+#: ../getting-started/introduction.rst:12
+msgid "What's a Task Queue?"
+msgstr ""
+
+#: ../getting-started/introduction.rst:14
+msgid ""
+"Task queues are used as a mechanism to distribute work across threads or "
+"machines."
+msgstr ""
+
+#: ../getting-started/introduction.rst:17
+msgid ""
+"A task queue's input is a unit of work called a task. Dedicated worker "
+"processes constantly monitor task queues for new work to perform."
+msgstr ""
+
+#: ../getting-started/introduction.rst:20
+msgid ""
+"Celery communicates via messages, usually using a broker to mediate "
+"between clients and workers. To initiate a task the client adds a message"
+" to the queue, the broker then delivers that message to a worker."
+msgstr ""
+
+#: ../getting-started/introduction.rst:24
+msgid ""
+"A Celery system can consist of multiple workers and brokers, giving way "
+"to high availability and horizontal scaling."
+msgstr ""
+
+#: ../getting-started/introduction.rst:27
+msgid ""
+"Celery is written in Python, but the protocol can be implemented in any "
+"language. In addition to Python there's node-celery_ and node-celery-ts_ "
+"for Node.js, and a `PHP client`_."
+msgstr ""
+
+#: ../getting-started/introduction.rst:31
+msgid ""
+"Language interoperability can also be achieved exposing an HTTP endpoint "
+"and having a task that requests it (webhooks)."
+msgstr ""
+
+#: ../getting-started/introduction.rst:39
+msgid "What do I need?"
+msgstr ""
+
+msgid "Version Requirements"
+msgstr ""
+
+#: ../getting-started/introduction.rst:44
+msgid "Python ❨2.7, 3.4, 3.5❩"
+msgstr ""
+
+#: ../getting-started/introduction.rst:45
+msgid "PyPy ❨5.4, 5.5❩"
+msgstr ""
+
+#: ../getting-started/introduction.rst:47
+msgid ""
+"This is the last version to support Python 2.7, and from the next version"
+" (Celery 5.x) Python 3.5 or newer is required."
+msgstr ""
+
+#: ../getting-started/introduction.rst:50
+msgid ""
+"If you're running an older version of Python, you need to be running an "
+"older version of Celery:"
+msgstr ""
+
+#: ../getting-started/introduction.rst:53
+msgid "Python 2.6: Celery series 3.1 or earlier."
+msgstr ""
+
+#: ../getting-started/introduction.rst:54
+msgid "Python 2.5: Celery series 3.0 or earlier."
+msgstr ""
+
+#: ../getting-started/introduction.rst:55
+msgid "Python 2.4 was Celery series 2.2 or earlier."
+msgstr ""
+
+#: ../getting-started/introduction.rst:57
+msgid ""
+"Celery is a project with minimal funding, so we don't support Microsoft "
+"Windows. Please don't open any issues related to that platform."
+msgstr ""
+
+#: ../getting-started/introduction.rst:61
+msgid ""
+"*Celery* requires a message transport to send and receive messages. The "
+"RabbitMQ and Redis broker transports are feature complete, but there's "
+"also support for a myriad of other experimental solutions, including "
+"using SQLite for local development."
+msgstr ""
+
+#: ../getting-started/introduction.rst:66
+msgid ""
+"*Celery* can run on a single machine, on multiple machines, or even "
+"across data centers."
+msgstr ""
+
+#: ../getting-started/introduction.rst:70
+msgid "Get Started"
+msgstr ""
+
+#: ../getting-started/introduction.rst:72
+msgid ""
+"If this is the first time you're trying to use Celery, or if you haven't "
+"kept up with development in the 3.1 version and are coming from previous "
+"versions, then you should read our getting started tutorials:"
+msgstr ""
+
+#: ../getting-started/introduction.rst:76
+msgid ":ref:`first-steps`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:77
+msgid ":ref:`next-steps`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:80
+msgid "Celery is…"
+msgstr ""
+
+#: ../getting-started/introduction.rst:86
+msgid "**Simple**"
+msgstr ""
+
+#: ../getting-started/introduction.rst:88
+msgid ""
+"Celery is easy to use and maintain, and it *doesn't need configuration "
+"files*."
+msgstr ""
+
+#: ../getting-started/introduction.rst:90
+msgid ""
+"It has an active, friendly community you can talk to for support, "
+"including a `mailing-list`_ and an :ref:`IRC channel <irc-channel>`."
+msgstr ""
+
+#: ../getting-started/introduction.rst:93
+msgid "Here's one of the simplest applications you can make:"
+msgstr ""
+
+#: ../getting-started/introduction.rst:105
+msgid "**Highly Available**"
+msgstr ""
+
+#: ../getting-started/introduction.rst:107
+msgid ""
+"Workers and clients will automatically retry in the event of connection "
+"loss or failure, and some brokers support HA in way of *Primary/Primary* "
+"or *Primary/Replica* replication."
+msgstr ""
+
+#: ../getting-started/introduction.rst:111
+msgid "**Fast**"
+msgstr ""
+
+#: ../getting-started/introduction.rst:113
+msgid ""
+"A single Celery process can process millions of tasks a minute, with sub-"
+"millisecond round-trip latency (using RabbitMQ, librabbitmq, and "
+"optimized settings)."
+msgstr ""
+
+#: ../getting-started/introduction.rst:117
+msgid "**Flexible**"
+msgstr ""
+
+#: ../getting-started/introduction.rst:119
+msgid ""
+"Almost every part of *Celery* can be extended or used on its own, Custom "
+"pool implementations, serializers, compression schemes, logging, "
+"schedulers, consumers, producers, broker transports, and much more."
+msgstr ""
+
+#: ../getting-started/introduction.rst:129
+msgid "**Brokers**"
+msgstr ""
+
+#: ../getting-started/introduction.rst:131
+msgid ":ref:`RabbitMQ <broker-rabbitmq>`, :ref:`Redis <broker-redis>`,"
+msgstr ""
+
+#: ../getting-started/introduction.rst:132
+msgid ":ref:`Amazon SQS <broker-sqs>`, and more…"
+msgstr ""
+
+#: ../getting-started/introduction.rst:134
+msgid "**Concurrency**"
+msgstr ""
+
+#: ../getting-started/introduction.rst:136
+msgid "prefork (multiprocessing),"
+msgstr ""
+
+#: ../getting-started/introduction.rst:137
+msgid "Eventlet_, gevent_"
+msgstr ""
+
+#: ../getting-started/introduction.rst:138
+msgid "`solo` (single threaded)"
+msgstr ""
+
+#: ../getting-started/introduction.rst:140
+msgid "**Result Stores**"
+msgstr ""
+
+#: ../getting-started/introduction.rst:142
+msgid "AMQP, Redis"
+msgstr ""
+
+#: ../getting-started/introduction.rst:143
+msgid "Memcached,"
+msgstr ""
+
+#: ../getting-started/introduction.rst:144
+msgid "SQLAlchemy, Django ORM"
+msgstr ""
+
+#: ../getting-started/introduction.rst:145
+msgid "Apache Cassandra, Elasticsearch"
+msgstr ""
+
+#: ../getting-started/introduction.rst:147
+msgid "**Serialization**"
+msgstr ""
+
+#: ../getting-started/introduction.rst:149
+msgid "*pickle*, *json*, *yaml*, *msgpack*."
+msgstr ""
+
+#: ../getting-started/introduction.rst:150
+msgid "*zlib*, *bzip2* compression."
+msgstr ""
+
+#: ../getting-started/introduction.rst:151
+msgid "Cryptographic message signing."
+msgstr ""
+
+#: ../getting-started/introduction.rst:154
+msgid "Features"
+msgstr ""
+
+#: ../getting-started/introduction.rst:161
+msgid "**Monitoring**"
+msgstr ""
+
+#: ../getting-started/introduction.rst:163
+msgid ""
+"A stream of monitoring events is emitted by workers and is used by built-"
+"in and external tools to tell you what your cluster is doing -- in real-"
+"time."
+msgstr ""
+
+#: ../getting-started/introduction.rst:167
+msgid ":ref:`Read more… <guide-monitoring>`."
+msgstr ""
+
+#: ../getting-started/introduction.rst:169
+msgid "**Work-flows**"
+msgstr ""
+
+#: ../getting-started/introduction.rst:171
+msgid ""
+"Simple and complex work-flows can be composed using a set of powerful "
+"primitives we call the \"canvas\", including grouping, chaining, "
+"chunking, and more."
+msgstr ""
+
+#: ../getting-started/introduction.rst:175
+msgid ":ref:`Read more… <guide-canvas>`."
+msgstr ""
+
+#: ../getting-started/introduction.rst:177
+msgid "**Time & Rate Limits**"
+msgstr ""
+
+#: ../getting-started/introduction.rst:179
+msgid ""
+"You can control how many tasks can be executed per second/minute/hour, or"
+" how long a task can be allowed to run, and this can be set as a default,"
+" for a specific worker or individually for each task type."
+msgstr ""
+
+#: ../getting-started/introduction.rst:183
+msgid ":ref:`Read more… <worker-time-limits>`."
+msgstr ""
+
+#: ../getting-started/introduction.rst:185
+msgid "**Scheduling**"
+msgstr ""
+
+#: ../getting-started/introduction.rst:187
+msgid ""
+"You can specify the time to run a task in seconds or a "
+":class:`~datetime.datetime`, or you can use periodic tasks for recurring "
+"events based on a simple interval, or Crontab expressions supporting "
+"minute, hour, day of week, day of month, and month of year."
+msgstr ""
+
+#: ../getting-started/introduction.rst:194
+msgid ":ref:`Read more… <guide-beat>`."
+msgstr ""
+
+#: ../getting-started/introduction.rst:196
+msgid "**Resource Leak Protection**"
+msgstr ""
+
+#: ../getting-started/introduction.rst:198
+msgid ""
+"The :option:`--max-tasks-per-child <celery worker --max-tasks-per-child>`"
+" option is used for user tasks leaking resources, like memory or file "
+"descriptors, that are simply out of your control."
+msgstr ""
+
+#: ../getting-started/introduction.rst:202
+msgid ":ref:`Read more… <worker-max-tasks-per-child>`."
+msgstr ""
+
+#: ../getting-started/introduction.rst:204
+msgid "**User Components**"
+msgstr ""
+
+#: ../getting-started/introduction.rst:206
+msgid ""
+"Each worker component can be customized, and additional components can be"
+" defined by the user. The worker is built up using \"bootsteps\" — a "
+"dependency graph enabling fine grained control of the worker's internals."
+msgstr ""
+
+#: ../getting-started/introduction.rst:215
+msgid "Framework Integration"
+msgstr ""
+
+#: ../getting-started/introduction.rst:217
+msgid ""
+"Celery is easy to integrate with web frameworks, some of them even have "
+"integration packages:"
+msgstr ""
+
+#: ../getting-started/introduction.rst:221
+msgid "`Pyramid`_"
+msgstr ""
+
+#: ../getting-started/introduction.rst:221
+msgid ":pypi:`pyramid_celery`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:223
+msgid "`Pylons`_"
+msgstr ""
+
+#: ../getting-started/introduction.rst:223
+msgid ":pypi:`celery-pylons`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:225
+msgid "`Flask`_"
+msgstr ""
+
+#: ../getting-started/introduction.rst:225
+msgid "not needed"
+msgstr ""
+
+#: ../getting-started/introduction.rst:227
+msgid "`web2py`_"
+msgstr ""
+
+#: ../getting-started/introduction.rst:227
+msgid ":pypi:`web2py-celery`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:229
+msgid "`Tornado`_"
+msgstr ""
+
+#: ../getting-started/introduction.rst:229
+msgid ":pypi:`tornado-celery`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:231
+msgid "`Tryton`_"
+msgstr ""
+
+#: ../getting-started/introduction.rst:231
+msgid ":pypi:`celery_tryton`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:234
+msgid "For `Django`_ see :ref:`django-first-steps`."
+msgstr ""
+
+#: ../getting-started/introduction.rst:236
+msgid ""
+"The integration packages aren't strictly necessary, but they can make "
+"development easier, and sometimes they add important hooks like closing "
+"database connections at :manpage:`fork(2)`."
+msgstr ""
+
+#: ../getting-started/introduction.rst:251
+msgid "Quick Jump"
+msgstr ""
+
+#: ../getting-started/introduction.rst:258
+msgid ":ref:`get the return value of a task <task-states>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:259
+msgid ":ref:`use logging from my task <task-logging>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:260
+msgid ":ref:`learn about best practices <task-best-practices>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:261
+msgid ":ref:`create a custom task base class <task-custom-classes>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:262
+msgid ":ref:`add a callback to a group of tasks <canvas-chord>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:263
+msgid ":ref:`split a task into several chunks <canvas-chunks>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:264
+msgid ":ref:`optimize the worker <guide-optimizing>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:265
+msgid ":ref:`see a list of built-in task states <task-builtin-states>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:266
+msgid ":ref:`create custom task states <custom-states>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:267
+msgid ":ref:`set a custom task name <task-names>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:268
+msgid ":ref:`track when a task starts <task-track-started>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:269
+msgid ":ref:`retry a task when it fails <task-retry>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:270
+msgid ":ref:`get the id of the current task <task-request-info>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:271
+msgid ":ref:`know what queue a task was delivered to <task-request-info>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:272
+msgid ":ref:`see a list of running workers <monitoring-control>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:273
+msgid ":ref:`purge all messages <monitoring-control>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:274
+msgid ":ref:`inspect what the workers are doing <monitoring-control>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:275
+msgid ":ref:`see what tasks a worker has registered <monitoring-control>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:276
+msgid ":ref:`migrate tasks to a new broker <monitoring-control>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:277
+msgid ":ref:`see a list of event message types <event-reference>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:278
+msgid ":ref:`contribute to Celery <contributing>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:279
+msgid ":ref:`learn about available configuration settings <configuration>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:280
+msgid ":ref:`get a list of people and companies using Celery <res-using-celery>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:281
+msgid ""
+":ref:`write my own remote control command <worker-custom-control-"
+"commands>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:282
+msgid ":ref:`change worker queues at runtime <worker-queues>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:289
+msgid ":ref:`Brokers <brokers>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:290
+msgid ":ref:`Applications <guide-app>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:291
+msgid ":ref:`Tasks <guide-tasks>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:292
+msgid ":ref:`Calling <guide-calling>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:293
+msgid ":ref:`Workers <guide-workers>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:294
+msgid ":ref:`Daemonizing <daemonizing>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:295
+msgid ":ref:`Monitoring <guide-monitoring>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:296
+msgid ":ref:`Optimizing <guide-optimizing>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:297
+msgid ":ref:`Security <guide-security>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:298
+msgid ":ref:`Routing <guide-routing>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:299
+msgid ":ref:`Configuration <configuration>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:300
+msgid ":ref:`Django <django>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:301
+msgid ":ref:`Contributing <contributing>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:302
+msgid ":ref:`Signals <signals>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:303
+msgid ":ref:`FAQ <faq>`"
+msgstr ""
+
+#: ../getting-started/introduction.rst:304
+msgid ":ref:`API Reference <apiref>`"
+msgstr ""
+
+#: ../includes/installation.txt:4
+msgid "Installation"
+msgstr ""
+
+#: ../includes/installation.txt:6
+msgid ""
+"You can install Celery either via the Python Package Index (PyPI) or from"
+" source."
+msgstr ""
+
+#: ../includes/installation.txt:9
+msgid "To install using :command:`pip`:"
+msgstr ""
+
+#: ../includes/installation.txt:19
+msgid "Bundles"
+msgstr ""
+
+#: ../includes/installation.txt:21
+msgid ""
+"Celery also defines a group of bundles that can be used to install Celery"
+" and the dependencies for a given feature."
+msgstr ""
+
+#: ../includes/installation.txt:24
+msgid ""
+"You can specify these in your requirements or on the :command:`pip` "
+"command-line by using brackets. Multiple bundles can be specified by "
+"separating them by commas."
+msgstr ""
+
+#: ../includes/installation.txt:35
+msgid "The following bundles are available:"
+msgstr ""
+
+#: ../includes/installation.txt:38
+msgid "Serializers"
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[auth]``"
+msgstr ""
+
+#: ../includes/installation.txt:41
+msgid "for using the ``auth`` security serializer."
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[msgpack]``"
+msgstr ""
+
+#: ../includes/installation.txt:44
+msgid "for using the msgpack serializer."
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[yaml]``"
+msgstr ""
+
+#: ../includes/installation.txt:47
+msgid "for using the yaml serializer."
+msgstr ""
+
+#: ../includes/installation.txt:50
+msgid "Concurrency"
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[eventlet]``"
+msgstr ""
+
+#: ../includes/installation.txt:53
+msgid "for using the :pypi:`eventlet` pool."
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[gevent]``"
+msgstr ""
+
+#: ../includes/installation.txt:56
+msgid "for using the :pypi:`gevent` pool."
+msgstr ""
+
+#: ../includes/installation.txt:59
+msgid "Transports and Backends"
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[librabbitmq]``"
+msgstr ""
+
+#: ../includes/installation.txt:62
+msgid "for using the librabbitmq C library."
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[redis]``"
+msgstr ""
+
+#: ../includes/installation.txt:65
+msgid "for using Redis as a message transport or as a result backend."
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[sqs]``"
+msgstr ""
+
+#: ../includes/installation.txt:68
+msgid "for using Amazon SQS as a message transport (*experimental*)."
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[tblib]``"
+msgstr ""
+
+#: ../includes/installation.txt:71
+msgid "for using the :setting:`task_remote_tracebacks` feature."
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[memcache]``"
+msgstr ""
+
+#: ../includes/installation.txt:74
+msgid "for using Memcached as a result backend (using :pypi:`pylibmc`)"
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[pymemcache]``"
+msgstr ""
+
+#: ../includes/installation.txt:77
+msgid "for using Memcached as a result backend (pure-Python implementation)."
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[cassandra]``"
+msgstr ""
+
+#: ../includes/installation.txt:80
+msgid "for using Apache Cassandra as a result backend with DataStax driver."
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[couchbase]``"
+msgstr ""
+
+#: ../includes/installation.txt:83
+msgid "for using Couchbase as a result backend."
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[arangodb]``"
+msgstr ""
+
+#: ../includes/installation.txt:86
+msgid "for using ArangoDB as a result backend."
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[elasticsearch]``"
+msgstr ""
+
+#: ../includes/installation.txt:89
+msgid "for using Elasticsearch as a result backend."
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[riak]``"
+msgstr ""
+
+#: ../includes/installation.txt:92
+msgid "for using Riak as a result backend."
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[dynamodb]``"
+msgstr ""
+
+#: ../includes/installation.txt:95
+msgid "for using AWS DynamoDB as a result backend."
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[zookeeper]``"
+msgstr ""
+
+#: ../includes/installation.txt:98
+msgid "for using Zookeeper as a message transport."
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[sqlalchemy]``"
+msgstr ""
+
+#: ../includes/installation.txt:101
+msgid "for using SQLAlchemy as a result backend (*supported*)."
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[pyro]``"
+msgstr ""
+
+#: ../includes/installation.txt:104
+msgid "for using the Pyro4 message transport (*experimental*)."
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[slmq]``"
+msgstr ""
+
+#: ../includes/installation.txt:107
+msgid "for using the SoftLayer Message Queue transport (*experimental*)."
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[consul]``"
+msgstr ""
+
+#: ../includes/installation.txt:110
+msgid ""
+"for using the Consul.io Key/Value store as a message transport or result "
+"backend (*experimental*)."
+msgstr ""
+
+#: ../includes/installation.txt
+msgid "``celery[django]``"
+msgstr ""
+
+#: ../includes/installation.txt:113
+msgid "specifies the lowest version possible for Django support."
+msgstr ""
+
+#: ../includes/installation.txt:115
+msgid ""
+"You should probably not use this in your requirements, it's here for "
+"informational purposes only."
+msgstr ""
+
+#: ../includes/installation.txt:122
+msgid "Downloading and installing from source"
+msgstr ""
+
+#: ../includes/installation.txt:124
+msgid "Download the latest version of Celery from PyPI:"
+msgstr ""
+
+#: ../includes/installation.txt:126
+msgid "https://pypi.org/project/celery/"
+msgstr ""
+
+#: ../includes/installation.txt:128
+msgid "You can install it by doing the following,:"
+msgstr ""
+
+#: ../includes/installation.txt:138
+msgid ""
+"The last command must be executed as a privileged user if you aren't "
+"currently using a virtualenv."
+msgstr ""
+
+#: ../includes/installation.txt:144
+msgid "Using the development version"
+msgstr ""
+
+#: ../includes/installation.txt:147
+msgid "With pip"
+msgstr ""
+
+#: ../includes/installation.txt:149
+msgid ""
+"The Celery development version also requires the development versions of "
+":pypi:`kombu`, :pypi:`amqp`, :pypi:`billiard`, and :pypi:`vine`."
+msgstr ""
+
+#: ../includes/installation.txt:152
+msgid ""
+"You can install the latest snapshot of these using the following pip "
+"commands:"
+msgstr ""
+
+#: ../includes/installation.txt:165
+msgid "With git"
+msgstr ""
+
+#: ../includes/installation.txt:167
+msgid "Please see the :ref:`Contributing <contributing>` section."
+msgstr ""
+

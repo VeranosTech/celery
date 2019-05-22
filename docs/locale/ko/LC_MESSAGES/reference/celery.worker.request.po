@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../reference/celery.worker.request.rst:3
+msgid "``celery.worker.request``"
+msgstr ""
+
+#: celery.worker.request:1 of
+msgid "Task request."
+msgstr ""
+
+#: celery.worker.request:3 of
+msgid ""
+"This module defines the :class:`Request` class, that specifies how tasks "
+"are executed."
+msgstr ""
+
+#: celery.worker.request.Request:1 of
+msgid "A request for task execution."
+msgstr ""
+
+#: celery.worker.request.Request.acknowledge:1 of
+msgid "Acknowledge task."
+msgstr ""
+
+#: celery.worker.request.Request.execute:1 of
+msgid "Execute the task in a :func:`~celery.app.trace.trace_task`."
+msgstr ""
+
+#: celery.worker.request.Request.execute
+#: celery.worker.request.Request.execute_using_pool of
+msgid "Parameters"
+msgstr ""
+
+#: celery.worker.request.Request.execute:3 of
+msgid "The loglevel used by the task."
+msgstr ""
+
+#: celery.worker.request.Request.execute:5 of
+msgid "The logfile used by the task."
+msgstr ""
+
+#: celery.worker.request.Request.execute_using_pool:1 of
+msgid "Used by the worker to send this task to the pool."
+msgstr ""
+
+#: celery.worker.request.Request.execute_using_pool:3 of
+msgid "The execution pool used to execute this request."
+msgstr ""
+
+#: celery.worker.request.Request.execute_using_pool of
+msgid "raises"
+msgstr ""
+
+#: celery.worker.request.Request.execute_using_pool:7 of
+msgid ":exc:`celery.exceptions.TaskRevokedError` -- if the task was revoked."
+msgstr ""
+
+#: celery.worker.request.Request.maybe_expire:1 of
+msgid "If expired, mark the task as revoked."
+msgstr ""
+
+#: celery.worker.request.Request.on_accepted:1 of
+msgid "Handler called when task is accepted by worker pool."
+msgstr ""
+
+#: celery.worker.request.Request.on_failure:1 of
+msgid "Handler called if the task raised an exception."
+msgstr ""
+
+#: celery.worker.request.Request.on_retry:1 of
+msgid "Handler called if the task should be retried."
+msgstr ""
+
+#: celery.worker.request.Request.on_success:1 of
+msgid "Handler called if the task was successfully processed."
+msgstr ""
+
+#: celery.worker.request.Request.on_timeout:1 of
+msgid "Handler called if the task times out."
+msgstr ""
+
+#: celery.worker.request.Request.revoked:1 of
+msgid "If revoked, skip task and mark state."
+msgstr ""
+

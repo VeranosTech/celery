@@ -1,0 +1,761 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../userguide/routing.rst:5 ../userguide/routing.rst:559
+msgid "Routing Tasks"
+msgstr ""
+
+#: ../userguide/routing.rst:9
+msgid ""
+"Alternate routing concepts like topic and fanout is not available for all"
+" transports, please consult the :ref:`transport comparison table <kombu"
+":transport-comparison>`."
+msgstr ""
+
+#: ../userguide/routing.rst:20
+msgid "Basics"
+msgstr ""
+
+#: ../userguide/routing.rst:25
+msgid "Automatic routing"
+msgstr ""
+
+#: ../userguide/routing.rst:27
+msgid ""
+"The simplest way to do routing is to use the "
+":setting:`task_create_missing_queues` setting (on by default)."
+msgstr ""
+
+#: ../userguide/routing.rst:30
+msgid ""
+"With this setting on, a named queue that's not already defined in "
+":setting:`task_queues` will be created automatically. This makes it easy "
+"to perform simple routing tasks."
+msgstr ""
+
+#: ../userguide/routing.rst:34
+msgid ""
+"Say you have two servers, `x`, and `y` that handle regular tasks, and one"
+" server `z`, that only handles feed related tasks. You can use this "
+"configuration::"
+msgstr ""
+
+#: ../userguide/routing.rst:40
+msgid ""
+"With this route enabled import feed tasks will be routed to the "
+"`\"feeds\"` queue, while all other tasks will be routed to the default "
+"queue (named `\"celery\"` for historical reasons)."
+msgstr ""
+
+#: ../userguide/routing.rst:44
+msgid ""
+"Alternatively, you can use glob pattern matching, or even regular "
+"expressions, to match all tasks in the ``feed.tasks`` name-space:"
+msgstr ""
+
+#: ../userguide/routing.rst:51
+msgid ""
+"If the order of matching patterns is important you should specify the "
+"router in *items* format instead:"
+msgstr ""
+
+#: ../userguide/routing.rst:64
+msgid ""
+"The :setting:`task_routes` setting can either be a dictionary, or a list "
+"of router objects, so in this case we need to specify the setting as a "
+"tuple containing a list."
+msgstr ""
+
+#: ../userguide/routing.rst:68
+msgid ""
+"After installing the router, you can start server `z` to only process the"
+" feeds queue like this:"
+msgstr ""
+
+#: ../userguide/routing.rst:75
+msgid ""
+"You can specify as many queues as you want, so you can make this server "
+"process the default queue as well:"
+msgstr ""
+
+#: ../userguide/routing.rst:85
+msgid "Changing the name of the default queue"
+msgstr ""
+
+#: ../userguide/routing.rst:87
+msgid ""
+"You can change the name of the default queue by using the following "
+"configuration:"
+msgstr ""
+
+#: ../userguide/routing.rst:97
+msgid "How the queues are defined"
+msgstr ""
+
+#: ../userguide/routing.rst:99
+msgid ""
+"The point with this feature is to hide the complex AMQP protocol for "
+"users with only basic needs. However -- you may still be interested in "
+"how these queues are declared."
+msgstr ""
+
+#: ../userguide/routing.rst:103
+msgid "A queue named `\"video\"` will be created with the following settings:"
+msgstr ""
+
+#: ../userguide/routing.rst:111
+msgid ""
+"The non-AMQP backends like `Redis` or `SQS` don't support exchanges, so "
+"they require the exchange to have the same name as the queue. Using this "
+"design ensures it will work for them as well."
+msgstr ""
+
+#: ../userguide/routing.rst:118
+msgid "Manual routing"
+msgstr ""
+
+#: ../userguide/routing.rst:120
+msgid ""
+"Say you have two servers, `x`, and `y` that handle regular tasks, and one"
+" server `z`, that only handles feed related tasks, you can use this "
+"configuration:"
+msgstr ""
+
+#: ../userguide/routing.rst:137
+msgid ""
+":setting:`task_queues` is a list of :class:`~kombu.entitity.Queue` "
+"instances. If you don't set the exchange or exchange type values for a "
+"key, these will be taken from the :setting:`task_default_exchange` and "
+":setting:`task_default_exchange_type` settings."
+msgstr ""
+
+#: ../userguide/routing.rst:143
+msgid ""
+"To route a task to the `feed_tasks` queue, you can add an entry in the "
+":setting:`task_routes` setting:"
+msgstr ""
+
+#: ../userguide/routing.rst:156
+msgid ""
+"You can also override this using the `routing_key` argument to "
+":meth:`Task.apply_async`, or :func:`~celery.execute.send_task`:"
+msgstr ""
+
+#: ../userguide/routing.rst:165
+msgid ""
+"To make server `z` consume from the feed queue exclusively you can start "
+"it with the :option:`celery worker -Q` option:"
+msgstr ""
+
+#: ../userguide/routing.rst:172
+msgid "Servers `x` and `y` must be configured to consume from the default queue:"
+msgstr ""
+
+#: ../userguide/routing.rst:179
+msgid ""
+"If you want, you can even have your feed processing worker handle regular"
+" tasks as well, maybe in times when there's a lot of work to do:"
+msgstr ""
+
+#: ../userguide/routing.rst:186
+msgid ""
+"If you have another queue but on another exchange you want to add, just "
+"specify a custom exchange and exchange type:"
+msgstr ""
+
+#: ../userguide/routing.rst:200
+msgid "If you're confused about these terms, you should read up on AMQP."
+msgstr ""
+
+#: ../userguide/routing.rst:204
+msgid ""
+"In addition to the :ref:`amqp-primer` below, there's `Rabbits and "
+"Warrens`_, an excellent blog post describing queues and exchanges. "
+"There's also The `CloudAMQP tutorial`, For users of RabbitMQ the "
+"`RabbitMQ FAQ`_ could be useful as a source of information."
+msgstr ""
+
+#: ../userguide/routing.rst:218
+msgid "Special Routing Options"
+msgstr ""
+
+#: ../userguide/routing.rst:223
+msgid "RabbitMQ Message Priorities"
+msgstr ""
+
+#: ../userguide/routing.rst
+msgid "supported transports"
+msgstr ""
+
+#: ../userguide/routing.rst:224
+msgid "RabbitMQ"
+msgstr ""
+
+#: ../userguide/routing.rst:228
+msgid ""
+"Queues can be configured to support priorities by setting the ``x-max-"
+"priority`` argument:"
+msgstr ""
+
+#: ../userguide/routing.rst:240
+msgid ""
+"A default value for all queues can be set using the "
+":setting:`task_queue_max_priority` setting:"
+msgstr ""
+
+#: ../userguide/routing.rst:247
+msgid ""
+"A default priority for all tasks can also be specified using the "
+":setting:`task_default_priority` setting:"
+msgstr ""
+
+#: ../userguide/routing.rst:258
+msgid "Redis Message Priorities"
+msgstr ""
+
+#: ../userguide/routing.rst:259
+msgid "Redis"
+msgstr ""
+
+#: ../userguide/routing.rst:261
+msgid ""
+"While the Celery Redis transport does honor the priority field, Redis "
+"itself has no notion of priorities. Please read this note before "
+"attempting to implement priorities with Redis as you may experience some "
+"unexpected behavior."
+msgstr ""
+
+#: ../userguide/routing.rst:265
+msgid ""
+"The priority support is implemented by creating n lists for each queue. "
+"This means that even though there are 10 (0-9) priority levels, these are"
+" consolidated into 4 levels by default to save resources. This means that"
+" a queue named celery will really be split into 4 queues:"
+msgstr ""
+
+#: ../userguide/routing.rst:275
+msgid ""
+"If you want more priority levels you can set the priority_steps transport"
+" option:"
+msgstr ""
+
+#: ../userguide/routing.rst:284
+msgid ""
+"That said, note that this will never be as good as priorities implemented"
+" at the server level, and may be approximate at best. But it may still be"
+" good enough for your application."
+msgstr ""
+
+#: ../userguide/routing.rst:290
+msgid "AMQP Primer"
+msgstr ""
+
+#: ../userguide/routing.rst:293
+msgid "Messages"
+msgstr ""
+
+#: ../userguide/routing.rst:295
+msgid ""
+"A message consists of headers and a body. Celery uses headers to store "
+"the content type of the message and its content encoding. The content "
+"type is usually the serialization format used to serialize the message. "
+"The body contains the name of the task to execute, the task id (UUID), "
+"the arguments to apply it with and some additional meta-data -- like the "
+"number of retries or an ETA."
+msgstr ""
+
+#: ../userguide/routing.rst:302
+msgid "This is an example task message represented as a Python dictionary:"
+msgstr ""
+
+#: ../userguide/routing.rst:314
+msgid "Producers, consumers, and brokers"
+msgstr ""
+
+#: ../userguide/routing.rst:316
+msgid ""
+"The client sending messages is typically called a *publisher*, or a "
+"*producer*, while the entity receiving messages is called a *consumer*."
+msgstr ""
+
+#: ../userguide/routing.rst:320
+msgid ""
+"The *broker* is the message server, routing messages from producers to "
+"consumers."
+msgstr ""
+
+#: ../userguide/routing.rst:323
+msgid "You're likely to see these terms used a lot in AMQP related material."
+msgstr ""
+
+#: ../userguide/routing.rst:328
+msgid "Exchanges, queues, and routing keys"
+msgstr ""
+
+#: ../userguide/routing.rst:330
+msgid "Messages are sent to exchanges."
+msgstr ""
+
+#: ../userguide/routing.rst:331
+msgid ""
+"An exchange routes messages to one or more queues. Several exchange types"
+" exists, providing different ways to do routing, or implementing "
+"different messaging scenarios."
+msgstr ""
+
+#: ../userguide/routing.rst:334
+msgid "The message waits in the queue until someone consumes it."
+msgstr ""
+
+#: ../userguide/routing.rst:335
+msgid "The message is deleted from the queue when it has been acknowledged."
+msgstr ""
+
+#: ../userguide/routing.rst:337
+msgid "The steps required to send and receive messages are:"
+msgstr ""
+
+#: ../userguide/routing.rst:339
+msgid "Create an exchange"
+msgstr ""
+
+#: ../userguide/routing.rst:340
+msgid "Create a queue"
+msgstr ""
+
+#: ../userguide/routing.rst:341
+msgid "Bind the queue to the exchange."
+msgstr ""
+
+#: ../userguide/routing.rst:343
+msgid ""
+"Celery automatically creates the entities necessary for the queues in "
+":setting:`task_queues` to work (except if the queue's `auto_declare` "
+"setting is set to :const:`False`)."
+msgstr ""
+
+#: ../userguide/routing.rst:347 ../userguide/routing.rst:568
+msgid ""
+"Here's an example queue configuration with three queues; One for video, "
+"one for images, and one default queue for everything else:"
+msgstr ""
+
+#: ../userguide/routing.rst:366
+msgid "Exchange types"
+msgstr ""
+
+#: ../userguide/routing.rst:368
+msgid ""
+"The exchange type defines how the messages are routed through the "
+"exchange. The exchange types defined in the standard are `direct`, "
+"`topic`, `fanout` and `headers`. Also non-standard exchange types are "
+"available as plug-ins to RabbitMQ, like the `last-value-cache plug-in`_ "
+"by Michael Bridgen."
+msgstr ""
+
+#: ../userguide/routing.rst:380
+msgid "Direct exchanges"
+msgstr ""
+
+#: ../userguide/routing.rst:382
+msgid ""
+"Direct exchanges match by exact routing keys, so a queue bound by the "
+"routing key `video` only receives messages with that routing key."
+msgstr ""
+
+#: ../userguide/routing.rst:388
+msgid "Topic exchanges"
+msgstr ""
+
+#: ../userguide/routing.rst:390
+msgid ""
+"Topic exchanges matches routing keys using dot-separated words, and the "
+"wild-card characters: ``*`` (matches a single word), and ``#`` (matches "
+"zero or more words)."
+msgstr ""
+
+#: ../userguide/routing.rst:394
+msgid ""
+"With routing keys like ``usa.news``, ``usa.weather``, ``norway.news``, "
+"and ``norway.weather``, bindings could be ``*.news`` (all news), "
+"``usa.#`` (all items in the USA), or ``usa.weather`` (all USA weather "
+"items)."
+msgstr ""
+
+#: ../userguide/routing.rst:401
+msgid "Related API commands"
+msgstr ""
+
+#: ../userguide/routing.rst:406
+msgid "Declares an exchange by name."
+msgstr ""
+
+#: ../userguide/routing.rst:408
+msgid ""
+"See :meth:`amqp:Channel.exchange_declare "
+"<amqp.channel.Channel.exchange_declare>`."
+msgstr ""
+
+#: ../userguide/routing.rst
+msgid "Keyword Arguments"
+msgstr ""
+
+#: ../userguide/routing.rst:410
+msgid ""
+"Passive means the exchange won't be created, but you can use this to "
+"check if the exchange already exists."
+msgstr ""
+
+#: ../userguide/routing.rst:413
+msgid "Durable exchanges are persistent (i.e., they survive a broker restart)."
+msgstr ""
+
+#: ../userguide/routing.rst:416
+msgid ""
+"This means the exchange will be deleted by the broker when there are no "
+"more queues using it."
+msgstr ""
+
+#: ../userguide/routing.rst:422
+msgid "Declares a queue by name."
+msgstr ""
+
+#: ../userguide/routing.rst:424
+msgid ""
+"See :meth:`amqp:Channel.queue_declare "
+"<amqp.channel.Channel.queue_declare>`"
+msgstr ""
+
+#: ../userguide/routing.rst:426
+msgid ""
+"Exclusive queues can only be consumed from by the current connection. "
+"Exclusive also implies `auto_delete`."
+msgstr ""
+
+#: ../userguide/routing.rst:431
+msgid "Binds a queue to an exchange with a routing key."
+msgstr ""
+
+#: ../userguide/routing.rst:433
+msgid "Unbound queues won't receive messages, so this is necessary."
+msgstr ""
+
+#: ../userguide/routing.rst:435
+msgid "See :meth:`amqp:Channel.queue_bind <amqp.channel.Channel.queue_bind>`"
+msgstr ""
+
+#: ../userguide/routing.rst:439
+msgid "Deletes a queue and its binding."
+msgstr ""
+
+#: ../userguide/routing.rst:441
+msgid "See :meth:`amqp:Channel.queue_delete <amqp.channel.Channel.queue_delete>`"
+msgstr ""
+
+#: ../userguide/routing.rst:445
+msgid "Deletes an exchange."
+msgstr ""
+
+#: ../userguide/routing.rst:447
+msgid ""
+"See :meth:`amqp:Channel.exchange_delete "
+"<amqp.channel.Channel.exchange_delete>`"
+msgstr ""
+
+#: ../userguide/routing.rst:451
+msgid ""
+"Declaring doesn't necessarily mean \"create\". When you declare you "
+"*assert* that the entity exists and that it's operable. There's no rule "
+"as to whom should initially create the exchange/queue/binding, whether "
+"consumer or producer. Usually the first one to need it will be the one to"
+" create it."
+msgstr ""
+
+#: ../userguide/routing.rst:460
+msgid "Hands-on with the API"
+msgstr ""
+
+#: ../userguide/routing.rst:462
+msgid ""
+"Celery comes with a tool called :program:`celery amqp` that's used for "
+"command line access to the AMQP API, enabling access to administration "
+"tasks like creating/deleting queues and exchanges, purging queues or "
+"sending messages. It can also be used for non-AMQP brokers, but different"
+" implementation may not implement all commands."
+msgstr ""
+
+#: ../userguide/routing.rst:468
+msgid ""
+"You can write commands directly in the arguments to :program:`celery "
+"amqp`, or just start with no arguments to start it in shell-mode:"
+msgstr ""
+
+#: ../userguide/routing.rst:478
+msgid ""
+"Here ``1>`` is the prompt. The number 1, is the number of commands you "
+"have executed so far. Type ``help`` for a list of commands available. It "
+"also supports auto-completion, so you can start typing a command and then"
+" hit the `tab` key to show a list of possible matches."
+msgstr ""
+
+#: ../userguide/routing.rst:483
+msgid "Let's create a queue you can send messages to:"
+msgstr ""
+
+#: ../userguide/routing.rst:495
+msgid ""
+"This created the direct exchange ``testexchange``, and a queue named "
+"``testqueue``. The queue is bound to the exchange using the routing key "
+"``testkey``."
+msgstr ""
+
+#: ../userguide/routing.rst:499
+msgid ""
+"From now on all messages sent to the exchange ``testexchange`` with "
+"routing key ``testkey`` will be moved to this queue. You can send a "
+"message by using the ``basic.publish`` command:"
+msgstr ""
+
+#: ../userguide/routing.rst:508
+msgid ""
+"Now that the message is sent you can retrieve it again. You can use the "
+"``basic.get``` command here, that polls for new messages on the queue in "
+"a synchronous manner (this is OK for maintenance tasks, but for services "
+"you want to use ``basic.consume`` instead)"
+msgstr ""
+
+#: ../userguide/routing.rst:514
+msgid "Pop a message off the queue:"
+msgstr ""
+
+#: ../userguide/routing.rst:528
+msgid ""
+"AMQP uses acknowledgment to signify that a message has been received and "
+"processed successfully. If the message hasn't been acknowledged and "
+"consumer channel is closed, the message will be delivered to another "
+"consumer."
+msgstr ""
+
+#: ../userguide/routing.rst:533
+msgid ""
+"Note the delivery tag listed in the structure above; Within a connection "
+"channel, every received message has a unique delivery tag, This tag is "
+"used to acknowledge the message. Also note that delivery tags aren't "
+"unique across connections, so in another client the delivery tag `1` "
+"might point to a different message than in this channel."
+msgstr ""
+
+#: ../userguide/routing.rst:539
+msgid "You can acknowledge the message you received using ``basic.ack``:"
+msgstr ""
+
+#: ../userguide/routing.rst:546
+msgid ""
+"To clean up after our test session you should delete the entities you "
+"created:"
+msgstr ""
+
+#: ../userguide/routing.rst:564
+msgid "Defining queues"
+msgstr ""
+
+#: ../userguide/routing.rst:566
+msgid ""
+"In Celery available queues are defined by the :setting:`task_queues` "
+"setting."
+msgstr ""
+
+#: ../userguide/routing.rst:585
+msgid ""
+"Here, the :setting:`task_default_queue` will be used to route tasks that "
+"doesn't have an explicit route."
+msgstr ""
+
+#: ../userguide/routing.rst:588
+msgid ""
+"The default exchange, exchange type, and routing key will be used as the "
+"default routing values for tasks, and as the default values for entries "
+"in :setting:`task_queues`."
+msgstr ""
+
+#: ../userguide/routing.rst:592
+msgid ""
+"Multiple bindings to a single queue are also supported.  Here's an "
+"example of two routing keys that are both bound to the same queue:"
+msgstr ""
+
+#: ../userguide/routing.rst:612
+msgid "Specifying task destination"
+msgstr ""
+
+#: ../userguide/routing.rst:614
+msgid "The destination for a task is decided by the following (in order):"
+msgstr ""
+
+#: ../userguide/routing.rst:616
+msgid "The routing arguments to :func:`Task.apply_async`."
+msgstr ""
+
+#: ../userguide/routing.rst:617
+msgid ""
+"Routing related attributes defined on the :class:`~celery.task.base.Task`"
+" itself."
+msgstr ""
+
+#: ../userguide/routing.rst:619
+msgid "The :ref:`routers` defined in :setting:`task_routes`."
+msgstr ""
+
+#: ../userguide/routing.rst:621
+msgid ""
+"It's considered best practice to not hard-code these settings, but rather"
+" leave that as configuration options by using :ref:`routers`; This is the"
+" most flexible approach, but sensible defaults can still be set as task "
+"attributes."
+msgstr ""
+
+#: ../userguide/routing.rst:629
+msgid "Routers"
+msgstr ""
+
+#: ../userguide/routing.rst:631
+msgid "A router is a function that decides the routing options for a task."
+msgstr ""
+
+#: ../userguide/routing.rst:633
+msgid ""
+"All you need to define a new router is to define a function with the "
+"signature ``(name, args, kwargs, options, task=None, **kw)``:"
+msgstr ""
+
+#: ../userguide/routing.rst:644
+msgid ""
+"If you return the ``queue`` key, it'll expand with the defined settings "
+"of that queue in :setting:`task_queues`:"
+msgstr ""
+
+#: ../userguide/routing.rst:651
+msgid "becomes -->"
+msgstr ""
+
+#: ../userguide/routing.rst:661
+msgid ""
+"You install router classes by adding them to the :setting:`task_routes` "
+"setting:"
+msgstr ""
+
+#: ../userguide/routing.rst:668
+msgid "Router functions can also be added by name:"
+msgstr ""
+
+#: ../userguide/routing.rst:675
+msgid ""
+"For simple task name -> route mappings like the router example above, you"
+" can simply drop a dict into :setting:`task_routes` to get the same "
+"behavior:"
+msgstr ""
+
+#: ../userguide/routing.rst:688
+msgid ""
+"The routers will then be traversed in order, it will stop at the first "
+"router returning a true value, and use that as the final route for the "
+"task."
+msgstr ""
+
+#: ../userguide/routing.rst:691
+msgid "You can also have multiple routers defined in a sequence:"
+msgstr ""
+
+#: ../userguide/routing.rst:704
+msgid ""
+"The routers will then be visited in turn, and the first to return a value"
+" will be chosen."
+msgstr ""
+
+#: ../userguide/routing.rst:707
+msgid ""
+"If you\\'re using Redis or RabbitMQ you can also specify the queue\\'s "
+"default priority in the route."
+msgstr ""
+
+#: ../userguide/routing.rst:721
+msgid ""
+"Similarly, calling `apply_async` on a task will override that default "
+"priority."
+msgstr ""
+
+#: ../userguide/routing.rst:729
+msgid "Priority Order and Cluster Responsiveness"
+msgstr ""
+
+#: ../userguide/routing.rst:731
+msgid ""
+"It is important to note that, due to worker prefetching, if a bunch of "
+"tasks submitted at the same time they may be out of priority order at "
+"first. Disabling worker prefetching will prevent this issue, but may "
+"cause less than ideal performance for small, fast tasks. In most cases, "
+"simply reducing `worker_prefetch_multiplier` to 1 is an easier and "
+"cleaner way to increase the responsiveness of your system without the "
+"costs of disabling prefetching entirely."
+msgstr ""
+
+#: ../userguide/routing.rst:739
+msgid ""
+"Note that priorities values are sorted in reverse: 0 being highest "
+"priority."
+msgstr ""
+
+#: ../userguide/routing.rst:743
+msgid "Broadcast"
+msgstr ""
+
+#: ../userguide/routing.rst:745
+msgid ""
+"Celery can also support broadcast routing. Here is an example exchange "
+"``broadcast_tasks`` that delivers copies of tasks to all workers "
+"connected to it:"
+msgstr ""
+
+#: ../userguide/routing.rst:761
+msgid ""
+"Now the ``tasks.reload_cache`` task will be sent to every worker "
+"consuming from this queue."
+msgstr ""
+
+#: ../userguide/routing.rst:764
+msgid ""
+"Here is another example of broadcast routing, this time with a "
+":program:`celery beat` schedule:"
+msgstr ""
+
+#: ../userguide/routing.rst:783
+msgid "Broadcast & Results"
+msgstr ""
+
+#: ../userguide/routing.rst:785
+msgid ""
+"Note that Celery result doesn't define what happens if two tasks have the"
+" same task_id. If the same task is distributed to more than one worker, "
+"then the state history may not be preserved."
+msgstr ""
+
+#: ../userguide/routing.rst:789
+msgid "It's a good idea to set the ``task.ignore_result`` attribute in this case."
+msgstr ""
+

@@ -1,0 +1,104 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../internals/reference/celery.utils.objects.rst:3
+msgid "``celery.utils.objects``"
+msgstr ""
+
+#: celery.utils.objects:1 of
+msgid "Object related utilities, including introspection, etc."
+msgstr ""
+
+#: celery.utils.objects.Bunch:1 of
+msgid "Object that enables you to modify attributes."
+msgstr ""
+
+#: celery.utils.objects.FallbackContext:1 of
+msgid "Context workaround."
+msgstr ""
+
+#: celery.utils.objects.FallbackContext:3 of
+msgid ""
+"The built-in ``@contextmanager`` utility does not work well when wrapping"
+" other contexts, as the traceback is wrong when the wrapped context "
+"raises."
+msgstr ""
+
+#: celery.utils.objects.FallbackContext:7 of
+msgid ""
+"This solves this problem and can be used instead of ``@contextmanager`` "
+"in this example::"
+msgstr ""
+
+#: celery.utils.objects.FallbackContext:22 of
+msgid "This wrapper can be used instead for the above like this::"
+msgstr ""
+
+#: celery.utils.objects.getitem_property:1 of
+msgid "Attribute -> dict key descriptor."
+msgstr ""
+
+#: celery.utils.objects.getitem_property:3 of
+msgid ""
+"The target object must support ``__getitem__``, and optionally "
+"``__setitem__``."
+msgstr ""
+
+#: celery.utils.objects.getitem_property:7 of
+msgid "Example"
+msgstr ""
+
+#: celery.utils.objects.mro_lookup:1 of
+msgid "Return the first node by MRO order that defines an attribute."
+msgstr ""
+
+#: celery.utils.objects.mro_lookup of
+msgid "Parameters"
+msgstr ""
+
+#: celery.utils.objects.mro_lookup:3 of
+msgid "Child class to traverse."
+msgstr ""
+
+#: celery.utils.objects.mro_lookup:5 of
+msgid "Name of attribute to find."
+msgstr ""
+
+#: celery.utils.objects.mro_lookup:7 of
+msgid "A set of types that if reached will stop the search."
+msgstr ""
+
+#: celery.utils.objects.mro_lookup:10 of
+msgid ""
+"Use one of the stop classes if the attributes module origin isn't in this"
+" list. Used to detect monkey patched attributes."
+msgstr ""
+
+#: celery.utils.objects.mro_lookup of
+msgid "Returns"
+msgstr ""
+
+#: celery.utils.objects.mro_lookup:15 of
+msgid "The attribute value, or :const:`None` if not found."
+msgstr ""
+
+#: celery.utils.objects.mro_lookup of
+msgid "Return type"
+msgstr ""
+

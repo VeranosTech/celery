@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../internals/reference/celery.backends.consul.rst:3
+msgid "celery.backends.consul"
+msgstr ""
+
+#: celery.backends.consul:1 of
+msgid "Consul result store backend."
+msgstr ""
+
+#: celery.backends.consul:5 of
+msgid ":class:`ConsulBackend` implements KeyValueStoreBackend to store results"
+msgstr ""
+
+#: celery.backends.consul:4 of
+msgid "in the key-value store of Consul."
+msgstr ""
+
+#: celery.backends.consul.ConsulBackend:1 of
+msgid "Consul.io K/V store backend for Celery."
+msgstr ""
+
+#: celery.backends.consul.ConsulBackend.set:1 of
+msgid "Set a key in Consul."
+msgstr ""
+
+#: celery.backends.consul.ConsulBackend.set:3 of
+msgid ""
+"Before creating the key it will create a session inside Consul where it "
+"creates a session with a TTL"
+msgstr ""
+
+#: celery.backends.consul.ConsulBackend.set:6 of
+msgid "The key created afterwards will reference to the session's ID."
+msgstr ""
+
+#: celery.backends.consul.ConsulBackend.set:8 of
+msgid ""
+"If the session expires it will remove the key so that results can auto "
+"expire from the K/V store"
+msgstr ""
+

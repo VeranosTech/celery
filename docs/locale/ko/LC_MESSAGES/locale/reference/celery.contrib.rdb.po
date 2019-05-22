@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../reference/celery.contrib.rdb.rst:3
+msgid "``celery.contrib.rdb``"
+msgstr ""
+
+#: celery.contrib.rdb:1 of
+msgid "Remote Debugger."
+msgstr ""
+
+#: celery.contrib.rdb:4 of
+msgid "Introduction"
+msgstr ""
+
+#: celery.contrib.rdb:6 of
+msgid ""
+"This is a remote debugger for Celery tasks running in multiprocessing "
+"pool workers.  Inspired by a lost post on dzone.com."
+msgstr ""
+
+#: celery.contrib.rdb:10 of
+msgid "Usage"
+msgstr ""
+
+#: celery.contrib.rdb:24 of
+msgid "Environment Variables"
+msgstr ""
+
+#: celery.contrib.rdb:29 of
+msgid "``CELERY_RDB_HOST``"
+msgstr ""
+
+#: celery.contrib.rdb:31 of
+msgid ""
+"Hostname to bind to.  Default is '127.0.0.1' (only accessable from "
+"localhost)."
+msgstr ""
+
+#: celery.contrib.rdb:37 of
+msgid "``CELERY_RDB_PORT``"
+msgstr ""
+
+#: celery.contrib.rdb:39 of
+msgid ""
+"Base port to bind to.  Default is 6899. The debugger will try to find an "
+"available port starting from the base port.  The selected port will be "
+"logged by the worker."
+msgstr ""
+
+#: celery.contrib.rdb.set_trace:1 of
+msgid "Set break-point at current location, or a specified frame."
+msgstr ""
+
+#: celery.contrib.rdb.debugger:1 of
+msgid "Return the current debugger instance, or create if none."
+msgstr ""
+
+#: celery.contrib.rdb.Rdb:1 of
+msgid "Remote debugger."
+msgstr ""
+

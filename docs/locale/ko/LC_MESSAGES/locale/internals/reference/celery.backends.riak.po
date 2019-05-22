@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../internals/reference/celery.backends.riak.rst:3
+msgid "``celery.backends.riak``"
+msgstr ""
+
+#: celery.backends.riak:1 of
+msgid "Riak result store backend."
+msgstr ""
+
+#: celery.backends.riak.RiakBackend:1 of
+msgid "Riak result backend."
+msgstr ""
+
+#: celery.backends.riak.RiakBackend of
+msgid "raises"
+msgstr ""
+
+#: celery.backends.riak.RiakBackend:3 of
+msgid ""
+":exc:`celery.exceptions.ImproperlyConfigured` -- if module :pypi:`riak` "
+"is not available."
+msgstr ""
+
+#: celery.backends.riak.RiakBackend.bucket_name:1 of
+msgid "default Riak bucket name (`default`)"
+msgstr ""
+
+#: celery.backends.riak.RiakBackend.host:1 of
+msgid "default Riak server hostname (`localhost`)"
+msgstr ""
+
+#: celery.backends.riak.RiakBackend.port:1 of
+msgid "default Riak server port (8087)"
+msgstr ""
+
+#: celery.backends.riak.RiakBackend.protocol:1 of
+msgid "default protocol used to connect to Riak, might be `http` or `pbc`"
+msgstr ""
+

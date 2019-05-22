@@ -1,0 +1,532 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../userguide/daemonizing.rst:5
+msgid "Daemonization"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:10
+msgid ""
+"Most Linux distributions these days use systemd for managing the "
+"lifecycle of system and user services."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:13
+msgid "You can check if your Linux distribution uses systemd by typing:"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:21
+msgid ""
+"If you have output similar to the above, please refer to :ref:`our "
+"systemd documentation <daemon-systemd-generic>` for guidance."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:24
+msgid ""
+"However, the init.d script should still work in those Linux distributions"
+" as well since systemd provides the systemd-sysv compatiblity layer which"
+" generates services automatically from the init.d scripts we provide."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:28
+msgid ""
+"If you package Celery for multiple Linux distributions and some do not "
+"support systemd or to other Unix systems as well, you may want to refer "
+"to :ref:`our init.d documentation <daemon-generic>`."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:35
+msgid "Generic init-scripts"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:37
+msgid "See the `extra/generic-init.d/`_ directory Celery distribution."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:39
+msgid ""
+"This directory contains generic bash init-scripts for the "
+":program:`celery worker` program, these should run on Linux, FreeBSD, "
+"OpenBSD, and other Unix-like platforms."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:49
+msgid "Init-script: ``celeryd``"
+msgstr ""
+
+#: ../userguide/daemonizing.rst
+msgid "Usage"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:51
+msgid "`/etc/init.d/celeryd {start|stop|restart|status}`"
+msgstr ""
+
+#: ../userguide/daemonizing.rst
+msgid "Configuration file"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:52
+msgid ":file:`/etc/default/celeryd`"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:54
+msgid ""
+"To configure this script to run the worker properly you probably need to "
+"at least tell it where to change directory to when it starts (to find the"
+" module containing your app, or your configuration module)."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:59
+msgid ""
+"The daemonization script is configured by the file "
+":file:`/etc/default/celeryd`. This is a shell (:command:`sh`) script "
+"where you can add environment variables like the configuration options "
+"below.  To add real environment variables affecting the worker you must "
+"also export them (e.g., :command:`export DISPLAY=\":0\"`)"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:64
+msgid "Superuser privileges required"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:66
+msgid ""
+"The init-scripts can only be used by root, and the shell configuration "
+"file must also be owned by root."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:69
+msgid ""
+"Unprivileged users don't need to use the init-script, instead they can "
+"use the :program:`celery multi` utility (or :program:`celery worker "
+"--detach`):"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:90 ../userguide/daemonizing.rst:248
+#: ../userguide/daemonizing.rst:437
+msgid "Example configuration"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:92
+msgid "This is an example configuration for a Python project."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:94
+msgid ":file:`/etc/default/celeryd`:"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:143
+msgid "Using a login shell"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:145
+msgid ""
+"You can inherit the environment of the ``CELERYD_USER`` by using a login "
+"shell:"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:152
+msgid ""
+"Note that this isn't recommended, and that you should only use this "
+"option when absolutely necessary."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:158 ../userguide/daemonizing.rst:275
+msgid "Example Django configuration"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:160
+msgid ""
+"Django users now uses the exact same template as above, but make sure "
+"that the module that defines your Celery app instance also sets a default"
+" value for :envvar:`DJANGO_SETTINGS_MODULE` as shown in the example "
+"Django project in :ref:`django-first-steps`."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:168 ../userguide/daemonizing.rst:289
+msgid "Available options"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:170 ../userguide/daemonizing.rst:291
+msgid "``CELERY_APP``"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:172 ../userguide/daemonizing.rst:293
+msgid "App instance to use (value for :option:`--app <celery --app>` argument)."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:174
+msgid "``CELERY_BIN``"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:176
+msgid "Absolute or relative path to the :program:`celery` program. Examples:"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:179
+msgid ":file:`celery`"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:180
+msgid ":file:`/usr/local/bin/celery`"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:181
+msgid ":file:`/virtualenvs/proj/bin/celery`"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:182
+msgid ":file:`/virtualenvs/proj/bin/python -m celery`"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:184
+msgid "``CELERYD_NODES``"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:186
+msgid "List of node names to start (separated by space)."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:188
+msgid "``CELERYD_OPTS``"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:190
+msgid ""
+"Additional command-line arguments for the worker, see `celery worker "
+"--help` for a list. This also supports the extended syntax used by "
+"`multi` to configure settings for individual nodes. See `celery multi "
+"--help` for some multi-node configuration examples."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:195
+msgid "``CELERYD_CHDIR``"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:197
+msgid ""
+"Path to change directory to at start. Default is to stay in the current "
+"directory."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:200
+msgid "``CELERYD_PID_FILE``"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:202
+msgid "Full path to the PID file. Default is /var/run/celery/%n.pid"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:204
+msgid "``CELERYD_LOG_FILE``"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:206
+msgid ""
+"Full path to the worker log file. Default is /var/log/celery/%n%I.log "
+"**Note**: Using `%I` is important when using the prefork pool as having "
+"multiple processes share the same log file will lead to race conditions."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:210
+msgid "``CELERYD_LOG_LEVEL``"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:212
+msgid "Worker log level. Default is INFO."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:214
+msgid "``CELERYD_USER``"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:216
+msgid "User to run the worker as. Default is current user."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:218
+msgid "``CELERYD_GROUP``"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:220
+msgid "Group to run worker as. Default is current user."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:222 ../userguide/daemonizing.rst:320
+msgid "``CELERY_CREATE_DIRS``"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:224 ../userguide/daemonizing.rst:322
+msgid ""
+"Always create directories (log directory and pid file directory). Default"
+" is to only create directories when no custom logfile/pidfile set."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:227 ../userguide/daemonizing.rst:325
+msgid "``CELERY_CREATE_RUNDIR``"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:229 ../userguide/daemonizing.rst:327
+msgid ""
+"Always create pidfile directory. By default only enabled when no custom "
+"pidfile location set."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:232 ../userguide/daemonizing.rst:330
+msgid "``CELERY_CREATE_LOGDIR``"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:234 ../userguide/daemonizing.rst:332
+msgid ""
+"Always create logfile directory. By default only enable when no custom "
+"logfile location set."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:240
+msgid "Init-script: ``celerybeat``"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:241
+msgid "`/etc/init.d/celerybeat {start|stop|restart}`"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:242
+msgid ":file:`/etc/default/celerybeat` or :file:`/etc/default/celeryd`."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:250 ../userguide/daemonizing.rst:439
+msgid "This is an example configuration for a Python project:"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:252
+msgid "`/etc/default/celerybeat`:"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:277
+msgid ""
+"You should use the same template as above, but make sure the "
+"``DJANGO_SETTINGS_MODULE`` variable is set (and exported), and that "
+"``CELERYD_CHDIR`` is set to the projects directory:"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:295
+msgid "``CELERYBEAT_OPTS``"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:297
+msgid ""
+"Additional arguments to :program:`celery beat`, see :command:`celery beat"
+" --help` for a list of available options."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:300
+msgid "``CELERYBEAT_PID_FILE``"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:302
+msgid "Full path to the PID file. Default is :file:`/var/run/celeryd.pid`."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:304
+msgid "``CELERYBEAT_LOG_FILE``"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:306
+msgid "Full path to the log file. Default is :file:`/var/log/celeryd.log`."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:308
+msgid "``CELERYBEAT_LOG_LEVEL``"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:310
+msgid "Log level to use. Default is ``INFO``."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:312
+msgid "``CELERYBEAT_USER``"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:314
+msgid "User to run beat as. Default is the current user."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:316
+msgid "``CELERYBEAT_GROUP``"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:318
+msgid "Group to run beat as. Default is the current user."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:338
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:340
+msgid ""
+"If you can't get the init-scripts to work, you should try running them in"
+" *verbose mode*:"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:347
+msgid "This can reveal hints as to why the service won't start."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:349
+msgid ""
+"If the worker starts with *\"OK\"* but exits almost immediately "
+"afterwards and there's no evidence in the log file, then there's probably"
+" an error but as the daemons standard outputs are already closed you'll "
+"not be able to see them anywhere. For this situation you can use the "
+":envvar:`C_FAKEFORK` environment variable to skip the daemonization step:"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:361
+msgid "and now you should be able to see the errors."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:363
+msgid ""
+"Commonly such errors are caused by insufficient permissions to read from,"
+" or write to a file, and also by syntax errors in configuration modules, "
+"user modules, third-party libraries, or even from Celery itself (if "
+"you've found a bug you should :ref:`report it <reporting-bugs>`)."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:373
+msgid "Usage ``systemd``"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:375
+msgid "`extra/systemd/`_"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:382
+msgid "`systemctl {start|stop|restart|status} celery.service`"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:383
+msgid "/etc/conf.d/celery"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:386
+msgid "Service file: celery.service"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:388
+msgid "This is an example systemd file:"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:390
+msgid ":file:`/etc/systemd/system/celery.service`:"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:416
+msgid ""
+"Once you've put that file in :file:`/etc/systemd/system`, you should run "
+":command:`systemctl daemon-reload` in order that Systemd acknowledges "
+"that file. You should also run that command each time you modify it."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:420
+msgid ""
+"To configure user, group, :command:`chdir` change settings: ``User``, "
+"``Group``, and ``WorkingDirectory`` defined in "
+":file:`/etc/systemd/system/celery.service`."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:424
+msgid ""
+"You can also use systemd-tmpfiles in order to create working directories "
+"(for logs and pid)."
+msgstr ""
+
+#: ../userguide/daemonizing.rst
+msgid "file"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:426
+msgid "`/etc/tmpfiles.d/celery.conf`"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:441
+msgid ":file:`/etc/conf.d/celery`:"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:479
+msgid "Service file: celerybeat.service"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:481
+msgid "This is an example systemd file for Celery Beat:"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:483
+msgid ":file:`/etc/systemd/system/celerybeat.service`:"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:506
+msgid "Running the worker with superuser privileges (root)"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:508
+msgid ""
+"Running the worker with superuser privileges is a very dangerous "
+"practice. There should always be a workaround to avoid running as root. "
+"Celery may run arbitrary code in messages serialized with pickle - this "
+"is dangerous, especially when run as root."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:513
+msgid ""
+"By default Celery won't run workers as root. The associated error message"
+" may not be visible in the logs but may be seen if :envvar:`C_FAKEFORK` "
+"is used."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:517
+msgid "To force Celery to run workers as root use :envvar:`C_FORCE_ROOT`."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:519
+msgid ""
+"When running as root without :envvar:`C_FORCE_ROOT` the worker will "
+"appear to start with *\"OK\"* but exit immediately after with no apparent"
+" errors. This problem may appear when running the project in a new "
+"development or production environment (inadvertently) as root."
+msgstr ""
+
+#: ../userguide/daemonizing.rst:527
+msgid ":pypi:`supervisor`"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:529
+msgid "`extra/supervisord/`_"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:537
+msgid "``launchd`` (macOS)"
+msgstr ""
+
+#: ../userguide/daemonizing.rst:539
+msgid "`extra/macOS`_"
+msgstr ""
+

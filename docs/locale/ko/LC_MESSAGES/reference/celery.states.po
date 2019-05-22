@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: celery.states:1 of
+msgid "Built-in task states."
+msgstr ""
+
+#: celery.states:6 of
+msgid "States"
+msgstr ""
+
+#: celery.states:8 of
+msgid "See :ref:`task-states`."
+msgstr ""
+
+#: celery.states:13 of
+msgid "Sets"
+msgstr ""
+
+#: celery.states:18 of
+msgid "READY_STATES"
+msgstr ""
+
+#: celery.states:20 of
+msgid "Set of states meaning the task result is ready (has been executed)."
+msgstr ""
+
+#: celery.states:25 of
+msgid "UNREADY_STATES"
+msgstr ""
+
+#: celery.states:27 of
+msgid "Set of states meaning the task result is not ready (hasn't been executed)."
+msgstr ""
+
+#: celery.states:32 of
+msgid "EXCEPTION_STATES"
+msgstr ""
+
+#: celery.states:34 of
+msgid "Set of states meaning the task returned an exception."
+msgstr ""
+
+#: celery.states:39 of
+msgid "PROPAGATE_STATES"
+msgstr ""
+
+#: celery.states:41 of
+msgid "Set of exception states that should propagate exceptions to the user."
+msgstr ""
+
+#: celery.states:46 of
+msgid "ALL_STATES"
+msgstr ""
+
+#: celery.states:48 of
+msgid "Set of all possible states."
+msgstr ""
+
+#: celery.states:51 of
+msgid "Misc"
+msgstr ""
+
+#: celery.states.PENDING:1 of
+msgid "Task state is unknown (assumed pending since you know the id)."
+msgstr ""
+
+#: celery.states.RECEIVED:1 of
+msgid "Task was received by a worker (only used in events)."
+msgstr ""
+
+#: celery.states.STARTED:1 of
+msgid "Task was started by a worker (:setting:`task_track_started`)."
+msgstr ""
+
+#: celery.states.SUCCESS:1 of
+msgid "Task succeeded"
+msgstr ""
+
+#: celery.states.FAILURE:1 of
+msgid "Task failed"
+msgstr ""
+
+#: celery.states.REVOKED:1 of
+msgid "Task was revoked."
+msgstr ""
+
+#: celery.states.RETRY:1 of
+msgid "Task is waiting for retry."
+msgstr ""
+
+#: celery.states.precedence:1 of
+msgid "Get the precedence index for state."
+msgstr ""
+
+#: celery.states.precedence:3 of
+msgid "Lower index means higher precedence."
+msgstr ""
+
+#: celery.states.state:1 of
+msgid "Task state."
+msgstr ""
+
+#: celery.states.state:3 of
+msgid ""
+"State is a subclass of :class:`str`, implementing comparison methods "
+"adhering to state precedence rules::"
+msgstr ""
+
+#: celery.states.state:11 of
+msgid ""
+"Any custom state is considered to be lower than :state:`FAILURE` and "
+":state:`SUCCESS`, but higher than any of the other built-in states::"
+msgstr ""
+

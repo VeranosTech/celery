@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../internals/reference/celery.backends.dynamodb.rst:3
+msgid "``celery.backends.dynamodb``"
+msgstr ""
+
+#: celery.backends.dynamodb:1 of
+msgid "AWS DynamoDB result store backend."
+msgstr ""
+
+#: celery.backends.dynamodb.DynamoDBBackend:1 of
+msgid "AWS DynamoDB result backend."
+msgstr ""
+
+#: celery.backends.dynamodb.DynamoDBBackend of
+msgid "raises"
+msgstr ""
+
+#: celery.backends.dynamodb.DynamoDBBackend:3 of
+msgid ""
+":exc:`celery.exceptions.ImproperlyConfigured` -- if module :pypi:`boto3` "
+"is not available."
+msgstr ""
+
+#: celery.backends.dynamodb.DynamoDBBackend.aws_region:1 of
+msgid "AWS region (`default`)"
+msgstr ""
+
+#: celery.backends.dynamodb.DynamoDBBackend.endpoint_url:1 of
+msgid "The endpoint URL that is passed to boto3 (local DynamoDB) (`default`)"
+msgstr ""
+
+#: celery.backends.dynamodb.DynamoDBBackend.read_capacity_units:1 of
+msgid "Read Provisioned Throughput (`default`)"
+msgstr ""
+
+#: celery.backends.dynamodb.DynamoDBBackend.table_name:1 of
+msgid "default DynamoDB table name (`default`)"
+msgstr ""
+
+#: celery.backends.dynamodb.DynamoDBBackend.write_capacity_units:1 of
+msgid "Write Provisioned Throughput (`default`)"
+msgstr ""
+

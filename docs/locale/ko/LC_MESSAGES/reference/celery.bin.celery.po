@@ -1,0 +1,317 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../reference/celery.bin.celery.rst:3
+msgid "``celery.bin.celery``"
+msgstr ""
+
+#: celery.bin.celery:1 of
+msgid "The :program:`celery` umbrella command."
+msgstr ""
+
+#: celery.bin.celery:8 of
+msgid "Preload Options"
+msgstr ""
+
+#: celery.bin.celery:10 of
+msgid ""
+"These options are supported by all commands, and usually parsed before "
+"command-specific arguments."
+msgstr ""
+
+#: celery.bin.celery:15 of
+msgid "app instance to use (e.g., ``module.attr_name``)"
+msgstr ""
+
+#: celery.bin.celery:19 of
+msgid "URL to broker.  default is ``amqp://guest@localhost//``"
+msgstr ""
+
+#: celery.bin.celery:23 of
+msgid "name of custom loader class to use."
+msgstr ""
+
+#: celery.bin.celery:27 of
+msgid "Name of the configuration module"
+msgstr ""
+
+#: celery.bin.celery:31 of
+msgid "Disable colors in output."
+msgstr ""
+
+#: celery.bin.celery:35 of
+msgid "Give less verbose output (behavior depends on the sub command)."
+msgstr ""
+
+#: celery.bin.celery:39 of
+msgid "Show help and exit."
+msgstr ""
+
+#: celery.bin.celery:44 of
+msgid "Daemon Options"
+msgstr ""
+
+#: celery.bin.celery:46 of
+msgid ""
+"These options are supported by commands that can detach into the "
+"background (daemon).  They will be present in any command that also has a"
+" `--detach` option."
+msgstr ""
+
+#: celery.bin.celery:52 of
+msgid "Path to log file.  If no logfile is specified, `stderr` is used."
+msgstr ""
+
+#: celery.bin.celery:56 of
+msgid "Optional file used to store the process pid."
+msgstr ""
+
+#: celery.bin.celery:58 of
+msgid ""
+"The program won't start if this file already exists and the pid is still "
+"alive."
+msgstr ""
+
+#: celery.bin.celery:63 of
+msgid "User id, or user name of the user to run as after detaching."
+msgstr ""
+
+#: celery.bin.celery:67 of
+msgid "Group id, or group name of the main group to change to after detaching."
+msgstr ""
+
+#: celery.bin.celery:72 of
+msgid ""
+"Effective umask (in octal) of the process after detaching.  Inherits the "
+"umask of the parent process by default."
+msgstr ""
+
+#: celery.bin.celery:77 of
+msgid "Optional directory to change to after detaching."
+msgstr ""
+
+#: celery.bin.celery:81 of
+msgid "Executable to use for the detached process."
+msgstr ""
+
+#: celery.bin.celery:84 of
+msgid "``celery inspect``"
+msgstr ""
+
+#: celery.bin.celery:90 celery.bin.celery:107 of
+msgid "Timeout in seconds (float) waiting for reply"
+msgstr ""
+
+#: celery.bin.celery:94 celery.bin.celery:111 of
+msgid "Comma separated list of destination node names."
+msgstr ""
+
+#: celery.bin.celery:98 celery.bin.celery:115 of
+msgid "Use json as output format."
+msgstr ""
+
+#: celery.bin.celery:101 of
+msgid "``celery control``"
+msgstr ""
+
+#: celery.bin.celery:118 of
+msgid "``celery migrate``"
+msgstr ""
+
+#: celery.bin.celery:124 of
+msgid "Number of tasks to consume (int)."
+msgstr ""
+
+#: celery.bin.celery:128 of
+msgid "Timeout in seconds (float) waiting for tasks."
+msgstr ""
+
+#: celery.bin.celery:132 of
+msgid "Ack messages from source broker."
+msgstr ""
+
+#: celery.bin.celery:136 of
+msgid "List of task names to filter on."
+msgstr ""
+
+#: celery.bin.celery:140 of
+msgid "List of queues to migrate."
+msgstr ""
+
+#: celery.bin.celery:144 of
+msgid "Continually migrate tasks until killed."
+msgstr ""
+
+#: celery.bin.celery:147 of
+msgid "``celery upgrade``"
+msgstr ""
+
+#: celery.bin.celery:153 of
+msgid "Upgrade a Django project."
+msgstr ""
+
+#: celery.bin.celery:157 of
+msgid "Maintain backwards compatibility."
+msgstr ""
+
+#: celery.bin.celery:161 of
+msgid "Don't backup original files."
+msgstr ""
+
+#: celery.bin.celery:164 of
+msgid "``celery shell``"
+msgstr ""
+
+#: celery.bin.celery:170 of
+msgid "Force :pypi:`iPython` implementation."
+msgstr ""
+
+#: celery.bin.celery:174 of
+msgid "Force :pypi:`bpython` implementation."
+msgstr ""
+
+#: celery.bin.celery:178 of
+msgid "Force default Python shell."
+msgstr ""
+
+#: celery.bin.celery:182 of
+msgid "Don't add tasks to locals."
+msgstr ""
+
+#: celery.bin.celery:186 of
+msgid "Use :pypi:`eventlet` monkey patches."
+msgstr ""
+
+#: celery.bin.celery:190 of
+msgid "Use :pypi:`gevent` monkey patches."
+msgstr ""
+
+#: celery.bin.celery:193 of
+msgid "``celery result``"
+msgstr ""
+
+#: celery.bin.celery:199 of
+msgid "Name of task (if custom backend)."
+msgstr ""
+
+#: celery.bin.celery:203 of
+msgid "Show traceback if any."
+msgstr ""
+
+#: celery.bin.celery:206 of
+msgid "``celery purge``"
+msgstr ""
+
+#: celery.bin.celery:212 of
+msgid "Don't prompt for verification before deleting messages (DANGEROUS)"
+msgstr ""
+
+#: celery.bin.celery:215 of
+msgid "``celery call``"
+msgstr ""
+
+#: celery.bin.celery:221 of
+msgid "Positional arguments (json format)."
+msgstr ""
+
+#: celery.bin.celery:225 of
+msgid "Keyword arguments (json format)."
+msgstr ""
+
+#: celery.bin.celery:229 of
+msgid "Scheduled time in ISO-8601 format."
+msgstr ""
+
+#: celery.bin.celery:233 of
+msgid "ETA in seconds from now (float/int)."
+msgstr ""
+
+#: celery.bin.celery:237 of
+msgid "Expiry time in float/int seconds, or a ISO-8601 date."
+msgstr ""
+
+#: celery.bin.celery:241 of
+msgid "Specify serializer to use (default is json)."
+msgstr ""
+
+#: celery.bin.celery:245 of
+msgid "Destination queue."
+msgstr ""
+
+#: celery.bin.celery:249 of
+msgid "Destination exchange (defaults to the queue exchange)."
+msgstr ""
+
+#: celery.bin.celery:253 of
+msgid "Destination routing key (defaults to the queue routing key)."
+msgstr ""
+
+#: celery.bin.celery.CeleryCommand:1 of
+msgid "Base class for commands."
+msgstr ""
+
+#: celery.bin.celery.CeleryCommand.execute_from_commandline:1 of
+msgid "Execute application from command-line."
+msgstr ""
+
+#: celery.bin.celery.CeleryCommand.execute_from_commandline
+#: celery.bin.celery.CeleryCommand.handle_argv of
+msgid "Parameters"
+msgstr ""
+
+#: celery.bin.celery.CeleryCommand.execute_from_commandline:3 of
+msgid "The list of command-line arguments. Defaults to ``sys.argv``."
+msgstr ""
+
+#: celery.bin.celery.CeleryCommand.handle_argv:1 of
+msgid "Parse arguments from argv and dispatch to :meth:`run`."
+msgstr ""
+
+#: celery.bin.celery.CeleryCommand.handle_argv:5 of
+msgid ""
+"Exits with an error message if :attr:`supports_args` is disabled and "
+"``argv`` contains positional arguments."
+msgstr ""
+
+#: celery.bin.celery.CeleryCommand.handle_argv:8 of
+msgid "The program name (``argv[0]``)."
+msgstr ""
+
+#: celery.bin.celery.CeleryCommand.handle_argv:10 of
+msgid "Rest of command-line arguments."
+msgstr ""
+
+#: celery.bin.celery.CeleryCommand.with_pool_option:1 of
+msgid "Return tuple of ``(short_opts, long_opts)``."
+msgstr ""
+
+#: celery.bin.celery.CeleryCommand.with_pool_option:3 of
+msgid ""
+"Returns only if the command supports a pool argument, and used to monkey "
+"patch eventlet/gevent environments as early as possible."
+msgstr ""
+
+#: celery.bin.celery.CeleryCommand.with_pool_option:8 of
+msgid "Example"
+msgstr ""
+
+#: celery.bin.celery.main:1 of
+msgid "Start celery umbrella command."
+msgstr ""
+

@@ -1,0 +1,853 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../userguide/calling.rst:5
+msgid "Calling Tasks"
+msgstr ""
+
+#: ../../userguide/calling.rst:15
+msgid "Basics"
+msgstr ""
+
+#: ../../userguide/calling.rst:17
+msgid ""
+"This document describes Celery's uniform \"Calling API\" used by task "
+"instances and the :ref:`canvas <guide-canvas>`."
+msgstr ""
+
+#: ../../userguide/calling.rst:20
+msgid ""
+"The API defines a standard set of execution options, as well as three "
+"methods:"
+msgstr ""
+
+#: ../../userguide/calling.rst:22
+msgid "``apply_async(args[, kwargs[, …]])``"
+msgstr ""
+
+#: ../../userguide/calling.rst:24
+msgid "Sends a task message."
+msgstr ""
+
+#: ../../userguide/calling.rst:26
+msgid "``delay(*args, **kwargs)``"
+msgstr ""
+
+#: ../../userguide/calling.rst:28
+msgid "Shortcut to send a task message, but doesn't support execution options."
+msgstr ""
+
+#: ../../userguide/calling.rst:31
+msgid "*calling* (``__call__``)"
+msgstr ""
+
+#: ../../userguide/calling.rst:33
+msgid ""
+"Applying an object supporting the calling API (e.g., ``add(2, 2)``) means"
+" that the task will not be executed by a worker, but in the current "
+"process instead (a message won't be sent)."
+msgstr ""
+
+#: ../../userguide/calling.rst:43
+msgid "``T.delay(arg, kwarg=value)``"
+msgstr ""
+
+#: ../../userguide/calling.rst:42
+msgid ""
+"Star arguments shortcut to ``.apply_async``. (``.delay(*args, **kwargs)``"
+" calls ``.apply_async(args, kwargs)``)."
+msgstr ""
+
+#: ../../userguide/calling.rst:45
+msgid "``T.apply_async((arg,), {'kwarg': value})``"
+msgstr ""
+
+#: ../../userguide/calling.rst:48
+msgid "``T.apply_async(countdown=10)``"
+msgstr ""
+
+#: ../../userguide/calling.rst:48
+msgid "executes in 10 seconds from now."
+msgstr ""
+
+#: ../../userguide/calling.rst:51
+msgid "``T.apply_async(eta=now + timedelta(seconds=10))``"
+msgstr ""
+
+#: ../../userguide/calling.rst:51
+msgid "executes in 10 seconds from now, specified using ``eta``"
+msgstr ""
+
+#: ../../userguide/calling.rst:54
+msgid "``T.apply_async(countdown=60, expires=120)``"
+msgstr ""
+
+#: ../../userguide/calling.rst:54
+msgid "executes in one minute from now, but expires after 2 minutes."
+msgstr ""
+
+#: ../../userguide/calling.rst:56
+msgid "``T.apply_async(expires=now + timedelta(days=2))``"
+msgstr ""
+
+#: ../../userguide/calling.rst:57
+msgid "expires in 2 days, set using :class:`~datetime.datetime`."
+msgstr ""
+
+#: ../../userguide/calling.rst:61
+msgid "Example"
+msgstr ""
+
+#: ../../userguide/calling.rst:63
+msgid ""
+"The :meth:`~@Task.delay` method is convenient as it looks like calling a "
+"regular function:"
+msgstr ""
+
+#: ../../userguide/calling.rst:70
+msgid "Using :meth:`~@Task.apply_async` instead you have to write:"
+msgstr ""
+
+msgid "Tip"
+msgstr ""
+
+#: ../../userguide/calling.rst:78
+msgid ""
+"If the task isn't registered in the current process you can use "
+":meth:`~@send_task` to call the task by name instead."
+msgstr ""
+
+#: ../../userguide/calling.rst:82
+msgid ""
+"So `delay` is clearly convenient, but if you want to set additional "
+"execution options you have to use ``apply_async``."
+msgstr ""
+
+#: ../../userguide/calling.rst:85
+msgid ""
+"The rest of this document will go into the task execution options in "
+"detail. All examples use a task called `add`, returning the sum of two "
+"arguments:"
+msgstr ""
+
+#: ../../userguide/calling.rst:98
+msgid ""
+"You'll learn more about this later while reading about the :ref:`Canvas "
+"<guide-canvas>`, but :class:`~celery.signature`'s are objects used to "
+"pass around the signature of a task invocation, (for example to send it "
+"over the network), and they also support the Calling API:"
+msgstr ""
+
+#: ../../userguide/calling.rst:110
+msgid "Linking (callbacks/errbacks)"
+msgstr ""
+
+#: ../../userguide/calling.rst:112
+msgid ""
+"Celery supports linking tasks together so that one task follows another. "
+"The callback task will be applied with the result of the parent task as a"
+" partial argument:"
+msgstr ""
+
+msgid "What's ``s``?"
+msgstr ""
+
+#: ../../userguide/calling.rst:122
+msgid ""
+"The ``add.s`` call used here is called a signature. If you don't know "
+"what they are you should read about them in the :ref:`canvas guide "
+"<guide-canvas>`. There you can also learn about :class:`~celery.chain`:  "
+"a simpler way to chain tasks together."
+msgstr ""
+
+#: ../../userguide/calling.rst:128
+msgid ""
+"In practice the ``link`` execution option is considered an internal "
+"primitive, and you'll probably not use it directly, but use chains "
+"instead."
+msgstr ""
+
+#: ../../userguide/calling.rst:132
+msgid ""
+"Here the result of the first task (4) will be sent to a new task that "
+"adds 16 to the previous result, forming the expression :math:`(2 + 2) + "
+"16 = 20`"
+msgstr ""
+
+#: ../../userguide/calling.rst:137
+msgid ""
+"You can also cause a callback to be applied if task raises an exception "
+"(*errback*), but this behaves differently from a regular callback in that"
+" it will be passed the id of the parent task, not the result. This is "
+"because it may not always be possible to serialize the exception raised, "
+"and so this way the error callback requires a result backend to be "
+"enabled, and the task must retrieve the result of the task instead."
+msgstr ""
+
+#: ../../userguide/calling.rst:145
+msgid "This is an example error callback:"
+msgstr ""
+
+#: ../../userguide/calling.rst:156
+msgid "it can be added to the task using the ``link_error`` execution option:"
+msgstr ""
+
+#: ../../userguide/calling.rst:164
+msgid ""
+"In addition, both the ``link`` and ``link_error`` options can be "
+"expressed as a list:"
+msgstr ""
+
+#: ../../userguide/calling.rst:171
+msgid ""
+"The callbacks/errbacks will then be called in order, and all callbacks "
+"will be called with the return value of the parent task as a partial "
+"argument."
+msgstr ""
+
+#: ../../userguide/calling.rst:178
+msgid "On message"
+msgstr ""
+
+#: ../../userguide/calling.rst:180
+msgid ""
+"Celery supports catching all states changes by setting on_message "
+"callback."
+msgstr ""
+
+#: ../../userguide/calling.rst:182
+msgid ""
+"For example for long-running tasks to send task progress you can do "
+"something like this:"
+msgstr ""
+
+#: ../../userguide/calling.rst:203
+msgid "Will generate output like this:"
+msgstr ""
+
+#: ../../userguide/calling.rst:228
+msgid "ETA and Countdown"
+msgstr ""
+
+#: ../../userguide/calling.rst:230
+msgid ""
+"The ETA (estimated time of arrival) lets you set a specific date and time"
+" that is the earliest time at which your task will be executed. "
+"`countdown` is a shortcut to set ETA by seconds into the future."
+msgstr ""
+
+#: ../../userguide/calling.rst:240
+msgid ""
+"The task is guaranteed to be executed at some time *after* the specified "
+"date and time, but not necessarily at that exact time. Possible reasons "
+"for broken deadlines may include many items waiting in the queue, or "
+"heavy network latency. To make sure your tasks are executed in a timely "
+"manner you should monitor the queue for congestion. Use Munin, or similar"
+" tools, to receive alerts, so appropriate action can be taken to ease the"
+" workload. See :ref:`monitoring-munin`."
+msgstr ""
+
+#: ../../userguide/calling.rst:248
+msgid ""
+"While `countdown` is an integer, `eta` must be a "
+":class:`~datetime.datetime` object, specifying an exact date and time "
+"(including millisecond precision, and timezone information):"
+msgstr ""
+
+#: ../../userguide/calling.rst:262
+msgid "Expiration"
+msgstr ""
+
+#: ../../userguide/calling.rst:264
+msgid ""
+"The `expires` argument defines an optional expiry time, either as seconds"
+" after task publish, or a specific date and time using "
+":class:`~datetime.datetime`:"
+msgstr ""
+
+#: ../../userguide/calling.rst:279
+msgid ""
+"When a worker receives an expired task it will mark the task as "
+":state:`REVOKED` (:exc:`~@TaskRevokedError`)."
+msgstr ""
+
+#: ../../userguide/calling.rst:285
+msgid "Message Sending Retry"
+msgstr ""
+
+#: ../../userguide/calling.rst:287
+msgid ""
+"Celery will automatically retry sending messages in the event of "
+"connection failure, and retry behavior can be configured -- like how "
+"often to retry, or a maximum number of retries -- or disabled all "
+"together."
+msgstr ""
+
+#: ../../userguide/calling.rst:291
+msgid ""
+"To disable retry you can set the ``retry`` execution option to "
+":const:`False`:"
+msgstr ""
+
+#: ../../userguide/calling.rst:302
+msgid ":setting:`task_publish_retry`"
+msgstr ""
+
+#: ../../userguide/calling.rst:303
+msgid ":setting:`task_publish_retry_policy`"
+msgstr ""
+
+#: ../../userguide/calling.rst:306
+msgid "Retry Policy"
+msgstr ""
+
+#: ../../userguide/calling.rst:308
+msgid ""
+"A retry policy is a mapping that controls how retries behave, and can "
+"contain the following keys:"
+msgstr ""
+
+#: ../../userguide/calling.rst:311
+msgid "`max_retries`"
+msgstr ""
+
+#: ../../userguide/calling.rst:313
+msgid ""
+"Maximum number of retries before giving up, in this case the exception "
+"that caused the retry to fail will be raised."
+msgstr ""
+
+#: ../../userguide/calling.rst:316
+msgid "A value of :const:`None` means it will retry forever."
+msgstr ""
+
+#: ../../userguide/calling.rst:318
+msgid "The default is to retry 3 times."
+msgstr ""
+
+#: ../../userguide/calling.rst:320
+msgid "`interval_start`"
+msgstr ""
+
+#: ../../userguide/calling.rst:322
+msgid ""
+"Defines the number of seconds (float or integer) to wait between retries."
+" Default is 0 (the first retry will be instantaneous)."
+msgstr ""
+
+#: ../../userguide/calling.rst:325
+msgid "`interval_step`"
+msgstr ""
+
+#: ../../userguide/calling.rst:327
+msgid ""
+"On each consecutive retry this number will be added to the retry delay "
+"(float or integer). Default is 0.2."
+msgstr ""
+
+#: ../../userguide/calling.rst:330
+msgid "`interval_max`"
+msgstr ""
+
+#: ../../userguide/calling.rst:332
+msgid ""
+"Maximum number of seconds (float or integer) to wait between retries. "
+"Default is 0.2."
+msgstr ""
+
+#: ../../userguide/calling.rst:335
+msgid "For example, the default policy correlates to:"
+msgstr ""
+
+#: ../../userguide/calling.rst:346
+msgid ""
+"the maximum time spent retrying will be 0.4 seconds. It's set relatively "
+"short by default because a connection failure could lead to a retry pile "
+"effect if the broker connection is down -- For example, many web server "
+"processes waiting to retry, blocking other incoming requests."
+msgstr ""
+
+#: ../../userguide/calling.rst:354
+msgid "Connection Error Handling"
+msgstr ""
+
+#: ../../userguide/calling.rst:356
+msgid ""
+"When you send a task and the message transport connection is lost, or the"
+" connection cannot be initiated, an "
+":exc:`~kombu.exceptions.OperationalError` error will be raised:"
+msgstr ""
+
+#: ../../userguide/calling.rst:384
+msgid ""
+"If you have :ref:`retries <calling-retry>` enabled this will only happen "
+"after retries are exhausted, or when disabled immediately."
+msgstr ""
+
+#: ../../userguide/calling.rst:387
+msgid "You can handle this error too:"
+msgstr ""
+
+#: ../../userguide/calling.rst:402
+msgid "Serializers"
+msgstr ""
+
+msgid "Security"
+msgstr ""
+
+#: ../../userguide/calling.rst:406
+msgid ""
+"The pickle module allows for execution of arbitrary functions, please see"
+" the :ref:`security guide <guide-security>`."
+msgstr ""
+
+#: ../../userguide/calling.rst:409
+msgid ""
+"Celery also comes with a special serializer that uses cryptography to "
+"sign your messages."
+msgstr ""
+
+#: ../../userguide/calling.rst:412
+msgid ""
+"Data transferred between clients and workers needs to be serialized, so "
+"every message in Celery has a ``content_type`` header that describes the "
+"serialization method used to encode it."
+msgstr ""
+
+#: ../../userguide/calling.rst:416
+msgid ""
+"The default serializer is `JSON`, but you can change this using the "
+":setting:`task_serializer` setting, or for each individual task, or even "
+"per message."
+msgstr ""
+
+#: ../../userguide/calling.rst:420
+msgid ""
+"There's built-in support for `JSON`, :mod:`pickle`, `YAML` and "
+"``msgpack``, and you can also add your own custom serializers by "
+"registering them into the Kombu serializer registry"
+msgstr ""
+
+#: ../../userguide/calling.rst:426
+msgid ""
+":ref:`Message Serialization <kombu:guide-serialization>` in the Kombu "
+"user guide."
+msgstr ""
+
+#: ../../userguide/calling.rst:429
+msgid "Each option has its advantages and disadvantages."
+msgstr ""
+
+#: ../../userguide/calling.rst:447
+msgid "json -- JSON is supported in many programming languages, is now"
+msgstr ""
+
+#: ../../userguide/calling.rst:432
+msgid ""
+"a standard part of Python (since 2.6), and is fairly fast to decode using"
+" the modern Python libraries, such as :pypi:`simplejson`."
+msgstr ""
+
+#: ../../userguide/calling.rst:435
+msgid ""
+"The primary disadvantage to JSON is that it limits you to the following "
+"data types: strings, Unicode, floats, Boolean, dictionaries, and lists. "
+"Decimals and dates are notably missing."
+msgstr ""
+
+#: ../../userguide/calling.rst:439
+#, python-format
+msgid ""
+"Binary data will be transferred using Base64 encoding, increasing the "
+"size of the transferred data by 34% compared to an encoding format where "
+"native binary types are supported."
+msgstr ""
+
+#: ../../userguide/calling.rst:443
+msgid ""
+"However, if your data fits inside the above constraints and you need "
+"cross-language support, the default setting of JSON is probably your best"
+" choice."
+msgstr ""
+
+#: ../../userguide/calling.rst:447
+msgid "See http://json.org for more information."
+msgstr ""
+
+#: ../../userguide/calling.rst:455
+msgid "pickle -- If you have no desire to support any language other than"
+msgstr ""
+
+#: ../../userguide/calling.rst:450
+msgid ""
+"Python, then using the pickle encoding will gain you the support of all "
+"built-in Python data types (except class instances), smaller messages "
+"when sending binary files, and a slight speedup over JSON processing."
+msgstr ""
+
+#: ../../userguide/calling.rst:455
+msgid "See :mod:`pickle` for more information."
+msgstr ""
+
+#: ../../userguide/calling.rst:467
+msgid "yaml -- YAML has many of the same characteristics as json,"
+msgstr ""
+
+#: ../../userguide/calling.rst:458
+msgid ""
+"except that it natively supports more data types (including dates, "
+"recursive references, etc.)."
+msgstr ""
+
+#: ../../userguide/calling.rst:461
+msgid ""
+"However, the Python libraries for YAML are a good bit slower than the "
+"libraries for JSON."
+msgstr ""
+
+#: ../../userguide/calling.rst:464
+msgid ""
+"If you need a more expressive set of data types and need to maintain "
+"cross-language compatibility, then YAML may be a better fit than the "
+"above."
+msgstr ""
+
+#: ../../userguide/calling.rst:467
+msgid "See http://yaml.org/ for more information."
+msgstr ""
+
+#: ../../userguide/calling.rst:473
+msgid "msgpack -- msgpack is a binary serialization format that's closer to JSON"
+msgstr ""
+
+#: ../../userguide/calling.rst:470
+msgid ""
+"in features. It's very young however, and support should be considered "
+"experimental at this point."
+msgstr ""
+
+#: ../../userguide/calling.rst:473
+msgid "See http://msgpack.org/ for more information."
+msgstr ""
+
+#: ../../userguide/calling.rst:475
+msgid ""
+"The encoding used is available as a message header, so the worker knows "
+"how to deserialize any task. If you use a custom serializer, this "
+"serializer must be available for the worker."
+msgstr ""
+
+#: ../../userguide/calling.rst:479
+msgid ""
+"The following order is used to decide the serializer used when sending a "
+"task:"
+msgstr ""
+
+#: ../../userguide/calling.rst:482
+msgid "The `serializer` execution option."
+msgstr ""
+
+#: ../../userguide/calling.rst:483
+msgid "The :attr:`@-Task.serializer` attribute"
+msgstr ""
+
+#: ../../userguide/calling.rst:484
+msgid "The :setting:`task_serializer` setting."
+msgstr ""
+
+#: ../../userguide/calling.rst:487
+msgid "Example setting a custom serializer for a single task invocation:"
+msgstr ""
+
+#: ../../userguide/calling.rst:496
+msgid "Compression"
+msgstr ""
+
+#: ../../userguide/calling.rst:498
+msgid "Celery can compress messages using the following builtin schemes:"
+msgstr ""
+
+#: ../../userguide/calling.rst:500
+msgid "`brotli`"
+msgstr ""
+
+#: ../../userguide/calling.rst:502
+msgid ""
+"brotli is optimized for the web, in particular small text documents. It "
+"is most effective for serving static content such as fonts and html "
+"pages."
+msgstr ""
+
+#: ../../userguide/calling.rst:506 ../../userguide/calling.rst:605
+msgid "To use it, install Celery with:"
+msgstr ""
+
+#: ../../userguide/calling.rst:512
+msgid "`bzip2`"
+msgstr ""
+
+#: ../../userguide/calling.rst:514
+msgid ""
+"bzip2 creates smaller files than gzip, but compression and decompression "
+"speeds are noticeably slower than those of gzip."
+msgstr ""
+
+#: ../../userguide/calling.rst:517
+msgid ""
+"To use it, please ensure your Python executable was compiled with bzip2 "
+"support."
+msgstr ""
+
+#: ../../userguide/calling.rst:520 ../../userguide/calling.rst:540
+#: ../../userguide/calling.rst:560 ../../userguide/calling.rst:588
+msgid "If you get the following :class:`ImportError`:"
+msgstr ""
+
+#: ../../userguide/calling.rst:529
+msgid "it means that you should recompile your Python version with bzip2 support."
+msgstr ""
+
+#: ../../userguide/calling.rst:531
+msgid "`gzip`"
+msgstr ""
+
+#: ../../userguide/calling.rst:533
+msgid ""
+"gzip is suitable for systems that require a small memory footprint, "
+"making it ideal for systems with limited memory. It is often used to "
+"generate files with the \".tar.gz\" extension."
+msgstr ""
+
+#: ../../userguide/calling.rst:537
+msgid ""
+"To use it, please ensure your Python executable was compiled with gzip "
+"support."
+msgstr ""
+
+#: ../../userguide/calling.rst:549
+msgid "it means that you should recompile your Python version with gzip support."
+msgstr ""
+
+#: ../../userguide/calling.rst:551
+msgid "`lzma`"
+msgstr ""
+
+#: ../../userguide/calling.rst:553
+msgid ""
+"lzma provides a good compression ratio and executes with fast compression"
+" and decompression speeds at the expense of higher memory usage."
+msgstr ""
+
+#: ../../userguide/calling.rst:557
+msgid ""
+"To use it, please ensure your Python executable was compiled with lzma "
+"support and that your Python version is 3.3 and above."
+msgstr ""
+
+#: ../../userguide/calling.rst:569
+msgid "it means that you should recompile your Python version with lzma support."
+msgstr ""
+
+#: ../../userguide/calling.rst:571
+msgid "Alternatively, you can also install a backport using:"
+msgstr ""
+
+#: ../../userguide/calling.rst:577
+msgid "`zlib`"
+msgstr ""
+
+#: ../../userguide/calling.rst:579
+msgid ""
+"zlib is an abstraction of the Deflate algorithm in library form which "
+"includes support both for the gzip file format and a lightweight stream "
+"format in its API. It is a crucial component of many software systems - "
+"Linux kernel and Git VCS just to name a few."
+msgstr ""
+
+#: ../../userguide/calling.rst:585
+msgid ""
+"To use it, please ensure your Python executable was compiled with zlib "
+"support."
+msgstr ""
+
+#: ../../userguide/calling.rst:597
+msgid "it means that you should recompile your Python version with zlib support."
+msgstr ""
+
+#: ../../userguide/calling.rst:599
+msgid "`zstd`"
+msgstr ""
+
+#: ../../userguide/calling.rst:601
+msgid ""
+"zstd targets real-time compression scenarios at zlib-level and better "
+"compression ratios. It's backed by a very fast entropy stage, provided by"
+" Huff0 and FSE library."
+msgstr ""
+
+#: ../../userguide/calling.rst:611
+msgid ""
+"You can also create your own compression schemes and register them in the"
+" :func:`kombu compression registry <kombu.compression.register>`."
+msgstr ""
+
+#: ../../userguide/calling.rst:614
+msgid ""
+"The following order is used to decide the compression scheme used when "
+"sending a task:"
+msgstr ""
+
+#: ../../userguide/calling.rst:617
+msgid "The `compression` execution option."
+msgstr ""
+
+#: ../../userguide/calling.rst:618
+msgid "The :attr:`@-Task.compression` attribute."
+msgstr ""
+
+#: ../../userguide/calling.rst:619
+msgid "The :setting:`task_compression` attribute."
+msgstr ""
+
+#: ../../userguide/calling.rst:621
+msgid "Example specifying the compression used when calling a task::"
+msgstr ""
+
+#: ../../userguide/calling.rst:628
+msgid "Connections"
+msgstr ""
+
+msgid "Automatic Pool Support"
+msgstr ""
+
+#: ../../userguide/calling.rst:632
+msgid ""
+"Since version 2.3 there's support for automatic connection pools, so you "
+"don't have to manually handle connections and publishers to reuse "
+"connections."
+msgstr ""
+
+#: ../../userguide/calling.rst:636
+msgid "The connection pool is enabled by default since version 2.5."
+msgstr ""
+
+#: ../../userguide/calling.rst:638
+msgid "See the :setting:`broker_pool_limit` setting for more information."
+msgstr ""
+
+#: ../../userguide/calling.rst:640
+msgid "You can handle the connection manually by creating a publisher:"
+msgstr ""
+
+#: ../../userguide/calling.rst:656
+msgid "Though this particular example is much better expressed as a group:"
+msgstr ""
+
+#: ../../userguide/calling.rst:671
+msgid "Routing options"
+msgstr ""
+
+#: ../../userguide/calling.rst:673
+msgid "Celery can route tasks to different queues."
+msgstr ""
+
+#: ../../userguide/calling.rst:675
+msgid ""
+"Simple routing (name <-> name) is accomplished using the ``queue`` "
+"option::"
+msgstr ""
+
+#: ../../userguide/calling.rst:679
+msgid ""
+"You can then assign workers to the ``priority.high`` queue by using the "
+"workers :option:`-Q <celery worker -Q>` argument:"
+msgstr ""
+
+#: ../../userguide/calling.rst:688
+msgid ""
+"Hard-coding queue names in code isn't recommended, the best practice is "
+"to use configuration routers (:setting:`task_routes`)."
+msgstr ""
+
+#: ../../userguide/calling.rst:691
+msgid "To find out more about routing, please see :ref:`guide-routing`."
+msgstr ""
+
+#: ../../userguide/calling.rst:696
+msgid "Results options"
+msgstr ""
+
+#: ../../userguide/calling.rst:698
+msgid ""
+"You can enable or disable result storage using the "
+":setting:`task_ignore_result` setting or by using the ``ignore_result`` "
+"option:"
+msgstr ""
+
+#: ../../userguide/calling.rst:713
+msgid ""
+"If you'd like to store additional metadata about the task in the result "
+"backend set the :setting:`result_extended` setting to ``True``."
+msgstr ""
+
+#: ../../userguide/calling.rst:718
+msgid "For more information on tasks, please see :ref:`guide-tasks`."
+msgstr ""
+
+#: ../../userguide/calling.rst:721
+msgid "Advanced Options"
+msgstr ""
+
+#: ../../userguide/calling.rst:723
+msgid ""
+"These options are for advanced users who want to take use of AMQP's full "
+"routing capabilities. Interested parties may read the :ref:`routing guide"
+" <guide-routing>`."
+msgstr ""
+
+#: ../../userguide/calling.rst:727
+msgid "exchange"
+msgstr ""
+
+#: ../../userguide/calling.rst:729
+msgid ""
+"Name of exchange (or a :class:`kombu.entity.Exchange`) to send the "
+"message to."
+msgstr ""
+
+#: ../../userguide/calling.rst:732
+msgid "routing_key"
+msgstr ""
+
+#: ../../userguide/calling.rst:734
+msgid "Routing key used to determine."
+msgstr ""
+
+#: ../../userguide/calling.rst:736
+msgid "priority"
+msgstr ""
+
+#: ../../userguide/calling.rst:738
+msgid "A number between `0` and `255`, where `255` is the highest priority."
+msgstr ""
+
+#: ../../userguide/calling.rst:740
+msgid "Supported by: RabbitMQ, Redis (priority reversed, 0 is highest)."
+msgstr ""
+

@@ -1,0 +1,250 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:42+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../glossary.rst:4
+msgid "Glossary"
+msgstr ""
+
+#: ../../glossary.rst:17
+msgid "ack"
+msgstr ""
+
+#: ../../glossary.rst:19
+msgid "Short for :term:`acknowledged`."
+msgstr ""
+
+#: ../../glossary.rst:8
+msgid "acknowledged"
+msgstr ""
+
+#: ../../glossary.rst:10
+msgid ""
+"Workers acknowledge messages to signify that a message has been handled. "
+"Failing to acknowledge a message will cause the message to be "
+"redelivered. Exactly when a transaction is considered a failure varies by"
+" transport. In AMQP the transaction fails when the connection/channel is "
+"closed (or lost), but in Redis/SQS the transaction times out after a "
+"configurable amount of time (the ``visibility_timeout``)."
+msgstr ""
+
+#: ../../glossary.rst:66
+msgid "apply"
+msgstr ""
+
+#: ../../glossary.rst:68
+msgid ""
+"Originally a synonym to :term:`call <calling>` but used to signify that a"
+" function is executed by the current process."
+msgstr ""
+
+#: ../../glossary.rst:59
+msgid "billiard"
+msgstr ""
+
+#: ../../glossary.rst:61
+msgid ""
+"Fork of the Python multiprocessing library containing improvements "
+"required by Celery."
+msgstr ""
+
+#: ../../glossary.rst:52
+msgid "calling"
+msgstr ""
+
+#: ../../glossary.rst:54
+msgid ""
+"Sends a task message so that the task function is :term:`executed "
+"<executing>` by a worker."
+msgstr ""
+
+#: ../../glossary.rst:99
+msgid "cipater"
+msgstr ""
+
+#: ../../glossary.rst:101
+msgid ""
+"Celery release 3.1 named after song by Autechre "
+"(http://www.youtube.com/watch?v=OHsaqUr_33Y)"
+msgstr ""
+
+#: ../../glossary.rst:70
+msgid "context"
+msgstr ""
+
+#: ../../glossary.rst:72
+msgid ""
+"The context of a task contains information like the id of the task, it's "
+"arguments and what queue it was delivered to. It can be accessed as the "
+"tasks ``request`` attribute. See :ref:`task-request-info`"
+msgstr ""
+
+#: ../../glossary.rst:36
+msgid "early ack"
+msgstr ""
+
+#: ../../glossary.rst:38
+msgid "Short for :term:`early acknowledgment`"
+msgstr ""
+
+#: ../../glossary.rst:20
+msgid "early acknowledgment"
+msgstr ""
+
+#: ../../glossary.rst:22
+msgid ""
+"Task is :term:`acknowledged` just-in-time before being executed, meaning "
+"the task won't be redelivered to another worker if the machine loses "
+"power, or the worker instance is abruptly killed, mid-execution."
+msgstr ""
+
+#: ../../glossary.rst:27 ../../glossary.rst:35
+msgid "Configured using :setting:`task_acks_late`."
+msgstr ""
+
+#: ../../glossary.rst:42
+msgid "ETA"
+msgstr ""
+
+#: ../../glossary.rst:44
+msgid ""
+"\"Estimated Time of Arrival\", in Celery and Google Task Queue, etc., "
+"used as the term for a delayed message that should not be processed until"
+" the specified ETA time.  See :ref:`calling-eta`."
+msgstr ""
+
+#: ../../glossary.rst:63
+msgid "executing"
+msgstr ""
+
+#: ../../glossary.rst:65
+msgid "Workers *execute* task :term:`requests <request>`."
+msgstr ""
+
+#: ../../glossary.rst:76
+msgid "idempotent"
+msgstr ""
+
+#: ../../glossary.rst:78
+msgid ""
+"Idempotence is a mathematical property that describes a function that can"
+" be called multiple times without changing the result. Practically it "
+"means that a function can be repeated many times without unintended "
+"effects, but not necessarily side-effect free in the pure sense (compare "
+"to :term:`nullipotent`)."
+msgstr ""
+
+#: ../../glossary.rst:84
+msgid "Further reading: https://en.wikipedia.org/wiki/Idempotent"
+msgstr ""
+
+#: ../../glossary.rst:56
+msgid "kombu"
+msgstr ""
+
+#: ../../glossary.rst:58
+msgid "Python messaging library used by Celery to send and receive messages."
+msgstr ""
+
+#: ../../glossary.rst:39
+msgid "late ack"
+msgstr ""
+
+#: ../../glossary.rst:41
+msgid "Short for :term:`late acknowledgment`"
+msgstr ""
+
+#: ../../glossary.rst:28
+msgid "late acknowledgment"
+msgstr ""
+
+#: ../../glossary.rst:30
+msgid ""
+"Task is :term:`acknowledged` after execution (both if successful, or if "
+"the task is raising an error), which means the task will be redelivered "
+"to another worker in the event of the machine losing power, or the worker"
+" instance being killed mid-execution."
+msgstr ""
+
+#: ../../glossary.rst:85
+msgid "nullipotent"
+msgstr ""
+
+#: ../../glossary.rst:87
+msgid ""
+"describes a function that'll have the same effect, and give the same "
+"result, even if called zero or multiple times (side-effect free). A "
+"stronger version of :term:`idempotent`."
+msgstr ""
+
+#: ../../glossary.rst:113
+msgid "pidbox"
+msgstr ""
+
+#: ../../glossary.rst:115
+msgid "A process mailbox, used to implement remote control commands."
+msgstr ""
+
+#: ../../glossary.rst:108
+msgid "`prefetch count`"
+msgstr ""
+
+#: ../../glossary.rst:110
+msgid ""
+"Maximum number of unacknowledged messages a consumer can hold and if "
+"exceeded the transport shouldn't deliver any more messages to that "
+"consumer. See :ref:`optimizing-prefetch-limit`."
+msgstr ""
+
+#: ../../glossary.rst:103
+msgid "prefetch multiplier"
+msgstr ""
+
+#: ../../glossary.rst:105
+msgid ""
+"The :term:`prefetch count` is configured by using the "
+":setting:`worker_prefetch_multiplier` setting, which is multiplied by the"
+" number of pool slots (threads/processes/greenthreads)."
+msgstr ""
+
+#: ../../glossary.rst:90
+msgid "reentrant"
+msgstr ""
+
+#: ../../glossary.rst:92
+msgid ""
+"describes a function that can be interrupted in the middle of execution "
+"(e.g., by hardware interrupt or signal), and then safely called again "
+"later. Reentrancy isn't the same as :term:`idempotence <idempotent>` as "
+"the return value doesn't have to be the same given the same inputs, and a"
+" reentrant function may have side effects as long as it can be "
+"interrupted;  An idempotent function is always reentrant, but the reverse"
+" may not be true."
+msgstr ""
+
+#: ../../glossary.rst:47
+msgid "request"
+msgstr ""
+
+#: ../../glossary.rst:49
+msgid ""
+"Task messages are converted to *requests* within the worker. The request "
+"information is also available as the task's :term:`context` (the "
+"``task.request`` attribute)."
+msgstr ""
+

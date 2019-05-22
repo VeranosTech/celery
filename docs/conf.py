@@ -47,7 +47,9 @@ globals().update(conf.build_config(
     ],
     linkcheck_ignore=[
         r'^http://localhost'
-    ]
+    ],
+    locale_dirs = ['locale/'],
+    gettext_compact = False,
 ))
 
 settings = {}

@@ -1,0 +1,337 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../history/changelog-2.5.rst:5
+msgid "Change history for Celery 2.5"
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:7
+msgid ""
+"This document contains change notes for bugfix releases in the 2.5.x "
+"series, please see :ref:`whatsnew-2.5` for an overview of what's new in "
+"Celery 2.5."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:11
+msgid ""
+"If you're looking for versions prior to 2.5 you should visit our "
+":ref:`history` of releases."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:20
+msgid "2.5.5"
+msgstr ""
+
+#: ../../history/changelog-2.5.rst
+msgid "release-date"
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:21
+msgid "2012-06-06 04:00 p.m. BST"
+msgstr ""
+
+#: ../../history/changelog-2.5.rst
+msgid "release-by"
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:22 ../../history/changelog-2.5.rst:34
+#: ../../history/changelog-2.5.rst:53 ../../history/changelog-2.5.rst:176
+#: ../../history/changelog-2.5.rst:209
+msgid "Ask Solem"
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:24
+msgid "This is a dummy release performed for the following goals:"
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:26
+msgid "Protect against force upgrading to Kombu 2.2.0"
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:27
+msgid "Version parity with :pypi:`django-celery`"
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:32
+msgid "2.5.3"
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:33
+msgid "2012-04-16 07:00 p.m. BST"
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:36
+msgid ""
+"A bug causes messages to be sent with UTC time-stamps even though "
+":setting:`CELERY_ENABLE_UTC` wasn't enabled (Issue #636)."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:39
+msgid ""
+"``celerybeat``: No longer crashes if an entry's args is set to None "
+"(Issue #657)."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:42
+msgid ""
+"Auto-reload didn't work if a module's ``__file__`` attribute was set to "
+"the modules ``.pyc`` file.  (Issue #647)."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:45
+msgid ""
+"Fixes early 2.5 compatibility where ``__package__`` doesn't exist (Issue "
+"#638)."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:51
+msgid "2.5.2"
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:52
+msgid "2012-04-13 04:30 p.m. GMT"
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:58
+msgid "News"
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:60
+msgid "Now depends on Kombu 2.1.5."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:62
+msgid "Django documentation has been moved to the main Celery docs."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:64
+msgid "See :ref:`django`."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:66
+msgid ""
+"New :signal:`celeryd_init` signal can be used to configure workers by "
+"hostname."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:69
+msgid "Signal.connect can now be used as a decorator."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:71 ../../history/changelog-2.5.rst:95
+msgid "Example:"
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:81
+msgid "Invalid task messages are now rejected instead of acked."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:83
+msgid ""
+"This means that they will be moved to the dead-letter queue introduced in"
+" the latest RabbitMQ version (but must be enabled manually, consult the "
+"RabbitMQ documentation)."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:87
+msgid ""
+"Internal logging calls has been cleaned up to work better with tools like"
+" Sentry."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:90
+msgid "Contributed by David Cramer."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:92
+msgid ""
+"New method ``subtask.clone()`` can be used to clone an existing subtask "
+"with augmented arguments/options."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:107
+msgid "Chord callbacks are now triggered in eager mode."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:112 ../../history/changelog-2.5.rst:181
+msgid "Fixes"
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:114
+msgid ""
+"Programs now verifies that the pidfile is actually written correctly "
+"(Issue #641)."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:117
+msgid ""
+"Hopefully this will crash the worker immediately if the system is out of "
+"space to store the complete pidfile."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:120
+msgid ""
+"In addition, we now verify that existing pidfiles contain a new line so "
+"that a partially written pidfile is detected as broken, as before doing:"
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:128
+msgid ""
+"would cause the worker to think that an existing instance was already "
+"running (init has pid 1 after all)."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:131
+msgid "Fixed 2.5 compatibility issue with use of print_exception."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:133 ../../history/changelog-2.5.rst:143
+msgid "Fix contributed by Martin Melin."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:135
+msgid "Fixed 2.5 compatibility issue with imports."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:137
+msgid "Fix contributed by Iurii Kriachko."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:139
+msgid "All programs now fix up ``__package__`` when called as main."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:141
+msgid "This fixes compatibility with Python 2.5."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:145
+msgid "[celery control|inspect] can now be configured on the command-line."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:147
+msgid ""
+"Like with the worker it is now possible to configure Celery settings on "
+"the command-line for celery control|inspect"
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:154
+msgid "Version dependency for :pypi:`python-dateutil` fixed to be strict."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:156
+msgid "Fix contributed by Thomas Meson."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:158
+msgid ""
+"``Task.__call__`` is now optimized away in the task tracer rather than "
+"when the task class is created."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:161
+msgid "This fixes a bug where a custom __call__  may mysteriously disappear."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:163
+msgid "Auto-reload's ``inotify`` support has been improved."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:165
+msgid "Contributed by Mher Movsisyan."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:167
+msgid "The Django broker documentation has been improved."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:169
+msgid "Removed confusing warning at top of routing user guide."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:174
+msgid "2.5.1"
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:175
+msgid "2012-03-01 01:00 p.m. GMT"
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:183
+msgid ""
+"Eventlet/Gevent: A small typo caused the worker to hang when "
+"eventlet/gevent was used, this was because the environment wasn't monkey "
+"patched early enough."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:187
+msgid ""
+"Eventlet/Gevent: Another small typo caused the mediator to be started "
+"with eventlet/gevent, which would make the worker sometimes hang at "
+"shutdown."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:190
+msgid ""
+":mod:`multiprocessing`: Fixed an error occurring if the pool was stopped "
+"before it was properly started."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:193
+msgid ""
+"Proxy objects now redirects ``__doc__`` and ``__name__`` so ``help(obj)``"
+" works."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:196
+msgid ""
+"Internal timer (timer2) now logs exceptions instead of swallowing them "
+"(Issue #626)."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:199
+msgid ""
+"celery shell: can now be started with :option:`--eventlet <celery shell "
+"--eventlet>` or :option:`--gevent <celery shell --gevent>` options to "
+"apply their monkey patches."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:207
+msgid "2.5.0"
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:208
+msgid "2012-02-24 04:00 p.m. GMT"
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:211
+msgid "See :ref:`whatsnew-2.5`."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:213
+msgid ""
+"Since the changelog has gained considerable size, we decided to do things"
+" differently this time: by having separate \"what's new\" documents for "
+"major version changes."
+msgstr ""
+
+#: ../../history/changelog-2.5.rst:217
+msgid "Bugfix releases will still be found in the changelog."
+msgstr ""
+

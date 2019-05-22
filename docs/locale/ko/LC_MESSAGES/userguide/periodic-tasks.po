@@ -1,0 +1,712 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../userguide/periodic-tasks.rst:5
+msgid "Periodic Tasks"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:11
+msgid "Introduction"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:13
+msgid ""
+":program:`celery beat` is a scheduler; It kicks off tasks at regular "
+"intervals, that are then executed by available worker nodes in the "
+"cluster."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:16
+msgid ""
+"By default the entries are taken from the :setting:`beat_schedule` "
+"setting, but custom stores can also be used, like storing the entries in "
+"a SQL database."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:19
+msgid ""
+"You have to ensure only a single scheduler is running for a schedule at a"
+" time, otherwise you'd end up with duplicate tasks. Using a centralized "
+"approach means the schedule doesn't have to be synchronized, and the "
+"service can operate without using locks."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:27
+msgid "Time Zones"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:29
+msgid ""
+"The periodic task schedules uses the UTC time zone by default, but you "
+"can change the time zone used using the :setting:`timezone` setting."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:33
+msgid "An example time zone could be `Europe/London`:"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:39
+msgid ""
+"This setting must be added to your app, either by configuring it directly"
+" using (``app.conf.timezone = 'Europe/London'``), or by adding it to your"
+" configuration module if you have set one up using "
+"``app.config_from_object``. See :ref:`celerytut-configuration` for more "
+"information about configuration options."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:45
+msgid ""
+"The default scheduler (storing the schedule in the :file:`celerybeat-"
+"schedule` file) will automatically detect that the time zone has changed,"
+" and so will reset the schedule itself, but other schedulers may not be "
+"so smart (e.g., the Django database scheduler, see below) and in that "
+"case you'll have to reset the schedule manually."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:51
+msgid "Django Users"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:53
+msgid ""
+"Celery recommends and is compatible with the new ``USE_TZ`` setting "
+"introduced in Django 1.4."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:56
+msgid ""
+"For Django users the time zone specified in the ``TIME_ZONE`` setting "
+"will be used, or you can specify a custom time zone for Celery alone by "
+"using the :setting:`timezone` setting."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:60
+msgid ""
+"The database scheduler won't reset when timezone related settings change,"
+" so you must do this manually:"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:69
+msgid ""
+"Django-Celery only supports Celery 4.0 and below, for Celery 4.0 and "
+"above, do as follow:"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:80
+msgid "Entries"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:82
+msgid ""
+"To call a task periodically you have to add an entry to the beat schedule"
+" list."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:111
+msgid ""
+"Setting these up from within the :data:`~@on_after_configure` handler "
+"means that we'll not evaluate the app at module level when using "
+"``test.s()``."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:114
+msgid ""
+"The :meth:`~@add_periodic_task` function will add the entry to the "
+":setting:`beat_schedule` setting behind the scenes, and the same setting "
+"can also be used to set up periodic tasks manually:"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:118
+msgid "Example: Run the `tasks.add` task every 30 seconds."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:134
+msgid ""
+"If you're wondering where these settings should go then please see :ref"
+":`celerytut-configuration`. You can either set these options on your app "
+"directly or you can keep a separate module for configuration."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:139
+msgid ""
+"If you want to use a single item tuple for `args`, don't forget that the "
+"constructor is a comma, and not a pair of parentheses."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:142
+msgid ""
+"Using a :class:`~datetime.timedelta` for the schedule means the task will"
+" be sent in 30 second intervals (the first task will be sent 30 seconds "
+"after `celery beat` starts, and then every 30 seconds after the last "
+"run)."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:147
+msgid ""
+"A Crontab like schedule also exists, see the section on `Crontab "
+"schedules`_."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:149
+msgid ""
+"Like with :command:`cron`, the tasks may overlap if the first task "
+"doesn't complete before the next. If that's a concern you should use a "
+"locking strategy to ensure only one instance can run at a time (see for "
+"example :ref:`cookbook-task-serial`)."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:157
+msgid "Available Fields"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:159
+msgid "`task`"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:161
+msgid "The name of the task to execute."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:163
+msgid "`schedule`"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:165
+msgid "The frequency of execution."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:167
+msgid ""
+"This can be the number of seconds as an integer, a "
+":class:`~datetime.timedelta`, or a :class:`~celery.schedules.crontab`. "
+"You can also define your own custom schedule types, by extending the "
+"interface of :class:`~celery.schedules.schedule`."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:172
+msgid "`args`"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:174
+msgid "Positional arguments (:class:`list` or :class:`tuple`)."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:176
+msgid "`kwargs`"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:178
+msgid "Keyword arguments (:class:`dict`)."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:180
+msgid "`options`"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:182
+msgid "Execution options (:class:`dict`)."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:184
+msgid ""
+"This can be any argument supported by "
+":meth:`~celery.task.base.Task.apply_async` -- `exchange`, `routing_key`, "
+"`expires`, and so on."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:188
+msgid "`relative`"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:190
+msgid ""
+"If `relative` is true :class:`~datetime.timedelta` schedules are "
+"scheduled \"by the clock.\" This means the frequency is rounded to the "
+"nearest second, minute, hour or day depending on the period of the "
+":class:`~datetime.timedelta`."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:195
+msgid ""
+"By default `relative` is false, the frequency isn't rounded and will be "
+"relative to the time when :program:`celery beat` was started."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:201
+msgid "Crontab schedules"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:203
+msgid ""
+"If you want more control over when the task is executed, for example, a "
+"particular time of day or day of the week, you can use the "
+":class:`~celery.schedules.crontab` schedule type:"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:220
+msgid "The syntax of these Crontab expressions are very flexible."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:222
+msgid "Some examples:"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:225
+msgid "**Example**"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:225 ../userguide/periodic-tasks.rst:309
+#: ../userguide/periodic-tasks.rst:323
+msgid "**Meaning**"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:227
+msgid "``crontab()``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:227
+msgid "Execute every minute."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:229
+msgid "``crontab(minute=0, hour=0)``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:229
+msgid "Execute daily at midnight."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:231
+msgid "``crontab(minute=0, hour='*/3')``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:231
+msgid "Execute every three hours: midnight, 3am, 6am, 9am, noon, 3pm, 6pm, 9pm."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:235
+msgid "``crontab(minute=0,``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:236
+msgid "``hour='0,3,6,9,12,15,18,21')``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:235 ../userguide/periodic-tasks.rst:242
+msgid "Same as previous."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:238
+msgid "``crontab(minute='*/15')``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:238
+msgid "Execute every 15 minutes."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:240
+msgid "``crontab(day_of_week='sunday')``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:240
+msgid "Execute every minute (!) at Sundays."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:243
+msgid "``crontab(minute='*',``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:243
+msgid "``hour='*',`` ``day_of_week='sun')``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:247
+msgid "``crontab(minute='*/10',``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:247
+msgid "``hour='3,17,22',`` ``day_of_week='thu,fri')``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:246
+msgid ""
+"Execute every ten minutes, but only between 3-4 am, 5-6 pm, and 10-11 pm "
+"on Thursdays or Fridays."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:250
+msgid "``crontab(minute=0, hour='*/2,*/3')``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:250
+msgid ""
+"Execute every even hour, and every hour divisible by three. This means: "
+"at every hour *except*: 1am, 5am, 7am, 11am, 1pm, 5pm, 7pm, 11pm"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:256
+msgid "``crontab(minute=0, hour='*/5')``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:256
+msgid ""
+"Execute hour divisible by 5. This means that it is triggered at 3pm, not "
+"5pm (since 3pm equals the 24-hour clock value of \"15\", which is "
+"divisible by 5)."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:261
+msgid "``crontab(minute=0, hour='*/3,8-17')``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:261
+msgid ""
+"Execute every hour divisible by 3, and every hour during office hours "
+"(8am-5pm)."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:264
+msgid "``crontab(0, 0, day_of_month='2')``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:264
+msgid "Execute on the second day of every month."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:267 ../userguide/periodic-tasks.rst:270
+#: ../userguide/periodic-tasks.rst:276
+msgid "``crontab(0, 0,``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:268
+msgid "``day_of_month='2-30/2')``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:267
+msgid "Execute on every even numbered day."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:271
+msgid "``day_of_month='1-7,15-21')``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:270
+msgid "Execute on the first and third weeks of the month."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:273
+msgid "``crontab(0, 0, day_of_month='11',``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:274
+msgid "``month_of_year='5')``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:273
+msgid "Execute on the eleventh of May every year."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:277
+msgid "``month_of_year='*/3')``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:276
+msgid "Execute every day on the first month of every quarter."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:280
+msgid "See :class:`celery.schedules.crontab` for more documentation."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:285
+msgid "Solar schedules"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:287
+msgid ""
+"If you have a task that should be executed according to sunrise, sunset, "
+"dawn or dusk, you can use the :class:`~celery.schedules.solar` schedule "
+"type:"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:304
+msgid "The arguments are simply: ``solar(event, latitude, longitude)``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:306
+msgid "Be sure to use the correct sign for latitude and longitude:"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:309
+msgid "**Sign**"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:309
+msgid "**Argument**"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:311 ../userguide/periodic-tasks.rst:315
+msgid "``+``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:311 ../userguide/periodic-tasks.rst:313
+msgid "``latitude``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:311
+msgid "North"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:313 ../userguide/periodic-tasks.rst:317
+msgid "``-``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:313
+msgid "South"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:315 ../userguide/periodic-tasks.rst:317
+msgid "``longitude``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:315
+msgid "East"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:317
+msgid "West"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:320
+msgid "Possible event types are:"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:323
+msgid "**Event**"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:325
+msgid "``dawn_astronomical``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:325
+msgid ""
+"Execute at the moment after which the sky is no longer completely dark. "
+"This is when the sun is 18 degrees below the horizon."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:329
+msgid "``dawn_nautical``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:329
+msgid ""
+"Execute when there's enough sunlight for the horizon and some objects to "
+"be distinguishable; formally, when the sun is 12 degrees below the "
+"horizon."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:334
+msgid "``dawn_civil``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:334
+msgid ""
+"Execute when there's enough light for objects to be distinguishable so "
+"that outdoor activities can commence; formally, when the Sun is 6 degrees"
+" below the horizon."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:340
+msgid "``sunrise``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:340
+msgid ""
+"Execute when the upper edge of the sun appears over the eastern horizon "
+"in the morning."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:344
+msgid "``solar_noon``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:344
+msgid "Execute when the sun is highest above the horizon on that day."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:347
+msgid "``sunset``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:347
+msgid ""
+"Execute when the trailing edge of the sun disappears over the western "
+"horizon in the evening."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:351
+msgid "``dusk_civil``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:351
+msgid ""
+"Execute at the end of civil twilight, when objects are still "
+"distinguishable and some stars and planets are visible. Formally, when "
+"the sun is 6 degrees below the horizon."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:357
+msgid "``dusk_nautical``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:357
+msgid ""
+"Execute when the sun is 12 degrees below the horizon. Objects are no "
+"longer distinguishable, and the horizon is no longer visible to the naked"
+" eye."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:362
+msgid "``dusk_astronomical``"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:362
+msgid ""
+"Execute at the moment after which the sky becomes completely dark; "
+"formally, when the sun is 18 degrees below the horizon."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:367
+msgid ""
+"All solar events are calculated using UTC, and are therefore unaffected "
+"by your timezone setting."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:370
+msgid ""
+"In polar regions, the sun may not rise or set every day. The scheduler is"
+" able to handle these cases (i.e., a ``sunrise`` event won't run on a day"
+" when the sun doesn't rise). The one exception is ``solar_noon``, which "
+"is formally defined as the moment the sun transits the celestial "
+"meridian, and will occur every day even if the sun is below the horizon."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:376
+msgid ""
+"Twilight is defined as the period between dawn and sunrise; and between "
+"sunset and dusk. You can schedule an event according to \"twilight\" "
+"depending on your definition of twilight (civil, nautical, or "
+"astronomical), and whether you want the event to take place at the "
+"beginning or end of twilight, using the appropriate event from the list "
+"above."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:382
+msgid "See :class:`celery.schedules.solar` for more documentation."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:387
+msgid "Starting the Scheduler"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:389
+msgid "To start the :program:`celery beat` service:"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:395
+msgid ""
+"You can also embed `beat` inside the worker by enabling the workers "
+":option:`-B <celery worker -B>` option, this is convenient if you'll "
+"never run more than one worker node, but it's not commonly used and for "
+"that reason isn't recommended for production use:"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:404
+msgid ""
+"Beat needs to store the last run times of the tasks in a local database "
+"file (named `celerybeat-schedule` by default), so it needs access to "
+"write in the current directory, or alternatively you can specify a custom"
+" location for this file:"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:416
+msgid "To daemonize beat see :ref:`daemonizing`."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:421
+msgid "Using custom scheduler classes"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:423
+msgid ""
+"Custom scheduler classes can be specified on the command-line (the "
+":option:`--scheduler <celery beat --scheduler>` argument)."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:426
+msgid ""
+"The default scheduler is the :class:`celery.beat.PersistentScheduler`, "
+"that simply keeps track of the last run times in a local :mod:`shelve` "
+"database file."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:430
+msgid ""
+"There's also the :pypi:`django-celery-beat` extension that stores the "
+"schedule in the Django database, and presents a convenient admin "
+"interface to manage periodic tasks at runtime."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:434
+msgid "To install and use this extension:"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:436
+msgid "Use :command:`pip` to install the package:"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:442
+msgid ""
+"Add the ``django_celery_beat`` module to ``INSTALLED_APPS`` in your "
+"Django project' :file:`settings.py`::"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:450
+msgid "Note that there is no dash in the module name, only underscores."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:452
+msgid "Apply Django database migrations so that the necessary tables are created:"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:458
+msgid ""
+"Start the :program:`celery beat` service using the "
+"``django_celery_beat.schedulers:DatabaseScheduler`` scheduler:"
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:464
+msgid "Note:  You may also add this as an settings option directly."
+msgstr ""
+
+#: ../userguide/periodic-tasks.rst:466
+msgid "Visit the Django-Admin interface to set up some periodic tasks."
+msgstr ""
+

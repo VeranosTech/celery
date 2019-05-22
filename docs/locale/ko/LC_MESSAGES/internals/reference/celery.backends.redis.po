@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../internals/reference/celery.backends.redis.rst:3
+msgid "``celery.backends.redis``"
+msgstr ""
+
+#: celery.backends.redis:1 of
+msgid "Redis result store backend."
+msgstr ""
+
+#: celery.backends.redis.RedisBackend:1 of
+msgid "Redis task result store."
+msgstr ""
+
+#: celery.backends.redis.RedisBackend.max_connections:1 of
+msgid "Maximum number of connections in the pool."
+msgstr ""
+
+#: celery.backends.redis.RedisBackend.redis:1 of
+msgid ":pypi:`redis` client module."
+msgstr ""
+
+#: celery.backends.redis.SentinelBackend:1 of
+msgid "Redis sentinel task result store."
+msgstr ""
+

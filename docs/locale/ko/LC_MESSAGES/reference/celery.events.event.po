@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../reference/celery.events.event.rst:3
+msgid "``celery.events.event``"
+msgstr ""
+
+#: celery.events.event:1 of
+msgid "Creating events, and event exchange definition."
+msgstr ""
+
+#: celery.events.event.Event:1 of
+msgid "Create an event."
+msgstr ""
+
+#: celery.events.event.Event:4 of
+msgid "Notes"
+msgstr ""
+
+#: celery.events.event.Event:5 of
+msgid ""
+"An event is simply a dictionary: the only required field is ``type``. A "
+"``timestamp`` field will be set to the current time if not provided."
+msgstr ""
+
+#: celery.events.event.event_exchange:1 of
+msgid ""
+"Exchange used to send events on. Note: Use :func:`get_exchange` instead, "
+"as the type of exchange will vary depending on the broker connection."
+msgstr ""
+
+#: celery.events.event.get_exchange:1 of
+msgid "Get exchange used for sending events."
+msgstr ""
+
+#: celery.events.event.get_exchange of
+msgid "Parameters"
+msgstr ""
+
+#: celery.events.event.get_exchange:3 of
+msgid "Connection used for sending/receving events."
+msgstr ""
+
+#: celery.events.event.get_exchange:5 of
+msgid "Name of the exchange. Default is ``celeryev``."
+msgstr ""
+
+#: celery.events.event.get_exchange:10 of
+msgid ""
+"The event type changes if Redis is used as the transport (from topic -> "
+"fanout)."
+msgstr ""
+
+#: celery.events.event.group_from:1 of
+msgid "Get the group part of an event type name."
+msgstr ""
+
+#: celery.events.event.group_from:4 of
+msgid "Example"
+msgstr ""
+

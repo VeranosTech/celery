@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../reference/celery.worker.worker.rst:3
+msgid "``celery.worker.worker``"
+msgstr ""
+
+#: celery.worker.worker:1 of
+msgid "WorkController can be used to instantiate in-process workers."
+msgstr ""
+
+#: celery.worker.worker:3 of
+msgid ""
+"The command-line interface for the worker is in :mod:`celery.bin.worker`,"
+" while the worker program is in :mod:`celery.apps.worker`."
+msgstr ""
+
+#: celery.worker.worker:6 of
+msgid ""
+"The worker program is responsible for adding signal handlers, setting up "
+"logging, etc.  This is a bare-bones worker without global side-effects "
+"(i.e., except for the global state stored in :mod:`celery.worker.state`)."
+msgstr ""
+
+#: celery.worker.worker:11 of
+msgid ""
+"The worker consists of several components, all managed by bootsteps "
+"(mod:`celery.bootsteps`)."
+msgstr ""
+
+#: celery.worker.worker.WorkController:1 of
+msgid "Unmanaged worker instance."
+msgstr ""
+
+#: celery.worker.worker.WorkController.Blueprint:1 of
+msgid "Worker bootstep blueprint."
+msgstr ""
+
+#: celery.worker.worker.WorkController.exitcode:1 of
+msgid "contains the exit code if a :exc:`SystemExit` event is handled."
+msgstr ""
+
+#: celery.worker.worker.WorkController.stop:1 of
+msgid "Graceful shutdown of the worker server."
+msgstr ""
+
+#: celery.worker.worker.WorkController.terminate:1 of
+msgid "Not so graceful shutdown of the worker server."
+msgstr ""
+

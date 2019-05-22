@@ -1,0 +1,144 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: celery.app.amqp:1 of
+msgid "Sending/Receiving Messages (Kombu integration)."
+msgstr ""
+
+#: ../../reference/celery.app.amqp.rst:9
+msgid "AMQP"
+msgstr ""
+
+#: celery.app.amqp.AMQP:1 of
+msgid "App AMQP API: app.amqp."
+msgstr ""
+
+#: ../../reference/celery.app.amqp.rst:15
+msgid "Broker connection class used. Default is :class:`kombu.Connection`."
+msgstr ""
+
+#: ../../reference/celery.app.amqp.rst:19
+msgid "Base Consumer class used. Default is :class:`kombu.Consumer`."
+msgstr ""
+
+#: ../../reference/celery.app.amqp.rst:23
+msgid "Base Producer class used. Default is :class:`kombu.Producer`."
+msgstr ""
+
+#: ../../reference/celery.app.amqp.rst:27
+msgid "All currently defined task queues (a :class:`Queues` instance)."
+msgstr ""
+
+#: celery.app.amqp.AMQP.Router:1 of
+msgid "Return the current task router."
+msgstr ""
+
+#: ../../reference/celery.app.amqp.rst:42
+msgid "Queues"
+msgstr ""
+
+#: celery.app.amqp.Queues:1 of
+msgid "Queue name⇒ declaration mapping."
+msgstr ""
+
+#: celery.app.amqp.Queues celery.app.amqp.Queues.add
+#: celery.app.amqp.Queues.deselect celery.app.amqp.Queues.select of
+msgid "Parameters"
+msgstr ""
+
+#: celery.app.amqp.Queues:3 of
+msgid "Initial list/tuple or dict of queues."
+msgstr ""
+
+#: celery.app.amqp.Queues:5 of
+msgid ""
+"By default any unknown queues will be added automatically, but if this "
+"flag is disabled the occurrence of unknown queues in `wanted` will raise "
+":exc:`KeyError`."
+msgstr ""
+
+#: celery.app.amqp.Queues:9 of
+msgid "Default HA policy for queues with none set."
+msgstr ""
+
+#: celery.app.amqp.Queues:11 of
+msgid "Default x-max-priority for queues with none set."
+msgstr ""
+
+#: celery.app.amqp.Queues.add:1 of
+msgid "Add new queue."
+msgstr ""
+
+#: celery.app.amqp.Queues.add:3 of
+msgid ""
+"The first argument can either be a :class:`kombu.Queue` instance, or the "
+"name of a queue.  If the former the rest of the keyword arguments are "
+"ignored, and options are simply taken from the queue instance."
+msgstr ""
+
+#: celery.app.amqp.Queues.add:8 of
+msgid "Queue to add."
+msgstr ""
+
+#: celery.app.amqp.Queues.add:10 of
+msgid "if queue is str, specifies exchange name."
+msgstr ""
+
+#: celery.app.amqp.Queues.add:12 of
+msgid "if queue is str, specifies binding key."
+msgstr ""
+
+#: celery.app.amqp.Queues.add:14 of
+msgid "if queue is str, specifies type of exchange."
+msgstr ""
+
+#: celery.app.amqp.Queues.add:16 of
+msgid "Additional declaration options used when queue is a str."
+msgstr ""
+
+#: celery.app.amqp.Queues.deselect:1 of
+msgid "Deselect queues so that they won't be consumed from."
+msgstr ""
+
+#: celery.app.amqp.Queues.deselect:3 of
+msgid "Names of queues to avoid consuming from."
+msgstr ""
+
+#: celery.app.amqp.Queues.format:1 of
+msgid "Format routing table into string for log dumps."
+msgstr ""
+
+#: celery.app.amqp.Queues.select:1 of
+msgid "Select a subset of currently defined queues to consume from."
+msgstr ""
+
+#: celery.app.amqp.Queues.select:3 of
+msgid "Names of queues to consume from."
+msgstr ""
+
+#: celery.app.amqp.Queues.select_add:1 of
+msgid "Add new task queue that'll be consumed from."
+msgstr ""
+
+#: celery.app.amqp.Queues.select_add:3 of
+msgid ""
+"The queue will be active even when a subset has been selected using the "
+":option:`celery worker -Q` option."
+msgstr ""
+

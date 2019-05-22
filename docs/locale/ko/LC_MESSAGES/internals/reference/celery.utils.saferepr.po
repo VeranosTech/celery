@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../internals/reference/celery.utils.saferepr.rst:3
+msgid "``celery.utils.saferepr``"
+msgstr ""
+
+#: celery.utils.saferepr:1 of
+msgid "Streaming, truncating, non-recursive version of :func:`repr`."
+msgstr ""
+
+#: celery.utils.saferepr:3 of
+msgid "Differences from regular :func:`repr`:"
+msgstr ""
+
+#: celery.utils.saferepr:5 of
+msgid "Sets are represented the Python 3 way: ``{1, 2}`` vs ``set([1, 2])``."
+msgstr ""
+
+#: celery.utils.saferepr:6 of
+msgid "Unicode strings does not have the ``u'`` prefix, even on Python 2."
+msgstr ""
+
+#: celery.utils.saferepr:7 of
+msgid "Empty set formatted as ``set()`` (Python 3), not ``set([])`` (Python 2)."
+msgstr ""
+
+#: celery.utils.saferepr:8 of
+msgid "Longs don't have the ``L`` suffix."
+msgstr ""
+
+#: celery.utils.saferepr:10 of
+msgid "Very slow with no limits, super quick with limits."
+msgstr ""
+
+#: celery.utils.saferepr.saferepr:1 of
+msgid "Safe version of :func:`repr`."
+msgstr ""
+
+#: celery.utils.saferepr.saferepr:5 of
+msgid ""
+"Make sure you set the maxlen argument, or it will be very slow for "
+"recursive objects.  With the maxlen set, it's often faster than built-in "
+"repr."
+msgstr ""
+
+#: celery.utils.saferepr.reprstream:1 of
+msgid "Streaming repr, yielding tokens."
+msgstr ""
+

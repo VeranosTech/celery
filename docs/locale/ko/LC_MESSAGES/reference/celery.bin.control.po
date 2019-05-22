@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../reference/celery.bin.control.rst:3
+msgid "``celery.bin.control``"
+msgstr ""
+
+#: celery.bin.control:1 of
+msgid "The ``celery control``, ``. inspect`` and ``. status`` programs."
+msgstr ""
+
+#: celery.bin.control.control:1 of
+msgid "Workers remote control."
+msgstr ""
+
+#: celery.bin.control.control:3 of
+msgid "Availability: RabbitMQ (AMQP), Redis, and MongoDB transports."
+msgstr ""
+
+#: celery.bin.control.control:6 celery.bin.control.inspect:6 of
+msgid "Examples"
+msgstr ""
+
+#: celery.bin.control.inspect:1 of
+msgid "Inspect the worker at runtime."
+msgstr ""
+
+#: celery.bin.control.inspect:3 of
+msgid "Availability: RabbitMQ (AMQP) and Redis transports."
+msgstr ""
+
+#: celery.bin.control.status:1 of
+msgid "Show list of workers that are online."
+msgstr ""
+

@@ -1,0 +1,957 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../reference/celery.rst:3
+msgid ":mod:`celery` --- Distributed processing"
+msgstr ""
+
+#: ../../reference/celery.rst:13
+msgid ""
+"This module is the main entry-point for the Celery API. It includes "
+"commonly needed things for calling tasks, and creating Celery "
+"applications."
+msgstr ""
+
+#: ../../reference/celery.rst:18
+msgid ":class:`Celery`"
+msgstr ""
+
+#: ../../reference/celery.rst:18
+msgid "Celery application instance"
+msgstr ""
+
+#: ../../reference/celery.rst:19
+msgid ":class:`group`"
+msgstr ""
+
+#: ../../reference/celery.rst:19
+msgid "group tasks together"
+msgstr ""
+
+#: ../../reference/celery.rst:20
+msgid ":class:`chain`"
+msgstr ""
+
+#: ../../reference/celery.rst:20
+msgid "chain tasks together"
+msgstr ""
+
+#: ../../reference/celery.rst:21
+msgid ":class:`chord`"
+msgstr ""
+
+#: ../../reference/celery.rst:21
+msgid "chords enable callbacks for groups"
+msgstr ""
+
+#: ../../reference/celery.rst:22
+msgid ":func:`signature`"
+msgstr ""
+
+#: ../../reference/celery.rst:22
+msgid "create a new task signature"
+msgstr ""
+
+#: ../../reference/celery.rst:23
+msgid ":class:`Signature`"
+msgstr ""
+
+#: ../../reference/celery.rst:23
+msgid "object describing a task invocation"
+msgstr ""
+
+#: ../../reference/celery.rst:24
+msgid ":data:`current_app`"
+msgstr ""
+
+#: ../../reference/celery.rst:24
+msgid "proxy to the current application instance"
+msgstr ""
+
+#: ../../reference/celery.rst:25
+msgid ":data:`current_task`"
+msgstr ""
+
+#: ../../reference/celery.rst:25
+msgid "proxy to the currently executing task"
+msgstr ""
+
+#: ../../reference/celery.rst:29
+msgid ":class:`Celery` application objects"
+msgstr ""
+
+#: celery.Celery:1 of
+msgid "Celery application."
+msgstr ""
+
+#: celery.Celery celery.Celery.autodiscover_tasks
+#: celery.Celery.config_from_object celery.Celery.connection
+#: celery.Celery.connection_or_acquire celery.Celery.producer_or_acquire
+#: celery.Celery.select_queues celery.Celery.send_task
+#: celery.Celery.setup_security celery.Signature celery.chain celery.group of
+msgid "Parameters"
+msgstr ""
+
+#: celery.Celery:3 of
+msgid ""
+"Name of the main module if running as `__main__`. This is used as the "
+"prefix for auto-generated task names."
+msgstr ""
+
+#: celery.Celery of
+msgid "Keyword Arguments"
+msgstr ""
+
+#: celery.Celery:7 of
+msgid "URL of the default broker used."
+msgstr ""
+
+#: celery.Celery:9 of
+msgid ""
+"The result store backend class, or the name of the backend class to use."
+"  Default is the value of the :setting:`result_backend` setting."
+msgstr ""
+
+#: celery.Celery:9 of
+msgid "The result store backend class, or the name of the backend class to use."
+msgstr ""
+
+#: celery.Celery:12 of
+msgid "Default is the value of the :setting:`result_backend` setting."
+msgstr ""
+
+#: celery.Celery:14 of
+msgid ""
+"If set to False a :exc:`RuntimeError` will be raised if the task registry"
+" or tasks are used before the app is finalized."
+msgstr ""
+
+#: celery.Celery:18 of
+msgid "Make this the global current app."
+msgstr ""
+
+#: celery.Celery:20 of
+msgid "List of modules every worker should import."
+msgstr ""
+
+#: celery.Celery:22 of
+msgid "AMQP object or class name."
+msgstr ""
+
+#: celery.Celery:24 of
+msgid "Events object or class name."
+msgstr ""
+
+#: celery.Celery:27 of
+msgid "Log object or class name."
+msgstr ""
+
+#: celery.Celery:29 of
+msgid "Control object or class name."
+msgstr ""
+
+#: celery.Celery:32 of
+msgid "A task registry, or the name of a registry class."
+msgstr ""
+
+#: celery.Celery:35 of
+msgid "List of fix-up plug-ins (e.g., see :mod:`celery.fixups.django`)."
+msgstr ""
+
+#: celery.Celery:38 of
+msgid ""
+"Take configuration from a class, or object.  Attributes may include any "
+"settings described in the documentation."
+msgstr ""
+
+#: celery.Celery.user_options:1 of
+msgid ""
+"Custom options for command-line programs. See :ref:`extending-"
+"commandoptions`"
+msgstr ""
+
+#: celery.Celery.steps:1 of
+msgid ""
+"Custom bootsteps to extend and modify the worker. See :ref:`extending-"
+"bootsteps`."
+msgstr ""
+
+#: celery.Celery.current_task:1 of
+msgid "Instance of task being executed, or :const:`None`."
+msgstr ""
+
+#: celery.Celery.current_worker_task:1 of
+msgid "The task currently being executed by a worker or :const:`None`."
+msgstr ""
+
+#: celery.Celery.current_worker_task:3 of
+msgid ""
+"Differs from :data:`current_task` in that it's not affected by tasks "
+"calling other tasks directly, or eagerly."
+msgstr ""
+
+#: celery.Celery.amqp:1 of
+msgid ":class:`~@amqp`."
+msgstr ""
+
+#: celery.Celery.amqp celery.Celery.control celery.Celery.events
+#: celery.Celery.log celery.Celery.pool of
+msgid "type"
+msgstr ""
+
+#: celery.Celery.amqp:3 of
+msgid "AMQP related functionality"
+msgstr ""
+
+#: celery.Celery.backend:1 of
+msgid "Current backend instance."
+msgstr ""
+
+#: celery.Celery.loader:1 of
+msgid "Current loader instance."
+msgstr ""
+
+#: celery.Celery.control:1 of
+msgid ":class:`~@control`."
+msgstr ""
+
+#: celery.Celery.control:3 of
+msgid "Remote control"
+msgstr ""
+
+#: celery.Celery.events:1 of
+msgid ":class:`~@events`."
+msgstr ""
+
+#: celery.Celery.events:3 of
+msgid "Consuming and sending events"
+msgstr ""
+
+#: celery.Celery.log:1 of
+msgid ":class:`~@log`."
+msgstr ""
+
+#: celery.Celery.log:3 of
+msgid "Logging"
+msgstr ""
+
+#: celery.Celery.tasks:1 of
+msgid "Task registry."
+msgstr ""
+
+#: celery.Celery.tasks:3 of
+msgid "Accessing this attribute will also auto-finalize the app."
+msgstr ""
+
+#: celery.Celery.pool:1 of
+msgid ":class:`~@pool`."
+msgstr ""
+
+#: celery.Celery.pool:3 of
+msgid "This attribute is not related to the workers concurrency pool."
+msgstr ""
+
+#: celery.Celery.pool:5 of
+msgid "Broker connection pool"
+msgstr ""
+
+#: celery.Celery.Task:1 of
+msgid "Base task class for this app."
+msgstr ""
+
+#: celery.Celery.timezone:1 of
+msgid "Current timezone for this app."
+msgstr ""
+
+#: celery.Celery.timezone:3 of
+msgid ""
+"This is a cached property taking the time zone from the "
+":setting:`timezone` setting."
+msgstr ""
+
+#: celery.Celery.oid:1 of
+msgid "Universally unique identifier for this app."
+msgstr ""
+
+#: celery.Celery.close:1 of
+msgid "Clean up after the application."
+msgstr ""
+
+#: celery.Celery.close:3 of
+msgid ""
+"Only necessary for dynamically created apps, and you should probably use "
+"the :keyword:`with` statement instead."
+msgstr ""
+
+#: celery.Celery.close:7 celery.Celery.config_from_envvar:7
+#: celery.Celery.config_from_object:6 celery.chain:13 celery.chord:12
+#: celery.group:13 of
+msgid "Example"
+msgstr ""
+
+#: celery.Celery.signature:1 of
+msgid "Return a new :class:`~celery.Signature` bound to this app."
+msgstr ""
+
+#: celery.Celery.bugreport:1 of
+msgid "Return information useful in bug reports."
+msgstr ""
+
+#: celery.Celery.config_from_object:1 of
+msgid "Read configuration from object."
+msgstr ""
+
+#: celery.Celery.config_from_object:3 of
+msgid "Object is either an actual object or the name of a module to import."
+msgstr ""
+
+#: celery.Celery.config_from_object:12 of
+msgid "If true then import errors will be ignored."
+msgstr ""
+
+#: celery.Celery.config_from_object:14 of
+msgid ""
+"Force reading configuration immediately. By default the configuration "
+"will be read only when required."
+msgstr ""
+
+#: celery.Celery.config_from_envvar:1 of
+msgid "Read configuration from environment variable."
+msgstr ""
+
+#: celery.Celery.config_from_envvar:3 of
+msgid ""
+"The value of the environment variable must be the name of a module to "
+"import."
+msgstr ""
+
+#: celery.Celery.autodiscover_tasks:1 of
+msgid "Auto-discover task modules."
+msgstr ""
+
+#: celery.Celery.autodiscover_tasks:3 of
+msgid ""
+"Searches a list of packages for a \"tasks.py\" module (or use "
+"related_name argument)."
+msgstr ""
+
+#: celery.Celery.autodiscover_tasks:6 of
+msgid "If the name is empty, this will be delegated to fix-ups (e.g., Django)."
+msgstr ""
+
+#: celery.Celery.autodiscover_tasks:8 of
+msgid "For example if you have a directory layout like this:"
+msgstr ""
+
+#: celery.Celery.autodiscover_tasks:23 of
+msgid ""
+"Then calling ``app.autodiscover_tasks(['foo', 'bar', 'baz'])`` will "
+"result in the modules ``foo.tasks`` and ``bar.tasks`` being imported."
+msgstr ""
+
+#: celery.Celery.autodiscover_tasks:26 of
+msgid ""
+"List of packages to search. This argument may also be a callable, in "
+"which case the value returned is used (for lazy evaluation)."
+msgstr ""
+
+#: celery.Celery.autodiscover_tasks:30 of
+msgid ""
+"The name of the module to find.  Defaults to \"tasks\": meaning \"look "
+"for 'module.tasks' for every module in ``packages``.\".  If ``None`` will"
+" only try to import the package, i.e. \"look for 'module'\"."
+msgstr ""
+
+#: celery.Celery.autodiscover_tasks:35 of
+msgid ""
+"By default this call is lazy so that the actual auto-discovery won't "
+"happen until an application imports the default modules.  Forcing will "
+"cause the auto-discovery to happen immediately."
+msgstr ""
+
+#: celery.Celery.add_defaults:1 of
+msgid "Add default configuration from dict ``d``."
+msgstr ""
+
+#: celery.Celery.add_defaults:3 of
+msgid ""
+"If the argument is a callable function then it will be regarded as a "
+"promise, and it won't be loaded until the configuration is actually "
+"needed."
+msgstr ""
+
+#: celery.Celery.add_defaults:7 of
+msgid "This method can be compared to:"
+msgstr ""
+
+#: celery.Celery.add_defaults:13 of
+msgid ""
+"with a difference that 1) no copy will be made and 2) the dict will not "
+"be transferred when the worker spawns child processes, so it's important "
+"that the same configuration happens at import time when pickle restores "
+"the object on the other side."
+msgstr ""
+
+#: celery.Celery.setup_security:1 of
+msgid "Setup the message-signing serializer."
+msgstr ""
+
+#: celery.Celery.setup_security:3 of
+msgid "This will affect all application instances (a global operation)."
+msgstr ""
+
+#: celery.Celery.setup_security:5 of
+msgid ""
+"Disables untrusted serializers and if configured to use the ``auth`` "
+"serializer will register the ``auth`` serializer with the provided "
+"settings into the Kombu serializer registry."
+msgstr ""
+
+#: celery.Celery.setup_security:9 of
+msgid ""
+"List of serializer names, or content_types that should be exempt from "
+"being disabled."
+msgstr ""
+
+#: celery.Celery.setup_security:12 of
+msgid ""
+"Name of private key file to use. Defaults to the :setting:`security_key` "
+"setting."
+msgstr ""
+
+#: celery.Celery.setup_security:15 of
+msgid ""
+"Name of certificate file to use. Defaults to the "
+":setting:`security_certificate` setting."
+msgstr ""
+
+#: celery.Celery.setup_security:18 of
+msgid ""
+"Directory containing certificates. Defaults to the "
+":setting:`security_cert_store` setting."
+msgstr ""
+
+#: celery.Celery.setup_security:21 of
+msgid "Digest algorithm used when signing messages. Default is ``sha256``."
+msgstr ""
+
+#: celery.Celery.setup_security:24 of
+msgid ""
+"Serializer used to encode messages after they've been signed.  See "
+":setting:`task_serializer` for the serializers supported.  Default is "
+"``json``."
+msgstr ""
+
+#: celery.Celery.start:1 of
+msgid "Run :program:`celery` using `argv`."
+msgstr ""
+
+#: celery.Celery.start:3 celery.Celery.worker_main:3 of
+msgid "Uses :data:`sys.argv` if `argv` is not specified."
+msgstr ""
+
+#: celery.Celery.task:1 of
+msgid "Decorator to create a task class out of any callable."
+msgstr ""
+
+#: celery.Celery.task:4 of
+msgid "Examples"
+msgstr ""
+
+#: celery.Celery.task:11 of
+msgid "with setting extra options:"
+msgstr ""
+
+#: celery.Celery.task:21 of
+msgid ""
+"App Binding: For custom apps the task decorator will return a proxy "
+"object, so that the act of creating the task is not performed until the "
+"task is used or the task registry is accessed."
+msgstr ""
+
+#: celery.Celery.task:25 of
+msgid ""
+"If you're depending on binding to be deferred, then you must not access "
+"any attributes on the returned object until the application is fully set "
+"up (finalized)."
+msgstr ""
+
+#: celery.Celery.send_task:1 of
+msgid "Send task by name."
+msgstr ""
+
+#: celery.Celery.send_task:3 of
+msgid "Supports the same arguments as :meth:`@-Task.apply_async`."
+msgstr ""
+
+#: celery.Celery.send_task:5 of
+msgid "Name of task to call (e.g., `\"tasks.add\"`)."
+msgstr ""
+
+#: celery.Celery.send_task:7 of
+msgid "Specify custom result class."
+msgstr ""
+
+#: celery.Celery.AsyncResult:1 of
+msgid "Create new result instance."
+msgstr ""
+
+#: celery.Celery.AsyncResult:3 of
+msgid ":class:`celery.result.AsyncResult`."
+msgstr ""
+
+#: celery.Celery.GroupResult:1 of
+msgid "Create new group result instance."
+msgstr ""
+
+#: celery.Celery.GroupResult:3 of
+msgid ":class:`celery.result.GroupResult`."
+msgstr ""
+
+#: celery.Celery.worker_main:1 of
+msgid "Run :program:`celery worker` using `argv`."
+msgstr ""
+
+#: celery.Celery.Worker:1 of
+msgid "Worker application."
+msgstr ""
+
+#: celery.Celery.Worker:3 of
+msgid ":class:`~@Worker`."
+msgstr ""
+
+#: celery.Celery.WorkController:1 of
+msgid "Embeddable worker."
+msgstr ""
+
+#: celery.Celery.WorkController:3 of
+msgid ":class:`~@WorkController`."
+msgstr ""
+
+#: celery.Celery.Beat:1 of
+msgid ":program:`celery beat` scheduler application."
+msgstr ""
+
+#: celery.Celery.Beat:3 of
+msgid ":class:`~@Beat`."
+msgstr ""
+
+#: celery.Celery.connection_for_read:1 of
+msgid "Establish connection used for consuming."
+msgstr ""
+
+#: celery.Celery.connection_for_read:3 celery.Celery.connection_for_write:3 of
+msgid ":meth:`connection` for supported arguments."
+msgstr ""
+
+#: celery.Celery.connection_for_write:1 of
+msgid "Establish connection used for producing."
+msgstr ""
+
+#: celery.Celery.connection:1 of
+msgid "Establish a connection to the message broker."
+msgstr ""
+
+#: celery.Celery.connection:3 of
+msgid ""
+"Please use :meth:`connection_for_read` and :meth:`connection_for_write` "
+"instead, to convey the intent of use for this connection."
+msgstr ""
+
+#: celery.Celery.connection:7 of
+msgid "Either the URL or the hostname of the broker to use."
+msgstr ""
+
+#: celery.Celery.connection:8 of
+msgid ""
+"URL, Hostname/IP-address of the broker. If a URL is used, then the other "
+"argument below will be taken from the URL instead."
+msgstr ""
+
+#: celery.Celery.connection:12 of
+msgid "Username to authenticate as."
+msgstr ""
+
+#: celery.Celery.connection:14 of
+msgid "Password to authenticate with"
+msgstr ""
+
+#: celery.Celery.connection:16 of
+msgid "Virtual host to use (domain)."
+msgstr ""
+
+#: celery.Celery.connection:18 of
+msgid "Port to connect to."
+msgstr ""
+
+#: celery.Celery.connection:20 of
+msgid "Defaults to the :setting:`broker_use_ssl` setting."
+msgstr ""
+
+#: celery.Celery.connection:23 of
+msgid "defaults to the :setting:`broker_transport` setting."
+msgstr ""
+
+#: celery.Celery.connection:26 of
+msgid "Dictionary of transport specific options."
+msgstr ""
+
+#: celery.Celery.connection:28 of
+msgid "AMQP Heartbeat in seconds (``pyamqp`` only)."
+msgstr ""
+
+#: celery.Celery.connection:30 of
+msgid "Custom login method to use (AMQP only)."
+msgstr ""
+
+#: celery.Celery.connection:32 of
+msgid "Custom failover strategy."
+msgstr ""
+
+#: celery.Celery.connection:34 of
+msgid "Additional arguments to :class:`kombu.Connection`."
+msgstr ""
+
+#: celery.Celery.connection celery.chain celery.group celery.signature of
+msgid "Returns"
+msgstr ""
+
+#: celery.Celery.connection:36 of
+msgid "the lazy connection instance."
+msgstr ""
+
+#: celery.Celery.connection celery.chain celery.group celery.signature of
+msgid "Return type"
+msgstr ""
+
+#: celery.Celery.connection_or_acquire:1 of
+msgid "Context used to acquire a connection from the pool."
+msgstr ""
+
+#: celery.Celery.connection_or_acquire:3 of
+msgid ""
+"For use within a :keyword:`with` statement to get a connection from the "
+"pool if one is not already provided."
+msgstr ""
+
+#: celery.Celery.connection_or_acquire:6 of
+msgid "If not provided, a connection will be acquired from the connection pool."
+msgstr ""
+
+#: celery.Celery.producer_or_acquire:1 of
+msgid "Context used to acquire a producer from the pool."
+msgstr ""
+
+#: celery.Celery.producer_or_acquire:3 of
+msgid ""
+"For use within a :keyword:`with` statement to get a producer from the "
+"pool if one is not already provided"
+msgstr ""
+
+#: celery.Celery.producer_or_acquire:6 of
+msgid "If not provided, a producer will be acquired from the producer pool."
+msgstr ""
+
+#: celery.Celery.select_queues:1 of
+msgid "Select subset of queues."
+msgstr ""
+
+#: celery.Celery.select_queues:3 of
+msgid "a list of queue names to keep."
+msgstr ""
+
+#: celery.Celery.now:1 of
+msgid "Return the current time and date as a datetime."
+msgstr ""
+
+#: celery.Celery.set_current:1 of
+msgid "Make this the current app for this thread."
+msgstr ""
+
+#: celery.Celery.set_default:1 of
+msgid "Make this the default app for all threads."
+msgstr ""
+
+#: celery.Celery.finalize:1 of
+msgid "Finalize the app."
+msgstr ""
+
+#: celery.Celery.finalize:3 of
+msgid ""
+"This loads built-in tasks, evaluates pending task decorators, reads "
+"configuration, etc."
+msgstr ""
+
+#: celery.Celery.on_init:1 of
+msgid "Optional callback called at init."
+msgstr ""
+
+#: celery.Celery.prepare_config:1 of
+msgid "Prepare configuration before it is merged with the defaults."
+msgstr ""
+
+#: ../../reference/celery.rst:125
+msgid "Signal sent when app is loading configuration."
+msgstr ""
+
+#: ../../reference/celery.rst:129
+msgid "Signal sent after app has prepared the configuration."
+msgstr ""
+
+#: ../../reference/celery.rst:133
+msgid "Signal sent after app has been finalized."
+msgstr ""
+
+#: ../../reference/celery.rst:137
+msgid "Signal sent in child process after fork."
+msgstr ""
+
+#: ../../reference/celery.rst:140
+msgid "Canvas primitives"
+msgstr ""
+
+#: ../../reference/celery.rst:142
+msgid "See :ref:`guide-canvas` for more about creating task work-flows."
+msgstr ""
+
+#: celery.group:1 of
+msgid "Creates a group of tasks to be executed in parallel."
+msgstr ""
+
+#: celery.group:3 of
+msgid "A group is lazy so you must call it to take action and evaluate the group."
+msgstr ""
+
+#: celery.group:8 of
+msgid ""
+"If only one argument is passed, and that argument is an iterable then "
+"that'll be used as the list of tasks instead: this allows us to use "
+"``group`` with generator expressions."
+msgstr ""
+
+#: celery.group:19 of
+msgid ""
+"A list of signatures that this group will call. If there's only one "
+"argument, and that argument is an iterable, then that'll define the list "
+"of signatures instead."
+msgstr ""
+
+#: celery.group:23 of
+msgid "Execution options applied to all tasks in the group."
+msgstr ""
+
+#: celery.group:27 of
+msgid ""
+"signature that when called will then call all of the     tasks in the "
+"group (and return a :class:`GroupResult` instance     that can be used to"
+" inspect the state of the group)."
+msgstr ""
+
+#: celery.group:30 of
+msgid "signature that when called will then call all of the"
+msgstr ""
+
+#: celery.group:30 of
+msgid ""
+"tasks in the group (and return a :class:`GroupResult` instance that can "
+"be used to inspect the state of the group)."
+msgstr ""
+
+#: celery.chain:1 of
+msgid "Chain tasks together."
+msgstr ""
+
+#: celery.chain:3 of
+msgid ""
+"Each tasks follows one another, by being applied as a callback of the "
+"previous task."
+msgstr ""
+
+#: celery.chain:8 of
+msgid ""
+"If called with only one argument, then that argument must be an iterable "
+"of tasks to chain: this allows us to use generator expressions."
+msgstr ""
+
+#: celery.chain:14 of
+msgid "This is effectively :math:`((2 + 2) + 4)`:"
+msgstr ""
+
+#: celery.chain:22 of
+msgid ""
+"Calling a chain will return the result of the last task in the chain. You"
+" can get to the other tasks by following the ``result.parent``'s:"
+msgstr ""
+
+#: celery.chain:30 of
+msgid "Using a generator expression:"
+msgstr ""
+
+#: celery.chain:37 of
+msgid ""
+"List of task signatures to chain. If only one argument is passed and that"
+" argument is an iterable, then that'll be used as the list of signatures "
+"to chain instead.  This means that you can use a generator expression."
+msgstr ""
+
+#: celery.chain:44 of
+msgid ""
+"A lazy signature that can be called to apply the first     task in the "
+"chain.  When that task succeeed the next task in the     chain is "
+"applied, and so on."
+msgstr ""
+
+#: celery.chain:47 of
+msgid "A lazy signature that can be called to apply the first"
+msgstr ""
+
+#: celery.chain:47 of
+msgid ""
+"task in the chain.  When that task succeeed the next task in the chain is"
+" applied, and so on."
+msgstr ""
+
+#: celery.chord:1 of
+msgid "Barrier synchronization primitive."
+msgstr ""
+
+#: celery.chord:3 of
+msgid "A chord consists of a header and a body."
+msgstr ""
+
+#: celery.chord:5 of
+msgid ""
+"The header is a group of tasks that must complete before the callback is "
+"called.  A chord is essentially a callback for a group of tasks."
+msgstr ""
+
+#: celery.chord:8 of
+msgid ""
+"The body is applied with the return values of all the header tasks as a "
+"list."
+msgstr ""
+
+#: celery.chord:13 of
+msgid "The chord:"
+msgstr ""
+
+#: celery.chord:19 of
+msgid "is effectively :math:`\\Sigma ((2 + 2) + (4 + 4))`:"
+msgstr ""
+
+#: celery.signature:1 of
+msgid "Create new signature."
+msgstr ""
+
+#: celery.signature:3 of
+msgid "if the first argument is a signature already then it's cloned."
+msgstr ""
+
+#: celery.signature:4 of
+msgid "if the first argument is a dict, then a Signature version is returned."
+msgstr ""
+
+#: celery.signature:6 of
+msgid "The resulting signature."
+msgstr ""
+
+#: celery.Signature:1 of
+msgid "Task Signature."
+msgstr ""
+
+#: celery.Signature:3 of
+msgid ""
+"Class that wraps the arguments and execution options for a single task "
+"invocation."
+msgstr ""
+
+#: celery.Signature:6 of
+msgid ""
+"Used as the parts in a :class:`group` and other constructs, or to pass "
+"tasks around as callbacks while being compatible with serializers with a "
+"strict type subset."
+msgstr ""
+
+#: celery.Signature:10 of
+msgid "Signatures can also be created from tasks:"
+msgstr ""
+
+#: celery.Signature:12 of
+msgid ""
+"Using the ``.signature()`` method that has the same signature as "
+"``Task.apply_async``:"
+msgstr ""
+
+#: celery.Signature:19 of
+msgid "or the ``.s()`` shortcut that works for star arguments:"
+msgstr ""
+
+#: celery.Signature:25 of
+msgid ""
+"the ``.s()`` shortcut does not allow you to specify execution options but"
+" there's a chaning `.set` method that returns the signature:"
+msgstr ""
+
+#: celery.Signature:34 of
+msgid ""
+"You should use :func:`~celery.signature` to create new signatures. The "
+"``Signature`` class is the type returned by that function and should be "
+"used for ``isinstance`` checks for signatures."
+msgstr ""
+
+#: celery.Signature:38 of
+msgid ":ref:`guide-canvas` for the complete guide."
+msgstr ""
+
+#: celery.Signature:40 of
+msgid "Either a task class/instance, or the name of a task."
+msgstr ""
+
+#: celery.Signature:43 of
+msgid "Positional arguments to apply."
+msgstr ""
+
+#: celery.Signature:45 of
+msgid "Keyword arguments to apply."
+msgstr ""
+
+#: celery.Signature:47 of
+msgid "Additional options to :meth:`Task.apply_async`."
+msgstr ""
+
+#: celery.Signature:52 of
+msgid ""
+"If the first argument is a :class:`dict`, the other arguments will be "
+"ignored and the values in the dict will be used instead::"
+msgstr ""
+
+#: ../../reference/celery.rst:155
+msgid "Proxies"
+msgstr ""
+
+#: ../../reference/celery.rst:159
+msgid "The currently set app for this thread."
+msgstr ""
+
+#: ../../reference/celery.rst:163
+msgid ""
+"The task currently being executed (only set in the worker, or when "
+"eager/apply is used)."
+msgstr ""
+

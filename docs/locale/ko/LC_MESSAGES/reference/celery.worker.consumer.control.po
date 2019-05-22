@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../reference/celery.worker.consumer.control.rst:3
+msgid "``celery.worker.consumer.control``"
+msgstr ""
+
+#: celery.worker.consumer.control:1 of
+msgid "Worker Remote Control Bootstep."
+msgstr ""
+
+#: celery.worker.consumer.control:3 of
+msgid "``Control`` -> :mod:`celery.worker.pidbox` -> :mod:`kombu.pidbox`."
+msgstr ""
+
+#: celery.worker.consumer.control:5 of
+msgid "The actual commands are implemented in :mod:`celery.worker.control`."
+msgstr ""
+
+#: celery.worker.consumer.control.Control:1 of
+msgid "Remote control command service."
+msgstr ""
+
+#: celery.worker.consumer.control.Control.include_if:1 of
+msgid "Return true if bootstep should be included."
+msgstr ""
+
+#: celery.worker.consumer.control.Control.include_if:3 of
+msgid ""
+"You can define this as an optional predicate that decides whether this "
+"step should be created."
+msgstr ""
+

@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../reference/celery.app.registry.rst:3
+msgid "``celery.app.registry``"
+msgstr ""
+
+#: celery.app.registry:1 of
+msgid "Registry of available tasks."
+msgstr ""
+
+#: celery.app.registry.TaskRegistry:1 of
+msgid "Map of registered tasks."
+msgstr ""
+
+#: celery.app.registry.TaskRegistry.NotRegistered:1 of
+msgid "The task ain't registered."
+msgstr ""
+
+#: celery.app.registry.TaskRegistry.register:1 of
+msgid "Register a task in the task registry."
+msgstr ""
+
+#: celery.app.registry.TaskRegistry.register:3 of
+msgid ""
+"The task will be automatically instantiated if not already an instance. "
+"Name must be configured prior to registration."
+msgstr ""
+
+#: celery.app.registry.TaskRegistry.unregister:1 of
+msgid "Unregister task by name."
+msgstr ""
+
+#: celery.app.registry.TaskRegistry.unregister of
+msgid "Parameters"
+msgstr ""
+
+#: celery.app.registry.TaskRegistry.unregister:3 of
+msgid ""
+"name of the task to unregister, or a :class:`celery.task.base.Task` with "
+"a valid `name` attribute."
+msgstr ""
+
+#: celery.app.registry.TaskRegistry.unregister of
+msgid "raises"
+msgstr ""
+
+#: celery.app.registry.TaskRegistry.unregister:7 of
+msgid ":exc:`celery.exceptions.NotRegistered` -- if the task is not registered."
+msgstr ""
+

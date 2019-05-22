@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../internals/reference/celery.backends.cosmosdbsql.rst:3
+msgid "``celery.backends.cosmosdbsql``"
+msgstr ""
+
+#: celery.backends.cosmosdbsql:1 of
+msgid "The CosmosDB/SQL backend for Celery (experimental)."
+msgstr ""
+
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend:1 of
+msgid "CosmosDB/SQL backend for Celery."
+msgstr ""
+
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.delete:1 of
+msgid "Delete the value at a given key."
+msgstr ""
+
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.delete
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.get
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.mget
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.set of
+msgid "Parameters"
+msgstr ""
+
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.delete:3 of
+msgid "The key of the value to delete."
+msgstr ""
+
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.get:1 of
+msgid "Read the value stored at the given key."
+msgstr ""
+
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.get:3 of
+msgid "The key for which to read the value."
+msgstr ""
+
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.mget:1 of
+msgid "Read all the values for the provided keys."
+msgstr ""
+
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.mget:3 of
+msgid "The list of keys to read."
+msgstr ""
+
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.set:1 of
+msgid "Store a value for a given key."
+msgstr ""
+
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.set:3 of
+msgid "The key at which to store the value."
+msgstr ""
+
+#: celery.backends.cosmosdbsql.CosmosDBSQLBackend.set:4 of
+msgid "The value to store."
+msgstr ""
+

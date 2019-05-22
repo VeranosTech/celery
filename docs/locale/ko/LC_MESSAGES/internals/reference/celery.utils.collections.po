@@ -1,0 +1,235 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../internals/reference/celery.utils.collections.rst:3
+msgid "``celery.utils.collections``"
+msgstr ""
+
+#: celery.utils.collections:1 of
+msgid "Custom maps, sets, sequences, and other data structures."
+msgstr ""
+
+#: celery.utils.collections.AttributeDictMixin:1 of
+msgid "Mixin for Mapping interface that adds attribute access."
+msgstr ""
+
+#: celery.utils.collections.AttributeDictMixin:3 of
+msgid "I.e., `d.key -> d[key]`)."
+msgstr ""
+
+#: celery.utils.collections.AttributeDict:1 of
+msgid "Dict subclass with attribute access."
+msgstr ""
+
+#: celery.utils.collections.BufferMap:1 of
+msgid "Map of buffers."
+msgstr ""
+
+#: celery.utils.collections.BufferMap.Empty:1
+#: celery.utils.collections.Evictable.Empty:1
+#: celery.utils.collections.Messagebuffer.Empty:1 of
+msgid "Exception raised by Queue.get(block=0)/get_nowait()."
+msgstr ""
+
+#: celery.utils.collections.ChainMap:1 of
+msgid "Key lookup on a sequence of maps."
+msgstr ""
+
+#: celery.utils.collections.ChainMap.fromkeys:1 of
+msgid "Create a ChainMap with a single dict created from the iterable."
+msgstr ""
+
+#: celery.utils.collections.ChainMap.pop:1 of
+msgid "If key is not found, d is returned if given, otherwise KeyError is raised."
+msgstr ""
+
+#: celery.utils.collections.ChainMap.update:1 of
+msgid ""
+"If E present and has a .keys() method, does:     for k in E: D[k] = E[k] "
+"If E present and lacks .keys() method, does:     for (k, v) in E: D[k] = "
+"v In either case, this is followed by: for k, v in F.items(): D[k] = v"
+msgstr ""
+
+#: celery.utils.collections.ConfigurationView:1 of
+msgid "A view over an applications configuration dictionaries."
+msgstr ""
+
+#: celery.utils.collections.ConfigurationView:3 of
+msgid "Custom (but older) version of :class:`collections.ChainMap`."
+msgstr ""
+
+#: celery.utils.collections.ConfigurationView:5 of
+msgid ""
+"If the key does not exist in ``changes``, the ``defaults`` dictionaries "
+"are consulted."
+msgstr ""
+
+#: celery.utils.collections.ConfigurationView
+#: celery.utils.collections.LimitedSet
+#: celery.utils.collections.LimitedSet.purge of
+msgid "Parameters"
+msgstr ""
+
+#: celery.utils.collections.ConfigurationView:8 of
+msgid "Map of configuration changes."
+msgstr ""
+
+#: celery.utils.collections.ConfigurationView:10 of
+msgid "List of dictionaries containing the default configuration."
+msgstr ""
+
+#: celery.utils.collections.ConfigurationView.clear:1 of
+msgid "Remove all changes, but keep defaults."
+msgstr ""
+
+#: celery.utils.collections.DictAttribute:1 of
+msgid "Dict interface to attributes."
+msgstr ""
+
+#: celery.utils.collections.DictAttribute:3 of
+msgid "`obj[k] -> obj.k` `obj[k] = val -> obj.k = val`"
+msgstr ""
+
+#: celery.utils.collections.Evictable:1 of
+msgid "Mixin for classes supporting the ``evict`` method."
+msgstr ""
+
+#: celery.utils.collections.Evictable.evict:1 of
+msgid "Force evict until maxsize is enforced."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:1 of
+msgid "Kind-of Set (or priority queue) with limitations."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:3 of
+msgid ""
+"Good for when you need to test for membership (`a in set`), but the set "
+"should not grow unbounded."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:6 of
+msgid ""
+"``maxlen`` is enforced at all times, so if the limit is reached we'll "
+"also remove non-expired items."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:9 of
+msgid ""
+"You can also configure ``minlen``: this is the minimal residual size of "
+"the set."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:12 of
+msgid "All arguments are optional, and no limits are enabled by default."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:14 of
+msgid ""
+"Optional max number of items. Adding more items than ``maxlen`` will "
+"result in immediate removal of items sorted by oldest insertion time."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:18 of
+msgid "TTL for all items. Expired items are purged as keys are inserted."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:21 of
+msgid ""
+"Minimal residual size of this set. .. versionadded:: 4.0  Value must be "
+"less than ``maxlen`` if both are configured.  Older expired items will be"
+" deleted, only after the set exceeds ``minlen`` number of items."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:21 of
+msgid "Minimal residual size of this set. .. versionadded:: 4.0"
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:24 of
+msgid "Value must be less than ``maxlen`` if both are configured."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:26 of
+msgid ""
+"Older expired items will be deleted, only after the set exceeds "
+"``minlen`` number of items."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:29 of
+msgid ""
+"Initial data to initialize set with. Can be an iterable of ``(key, "
+"value)`` pairs, a dict (``{key: insertion_time}``), or another instance "
+"of :class:`LimitedSet`."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet:36
+#: celery.utils.collections.LimitedSet.as_dict:4 of
+msgid "Example"
+msgstr ""
+
+#: celery.utils.collections.LimitedSet.add:1 of
+msgid "Add a new item, or reset the expiry time of an existing item."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet.as_dict:1 of
+msgid "Whole set as serializable dictionary."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet.clear:1 of
+msgid "Clear all data, start from scratch again."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet.pop:1 of
+msgid "Remove and return the oldest item, or :const:`None` when empty."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet.purge:1 of
+msgid "Check oldest items and remove them if needed."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet.purge:3 of
+msgid ""
+"Time of purging -- by default right now. This can be useful for unit "
+"testing."
+msgstr ""
+
+#: celery.utils.collections.LimitedSet.update:1 of
+msgid "Update this set from other LimitedSet, dict or iterable."
+msgstr ""
+
+#: celery.utils.collections.Messagebuffer:1 of
+msgid "A buffer of pending messages."
+msgstr ""
+
+#: celery.utils.collections.OrderedDict:1 of
+msgid "Dict where insertion order matters."
+msgstr ""
+
+#: celery.utils.collections.force_mapping:1 of
+msgid "Wrap object into supporting the mapping interface if necessary."
+msgstr ""
+
+#: celery.utils.collections.lpmerge:1 of
+msgid "In place left precedent dictionary merge."
+msgstr ""
+
+#: celery.utils.collections.lpmerge:3 of
+msgid "Keeps values from `L`, if the value in `R` is :const:`None`."
+msgstr ""
+

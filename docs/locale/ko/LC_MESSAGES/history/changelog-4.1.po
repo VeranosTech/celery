@@ -1,0 +1,704 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../history/changelog-4.1.rst:5
+msgid "Change history"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:10
+msgid "4.1.1"
+msgstr ""
+
+#: ../history/changelog-4.1.rst
+msgid "release-date"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:11
+msgid "2018-05-21 12:48 PM PST"
+msgstr ""
+
+#: ../history/changelog-4.1.rst
+msgid "release-by"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:12 ../history/changelog-4.1.rst:27
+msgid "Omer Katz"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:16
+msgid "Please upgrade as soon as possible or pin Kombu to 4.1.0."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:18
+msgid ""
+"**Breaking Change**: The module `async` in Kombu changed to "
+"`asynchronous`."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:20
+msgid "Contributed by **Omer Katz & Asif Saifuddin Auvi**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:25
+msgid "4.1.0"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:26
+msgid "2017-07-25 00:00 PM PST"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:30
+msgid ""
+"**Configuration**: CELERY_SEND_EVENTS instead of CELERYD_SEND_EVENTS for "
+"3.1.x compatibility (#3997)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:32
+msgid "Contributed by **abhinav nilaratna**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:34
+msgid "**App**: Restore behavior so Broadcast queues work. (#3934)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:36 ../history/changelog-4.1.rst:68
+msgid "Contributed by **Patrick Cloke**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:38
+msgid "**Sphinx**: Make appstr use standard format (#4134) (#4139)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:40
+msgid "Contributed by **Preston Moore**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:42
+msgid ""
+"**App**: Make id, name always accessible from logging.Formatter via extra"
+" (#3994)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:44 ../history/changelog-4.1.rst:64
+msgid "Contributed by **Yoichi NAKAYAMA**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:46
+msgid "**Worker**: Add worker_shutting_down signal (#3998)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:48
+msgid "Contributed by **Daniel Huang**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:50
+msgid "**PyPy**: Support PyPy version 5.8.0 (#4128)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:52
+msgid "Contributed by **Omer Katz**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:54
+msgid "**Results**: Elasticsearch: Fix serializing keys (#3924)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:56 ../history/changelog-4.1.rst:259
+msgid "Contributed by :github_user:`staticfox`."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:58
+msgid "**Canvas**: Deserialize all tasks in a chain (#4015)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:60
+msgid "Contributed by :github_user:`fcoelho`."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:62
+msgid "**Systemd**: Recover loglevel for ExecStart in systemd config (#4023)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:66
+msgid "**Sphinx**: Use the Sphinx add_directive_to_domain API. (#4037)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:70
+msgid "**App**: Pass properties to before_task_publish signal (#4035)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:72
+msgid "Contributed by **Javier Domingo Cansino**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:74
+msgid "**Results**: Add SSL option for Redis backends (#3831)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:76 ../history/changelog-4.1.rst:292
+msgid "Contributed by **Chris Kuehl**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:78
+msgid "**Beat**: celery.schedule.crontab: fix reduce (#3826) (#3827)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:80 ../history/changelog-4.1.rst:132
+#: ../history/changelog-4.1.rst:250 ../history/changelog-4.1.rst:288
+msgid "Contributed by **Taylor C. Richberger**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:82
+msgid "**State**: Fix celery issues when using flower REST API"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:84
+msgid "Contributed by **Thierry RAMORASOAVINA**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:86
+msgid "**Results**: Elasticsearch: Fix serializing document id."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:88
+msgid "Contributed by **Acey9**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:90
+msgid "**Beat**: Make shallow copy of schedules dictionary"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:92
+msgid "Contributed by **Brian May**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:94
+msgid "**Beat**: Populate heap when periodic tasks are changed"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:96
+msgid "Contributed by **Wojciech Żywno**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:98
+msgid "**Task**: Allow class methods to define tasks (#3952)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:100
+msgid "Contributed by **georgepsarakis**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:102
+msgid ""
+"**Platforms**: Always return boolean value when checking if signal is "
+"supported (#3962)."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:104
+msgid "Contributed by **Jian Yu**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:106
+msgid "**Canvas**: Avoid duplicating chains in chords (#3779)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:108
+msgid "Contributed by **Ryan Hiebert**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:110
+msgid "**Canvas**: Lookup task only if list has items (#3847)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:112 ../history/changelog-4.1.rst:263
+msgid "Contributed by **Marc Gibbons**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:114
+msgid "**Results**: Allow unicode message for exception raised in task (#3903)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:116 ../history/changelog-4.1.rst:136
+#: ../history/changelog-4.1.rst:232 ../history/changelog-4.1.rst:245
+#: ../history/changelog-4.1.rst:271
+msgid "Contributed by **George Psarakis**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:118
+msgid "**Python3**: Support for Python 3.6 (#3904, #3903, #3736)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:120
+msgid ""
+"Contributed by **Jon Dufresne**, **George Psarakis**, **Asif Saifuddin "
+"Auvi**, **Omer Katz**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:122
+msgid "**App**: Fix retried tasks with expirations (#3790)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:124 ../history/changelog-4.1.rst:254
+msgid "Contributed by **Brendan MacDonell**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:126
+msgid "Fixes items format route in docs (#3875)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:128
+msgid "Contributed by **Slam**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:130
+msgid "**Utils**: Fix maybe_make_aware (#3850)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:134
+msgid ""
+"**Task**: Fix task ETA issues when timezone is defined in configuration "
+"(#3867)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:138
+msgid ""
+"**Concurrency**: Consumer does not shutdown properly when embedded in "
+"gevent application (#3746)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:140 ../history/changelog-4.1.rst:228
+msgid "Contributed by **Arcadiy Ivanov**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:142
+msgid "**Canvas**: Fix #3725: Task replaced with group does not complete (#3731)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:144 ../history/changelog-4.1.rst:148
+#: ../history/changelog-4.1.rst:218 ../history/changelog-4.1.rst:223
+msgid "Contributed by **Morgan Doocy**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:146
+msgid "**Task**: Correct order in chains with replaced tasks (#3730)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:150
+msgid "**Result**: Enable synchronous execution of sub-tasks (#3696)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:152
+msgid "Contributed by **shalev67**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:154
+msgid ""
+"**Task**: Fix request context for blocking task apply (added hostname) "
+"(#3716)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:156 ../history/changelog-4.1.rst:209
+msgid "Contributed by **Marat Sharafutdinov**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:158
+msgid "**Utils**: Fix task argument handling (#3678) (#3693)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:160 ../history/changelog-4.1.rst:190
+#: ../history/changelog-4.1.rst:204
+msgid "Contributed by **Roman Sichny**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:162
+msgid ""
+"**Beat**: Provide a transparent method to update the Scheduler heap "
+"(#3721)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:164 ../history/changelog-4.1.rst:199
+msgid "Contributed by **Alejandro Pernin**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:166
+msgid "**Beat**: Specify default value for pidfile option of celery beat. (#3722)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:168
+msgid "Contributed by **Arnaud Rocher**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:170
+msgid ""
+"**Results**: Elasticsearch: Stop generating a new field every time when a"
+" new result is being put (#3708)"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:172 ../history/changelog-4.1.rst:180
+msgid "Contributed by **Mike Chen**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:174
+msgid "**Requirements**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:176
+msgid "Now depends on :ref:`Kombu 4.1.0 <kombu:version-4.1.0>`."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:178
+msgid "**Results**: Elasticsearch now reuses fields when new results are added."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:182
+msgid ""
+"**Results**: Fixed MongoDB integration when using binary encodings (Issue"
+" #3575)."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:185
+msgid "Contributed by **Andrew de Quincey**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:187
+msgid ""
+"**Worker**: Making missing ``*args`` and ``**kwargs`` in Task protocol 1 "
+"return empty value in protocol 2 (Issue #3687)."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:192
+msgid ""
+"**App**: Fixed :exc:`TypeError` in AMQP when using deprecated signal "
+"(Issue #3707)."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:195
+msgid "Contributed by :github_user:`michael-k`."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:197
+msgid "**Beat**: Added a transparent method to update the scheduler heap."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:201
+msgid ""
+"**Task**: Fixed handling of tasks with keyword arguments on Python 3 "
+"(Issue #3657)."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:206
+msgid ""
+"**Task**: Fixed request context for blocking task apply by adding missing"
+" hostname attribute."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:211
+msgid ""
+"**Task**: Added option to run subtasks synchronously with "
+"``disable_sync_subtasks`` argument."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:214
+msgid "Contributed by :github_user:`shalev67`."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:216
+msgid "**App**: Fixed chaining of replaced tasks (Issue #3726)."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:220
+msgid ""
+"**Canvas**: Fixed bug where replaced tasks with groups were not "
+"completing (Issue #3725)."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:225
+msgid ""
+"**Worker**: Fixed problem where consumer does not shutdown properly when "
+"embedded in a gevent application (Issue #3745)."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:230
+msgid ""
+"**Results**: Added support for using AWS DynamoDB as a result backend "
+"(#3736)."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:234
+msgid "**Testing**: Added caching on pip installs."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:236
+msgid "Contributed by :github_user:`orf`."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:238
+msgid "**Worker**: Prevent consuming queue before ready on startup (Issue #3620)."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:240
+msgid "Contributed by **Alan Hamlett**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:242
+msgid ""
+"**App**: Fixed task ETA issues when timezone is defined in configuration "
+"(Issue #3753)."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:247
+msgid ""
+"**Utils**: ``maybe_make_aware`` should not modify datetime when it is "
+"already timezone-aware (Issue #3849)."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:252
+msgid "**App**: Fixed retrying tasks with expirations (Issue #3734)."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:256
+msgid ""
+"**Results**: Allow unicode message for exceptions raised in task (Issue "
+"#3858)."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:261
+msgid "**Canvas**: Fixed :exc:`IndexError` raised when chord has an empty header."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:265
+msgid "**Canvas**: Avoid duplicating chains in chords (Issue #3771)."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:267
+msgid "Contributed by **Ryan Hiebert** and **George Psarakis**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:269
+msgid "**Utils**: Allow class methods to define tasks (Issue #3863)."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:273
+msgid "**Beat**: Populate heap when periodic tasks are changed."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:275
+msgid "Contributed by :github_user:`wzywno` and **Brian May**."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:277
+msgid "**Results**: Added support for Elasticsearch backend options settings."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:279
+msgid "Contributed by :github_user:`Acey9`."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:281
+msgid ""
+"**Events**: Ensure ``Task.as_dict()`` works when not all information "
+"about task is available."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:284
+msgid "Contributed by :github_user:`tramora`."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:286
+msgid ""
+"**Schedules**: Fixed pickled crontab schedules to restore properly (Issue"
+" #3826)."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:290
+msgid "**Results**: Added SSL option for redis backends (Issue #3830)."
+msgstr ""
+
+#: ../history/changelog-4.1.rst:294
+msgid "Documentation and examples improvements by:"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:296
+msgid "**Bruno Alla**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:297
+msgid "**Jamie Alessio**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:298
+msgid "**Vivek Anand**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:299
+msgid "**Peter Bittner**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:300
+msgid "**Kalle Bronsen**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:301
+msgid "**Jon Dufresne**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:302
+msgid "**James Michael DuPont**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:303
+msgid "**Sergey Fursov**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:304
+msgid "**Samuel Dion-Girardeau**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:305
+msgid "**Daniel Hahler**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:306
+msgid "**Mike Helmick**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:307
+msgid "**Marc Hörsken**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:308
+msgid "**Christopher Hoskin**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:309
+msgid "**Daniel Huang**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:310
+msgid "**Primož Kerin**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:311
+msgid "**Michal Kuffa**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:312
+msgid "**Simon Legner**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:313
+msgid "**Anthony Lukach**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:314
+msgid "**Ed Morley**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:315
+msgid "**Jay McGrath**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:316
+msgid "**Rico Moorman**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:317
+msgid "**Viraj Navkal**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:318
+msgid "**Ross Patterson**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:319
+msgid "**Dmytro Petruk**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:320
+msgid "**Luke Plant**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:321
+msgid "**Eric Poelke**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:322
+msgid "**Salvatore Rinchiera**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:323
+msgid "**Arnaud Rocher**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:324
+msgid "**Kirill Romanov**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:325
+msgid "**Simon Schmidt**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:326
+msgid "**Tamer Sherif**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:327 ../history/changelog-4.1.rst:333
+msgid "**YuLun Shih**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:328
+msgid "**Ask Solem**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:329
+msgid "**Tom 'Biwaa' Riat**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:330 ../history/changelog-4.1.rst:334
+msgid "**Arthur Vigil**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:331 ../history/changelog-4.1.rst:335
+msgid "**Joey Wilhelm**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:332
+msgid "**Jian Yu**"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:336
+msgid ":github_user:`baixuexue123`"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:337
+msgid ":github_user:`bronsen`"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:338
+msgid ":github_user:`michael-k`"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:339
+msgid ":github_user:`orf`"
+msgstr ""
+
+#: ../history/changelog-4.1.rst:340
+msgid ":github_user:`3lnc`"
+msgstr ""
+

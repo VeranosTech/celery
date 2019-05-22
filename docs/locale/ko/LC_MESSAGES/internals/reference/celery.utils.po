@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2018, Ask Solem & contributors
+# This file is distributed under the same license as the Celery package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-22 13:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../internals/reference/celery.utils.rst:3
+msgid "``celery.utils``"
+msgstr ""
+
+#: celery.utils:1 of
+msgid "Utility functions."
+msgstr ""
+
+#: celery.utils:3 of
+msgid ""
+"Don't import from here directly anymore, as these are only here for "
+"backwards compatibility."
+msgstr ""
+
+#: celery.utils.worker_direct:1 of
+msgid "Return the :class:`kombu.Queue` being a direct route to a worker."
+msgstr ""
+
+#: celery.utils.worker_direct of
+msgid "Parameters"
+msgstr ""
+
+#: celery.utils.worker_direct:3 of
+msgid ""
+"The fully qualified node name of a worker (e.g., ``w1@example.com``).  If"
+" passed a :class:`kombu.Queue` instance it will simply return that "
+"instead."
+msgstr ""
+
+#: celery.utils.gen_task_name:1 of
+msgid "Generate task name from name/module pair."
+msgstr ""
+
+#: celery.utils.nodename:1 of
+msgid "Create node name from name/hostname pair."
+msgstr ""
+
+#: celery.utils.nodesplit:1 of
+msgid "Split node name into tuple of name/hostname."
+msgstr ""
+
+#: celery.utils.cached_property:1 of
+msgid "Cached property descriptor."
+msgstr ""
+
+#: celery.utils.cached_property:3 of
+msgid "Caches the return value of the get method on first call."
+msgstr ""
+
+#: celery.utils.cached_property:6 of
+msgid "Examples"
+msgstr ""
+
+#: celery.utils.uuid:1 of
+msgid "Generate unique id in UUID4 format."
+msgstr ""
+
+#: celery.utils.uuid:3 of
+msgid "For now this is provided by :func:`uuid.uuid4`."
+msgstr ""
+
