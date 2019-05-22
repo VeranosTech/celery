@@ -3,19 +3,20 @@
 # This file is distributed under the same license as the Celery package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-22 13:45+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-05-22 16:26+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ko\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: ../index.rst:3
 msgid "Celery - Distributed Task Queue"
@@ -27,25 +28,24 @@ msgid ""
 "vast amounts of messages, while providing operations with the tools "
 "required to maintain such a system."
 msgstr ""
-"셀러리는 단순하고 유연하며 신뢰할 수 있는 대량 메세지 처리용 분산 시스템으로 "
-"이러한 시스템을 유지보수하는데 필요한 모든 도구와 작업을 제공한다."
+"셀러리는 단순하고 유연하며 신뢰할 수 있는 대량 메세지 처리용 분산 시스템"
+"으로 이러한 시스템을 유지보수하는데 필요한 모든 도구와 작업을 제공한다."
 
 #: ../index.rst:9
 msgid ""
 "It's a task queue with focus on real-time processing, while also "
 "supporting task scheduling."
-msgstr ""
-"실시간 처리용 작업 큐지만 자업 스케줄링도 지원한다."
+msgstr "실시간 처리용 작업 큐지만 자업 스케줄링도 지원한다."
 
 #: ../index.rst:12
 msgid ""
 "Celery has a large and diverse community of users and contributors, you "
-"should come join us :ref:`on IRC <irc-channel>` or :ref:`our mailing-list"
-" <mailing-list>`."
+"should come join us :ref:`on IRC <irc-channel>` or :ref:`our mailing-"
+"list <mailing-list>`."
 msgstr ""
-"셀러리는 수많은 다양한 사용자와 기여자 커뮤니티를 가지고 있다. "
-":ref:`IRC <irc-channel>` 또는 :ref:`our mailing-list<mailing-list>`\ 를 통해 "
-"참가할 수 있다.""
+"셀러리는 수많은 다양한 사용자와 기여자 커뮤니티를 가지고 있다. :ref:`IRC "
+"<irc-channel>` 또는 :ref:`our mailing-list<mailing-list>`\\ 를 통해 참가"
+"할 수 있다”."
 
 #: ../index.rst:16
 msgid "Celery is Open Source and licensed under the `BSD License`_."
@@ -77,7 +77,7 @@ msgstr ""
 
 #: ../index.rst:34
 msgid "You can also check out the :ref:`FAQ <faq>`."
-msgstr ":ref:`FAQ <faq>` 확인"
+msgstr ":ref:`FAQ <faq>` 확인할 수 있다."
 
 #: ../index.rst:39
 msgid "Contents"
@@ -89,13 +89,12 @@ msgstr "색인과 표"
 
 #: ../index.rst:71
 msgid ":ref:`genindex`"
-msgstr ""
+msgstr ":ref:`genindex`"
 
 #: ../index.rst:72
 msgid ":ref:`modindex`"
-msgstr ""
+msgstr ":ref:`modindex`"
 
 #: ../index.rst:73
 msgid ":ref:`search`"
-msgstr ""
-
+msgstr ":ref:`search`"
