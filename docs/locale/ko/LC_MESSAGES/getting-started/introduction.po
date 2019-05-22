@@ -3,417 +3,477 @@
 # This file is distributed under the same license as the Celery package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-22 13:45+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-05-22 18:21+0900\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ko\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: ../getting-started/introduction.rst:5
 msgid "Introduction to Celery"
-msgstr ""
+msgstr "셀러리(Celery) 소개"
 
 #: ../getting-started/introduction.rst:12
 msgid "What's a Task Queue?"
-msgstr ""
+msgstr "태스크 큐(Task Queue)는 무엇인가?"
 
 #: ../getting-started/introduction.rst:14
 msgid ""
 "Task queues are used as a mechanism to distribute work across threads or "
 "machines."
 msgstr ""
+"태스크 큐는 스레드 또는 머신에 걸쳐 작업을 분산, 배포(distribute)하는 방법으로 "
+"사용된다."
 
 #: ../getting-started/introduction.rst:17
 msgid ""
 "A task queue's input is a unit of work called a task. Dedicated worker "
 "processes constantly monitor task queues for new work to perform."
 msgstr ""
+"태크스 큐의 입력(input)은 태스크(task)라고 불리는 작업 단위이다. 워커 프로세스"
+"는 새로운 작업을 수행할 수 있도록 지속적으로 태스크 큐를 모니터링한다."
 
 #: ../getting-started/introduction.rst:20
 msgid ""
-"Celery communicates via messages, usually using a broker to mediate "
-"between clients and workers. To initiate a task the client adds a message"
-" to the queue, the broker then delivers that message to a worker."
+"Celery communicates via messages, usually using a broker to mediate between "
+"clients and workers. To initiate a task the client adds a message to the "
+"queue, the broker then delivers that message to a worker."
 msgstr ""
+"셀러리는 메세지를 통해 커뮤니케이션하는데, 보통은 클라이언트(client)와 워커"
+"(worker) 사이를 연결하는 브로커(broker)를 사용한다. 클라이언트가 메세지를 큐에 "
+"추가하는 태스크를 위하여, 브로커가 이러한 메세지를 워커에 전달한다."
 
 #: ../getting-started/introduction.rst:24
 msgid ""
-"A Celery system can consist of multiple workers and brokers, giving way "
-"to high availability and horizontal scaling."
+"A Celery system can consist of multiple workers and brokers, giving way to "
+"high availability and horizontal scaling."
 msgstr ""
+"셀러리 시스템은 여러 개의 워커와 브로커로 구성될 수 있으며, 고가용성과 수평적 "
+"확장을 할 수 있도록 한다."
 
 #: ../getting-started/introduction.rst:27
 msgid ""
 "Celery is written in Python, but the protocol can be implemented in any "
-"language. In addition to Python there's node-celery_ and node-celery-ts_ "
-"for Node.js, and a `PHP client`_."
+"language. In addition to Python there's node-celery_ and node-celery-ts_ for "
+"Node.js, and a `PHP client`_."
 msgstr ""
+"셀러리는 파이썬으로 만들어졌지만, 프로토콜은 어떠한 언어를 사용하여 구현될 수 "
+"있다. 게다가 파이썬외에도 Node.js를 위한 node-celery_와 node-celery-ts_, 그리"
+"고 `PHP client`_\\가 있다."
 
 #: ../getting-started/introduction.rst:31
 msgid ""
-"Language interoperability can also be achieved exposing an HTTP endpoint "
-"and having a task that requests it (webhooks)."
+"Language interoperability can also be achieved exposing an HTTP endpoint and "
+"having a task that requests it (webhooks)."
 msgstr ""
+"언어 상호운용성(Language interoperability)은 HTTP 엔드포인트를 노출하고 이를 요"
+"청하는 태스크(웹훅)를 얻도록 할 수 있다."
 
 #: ../getting-started/introduction.rst:39
 msgid "What do I need?"
-msgstr ""
+msgstr "무엇이 필요한가?"
 
 msgid "Version Requirements"
-msgstr ""
+msgstr "버전 요구 사항"
 
 #: ../getting-started/introduction.rst:44
 msgid "Python ❨2.7, 3.4, 3.5❩"
-msgstr ""
+msgstr "Python ❨2.7, 3.4, 3.5❩"
 
 #: ../getting-started/introduction.rst:45
 msgid "PyPy ❨5.4, 5.5❩"
-msgstr ""
+msgstr "PyPy ❨5.4, 5.5❩"
 
 #: ../getting-started/introduction.rst:47
 msgid ""
-"This is the last version to support Python 2.7, and from the next version"
-" (Celery 5.x) Python 3.5 or newer is required."
+"This is the last version to support Python 2.7, and from the next version "
+"(Celery 5.x) Python 3.5 or newer is required."
 msgstr ""
+"이것은 파이썬 2.7을 지원하는 마지막 버전이며, 다음 버전(Celery 5.x)부터 파이썬 "
+"3.5 또는 그 이상이 필요하다."
 
 #: ../getting-started/introduction.rst:50
 msgid ""
-"If you're running an older version of Python, you need to be running an "
-"older version of Celery:"
-msgstr ""
+"If you're running an older version of Python, you need to be running an older "
+"version of Celery:"
+msgstr "이전 버전의 파이썬을 사용한다면, 이전 버전의 셀러리를 실행하여야 한다:"
 
 #: ../getting-started/introduction.rst:53
 msgid "Python 2.6: Celery series 3.1 or earlier."
-msgstr ""
+msgstr "Python 2.6: Celery 3.1 시리즈 또는 그 이전."
 
 #: ../getting-started/introduction.rst:54
 msgid "Python 2.5: Celery series 3.0 or earlier."
-msgstr ""
+msgstr "Python 2.5: Celery 3.0 시리즈 또는 그 이전."
 
 #: ../getting-started/introduction.rst:55
 msgid "Python 2.4 was Celery series 2.2 or earlier."
-msgstr ""
+msgstr "Python 2.4는 Celery 2.2 시리즈 또는 그 이전."
 
 #: ../getting-started/introduction.rst:57
 msgid ""
 "Celery is a project with minimal funding, so we don't support Microsoft "
 "Windows. Please don't open any issues related to that platform."
 msgstr ""
+"셀러리는 최소한의 자금으로 지원되는 프로젝트로, 마이크로소프트 윈도우즈"
+"(Microsoft Windows)는 지원하지 않는다. 해당 플랫폼과 관련된 이슈는 올리지 말기 "
+"바란다."
 
 #: ../getting-started/introduction.rst:61
 msgid ""
 "*Celery* requires a message transport to send and receive messages. The "
-"RabbitMQ and Redis broker transports are feature complete, but there's "
-"also support for a myriad of other experimental solutions, including "
-"using SQLite for local development."
+"RabbitMQ and Redis broker transports are feature complete, but there's also "
+"support for a myriad of other experimental solutions, including using SQLite "
+"for local development."
 msgstr ""
+"*셀러리*\\는 메세지를 주고 받기 위한 메세지 전송 수단(transport)이 필요하다. "
+"RabbitMQ와 Redis 브로커 전송수단은 기능이 완벽하지만, 로컬 개발을 위해 SQLite "
+"사용하는 것을 포함하여 무수히 많은 여러 실험적인 솔루션에 대한 지원도 있다."
 
 #: ../getting-started/introduction.rst:66
 msgid ""
-"*Celery* can run on a single machine, on multiple machines, or even "
-"across data centers."
+"*Celery* can run on a single machine, on multiple machines, or even across "
+"data centers."
 msgstr ""
+"*셀러리*\\는 단일 머신, 다중 머신, 또는 심지어 데이터 센터 전반에서 실행할 수 "
+"있다."
 
 #: ../getting-started/introduction.rst:70
 msgid "Get Started"
-msgstr ""
+msgstr "시작하기"
 
 #: ../getting-started/introduction.rst:72
 msgid ""
-"If this is the first time you're trying to use Celery, or if you haven't "
-"kept up with development in the 3.1 version and are coming from previous "
-"versions, then you should read our getting started tutorials:"
+"If this is the first time you're trying to use Celery, or if you haven't kept "
+"up with development in the 3.1 version and are coming from previous versions, "
+"then you should read our getting started tutorials:"
 msgstr ""
+"셀러리 사용하는 것이 처음이거나, 3.1 버전에서 개발하지 않고 이전 버전을 사용해"
+"본 경우, 시작하기 튜토리얼을 읽어보라:"
 
 #: ../getting-started/introduction.rst:76
 msgid ":ref:`first-steps`"
-msgstr ""
+msgstr ":ref:`first-steps`"
 
 #: ../getting-started/introduction.rst:77
 msgid ":ref:`next-steps`"
-msgstr ""
+msgstr ":ref:`next-steps`"
 
 #: ../getting-started/introduction.rst:80
 msgid "Celery is…"
-msgstr ""
+msgstr "셀러리는…"
 
 #: ../getting-started/introduction.rst:86
 msgid "**Simple**"
-msgstr ""
+msgstr "**단순함(Simple)**"
 
 #: ../getting-started/introduction.rst:88
 msgid ""
-"Celery is easy to use and maintain, and it *doesn't need configuration "
-"files*."
+"Celery is easy to use and maintain, and it *doesn't need configuration files*."
 msgstr ""
+"셀러리는 사용하고 유지보수하기 쉽고, *구성 설정 파일(configuration files)이 필"
+"요하지 않다*/."
 
 #: ../getting-started/introduction.rst:90
 msgid ""
-"It has an active, friendly community you can talk to for support, "
-"including a `mailing-list`_ and an :ref:`IRC channel <irc-channel>`."
+"It has an active, friendly community you can talk to for support, including a "
+"`mailing-list`_ and an :ref:`IRC channel <irc-channel>`."
 msgstr ""
+"셀러리는 `mailing-list`_\\와 :ref:`IRC channel <irc-channel>`\\를 포함한 지원"
+"을 위하여 이야기 할 수 있는 활발하고 우호적인 커뮤니티를 가지고 있다."
 
 #: ../getting-started/introduction.rst:93
 msgid "Here's one of the simplest applications you can make:"
-msgstr ""
+msgstr "여기 셀러리로 만들 수 있는 가장 간단한 어플리케이션 중 하나이다:"
 
 #: ../getting-started/introduction.rst:105
 msgid "**Highly Available**"
-msgstr ""
+msgstr "**높은 유용성(Highly Available)**"
 
 #: ../getting-started/introduction.rst:107
 msgid ""
-"Workers and clients will automatically retry in the event of connection "
-"loss or failure, and some brokers support HA in way of *Primary/Primary* "
-"or *Primary/Replica* replication."
+"Workers and clients will automatically retry in the event of connection loss "
+"or failure, and some brokers support HA in way of *Primary/Primary* or "
+"*Primary/Replica* replication."
 msgstr ""
+"워커와 클라이언트는 연결 손실(loss) 또는 실패(failure) 이벤트 발생 시 자동적으"
+"로 재시도를 하는데, 일부 브로커는 *Primary/Primary* 또는 *Primary/Replica* 복"
+"제 방식으로 HA를 지원한다."
 
 #: ../getting-started/introduction.rst:111
 msgid "**Fast**"
-msgstr ""
+msgstr "**신속함(Fast)**"
 
 #: ../getting-started/introduction.rst:113
 msgid ""
 "A single Celery process can process millions of tasks a minute, with sub-"
-"millisecond round-trip latency (using RabbitMQ, librabbitmq, and "
-"optimized settings)."
+"millisecond round-trip latency (using RabbitMQ, librabbitmq, and optimized "
+"settings)."
 msgstr ""
+"단일 셀러리 프로세스는 서브-밀리초(millisecond) 미만의 왕복 대기 시간(round-"
+"trip latency)으로 분(minute)당 수백만개의 태스크를 처리할 수 있다(RabbitMQ, "
+"librabbitmq, 그리고 최적화된 설정을 사용)."
 
 #: ../getting-started/introduction.rst:117
 msgid "**Flexible**"
-msgstr ""
+msgstr "**유연함(Flexible)**"
 
 #: ../getting-started/introduction.rst:119
 msgid ""
-"Almost every part of *Celery* can be extended or used on its own, Custom "
-"pool implementations, serializers, compression schemes, logging, "
-"schedulers, consumers, producers, broker transports, and much more."
+"Almost every part of *Celery* can be extended or used on its own, Custom pool "
+"implementations, serializers, compression schemes, logging, schedulers, "
+"consumers, producers, broker transports, and much more."
 msgstr ""
+"*셀러리*\\의 거의 모든 부분은 사용자 지정 풀(Custom pool) 구현, 시리얼라이저"
+"(serializers), 압축 체계(compression schemes), 로깅(logging), 스케쥴러"
+"(schedulers), 소비자(consumers), 생산자(producers), 브로커 전송(broker "
+"transports) 등 그 자체로 확장하거나 사용할 수 있다."
 
 #: ../getting-started/introduction.rst:129
 msgid "**Brokers**"
-msgstr ""
+msgstr "**브로커(Brokers)**"
 
 #: ../getting-started/introduction.rst:131
 msgid ":ref:`RabbitMQ <broker-rabbitmq>`, :ref:`Redis <broker-redis>`,"
-msgstr ""
+msgstr ":ref:`RabbitMQ <broker-rabbitmq>`, :ref:`Redis <broker-redis>`,"
 
 #: ../getting-started/introduction.rst:132
 msgid ":ref:`Amazon SQS <broker-sqs>`, and more…"
-msgstr ""
+msgstr ":ref:`Amazon SQS <broker-sqs>`, 그리고 더 많은…"
 
 #: ../getting-started/introduction.rst:134
 msgid "**Concurrency**"
-msgstr ""
+msgstr "**동시성(Concurrency)**"
 
 #: ../getting-started/introduction.rst:136
 msgid "prefork (multiprocessing),"
-msgstr ""
+msgstr "prefork (멀티 프로세싱),"
 
 #: ../getting-started/introduction.rst:137
 msgid "Eventlet_, gevent_"
-msgstr ""
+msgstr "Eventlet_, gevent_"
 
 #: ../getting-started/introduction.rst:138
 msgid "`solo` (single threaded)"
-msgstr ""
+msgstr "`solo` (단일 스레드)"
 
 #: ../getting-started/introduction.rst:140
 msgid "**Result Stores**"
-msgstr ""
+msgstr "**결과 저장(Result Stores)**"
 
 #: ../getting-started/introduction.rst:142
 msgid "AMQP, Redis"
-msgstr ""
+msgstr "AMQP, Redis"
 
 #: ../getting-started/introduction.rst:143
 msgid "Memcached,"
-msgstr ""
+msgstr "Memcached,"
 
 #: ../getting-started/introduction.rst:144
 msgid "SQLAlchemy, Django ORM"
-msgstr ""
+msgstr "SQLAlchemy, Django ORM"
 
 #: ../getting-started/introduction.rst:145
 msgid "Apache Cassandra, Elasticsearch"
-msgstr ""
+msgstr "Apache Cassandra, Elasticsearch"
 
 #: ../getting-started/introduction.rst:147
 msgid "**Serialization**"
-msgstr ""
+msgstr "**연속(Serialization)**"
 
 #: ../getting-started/introduction.rst:149
 msgid "*pickle*, *json*, *yaml*, *msgpack*."
-msgstr ""
+msgstr "*pickle*, *json*, *yaml*, *msgpack*."
 
 #: ../getting-started/introduction.rst:150
 msgid "*zlib*, *bzip2* compression."
-msgstr ""
+msgstr "*zlib*, *bzip2* 압축."
 
 #: ../getting-started/introduction.rst:151
 msgid "Cryptographic message signing."
-msgstr ""
+msgstr "암호화된 메세지 서명(signing)"
 
 #: ../getting-started/introduction.rst:154
 msgid "Features"
-msgstr ""
+msgstr "기능"
 
 #: ../getting-started/introduction.rst:161
 msgid "**Monitoring**"
-msgstr ""
+msgstr "**모니터링(Monitoring)**"
 
 #: ../getting-started/introduction.rst:163
 msgid ""
-"A stream of monitoring events is emitted by workers and is used by built-"
-"in and external tools to tell you what your cluster is doing -- in real-"
-"time."
+"A stream of monitoring events is emitted by workers and is used by built-in "
+"and external tools to tell you what your cluster is doing -- in real-time."
 msgstr ""
+"일련의 모니터링 이벤트는 워커에 의해 방출되고 클러스터가 실시간으로 무슨 작업"
+"을 하는지 알려주는 내장 및 외부 도구에 의해 사용된다."
 
 #: ../getting-started/introduction.rst:167
 msgid ":ref:`Read more… <guide-monitoring>`."
-msgstr ""
+msgstr ":ref:`Read more… <guide-monitoring>`."
 
 #: ../getting-started/introduction.rst:169
 msgid "**Work-flows**"
-msgstr ""
+msgstr "**워크 플로우(Work-flows)**"
 
 #: ../getting-started/introduction.rst:171
 msgid ""
 "Simple and complex work-flows can be composed using a set of powerful "
-"primitives we call the \"canvas\", including grouping, chaining, "
-"chunking, and more."
+"primitives we call the \"canvas\", including grouping, chaining, chunking, and "
+"more."
 msgstr ""
+"단순하고 복잡한 워크 플로우는 그룹화(grouping), 체이닝(chainig), 덩어리나누기"
+"(cunking) 등을 포함하여 “canvas”라고 부르는 강력한 기본 요소(primitive)의 집합"
+"을 사용해 구성할 수 있다."
 
 #: ../getting-started/introduction.rst:175
 msgid ":ref:`Read more… <guide-canvas>`."
-msgstr ""
+msgstr ":ref:`Read more… <guide-canvas>`."
 
 #: ../getting-started/introduction.rst:177
 msgid "**Time & Rate Limits**"
-msgstr ""
+msgstr "**시간 및 속도 제한(Time & Rate Limits)**"
 
 #: ../getting-started/introduction.rst:179
 msgid ""
-"You can control how many tasks can be executed per second/minute/hour, or"
-" how long a task can be allowed to run, and this can be set as a default,"
-" for a specific worker or individually for each task type."
+"You can control how many tasks can be executed per second/minute/hour, or how "
+"long a task can be allowed to run, and this can be set as a default, for a "
+"specific worker or individually for each task type."
 msgstr ""
+"초/분/시간 당 실행할 수 있는 태스크의 개수 또는 태스크의 실행에 걸리는 시간을 "
+"제어할 수 있으며, 이는 특정 워커에 대해 기본값으로 설정되거나 또는 개별적인 태"
+"스크 타입별로 설정될 수 있다."
 
 #: ../getting-started/introduction.rst:183
 msgid ":ref:`Read more… <worker-time-limits>`."
-msgstr ""
+msgstr ":ref:`Read more… <worker-time-limits>`."
 
 #: ../getting-started/introduction.rst:185
 msgid "**Scheduling**"
-msgstr ""
+msgstr "**스케쥴링(Scheduling)**"
 
 #: ../getting-started/introduction.rst:187
 msgid ""
-"You can specify the time to run a task in seconds or a "
-":class:`~datetime.datetime`, or you can use periodic tasks for recurring "
-"events based on a simple interval, or Crontab expressions supporting "
-"minute, hour, day of week, day of month, and month of year."
+"You can specify the time to run a task in seconds or a :class:`~datetime."
+"datetime`, or you can use periodic tasks for recurring events based on a "
+"simple interval, or Crontab expressions supporting minute, hour, day of week, "
+"day of month, and month of year."
 msgstr ""
+"태스크를 실행하는 시간을 초 단위 또는 :class:`~datetime.datetime`\\로 지정할 "
+"수 있고, 또는 단순 인터벌(simple interval)에 따라 반복적인 이벤트를 위한 주기"
+"적 태스크를 사용하거나, 분, 시, 일, 월, 월별(month of year)을 지원하는 크론탭 "
+"표현을 사용할 수 있다."
 
 #: ../getting-started/introduction.rst:194
 msgid ":ref:`Read more… <guide-beat>`."
-msgstr ""
+msgstr ":ref:`Read more… <guide-beat>`."
 
 #: ../getting-started/introduction.rst:196
 msgid "**Resource Leak Protection**"
-msgstr ""
+msgstr "**리소스 누출 방지(Resource Leak Protection)**"
 
 #: ../getting-started/introduction.rst:198
 msgid ""
-"The :option:`--max-tasks-per-child <celery worker --max-tasks-per-child>`"
-" option is used for user tasks leaking resources, like memory or file "
+"The :option:`--max-tasks-per-child <celery worker --max-tasks-per-child>` "
+"option is used for user tasks leaking resources, like memory or file "
 "descriptors, that are simply out of your control."
 msgstr ""
+":option:`—max-tasks-per-child <celery worker —max-tasks-per-child>` 옵션은 메모"
+"리 또는 파일 설명(file descriptors)과 같은 사용자의 제어를 벗어난 리소스를 누출"
+"하는 사용자 태스크를 위해 사용된다."
 
 #: ../getting-started/introduction.rst:202
 msgid ":ref:`Read more… <worker-max-tasks-per-child>`."
-msgstr ""
+msgstr ":ref:`Read more… <worker-max-tasks-per-child>`."
 
 #: ../getting-started/introduction.rst:204
 msgid "**User Components**"
-msgstr ""
+msgstr "**사용자 구성요소(User Components)**"
 
 #: ../getting-started/introduction.rst:206
 msgid ""
-"Each worker component can be customized, and additional components can be"
-" defined by the user. The worker is built up using \"bootsteps\" — a "
-"dependency graph enabling fine grained control of the worker's internals."
+"Each worker component can be customized, and additional components can be "
+"defined by the user. The worker is built up using \"bootsteps\" — a dependency "
+"graph enabling fine grained control of the worker's internals."
 msgstr ""
+"각 워커 구성요소는 커스터마이징할 수 있으며, 사용자에 의해 추가적인 요소를 정의"
+"할 수 있다. 워커는 “bootsteps”을 사용하여 만들어지는데, 이것은 워커의 내부적 제"
+"어를 세밀하게 할 수 있는 의존성 그래프이다."
 
 #: ../getting-started/introduction.rst:215
 msgid "Framework Integration"
-msgstr ""
+msgstr "프레임워크 통합"
 
 #: ../getting-started/introduction.rst:217
 msgid ""
 "Celery is easy to integrate with web frameworks, some of them even have "
 "integration packages:"
 msgstr ""
+"셀러리는 웹 프레임워크를 사용하여 통합하기 쉬우며, 어떤 것들은 통합 패키지를 가"
+"지고 있다:"
 
 #: ../getting-started/introduction.rst:221
 msgid "`Pyramid`_"
-msgstr ""
+msgstr "`Pyramid`_"
 
 #: ../getting-started/introduction.rst:221
 msgid ":pypi:`pyramid_celery`"
-msgstr ""
+msgstr ":pypi:`pyramid_celery`"
 
 #: ../getting-started/introduction.rst:223
 msgid "`Pylons`_"
-msgstr ""
+msgstr "`Pylons`_"
 
 #: ../getting-started/introduction.rst:223
 msgid ":pypi:`celery-pylons`"
-msgstr ""
+msgstr ":pypi:`celery-pylons`"
 
 #: ../getting-started/introduction.rst:225
 msgid "`Flask`_"
-msgstr ""
+msgstr "`Flask`_"
 
 #: ../getting-started/introduction.rst:225
 msgid "not needed"
-msgstr ""
+msgstr "필요 없음"
 
 #: ../getting-started/introduction.rst:227
 msgid "`web2py`_"
-msgstr ""
+msgstr "`web2py`_"
 
 #: ../getting-started/introduction.rst:227
 msgid ":pypi:`web2py-celery`"
-msgstr ""
+msgstr ":pypi:`web2py-celery`"
 
 #: ../getting-started/introduction.rst:229
 msgid "`Tornado`_"
-msgstr ""
+msgstr "`Tornado`_"
 
 #: ../getting-started/introduction.rst:229
 msgid ":pypi:`tornado-celery`"
-msgstr ""
+msgstr ":pypi:`tornado-celery`"
 
 #: ../getting-started/introduction.rst:231
 msgid "`Tryton`_"
-msgstr ""
+msgstr "`Tryton`_"
 
 #: ../getting-started/introduction.rst:231
 msgid ":pypi:`celery_tryton`"
-msgstr ""
+msgstr ":pypi:`celery_tryton`"
 
 #: ../getting-started/introduction.rst:234
 msgid "For `Django`_ see :ref:`django-first-steps`."
-msgstr ""
+msgstr "`Django`_\\는 :ref:`django-first-steps`\\를 보라."
 
 #: ../getting-started/introduction.rst:236
 msgid ""
@@ -421,10 +481,13 @@ msgid ""
 "development easier, and sometimes they add important hooks like closing "
 "database connections at :manpage:`fork(2)`."
 msgstr ""
+"통합 패키지는 반드시 필요한 것은 아니지만, 개발을 쉽게 만들어주며, 때때로 "
+"manpage:`fork(2)`\\에서 데이터베이스 커넥션을 닫는 것과 같은 중요한 훅을 추가하"
+"기도 한다."
 
 #: ../getting-started/introduction.rst:251
 msgid "Quick Jump"
-msgstr ""
+msgstr "퀵 점프"
 
 #: ../getting-started/introduction.rst:258
 msgid ":ref:`get the return value of a task <task-states>`"
@@ -520,8 +583,7 @@ msgstr ""
 
 #: ../getting-started/introduction.rst:281
 msgid ""
-":ref:`write my own remote control command <worker-custom-control-"
-"commands>`"
+":ref:`write my own remote control command <worker-custom-control-commands>`"
 msgstr ""
 
 #: ../getting-started/introduction.rst:282
@@ -594,42 +656,49 @@ msgstr ""
 
 #: ../includes/installation.txt:4
 msgid "Installation"
-msgstr ""
+msgstr "설치"
 
 #: ../includes/installation.txt:6
 msgid ""
-"You can install Celery either via the Python Package Index (PyPI) or from"
-" source."
+"You can install Celery either via the Python Package Index (PyPI) or from "
+"source."
 msgstr ""
+"셀러리는 파이썬 패키지 인덱스(PyPI) 또는 소스 코드(source)를 통해 설치할 수 있"
+"다."
 
 #: ../includes/installation.txt:9
 msgid "To install using :command:`pip`:"
-msgstr ""
+msgstr ":command:`pip`\\를 사용하여 설치하기 위해서:"
 
 #: ../includes/installation.txt:19
 msgid "Bundles"
-msgstr ""
+msgstr "번들(Bundles)"
 
 #: ../includes/installation.txt:21
 msgid ""
-"Celery also defines a group of bundles that can be used to install Celery"
-" and the dependencies for a given feature."
+"Celery also defines a group of bundles that can be used to install Celery and "
+"the dependencies for a given feature."
 msgstr ""
+"또한 셀러리는 설치를 위해 사용할 수 있는 번들 그룹과 주어진 기능에 대한 의존성"
+"을 정의하는데 사용할 수 있다."
 
 #: ../includes/installation.txt:24
 msgid ""
-"You can specify these in your requirements or on the :command:`pip` "
-"command-line by using brackets. Multiple bundles can be specified by "
-"separating them by commas."
+"You can specify these in your requirements or on the :command:`pip` command-"
+"line by using brackets. Multiple bundles can be specified by separating them "
+"by commas."
 msgstr ""
+"괄호(brackets)를 사용하여 :command:`pip` 커맨드 라인 또는 요구 사항"
+"(requirements)를 사용해 번들을 명시할 수 있다. 다중 번들은 쉼표(comma)로 구분하"
+"여 명시할 수 있다."
 
 #: ../includes/installation.txt:35
 msgid "The following bundles are available:"
-msgstr ""
+msgstr "다음의 번들이 사용 가능하다:"
 
 #: ../includes/installation.txt:38
 msgid "Serializers"
-msgstr ""
+msgstr "시리얼라이저(Serializers)"
 
 #: ../includes/installation.txt
 msgid "``celery[auth]``"
@@ -637,7 +706,7 @@ msgstr ""
 
 #: ../includes/installation.txt:41
 msgid "for using the ``auth`` security serializer."
-msgstr ""
+msgstr "`auth`` 보안 시리얼라이저를 사용하기 위한 것."
 
 #: ../includes/installation.txt
 msgid "``celery[msgpack]``"
@@ -645,7 +714,7 @@ msgstr ""
 
 #: ../includes/installation.txt:44
 msgid "for using the msgpack serializer."
-msgstr ""
+msgstr "msgpack 시리얼라이저 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[yaml]``"
@@ -653,11 +722,11 @@ msgstr ""
 
 #: ../includes/installation.txt:47
 msgid "for using the yaml serializer."
-msgstr ""
+msgstr "yaml 시리얼라이저 사용."
 
 #: ../includes/installation.txt:50
 msgid "Concurrency"
-msgstr ""
+msgstr "동시성(Concurrency)"
 
 #: ../includes/installation.txt
 msgid "``celery[eventlet]``"
@@ -665,7 +734,7 @@ msgstr ""
 
 #: ../includes/installation.txt:53
 msgid "for using the :pypi:`eventlet` pool."
-msgstr ""
+msgstr "pypi:`eventlet` 풀 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[gevent]``"
@@ -673,11 +742,11 @@ msgstr ""
 
 #: ../includes/installation.txt:56
 msgid "for using the :pypi:`gevent` pool."
-msgstr ""
+msgstr ":pypi:`gevent` 풀 사용."
 
 #: ../includes/installation.txt:59
 msgid "Transports and Backends"
-msgstr ""
+msgstr "메세지 전송(Transports)과 백엔드(Backends)"
 
 #: ../includes/installation.txt
 msgid "``celery[librabbitmq]``"
@@ -685,7 +754,7 @@ msgstr ""
 
 #: ../includes/installation.txt:62
 msgid "for using the librabbitmq C library."
-msgstr ""
+msgstr "librabbitmq C 라이브러리 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[redis]``"
@@ -693,7 +762,7 @@ msgstr ""
 
 #: ../includes/installation.txt:65
 msgid "for using Redis as a message transport or as a result backend."
-msgstr ""
+msgstr "메세지 전송 수단 또는 결과 백엔드로서 Redis를 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[sqs]``"
@@ -701,7 +770,7 @@ msgstr ""
 
 #: ../includes/installation.txt:68
 msgid "for using Amazon SQS as a message transport (*experimental*)."
-msgstr ""
+msgstr "메세지 전송 수단으로서 Amazon SQS 사용(*실험 단계 experimental*\\)."
 
 #: ../includes/installation.txt
 msgid "``celery[tblib]``"
@@ -709,7 +778,7 @@ msgstr ""
 
 #: ../includes/installation.txt:71
 msgid "for using the :setting:`task_remote_tracebacks` feature."
-msgstr ""
+msgstr ":setting:`task_remote_tracebacks` 기능 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[memcache]``"
@@ -717,7 +786,7 @@ msgstr ""
 
 #: ../includes/installation.txt:74
 msgid "for using Memcached as a result backend (using :pypi:`pylibmc`)"
-msgstr ""
+msgstr "결과 벡엔드로서 Memcached 사용 (:pypi:`pylibmc`\\을 사용)"
 
 #: ../includes/installation.txt
 msgid "``celery[pymemcache]``"
@@ -725,7 +794,7 @@ msgstr ""
 
 #: ../includes/installation.txt:77
 msgid "for using Memcached as a result backend (pure-Python implementation)."
-msgstr ""
+msgstr "결과 벡엔드로서 Memcached 사용 (pure-Python 구현)"
 
 #: ../includes/installation.txt
 msgid "``celery[cassandra]``"
@@ -733,7 +802,7 @@ msgstr ""
 
 #: ../includes/installation.txt:80
 msgid "for using Apache Cassandra as a result backend with DataStax driver."
-msgstr ""
+msgstr "결과 백엔드로서 DataStax driver와 함께 Apache Cassandra 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[couchbase]``"
@@ -741,7 +810,7 @@ msgstr ""
 
 #: ../includes/installation.txt:83
 msgid "for using Couchbase as a result backend."
-msgstr ""
+msgstr "결과 백엔드로 Couchbase 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[arangodb]``"
@@ -749,7 +818,7 @@ msgstr ""
 
 #: ../includes/installation.txt:86
 msgid "for using ArangoDB as a result backend."
-msgstr ""
+msgstr "결과 백엔드로 ArangoDB 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[elasticsearch]``"
@@ -757,7 +826,7 @@ msgstr ""
 
 #: ../includes/installation.txt:89
 msgid "for using Elasticsearch as a result backend."
-msgstr ""
+msgstr "결과 벡엔드로 Elasticsearch 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[riak]``"
@@ -765,7 +834,7 @@ msgstr ""
 
 #: ../includes/installation.txt:92
 msgid "for using Riak as a result backend."
-msgstr ""
+msgstr "결과 백엔드로 Riak 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[dynamodb]``"
@@ -773,7 +842,7 @@ msgstr ""
 
 #: ../includes/installation.txt:95
 msgid "for using AWS DynamoDB as a result backend."
-msgstr ""
+msgstr "결과 백엔드로 AWS DynamoDB 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[zookeeper]``"
@@ -781,7 +850,7 @@ msgstr ""
 
 #: ../includes/installation.txt:98
 msgid "for using Zookeeper as a message transport."
-msgstr ""
+msgstr "메세지 전송 수단으로 Zookeeper 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[sqlalchemy]``"
@@ -789,7 +858,7 @@ msgstr ""
 
 #: ../includes/installation.txt:101
 msgid "for using SQLAlchemy as a result backend (*supported*)."
-msgstr ""
+msgstr "결과 백엔드로 SQLAlchemy 사용 (*지원됨 supported*)."
 
 #: ../includes/installation.txt
 msgid "``celery[pyro]``"
@@ -797,7 +866,7 @@ msgstr ""
 
 #: ../includes/installation.txt:104
 msgid "for using the Pyro4 message transport (*experimental*)."
-msgstr ""
+msgstr "메세지 전송 수단으로 Pyro4 사용(*실험 단계 experimental*\\)."
 
 #: ../includes/installation.txt
 msgid "``celery[slmq]``"
@@ -805,7 +874,7 @@ msgstr ""
 
 #: ../includes/installation.txt:107
 msgid "for using the SoftLayer Message Queue transport (*experimental*)."
-msgstr ""
+msgstr "메세지 큐 전송수단으로 SoftLayer 사용(*실험 단계 experimental*\\)."
 
 #: ../includes/installation.txt
 msgid "``celery[consul]``"
@@ -816,6 +885,8 @@ msgid ""
 "for using the Consul.io Key/Value store as a message transport or result "
 "backend (*experimental*)."
 msgstr ""
+"메세지 전송 수단 또는 결과 백엔드로서 Consul.io Key/Value store 사용 (*실험 단"
+"계 experimental*\\)."
 
 #: ../includes/installation.txt
 msgid "``celery[django]``"
@@ -823,61 +894,65 @@ msgstr ""
 
 #: ../includes/installation.txt:113
 msgid "specifies the lowest version possible for Django support."
-msgstr ""
+msgstr "지원 가능한 Django 최저 버전을 지정."
 
 #: ../includes/installation.txt:115
 msgid ""
 "You should probably not use this in your requirements, it's here for "
 "informational purposes only."
 msgstr ""
+"아마도 요구사항(requirements)를 사용하면 안 될 것이며, 단지 정보 제공하는 것을 "
+"목적으로 한다."
 
 #: ../includes/installation.txt:122
 msgid "Downloading and installing from source"
-msgstr ""
+msgstr "소스로부터 다운로드하고 설치"
 
 #: ../includes/installation.txt:124
 msgid "Download the latest version of Celery from PyPI:"
-msgstr ""
+msgstr "최신 버전의 셀러리를 PyPI를 통해 다운로드:"
 
 #: ../includes/installation.txt:126
 msgid "https://pypi.org/project/celery/"
-msgstr ""
+msgstr "https://pypi.org/project/celery/"
 
 #: ../includes/installation.txt:128
 msgid "You can install it by doing the following,:"
-msgstr ""
+msgstr "다음과 같은 방법으로 설치할 수 있다,:"
 
 #: ../includes/installation.txt:138
 msgid ""
-"The last command must be executed as a privileged user if you aren't "
-"currently using a virtualenv."
+"The last command must be executed as a privileged user if you aren't currently "
+"using a virtualenv."
 msgstr ""
+"만약 현재 virtualenv를 사용하지 않는 경우 마지막 명령은 권한이 있는 사용자로 실"
+"행하여야 한다."
 
 #: ../includes/installation.txt:144
 msgid "Using the development version"
-msgstr ""
+msgstr "개발 버전 사용"
 
 #: ../includes/installation.txt:147
 msgid "With pip"
-msgstr ""
+msgstr "With pip"
 
 #: ../includes/installation.txt:149
 msgid ""
-"The Celery development version also requires the development versions of "
-":pypi:`kombu`, :pypi:`amqp`, :pypi:`billiard`, and :pypi:`vine`."
+"The Celery development version also requires the development versions of :pypi:"
+"`kombu`, :pypi:`amqp`, :pypi:`billiard`, and :pypi:`vine`."
 msgstr ""
+"셀러리 개발 버전은 :pypi:`kombu`\\, :pypi:`amqp`\\, :pypi:`billiard`\\, and :"
+"pypi:`vine`\\의 개발 버전을 요구한다."
 
 #: ../includes/installation.txt:152
 msgid ""
-"You can install the latest snapshot of these using the following pip "
-"commands:"
-msgstr ""
+"You can install the latest snapshot of these using the following pip commands:"
+msgstr "다음의 pip 명령을 사용하여 최신 스냅샷을 설치할 수 있다:"
 
 #: ../includes/installation.txt:165
 msgid "With git"
-msgstr ""
+msgstr "With git"
 
 #: ../includes/installation.txt:167
 msgid "Please see the :ref:`Contributing <contributing>` section."
-msgstr ""
-
+msgstr ":ref:`Contributing <contributing>` 섹션을 보라."
