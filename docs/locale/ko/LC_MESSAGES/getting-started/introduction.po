@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Celery 4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-22 13:45+0900\n"
-"PO-Revision-Date: 2019-05-22 18:21+0900\n"
+"PO-Revision-Date: 2019-05-22 18:28+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -68,7 +68,7 @@ msgid ""
 "Node.js, and a `PHP client`_."
 msgstr ""
 "셀러리는 파이썬으로 만들어졌지만, 프로토콜은 어떠한 언어를 사용하여 구현될 수 "
-"있다. 게다가 파이썬외에도 Node.js를 위한 node-celery_와 node-celery-ts_, 그리"
+"있다. 게다가 파이썬외에도 Node.js를 위한 node-celery_\\와 node-celery-ts_, 그리"
 "고 `PHP client`_\\가 있다."
 
 #: ../getting-started/introduction.rst:31
@@ -77,7 +77,7 @@ msgid ""
 "having a task that requests it (webhooks)."
 msgstr ""
 "언어 상호운용성(Language interoperability)은 HTTP 엔드포인트를 노출하고 이를 요"
-"청하는 태스크(웹훅)를 얻도록 할 수 있다."
+"청하는 태스크(웹 훅 webhook)를 얻도록 할 수 있다."
 
 #: ../getting-started/introduction.rst:39
 msgid "What do I need?"
@@ -220,8 +220,8 @@ msgid ""
 "millisecond round-trip latency (using RabbitMQ, librabbitmq, and optimized "
 "settings)."
 msgstr ""
-"단일 셀러리 프로세스는 서브-밀리초(millisecond) 미만의 왕복 대기 시간(round-"
-"trip latency)으로 분(minute)당 수백만개의 태스크를 처리할 수 있다(RabbitMQ, "
+"단일 셀러리 프로세스는 서브-밀리 초(sub-millisecond) 미만의 왕복 대기 시간"
+"(round-trip latency)으로 분 당 수백만개의 태스크를 처리할 수 있다(RabbitMQ, "
 "librabbitmq, 그리고 최적화된 설정을 사용)."
 
 #: ../getting-started/introduction.rst:117
@@ -249,7 +249,7 @@ msgstr ":ref:`RabbitMQ <broker-rabbitmq>`, :ref:`Redis <broker-redis>`,"
 
 #: ../getting-started/introduction.rst:132
 msgid ":ref:`Amazon SQS <broker-sqs>`, and more…"
-msgstr ":ref:`Amazon SQS <broker-sqs>`, 그리고 더 많은…"
+msgstr ":ref:`Amazon SQS <broker-sqs>`, 그 외…"
 
 #: ../getting-started/introduction.rst:134
 msgid "**Concurrency**"
