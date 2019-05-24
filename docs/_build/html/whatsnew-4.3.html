@@ -1,0 +1,636 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>What&#39;s new in Celery 4.3 (rhubarb) &#8212; Celery 4.3.0 documentation</title>
+    <link rel="stylesheet" href="_static/celery.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="색인" href="genindex.html" />
+    <link rel="search" title="검색" href="search.html" />
+    <link rel="copyright" title="저작권" href="copyright.html" />
+    <link rel="next" title="API Reference" href="reference/index.html" />
+    <link rel="prev" title="Change history" href="changelog.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>탐색</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="전체 색인"
+             accesskey="I">색인</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python 모듈 목록"
+             >모듈</a> |</li>
+        <li class="right" >
+          <a href="reference/index.html" title="API Reference"
+             accesskey="N">다음</a> |</li>
+        <li class="right" >
+          <a href="changelog.html" title="Change history"
+             accesskey="P">이전</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Celery 4.3.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+<div class="deck">
+
+    
+        <p>
+        This document describes the current stable version of Celery (4.3).
+        For development docs,
+        <a href="http://docs.celeryproject.org/en/master/whatsnew-4.3.html">go here</a>.
+        </p>
+    
+
+</div>
+    <div class="section" id="what-s-new-in-celery-4-3-rhubarb">
+<span id="whatsnew-4-3"></span><h1>What's new in Celery 4.3 (rhubarb)<a class="headerlink" href="#what-s-new-in-celery-4-3-rhubarb" title="제목 주소">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Author:</th><td class="field-body">Omer Katz (<code class="docutils literal notranslate"><span class="pre">omer.drow</span> <span class="pre">at</span> <span class="pre">gmail.com</span></code>)</td>
+</tr>
+</tbody>
+</table>
+<div class="sidebar">
+<p class="first sidebar-title">Change history</p>
+<p class="last">What's new documents describe the changes in major versions,
+we also have a <a class="reference internal" href="changelog.html#changelog"><span class="std std-ref">Change history</span></a> that lists the changes in bugfix
+releases (0.0.x), while older series are archived under the <a class="reference internal" href="history/index.html#history"><span class="std std-ref">History</span></a>
+section.</p>
+</div>
+<p>Celery is a simple, flexible, and reliable distributed system to
+process vast amounts of messages, while providing operations with
+the tools required to maintain such a system.</p>
+<p>It's a task queue with focus on real-time processing, while also
+supporting task scheduling.</p>
+<p>Celery has a large and diverse community of users and contributors,
+you should come join us <a class="reference internal" href="getting-started/resources.html#irc-channel"><span class="std std-ref">on IRC</span></a>
+or <a class="reference internal" href="getting-started/resources.html#mailing-list"><span class="std std-ref">our mailing-list</span></a>.</p>
+<p>To read more about Celery you should go read the <a class="reference internal" href="getting-started/introduction.html#intro"><span class="std std-ref">introduction</span></a>.</p>
+<p>While this version is backward compatible with previous versions
+it's important that you read the following section.</p>
+<p>This version is officially supported on CPython 2.7, 3.4, 3.5, 3.6 &amp; 3.7
+and is also supported on PyPy2 &amp; PyPy3.</p>
+<div class="topic">
+<p class="topic-title first">Table of Contents</p>
+<p>Make sure you read the important notes before upgrading to this version.</p>
+</div>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#preface" id="id1">Preface</a><ul>
+<li><a class="reference internal" href="#wall-of-contributors" id="id2">Wall of Contributors</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-from-celery-4-2" id="id3">Upgrading from Celery 4.2</a></li>
+<li><a class="reference internal" href="#important-notes" id="id4">Important Notes</a><ul>
+<li><a class="reference internal" href="#supported-python-versions" id="id5">Supported Python Versions</a></li>
+<li><a class="reference internal" href="#kombu" id="id6">Kombu</a></li>
+<li><a class="reference internal" href="#billiard" id="id7">Billiard</a></li>
+<li><a class="reference internal" href="#eventlet-workers-pool" id="id8">Eventlet Workers Pool</a></li>
+<li><a class="reference internal" href="#messagepack-serializer" id="id9">MessagePack Serializer</a></li>
+<li><a class="reference internal" href="#mongodb-result-backend" id="id10">MongoDB Result Backend</a></li>
+<li><a class="reference internal" href="#redis-message-broker" id="id11">Redis Message Broker</a></li>
+<li><a class="reference internal" href="#redis-result-backend" id="id12">Redis Result Backend</a></li>
+<li><a class="reference internal" href="#riak-result-backend" id="id13">Riak Result Backend</a></li>
+<li><a class="reference internal" href="#dropped-support-for-rabbitmq-2-x" id="id14">Dropped Support for RabbitMQ 2.x</a></li>
+<li><a class="reference internal" href="#django-support" id="id15">Django Support</a></li>
+<li><a class="reference internal" href="#revamped-auth-serializer" id="id16">Revamped auth Serializer</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#news" id="id17">News</a><ul>
+<li><a class="reference internal" href="#brokers" id="id18">Brokers</a></li>
+<li><a class="reference internal" href="#result-backends" id="id19">Result Backends</a></li>
+<li><a class="reference internal" href="#tasks" id="id20">Tasks</a></li>
+<li><a class="reference internal" href="#canvas" id="id21">Canvas</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="preface">
+<h2><a class="toc-backref" href="#id1">Preface</a><a class="headerlink" href="#preface" title="제목 주소">¶</a></h2>
+<p>The 4.3.0 release continues to improve our efforts to provide you with
+the best task execution platform for Python.</p>
+<p>This release has been codenamed <a class="reference external" href="https://www.youtube.com/watch?v=_AWIqXzvX-U">Rhubarb</a>
+which is one of my favorite tracks from Selected Ambient Works II.</p>
+<p>This release focuses on new features like new result backends
+and a revamped security serializer along with bug fixes mainly for Celery Beat,
+Canvas, a number of critical fixes for hanging workers and
+fixes for several severe memory leaks.</p>
+<p>Celery 4.3 is the first release to support Python 3.7.</p>
+<p>We hope that 4.3 will be the last release to support Python 2.7 as we now
+begin to work on Celery 5, the next generation of our task execution platform.</p>
+<p>However, if Celery 5 will be delayed for any reason we may release
+another 4.x minor version which will still support Python 2.7.</p>
+<p>If another 4.x version will be released it will most likely drop support for
+Python 3.4 as it will reach it's EOL in March 2019.</p>
+<p>We have also focused on reducing contribution friction.</p>
+<p>Thanks to <strong>Josue Balandrano Coronel</strong>, one of our core contributors, we now have an
+updated <a class="reference internal" href="contributing.html#contributing"><span class="std std-ref">Contributing</span></a> document.
+If you intend to contribute, please review it at your earliest convenience.</p>
+<p>I have also added new issue templates, which we will continue to improve,
+so that the issues you open will have more relevant information which
+will allow us to help you to resolve them more easily.</p>
+<p><em>— Omer Katz</em></p>
+<div class="section" id="wall-of-contributors">
+<h3><a class="toc-backref" href="#id2">Wall of Contributors</a><a class="headerlink" href="#wall-of-contributors" title="제목 주소">¶</a></h3>
+<p>Alexander Ioannidis &lt;<a class="reference external" href="mailto:a&#46;ioannidis&#46;pan&#37;&#52;&#48;gmail&#46;com">a<span>&#46;</span>ioannidis<span>&#46;</span>pan<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Amir Hossein Saeid Mehr &lt;<a class="reference external" href="mailto:amir&#46;saiedmehr&#37;&#52;&#48;gmail&#46;com">amir<span>&#46;</span>saiedmehr<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Andrea Rabbaglietti &lt;<a class="reference external" href="mailto:rabbagliettiandrea&#37;&#52;&#48;gmail&#46;com">rabbagliettiandrea<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Andrey Skabelin &lt;<a class="reference external" href="mailto:andrey&#46;skabelin&#37;&#52;&#48;gmail&#46;com">andrey<span>&#46;</span>skabelin<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Anthony Ruhier &lt;<a class="reference external" href="mailto:anthony&#46;ruhier&#37;&#52;&#48;gmail&#46;com">anthony<span>&#46;</span>ruhier<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Antonin Delpeuch &lt;<a class="reference external" href="mailto:antonin&#37;&#52;&#48;delpeuch&#46;eu">antonin<span>&#64;</span>delpeuch<span>&#46;</span>eu</a>&gt;
+Artem Vasilyev &lt;<a class="reference external" href="mailto:artem&#46;v&#46;vasilyev&#37;&#52;&#48;gmail&#46;com">artem<span>&#46;</span>v<span>&#46;</span>vasilyev<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Asif Saif Uddin (Auvi) &lt;<a class="reference external" href="mailto:auvipy&#37;&#52;&#48;gmail&#46;com">auvipy<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+aviadatsnyk &lt;<a class="reference external" href="mailto:aviad&#37;&#52;&#48;snyk&#46;io">aviad<span>&#64;</span>snyk<span>&#46;</span>io</a>&gt;
+Axel Haustant &lt;<a class="reference external" href="mailto:noirbizarre&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">noirbizarre<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a>&gt;
+Benjamin Pereto &lt;<a class="reference external" href="mailto:github&#37;&#52;&#48;sandchaschte&#46;ch">github<span>&#64;</span>sandchaschte<span>&#46;</span>ch</a>&gt;
+Bojan Jovanovic &lt;<a class="reference external" href="mailto:bojan&#46;jovanovic&#46;gtech&#37;&#52;&#48;gmail&#46;com">bojan<span>&#46;</span>jovanovic<span>&#46;</span>gtech<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Brett Jackson &lt;<a class="reference external" href="mailto:brett&#37;&#52;&#48;brettjackson&#46;org">brett<span>&#64;</span>brettjackson<span>&#46;</span>org</a>&gt;
+Brett Randall &lt;<a class="reference external" href="mailto:javabrett&#37;&#52;&#48;gmail&#46;com">javabrett<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Brian Schrader &lt;<a class="reference external" href="mailto:brian&#37;&#52;&#48;brianschrader&#46;com">brian<span>&#64;</span>brianschrader<span>&#46;</span>com</a>&gt;
+Bruno Alla &lt;<a class="reference external" href="mailto:browniebroke&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">browniebroke<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a>&gt;
+Buddy &lt;<a class="reference external" href="mailto:34044521+CoffeeExpress&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">34044521+CoffeeExpress<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a>&gt;
+Charles Chan &lt;<a class="reference external" href="mailto:charleswhchan&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">charleswhchan<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a>&gt;
+Christopher Dignam &lt;<a class="reference external" href="mailto:chris&#37;&#52;&#48;dignam&#46;xyz">chris<span>&#64;</span>dignam<span>&#46;</span>xyz</a>&gt;
+Ciaran Courtney &lt;<a class="reference external" href="mailto:6096029+ciarancourtney&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">6096029+ciarancourtney<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a>&gt;
+Clemens Wolff &lt;<a class="reference external" href="mailto:clemens&#37;&#52;&#48;justamouse&#46;com">clemens<span>&#64;</span>justamouse<span>&#46;</span>com</a>&gt;
+Colin Watson &lt;<a class="reference external" href="mailto:cjwatson&#37;&#52;&#48;ubuntu&#46;com">cjwatson<span>&#64;</span>ubuntu<span>&#46;</span>com</a>&gt;
+Daniel Hahler &lt;<a class="reference external" href="mailto:github&#37;&#52;&#48;thequod&#46;de">github<span>&#64;</span>thequod<span>&#46;</span>de</a>&gt;
+Dash Winterson &lt;<a class="reference external" href="mailto:dashdanw&#37;&#52;&#48;gmail&#46;com">dashdanw<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Derek Harland &lt;<a class="reference external" href="mailto:donkopotamus&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">donkopotamus<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a>&gt;
+Dilip Vamsi Moturi &lt;<a class="reference external" href="mailto:16288600+dilipvamsi&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">16288600+dilipvamsi<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a>&gt;
+Dmytro Litvinov &lt;<a class="reference external" href="mailto:litvinov&#46;dmytro&#46;it&#37;&#52;&#48;gmail&#46;com">litvinov<span>&#46;</span>dmytro<span>&#46;</span>it<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Douglas Rohde &lt;<a class="reference external" href="mailto:douglas&#46;rohde2&#37;&#52;&#48;gmail&#46;com">douglas<span>&#46;</span>rohde2<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Ed Morley &lt;<a class="reference external" href="mailto:501702+edmorley&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">501702+edmorley<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a>&gt;
+Fabian Becker &lt;<a class="reference external" href="mailto:halfdan&#37;&#52;&#48;xnorfz&#46;de">halfdan<span>&#64;</span>xnorfz<span>&#46;</span>de</a>&gt;
+Federico Bond &lt;<a class="reference external" href="mailto:federicobond&#37;&#52;&#48;gmail&#46;com">federicobond<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Fengyuan Chen &lt;<a class="reference external" href="mailto:cfy1990&#37;&#52;&#48;gmail&#46;com">cfy1990<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Florian CHARDIN &lt;<a class="reference external" href="mailto:othalla&#46;lf&#37;&#52;&#48;gmail&#46;com">othalla<span>&#46;</span>lf<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+George Psarakis &lt;<a class="reference external" href="mailto:giwrgos&#46;psarakis&#37;&#52;&#48;gmail&#46;com">giwrgos<span>&#46;</span>psarakis<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Guilherme Caminha &lt;<a class="reference external" href="mailto:gpkc&#37;&#52;&#48;cin&#46;ufpe&#46;br">gpkc<span>&#64;</span>cin<span>&#46;</span>ufpe<span>&#46;</span>br</a>&gt;
+ideascf &lt;<a class="reference external" href="mailto:ideascf&#37;&#52;&#48;163&#46;com">ideascf<span>&#64;</span>163<span>&#46;</span>com</a>&gt;
+Itay &lt;<a class="reference external" href="mailto:itay&#46;bittan&#37;&#52;&#48;gmail&#46;com">itay<span>&#46;</span>bittan<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Jamie Alessio &lt;<a class="reference external" href="mailto:jamie&#37;&#52;&#48;stoic&#46;net">jamie<span>&#64;</span>stoic<span>&#46;</span>net</a>&gt;
+Jason Held &lt;<a class="reference external" href="mailto:jasonsheld&#37;&#52;&#48;gmail&#46;com">jasonsheld<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Jeremy Cohen &lt;<a class="reference external" href="mailto:jcohen02&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">jcohen02<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a>&gt;
+John Arnold &lt;<a class="reference external" href="mailto:johnar&#37;&#52;&#48;microsoft&#46;com">johnar<span>&#64;</span>microsoft<span>&#46;</span>com</a>&gt;
+Jon Banafato &lt;<a class="reference external" href="mailto:jonathan&#46;banafato&#37;&#52;&#48;gmail&#46;com">jonathan<span>&#46;</span>banafato<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Jon Dufresne &lt;<a class="reference external" href="mailto:jon&#46;dufresne&#37;&#52;&#48;gmail&#46;com">jon<span>&#46;</span>dufresne<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Joshua Engelman &lt;<a class="reference external" href="mailto:j&#46;aaron&#46;engelman&#37;&#52;&#48;gmail&#46;com">j<span>&#46;</span>aaron<span>&#46;</span>engelman<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Joshua Schmid &lt;<a class="reference external" href="mailto:jschmid&#37;&#52;&#48;suse&#46;com">jschmid<span>&#64;</span>suse<span>&#46;</span>com</a>&gt;
+Josue Balandrano Coronel &lt;<a class="reference external" href="mailto:xirdneh&#37;&#52;&#48;gmail&#46;com">xirdneh<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+K Davis &lt;<a class="reference external" href="mailto:anybodys&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">anybodys<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a>&gt;
+kidoz &lt;<a class="reference external" href="mailto:ckidoz&#37;&#52;&#48;gmail&#46;com">ckidoz<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Kiyohiro Yamaguchi &lt;<a class="reference external" href="mailto:kiyoya&#37;&#52;&#48;gmail&#46;com">kiyoya<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Korijn van Golen &lt;<a class="reference external" href="mailto:korijn&#37;&#52;&#48;gmail&#46;com">korijn<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Lars Kruse &lt;<a class="reference external" href="mailto:devel&#37;&#52;&#48;sumpfralle&#46;de">devel<span>&#64;</span>sumpfralle<span>&#46;</span>de</a>&gt;
+Lars Rinn &lt;<a class="reference external" href="mailto:lm&#46;rinn&#37;&#52;&#48;outlook&#46;com">lm<span>&#46;</span>rinn<span>&#64;</span>outlook<span>&#46;</span>com</a>&gt;
+Lewis M. Kabui &lt;<a class="reference external" href="mailto:lewis&#46;maina&#37;&#52;&#48;andela&#46;com">lewis<span>&#46;</span>maina<span>&#64;</span>andela<span>&#46;</span>com</a>&gt;
+madprogrammer &lt;<a class="reference external" href="mailto:serg&#37;&#52;&#48;anufrienko&#46;net">serg<span>&#64;</span>anufrienko<span>&#46;</span>net</a>&gt;
+Manuel Vázquez Acosta &lt;<a class="reference external" href="mailto:mvaled&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">mvaled<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a>&gt;
+Marcus McHale &lt;<a class="reference external" href="mailto:marcus&#46;mchale&#37;&#52;&#48;nuigalway&#46;ie">marcus<span>&#46;</span>mchale<span>&#64;</span>nuigalway<span>&#46;</span>ie</a>&gt;
+Mariatta &lt;<a class="reference external" href="mailto:Mariatta&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">Mariatta<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a>&gt;
+Mario Kostelac &lt;<a class="reference external" href="mailto:mario&#37;&#52;&#48;intercom&#46;io">mario<span>&#64;</span>intercom<span>&#46;</span>io</a>&gt;
+Matt Wiens &lt;<a class="reference external" href="mailto:mwiens91&#37;&#52;&#48;gmail&#46;com">mwiens91<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Maximilien Cuony &lt;<a class="reference external" href="mailto:the-glu&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">the-glu<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a>&gt;
+Maximilien de Bayser &lt;<a class="reference external" href="mailto:maxdebayser&#37;&#52;&#48;gmail&#46;com">maxdebayser<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Meysam &lt;<a class="reference external" href="mailto:MeysamAzad81&#37;&#52;&#48;yahoo&#46;com">MeysamAzad81<span>&#64;</span>yahoo<span>&#46;</span>com</a>&gt;
+Milind Shakya &lt;<a class="reference external" href="mailto:milin&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">milin<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a>&gt;
+na387 &lt;<a class="reference external" href="mailto:na387&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">na387<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a>&gt;
+Nicholas Pilon &lt;<a class="reference external" href="mailto:npilon&#37;&#52;&#48;gmail&#46;com">npilon<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Nick Parsons &lt;<a class="reference external" href="mailto:nparsons08&#37;&#52;&#48;gmail&#46;com">nparsons08<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Nik Molnar &lt;<a class="reference external" href="mailto:nik&#46;molnar&#37;&#52;&#48;consbio&#46;org">nik<span>&#46;</span>molnar<span>&#64;</span>consbio<span>&#46;</span>org</a>&gt;
+Noah Hall &lt;<a class="reference external" href="mailto:noah&#46;t&#46;hall&#37;&#52;&#48;gmail&#46;com">noah<span>&#46;</span>t<span>&#46;</span>hall<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Noam &lt;<a class="reference external" href="mailto:noamkush&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">noamkush<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a>&gt;
+Omer Katz &lt;<a class="reference external" href="mailto:omer&#46;drow&#37;&#52;&#48;gmail&#46;com">omer<span>&#46;</span>drow<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Paweł Adamczak &lt;<a class="reference external" href="mailto:pawel&#46;ad&#37;&#52;&#48;gmail&#46;com">pawel<span>&#46;</span>ad<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+peng weikang &lt;<a class="reference external" href="mailto:pengwk2&#37;&#52;&#48;gmail&#46;com">pengwk2<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Prathamesh Salunkhe &lt;<a class="reference external" href="mailto:spratham55&#37;&#52;&#48;gmail&#46;com">spratham55<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Przemysław Suliga &lt;<a class="reference external" href="mailto:1270737+suligap&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">1270737+suligap<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a>&gt;
+Raf Geens &lt;<a class="reference external" href="mailto:rafgeens&#37;&#52;&#48;gmail&#46;com">rafgeens<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+(◕ᴥ◕) &lt;<a class="reference external" href="mailto:ratson&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">ratson<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a>&gt;
+Robert Kopaczewski &lt;<a class="reference external" href="mailto:rk&#37;&#52;&#48;23doors&#46;com">rk<span>&#64;</span>23doors<span>&#46;</span>com</a>&gt;
+Samuel Huang &lt;<a class="reference external" href="mailto:samhuang91&#37;&#52;&#48;gmail&#46;com">samhuang91<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Sebastian Wojciechowski &lt;<a class="reference external" href="mailto:42519683+sebwoj&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">42519683+sebwoj<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a>&gt;
+Seunghun Lee &lt;<a class="reference external" href="mailto:waydi1&#37;&#52;&#48;gmail&#46;com">waydi1<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Shanavas M &lt;<a class="reference external" href="mailto:shanavas&#46;m2&#37;&#52;&#48;gmail&#46;com">shanavas<span>&#46;</span>m2<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Simon Charette &lt;<a class="reference external" href="mailto:charettes&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">charettes<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a>&gt;
+Simon Schmidt &lt;<a class="reference external" href="mailto:schmidt&#46;simon&#37;&#52;&#48;gmail&#46;com">schmidt<span>&#46;</span>simon<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+srafehi &lt;<a class="reference external" href="mailto:shadyrafehi&#37;&#52;&#48;gmail&#46;com">shadyrafehi<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Steven Sklar &lt;<a class="reference external" href="mailto:sklarsa&#37;&#52;&#48;gmail&#46;com">sklarsa<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Tom Booth &lt;<a class="reference external" href="mailto:thomasbo&#37;&#52;&#48;microsoft&#46;com">thomasbo<span>&#64;</span>microsoft<span>&#46;</span>com</a>&gt;
+Tom Clancy &lt;<a class="reference external" href="mailto:ClancyTJD&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">ClancyTJD<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a>&gt;
+Toni Ruža &lt;<a class="reference external" href="mailto:gmr&#46;gaf&#37;&#52;&#48;gmail&#46;com">gmr<span>&#46;</span>gaf<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+tothegump &lt;<a class="reference external" href="mailto:tothegump&#37;&#52;&#48;gmail&#46;com">tothegump<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Victor Mireyev &lt;<a class="reference external" href="mailto:victor&#37;&#52;&#48;opennodecloud&#46;com">victor<span>&#64;</span>opennodecloud<span>&#46;</span>com</a>&gt;
+Vikas Prasad &lt;<a class="reference external" href="mailto:vikasprasad&#46;prasad&#37;&#52;&#48;gmail&#46;com">vikasprasad<span>&#46;</span>prasad<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+walterqian &lt;<a class="reference external" href="mailto:walter&#37;&#52;&#48;color&#46;com">walter<span>&#64;</span>color<span>&#46;</span>com</a>&gt;
+Willem &lt;<a class="reference external" href="mailto:himself&#37;&#52;&#48;willemthiart&#46;com">himself<span>&#64;</span>willemthiart<span>&#46;</span>com</a>&gt;
+Xiaodong &lt;<a class="reference external" href="mailto:xd_deng&#37;&#52;&#48;hotmail&#46;com">xd_deng<span>&#64;</span>hotmail<span>&#46;</span>com</a>&gt;
+yywing &lt;<a class="reference external" href="mailto:386542536&#37;&#52;&#48;qq&#46;com">386542536<span>&#64;</span>qq<span>&#46;</span>com</a>&gt;</p>
+<div class="admonition note">
+<p class="first admonition-title">주석</p>
+<p class="last">This wall was automatically generated from git history,
+so sadly it doesn't not include the people who help with more important
+things like answering mailing-list questions.</p>
+</div>
+</div>
+</div>
+<div class="section" id="upgrading-from-celery-4-2">
+<h2><a class="toc-backref" href="#id3">Upgrading from Celery 4.2</a><a class="headerlink" href="#upgrading-from-celery-4-2" title="제목 주소">¶</a></h2>
+<p>Please read the important notes below as there are several breaking changes.</p>
+</div>
+<div class="section" id="important-notes">
+<span id="v430-important"></span><h2><a class="toc-backref" href="#id4">Important Notes</a><a class="headerlink" href="#important-notes" title="제목 주소">¶</a></h2>
+<div class="section" id="supported-python-versions">
+<h3><a class="toc-backref" href="#id5">Supported Python Versions</a><a class="headerlink" href="#supported-python-versions" title="제목 주소">¶</a></h3>
+<p>The supported Python Versions are:</p>
+<ul class="simple">
+<li>CPython 2.7</li>
+<li>CPython 3.4</li>
+<li>CPython 3.5</li>
+<li>CPython 3.6</li>
+<li>CPython 3.7</li>
+<li>PyPy2.7 6.0 (<code class="docutils literal notranslate"><span class="pre">pypy2</span></code>)</li>
+<li>PyPy3.5 6.0 (<code class="docutils literal notranslate"><span class="pre">pypy3</span></code>)</li>
+</ul>
+</div>
+<div class="section" id="kombu">
+<h3><a class="toc-backref" href="#id6">Kombu</a><a class="headerlink" href="#kombu" title="제목 주소">¶</a></h3>
+<p>Starting from this release, the minimum required version is Kombu 4.4.</p>
+<div class="section" id="new-compression-algorithms">
+<h4>New Compression Algorithms<a class="headerlink" href="#new-compression-algorithms" title="제목 주소">¶</a></h4>
+<p>Kombu 4.3 includes a few new optional compression methods:</p>
+<ul class="simple">
+<li>LZMA (available from stdlib if using Python 3 or from a backported package)</li>
+<li>Brotli (available if you install either the brotli or the brotlipy package)</li>
+<li>ZStandard (available if you install the zstandard package)</li>
+</ul>
+<p>Unfortunately our current protocol generates huge payloads for complex canvases.</p>
+<p>Until we migrate to our 3rd revision of the Celery protocol in Celery 5
+which will resolve this issue, please use one of the new compression methods
+as a workaround.</p>
+<p>See <a class="reference internal" href="userguide/calling.html#calling-compression"><span class="std std-ref">Compression</span></a> for details.</p>
+</div>
+</div>
+<div class="section" id="billiard">
+<h3><a class="toc-backref" href="#id7">Billiard</a><a class="headerlink" href="#billiard" title="제목 주소">¶</a></h3>
+<p>Starting from this release, the minimum required version is Billiard 3.6.</p>
+</div>
+<div class="section" id="eventlet-workers-pool">
+<h3><a class="toc-backref" href="#id8">Eventlet Workers Pool</a><a class="headerlink" href="#eventlet-workers-pool" title="제목 주소">¶</a></h3>
+<p>We now require <cite>eventlet&gt;=0.24.1</cite>.</p>
+<p>If you are using the eventlet workers pool please install Celery using:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install -U celery<span class="o">[</span>eventlet<span class="o">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="messagepack-serializer">
+<h3><a class="toc-backref" href="#id9">MessagePack Serializer</a><a class="headerlink" href="#messagepack-serializer" title="제목 주소">¶</a></h3>
+<p>We've been using the deprecated <cite>msgpack-python</cite> package for a while.
+This is now fixed as we depend on the <cite>msgpack</cite> instead.</p>
+<p>If you are currently using the MessagePack serializer please uninstall the
+previous package and reinstall the new one using:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip uninstall msgpack-python -y
+<span class="gp">$</span> pip install -U celery<span class="o">[</span>msgpack<span class="o">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mongodb-result-backend">
+<h3><a class="toc-backref" href="#id10">MongoDB Result Backend</a><a class="headerlink" href="#mongodb-result-backend" title="제목 주소">¶</a></h3>
+<p>We now support the <a class="reference external" href="https://docs.mongodb.com/manual/reference/connection-string/#dns-seedlist-connection-format">DNS seedlist connection format</a> for the MongoDB result backend.</p>
+<p>This requires the <cite>dnspython</cite> package.</p>
+<p>If you are using the MongoDB result backend please install Celery using:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install -U celery<span class="o">[</span>mongodb<span class="o">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="redis-message-broker">
+<h3><a class="toc-backref" href="#id11">Redis Message Broker</a><a class="headerlink" href="#redis-message-broker" title="제목 주소">¶</a></h3>
+<p>Due to multiple bugs in earlier versions of py-redis that were causing
+issues for Celery, we were forced to bump the minimum required version to 3.2.0.</p>
+</div>
+<div class="section" id="redis-result-backend">
+<h3><a class="toc-backref" href="#id12">Redis Result Backend</a><a class="headerlink" href="#redis-result-backend" title="제목 주소">¶</a></h3>
+<p>Due to multiple bugs in earlier versions of py-redis that were causing
+issues for Celery, we were forced to bump the minimum required version to 3.2.0.</p>
+</div>
+<div class="section" id="riak-result-backend">
+<h3><a class="toc-backref" href="#id13">Riak Result Backend</a><a class="headerlink" href="#riak-result-backend" title="제목 주소">¶</a></h3>
+<p>The official Riak client does not support Python 3.7 as of yet.</p>
+<p>In case you are using the Riak result backend, either attempt to install the
+client from master or avoid upgrading to Python 3.7 until this matter is resolved.</p>
+<p>In case you are using the Riak result backend with Python 3.7, we now emit
+a warning.</p>
+<p>Please track <a class="reference external" href="https://github.com/basho/riak-python-client/issues/534">basho/riak-python-client#534</a>
+for updates.</p>
+</div>
+<div class="section" id="dropped-support-for-rabbitmq-2-x">
+<h3><a class="toc-backref" href="#id14">Dropped Support for RabbitMQ 2.x</a><a class="headerlink" href="#dropped-support-for-rabbitmq-2-x" title="제목 주소">¶</a></h3>
+<p>Starting from this release, we officially no longer support RabbitMQ 2.x.</p>
+<p>The last release of 2.x was in 2012 and we had to make adjustments to
+correctly support high availability on RabbitMQ 3.x.</p>
+<p>If for some reason, you are still using RabbitMQ 2.x we encourage you to upgrade
+as soon as possible since security patches are no longer applied on RabbitMQ 2.x.</p>
+</div>
+<div class="section" id="django-support">
+<h3><a class="toc-backref" href="#id15">Django Support</a><a class="headerlink" href="#django-support" title="제목 주소">¶</a></h3>
+<p>Starting from this release, the minimum required Django version is 1.11.</p>
+</div>
+<div class="section" id="revamped-auth-serializer">
+<h3><a class="toc-backref" href="#id16">Revamped auth Serializer</a><a class="headerlink" href="#revamped-auth-serializer" title="제목 주소">¶</a></h3>
+<p>The auth serializer received a complete overhaul.
+It was previously horribly broken.</p>
+<p>We now depend on <cite>cryptography</cite> instead of <cite>pyOpenSSL</cite> for this serializer.</p>
+<p>See <a class="reference internal" href="userguide/security.html#message-signing"><span class="std std-ref">Message Signing</span></a> for details.</p>
+</div>
+</div>
+<div class="section" id="news">
+<span id="v430-news"></span><h2><a class="toc-backref" href="#id17">News</a><a class="headerlink" href="#news" title="제목 주소">¶</a></h2>
+<div class="section" id="brokers">
+<h3><a class="toc-backref" href="#id18">Brokers</a><a class="headerlink" href="#brokers" title="제목 주소">¶</a></h3>
+<div class="section" id="redis-broker-support-for-ssl-uris">
+<h4>Redis Broker Support for SSL URIs<a class="headerlink" href="#redis-broker-support-for-ssl-uris" title="제목 주소">¶</a></h4>
+<p>The Redis broker now has support for SSL connections.</p>
+<p>You can use <a class="reference internal" href="userguide/configuration.html#std:setting-broker_use_ssl"><code class="xref std std-setting docutils literal notranslate"><span class="pre">broker_use_ssl</span></code></a> as you normally did and use a
+<cite>rediss://</cite> URI.</p>
+<p>You can also pass the SSL configuration parameters to the URI:</p>
+<blockquote>
+<div><cite>rediss://localhost:3456?ssl_keyfile=keyfile.key&amp;ssl_certfile=certificate.crt&amp;ssl_ca_certs=ca.pem&amp;ssl_cert_reqs=CERT_REQUIRED</cite></div></blockquote>
+</div>
+<div class="section" id="configurable-events-exchange-name">
+<h4>Configurable Events Exchange Name<a class="headerlink" href="#configurable-events-exchange-name" title="제목 주소">¶</a></h4>
+<p>Previously, the events exchange name was hardcoded.</p>
+<p>You can use <a class="reference internal" href="userguide/configuration.html#std:setting-event_exchange"><code class="xref std std-setting docutils literal notranslate"><span class="pre">event_exchange</span></code></a> to determine it.
+The default value remains the same.</p>
+</div>
+<div class="section" id="configurable-pidbox-exchange-name">
+<h4>Configurable Pidbox Exchange Name<a class="headerlink" href="#configurable-pidbox-exchange-name" title="제목 주소">¶</a></h4>
+<p>Previously, the Pidbox exchange name was hardcoded.</p>
+<p>You can use <a class="reference internal" href="userguide/configuration.html#std:setting-control_exchange"><code class="xref std std-setting docutils literal notranslate"><span class="pre">control_exchange</span></code></a> to determine it.
+The default value remains the same.</p>
+</div>
+</div>
+<div class="section" id="result-backends">
+<h3><a class="toc-backref" href="#id19">Result Backends</a><a class="headerlink" href="#result-backends" title="제목 주소">¶</a></h3>
+<div class="section" id="redis-result-backend-support-for-ssl-uris">
+<h4>Redis Result Backend Support for SSL URIs<a class="headerlink" href="#redis-result-backend-support-for-ssl-uris" title="제목 주소">¶</a></h4>
+<p>The Redis result backend now has support for SSL connections.</p>
+<p>You can use <a class="reference internal" href="userguide/configuration.html#std:setting-redis_backend_use_ssl"><code class="xref std std-setting docutils literal notranslate"><span class="pre">redis_backend_use_ssl</span></code></a> to configure it and use a
+<cite>rediss://</cite> URI.</p>
+<p>You can also pass the SSL configuration parameters to the URI:</p>
+<blockquote>
+<div><cite>rediss://localhost:3456?ssl_keyfile=keyfile.key&amp;ssl_certfile=certificate.crt&amp;ssl_ca_certs=ca.pem&amp;ssl_cert_reqs=CERT_REQUIRED</cite></div></blockquote>
+</div>
+<div class="section" id="store-extended-task-metadata-in-result">
+<h4>Store Extended Task Metadata in Result<a class="headerlink" href="#store-extended-task-metadata-in-result" title="제목 주소">¶</a></h4>
+<p>When <a class="reference internal" href="userguide/configuration.html#std:setting-result_extended"><code class="xref std std-setting docutils literal notranslate"><span class="pre">result_extended</span></code></a> is <cite>True</cite> the backend will store the following
+metadata:</p>
+<ul class="simple">
+<li>Task Name</li>
+<li>Arguments</li>
+<li>Keyword arguments</li>
+<li>The worker the task was executed on</li>
+<li>Number of retries</li>
+<li>The queue's name or routing key</li>
+</ul>
+<p>In addition, <code class="xref py py-meth docutils literal notranslate"><span class="pre">celery.app.task.update_state()</span></code> now accepts keyword arguments
+which allows you to store custom data with the result.</p>
+</div>
+<div class="section" id="encode-results-using-a-different-serializer">
+<h4>Encode Results Using A Different Serializer<a class="headerlink" href="#encode-results-using-a-different-serializer" title="제목 주소">¶</a></h4>
+<p>The <a class="reference internal" href="userguide/configuration.html#std:setting-result_accept_content"><code class="xref std std-setting docutils literal notranslate"><span class="pre">result_accept_content</span></code></a> setting allows to configure different
+accepted content for the result backend.</p>
+<p>A special serializer (<cite>auth</cite>) is used for signed messaging,
+however the result_serializer remains in json, because we don't want encrypted
+content in our result backend.</p>
+<p>To accept unsigned content from the result backend,
+we introduced this new configuration option to specify the
+accepted content from the backend.</p>
+</div>
+<div class="section" id="new-result-backends">
+<h4>New Result Backends<a class="headerlink" href="#new-result-backends" title="제목 주소">¶</a></h4>
+<p>This release introduces four new result backends:</p>
+<blockquote>
+<div><ul class="simple">
+<li>S3 result backend</li>
+<li>ArangoDB result backend</li>
+<li>Azure Block Blob Storage result backend</li>
+<li>CosmosDB result backend</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="s3-result-backend">
+<h4>S3 Result Backend<a class="headerlink" href="#s3-result-backend" title="제목 주소">¶</a></h4>
+<p>Amazon Simple Storage Service (Amazon S3) is an object storage service by AWS.</p>
+<p>The results are stored using the following path template:</p>
+<div class="line-block">
+<div class="line">&lt;<a class="reference internal" href="userguide/configuration.html#std:setting-s3_bucket"><code class="xref std std-setting docutils literal notranslate"><span class="pre">s3_bucket</span></code></a>&gt;/&lt;<a class="reference internal" href="userguide/configuration.html#std:setting-s3_base_path"><code class="xref std std-setting docutils literal notranslate"><span class="pre">s3_base_path</span></code></a>&gt;/&lt;key&gt;</div>
+</div>
+<p>See <a class="reference internal" href="userguide/configuration.html#conf-s3-result-backend"><span class="std std-ref">S3 backend settings</span></a> for more information.</p>
+</div>
+<div class="section" id="arangodb-result-backend">
+<h4>ArangoDB Result Backend<a class="headerlink" href="#arangodb-result-backend" title="제목 주소">¶</a></h4>
+<p>ArangoDB is a native multi-model database with search capabilities.
+The backend stores the result in the following document format:</p>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">_key: {key},</div>
+<div class="line">task: {task}</div>
+</div>
+<div class="line">}</div>
+</div>
+<p>See <a class="reference internal" href="userguide/configuration.html#conf-arangodb-result-backend"><span class="std std-ref">ArangoDB backend settings</span></a> for more information.</p>
+</div>
+<div class="section" id="azure-block-blob-storage-result-backend">
+<h4>Azure Block Blob Storage Result Backend<a class="headerlink" href="#azure-block-blob-storage-result-backend" title="제목 주소">¶</a></h4>
+<p>Azure Block Blob Storage is an object storage service by Microsoft.</p>
+<p>The backend stores the result in the following path template:</p>
+<div class="line-block">
+<div class="line">&lt;<a class="reference internal" href="userguide/configuration.html#std:setting-azureblockblob_container_name"><code class="xref std std-setting docutils literal notranslate"><span class="pre">azureblockblob_container_name</span></code></a>&gt;/&lt;key&gt;</div>
+</div>
+<p>See <a class="reference internal" href="userguide/configuration.html#conf-azureblockblob-result-backend"><span class="std std-ref">Azure Block Blob backend settings</span></a> for more information.</p>
+</div>
+<div class="section" id="cosmosdb-result-backend">
+<h4>CosmosDB Result Backend<a class="headerlink" href="#cosmosdb-result-backend" title="제목 주소">¶</a></h4>
+<p>Azure Cosmos DB is Microsoft's globally distributed,
+multi-model database service.</p>
+<p>The backend stores the result in the following document format:</p>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">id: {key},</div>
+<div class="line">value: {task}</div>
+</div>
+<div class="line">}</div>
+</div>
+<p>See <a class="reference internal" href="userguide/configuration.html#conf-cosmosdbsql-result-backend"><span class="std std-ref">CosmosDB backend settings (experimental)</span></a> for more information.</p>
+</div>
+</div>
+<div class="section" id="tasks">
+<h3><a class="toc-backref" href="#id20">Tasks</a><a class="headerlink" href="#tasks" title="제목 주소">¶</a></h3>
+<div class="section" id="cythonized-tasks">
+<h4>Cythonized Tasks<a class="headerlink" href="#cythonized-tasks" title="제목 주소">¶</a></h4>
+<p>Cythonized tasks are now supported.
+You can generate C code from Cython that specifies a task using the <cite>&#64;task</cite>
+decorator and everything should work exactly the same.</p>
+</div>
+<div class="section" id="acknowledging-tasks-on-failures-or-timeouts">
+<h4>Acknowledging Tasks on Failures or Timeouts<a class="headerlink" href="#acknowledging-tasks-on-failures-or-timeouts" title="제목 주소">¶</a></h4>
+<p>When <a class="reference internal" href="userguide/configuration.html#std:setting-task_acks_late"><code class="xref std std-setting docutils literal notranslate"><span class="pre">task_acks_late</span></code></a> is set to <cite>True</cite> tasks are acknowledged on failures or
+timeouts.
+This makes it hard to use dead letter queues and exchanges.</p>
+<p>Celery 4.3 introduces the new <a class="reference internal" href="userguide/configuration.html#std:setting-task_acks_on_failure_or_timeout"><code class="xref std std-setting docutils literal notranslate"><span class="pre">task_acks_on_failure_or_timeout</span></code></a> which
+allows you to avoid acknowledging tasks if they failed or timed out even if
+<a class="reference internal" href="userguide/configuration.html#std:setting-task_acks_late"><code class="xref std std-setting docutils literal notranslate"><span class="pre">task_acks_late</span></code></a> is set to <cite>True</cite>.</p>
+<p><a class="reference internal" href="userguide/configuration.html#std:setting-task_acks_on_failure_or_timeout"><code class="xref std std-setting docutils literal notranslate"><span class="pre">task_acks_on_failure_or_timeout</span></code></a> is set to <cite>True</cite> by default.</p>
+</div>
+<div class="section" id="schedules-now-support-microseconds">
+<h4>Schedules Now Support Microseconds<a class="headerlink" href="#schedules-now-support-microseconds" title="제목 주소">¶</a></h4>
+<p>When scheduling tasks using <strong class="program">celery beat</strong> microseconds
+are no longer ignored.</p>
+</div>
+<div class="section" id="default-task-priority">
+<h4>Default Task Priority<a class="headerlink" href="#default-task-priority" title="제목 주소">¶</a></h4>
+<p>You can now set the default priority of a task using
+the <a class="reference internal" href="userguide/configuration.html#std:setting-task_default_priority"><code class="xref std std-setting docutils literal notranslate"><span class="pre">task_default_priority</span></code></a> setting.
+The setting's value will be used if no priority is provided for a specific
+task.</p>
+</div>
+<div class="section" id="tasks-optionally-inherit-parent-s-priority">
+<h4>Tasks Optionally Inherit Parent's Priority<a class="headerlink" href="#tasks-optionally-inherit-parent-s-priority" title="제목 주소">¶</a></h4>
+<p>Setting the <a class="reference internal" href="userguide/configuration.html#std:setting-task_inherit_parent_priority"><code class="xref std std-setting docutils literal notranslate"><span class="pre">task_inherit_parent_priority</span></code></a> configuration option to
+<cite>True</cite> will make Celery tasks inherit the priority of the previous task
+linked to it.</p>
+<p>Examples:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">celery</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span>
+  <span class="n">add</span><span class="o">.</span><span class="n">s</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="c1"># priority=None</span>
+  <span class="n">add</span><span class="o">.</span><span class="n">s</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">priority</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span> <span class="c1"># priority=5</span>
+  <span class="n">add</span><span class="o">.</span><span class="n">s</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="c1"># priority=5</span>
+  <span class="n">add</span><span class="o">.</span><span class="n">s</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">priority</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span> <span class="c1"># priority=3</span>
+  <span class="n">add</span><span class="o">.</span><span class="n">s</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span> <span class="c1"># priority=3</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app.task</span><span class="p">(</span><span class="n">bind</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">child_task</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="k">pass</span>
+
+<span class="nd">@app.task</span><span class="p">(</span><span class="n">bind</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">parent_task</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="n">child_task</span><span class="o">.</span><span class="n">delay</span><span class="p">()</span>
+
+<span class="c1"># child_task will also have priority=5</span>
+<span class="n">parent_task</span><span class="o">.</span><span class="n">apply_async</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="p">[],</span> <span class="n">priority</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="canvas">
+<h3><a class="toc-backref" href="#id21">Canvas</a><a class="headerlink" href="#canvas" title="제목 주소">¶</a></h3>
+<div class="section" id="chords-can-be-executed-in-eager-mode">
+<h4>Chords can be Executed in Eager Mode<a class="headerlink" href="#chords-can-be-executed-in-eager-mode" title="제목 주소">¶</a></h4>
+<p>When <a class="reference internal" href="userguide/configuration.html#std:setting-task_always_eager"><code class="xref std std-setting docutils literal notranslate"><span class="pre">task_always_eager</span></code></a> is set to <cite>True</cite>, chords are executed eagerly
+as well.</p>
+</div>
+<div class="section" id="configurable-chord-join-timeout">
+<h4>Configurable Chord Join Timeout<a class="headerlink" href="#configurable-chord-join-timeout" title="제목 주소">¶</a></h4>
+<p>Previously, <code class="xref py py-meth docutils literal notranslate"><span class="pre">celery.result.GroupResult.join()</span></code> had a fixed timeout of 3
+seconds.</p>
+<p>The <a class="reference internal" href="userguide/configuration.html#std:setting-result_chord_join_timeout"><code class="xref std std-setting docutils literal notranslate"><span class="pre">result_chord_join_timeout</span></code></a> setting now allows you to change it.</p>
+<p>The default remains 3 seconds.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/celery_512.png" alt="Logo"/>
+            </a></p><iframe src="https://ghbtns.com/github-btn.html?user=celery&repo=celery&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+<div id="donate">
+    <b>Please help support this community project with a donation:</b>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+    ">
+    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>
+</div>
+  <h4>이전 항목</h4>
+  <p class="topless"><a href="changelog.html"
+                        title="이전 장">Change history</a></p>
+  <h4>다음 항목</h4>
+  <p class="topless"><a href="reference/index.html"
+                        title="다음 장">API Reference</a></p>
+  <div role="note" aria-label="source link">
+    <h3>현재 문서</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/whatsnew-4.3.rst.txt"
+            rel="nofollow">소스 코드를 보려면</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>빠른 검색</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="바로 가기" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>탐색</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="전체 색인"
+             >색인</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python 모듈 목록"
+             >모듈</a> |</li>
+        <li class="right" >
+          <a href="reference/index.html" title="API Reference"
+             >다음</a> |</li>
+        <li class="right" >
+          <a href="changelog.html" title="Change history"
+             >이전</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Celery 4.3.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; <a href="copyright.html">Copyright</a> 2009-2018, Ask Solem &amp; contributors.
+    </div>
+  </body>
+</html>
