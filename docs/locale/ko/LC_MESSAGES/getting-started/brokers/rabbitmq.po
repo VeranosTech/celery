@@ -3,34 +3,38 @@
 # This file is distributed under the same license as the Celery package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-22 13:45+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-05-24 15:46+0900\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ko\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: ../getting-started/brokers/rabbitmq.rst:5
 msgid "Using RabbitMQ"
-msgstr ""
+msgstr "RabbitMQ 사용"
 
 #: ../getting-started/brokers/rabbitmq.rst:11
 msgid "Installation & Configuration"
-msgstr ""
+msgstr "설치 & 구성 설정"
 
 #: ../getting-started/brokers/rabbitmq.rst:13
 msgid ""
 "RabbitMQ is the default broker so it doesn't require any additional "
-"dependencies or initial configuration, other than the URL location of the"
-" broker instance you want to use:"
+"dependencies or initial configuration, other than the URL location of the "
+"broker instance you want to use:"
 msgstr ""
+"RabbitMQ는 기본 브로커이기 때문에 사용할 브로커 인스턴스의 URL 위치 이외"
+"의 다른 추가적인 의존성이나 초기 설정을 필요로 하지 않는다:"
 
 #: ../getting-started/brokers/rabbitmq.rst:21
 msgid ""
@@ -38,81 +42,100 @@ msgid ""
 "configuration options available to Celery, see :ref:`conf-broker-"
 "settings`, and see below for setting up the username, password and vhost."
 msgstr ""
+"브로커 URL에 대한 설명과 셀러리에서 사용할 수 있는 다양 브로커 구성 옵션"
+"의 전체 목록은 :ref:`conf-broker-settings`\\를 참고하고, 사용자 이름, 비밀"
+"번호 vhost를 설정하는 방법은 아래에 있다."
 
 #: ../getting-started/brokers/rabbitmq.rst:29
 msgid "Installing the RabbitMQ Server"
-msgstr ""
+msgstr "RabbitMQ 서버 설치"
 
 #: ../getting-started/brokers/rabbitmq.rst:31
 msgid ""
 "See `Installing RabbitMQ`_ over at RabbitMQ's website. For macOS see "
 "`Installing RabbitMQ on macOS`_."
 msgstr ""
+"RabbitMQ 웹사이트에서 `Installing RabbitMQ`_\\를 보라. macOS의 경우에는 "
+"`Installing RabbitMQ on macOS`_\\를 보라."
 
 #: ../getting-started/brokers/rabbitmq.rst:38
 msgid ""
-"If you're getting `nodedown` errors after installing and using "
-":command:`rabbitmqctl` then this blog post can help you identify the "
-"source of the problem:"
+"If you're getting `nodedown` errors after installing and using :command:"
+"`rabbitmqctl` then this blog post can help you identify the source of the "
+"problem:"
 msgstr ""
+"설치하고 :command:`rabbitmqctl`\\을 사용한 이후에 `nodedown` 에러가 발생했"
+"다면 해당 블로그 게시물이 문제의 원인을 밝히는데 도움을 줄 수 있다:"
 
 #: ../getting-started/brokers/rabbitmq.rst:42
 msgid "http://www.somic.org/2009/02/19/on-rabbitmqctl-and-badrpcnodedown/"
-msgstr ""
+msgstr "http://www.somic.org/2009/02/19/on-rabbitmqctl-and-badrpcnodedown/"
 
 #: ../getting-started/brokers/rabbitmq.rst:47
 msgid "Setting up RabbitMQ"
-msgstr ""
+msgstr "RabbitMQ 설정"
 
 #: ../getting-started/brokers/rabbitmq.rst:49
 msgid ""
-"To use Celery we need to create a RabbitMQ user, a virtual host and allow"
-" that user access to that virtual host:"
+"To use Celery we need to create a RabbitMQ user, a virtual host and allow "
+"that user access to that virtual host:"
 msgstr ""
+"셀러리를 사용하기 위해 RabbitMQ 사용자(user)와 가상 호스트(virtual host)"
+"를 생성해야 하고, 사용자가 가상 호스트로 접근하는 것을 허용해야 한다:"
 
 #: ../getting-started/brokers/rabbitmq.rst:68
 msgid ""
 "Substitute in appropriate values for ``myuser``, ``mypassword`` and "
 "``myvhost`` above."
 msgstr ""
+"위의 ``myuser``\\, ``mypassword`` 그리고 ``myvhost``\\를 적절한 값으로 대"
+"체한다."
 
 #: ../getting-started/brokers/rabbitmq.rst:70
 msgid ""
 "See the RabbitMQ `Admin Guide`_ for more information about `access "
 "control`_."
 msgstr ""
+"`access control`_\\에 대한 자세한 정보는 RabbitMQ `Admin Guide`_\\를 보라."
 
 #: ../getting-started/brokers/rabbitmq.rst:79
 msgid "Installing RabbitMQ on macOS"
-msgstr ""
+msgstr "RabbitMQ macOS에서 설"
 
 #: ../getting-started/brokers/rabbitmq.rst:81
 msgid ""
-"The easiest way to install RabbitMQ on macOS is using `Homebrew`_ the new"
-" and shiny package management system for macOS."
+"The easiest way to install RabbitMQ on macOS is using `Homebrew`_ the new "
+"and shiny package management system for macOS."
 msgstr ""
+"RabbitMQ를 macOS에 설치하는 가장 쉬운 방법은 macOS를 위한 새롭고 눈부신 패"
+"키지 관리 시스템인 `Homebrew`_\\를 사용하는 것이다."
 
 #: ../getting-started/brokers/rabbitmq.rst:84
 msgid ""
 "First, install Homebrew using the one-line command provided by the "
 "`Homebrew documentation`_:"
 msgstr ""
+"먼저, `Homebrew documentation`_\\에서 제공하는 one-line 명령어를 사용하여 "
+"Homebrew를 설치한다:"
 
 #: ../getting-started/brokers/rabbitmq.rst:91
 msgid "Finally, we can install RabbitMQ using :command:`brew`:"
-msgstr ""
+msgstr "마지막으로, :command:`brew`\\를 사용해 RabbitMQ를 설치할 수 있다:"
 
 #: ../getting-started/brokers/rabbitmq.rst:102
 msgid ""
 "After you've installed RabbitMQ with :command:`brew` you need to add the "
-"following to your path to be able to start and stop the broker: add it to"
-" the start-up file for your shell (e.g., :file:`.bash_profile` or "
-":file:`.profile`)."
+"following to your path to be able to start and stop the broker: add it to "
+"the start-up file for your shell (e.g., :file:`.bash_profile` or :file:`."
+"profile`)."
 msgstr ""
+"RabbitMQ를 command:`brew` 명령어로 설치한 후에 아래 내용을 경로(path)에 추"
+"가하여 브로커가 시작하고 중지할 수 있도록 한다: 쉘(shell)의 시작 파일에 추"
+"가하라(예를 들어, :file:`.bash_profile` 또는 :file:`.profile`\\)."
 
 #: ../getting-started/brokers/rabbitmq.rst:111
 msgid "Configuring the system host name"
-msgstr ""
+msgstr "시스템 호스트 이름 구성"
 
 #: ../getting-started/brokers/rabbitmq.rst:113
 msgid ""
@@ -120,53 +143,67 @@ msgid ""
 "need to permanently configure the host name. This is because RabbitMQ "
 "uses the host name to communicate with nodes."
 msgstr ""
+"임의의 호스트 이름을 제공하는 DHCP 서버를 사용하는 경우, 호스트 이름을 영"
+"구적으로 설정할 필요가 있다. 왜냐하면 RabbitMQ가 노드(node)와 통신하기 위"
+"해 호스트 이름을 사용하기 때문이다."
 
 #: ../getting-started/brokers/rabbitmq.rst:117
 msgid "Use the :command:`scutil` command to permanently set your host name:"
 msgstr ""
+":command:`scutil`\\명령을 사용하여 호스트 이름을 영구적으로 설정한다:"
 
 #: ../getting-started/brokers/rabbitmq.rst:123
 msgid ""
-"Then add that host name to :file:`/etc/hosts` so it's possible to resolve"
-" it back into an IP address::"
+"Then add that host name to :file:`/etc/hosts` so it's possible to resolve "
+"it back into an IP address::"
 msgstr ""
+"그런 다 :file:`/etc/hosts`\\에 호스트 이름을 추가하여 IP 주소로 다시 확인"
+"할 수 있도록 한다::"
 
 #: ../getting-started/brokers/rabbitmq.rst:128
 msgid ""
 "If you start the :command:`rabbitmq-server`, your rabbit node should now "
 "be `rabbit@myhost`, as verified by :command:`rabbitmqctl`:"
 msgstr ""
+":command:`rabbitmq-server`\\으로 시작하는 경우, :command:`rabbitmqctl`"
+"\\에 의해 검증된 rabbit 노드는 `rabbit@myhost`\\가 되어야 한다:"
 
 #: ../getting-started/brokers/rabbitmq.rst:145
 msgid ""
 "This is especially important if your DHCP server gives you a host name "
-"starting with an IP address, (e.g., `23.10.112.31.comcast.net`).  In this"
-" case RabbitMQ will try to use `rabbit@23`: an illegal host name."
+"starting with an IP address, (e.g., `23.10.112.31.comcast.net`).  In this "
+"case RabbitMQ will try to use `rabbit@23`: an illegal host name."
 msgstr ""
+"DHCP 서버에 IP 주소로 시작하는 호스트 이름을 주었을 경우(예를 들어, "
+"`23.10.112.31.comcast.net`\\), 특히 더 중요하다.  이 경우에는 RabbitMQ는 "
+"불법적 호스트 이름\b인 `rabbit@23`\\를 사용하려 할 것이다."
 
 #: ../getting-started/brokers/rabbitmq.rst:152
 msgid "Starting/Stopping the RabbitMQ server"
-msgstr ""
+msgstr "RabbitMQ 서버 시작/중지"
 
 #: ../getting-started/brokers/rabbitmq.rst:154
 msgid "To start the server:"
-msgstr ""
+msgstr "서버를 시작하려면:"
 
 #: ../getting-started/brokers/rabbitmq.rst:160
 msgid ""
 "you can also run it in the background by adding the ``-detached`` option "
 "(note: only one dash):"
 msgstr ""
+"``-detached`` 옵션을 추가하여 백그라운드에서 실행시킬 수도 있다 (주의사"
+"항: dash가 하나임):"
 
 #: ../getting-started/brokers/rabbitmq.rst:167
 msgid ""
 "Never use :command:`kill` (:manpage:`kill(1)`) to stop the RabbitMQ "
 "server, but rather use the :command:`rabbitmqctl` command:"
 msgstr ""
+"RabbitMQ 서버를 중지하기 위해 절대로 :command:`kill` (:manpage:`kill(1)`"
+"\\)를 사용하지 말고, :command:`rabbitmqctl` 명령을 사용하라:"
 
 #: ../getting-started/brokers/rabbitmq.rst:174
 msgid ""
 "When the server is running, you can continue reading `Setting up "
 "RabbitMQ`_."
-msgstr ""
-
+msgstr "서버가 실행되면, `Setting up RabbitMQ`_\\를 계속해서 읽어보라."

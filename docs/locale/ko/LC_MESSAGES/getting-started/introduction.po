@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Celery 4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-22 13:45+0900\n"
-"PO-Revision-Date: 2019-05-22 18:28+0900\n"
+"PO-Revision-Date: 2019-05-24 15:16+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -491,168 +491,170 @@ msgstr "퀵 점프"
 
 #: ../getting-started/introduction.rst:258
 msgid ":ref:`get the return value of a task <task-states>`"
-msgstr ""
+msgstr ":ref:`get the return value of a task <task-states>`"
 
 #: ../getting-started/introduction.rst:259
 msgid ":ref:`use logging from my task <task-logging>`"
-msgstr ""
+msgstr ":ref:`use logging from my task <task-logging>`"
 
 #: ../getting-started/introduction.rst:260
 msgid ":ref:`learn about best practices <task-best-practices>`"
-msgstr ""
+msgstr ":ref:`learn about best practices <task-best-practices>`"
 
 #: ../getting-started/introduction.rst:261
 msgid ":ref:`create a custom task base class <task-custom-classes>`"
-msgstr ""
+msgstr ":ref:`create a custom task base class <task-custom-classes>`"
 
 #: ../getting-started/introduction.rst:262
 msgid ":ref:`add a callback to a group of tasks <canvas-chord>`"
-msgstr ""
+msgstr ":ref:`add a callback to a group of tasks <canvas-chord>`"
 
 #: ../getting-started/introduction.rst:263
 msgid ":ref:`split a task into several chunks <canvas-chunks>`"
-msgstr ""
+msgstr ":ref:`split a task into several chunks <canvas-chunks>`"
 
 #: ../getting-started/introduction.rst:264
 msgid ":ref:`optimize the worker <guide-optimizing>`"
-msgstr ""
+msgstr ":ref:`optimize the worker <guide-optimizing>`"
 
 #: ../getting-started/introduction.rst:265
 msgid ":ref:`see a list of built-in task states <task-builtin-states>`"
-msgstr ""
+msgstr ":ref:`see a list of built-in task states <task-builtin-states>`"
 
 #: ../getting-started/introduction.rst:266
 msgid ":ref:`create custom task states <custom-states>`"
-msgstr ""
+msgstr ":ref:`create custom task states <custom-states>`"
 
 #: ../getting-started/introduction.rst:267
 msgid ":ref:`set a custom task name <task-names>`"
-msgstr ""
+msgstr ":ref:`set a custom task name <task-names>`"
 
 #: ../getting-started/introduction.rst:268
 msgid ":ref:`track when a task starts <task-track-started>`"
-msgstr ""
+msgstr ":ref:`track when a task starts <task-track-started>`"
 
 #: ../getting-started/introduction.rst:269
 msgid ":ref:`retry a task when it fails <task-retry>`"
-msgstr ""
+msgstr ":ref:`retry a task when it fails <task-retry>`"
 
 #: ../getting-started/introduction.rst:270
 msgid ":ref:`get the id of the current task <task-request-info>`"
-msgstr ""
+msgstr ":ref:`get the id of the current task <task-request-info>`"
 
 #: ../getting-started/introduction.rst:271
 msgid ":ref:`know what queue a task was delivered to <task-request-info>`"
-msgstr ""
+msgstr ":ref:`know what queue a task was delivered to <task-request-info>`"
 
 #: ../getting-started/introduction.rst:272
 msgid ":ref:`see a list of running workers <monitoring-control>`"
-msgstr ""
+msgstr ":ref:`see a list of running workers <monitoring-control>`"
 
 #: ../getting-started/introduction.rst:273
 msgid ":ref:`purge all messages <monitoring-control>`"
-msgstr ""
+msgstr ":ref:`purge all messages <monitoring-control>`"
 
 #: ../getting-started/introduction.rst:274
 msgid ":ref:`inspect what the workers are doing <monitoring-control>`"
-msgstr ""
+msgstr ":ref:`inspect what the workers are doing <monitoring-control>`"
 
 #: ../getting-started/introduction.rst:275
 msgid ":ref:`see what tasks a worker has registered <monitoring-control>`"
-msgstr ""
+msgstr ":ref:`see what tasks a worker has registered <monitoring-control>`"
 
 #: ../getting-started/introduction.rst:276
 msgid ":ref:`migrate tasks to a new broker <monitoring-control>`"
-msgstr ""
+msgstr ":ref:`migrate tasks to a new broker <monitoring-control>`"
 
 #: ../getting-started/introduction.rst:277
 msgid ":ref:`see a list of event message types <event-reference>`"
-msgstr ""
+msgstr ":ref:`see a list of event message types <event-reference>`"
 
 #: ../getting-started/introduction.rst:278
 msgid ":ref:`contribute to Celery <contributing>`"
-msgstr ""
+msgstr ":ref:`contribute to Celery <contributing>`"
 
 #: ../getting-started/introduction.rst:279
 msgid ":ref:`learn about available configuration settings <configuration>`"
-msgstr ""
+msgstr ":ref:`learn about available configuration settings <configuration>`"
 
 #: ../getting-started/introduction.rst:280
 msgid ":ref:`get a list of people and companies using Celery <res-using-celery>`"
 msgstr ""
+":ref:`get a list of people and companies using Celery <res-using-celery>`"
 
 #: ../getting-started/introduction.rst:281
 msgid ""
 ":ref:`write my own remote control command <worker-custom-control-commands>`"
 msgstr ""
+":ref:`write my own remote control command <worker-custom-control-commands>`"
 
 #: ../getting-started/introduction.rst:282
 msgid ":ref:`change worker queues at runtime <worker-queues>`"
-msgstr ""
+msgstr ":ref:`change worker queues at runtime <worker-queues>`"
 
 #: ../getting-started/introduction.rst:289
 msgid ":ref:`Brokers <brokers>`"
-msgstr ""
+msgstr ":ref:`Brokers <brokers>`"
 
 #: ../getting-started/introduction.rst:290
 msgid ":ref:`Applications <guide-app>`"
-msgstr ""
+msgstr ":ref:`Applications <guide-app>`"
 
 #: ../getting-started/introduction.rst:291
 msgid ":ref:`Tasks <guide-tasks>`"
-msgstr ""
+msgstr ":ref:`Tasks <guide-tasks>`"
 
 #: ../getting-started/introduction.rst:292
 msgid ":ref:`Calling <guide-calling>`"
-msgstr ""
+msgstr ":ref:`Calling <guide-calling>`"
 
 #: ../getting-started/introduction.rst:293
 msgid ":ref:`Workers <guide-workers>`"
-msgstr ""
+msgstr ":ref:`Workers <guide-workers>`"
 
 #: ../getting-started/introduction.rst:294
 msgid ":ref:`Daemonizing <daemonizing>`"
-msgstr ""
+msgstr ":ref:`Daemonizing <daemonizing>`"
 
 #: ../getting-started/introduction.rst:295
 msgid ":ref:`Monitoring <guide-monitoring>`"
-msgstr ""
+msgstr ":ref:`Monitoring <guide-monitoring>`"
 
 #: ../getting-started/introduction.rst:296
 msgid ":ref:`Optimizing <guide-optimizing>`"
-msgstr ""
+msgstr ":ref:`Optimizing <guide-optimizing>`"
 
 #: ../getting-started/introduction.rst:297
 msgid ":ref:`Security <guide-security>`"
-msgstr ""
+msgstr ":ref:`Security <guide-security>`"
 
 #: ../getting-started/introduction.rst:298
 msgid ":ref:`Routing <guide-routing>`"
-msgstr ""
+msgstr ":ref:`Routing <guide-routing>`"
 
 #: ../getting-started/introduction.rst:299
 msgid ":ref:`Configuration <configuration>`"
-msgstr ""
+msgstr ":ref:`Configuration <configuration>`"
 
 #: ../getting-started/introduction.rst:300
 msgid ":ref:`Django <django>`"
-msgstr ""
+msgstr ":ref:`Django <django>`"
 
 #: ../getting-started/introduction.rst:301
 msgid ":ref:`Contributing <contributing>`"
-msgstr ""
+msgstr ":ref:`Contributing <contributing>`"
 
 #: ../getting-started/introduction.rst:302
 msgid ":ref:`Signals <signals>`"
-msgstr ""
+msgstr ":ref:`Signals <signals>`"
 
 #: ../getting-started/introduction.rst:303
 msgid ":ref:`FAQ <faq>`"
-msgstr ""
+msgstr ":ref:`FAQ <faq>`"
 
 #: ../getting-started/introduction.rst:304
 msgid ":ref:`API Reference <apiref>`"
-msgstr ""
+msgstr ":ref:`API Reference <apiref>`"
 
 #: ../includes/installation.txt:4
 msgid "Installation"
@@ -702,7 +704,7 @@ msgstr "시리얼라이저(Serializers)"
 
 #: ../includes/installation.txt
 msgid "``celery[auth]``"
-msgstr ""
+msgstr "``celery[auth]``"
 
 #: ../includes/installation.txt:41
 msgid "for using the ``auth`` security serializer."
@@ -710,7 +712,7 @@ msgstr "`auth`` 보안 시리얼라이저를 사용하기 위한 것."
 
 #: ../includes/installation.txt
 msgid "``celery[msgpack]``"
-msgstr ""
+msgstr "``celery[msgpack]``"
 
 #: ../includes/installation.txt:44
 msgid "for using the msgpack serializer."
@@ -718,7 +720,7 @@ msgstr "msgpack 시리얼라이저 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[yaml]``"
-msgstr ""
+msgstr "``celery[yaml]`"
 
 #: ../includes/installation.txt:47
 msgid "for using the yaml serializer."
@@ -730,7 +732,7 @@ msgstr "동시성(Concurrency)"
 
 #: ../includes/installation.txt
 msgid "``celery[eventlet]``"
-msgstr ""
+msgstr "``celery[eventlet]``"
 
 #: ../includes/installation.txt:53
 msgid "for using the :pypi:`eventlet` pool."
@@ -738,7 +740,7 @@ msgstr "pypi:`eventlet` 풀 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[gevent]``"
-msgstr ""
+msgstr "``celery[gevent]``"
 
 #: ../includes/installation.txt:56
 msgid "for using the :pypi:`gevent` pool."
@@ -750,7 +752,7 @@ msgstr "메세지 전송(Transports)과 백엔드(Backends)"
 
 #: ../includes/installation.txt
 msgid "``celery[librabbitmq]``"
-msgstr ""
+msgstr "``celery[librabbitmq]``"
 
 #: ../includes/installation.txt:62
 msgid "for using the librabbitmq C library."
@@ -758,7 +760,7 @@ msgstr "librabbitmq C 라이브러리 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[redis]``"
-msgstr ""
+msgstr "``celery[redis]``"
 
 #: ../includes/installation.txt:65
 msgid "for using Redis as a message transport or as a result backend."
@@ -766,7 +768,7 @@ msgstr "메세지 전송 수단 또는 결과 백엔드로서 Redis를 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[sqs]``"
-msgstr ""
+msgstr "``celery[sqs]``"
 
 #: ../includes/installation.txt:68
 msgid "for using Amazon SQS as a message transport (*experimental*)."
@@ -774,7 +776,7 @@ msgstr "메세지 전송 수단으로서 Amazon SQS 사용(*실험 단계 experi
 
 #: ../includes/installation.txt
 msgid "``celery[tblib]``"
-msgstr ""
+msgstr "``celery[tblib]``"
 
 #: ../includes/installation.txt:71
 msgid "for using the :setting:`task_remote_tracebacks` feature."
@@ -782,7 +784,7 @@ msgstr ":setting:`task_remote_tracebacks` 기능 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[memcache]``"
-msgstr ""
+msgstr "``celery[memcache]``"
 
 #: ../includes/installation.txt:74
 msgid "for using Memcached as a result backend (using :pypi:`pylibmc`)"
@@ -790,7 +792,7 @@ msgstr "결과 벡엔드로서 Memcached 사용 (:pypi:`pylibmc`\\을 사용)"
 
 #: ../includes/installation.txt
 msgid "``celery[pymemcache]``"
-msgstr ""
+msgstr "``celery[pymemcache]``"
 
 #: ../includes/installation.txt:77
 msgid "for using Memcached as a result backend (pure-Python implementation)."
@@ -798,7 +800,7 @@ msgstr "결과 벡엔드로서 Memcached 사용 (pure-Python 구현)"
 
 #: ../includes/installation.txt
 msgid "``celery[cassandra]``"
-msgstr ""
+msgstr "``celery[cassandra]``"
 
 #: ../includes/installation.txt:80
 msgid "for using Apache Cassandra as a result backend with DataStax driver."
@@ -806,7 +808,7 @@ msgstr "결과 백엔드로서 DataStax driver와 함께 Apache Cassandra 사용
 
 #: ../includes/installation.txt
 msgid "``celery[couchbase]``"
-msgstr ""
+msgstr "``celery[couchbase]``"
 
 #: ../includes/installation.txt:83
 msgid "for using Couchbase as a result backend."
@@ -814,7 +816,7 @@ msgstr "결과 백엔드로 Couchbase 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[arangodb]``"
-msgstr ""
+msgstr "``celery[arangodb]``"
 
 #: ../includes/installation.txt:86
 msgid "for using ArangoDB as a result backend."
@@ -822,7 +824,7 @@ msgstr "결과 백엔드로 ArangoDB 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[elasticsearch]``"
-msgstr ""
+msgstr "``celery[elasticsearch]``"
 
 #: ../includes/installation.txt:89
 msgid "for using Elasticsearch as a result backend."
@@ -830,7 +832,7 @@ msgstr "결과 벡엔드로 Elasticsearch 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[riak]``"
-msgstr ""
+msgstr "``celery[riak]``"
 
 #: ../includes/installation.txt:92
 msgid "for using Riak as a result backend."
@@ -838,7 +840,7 @@ msgstr "결과 백엔드로 Riak 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[dynamodb]``"
-msgstr ""
+msgstr "``celery[dynamodb]``"
 
 #: ../includes/installation.txt:95
 msgid "for using AWS DynamoDB as a result backend."
@@ -846,7 +848,7 @@ msgstr "결과 백엔드로 AWS DynamoDB 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[zookeeper]``"
-msgstr ""
+msgstr "``celery[zookeeper]``"
 
 #: ../includes/installation.txt:98
 msgid "for using Zookeeper as a message transport."
@@ -854,7 +856,7 @@ msgstr "메세지 전송 수단으로 Zookeeper 사용."
 
 #: ../includes/installation.txt
 msgid "``celery[sqlalchemy]``"
-msgstr ""
+msgstr "``celery[sqlalchemy]``"
 
 #: ../includes/installation.txt:101
 msgid "for using SQLAlchemy as a result backend (*supported*)."
@@ -862,7 +864,7 @@ msgstr "결과 백엔드로 SQLAlchemy 사용 (*지원됨 supported*)."
 
 #: ../includes/installation.txt
 msgid "``celery[pyro]``"
-msgstr ""
+msgstr "``celery[pyro]``"
 
 #: ../includes/installation.txt:104
 msgid "for using the Pyro4 message transport (*experimental*)."
@@ -870,7 +872,7 @@ msgstr "메세지 전송 수단으로 Pyro4 사용(*실험 단계 experimental*\
 
 #: ../includes/installation.txt
 msgid "``celery[slmq]``"
-msgstr ""
+msgstr "``celery[slmq]``"
 
 #: ../includes/installation.txt:107
 msgid "for using the SoftLayer Message Queue transport (*experimental*)."
@@ -878,7 +880,7 @@ msgstr "메세지 큐 전송수단으로 SoftLayer 사용(*실험 단계 experim
 
 #: ../includes/installation.txt
 msgid "``celery[consul]``"
-msgstr ""
+msgstr "``celery[consul]``"
 
 #: ../includes/installation.txt:110
 msgid ""
@@ -890,7 +892,7 @@ msgstr ""
 
 #: ../includes/installation.txt
 msgid "``celery[django]``"
-msgstr ""
+msgstr "``celery[django]``"
 
 #: ../includes/installation.txt:113
 msgid "specifies the lowest version possible for Django support."
