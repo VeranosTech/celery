@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Celery 4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-22 13:45+0900\n"
-"PO-Revision-Date: 2019-05-24 15:46+0900\n"
+"PO-Revision-Date: 2019-05-24 15:49+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -100,7 +100,7 @@ msgstr ""
 
 #: ../getting-started/brokers/rabbitmq.rst:79
 msgid "Installing RabbitMQ on macOS"
-msgstr "RabbitMQ macOS에서 설"
+msgstr "RabbitMQ macOS에서 설치"
 
 #: ../getting-started/brokers/rabbitmq.rst:81
 msgid ""
@@ -191,8 +191,8 @@ msgid ""
 "you can also run it in the background by adding the ``-detached`` option "
 "(note: only one dash):"
 msgstr ""
-"``-detached`` 옵션을 추가하여 백그라운드에서 실행시킬 수도 있다 (주의사"
-"항: dash가 하나임):"
+"``-detached`` 옵션을 추가하여 백그라운드에서 실행시킬 수도 있다 (주의: "
+"dash가 하나임):"
 
 #: ../getting-started/brokers/rabbitmq.rst:167
 msgid ""
